@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjv30jq3iwxgd"]
+
+[ext_resource type="Theme" uid="uid://cpttsnkmbm7ew" path="res://menus/infopopup/themewindowtopbar.tres" id="1_yn334"]
+[ext_resource type="Script" uid="uid://d0rcrpp2te8fc" path="res://menus/components/toppanel.gd" id="2_0hs6g"]
+[ext_resource type="Script" uid="uid://3wjpcjaeckbr" path="res://menus/infopopup/buttonclose.gd" id="2_krns1"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_s3b81"]
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 0
+
+[node name="TOPPANEL" type="Panel"]
+custom_minimum_size = Vector2(0, 30)
+theme = ExtResource("1_yn334")
+script = ExtResource("2_0hs6g")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="RichTextLabel" parent="MarginContainer/TopBar"]
+unique_name_in_owner = true
+auto_translate_mode = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "PLACEHOLDER_TOPPANEL_TITLE"
+fit_content = true
+scroll_active = false
+threaded = true
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/TopBar"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxLine_s3b81")
+
+[node name="BUTTONCLOSE" type="Button" parent="MarginContainer/TopBar/PanelContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 2
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+size_flags_vertical = 4
+text = "X"
+script = ExtResource("2_krns1")
+
+[node name="HSeparator" type="HSeparator" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 4

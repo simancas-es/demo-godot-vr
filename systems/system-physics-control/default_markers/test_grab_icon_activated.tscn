@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dpguvlxb6iavg"]
+
+[node name="RedDot" type="Node3D"]
+
+[node name="Label3D" type="Label3D" parent="."]
+billboard = 2
+no_depth_test = true
+render_priority = 5
+outline_render_priority = 4
+text = "x"
+font_size = 14
+outline_size = 13

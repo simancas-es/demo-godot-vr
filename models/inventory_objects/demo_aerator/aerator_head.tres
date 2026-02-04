@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="InventoryObjectInformation" load_steps=4 format=3 uid="uid://bwb18lyfx0mce"]
+
+[ext_resource type="Script" uid="uid://dwue6j575oyyx" path="res://systems/system-inventory/inventory-backend/inventory_object_information.gd" id="1_isyie"]
+[ext_resource type="PackedScene" uid="uid://b3otd4yyygom7" path="res://models/inventory_objects/demo_aerator/aerator_head.gltf" id="1_rjdyb"]
+[ext_resource type="Texture2D" uid="uid://cm65nhsbjr3ik" path="res://models/inventory_objects/demo_aerator/icon.png" id="3_2s3wb"]
+
+[resource]
+script = ExtResource("1_isyie")
+ID = 2
+CLASS = 0
+STACK_MAX = 4
+SEPARABLE = true
+DISAPPEARS_AT_0 = true
+texture = ExtResource("3_2s3wb")
+inspect_model = ExtResource("1_rjdyb")
+inspect_translations_path = "res://models/inventory_objects/demo_aerator/aerator_head.json"
+qty_string = 1
+metadata/_custom_type_script = "uid://dwue6j575oyyx"

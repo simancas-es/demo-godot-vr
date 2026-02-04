@@ -1,0 +1,228 @@
+[gd_scene load_steps=24 format=3 uid="uid://bcyt1b5low3w4"]
+
+[ext_resource type="Script" uid="uid://pitm0eunqjp7" path="res://clases/fpv/fpv.gd" id="1_q2fis"]
+[ext_resource type="Script" uid="uid://davyaem2knud4" path="res://clases/fpv/area_check.gd" id="2_vvcos"]
+[ext_resource type="Script" uid="uid://cbovu41r4webi" path="res://clases/fpv/fpv_camera.gd" id="3_07gqe"]
+[ext_resource type="Script" uid="uid://dmrsdpna0f88e" path="res://clases/fpv/fpv_raycast.gd" id="3_e1rf4"]
+[ext_resource type="Script" uid="uid://bwrto0xofnipd" path="res://clases/fpv/system_physical_control_grabber.gd" id="4_2awh3"]
+[ext_resource type="Script" uid="uid://btda58o084igw" path="res://clases/fpv/fsm/fixed.gd" id="5_vy32a"]
+[ext_resource type="LabelSettings" uid="uid://c7v7eovxc6w2k" path="res://clases/fpv/font_settings_hints.tres" id="6_0xl0r"]
+[ext_resource type="Script" uid="uid://c8dtq0rx7hft8" path="res://fsm/statemachine_base.gd" id="8_2awh3"]
+[ext_resource type="Script" uid="uid://d2yir76brxwhw" path="res://clases/fpv/fsm/environment.gd" id="8_8yfdh"]
+[ext_resource type="Script" uid="uid://kie8vylldsm0" path="res://clases/fpv/interaction_logic.gd" id="8_xbfv4"]
+[ext_resource type="Script" uid="uid://c30c5r6ksa4m2" path="res://clases/fpv/fsm/room.gd" id="9_xbfv4"]
+[ext_resource type="Script" uid="uid://driq3has4vgdy" path="res://clases/fpv/fsm/falcon.gd" id="10_wsyud"]
+[ext_resource type="Script" uid="uid://bcx6sl2afam81" path="res://clases/fpv/fsm/still.gd" id="12_wh5ok"]
+[ext_resource type="Script" uid="uid://1aapstyvu3y6" path="res://clases/fpv/fsm/physics.gd" id="13_0srtr"]
+[ext_resource type="Script" uid="uid://cknc20whxaqec" path="res://clases/fpv/fsm/mov_ladder.gd" id="14_0srtr"]
+[ext_resource type="Script" uid="uid://dreqtcsfqkorx" path="res://clases/fpv/fsm/in_inventory.gd" id="14_2awh3"]
+[ext_resource type="Script" uid="uid://b82vk7yxsrrnf" path="res://fsm/state_base.gd" id="14_is72l"]
+[ext_resource type="Script" uid="uid://bb27t6hsjidrs" path="res://clases/fpv/fsm/mov_death.gd" id="17_2ykp4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8q5hm"]
+radius = 0.374904
+height = 1.7
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2ykp4"]
+radius = 0.374904
+height = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8q5hm"]
+size = Vector3(1, 1.8, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8q5hm"]
+height = 1.5
+
+[sub_resource type="Curve3D" id="Curve3D_2ykp4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, -0.175259, 1.95024, 0.604387, 0.175259, -1.95024, -0.604387, -0.183122, -1.68444, 1.24916),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="FPV" type="CharacterBody3D" groups=["FPV"]]
+collision_layer = 524288
+collision_mask = 59392
+collision_priority = 5.0
+wall_min_slide_angle = 0.0872665
+floor_constant_speed = true
+floor_max_angle = 1.309
+floor_snap_length = 0.15
+platform_on_leave = 2
+platform_floor_layers = 4294377472
+platform_wall_layers = 16384
+safe_margin = 0.01
+script = ExtResource("1_q2fis")
+
+[node name="CollisionShape_Standing" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.859176, 0)
+shape = SubResource("CapsuleShape3D_8q5hm")
+
+[node name="CollisionShape_Crouching" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.514625, 0)
+shape = SubResource("CapsuleShape3D_2ykp4")
+
+[node name="AreaCheck" type="Area3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("2_vvcos")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCheck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("BoxShape3D_8q5hm")
+
+[node name="LadderCheck" type="Area3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 8192
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LadderCheck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("BoxShape3D_8q5hm")
+
+[node name="DebugPosition" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.762753, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_8q5hm")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+unique_name_in_owner = true
+debug_enabled = true
+
+[node name="InteractionLogic" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_xbfv4")
+
+[node name="SystemPhysicalControlGrabber" type="Node" parent="." node_paths=PackedStringArray("line_of_sight_drop_exclusion", "body_movement_object")]
+unique_name_in_owner = true
+script = ExtResource("4_2awh3")
+line_of_sight_drop_exclusion = [NodePath("..")]
+body_movement_object = NodePath("..")
+metadata/_custom_type_script = "uid://w3alf3er3kwf"
+
+[node name="CameraBasePosition" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraBasePosition"]
+unique_name_in_owner = true
+transform = Transform3D(1, 8.04664e-07, -4.32135e-07, -8.04665e-07, 1, 1.2666e-07, 4.32135e-07, -1.26659e-07, 1, -1.52737e-07, 0, 1.2815e-06)
+current = true
+script = ExtResource("3_07gqe")
+
+[node name="TestLabel" type="Label" parent="CameraBasePosition/Camera3D"]
+auto_translate_mode = 2
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "PLACEHOLDER_FPV_DEBUG"
+
+[node name="RayCast3D" type="RayCast3D" parent="CameraBasePosition/Camera3D"]
+unique_name_in_owner = true
+visible = false
+target_position = Vector3(0, 0, -1.5)
+collision_mask = 0
+hit_from_inside = true
+collide_with_areas = true
+debug_shape_custom_color = Color(1, 0, 0, 1)
+script = ExtResource("3_e1rf4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CameraBasePosition/Camera3D"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -42.5
+offset_top = 372.5
+offset_right = 42.5
+offset_bottom = 422.5
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="CenterAim" type="Label" parent="CameraBasePosition/Camera3D/VBoxContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 2
+layout_mode = 2
+text = "x"
+label_settings = ExtResource("6_0xl0r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ActionHints" type="VBoxContainer" parent="CameraBasePosition/Camera3D/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Camera_death_animation" type="Path3D" parent="CameraBasePosition"]
+transform = Transform3D(-0.0121821, 0, -0.999926, 0, 1, 0, 0.999926, 0, -0.0121821, 0, 0, 0.253642)
+curve = SubResource("Curve3D_2ykp4")
+
+[node name="camera_death_anim_follow" type="PathFollow3D" parent="CameraBasePosition/Camera_death_animation"]
+unique_name_in_owner = true
+transform = Transform3D(-0.9818075, 0.026466059, 0.18797815, 0, 0.99022967, -0.13941753, -0.18983126, -0.13688248, -0.97222316, 0, 0, 0)
+loop = false
+tilt_enabled = false
+
+[node name="StateMachineInteraction" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
+unique_name_in_owner = true
+script = ExtResource("8_2awh3")
+starting_state = NodePath("Fixed")
+
+[node name="Fixed" type="Node" parent="StateMachineInteraction"]
+unique_name_in_owner = true
+script = ExtResource("5_vy32a")
+metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
+
+[node name="Environment" type="Node" parent="StateMachineInteraction"]
+unique_name_in_owner = true
+script = ExtResource("8_8yfdh")
+metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
+
+[node name="Room" type="Node" parent="StateMachineInteraction"]
+unique_name_in_owner = true
+script = ExtResource("9_xbfv4")
+metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
+
+[node name="Falcon" type="Node" parent="StateMachineInteraction"]
+unique_name_in_owner = true
+script = ExtResource("10_wsyud")
+metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
+
+[node name="inInventory" type="Node" parent="StateMachineInteraction"]
+script = ExtResource("14_2awh3")
+metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
+
+[node name="SINotControlled" type="Node" parent="StateMachineInteraction"]
+unique_name_in_owner = true
+script = ExtResource("14_is72l")
+
+[node name="StateMachineMovement" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
+unique_name_in_owner = true
+script = ExtResource("8_2awh3")
+starting_state = NodePath("mov_still")
+
+[node name="mov_still" type="Node" parent="StateMachineMovement"]
+unique_name_in_owner = true
+script = ExtResource("12_wh5ok")
+metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
+
+[node name="mov_physics" type="Node" parent="StateMachineMovement"]
+unique_name_in_owner = true
+script = ExtResource("13_0srtr")
+metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
+
+[node name="mov_ladder" type="Node" parent="StateMachineMovement"]
+unique_name_in_owner = true
+script = ExtResource("14_0srtr")
+metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
+
+[node name="mov_death" type="Node" parent="StateMachineMovement"]
+unique_name_in_owner = true
+script = ExtResource("17_2ykp4")
+metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
+
+[node name="SMNotControlled" type="Node" parent="StateMachineMovement"]
+unique_name_in_owner = true
+script = ExtResource("14_is72l")

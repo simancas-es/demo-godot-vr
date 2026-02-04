@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgu28yqs3yqso"]
+
+[ext_resource type="Theme" uid="uid://dvhq4ocr8folv" path="res://menus/infopopup/themewindowinfomidscrollbar.tres" id="1_am388"]
+[ext_resource type="Script" uid="uid://v1spsxbqogx0" path="res://menus/components/vboxscrollbar.gd" id="2_d24r1"]
+
+[node name="VBoxContainerSCROLLBAR" type="VBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+size_flags_horizontal = 8
+theme = ExtResource("1_am388")
+script = ExtResource("2_d24r1")
+
+[node name="Up" type="Button" parent="."]
+auto_translate_mode = 2
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+text = "^"
+
+[node name="MIDVSCROLLBAR" type="VScrollBar" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 100)
+layout_mode = 2
+size_flags_vertical = 3
+step = 1.0
+page = 1.0
+
+[node name="Down" type="Button" parent="."]
+auto_translate_mode = 2
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+text = "v"

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://2xs0r743pqbm"]
+
+[ext_resource type="Script" uid="uid://ctr2wvkwcu3sj" path="res://models/demo_basin/control_system/test/test_basin.gd" id="1_ovlle"]
+
+[node name="TestBasin" type="Node"]
+script = ExtResource("1_ovlle")

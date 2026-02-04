@@ -1,0 +1,18 @@
+{
+	"en": {
+			"zone_title":"University of Applied Sciences MD-ST",
+			"zone_description":"Zone description...",
+	},
+	"de": {
+			"zone_title":"Hochschule Magdeburg-Stendal",
+			"zone_description":"Beschreibung der Anlage...",
+	},
+	"es": {
+			"zone_title":"Universidad Aplicada Magdeburg-Stendal",
+			"zone_description":"Descripción de zona...",
+	},
+	"fr": {
+			"zone_title":"ZoneTitleFR",
+			"zone_description":"Zone description...FR",
+	},
+}

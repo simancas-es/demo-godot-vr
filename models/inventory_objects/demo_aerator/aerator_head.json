@@ -1,0 +1,18 @@
+{
+	"en": {
+			"name":"Aerator head",
+			"description":"You mount this on the air distribution system to create bubbles under water.",
+	},
+	"de": {
+			"name":"Belüftungskopf",
+			"description":"Das geht in dem Belebunbsbecken, so dass Luftblasen gut verteilt werden.",
+	},
+	"es": {
+			"name":"Difusor de aire",
+			"description":"Estás viendo un objeto... Qué puede ser esto?",
+	},
+	"fr": {
+			"name":"Difusor du air",
+			"description":"Tu vois un objet... Qu'est-ce que ça pourrait être",
+	},
+}

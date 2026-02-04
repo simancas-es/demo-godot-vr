@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://c3l83mavpioil"]
+
+[ext_resource type="Script" uid="uid://basffbg5vgwpf" path="res://clases/room360/roomloader.gd" id="1_0ifik"]
+[ext_resource type="Texture2D" uid="uid://bytclyi1op7sw" path="res://clases/room360/icon_roomloader.bmp" id="2_io82r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vwxbq"]
+size = Vector3(1, 2, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r1q4k"]
+albedo_color = Color(1, 1, 1, 0.756863)
+albedo_texture = ExtResource("2_io82r")
+albedo_texture_force_srgb = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_u6j3a"]
+material = SubResource("StandardMaterial3D_r1q4k")
+size = Vector2(1, 1)
+
+[node name="RoomLoader" type="Area3D"]
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+script = ExtResource("1_0ifik")
+metadata/_custom_type_script = "uid://cpxvn4y6ne5kl"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_vwxbq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_u6j3a")

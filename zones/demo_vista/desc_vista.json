@@ -1,0 +1,18 @@
+{
+	"en": {
+			"zone_title":"VISTA Telescope in Paranal",
+			"zone_description":"Zone description...",
+	},
+	"de": {
+			"zone_title":"Teleskop VISTA in Paranal",
+			"zone_description":"Beschreibung der Anlage...",
+	},
+	"es": {
+			"zone_title":"Telescopio VISTA en Paranal",
+			"zone_description":"Descripción de zona...",
+	},
+	"fr": {
+			"zone_title":"ZoneTitleFR",
+			"zone_description":"Zone description...FR",
+	},
+}

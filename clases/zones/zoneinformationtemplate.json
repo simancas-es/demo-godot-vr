@@ -1,0 +1,18 @@
+{
+	"en": {
+			"zone_title":"ZoneTitle",
+			"zone_description":"Zone description...",
+	},
+	"de": {
+			"zone_title":"Anlagename",
+			"zone_description":"Beschreibung der Anlage...",
+	},
+	"es": {
+			"zone_title":"Titulo de Zona",
+			"zone_description":"Descripción de zona...",
+	},
+	"fr": {
+			"zone_title":"ZoneTitleFR",
+			"zone_description":"Zone description...FR",
+	},
+}

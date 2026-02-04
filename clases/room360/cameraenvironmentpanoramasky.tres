@@ -1,0 +1,13 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://1l3b1q651d7p"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_va304"]
+
+[sub_resource type="Sky" id="Sky_4qemw"]
+sky_material = SubResource("PanoramaSkyMaterial_va304")
+
+[resource]
+background_mode = 2
+background_color = Color(0.873298, 0.873298, 0.873298, 1)
+sky = SubResource("Sky_4qemw")
+ambient_light_energy = 0.48
+reflected_light_source = 1

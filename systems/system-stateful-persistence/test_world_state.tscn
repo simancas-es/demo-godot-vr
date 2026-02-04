@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://b360obcanxd3k"]
+
+[ext_resource type="Script" uid="uid://dyvuv8t2aqa31" path="res://systems/system-stateful-persistence/test_world_state.gd" id="1_kdmmi"]
+[ext_resource type="Script" uid="uid://5jhdvhuwgp57" path="res://systems/system-stateful-persistence/test_world_state_manager.gd" id="2_2av8y"]
+[ext_resource type="Script" uid="uid://dlnettxu6n4d6" path="res://systems/system-stateful-persistence/examples.gd" id="3_rhfll"]
+[ext_resource type="Script" uid="uid://du2c55d38ufll" path="res://systems/system-stateful-persistence/test_world_state_interfaces.gd" id="4_lxre4"]
+
+[node name="TestWorldState" type="Node"]
+script = ExtResource("1_kdmmi")
+
+[node name="Singletons" type="Node" parent="."]
+script = ExtResource("2_2av8y")
+
+[node name="Examples" type="Node" parent="."]
+script = ExtResource("3_rhfll")
+
+[node name="ConvenienceInterfaces" type="Node" parent="."]
+script = ExtResource("4_lxre4")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo4cjev4elgfy"]
+
+[ext_resource type="Script" uid="uid://dnx1elas3bkvd" path="res://clases/panorama/panorama2d.gd" id="1_srkxx"]
+
+[node name="PanoramaData" type="Node2D"]
+script = ExtResource("1_srkxx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,0 +1,16 @@
+{
+  "version": "0.1",
+  "_comment": "Global database for all the tasks in the project. It is assumed that tasks persist across zones.",
+  "tasks": [
+	{
+	  "id": "Q_DEMO_AERATOR",
+	  "conditions": {
+			"success": {
+				"any": [{ "type": "SystemTasksConditionSignal", "signal_name": "aerator_repaired", "locator_id":"DEMO_AERATOR"}]
+						}
+					},
+	  "results": {
+		"success": [{"type": "SystemTasksResultUIPrint","text": "You repaired the aerator!!!" }]}
+	}
+	]
+}

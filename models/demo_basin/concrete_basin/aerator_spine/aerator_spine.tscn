@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3j3pcft127ow"]
+
+[ext_resource type="PackedScene" uid="uid://dgl824ujafgv6" path="res://models/demo_basin/concrete_basin/aerator_spine/aerator_spine.gltf" id="1_1c5lv"]
+
+[node name="aerator_spine" instance=ExtResource("1_1c5lv")]
+
+[node name="aerator_spine" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00193501, 0.124492, 0.0251627)

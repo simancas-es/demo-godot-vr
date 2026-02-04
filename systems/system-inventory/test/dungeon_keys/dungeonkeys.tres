@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InventoryObjectInformation" load_steps=4 format=3 uid="uid://232qnmcsix10"]
+
+[ext_resource type="PackedScene" uid="uid://bpfh12fffnri6" path="res://systems/system-inventory/test/dungeon_keys/dungeonkeys.gltf" id="1_j43v5"]
+[ext_resource type="Script" uid="uid://dwue6j575oyyx" path="res://systems/system-inventory/inventory-backend/inventory_object_information.gd" id="2_47ds3"]
+[ext_resource type="Texture2D" uid="uid://d2ou8urqxug25" path="res://systems/system-inventory/test/dungeon_keys/keys_texture.bmp" id="3_yvpxm"]
+
+[resource]
+script = ExtResource("2_47ds3")
+ID = 1
+CLASS = 1
+texture = ExtResource("3_yvpxm")
+inspect_model = ExtResource("1_j43v5")
+inspect_translations_path = "res://test/dungeon_keys/dungeonkeys.json"
+qty_string = 1
+metadata/_custom_type_script = "uid://dwue6j575oyyx"

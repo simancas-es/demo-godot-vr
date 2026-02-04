@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvl88x3bipot1"]
+
+[ext_resource type="Script" uid="uid://dmo4shrj7gbp5" path="res://menus/environmentselector/mappanel.gd" id="1_wg0vv"]
+[ext_resource type="Script" uid="uid://daxocisxiqvn6" path="res://menus/animatemenutransition.gd" id="2_vrc6j"]
+[ext_resource type="Texture2D" uid="uid://du8yb6bwnpgtu" path="res://menus/map/maps/map1.svg" id="3_qieve"]
+[ext_resource type="Texture2D" uid="uid://b8vo8e3b4guqx" path="res://models/van/van.png" id="4_vrc6j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_605b5"]
+bg_color = Color(0.434301, 0.569404, 1, 1)
+
+[sub_resource type="Theme" id="Theme_mdxdi"]
+Panel/styles/panel = SubResource("StyleBoxFlat_605b5")
+
+[node name="MapPanel" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.0399895
+offset_bottom = -0.039978
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_mdxdi")
+script = ExtResource("1_wg0vv")
+leftlong = 6.0
+rightlong = 15.0
+toplat = 54.5
+botlat = 47.75
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimateMenuScaleIn" type="Node" parent="."]
+script = ExtResource("2_vrc6j")
+metadata/_custom_type_script = "uid://daxocisxiqvn6"
+
+[node name="DebugCoords" type="Label" parent="."]
+auto_translate_mode = 2
+visible = false
+layout_mode = 1
+offset_right = 1.0
+offset_bottom = 23.0
+text = "FromTo
+"
+
+[node name="MapTexture" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_qieve")
+expand_mode = 3
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Van" type="Sprite2D" parent="MapTexture"]
+unique_name_in_owner = true
+z_index = 5
+z_as_relative = false
+position = Vector2(317.294, 346.04)
+scale = Vector2(0.0738055, 0.0738055)
+texture = ExtResource("4_vrc6j")
+centered = false
+offset = Vector2(-76.3562, -198.297)
+region_rect = Rect2(0, 0, 556, 214)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.95
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0

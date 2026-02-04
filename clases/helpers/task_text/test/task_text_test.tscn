@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqthh6j6d2ad0"]
+
+[ext_resource type="Script" uid="uid://crl8hn4torl5e" path="res://clases/helpers/task_text/test/task_text_test.gd" id="1_w2gym"]
+
+[node name="TaskTextTest" type="Node"]
+script = ExtResource("1_w2gym")

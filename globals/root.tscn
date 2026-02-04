@@ -1,0 +1,152 @@
+[gd_scene load_steps=19 format=3 uid="uid://1gnljh2uer8"]
+
+[ext_resource type="Script" uid="uid://ds6ipr7ox8br3" path="res://globals/root.gd" id="1_6d14a"]
+[ext_resource type="Script" uid="uid://d31trbvb6igxn" path="res://menus/fsm/statemachinemenus.gd" id="2_6hyip"]
+[ext_resource type="Script" uid="uid://dr8ts7ehqgh1s" path="res://menus/fsm/menustates/stateintroscreen.gd" id="3_cwfe2"]
+[ext_resource type="Script" uid="uid://la6m8nrtawwv" path="res://menus/fsm/menustates/stateinscene.gd" id="4_n1s3a"]
+[ext_resource type="Script" uid="uid://dyoohpx4duds1" path="res://menus/fsm/menustates/stateinroom.gd" id="5_rtrm1"]
+[ext_resource type="Script" uid="uid://be108fdsaiduh" path="res://menus/fsm/menustates/stateloadingscene.gd" id="6_hm43d"]
+[ext_resource type="Script" uid="uid://d1xobjt0rfbe1" path="res://menus/ui_canvaslayer.gd" id="7_bm7q0"]
+[ext_resource type="Script" uid="uid://q20rn3ctmrhp" path="res://menus/fsm/menustates/stateselectenv.gd" id="7_cwfe2"]
+[ext_resource type="Script" uid="uid://y08oej2rtpdq" path="res://menus/fsm/menustates/state_menu_settings.gd" id="8_cwfe2"]
+[ext_resource type="PackedScene" uid="uid://bb17hv1ufo6l0" path="res://menus/environmentselector/environmentselector.tscn" id="9_5uipj"]
+[ext_resource type="Script" uid="uid://b54m2yj3786pt" path="res://menus/fsm/menustates/state_menu_inventory.gd" id="9_n1s3a"]
+[ext_resource type="PackedScene" uid="uid://bb61r87co1wd4" path="res://menus/settings/menusettings.tscn" id="10_2hlt0"]
+[ext_resource type="PackedScene" uid="uid://bnij78dscig28" path="res://systems/system-inventory/inventory-ui/inventory_ui.tscn" id="10_n1s3a"]
+[ext_resource type="PackedScene" uid="uid://cx1wgq0gx0mxe" path="res://clases/helpers/task_text/menu/debug_task_list.tscn" id="12_wgoxm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhhay"]
+content_margin_left = 15.0
+content_margin_right = 12.0
+bg_color = Color(0.921569, 0.470588, 0.329412, 1)
+border_width_left = 10
+border_color = Color(0.666667, 0.270588, 0.266667, 1)
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psfs6"]
+content_margin_left = 15.0
+content_margin_right = 12.0
+bg_color = Color(0.823529, 0, 0.152941, 1)
+border_width_left = 10
+border_color = Color(0.666667, 0.270588, 0.266667, 1)
+shadow_size = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85c3v"]
+content_margin_left = 15.0
+content_margin_right = 12.0
+bg_color = Color(0.666667, 0.270588, 0.266667, 1)
+border_width_left = 10
+border_color = Color(0.666667, 0.270588, 0.266667, 1)
+shadow_size = 3
+
+[sub_resource type="Theme" id="Theme_mfm05"]
+Button/styles/hover = SubResource("StyleBoxFlat_mhhay")
+Button/styles/normal = SubResource("StyleBoxFlat_psfs6")
+Button/styles/pressed = SubResource("StyleBoxFlat_85c3v")
+
+[node name="Root" type="Node" node_paths=PackedStringArray("state_machine_menus")]
+script = ExtResource("1_6d14a")
+state_machine_menus = NodePath("StateMachine")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
+process_mode = 3
+script = ExtResource("2_6hyip")
+starting_state = NodePath("IntroScreen")
+metadata/_custom_type_script = "uid://d31trbvb6igxn"
+
+[node name="IntroScreen" type="Node" parent="StateMachine"]
+script = ExtResource("3_cwfe2")
+
+[node name="InScene" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("4_n1s3a")
+metadata/_custom_type_script = "uid://8v151neia71f"
+
+[node name="InRoom" type="Node" parent="StateMachine"]
+script = ExtResource("5_rtrm1")
+metadata/_custom_type_script = "uid://8v151neia71f"
+
+[node name="Loading" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("6_hm43d")
+metadata/_custom_type_script = "uid://8v151neia71f"
+
+[node name="StateMenuEnvSelector" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("7_cwfe2")
+metadata/_custom_type_script = "uid://q20rn3ctmrhp"
+
+[node name="StateMenuSettings" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("8_cwfe2")
+metadata/_custom_type_script = "uid://8v151neia71f"
+
+[node name="StateMenuInventory" type="Node" parent="StateMachine"]
+unique_name_in_owner = true
+script = ExtResource("9_n1s3a")
+inventoryui_scene = ExtResource("10_n1s3a")
+metadata/_custom_type_script = "uid://8v151neia71f"
+
+[node name="UI_CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+script = ExtResource("7_bm7q0")
+
+[node name="DebugTaskShow" parent="UI_CanvasLayer" instance=ExtResource("12_wgoxm")]
+unique_name_in_owner = true
+visible = false
+anchor_right = 0.25
+filter_only = Array[int]([1])
+
+[node name="DebugStateText" type="Label" parent="UI_CanvasLayer"]
+unique_name_in_owner = true
+auto_translate_mode = 2
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+grow_vertical = 0
+text = "PLACEHOLDER_ROOTTEXT"
+
+[node name="PanelContainer" type="PanelContainer" parent="UI_CanvasLayer"]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme = SubResource("Theme_mfm05")
+
+[node name="EnvironmentSelector" parent="UI_CanvasLayer/PanelContainer" instance=ExtResource("9_5uipj")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+mouse_filter = 1
+
+[node name="MenuSettings" parent="UI_CanvasLayer/PanelContainer" instance=ExtResource("10_2hlt0")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="PanelContainerTemporal" type="PanelContainer" parent="UI_CanvasLayer"]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_top = 0.05
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme = SubResource("Theme_mfm05")
+
+[node name="PanelContainerTemporalVBox" type="VBoxContainer" parent="UI_CanvasLayer/PanelContainerTemporal"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+alignment = 1

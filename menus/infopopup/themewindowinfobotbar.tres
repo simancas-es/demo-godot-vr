@@ -1,0 +1,62 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://c6aakwuu2eyvi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kussj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kfoin"]
+bg_color = Color(0.968736, 1.54018e-06, 0.483854, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l2kb"]
+bg_color = Color(0.868985, 0.868985, 0.868985, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jihsu"]
+bg_color = Color(0.94902, 0.952941, 0.121569, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1kj3"]
+bg_color = Color(0.800779, 0.840517, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0196078, 0.0196078, 0.0941176, 1)
+border_blend = true
+corner_detail = 1
+anti_aliasing = false
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_3revs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ed4s3"]
+bg_color = Color(5.48691e-06, 0.660497, 0.842367, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cofqg"]
+bg_color = Color(0.327605, 0.977257, 0.461172, 1)
+corner_detail = 1
+
+[resource]
+default_font_size = 20
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_kussj")
+Button/styles/hover = SubResource("StyleBoxFlat_kfoin")
+Button/styles/normal = SubResource("StyleBoxFlat_2l2kb")
+Button/styles/pressed = SubResource("StyleBoxFlat_jihsu")
+HBoxContainer/constants/separation = 4
+HBoxContainer/styles/panel = SubResource("StyleBoxFlat_r1kj3")
+HSeparator/constants/separation = 1
+HSeparator/styles/separator = SubResource("StyleBoxLine_3revs")
+MarginContainer/constants/margin_left = 10
+Panel/styles/panel = SubResource("StyleBoxFlat_ed4s3")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_cofqg")
+RichTextLabel/font_sizes/normal_font_size = 13

@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs3sl01yqpqyb"]
+
+[ext_resource type="Script" uid="uid://cs5ts5ofc8ugb" path="res://menus/choicebutton/buttonchoice.gd" id="1_5kbvx"]
+[ext_resource type="Texture2D" uid="uid://c0fjk1tqdf3t0" path="res://menus/choicebutton/arrownormal.bmp" id="2_oghwg"]
+[ext_resource type="Texture2D" uid="uid://d36r2ypael5oi" path="res://menus/choicebutton/arrowpressed.bmp" id="3_7b7g7"]
+[ext_resource type="Texture2D" uid="uid://b6r8u2gqsbluj" path="res://menus/choicebutton/arrowhover.bmp" id="4_rqegf"]
+
+[node name="ButtonChoice" type="HBoxContainer" node_paths=PackedStringArray("textureButton", "label")]
+auto_translate_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("1_5kbvx")
+textureButton = NodePath("MarginContainer/TextureButton")
+label = NodePath("VBoxContainer/RichTextLabel")
+text = "PLACEHOLDER_CHOICE"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+mouse_filter = 2
+texture_normal = ExtResource("2_oghwg")
+texture_pressed = ExtResource("3_7b7g7")
+texture_hover = ExtResource("4_rqegf")
+texture_focused = ExtResource("4_rqegf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+auto_translate_mode = 2
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "DEFAULT"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_focus_exited"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://efod7qqgyivu"]
+
+[ext_resource type="Script" uid="uid://bcwqh8yuhsxl2" path="res://systems/system-inventory/inventory-ui/item_inspect/item_inspect.gd" id="1_ijcr4"]
+[ext_resource type="PackedScene" uid="uid://dw2qf0uwaki7y" path="res://systems/system-inventory/test/beaker/beaker.gltf" id="2_lmxf3"]
+
+[sub_resource type="Environment" id="Environment_ijcr4"]
+background_mode = 1
+background_color = Color(0.400837, 0.44116, 0.661646, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.949554, 0.942096, 0.899811, 1)
+ambient_light_energy = 1.09
+
+[node name="ItemInspect" type="Node3D"]
+script = ExtResource("1_ijcr4")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-4.37114e-08, 0.55941, -0.828891, 0, 0.828891, 0.55941, 1, 2.44526e-08, -3.6232e-08, -0.547381, 0.276503, -0.0356142)
+environment = SubResource("Environment_ijcr4")
+
+[node name="RotationNode" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="beaker2" parent="RotationNode" instance=ExtResource("2_lmxf3")]
+visible = false

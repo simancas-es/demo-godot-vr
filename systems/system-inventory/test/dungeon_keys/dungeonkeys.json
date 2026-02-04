@@ -1,0 +1,18 @@
+{
+	"en": {
+			"name":"Old keys",
+			"description":"These are some old keys...Maybe you could open some old door with it...",
+	},
+	"de": {
+			"name":"Alte Schlüssel",
+			"description":"Du siehst ziemlich alte Schlüssel... Vielleicht kannst du eine so alte Tür damit",
+	},
+	"es": {
+			"name":"Objeto",
+			"description":"Estás viendo un objeto... Qué puede ser esto?",
+	},
+	"fr": {
+			"name":"Objet",
+			"description":"Tu vois un objet... Qu'est-ce que ça pourrait être",
+	},
+}

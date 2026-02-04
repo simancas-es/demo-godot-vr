@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b64br72poyb2d"]
+
+[ext_resource type="Script" uid="uid://cu4ac4t2cq78f" path="res://systems/system-inventory/test/test_inventory_ui.gd" id="1_5x4b8"]
+[ext_resource type="PackedScene" uid="uid://dw2qf0uwaki7y" path="res://systems/system-inventory/test/beaker/beaker.gltf" id="2_we6o4"]
+
+[node name="TestInventoryUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5x4b8")
+
+[node name="beaker2" parent="." instance=ExtResource("2_we6o4")]
+visible = false
+
+[editable path="beaker2"]

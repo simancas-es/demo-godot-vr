@@ -1,0 +1,296 @@
+# LANGUAGE translation for VirtualTour for the following files:
+# res://addons/file_dialog_in_editor/file_dialog_in_editor.gd
+# res://clases/fpv/fsm/environment.gd
+# res://clases/fpv/fsm/falcon.gd
+# res://clases/fpv/fsm/fixed.gd
+# res://clases/fpv/fsm/mov_death.gd
+# res://clases/fpv/fsm/mov_ladder.gd
+# res://clases/fpv/fsm/physics.gd
+# res://clases/fpv/fsm/room.gd
+# res://clases/fpv/fsm/still.gd
+# res://clases/fpv/test/test_fpv_ladder.gd
+# res://clases/fpv/test/test_fpv_ladder.tscn
+# res://clases/fpv/area_check.gd
+# res://clases/fpv/fpv.gd
+# res://clases/fpv/fpv.tscn
+# res://clases/fpv/fpv_camera.gd
+# res://clases/fpv/fpv_raycast.gd
+# res://clases/fpv/interaction_logic.gd
+# res://clases/interaction/interaction.gd
+# res://clases/interaction/interaction_reacttoselected.gd
+# res://clases/interaction/interactivepanel.gd
+# res://clases/interaction/interactivepanel.tscn
+# res://clases/inventory/ui/fsm/invisible.gd
+# res://clases/inventory/ui/fsm/only_bar.gd
+# res://clases/inventory/ui/fsm/statemachine_base.gd
+# res://clases/inventory/ui/fsm/state_base.gd
+# res://clases/inventory/ui/inventory_grid/inventorygrid.gd
+# res://clases/inventory/ui/inventory_grid/inventorygrid.tscn
+# res://clases/inventory/ui/item_inspect/inspect.gd
+# res://clases/inventory/ui/item_inspect/inventory_panelinspect.gd
+# res://clases/inventory/ui/item_inspect/item_inspect.gd
+# res://clases/inventory/ui/item_inspect/item_inspect.tscn
+# res://clases/inventory/ui/test/inventory_test.gd
+# res://clases/inventory/ui/test/inventory_test.tscn
+# res://clases/inventory/ui/grid.gd
+# res://clases/inventory/ui/inventory_ui.gd
+# res://clases/inventory/ui/inventory_ui.tscn
+# res://clases/inventory/ui/item_slot.gd
+# res://clases/inventory/ui/item_slot.tscn
+# res://clases/inventory/inventory.gd
+# res://clases/inventory/inventoryobject.gd
+# res://clases/inventory/inventoryobjectinformation.gd
+# res://clases/inventory/inventory_object_pickupable.gd
+# res://clases/panorama/label3dfixedsize.gd
+# res://clases/panorama/panorama2d.gd
+# res://clases/panorama/panorama2d.tscn
+# res://clases/panorama/panoramainformationdoor.gd
+# res://clases/panorama/PanoramaInformationPolygon.gd
+# res://clases/panorama/ui_text3d.gd
+# res://clases/room360/datapolygonlocation.gd
+# res://clases/room360/room360.gd
+# res://clases/room360/roomloader.gd
+# res://clases/room360/roomloader.tscn
+# res://clases/tasks/task_loader.gd
+# res://clases/zones/basezone.gd
+# res://clases/zones/zoneinformation.gd
+# res://clases/controlledobject.gd
+# res://clases/falconview.gd
+# res://clases/player_data.gd
+# res://fsm/state.gd
+# res://fsm/statemachine.gd
+# res://fsm/statemachine.tscn
+# res://globals/controllers/controller_base.gd
+# res://globals/controllers/controller_kbm1.gd
+# res://globals/controllers/controller_manager.gd
+# res://globals/audiomanager.gd
+# res://globals/cache.gd
+# res://globals/configmanager.gd
+# res://globals/enums.gd
+# res://globals/environments.gd
+# res://globals/gamestate.gd
+# res://globals/groups.gd
+# res://globals/inputprioritymanager.gd
+# res://globals/inventoryresources.gd
+# res://globals/resources.gd
+# res://globals/rooms.gd
+# res://globals/root.gd
+# res://globals/root.tscn
+# res://globals/signalmanager.gd
+# res://globals/signalmanager.tscn
+# res://globals/tasks.gd
+# res://globals/task_manager.gd
+# res://globals/topics.gd
+# res://globals/utils.gd
+# res://menus/choicebutton/buttonchoice.gd
+# res://menus/choicebutton/buttonchoice.tscn
+# res://menus/components/toppanel.gd
+# res://menus/components/toppanel.tscn
+# res://menus/components/vboxscrollbar.gd
+# res://menus/components/vboxscrollbar.tscn
+# res://menus/dialog/basedialog.gd
+# res://menus/dialog/dialog.gd
+# res://menus/dialog/dialog.tscn
+# res://menus/environmentselector/entryenv.tscn
+# res://menus/environmentselector/entrypanel.gd
+# res://menus/environmentselector/enventry.gd
+# res://menus/environmentselector/environmentselector.gd
+# res://menus/environmentselector/environmentselector.tscn
+# res://menus/environmentselector/loadbutton.gd
+# res://menus/environmentselector/mapconstraint.gd
+# res://menus/environmentselector/mappanel.gd
+# res://menus/environmentselector/scrollenv.gd
+# res://menus/fsm/statemachinemenus.gd
+# res://menus/fsm/statemenus.gd
+# res://menus/fsm/menustates/statecredits.gd
+# res://menus/fsm/menustates/stateinroom.gd
+# res://menus/fsm/menustates/stateinscene.gd
+# res://menus/fsm/menustates/stateintroscreen.gd
+# res://menus/fsm/menustates/stateloadingscene.gd
+# res://menus/fsm/menustates/statenullmenu.gd
+# res://menus/fsm/menustates/stateselectenv.gd
+# res://menus/fsm/menustates/statesettings.gd
+# res://menus/icons/ui_icon.gd
+# res://menus/icons/ui_icon.tscn
+# res://menus/icons/scenes/ui_icon_door.tscn
+# res://menus/icons/scenes/ui_icon_info.tscn
+# res://menus/infopopup/buttonclose.gd
+# res://menus/infopopup/infopopup.gd
+# res://menus/infopopup/infopopup.tscn
+# res://menus/infopopup/midtext.gd
+# res://menus/map/mappanel.tscn
+# res://menus/msgtop/msgtop.gd
+# res://menus/msgtop/msgtop.tscn
+# res://menus/settings/MenuSettings.tscn
+# res://menus/animatemenutransition.gd
+# res://menus/menumaintitle.gd
+# res://menus/menuoptions.gd
+# res://menus/testing.gd
+# res://menus/testing.tscn
+# res://menus/ui_canvaslayer.gd
+# res://zones/demo_vista/world_controls/filling_valve_controller.gd
+# res://zones/demo_vista/world_controls/quest_concrete_basin_blower_controller.gd
+# res://zones/demo_vista/rooms/vista_outside/vista_outside.tscn
+# res://zones/demo_vista/rooms/vista_vlt3/vista_vlt3-inside.tscn
+# res://zones/demo_vista/zoneobservatorio.gd
+# res://zones/demo_vista/zoneobservatorio.tscn
+# res://zones/gerwisch/zonegerwisch.tscn
+# res://zones/hochschule/zonehochschule.gd
+# res://zones/hochschule/zonehochschule.tscn
+# res://clases/inventory/ui/item_inspect/inspecttext.gd
+# res://clases/inventory/ui/inventorybottombar.gd
+#
+# Automatically generated, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VirtualTour\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: addons/file_dialog_in_editor/file_dialog_in_editor.gd
+msgid "JSON Files"
+msgstr "JSON Files"
+
+#: clases/inventory/ui/item_slot.tscn
+msgid "999"
+msgstr "999"
+
+#: clases/room360/datapolygonlocation.gd
+msgid "Read [{key}]"
+msgstr "Read [{key}]"
+
+#: globals/enums.gd
+msgid "Interact [{key}]"
+msgstr "Interact [{key}]"
+
+#: globals/enums.gd
+msgid "Remove [{key}]"
+msgstr "Remove [{key}]"
+
+#: globals/enums.gd
+msgid ""
+"{name}\n"
+"Take [{key}]"
+msgstr ""
+"{name}\n"
+"Take [{key}]"
+
+#: globals/enums.gd
+msgid ""
+"{name}\n"
+"Hold [{key}]"
+msgstr ""
+"{name}\n"
+"Hold [{key}]"
+
+#: globals/topics.gd
+msgid "Wastewater"
+msgstr "Wastewater"
+
+#: globals/topics.gd
+msgid "Drinking Water"
+msgstr "Drinking Water"
+
+#: globals/topics.gd
+msgid "Eletrotechnics"
+msgstr "Eletrotechnics"
+
+#: menus/environmentselector/environmentselector.tscn
+msgid "LOAD"
+msgstr "LOAD"
+
+#: menus/fsm/menustates/stateintroscreen.gd
+msgid ""
+"You are playing a tech demo for a 3D World / 360º Virtual tour tool\n"
+" Continue [{key}]"
+msgstr ""
+"You are playing a tech demo for a 3D World / 360º Virtual tour tool\n"
+" Continue [{key}]"
+
+#: menus/infopopup/infopopup.tscn
+msgid "END NOTE END NOTE\n"
+msgstr "END NOTE END NOTE\n"
+
+#: menus/msgtop/msgtop.tscn
+msgid "DEFAULT_MSGTOP_TEXT"
+msgstr "DEFAULT_MSGTOP_TEXT"
+
+#: menus/settings/MenuSettings.tscn
+msgid "Window mode"
+msgstr "Window mode"
+
+#: menus/settings/MenuSettings.tscn
+msgid "Resolution"
+msgstr "Resolution"
+
+#: menus/settings/MenuSettings.tscn
+msgid "Language"
+msgstr "Language"
+
+#: menus/settings/MenuSettings.tscn
+msgid "Topic"
+msgstr "Topic"
+
+#: menus/settings/MenuSettings.tscn
+msgid "Back"
+msgstr "Back"
+
+#: menus/menuoptions.gd
+msgid "Fullscreen"
+msgstr "Fullscreen"
+
+#: menus/menuoptions.gd
+msgctxt "Window mode as an option"
+msgid "Window"
+msgstr "Window"
+
+#: menus/menuoptions.gd
+msgid "Borderless Window"
+msgstr "Borderless Window"
+
+#: zones/demo_vista/world_controls/quest_concrete_basin_blower_controller.gd
+msgid "The air pressure blows your eardrums out and you fall. You died."
+msgstr "The air pressure blows your eardrums out and you fall. You died."
+
+#: zones/demo_vista/rooms/vista_outside/vista_outside.tscn
+msgid "Vertical SPL"
+msgstr "Vertical SPL"
+
+#: zones/demo_vista/rooms/vista_outside/vista_outside.tscn
+msgid "VISTA"
+msgstr "VISTA"
+
+#: models/concrete_basin/aeration_repair.gd
+msgid "You repaired the aerator!!!"
+msgstr ""
+
+#: models/concrete_basin/concrete_basin.gd
+msgid "You drowned! Don't just jump into a basin..."
+msgstr ""
+
+#: models/concrete_basin/concrete_basin_controller.gd
+msgid "It's not safe to drain the basin while the blowers are on!"
+msgstr ""
+
+#: models/concrete_basin/concrete_basin_controller.gd
+msgid ""
+"Second blower is not working!! There is a problem with the aerator heads"
+msgstr ""
+
+#: models/concrete_basin/concrete_basin_controller.gd
+msgid "Can't turn the blower on until you fill the basin"
+msgstr ""
+
+#: models/van/van.gd
+msgid "Press [{key}] to travel!"
+msgstr ""
+
+#: models/van/van.gd
+msgid "You clicked on the van"
+msgstr ""

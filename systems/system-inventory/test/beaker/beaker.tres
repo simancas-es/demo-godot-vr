@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://ciatc0fbcj3tq"]
+
+[ext_resource type="PackedScene" uid="uid://dw2qf0uwaki7y" path="res://systems/system-inventory/test/beaker/beaker.gltf" id="1_m7dvb"]
+[ext_resource type="Script" uid="uid://dwue6j575oyyx" path="res://systems/system-inventory/inventory-backend/inventory_object_information.gd" id="2_tuu35"]
+[ext_resource type="Texture2D" uid="uid://tjmx4a84aist" path="res://systems/system-inventory/test/beaker/beaker_icon.bmp" id="3_tuu35"]
+
+[resource]
+script = ExtResource("2_tuu35")
+STACK_MAX = 4
+DISAPPEARS_AT_0 = true
+texture = ExtResource("3_tuu35")
+inspect_model = ExtResource("1_m7dvb")
+inspect_translations_path = "res://system-inventory/test/beaker/beaker.json"
+metadata/_custom_type_script = "uid://dwue6j575oyyx"

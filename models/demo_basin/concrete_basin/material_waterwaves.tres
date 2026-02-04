@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://gxwgns18ksk3"]
+
+[ext_resource type="Shader" uid="uid://pvf2jrcculct" path="res://models/demo_basin/concrete_basin/material_waterwaves_bubbles_multicenter.gdshader" id="1_a4vmv"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_a4vmv")
+shader_parameter/ripple_origin = Vector3(-12, 0, 0)
+shader_parameter/ripple_direction = Vector3(1, 0, 0)
+shader_parameter/ripple_speed = 0.2
+shader_parameter/ripple_frequency = 0.4
+shader_parameter/ripple_amplitude = 0.1
+shader_parameter/water_color = Vector3(0.145, 0.15, 0.045)
+shader_parameter/flash_center_count = 1
+shader_parameter/flash_centers = PackedVector3Array(0, 0, 0)
+shader_parameter/flash_centers_strength = PackedFloat32Array(1, 1, 1, 1, 1, 0, 0, 0)
+shader_parameter/flash_radius = 3.0
+shader_parameter/flash_intensity = 0.5
+shader_parameter/flash_noise_scale = 15.0
+shader_parameter/flash_speed = 6.0
+shader_parameter/flash_threshold = 0.6

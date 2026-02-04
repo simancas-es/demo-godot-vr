@@ -1,0 +1,22 @@
+{ 
+	"en":{
+			"hint":"You are looking at a thing",
+			"title": "VISTA Telescope in Paranal",
+			"bbcode_text": "...",
+		},
+	"de":{
+			"hint":"You are looking at a thing",
+			"title": "VISTA Teleskop in Paranal",
+			"bbcode_text": "...",
+		},
+	"es":{
+			"hint":"You are looking at a thing",
+			"title": "Telescopio VISTA en Paranal",
+			"bbcode_text": "...",
+		},
+	"fr":{
+			"hint":"You are looking at a thing",
+			"title": "The Thing",
+			"bbcode_text": "...",
+		}, 
+}

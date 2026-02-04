@@ -1,0 +1,150 @@
+[gd_scene load_steps=9 format=3 uid="uid://dockstf0532yi"]
+
+[ext_resource type="Script" uid="uid://dwmnklkp6bt50" path="res://menus/infopopup/infopopup.gd" id="1_ybjby"]
+[ext_resource type="Script" uid="uid://daxocisxiqvn6" path="res://menus/animatemenutransition.gd" id="2_40y1i"]
+[ext_resource type="Theme" uid="uid://dldlslfygjh0r" path="res://menus/infopopup/themewindowinfotopcontainer.tres" id="3_llsew"]
+[ext_resource type="PackedScene" uid="uid://cjv30jq3iwxgd" path="res://menus/components/toppanel.tscn" id="4_xv8gp"]
+[ext_resource type="Theme" uid="uid://kyc6vue6ofpi" path="res://menus/infopopup/themewindowinfomidtext.tres" id="5_riq7t"]
+[ext_resource type="Script" uid="uid://bcqp8m5q4prkr" path="res://menus/infopopup/midtext.gd" id="6_q78ok"]
+[ext_resource type="PackedScene" uid="uid://cgu28yqs3yqso" path="res://menus/components/vboxscrollbar.tscn" id="7_qtveu"]
+[ext_resource type="Theme" uid="uid://c6aakwuu2eyvi" path="res://menus/infopopup/themewindowinfobotbar.tres" id="8_vnlhk"]
+
+[node name="InfoScreen" type="Control" groups=["DIALOG_LOCK"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ybjby")
+
+[node name="AnimateMenuScaleIn" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_40y1i")
+metadata/_custom_type_script = "uid://daxocisxiqvn6"
+
+[node name="TOPCONTAINER" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.1
+anchor_right = 0.75
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_llsew")
+
+[node name="Panel" type="Panel" parent="TOPCONTAINER"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TOPCONTAINER/Panel"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="TOPPANEL" parent="TOPCONTAINER/Panel/VBoxContainer" instance=ExtResource("4_xv8gp")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MIDPANEL" type="Panel" parent="TOPCONTAINER/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TOPCONTAINER/Panel/VBoxContainer/MIDPANEL"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_riq7t")
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TOPCONTAINER/Panel/VBoxContainer/MIDPANEL/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 0
+
+[node name="MIDTEXT" type="RichTextLabel" parent="TOPCONTAINER/Panel/VBoxContainer/MIDPANEL/HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+auto_translate_mode = 2
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 2
+theme = ExtResource("5_riq7t")
+bbcode_enabled = true
+text = "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"
+
+\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"
+
+\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"
+
+\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"
+
+\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"
+
+\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"
+
+\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"
+"
+scroll_active = false
+autowrap_mode = 2
+horizontal_alignment = 3
+selection_enabled = true
+script = ExtResource("6_q78ok")
+
+[node name="VBOXSCROLLBAR" parent="TOPCONTAINER/Panel/VBoxContainer/MIDPANEL/HBoxContainer" instance=ExtResource("7_qtveu")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="TOPCONTAINER/Panel/VBoxContainer/MIDPANEL"]
+visible = false
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+offset_top = 356.0
+offset_right = 600.0
+offset_bottom = 360.0
+size_flags_vertical = 4
+
+[node name="Panel" type="Panel" parent="TOPCONTAINER/Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.0
+theme = ExtResource("8_vnlhk")
+
+[node name="BottomBar" type="HBoxContainer" parent="TOPCONTAINER/Panel/VBoxContainer/Panel"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="EndNote" type="RichTextLabel" parent="TOPCONTAINER/Panel/VBoxContainer/Panel/BottomBar"]
+clip_contents = false
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "END NOTE END NOTE
+"
+scroll_active = false
+horizontal_alignment = 2

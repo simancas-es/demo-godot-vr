@@ -1,0 +1,18 @@
+{
+	"en": {
+			"name":"Simple Beaker",
+			"description":"You are looking at a beaker... You could use this to take some samples...",
+	},
+	"de": {
+			"name":"Beaker",
+			"description":"Du siehst einen Objekt... Was soll dies sein?",
+	},
+	"es": {
+			"name":"Vaso de precipitados",
+			"description":"Estás viendo un vaso de precipitados común... Quizá puedas tomar alguna muestra?",
+	},
+	"fr": {
+			"name":"Objet",
+			"description":"Tu vois un objet... Qu'est-ce que ça pourrait être",
+	},
+}

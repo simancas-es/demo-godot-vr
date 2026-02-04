@@ -1,0 +1,1 @@
+Helper logic so that you can not stand on the object that you are grabbing. Or on the object that is on top of the one that you are grabbing.

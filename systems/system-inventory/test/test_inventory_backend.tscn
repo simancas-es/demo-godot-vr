@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://sctfdj2hx1xl"]
+
+[ext_resource type="Script" uid="uid://duab73b6fm8xo" path="res://systems/system-inventory/test/test_inventory_backend.gd" id="1_skpbv"]
+
+[node name="TestInventoryBackend" type="Node"]
+script = ExtResource("1_skpbv")

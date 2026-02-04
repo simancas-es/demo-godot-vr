@@ -1,0 +1,73 @@
+{
+  "version": "0.1",
+  "tasks": [
+	{
+	  "id": "default0",
+	  "conditions": {
+		"success": {
+		  "all": [],
+		  "any": [
+			{
+			  "type": "SystemTasksConditionExisting",
+			  "number": 2,
+			  "group_name": "SYSTEMTASKS_DEFAULT1"
+			}
+		  ]
+		},
+		"fail": {
+		  "all": [
+			{
+			  "type": "SystemTasksConditionSignal",
+			  "signal_name": "test_signal",
+			  "locator_id":"DEFAULT1"
+			}
+		  ]
+		  
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultPrint",
+			"text": "Success at task default0"
+		  },
+		  {
+			"type": "SystemTasksResultGiveItem",
+			"item_id": "key_gold",
+			"amount": 1
+		  }
+		],
+		"fail": [
+		  {
+			"type": "SystemTasksResultPrint",
+			"text": "You failed to open the valve in time!"
+		  }
+		]
+	  }
+	},
+
+	{
+	  "id": "default1",
+	  "conditions": {
+		"success": {
+		  "all": [
+			{
+			  "type": "SystemTasksConditionFinishedTask",
+			  "units_id ": ["default0"],
+			  "oneshot": true
+			}
+		  ],
+		  "any": []
+		}
+	},
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultPrint",
+			"text": "Second Task completed."
+		  }
+		]
+	  }
+	}
+  ]
+}

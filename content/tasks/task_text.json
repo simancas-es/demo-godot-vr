@@ -1,0 +1,31 @@
+{"version": "0.1",
+  "_comment": "Translation of all task texts. Unit_id as in Systemtaskssettings enum. Keep it pretty for easy diffs.",
+  "tasks": [
+		{
+			"unit_id": "TESTID_0",
+			"title": {
+				"en": "defaulttasktitle",
+				"es": "titulotareapordefecto",
+				"de": "defaultaufgabetitel"
+			},
+			"text": {
+				"en": "description",
+				"es": "descripcion",
+				"de": "beschreibung"
+			}
+		},
+		{
+			"unit_id": "Q_DEMO_AERATOR",
+			"title":{
+				"en": "Repair the aerator",
+				"de": "Reparier den Belüfter",
+				"es": "Repara el aireador",
+			},
+			"text":{
+				"en": "Aerator head in the basin is broken!",
+				"de": "Der Belüfterkopf ist kaputt!",
+				"es": "Se ha roto el cabezal de aireación!",
+			}
+		}
+	]
+}

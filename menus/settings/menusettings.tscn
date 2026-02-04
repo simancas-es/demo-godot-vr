@@ -1,0 +1,112 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb61r87co1wd4"]
+
+[ext_resource type="Script" uid="uid://b7j3r01kfvil1" path="res://menus/menuoptions.gd" id="1_dig03"]
+
+[sub_resource type="Theme" id="Theme_w12bu"]
+
+[node name="MenuSettings" type="Control" node_paths=PackedStringArray("options_windowmode", "options_resolution", "options_language", "options_topic")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = SubResource("Theme_w12bu")
+script = ExtResource("1_dig03")
+options_windowmode = NodePath("Panel/VBoxContainer/HBoxWindowMode/OptionButtonWindowMode")
+options_resolution = NodePath("Panel/VBoxContainer/HBoxResolution/OptionButtonResolutions")
+options_language = NodePath("Panel/VBoxContainer/HBoxLanguage/OptionButtonLanguages")
+options_topic = NodePath("Panel/VBoxContainer/HBoxTopic/OptionButtonTopics")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3
+anchor_top = 0.4
+anchor_right = 0.7
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.2
+anchor_right = 0.6
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxWindowMode" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="LabelWindowMode" type="Label" parent="Panel/VBoxContainer/HBoxWindowMode"]
+layout_mode = 2
+text = "Window mode"
+
+[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/HBoxWindowMode"]
+layout_mode = 2
+
+[node name="OptionButtonWindowMode" type="OptionButton" parent="Panel/VBoxContainer/HBoxWindowMode"]
+layout_mode = 2
+
+[node name="HBoxResolution" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="LabelResolution" type="Label" parent="Panel/VBoxContainer/HBoxResolution"]
+layout_mode = 2
+text = "Resolution"
+
+[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/HBoxResolution"]
+layout_mode = 2
+
+[node name="OptionButtonResolutions" type="OptionButton" parent="Panel/VBoxContainer/HBoxResolution"]
+layout_mode = 2
+
+[node name="HBoxLanguage" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="LabelLanguage" type="Label" parent="Panel/VBoxContainer/HBoxLanguage"]
+layout_mode = 2
+text = "Language"
+
+[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/HBoxLanguage"]
+layout_mode = 2
+
+[node name="OptionButtonLanguages" type="OptionButton" parent="Panel/VBoxContainer/HBoxLanguage"]
+layout_mode = 2
+
+[node name="HBoxTopic" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="LabelTopic" type="Label" parent="Panel/VBoxContainer/HBoxTopic"]
+layout_mode = 2
+text = "Topic"
+
+[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/HBoxTopic"]
+layout_mode = 2
+
+[node name="OptionButtonTopics" type="OptionButton" parent="Panel/VBoxContainer/HBoxTopic"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="SaveBack" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ButtonBack" type="Button" parent="Panel/VBoxContainer/SaveBack"]
+layout_mode = 2
+text = "Back"
+
+[connection signal="button_up" from="Panel/VBoxContainer/SaveBack/ButtonBack" to="." method="on_button_back_up"]

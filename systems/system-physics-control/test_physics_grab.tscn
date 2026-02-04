@@ -1,0 +1,268 @@
+[gd_scene load_steps=22 format=3 uid="uid://cmsdhlhf53obp"]
+
+[ext_resource type="Script" uid="uid://6yf4je4071a8" path="res://systems/system-physics-control/system_physical_control_object.gd" id="1_nkfhw"]
+[ext_resource type="Script" uid="uid://w3alf3er3kwf" path="res://systems/system-physics-control/system_physical_control_grabber.gd" id="2_nipgd"]
+[ext_resource type="Script" uid="uid://bemtws0tw4gx4" path="res://systems/system-physics-control/test_first_person_mov.gd" id="4_xfluc"]
+
+[sub_resource type="GDScript" id="GDScript_dhqr7"]
+script/source = "extends Node3D
+
+@onready var fpv : CharacterBody3D = $CharacterBody3D
+
+func test_settings() -> bool:
+	
+	
+	assert(SYSTEMPHYSICALCONTROLSETTINGS.GRAB_AVAILABLE_ICON is PackedScene)
+	assert(SYSTEMPHYSICALCONTROLSETTINGS.GRAB_ACTIVATED_ICON is PackedScene)
+
+	assert(InputMap.has_action(SYSTEMPHYSICALCONTROLSETTINGS.ACTION_GRAB_NAME))
+	assert(InputMap.has_action(SYSTEMPHYSICALCONTROLSETTINGS.ACTION_SEND_FURTHER))
+	assert(InputMap.has_action(SYSTEMPHYSICALCONTROLSETTINGS.ACTION_SEND_CLOSER))
+	
+	# Check layer constant validity
+	assert(typeof(SYSTEMPHYSICALCONTROLSETTINGS.COLLISION_LAYER) == TYPE_INT)
+	# Check mask validity
+	assert(typeof(SYSTEMPHYSICALCONTROLSETTINGS.OTHER_COLLISION_LAYER_MASK) == TYPE_INT)
+
+	return true	
+
+
+func setup_layers() -> bool:	
+	var demo_floor : StaticBody3D = %Floor
+	demo_floor.set_collision_layer_value(SYSTEMPHYSICALCONTROLUTILS.log2_int(SYSTEMPHYSICALCONTROLSETTINGS.LAYER_FLOOR) + 1, true)
+	demo_floor.set_collision_mask_value(SYSTEMPHYSICALCONTROLUTILS.log2_int(SYSTEMPHYSICALCONTROLSETTINGS.LAYER_WALLS) + 1, true)
+	
+	var demo_door : SystemPhysicalControlObject = %door
+	demo_door.set_collision_layer_value(SYSTEMPHYSICALCONTROLUTILS.log2_int(SYSTEMPHYSICALCONTROLSETTINGS.LAYER_WALLS) + 1, true)
+	demo_door.set_collision_mask_value(SYSTEMPHYSICALCONTROLUTILS.log2_int(SYSTEMPHYSICALCONTROLSETTINGS.LAYER_FPVPLAYER) + 1, true)
+	return true
+
+	
+func _ready() -> void:
+	assert (setup_layers())
+	assert (test_settings())
+	print(\"SYSTEMPHYSICALCONTROL module seems to work.\")
+	pass
+"
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nipgd"]
+sky_top_color = Color(0.83825874, 0, 0.20416707, 1)
+
+[sub_resource type="Sky" id="Sky_dhqr7"]
+sky_material = SubResource("ProceduralSkyMaterial_nipgd")
+
+[sub_resource type="Environment" id="Environment_xfluc"]
+background_mode = 2
+sky = SubResource("Sky_dhqr7")
+ambient_light_energy = 1.85
+
+[sub_resource type="BoxMesh" id="BoxMesh_ybmld"]
+size = Vector3(0.1, 2, 0.8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nipgd"]
+size = Vector3(0.0899658, 1.98611, 0.809326)
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_nipgd"]
+margin = 0.1
+map_width = 10
+map_depth = 10
+map_data = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hj7vq"]
+size = Vector2(6.715, 8.235)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5kvq7"]
+albedo_color = Color(0.54902, 1, 0.34902, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_nipgd"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dhqr7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nipgd"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dhqr7"]
+margin = 0.05
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dhqr7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xfluc"]
+margin = 0.05
+
+[sub_resource type="BoxMesh" id="BoxMesh_xfluc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ar8pj"]
+margin = 0.05
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dhqr7"]
+radius = 0.288122
+
+[node name="Testing_grabbing_physics" type="Node3D"]
+script = SubResource("GDScript_dhqr7")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xfluc")
+
+[node name="RotationObject" type="Node3D" parent="."]
+
+[node name="StaticBody3DAxis" type="StaticBody3D" parent="RotationObject"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.511)
+metadata/_edit_lock_ = true
+
+[node name="HingeJoint3D_ZAxis" type="HingeJoint3D" parent="RotationObject/StaticBody3DAxis"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../door")
+angular_limit/enable = true
+angular_limit/upper = 2.26893
+angular_limit/lower = 0.0
+angular_limit/relaxation = 0.63
+
+[node name="door" type="RigidBody3D" parent="RotationObject"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.036068, 0)
+collision_layer = 0
+collision_mask = 526336
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+mass = 20.0
+gravity_scale = 0.0
+sleeping = true
+continuous_cd = true
+angular_damp_mode = 1
+angular_damp = 5.0
+script = ExtResource("1_nkfhw")
+metadata/_custom_type_script = "uid://6yf4je4071a8"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RotationObject/door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00595, 0)
+mesh = SubResource("BoxMesh_ybmld")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RotationObject/door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00384521, 0.994158, -0.00012207)
+shape = SubResource("BoxShape3D_nipgd")
+metadata/_edit_lock_ = true
+
+[node name="Floor" type="StaticBody3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("HeightMapShape3D_nipgd")
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("PlaneMesh_hj7vq")
+surface_material_override/0 = SubResource("StandardMaterial3D_5kvq7")
+metadata/_edit_lock_ = true
+
+[node name="Sphere" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0561028, 2.18826, 0.129503)
+collision_layer = 0
+collision_mask = 0
+mass = 0.2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sphere"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("SphereMesh_nipgd")
+skeleton = NodePath("")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sphere"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("SphereShape3D_dhqr7")
+metadata/_edit_lock_ = true
+
+[node name="Cube" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.110511, 2.40071, 0)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_nkfhw")
+type = 0
+metadata/_custom_type_script = "uid://6yf4je4071a8"
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cube"]
+mesh = SubResource("BoxMesh_nipgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube"]
+shape = SubResource("BoxShape3D_dhqr7")
+
+[node name="Cube2" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.549637, 2.40071, -1.79999)
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_nkfhw")
+type = 0
+metadata/_custom_type_script = "uid://6yf4je4071a8"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cube2"]
+mesh = SubResource("BoxMesh_nipgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube2"]
+shape = SubResource("BoxShape3D_dhqr7")
+
+[node name="Cubegrande" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.772053, 1.53119, -1.98563)
+collision_layer = 0
+collision_mask = 0
+mass = 10.0
+script = ExtResource("1_nkfhw")
+type = 0
+metadata/_custom_type_script = "uid://6yf4je4071a8"
+metadata/_edit_lock_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cubegrande"]
+mesh = SubResource("BoxMesh_dhqr7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubegrande"]
+shape = SubResource("BoxShape3D_xfluc")
+
+[node name="Gravity_with_pinjoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89625, 3.48869, -2.72832)
+
+[node name="Cubegrande_pinned" type="RigidBody3D" parent="Gravity_with_pinjoint"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.695176, -1.59327, 0.596442)
+collision_layer = 2048
+collision_mask = 51200
+mass = 10.0
+script = ExtResource("1_nkfhw")
+type = 0
+metadata/_custom_type_script = "uid://6yf4je4071a8"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Gravity_with_pinjoint/Cubegrande_pinned"]
+mesh = SubResource("BoxMesh_xfluc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gravity_with_pinjoint/Cubegrande_pinned"]
+shape = SubResource("BoxShape3D_ar8pj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Gravity_with_pinjoint"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.194667, -0.993526, 0.114425)
+
+[node name="PinJoint3D" type="PinJoint3D" parent="Gravity_with_pinjoint"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.194667, -1.08798, 0.114425)
+node_a = NodePath("../StaticBody3D")
+node_b = NodePath("../Cubegrande_pinned")
+
+[node name="SystemPhysicalControlGrabber" type="Node" parent="." node_paths=PackedStringArray("body_movement_object")]
+unique_name_in_owner = true
+script = ExtResource("2_nipgd")
+body_movement_object = NodePath("../CharacterBody3D")
+metadata/_custom_type_script = "uid://w3alf3er3kwf"
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08803, 0.0768096, 0.844845)
+collision_layer = 0
+collision_mask = 0
+platform_floor_layers = 0
+script = ExtResource("4_xfluc")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.948925, 0)
+shape = SubResource("CapsuleShape3D_dhqr7")

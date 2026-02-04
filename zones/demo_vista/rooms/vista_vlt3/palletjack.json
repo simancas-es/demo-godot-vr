@@ -1,0 +1,22 @@
+{ 
+	"en":{
+			"hint":"You are looking at a thing",
+			"title": "The Thing",
+			"bbcode_text": "...",
+		},
+	"de":{
+			"hint":"You are looking at a thing",
+			"title": "The Thing",
+			"bbcode_text": "...",
+		},
+	"es":{
+			"hint":"You are looking at a thing",
+			"title": "The Thing",
+			"bbcode_text": "...",
+		},
+	"fr":{
+			"hint":"You are looking at a thing",
+			"title": "The Thing",
+			"bbcode_text": "...",
+		}, 
+}

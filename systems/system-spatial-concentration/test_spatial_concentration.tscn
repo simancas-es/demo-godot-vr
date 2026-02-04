@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6kpmwmhdqwun"]
+
+[ext_resource type="Script" uid="uid://cu3531kfmroh1" path="res://system-spatial-concentration/test_spatial_concentration.gd" id="1_u1pfv"]
+[ext_resource type="Script" uid="uid://ddskc8rulrgyi" path="res://system-spatial-concentration/system_spatial_concentration_source.gd" id="1_w7f1b"]
+[ext_resource type="Script" uid="uid://cgyk7jvi13xq1" path="res://system-spatial-concentration/system_spatial_concentration_detector.gd" id="3_ew4b7"]
+
+[sub_resource type="Environment" id="Environment_fvwkl"]
+background_mode = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ew4b7"]
+size = Vector2(6.825, 6.315)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ew4b7"]
+radius = 2.32703
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_43lt3"]
+radius = 1.1367188
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s7npw"]
+size = Vector3(1, 1.74902, 3.87451)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fbdif"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[node name="TestSpatialConcentration" type="Node3D"]
+script = ExtResource("1_u1pfv")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fvwkl")
+
+[node name="floor" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("PlaneMesh_ew4b7")
+
+[node name="ConcentrationSource1" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01434, 0, -2.40655)
+collision_layer = 4096
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_w7f1b")
+core_concentration = 15.0
+falloff_radius_m = 4.0
+falloff_curve = 2.73208
+metadata/_custom_type_script = "uid://ddskc8rulrgyi"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ConcentrationSource1"]
+shape = SubResource("SphereShape3D_ew4b7")
+debug_color = Color(0, 1, 0.494118, 1)
+
+[node name="ConcentrationSource2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.95414, 0, -2.33585)
+collision_layer = 4096
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_w7f1b")
+core_concentration = 1.5
+metadata/_custom_type_script = "uid://ddskc8rulrgyi"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ConcentrationSource2"]
+shape = SubResource("CylinderShape3D_43lt3")
+debug_color = Color(0, 0.6745098, 0, 1)
+
+[node name="ConcentrationSource3" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0854902, 0, 0.93966365)
+collision_layer = 4096
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_w7f1b")
+core_concentration = 5.0
+falloff_radius_m = 4.0
+falloff_curve = 2.14355
+metadata/_custom_type_script = "uid://ddskc8rulrgyi"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ConcentrationSource3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.374512, -0.692627)
+shape = SubResource("BoxShape3D_s7npw")
+debug_color = Color(0, 1, 0.329412, 1)
+
+[node name="ConcentrationDetector" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0272738, 0.185845, -0.4610795)
+script = ExtResource("3_ew4b7")
+
+[node name="DebugLabel" type="Label3D" parent="ConcentrationDetector"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.434, 0)
+billboard = 1
+text = "Concentration: 4.25"
+font_size = 38
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ConcentrationDetector"]
+mesh = SubResource("BoxMesh_fbdif")

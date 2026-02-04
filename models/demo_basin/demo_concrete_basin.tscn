@@ -1,0 +1,203 @@
+[gd_scene load_steps=24 format=3 uid="uid://bl8xsj2hbqfmr"]
+
+[ext_resource type="Script" uid="uid://c115fvopay46j" path="res://models/demo_basin/demo_basin_controller.gd" id="1_2lndu"]
+[ext_resource type="PackedScene" uid="uid://docoieikc6j0v" path="res://models/platform_rusty/platform_rusty.tscn" id="2_wla5t"]
+[ext_resource type="Script" uid="uid://s14wlv4lqne3" path="res://models/ladders/simple_ladder/ladder.gd" id="3_2lndu"]
+[ext_resource type="PackedScene" uid="uid://cumtbhw4k7gvt" path="res://models/demo_basin/concrete_basin/concrete_basin.tscn" id="4_1inje"]
+[ext_resource type="Script" uid="uid://016j8vfs5o3y" path="res://models/demo_basin/control_system/tank_controller.gd" id="4_wla5t"]
+[ext_resource type="Script" uid="uid://smn8uss4al4c" path="res://models/demo_basin/control_system/valve_controller_stateful.gd" id="5_mn8ld"]
+[ext_resource type="Script" uid="uid://cpxvn4y6ne5kl" path="res://clases/interaction/interaction.gd" id="6_jnywi"]
+[ext_resource type="PackedScene" uid="uid://g84geloayuv6" path="res://models/demo_pipes/basic_pipe_valve.tscn" id="7_5s37b"]
+[ext_resource type="Script" uid="uid://bw0y2sq3sbao6" path="res://models/demo_basin/control_system/blower_controller.gd" id="7_wla5t"]
+[ext_resource type="PackedScene" uid="uid://drqrwbx5e5nqw" path="res://models/demo_basin/demo_blower/blower.tscn" id="10_4he58"]
+[ext_resource type="Script" uid="uid://cbkd2d8p88nn2" path="res://models/demo_basin/task/aerator_quest_controller.gd" id="11_engif"]
+[ext_resource type="Script" uid="uid://cpye5rmdal8l5" path="res://models/demo_basin/basin_death.gd" id="12_wla5t"]
+[ext_resource type="Script" uid="uid://c6qt6kqkt2eng" path="res://clases/interaction/interaction_with_inventory_slot.gd" id="13_2lndu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bliu7"]
+size = Vector3(12.8694, 0.223511, 3.35736)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eru1o"]
+size = Vector3(0.163574, 0.067627, 0.351013)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ja30v"]
+size = Vector3(0.182495, 0.0629883, 0.369873)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2lndu"]
+size = Vector3(0.5727539, 0.5332031, 0.47216797)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_urams"]
+size = Vector3(12.8694, 0.223511, 3.35736)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mn8ld"]
+size = Vector3(0.2911377, 0.42980957, 0.28125)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t5cnw"]
+size = Vector3(12.8694, 0.223511, 3.35736)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qfylk"]
+size = Vector3(0.6, 2, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_engif"]
+size = Vector3(0.299866, 1.703, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1inje"]
+size = Vector3(2.7958984, 1, 2.840332)
+
+[node name="DemoConcreteBasin" type="Node3D" node_paths=PackedStringArray("valve_controller", "blower1_controller", "blower2_controller", "tank_controller")]
+script = ExtResource("1_2lndu")
+valve_controller = NodePath("ValveController")
+blower1_controller = NodePath("Aerator1Controller")
+blower2_controller = NodePath("Aerator2Controller")
+tank_controller = NodePath("TankController")
+
+[node name="AeratorQuestController" type="Node" parent="."]
+script = ExtResource("11_engif")
+
+[node name="BasinDeath" type="Node" parent="."]
+script = ExtResource("12_wla5t")
+
+[node name="TankController" type="Node" parent="." node_paths=PackedStringArray("fill_tank")]
+script = ExtResource("4_wla5t")
+fill_tank = NodePath("../concrete_basin")
+aerates = true
+bubble_strength = Array[float]([1.0, 1.0])
+
+[node name="ValveController" type="Node" parent="." node_paths=PackedStringArray("valve", "leftinter", "rightinter")]
+script = ExtResource("5_mn8ld")
+valve = NodePath("../ValveStructure/FillingValve")
+leftinter = NodePath("../ValveStructure/ValveLeftDirection")
+rightinter = NodePath("../ValveStructure/ValveRightDirection")
+
+[node name="concrete_basin" parent="." instance=ExtResource("4_1inje")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, -4.908, 0, 1.6955)
+
+[node name="death_floor" type="Area3D" parent="concrete_basin"]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="concrete_basin/death_floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029212, 0.388245, 0.00381374)
+shape = SubResource("BoxShape3D_bliu7")
+
+[node name="ValveStructure" type="Node3D" parent="."]
+transform = Transform3D(1, -8.151626e-08, -5.583416e-08, 7.595666e-09, 0.6268486, -0.7791411, 9.851223e-08, 0.7791411, 0.6268486, -7.757798, 3.1641629, -2.0796149)
+
+[node name="FillingValve" parent="ValveStructure" instance=ExtResource("7_5s37b")]
+transform = Transform3D(-0.9965642, -0.082435146, -0.008014362, -0.0824352, 0.9778708, 0.19228497, -0.008014028, 0.19228488, -0.98130643, -0.3106718, -0.034159422, -0.05491543)
+
+[node name="ValveRightDirection" type="Area3D" parent="ValveStructure"]
+transform = Transform3D(1, 0, -6.3329935e-08, 7.450581e-09, 1.0000001, 0, 7.450581e-09, -5.9604645e-08, 1.0000001, -0.06627369, 0.2132361, 7.1525574e-07)
+collision_mask = 0
+monitoring = false
+script = ExtResource("6_jnywi")
+metadata/_custom_type_script = "uid://cpxvn4y6ne5kl"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ValveStructure/ValveRightDirection"]
+transform = Transform3D(1, -1.1813e-13, -8.34466e-07, 0, 1, -1.41563e-07, 8.34466e-07, 1.41563e-07, 1, -0.0402816, 0.0428462, -0.0047358)
+shape = SubResource("BoxShape3D_eru1o")
+
+[node name="ValveLeftDirection" type="Area3D" parent="ValveStructure"]
+transform = Transform3D(1, 0, -6.3329935e-08, 7.450581e-09, 1.0000001, 0, 7.450581e-09, -5.9604645e-08, 1.0000001, -0.32655096, 0.24414992, -2.3841858e-07)
+collision_mask = 0
+monitoring = false
+script = ExtResource("6_jnywi")
+metadata/_custom_type_script = "uid://cpxvn4y6ne5kl"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ValveStructure/ValveLeftDirection"]
+transform = Transform3D(1, 1.39e-13, 0, -1.39e-13, 1, 0, 0, 0, 1, 0.027128, 0.0119636, -0.00476075)
+shape = SubResource("BoxShape3D_ja30v")
+
+[node name="Aerator1Controller" type="Node3D" parent="." node_paths=PackedStringArray("blower_machine")]
+transform = Transform3D(-0.998035, 0, -0.0626511, 0, 1, 0, 0.0626511, 0, -0.998035, -7.24222, 2.19031, 1.88444)
+script = ExtResource("7_wla5t")
+blower_machine = NodePath("blower")
+
+[node name="blower" parent="Aerator1Controller" instance=ExtResource("10_4he58")]
+monitoring = false
+initial_state = 1
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Aerator1Controller/blower"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013621807, 1.3508813, 0.8050398)
+shape = SubResource("BoxShape3D_2lndu")
+
+[node name="death_floor1" type="Area3D" parent="Aerator1Controller"]
+unique_name_in_owner = true
+transform = Transform3D(0.0626512, 0, 0.998036, 0, 1, 0, -0.998036, 0, 0.0626512, -2.34147, -2.19031, 0.0423274)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Aerator1Controller/death_floor1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029212, 0.388245, 0.00381374)
+shape = SubResource("BoxShape3D_urams")
+
+[node name="Aerator2Controller" type="Node3D" parent="." node_paths=PackedStringArray("blower_machine")]
+transform = Transform3D(-8.9407e-08, 0, -1, 0, 1, 0, 1, 0, -8.9407e-08, -8.43271, 2.16792, 1.56024)
+script = ExtResource("7_wla5t")
+blower_number = 1
+blower_machine = NodePath("blower")
+
+[node name="blower" parent="Aerator2Controller" instance=ExtResource("10_4he58")]
+transform = Transform3D(-0.00555016, 0, -0.999985, 0, 1, 0, 0.999985, 0, -0.00555016, 0.391926, 0, 0.0021753)
+monitoring = false
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Aerator2Controller/blower"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.030716896, 1.3735774, 0.9902544)
+shape = SubResource("BoxShape3D_mn8ld")
+
+[node name="death_floor2" type="Area3D" parent="Aerator2Controller"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0.13526, -2.16792, -3.52471)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Aerator2Controller/death_floor2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029212, 0.388245, 0.00381374)
+shape = SubResource("BoxShape3D_t5cnw")
+
+[node name="Ladder" type="Area3D" parent="."]
+transform = Transform3D(0.102914, 0, -0.99469, 0, 1, 0, 0.99469, 0, 0.102914, -6.87243, 0, -0.591695)
+script = ExtResource("3_2lndu")
+metadata/_custom_type_script = "uid://s14wlv4lqne3"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ladder"]
+transform = Transform3D(-0.993859, 0, 0.110654, 0, 1, 0, -0.110654, 0, -0.993859, 0, 1.03027, 0)
+mesh = SubResource("BoxMesh_qfylk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ladder"]
+transform = Transform3D(0.0242926, 0, 0.999704, 0, 1, 0, -0.999704, 0, 0.0242926, 0.0640841, 1.00739, -0.143054)
+shape = SubResource("BoxShape3D_engif")
+
+[node name="Ladder2" type="Area3D" parent="."]
+transform = Transform3D(0.102914, 0, -0.99469, 0, 1, 0, 0.99469, 0, 0.102914, -2.65984, 0, -4.9999)
+script = ExtResource("3_2lndu")
+metadata/_custom_type_script = "uid://s14wlv4lqne3"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ladder2"]
+transform = Transform3D(-0.993859, 0, 0.110654, 0, 1, 0, -0.110654, 0, -0.993859, 0, 1.01367, 0)
+mesh = SubResource("BoxMesh_qfylk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ladder2"]
+transform = Transform3D(0.0242926, 0, 0.999704, 0, 1, 0, -0.999704, 0, 0.0242926, 0.0640841, 1.00739, -0.143054)
+shape = SubResource("BoxShape3D_engif")
+
+[node name="Platform_Rusty" parent="." instance=ExtResource("2_wla5t")]
+
+[node name="QuestAerator" type="Area3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9504614, 0, 4.60056)
+script = ExtResource("13_2lndu")
+reaction_id = 2
+quantity = 3
+one_time = true
+metadata/_custom_type_script = "uid://c6qt6kqkt2eng"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="QuestAerator"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11199951, 0.8412738, -0.05493164)
+shape = SubResource("BoxShape3D_1inje")
+
+[editable path="ValveStructure/FillingValve"]

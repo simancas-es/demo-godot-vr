@@ -1,0 +1,42 @@
+{ 
+	"en":{
+			"hint":"You are looking at bees",
+			"title": "The bees",
+			"bbcode_text": "Bees make honey through a fascinating and intricate process that begins when they collect nectar from flowers. Worker bees, which are female bees, fly from flower to flower using their long, specialized tongues to suck up the nectar. The nectar, a sugary liquid produced by plants, is stored in the bee’s honey stomach, which is separate from its digestive stomach. While collecting nectar, the bee also collects enzymes in its saliva that begin breaking down the sugars in the nectar into simpler forms, such as glucose and fructose.
+			
+			
+			
+			[url=youtube:f6mJ7e5YmnE]https://www.youtube.com/watch?v=f6mJ7e5YmnE[/url]
+
+Once the worker bee has filled its honey stomach, it returns to the hive and passes the nectar to other worker bees through a process called trophallaxis—basically, regurgitating the nectar into the mouth of another bee. This second bee continues the process of breaking down the sugars with its own enzymes. The nectar is then placed into a hexagonal wax cell within the hive, where it begins to lose moisture due to evaporation. To speed up this evaporation process, bees fan their wings over the nectar, creating airflow that encourages the water to evaporate, making the nectar thicker and more concentrated.
+
+As the nectar thickens, it eventually transforms into honey. To preserve it, the bees cap the honey-filled cells with a layer of wax, sealing it off from air and moisture. The honey in these sealed cells can then be stored for long periods, allowing the bees to use it as a food source during the colder months or when nectar is scarce. The honey serves as a vital energy source for the hive, providing the necessary fuel for bees to maintain their warmth and continue their activities even when flowers are not in bloom.",
+		},
+	"de":{
+			"hint":"Du siehst Bienen",
+			"title": "Die Bienen",
+			"bbcode_text": "Bienen stellen Honig durch einen faszinierenden und komplexen Prozess her, der beginnt, wenn sie Nektar von Blumen sammeln. Arbeiterbienen, die weiblichen Bienen, fliegen von Blume zu Blume und benutzen ihre langen, spezialisierten Zungen, um den Nektar aufzusaugen. Der Nektar, eine zuckerhaltige Flüssigkeit, die von Pflanzen produziert wird, wird im Honigmagen der Biene aufbewahrt, der von ihrem Verdauungsmagen getrennt ist. Während sie Nektar sammeln, nimmt die Biene auch Enzyme in ihrem Speichel auf, die beginnen, die Zucker im Nektar in einfachere Formen wie Glukose und Fruktose zu zerlegen.
+
+Sobald die Arbeiterbiene ihren Honigmagen gefüllt hat, kehrt sie zum Bienenstock zurück und gibt den Nektar an andere Arbeiterbienen weiter, ein Vorgang, der als Trophallaxis bezeichnet wird – im Wesentlichen übergibt sie den Nektar durch Wiedererbrechen in den Mund einer anderen Biene. Diese zweite Biene setzt den Prozess fort, die Zucker mit ihren eigenen Enzymen weiter abzubauen. Der Nektar wird dann in eine sechseckige Wachszelle im Bienenstock gegeben, wo er durch Verdunstung Feuchtigkeit verliert. Um diesen Verdunstungsprozess zu beschleunigen, fächeln die Bienen mit ihren Flügeln über den Nektar, was den Luftstrom anregt und das Wasser verdampfen lässt, wodurch der Nektar dicker und konzentrierter wird.
+[center][img=center,center]res://zones/demo_vista/rooms/vista_outside/bee.bmp[/img][/center]
+Während der Nektar dicker wird, verwandelt er sich schließlich in Honig. Um ihn zu konservieren, decken die Bienen die mit Honig gefüllten Zellen mit einer Schicht Wachs ab und verschließen sie so vor Luft und Feuchtigkeit. Der Honig in diesen versiegelten Zellen kann dann über längere Zeit aufbewahrt werden, sodass die Bienen ihn als Nahrungsquelle in den kälteren Monaten oder bei Nektarmangel nutzen können. Der Honig dient als wichtige Energiequelle für den Bienenstock und liefert den notwendigen Treibstoff, damit die Bienen ihre Wärme aufrechterhalten und ihre Aktivitäten fortsetzen können, auch wenn keine Blumen in Blüte stehen.",
+		},
+	"es":{
+			"hint":"Ves unas abejas",
+			"title": "Las abejas",
+			"bbcode_text": "Las abejas producen miel a través de un proceso fascinante y complejo que comienza cuando recolectan néctar de las flores. Las abejas obreras, que son abejas femeninas, vuelan de flor en flor utilizando sus largas lenguas especializadas para succionar el néctar. El néctar, un líquido azucarado producido por las plantas, se almacena en el estómago de la miel de la abeja, que está separado de su estómago digestivo. Mientras recogen el néctar, las abejas también recogen enzimas en su saliva que comienzan a descomponer los azúcares del néctar en formas más simples, como glucosa y fructosa.
+
+Una vez que la abeja obrera ha llenado su estómago de miel, regresa a la colmena y pasa el néctar a otras abejas obreras a través de un proceso llamado trofalaxia, que básicamente consiste en regurgitar el néctar en la boca de otra abeja. Esta segunda abeja continúa el proceso de descomposición de los azúcares con sus propias enzimas. Luego, el néctar se coloca en una celda hexagonal de cera dentro de la colmena, donde comienza a perder humedad debido a la evaporación. Para acelerar este proceso de evaporación, las abejas agitan sus alas sobre el néctar, creando un flujo de aire que facilita la evaporación del agua, haciendo que el néctar se espese y concentre.
+
+A medida que el néctar se espesa, finalmente se transforma en miel. Para conservarla, las abejas tapan las celdas llenas de miel con una capa de cera, sellándolas del aire y la humedad. La miel en estas celdas selladas puede almacenarse durante largos períodos, lo que permite que las abejas la utilicen como fuente de alimento durante los meses más fríos o cuando el néctar escasea. La miel sirve como una fuente de energía vital para la colmena, proporcionando el combustible necesario para que las abejas mantengan su calor y continúen sus actividades, incluso cuando no hay flores en flor.",
+		},
+	"fr":{
+			"hint":"Tu regardes les abeilles",
+			"title": "Les abeilles",
+			"bbcode_text": "Les abeilles produisent du miel à travers un processus fascinant et complexe qui commence lorsqu'elles collectent le nectar des fleurs. Les abeilles ouvrières, qui sont des abeilles femelles, volent de fleur en fleur en utilisant leurs longues langues spécialisées pour aspirer le nectar. Le nectar, un liquide sucré produit par les plantes, est stocké dans le ventre à miel de l'abeille, qui est séparé de son estomac digestif. Pendant qu'elles collectent le nectar, les abeilles recueillent également des enzymes dans leur salive qui commencent à décomposer les sucres du nectar en formes plus simples, telles que le glucose et le fructose.
+
+Une fois que l'abeille ouvrière a rempli son ventre à miel, elle retourne à la ruche et passe le nectar à d'autres abeilles ouvrières par un processus appelé trophallaxie, qui consiste essentiellement à régurgiter le nectar dans la bouche d'une autre abeille. Cette deuxième abeille continue le processus de dégradation des sucres avec ses propres enzymes. Le nectar est ensuite placé dans une cellule hexagonale de cire à l'intérieur de la ruche, où il commence à perdre de l'humidité par évaporation. Pour accélérer ce processus d'évaporation, les abeilles agitent leurs ailes au-dessus du nectar, créant un flux d'air qui favorise l'évaporation de l'eau, rendant le nectar plus épais et plus concentré.
+
+À mesure que le nectar devient plus épais, il se transforme finalement en miel. Pour le conserver, les abeilles couvrent les cellules remplies de miel avec une couche de cire, les scellant ainsi de l'air et de l'humidité. Le miel dans ces cellules scellées peut être conservé pendant de longues périodes, ce qui permet aux abeilles de l'utiliser comme source de nourriture pendant les mois plus froids ou lorsque le nectar est rare. Le miel sert de source d'énergie vitale pour la ruche, fournissant le carburant nécessaire aux abeilles pour maintenir leur chaleur et poursuivre leurs activités, même lorsque les fleurs ne sont pas en pleine floraison.",
+		}, 
+}

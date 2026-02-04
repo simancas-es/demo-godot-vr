@@ -1,0 +1,70 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://dvhq4ocr8folv"]
+
+[ext_resource type="StyleBox" uid="uid://c7s7hq5da8v41" path="res://menus/infopopup/styleboxflatwhite1pxblack.tres" id="1_tvwas"]
+[ext_resource type="StyleBox" uid="uid://beaudr0cutmmf" path="res://menus/infopopup/styleboxflatwhite1pxblackbutton.tres" id="1_witnn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktg5y"]
+bg_color = Color(0.929802, 0.890265, 0.486427, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tmugq"]
+bg_color = Color(0.994669, 0.776454, 0.776482, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x81y6"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.899258, 0.899258, 0.899258, 1)
+border_width_left = 1
+border_width_right = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 2
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hmw5c"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 0.344019, 0.270059, 1)
+border_width_left = 1
+border_width_right = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0ni6"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.886275, 1, 0, 1)
+border_width_left = 1
+border_width_right = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_witnn"]
+bg_color = Color(0.868985, 0.868985, 0.868985, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/colors/icon_hover_color = Color(0.821789, 0.821789, 0.821789, 1)
+Button/styles/focus = null
+Button/styles/hover = ExtResource("1_witnn")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_ktg5y")
+Button/styles/normal = ExtResource("1_tvwas")
+Button/styles/pressed = SubResource("StyleBoxFlat_tmugq")
+VBoxContainer/constants/separation = -1
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_x81y6")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_hmw5c")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_p0ni6")
+VScrollBar/styles/scroll = ExtResource("1_tvwas")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_witnn")

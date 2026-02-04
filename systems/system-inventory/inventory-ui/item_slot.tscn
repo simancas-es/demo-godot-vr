@@ -1,0 +1,115 @@
+[gd_scene load_steps=13 format=3 uid="uid://bb25077kbwee5"]
+
+[ext_resource type="Script" uid="uid://b6vquxbw11at3" path="res://systems/system-inventory/inventory-ui/item_slot.gd" id="1_nxifr"]
+[ext_resource type="Texture2D" uid="uid://bxvgbsc2ul3ua" path="res://systems/system-inventory/inventory-ui/default_icons/normal.png" id="1_obfx2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu1l0"]
+bg_color = Color(0.99906, 0.653328, 0.560779, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5icte"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obfx2"]
+bg_color = Color(0.85098, 1, 0.160784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxifr"]
+bg_color = Color(1, 1, 0.0705882, 0.368627)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nxifr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vy0s"]
+bg_color = Color(1, 1, 0.0705882, 0.262745)
+
+[sub_resource type="Theme" id="Theme_nxifr"]
+Button/styles/focus = SubResource("StyleBoxFlat_obfx2")
+Button/styles/hover = SubResource("StyleBoxFlat_nxifr")
+Button/styles/normal = SubResource("StyleBoxEmpty_nxifr")
+Button/styles/pressed = SubResource("StyleBoxFlat_8vy0s")
+
+[sub_resource type="LabelSettings" id="LabelSettings_wsbbi"]
+line_spacing = 0.0
+font_size = 24
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpd8c"]
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 0, 1)
+corner_detail = 1
+
+[sub_resource type="Theme" id="Theme_64n64"]
+Panel/styles/panel = SubResource("StyleBoxFlat_wpd8c")
+
+[node name="ItemSlot" type="Panel"]
+custom_minimum_size = Vector2(104, 104)
+offset_right = 104.0
+offset_bottom = 104.0
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_uu1l0")
+script = ExtResource("1_nxifr")
+
+[node name="ItemSlotInner" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 102.0
+offset_bottom = 102.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_5icte")
+
+[node name="TextureRect" type="TextureRect" parent="ItemSlotInner"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_obfx2")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Button" type="Button" parent="ItemSlotInner"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_nxifr")
+
+[node name="QTY" type="Label" parent="ItemSlotInner"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = -23.0
+offset_right = -3.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "999"
+label_settings = SubResource("LabelSettings_wsbbi")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="FocusAnimation" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_64n64")

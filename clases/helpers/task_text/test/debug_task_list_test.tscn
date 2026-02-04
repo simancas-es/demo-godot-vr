@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://co5rk7v1osn8p"]
+
+[ext_resource type="Script" uid="uid://bhai1mc0yix4f" path="res://clases/helpers/task_text/test/debug_task_list_test.gd" id="1_ld1pd"]
+
+[node name="DebugTaskListTest" type="CanvasLayer"]
+script = ExtResource("1_ld1pd")

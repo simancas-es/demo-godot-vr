@@ -1,0 +1,12 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://w0njo7cp2rpw"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hbjta"]
+
+[sub_resource type="Sky" id="Sky_hbjta"]
+sky_material = SubResource("PanoramaSkyMaterial_hbjta")
+radiance_size = 2
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_hbjta")
+ambient_light_color = Color(0.914309, 0.562058, 0.711615, 1)

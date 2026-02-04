@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3qp4a3ahe2gf"]
+
+[ext_resource type="PackedScene" uid="uid://cx1wgq0gx0mxe" path="res://clases/helpers/task_text/menu/debug_task_list.tscn" id="1_ubk6a"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ubk6a"]
+resource_local_to_scene = true
+size = Vector2(1, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7kfum"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7kfum"]
+resource_local_to_scene = true
+albedo_color = Color(6.9789587e-07, 0.31025213, 0.16702852, 1)
+metallic_specular = 0.0
+emission_enabled = true
+emission_texture = SubResource("ViewportTexture_7kfum")
+
+[node name="DemoTaskBlackboard" type="Node3D"]
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(512, 1024)
+render_target_update_mode = 4
+
+[node name="Control" type="Control" parent="SubViewport"]
+custom_minimum_size = Vector2(512, 1024)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DebugTaskShow" parent="SubViewport/Control" instance=ExtResource("1_ubk6a")]
+layout_mode = 1
+font_size = 48
+filter_only = Array[int]([1, 2, 3])
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.30305195, -0.952974, 0, 0.952974, 0.30305195, 0, 0.98601425, -0.17811863)
+mesh = SubResource("PlaneMesh_ubk6a")
+surface_material_override/0 = SubResource("StandardMaterial3D_7kfum")

@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://8k1q807gv3b8"]
+
+[ext_resource type="PackedScene" uid="uid://c00u5k8i4wb7q" path="res://models/van/van.gltf" id="1_ic0ar"]
+[ext_resource type="Script" uid="uid://df7ed6k14lv0x" path="res://models/van/van.gd" id="1_k68gi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aman8"]
+size = Vector3(1.66272, 1.95574, 5.37821)
+
+[node name="Van" type="Area3D"]
+collision_layer = 9
+collision_mask = 9
+monitoring = false
+script = ExtResource("1_k68gi")
+metadata/_custom_type_script = "uid://cpxvn4y6ne5kl"
+
+[node name="van" parent="." instance=ExtResource("1_ic0ar")]
+
+[node name="InteractionShape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0109463, 1.02664, 0.269414)
+shape = SubResource("BoxShape3D_aman8")
+
+[node name="SpotlightL" type="SpotLight3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-0.999958, 3.39467e-10, -0.00919771, -0.00187995, 0.978889, 0.204385, 0.00900354, 0.204394, -0.978847, 0.690537, 1.01929, 2.97054)
+spot_range = 50.0
+spot_angle = 25.0
+spot_angle_attenuation = 1.36604
+
+[node name="SpotlightR" type="SpotLight3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-0.999958, 2.23057e-10, -0.00919771, -0.00187995, 0.978889, 0.204385, 0.00900354, 0.204394, -0.978847, -0.722983, 1.01929, 2.96213)
+spot_range = 50.0
+spot_angle = 25.0
+spot_angle_attenuation = 1.51572
+
+[node name="SpotlightR2" type="SpotLight3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(0.999799, 0.00592453, -0.0191789, -0.00187995, 0.978889, 0.204385, 0.0199849, -0.204308, 0.978703, -0.750092, 1.01929, 3.30025)
+spot_range = 0.5
+spot_angle = 25.0
+spot_angle_attenuation = 1.51572
+
+[node name="SpotlightL2" type="SpotLight3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(0.999799, 0.00592453, -0.0191789, -0.00187995, 0.978889, 0.204385, 0.0199849, -0.204308, 0.978703, 0.720395, 1.01929, 3.29253)
+spot_range = 0.5
+spot_angle = 25.0
+spot_angle_attenuation = 1.51572
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+unique_name_in_owner = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 49152
+collision_mask = 0
+
+[node name="ObstacleShape" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00136378, 1.04466, 0.272043)
+shape = SubResource("BoxShape3D_aman8")

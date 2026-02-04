@@ -1,0 +1,18 @@
+{
+	"en": {
+			"zone_title":"WWTP Gerwisch",
+			"zone_description":"Zone description...",
+	},
+	"de": {
+			"zone_title":"KA Gerwisch",
+			"zone_description":"Beschreibung der Anlage...",
+	},
+	"es": {
+			"zone_title":"EDAR Gerwisch",
+			"zone_description":"Descripción de zona...",
+	},
+	"fr": {
+			"zone_title":"KA Gerwisch (FR)",
+			"zone_description":"Zone description...FR",
+	},
+}
