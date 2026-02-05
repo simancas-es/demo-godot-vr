@@ -175,6 +175,6 @@ func _physics_process(delta: float) -> void:
 	fsm_ix.process_physics(delta)
 	fsm_mov.process_physics(delta)
 #
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	fsm_ix.process_input(event)
 	fsm_mov.process_input(event)

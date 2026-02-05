@@ -49,6 +49,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			mousewheeldown.emit()
 			get_viewport().set_input_as_handled()
 		return
+	
+	if Input.is_action_just_released("interact"):
+		interact.emit() #Dont consume this
+		get_viewport().set_input_as_handled()
 
 ##KEYS
 func _unhandled_key_input(_event: InputEvent) -> void:
@@ -68,7 +72,7 @@ func _unhandled_key_input(_event: InputEvent) -> void:
 		#get_viewport().set_input_as_handled()
 
 	elif Input.is_action_just_pressed("interact"):
-		interact.emit()
+		interact.emit() #Dont consume this
 		get_viewport().set_input_as_handled()
 	
 	elif Input.is_physical_key_pressed(KEY_4):
