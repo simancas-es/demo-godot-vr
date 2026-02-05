@@ -32,7 +32,12 @@ func _ready() -> void:
 								if typeof(v) != elem_type:
 									push_error("Array type mismatch for attribute %s" % key)
 									valid = false; break
-						if valid: target.set(key, attr.duplicate())
+						if valid:
+							var arr : Array = target.get(key)
+							arr.resize(attr.size())
+							for i in attr.size():
+								arr[i] = attr[i]
+							pass
 					else:
 						push_error("Expected array for attribute %s but got %s" % [key, typeof(attr)])
 				_:
