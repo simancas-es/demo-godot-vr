@@ -30,8 +30,11 @@ func get_current_interactable_items() -> Array[Interaction]:
 func add_interactable(value : Interaction, array : Array[Interaction]) -> bool:
 	if not is_instance_valid(value) : return false
 	if not (value is Interaction) : return false
-	if array.find(value) > -1 : return false ##Already there
-	array.push_back(value)
+	
+	var idx : int = array.find(value)
+	if idx != -1:
+		array.remove_at(idx) # remove old position
+	array.push_front(value)
 	#
 	#if not value.property_list_changed.is_connected(sanitize_interactable.bind(array)):
 		#value.property_list_changed.connect(sanitize_interactable.bind(array))
@@ -94,11 +97,12 @@ func _update_area_collision(node : Interaction) -> void:
 func get_updated_interactable_action_hints() -> Array[String]:
 	var array_strings : Array[String] = []; array_strings.resize(ENUMS.ACTION_KW.size())
 	var i = 0
-
+	
+	var current_ix_items : Array[Interaction] = get_current_interactable_items()
 	for action in ENUMS.ACTION_KW.keys():
 		#var keyname : String = ENUMS.get_keystring(action)
 		#print("keystring '%s' , keyname '%s'" % [keystring, keyname])
-		for item in get_current_interactable_items():
+		for item in current_ix_items:
 			if not is_instance_valid(item) : continue
 			var has_hint = item.available_hint_for_item(playerdata, action)
 			if has_hint:
