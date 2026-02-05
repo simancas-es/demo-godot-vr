@@ -60,10 +60,10 @@ func _input(event):
 		event = event as InputEventMouseMotion
 		raycast_for_available_object(event.position)
 		
-	elif event.is_action(SYSTEMPHYSICALCONTROLSETTINGS.ACTION_SEND_FURTHER):
+	elif event.is_action(SYSTEMPHYSICALCONTROLSETTINGS.ACTION_SEND_FURTHER) and (current_state == STATE.GRABBING):
 		_current_dist = clampf(_current_dist + 0.1, 0.4, max_distance_m*0.8)
 		get_viewport().set_input_as_handled()
-	elif event.is_action(SYSTEMPHYSICALCONTROLSETTINGS.ACTION_SEND_CLOSER):
+	elif event.is_action(SYSTEMPHYSICALCONTROLSETTINGS.ACTION_SEND_CLOSER) and (current_state == STATE.GRABBING):
 		_current_dist = clampf(_current_dist - 0.1, 0.4, max_distance_m*0.8)
 		get_viewport().set_input_as_handled()	
 
