@@ -4,30 +4,37 @@ const TasksManager := SYSTEMTASKS_UIDCLASSREF.SystemTasksManager
 const Task := SYSTEMTASKS_UIDCLASSREF.SystemTasksUnit
 const PersistenceUtils := SYSTEMSTATEFULPERSISTENCE_UIDCLASSREF.Utils
 var parent : TasksManager = null
+var UNIT_IDS : Dictionary[String, int]
 
 func _ready() -> void:
 	super()
 	parent = get_parent()
 	if not (parent is TasksManager):
 		push_error("Parent %s is not Inventory!!" % parent)
+	UNIT_IDS = parent.UNIT_IDS
 	var data = get_data()
 	if data.has("tasks_active_status"):
 		var tasks_status : Dictionary = data["tasks_active_status"] as Dictionary
 		for key in tasks_status:
 			var status = tasks_status[key]
-			var enum_key = PersistenceUtils.string_to_enum(SYSTEMTASKSSETTINGS.UNIT_ID, key)
-			if enum_key in parent.tasks:
-				var task = parent.tasks[enum_key]
-				var enumval = PersistenceUtils.string_to_enum(Task.STATUS, status)
-				task.status = enumval
+			var enum_key = UNIT_IDS[key]
+			var enumval = PersistenceUtils.string_to_enum(Task.STATUS, status)
+			if enum_key in parent.tasks.keys():
+				if (enumval == Task.STATUS.COMPLETED) or (enumval == Task.STATUS.COMPLETED):
+					parent.history[enum_key] = enumval
+					parent.tasks.erase(enum_key)
+				else:
+					var task = parent.tasks[enum_key]				
+					task.status = enumval
+				
 	if data.has("tasks_history_status"):
 		var tasks_status : Dictionary = data["tasks_history_status"] as Dictionary
 		for key in tasks_status:
 			var status = tasks_status[key]
-			var enum_key = PersistenceUtils.string_to_enum(SYSTEMTASKSSETTINGS.UNIT_ID, key)
-			if enum_key in parent.history:
-				var enumval = PersistenceUtils.string_to_enum(Task.STATUS, status)
-				parent.history[enum_key] = enumval
+			var enum_key =  UNIT_IDS[key]
+			var enumval = PersistenceUtils.string_to_enum(Task.STATUS, status)
+			parent.history[enum_key] = enumval
+			if enum_key in parent.tasks: parent.tasks.erase(enum_key)
 	
 	parent.updated.connect(on_manager_update)
 
