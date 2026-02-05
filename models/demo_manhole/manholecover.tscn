@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://f65bedyq1jy6"]
 
-[ext_resource type="PackedScene" uid="uid://c4l8m0wdlmtp3" path="res://models/demo_manhole/manholecover.gltf" id="1_1p723"]
-[ext_resource type="Script" uid="uid://6yf4je4071a8" path="res://systems/object_grab/system_physical_control_object.gd" id="2_cupev"]
+[ext_resource type="PackedScene" uid="uid://c4l8m0wdlmtp3" path="res://assets/world_objects/demo_basin/manhole_cover/manholecover.gltf" id="1_1p723"]
+[ext_resource type="Script" uid="uid://6yf4je4071a8" path="res://systems/system-physics-control/system_physical_control_object.gd" id="2_cupev"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_cupev"]
 height = 0.210938

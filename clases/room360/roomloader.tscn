@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c3l83mavpioil"]
 
 [ext_resource type="Script" uid="uid://basffbg5vgwpf" path="res://clases/room360/roomloader.gd" id="1_0ifik"]
-[ext_resource type="Texture2D" uid="uid://bytclyi1op7sw" path="res://clases/room360/icon_roomloader.bmp" id="2_io82r"]
+[ext_resource type="Texture2D" uid="uid://bytclyi1op7sw" path="res://assets/room360/icon_roomloader.bmp" id="2_io82r"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vwxbq"]
 size = Vector3(1, 2, 1)

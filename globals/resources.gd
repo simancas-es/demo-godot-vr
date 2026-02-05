@@ -14,13 +14,13 @@ const CAMERA_PANO_SKY := "res://clases/room360/cameraenvironmentpanoramasky.tres
 
 
 #General sounds
-const SOUND_CLICK := "res://audio/menu/click.mp3"
-const SOUND_CLICK_IN := "res://audio/menu/click_in.mp3"
-const SOUND_CLICK_OUT := "res://audio/menu/click_out.mp3"
-const SOUND_FLICK_IN := "res://audio/menu/flick_in.mp3"
+const SOUND_CLICK := "res://assets/menus/audio/click.mp3"
+const SOUND_CLICK_IN := "res://assets/menus/audio/click_in.mp3"
+const SOUND_CLICK_OUT := "res://assets/menus/audio/click_out.mp3"
+const SOUND_FLICK_IN := "res://assets/menus/audio/flick_in.mp3"
 
 #Item Sounds
-const SOUND_VAN_ENGINE := "res://models/van/motor_encendido.mp3"
+const SOUND_VAN_ENGINE := "res://assets/world_objects/van/motor_encendido.mp3"
 
 #Menus #TODO: Decouple paths so they appear only in the menu objects
 const MENU_POPUP := "res://menus/infopopup/infopopup.tscn"

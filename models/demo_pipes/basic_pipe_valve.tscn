@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://g84geloayuv6"]
 
-[ext_resource type="PackedScene" uid="uid://dtd23b586eac2" path="res://models/demo_pipes/basic_pipe_valve.gltf" id="1_ktxbb"]
+[ext_resource type="PackedScene" uid="uid://dtd23b586eac2" path="res://assets/world_objects/demo_basin/basic_pipe_valve.gltf" id="1_ktxbb"]
 [ext_resource type="Script" uid="uid://bkphjwjbu4qdu" path="res://models/demo_pipes/basic_pipe_valve.gd" id="2_caxn8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ktxbb"]

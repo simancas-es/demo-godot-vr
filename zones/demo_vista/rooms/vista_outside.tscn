@@ -1,0 +1,136 @@
+[gd_scene load_steps=9 format=3 uid="uid://r8ppeewxx16s"]
+
+[ext_resource type="Script" uid="uid://dnx1elas3bkvd" path="res://clases/panorama/panorama2d.gd" id="1_jwd55"]
+[ext_resource type="Texture2D" uid="uid://dcxbaj2jd4bqv" path="res://assets/zones/demo_vista/rooms/vista_outside/2016_04_06_vista_night_pano-vtversion_cc.jpg" id="2_sm2ts"]
+[ext_resource type="Script" uid="uid://cem1d5oxf74vk" path="res://clases/panorama/panoramainformationpolygon.gd" id="3_xsjji"]
+[ext_resource type="PackedScene" uid="uid://w6p0w6wthfac" path="res://menus/icons/scenes/ui_icon_info.tscn" id="4_kr7qa"]
+[ext_resource type="FontFile" uid="uid://dvgygp7uuxunx" path="res://assets/fonts/inconsolata-variablefont_wdth,wght.ttf" id="5_miy6l"]
+[ext_resource type="Script" uid="uid://cbt71lxxa0548" path="res://clases/panorama/ui_text3d.gd" id="6_0y2rt"]
+[ext_resource type="PackedScene" uid="uid://dmv84ndbm0i7d" path="res://menus/icons/scenes/ui_icon_door.tscn" id="7_7vdnc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3b7ba"]
+font = ExtResource("5_miy6l")
+
+[node name="VISTA_outside" type="Node2D" node_paths=PackedStringArray("north_vertical", "textureRect", "entry_focus")]
+script = ExtResource("1_jwd55")
+name_id = "VISTA"
+room_id = 1
+north_vertical = NodePath("North")
+textureRect = NodePath("TextureRect")
+entry_focus = {
+2: NodePath("Entry")
+}
+metadata/_custom_type_script = "uid://dnx1elas3bkvd"
+metadata/_edit_horizontal_guides_ = [465.0]
+metadata/_edit_vertical_guides_ = [1423.0]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 4000.0
+offset_bottom = 2000.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_sm2ts")
+stretch_mode = 2
+
+[node name="North" type="Node2D" parent="."]
+position = Vector2(1422, 482)
+
+[node name="Entry" type="Node2D" parent="."]
+position = Vector2(2075, 954)
+
+[node name="PanoInfoPolygon" type="Polygon2D" parent="."]
+color = Color(1, 1, 1, 0.196078)
+polygon = PackedVector2Array(1439, 484, 1439, 772, 1562, 740, 1558, 432)
+script = ExtResource("3_xsjji")
+filepath_information = "res://clases/panorama/informationtemplate.json"
+highlight_hover = true
+metadata/_custom_type_script = "uid://cem1d5oxf74vk"
+
+[node name="UI_ICON2" parent="PanoInfoPolygon" instance=ExtResource("4_kr7qa")]
+position = Vector2(1499, 652)
+scale = Vector2(0.141, 0.141)
+
+[node name="RechtesDing" type="Polygon2D" parent="."]
+color = Color(1, 1, 1, 0.196078)
+polygon = PackedVector2Array(1781, 428, 1787, 734, 1922, 774, 1908, 472)
+script = ExtResource("3_xsjji")
+filepath_information = "res://zones/demo_vista/rooms/vista_outside/vista_rechtesding.json"
+highlight_hover = true
+topic = 4
+metadata/_custom_type_script = "uid://cem1d5oxf74vk"
+
+[node name="UI_ICON3" parent="RechtesDing" instance=ExtResource("4_kr7qa")]
+position = Vector2(1855, 657)
+scale = Vector2(0.164, 0.164)
+
+[node name="Schutzplanke" type="Polygon2D" parent="."]
+color = Color(1, 1, 1, 0.407843)
+polygon = PackedVector2Array(2624, 1047, 3140, 1086, 3328, 1250, 3566, 1411, 3424, 1405, 3290, 1289, 3129, 1115, 2708, 1078, 2348, 1016, 2185, 1005, 2175, 1000, 2345, 1006, 2446, 1023)
+script = ExtResource("3_xsjji")
+filepath_information = "res://zones/demo_vista/rooms/vista_outside/schutzplanke.json"
+metadata/_custom_type_script = "uid://cem1d5oxf74vk"
+
+[node name="UI_ICON4" parent="Schutzplanke" instance=ExtResource("4_kr7qa")]
+position = Vector2(3042, 1083)
+scale = Vector2(0.271408, 0.271408)
+
+[node name="UI_TEXT3DVERTICAL" type="Label" parent="Schutzplanke"]
+visible = false
+offset_left = 2169.0
+offset_top = 1046.0
+offset_right = 2265.0
+offset_bottom = 1069.0
+text = "Vertical SPL"
+label_settings = SubResource("LabelSettings_3b7ba")
+script = ExtResource("6_0y2rt")
+metadata/_custom_type_script = "uid://cbt71lxxa0548"
+
+[node name="UI_TEXT3DVERTICAL2" type="Label" parent="Schutzplanke"]
+offset_left = 1662.0
+offset_top = 823.0
+offset_right = 1663.0
+offset_bottom = 841.0
+text = "VISTA"
+label_settings = SubResource("LabelSettings_3b7ba")
+script = ExtResource("6_0y2rt")
+metadata/_custom_type_script = "uid://cbt71lxxa0548"
+
+[node name="Schutzplanke2" type="Polygon2D" parent="."]
+color = Color(1, 1, 1, 0.407843)
+polygon = PackedVector2Array(580, 1411, 741, 1295, 863, 1142, 973, 1017, 1013, 976, 1023, 991, 928, 1131, 828, 1271, 755, 1368, 691, 1426)
+script = ExtResource("3_xsjji")
+filepath_information = "res://zones/demo_vista/rooms/vista_outside/schutzplanke2.json"
+topic = 4
+metadata/_custom_type_script = "uid://cem1d5oxf74vk"
+
+[node name="Gebäude" type="Polygon2D" parent="."]
+color = Color(1, 1, 1, 0.196078)
+polygon = PackedVector2Array(1428, 1016, 1490, 1033, 1578, 1041, 1580.69, 930.909, 1582, 877, 1736, 874, 1735, 1042, 1877, 1045, 1933, 1030, 1936, 804, 1762, 799, 1738, 737, 1738, 549, 1615, 545, 1598, 633, 1570, 797, 1417, 806)
+script = ExtResource("3_xsjji")
+filepath_information = "res://zones/demo_vista/rooms/vista_outside/gebäude.json"
+metadata/_custom_type_script = "uid://cem1d5oxf74vk"
+
+[node name="UI_ICON" parent="Gebäude" instance=ExtResource("4_kr7qa")]
+position = Vector2(1680, 796)
+scale = Vector2(0.136, 0.136)
+
+[node name="Doorinne" type="Polygon2D" parent="."]
+color = Color(1, 1, 0.0235294, 0.196078)
+polygon = PackedVector2Array(1618, 1046, 1619, 929, 1691, 933, 1686, 1048)
+script = ExtResource("3_xsjji")
+filepath_information = "res://clases/Panorama/InformationTemplate.json"
+is_door = true
+door_to = 3
+metadata/_custom_type_script = "uid://cem1d5oxf74vk"
+
+[node name="UI_ICON" parent="Doorinne" instance=ExtResource("7_7vdnc")]
+position = Vector2(1654, 968)
+scale = Vector2(0.09, 0.09)
+
+[node name="PanoInfoPolygon5" type="Polygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(1995, 83, 1000, 1000, 1981, 1025, 3000, 1000)
+script = ExtResource("3_xsjji")
+filepath_information = "res://clases/Panorama/InformationTemplate.json"
+active = false
+metadata/_custom_type_script = "uid://cem1d5oxf74vk"

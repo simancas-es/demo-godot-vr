@@ -8,6 +8,6 @@ enum ID {NONE,
 			}
 
 const SCENES : Dictionary = {
-	ID.DEMO_VISTA : "res://zones/demo_vista/rooms/vista_outside/vista_outside.tscn",
-	ID.DEMO_VLT3 : "res://zones/demo_vista/rooms/vista_vlt3/vista_vlt3-inside.tscn"
+	ID.DEMO_VISTA : "res://zones/demo_vista/rooms/vista_outside.tscn",
+	ID.DEMO_VLT3 : "res://zones/demo_vista/rooms/vista_vlt3-inside.tscn"
 	}

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cs3sl01yqpqyb"]
 
 [ext_resource type="Script" uid="uid://cs5ts5ofc8ugb" path="res://menus/choicebutton/buttonchoice.gd" id="1_5kbvx"]
-[ext_resource type="Texture2D" uid="uid://c0fjk1tqdf3t0" path="res://menus/choicebutton/arrownormal.bmp" id="2_oghwg"]
-[ext_resource type="Texture2D" uid="uid://d36r2ypael5oi" path="res://menus/choicebutton/arrowpressed.bmp" id="3_7b7g7"]
-[ext_resource type="Texture2D" uid="uid://b6r8u2gqsbluj" path="res://menus/choicebutton/arrowhover.bmp" id="4_rqegf"]
+[ext_resource type="Texture2D" uid="uid://c0fjk1tqdf3t0" path="res://assets/menus/choicebutton/arrownormal.bmp" id="2_oghwg"]
+[ext_resource type="Texture2D" uid="uid://d36r2ypael5oi" path="res://assets/menus/choicebutton/arrowpressed.bmp" id="3_7b7g7"]
+[ext_resource type="Texture2D" uid="uid://b6r8u2gqsbluj" path="res://assets/menus/choicebutton/arrowhover.bmp" id="4_rqegf"]
 
 [node name="ButtonChoice" type="HBoxContainer" node_paths=PackedStringArray("textureButton", "label")]
 auto_translate_mode = 2

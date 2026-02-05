@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="ZoneInformation" load_steps=3 format=3 uid="uid://dy200yn5uc7so"]
 
 [ext_resource type="Script" uid="uid://2xpoktqdyijn" path="res://clases/zones/zoneinformation.gd" id="1_kjjno"]
-[ext_resource type="Texture2D" uid="uid://dbw2o2ynsa5nh" path="res://zones/demo_vista/demo_vista.bmp" id="2_kchxe"]
+[ext_resource type="Texture2D" uid="uid://dbw2o2ynsa5nh" path="res://assets/zones/demo_vista/demo_vista.bmp" id="2_kchxe"]
 
 [resource]
 script = ExtResource("1_kjjno")
 latitude = 52.632
 longitude = 11.816
 thumbnail = ExtResource("2_kchxe")
-filepath_description = "res://zones/demo_vista/desc_vista.json"
+filepath_description = "res://assets/zones/demo_vista/desc_vista.json"
 environment = "uid://dqpu4ej7811ev"
 room_ids = Array[int]([1, 3])
 metadata/_custom_type_script = "uid://2xpoktqdyijn"

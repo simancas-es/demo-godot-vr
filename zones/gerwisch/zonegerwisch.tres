@@ -1,14 +1,13 @@
 [gd_resource type="Resource" script_class="ZoneInformation" load_steps=3 format=3 uid="uid://cj82lfmrj1n6f"]
 
 [ext_resource type="Script" uid="uid://2xpoktqdyijn" path="res://clases/zones/zoneinformation.gd" id="1_gvhe6"]
-[ext_resource type="Texture2D" uid="uid://m7c4ns0k13ov" path="res://zones/gerwisch/thumbnail.bmp" id="2_yw8lu"]
+[ext_resource type="Texture2D" uid="uid://m7c4ns0k13ov" path="res://assets/zones/demo_gerwisch/thumbnail.bmp" id="2_yw8lu"]
 
 [resource]
 script = ExtResource("1_gvhe6")
 latitude = 52.25
 longitude = 11.816
 thumbnail = ExtResource("2_yw8lu")
-filepath_description = "res://zones/gerwisch/desc_gerwisch.json"
+filepath_description = "res://assets/zones/demo_gerwisch/desc_gerwisch.json"
 environment = "uid://bx26yr2npogj"
-room_ids = Array[int]([])
 metadata/_custom_type_script = "uid://2xpoktqdyijn"

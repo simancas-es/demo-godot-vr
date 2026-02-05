@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://cc72bld411pp5"]
 
 [ext_resource type="Script" uid="uid://deurneyfb37on" path="res://zones/hochschule/zonehochschule.gd" id="1_3001m"]
-[ext_resource type="PackedScene" uid="uid://dycp17kvr52tb" path="res://zones/hochschule/models/hs_textured.gltf" id="3_edpqk"]
+[ext_resource type="PackedScene" uid="uid://dycp17kvr52tb" path="res://assets/zones/demo_hochschule/models/hs_textured.gltf" id="3_edpqk"]
 [ext_resource type="PackedScene" uid="uid://8k1q807gv3b8" path="res://models/van/van.tscn" id="4_tgkvd"]
-[ext_resource type="PackedScene" uid="uid://fofsx6ju3hpq" path="res://zones/hochschule/models/full_mapnik/hs_mapnik.gltf" id="5_mm2tk"]
-[ext_resource type="Texture2D" uid="uid://b0x4bt8rkxmib" path="res://zones/hochschule/models/full_mapnik/overlay.png" id="6_i43xd"]
+[ext_resource type="PackedScene" uid="uid://fofsx6ju3hpq" path="res://assets/zones/demo_hochschule/models/full_mapnik/hs_mapnik.gltf" id="5_mm2tk"]
+[ext_resource type="Texture2D" uid="uid://b0x4bt8rkxmib" path="res://assets/zones/demo_hochschule/models/full_mapnik/overlay.png" id="6_i43xd"]
 [ext_resource type="Script" uid="uid://vs6c0o6w7dyb" path="res://models/drone_falcon/drone_falcon.gd" id="7_0eq3j"]
 [ext_resource type="Script" uid="uid://18j8vlq04ixt" path="res://clases/falconview.gd" id="8_u1fij"]
 

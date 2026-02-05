@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d38japcdse6jl"]
 
 [ext_resource type="Script" uid="uid://2f0eglb5rmb3" path="res://menus/environmentselector/enventry.gd" id="1_h731h"]
-[ext_resource type="Texture2D" uid="uid://dbw2o2ynsa5nh" path="res://zones/demo_vista/demo_vista.bmp" id="3_cm4qs"]
+[ext_resource type="Texture2D" uid="uid://dbw2o2ynsa5nh" path="res://assets/zones/demo_vista/demo_vista.bmp" id="3_cm4qs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_15m78"]
 font_size = 20

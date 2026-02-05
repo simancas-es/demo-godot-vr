@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://8k1q807gv3b8"]
 
-[ext_resource type="PackedScene" uid="uid://c00u5k8i4wb7q" path="res://models/van/van.gltf" id="1_ic0ar"]
+[ext_resource type="PackedScene" uid="uid://c00u5k8i4wb7q" path="res://assets/world_objects/van/van.gltf" id="1_ic0ar"]
 [ext_resource type="Script" uid="uid://df7ed6k14lv0x" path="res://models/van/van.gd" id="1_k68gi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aman8"]

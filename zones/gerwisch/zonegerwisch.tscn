@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bx26yr2npogj"]
 
-[ext_resource type="Script" uid="uid://ba0thkw6muj4p" path="res://clases/zones/basezone.gd" id="1_ex7ai"]
-[ext_resource type="PackedScene" uid="uid://of8sjid4a3ay" path="res://zones/gerwisch/models/gerwisch.gltf" id="2_ry3ya"]
+[ext_resource type="Script" uid="uid://b78po4wueig00" path="res://clases/zones/basezone.gd" id="1_ex7ai"]
+[ext_resource type="PackedScene" uid="uid://of8sjid4a3ay" path="res://assets/zones/demo_gerwisch/models/gerwisch.gltf" id="2_ry3ya"]
 [ext_resource type="PackedScene" uid="uid://8k1q807gv3b8" path="res://models/van/van.tscn" id="3_qowaj"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bc8gr"]

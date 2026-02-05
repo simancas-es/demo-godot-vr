@@ -1,10 +1,10 @@
 [gd_scene load_steps=62 format=4 uid="uid://docoieikc6j0v"]
 
 [ext_resource type="Script" uid="uid://ynhbjougcegl" path="res://clases/interaction/door_base.gd" id="1_52f3j"]
-[ext_resource type="Texture2D" uid="uid://waojka27mql4" path="res://models/platform_rusty/platform_rusty.png" id="1_80p3c"]
-[ext_resource type="PackedScene" uid="uid://bet4hwkbj4vev" path="res://models/platform_rusty/platform_rusty.gltf" id="1_mmkmq"]
-[ext_resource type="Texture2D" uid="uid://bq5wuu7shyp84" path="res://models/platform_rusty/platform_rusty_roughness.png" id="2_52f3j"]
-[ext_resource type="Texture2D" uid="uid://bwnb8md64ay6i" path="res://models/platform_rusty/platform_rusty_normal.png" id="3_omcgd"]
+[ext_resource type="Texture2D" uid="uid://waojka27mql4" path="res://assets/world_objects/demo_basin/platform_rusty/platform_rusty.png" id="1_80p3c"]
+[ext_resource type="PackedScene" uid="uid://bet4hwkbj4vev" path="res://assets/world_objects/demo_basin/platform_rusty/platform_rusty.gltf" id="1_mmkmq"]
+[ext_resource type="Texture2D" uid="uid://bq5wuu7shyp84" path="res://assets/world_objects/demo_basin/platform_rusty/platform_rusty_roughness.png" id="2_52f3j"]
+[ext_resource type="Texture2D" uid="uid://bwnb8md64ay6i" path="res://assets/world_objects/demo_basin/platform_rusty/platform_rusty_normal.png" id="3_omcgd"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8f0u8"]
 data = PackedVector3Array(-7.0865, 1.9682, 0.0473, -7.0865, 3.0772, -1.0536, -7.0865, 1.9824, -1.0678, -7.0865, 1.9682, 0.0473, -7.0865, 3.063, 0.0615, -7.0865, 3.0772, -1.0536, -7.1796, 1.9682, 0.0473, -7.0865, 1.9824, -1.0678, -7.1796, 1.9824, -1.0678, -7.1796, 1.9682, 0.0473, -7.0865, 1.9682, 0.0473, -7.0865, 1.9824, -1.0678, -7.0865, 1.9824, -1.0678, -7.1796, 3.0772, -1.0536, -7.1796, 1.9824, -1.0678, -7.0865, 1.9824, -1.0678, -7.0865, 3.0772, -1.0536, -7.1796, 3.0772, -1.0536, -7.1796, 3.0772, -1.0536, -7.1796, 1.9682, 0.0473, -7.1796, 1.9824, -1.0678, -7.1796, 3.0772, -1.0536, -7.1796, 3.063, 0.0615, -7.1796, 1.9682, 0.0473, -7.1796, 1.9682, 0.0473, -7.0865, 3.063, 0.0615, -7.0865, 1.9682, 0.0473, -7.1796, 1.9682, 0.0473, -7.1796, 3.063, 0.0615, -7.0865, 3.063, 0.0615, -7.0865, 3.063, 0.0615, -7.1796, 3.0772, -1.0536, -7.0865, 3.0772, -1.0536, -7.0865, 3.063, 0.0615, -7.1796, 3.063, 0.0615, -7.1796, 3.0772, -1.0536)

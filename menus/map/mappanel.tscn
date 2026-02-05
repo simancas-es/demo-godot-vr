@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dmo4shrj7gbp5" path="res://menus/environmentselector/mappanel.gd" id="1_wg0vv"]
 [ext_resource type="Script" uid="uid://daxocisxiqvn6" path="res://menus/animatemenutransition.gd" id="2_vrc6j"]
-[ext_resource type="Texture2D" uid="uid://du8yb6bwnpgtu" path="res://menus/map/maps/map1.svg" id="3_qieve"]
-[ext_resource type="Texture2D" uid="uid://b8vo8e3b4guqx" path="res://models/van/van.png" id="4_vrc6j"]
+[ext_resource type="Texture2D" uid="uid://du8yb6bwnpgtu" path="res://assets/menus/map/maps/map1.svg" id="3_qieve"]
+[ext_resource type="Texture2D" uid="uid://b8vo8e3b4guqx" path="res://assets/world_objects/van/van.png" id="4_vrc6j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_605b5"]
 bg_color = Color(0.434301, 0.569404, 1, 1)
