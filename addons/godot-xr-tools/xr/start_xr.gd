@@ -74,7 +74,7 @@ func _initialize() -> bool:
 	# Check for WebXR interface
 	xr_interface = XRServer.find_interface('WebXR')
 	if xr_interface:
-		return _setup_for_webxr()
+			return _setup_for_webxr()		
 
 	# No XR interface
 	xr_interface = null
@@ -236,6 +236,8 @@ func _on_webxr_session_supported(session_mode: String, supported: bool) -> void:
 	if not supported:
 		OS.alert("Your web browser doesn't support " + session_mode + ". Sorry!")
 		xr_failed_to_initialize.emit()
+		xr_interface = null
+		_xr_active = false
 		return
 
 	# WebXR supported - show canvas on web browser to enter WebVR

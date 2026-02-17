@@ -16,6 +16,14 @@ func init_root():
 		
 		
 func _ready():
+		
+	#Check if there is a VR headset
+	var xrstart : XRToolsStartXR = $StartXR
+	#if xrstart.xr_interface:
+	if xrstart.xr_interface:
+		state_machine_menus.starting_state = $StateMachine/InVR
+	#else:
+		#xrstart.queue_free()
 	state_machine_menus.init(self)
 	#if get_tree().current_scene :
 		#_on_introscreen()
@@ -37,7 +45,7 @@ func change_environment(id : ENVIRONMENTS.ID) -> BaseZone:
 
 func _process(delta : float):
 	state_machine_menus.process_frame(delta)
-	debug_label_state.text = "State: %s  - Topic: %s" % [state_machine_menus.current_state.name, GameState._current_topic]
+	if debug_label_state: debug_label_state.text = "State: %s  - Topic: %s" % [state_machine_menus.current_state.name, GameState._current_topic]
 #func _physics_process(delta: float) -> void:
 	#state_machine_menus.process_physics(delta)
 	

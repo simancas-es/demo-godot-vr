@@ -8,6 +8,8 @@ extends StateMenus
 	#Signal : function 
 }
 
+@export var entry_point : PackedScene
+
 func connect_signals() -> void:	
 	for s in signals_fs.keys():
 		if not s.is_connected(signals_fs[s]):
@@ -19,3 +21,25 @@ func disconnect_signals() -> void:
 		if s.is_connected(signals_fs[s]):
 			s.disconnect(signals_fs[s])
 	pass
+
+func enter() -> void:
+	print("VR: From now on we are inside the VR branch of the program...")
+	remove_menus()
+	load_staging()
+	pass
+	
+func exit() -> void:
+	print("VR: Exiting VR branch...")
+
+
+func remove_menus() -> void:
+	var cl : CanvasLayer = %UI_CanvasLayer
+	cl.queue_free()
+	
+func load_staging() -> void:
+	if not entry_point:
+		push_error("VR: Missing entry point in InVR state!!!");
+		return
+	var staging = entry_point.instantiate()
+	parent.current_scene = staging
+	parent.add_child(staging)

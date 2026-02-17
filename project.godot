@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
+XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
 ConfigManager="*res://globals/configmanager.gd"
 Cache="*res://globals/cache.gd"
 AudioManager="*res://globals/audiomanager.gd"
@@ -262,3 +264,11 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/vram_compression/import_s3tc_bptc=true
 textures/vram_compression/import_etc2_astc=true
+
+[xr]
+
+openxr/enabled=true
+openxr/default_action_map="uid://cv1tl7assnmqv"
+openxr/foveation_level=1
+openxr/foveation_dynamic=true
+openxr/submit_depth_buffer=true
