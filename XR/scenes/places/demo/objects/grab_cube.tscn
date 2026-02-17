@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://dgri7myk5vyv8"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_prch8"]
+[ext_resource type="Script" uid="uid://bqb1bd1640ht4" path="res://XR/scenes/places/demo/objects/grab_cube.gd" id="2_vnjag"]
+[ext_resource type="PackedScene" uid="uid://da2qgxxwwitl6" path="res://addons/godot-xr-tools/objects/highlight/highlight_ring.tscn" id="3_7w8m3"]
+
+[sub_resource type="BoxShape3D" id="7"]
+margin = 0.01
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="8"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_odh3p"]
+albedo_color = Color(0.34901962, 0.3254902, 1, 1)
+
+[node name="GrabCube" instance=ExtResource("1_prch8")]
+collision_layer = 33554432
+collision_mask = 58916864
+script = ExtResource("2_vnjag")
+alternate_material = null
+ranged_grab_method = 0
+second_hand_grab = 2
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("8")
+surface_material_override/0 = SubResource("StandardMaterial3D_odh3p")
+
+[node name="HighlightRing" parent="." index="2" instance=ExtResource("3_7w8m3")]

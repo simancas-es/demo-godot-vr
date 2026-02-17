@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://wbnpkbdi7e2y"]
+
+[ext_resource type="Script" uid="uid://b21bjsu82hta1" path="res://addons/godot-xr-tools/test_collision.gd" id="1_dr3an"]
+
+[node name="TestCollision" type="Node"]
+script = ExtResource("1_dr3an")

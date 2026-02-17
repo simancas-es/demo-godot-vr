@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0g2s2yli7iqp"]
+
+[ext_resource type="PackedScene" uid="uid://8q1lcws0xejc" path="res://XR/scenes/interactables/instructions_2d.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="2"]
+
+[sub_resource type="BoxMesh" id="1"]
+size = Vector3(4.2, 2.7, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sb5uj"]
+albedo_color = Color(0.0627451, 0.27058825, 0.09803922, 1)
+
+[node name="Instructions" type="Node3D"]
+
+[node name="Viewport2Din3D" parent="." instance=ExtResource("2")]
+screen_size = Vector2(4, 2.5)
+collision_layer = 0
+scene = ExtResource("1")
+viewport_size = Vector2(400, 250)
+update_mode = 0
+unshaded = true
+
+[node name="MeshInstance" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+mesh = SubResource("1")
+surface_material_override/0 = SubResource("StandardMaterial3D_sb5uj")

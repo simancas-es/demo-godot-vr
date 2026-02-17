@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cutuj4o2r75tg"]
+
+[ext_resource type="PackedScene" uid="uid://cjyilbm4ucc7s" path="res://addons/godot-xr-tools/objects/climbable.tscn" id="1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2a2jy"]
+size = Vector3(3, 8, 3)
+
+[sub_resource type="BoxMesh" id="2"]
+size = Vector3(3, 8, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el8gp"]
+albedo_color = Color(0.6470294, 0.41815144, 0.05962483, 1)
+
+[node name="Tower" instance=ExtResource("1")]
+collision_layer = 142868480
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+shape = SubResource("BoxShape3D_2a2jy")
+
+[node name="MeshInstance" type="MeshInstance3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+mesh = SubResource("2")
+surface_material_override/0 = SubResource("StandardMaterial3D_el8gp")

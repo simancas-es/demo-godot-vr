@@ -1,0 +1,112 @@
+[gd_scene load_steps=11 format=3 uid="uid://b4frcfrsd14ec"]
+
+[ext_resource type="Environment" uid="uid://c75hc5t2ml5re" path="res://XR/demo_env.tres" id="1_d6n2l"]
+
+[sub_resource type="QuadMesh" id="7"]
+size = Vector2(96, 96)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_suunp"]
+albedo_color = Color(0.8352941, 1, 1, 1)
+
+[sub_resource type="BoxShape3D" id="6"]
+size = Vector3(100, 2, 100)
+
+[sub_resource type="QuadMesh" id="8"]
+size = Vector2(96, 16)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yu0yd"]
+albedo_color = Color(0.99999994, 0.98584753, 0.31004456, 1)
+
+[sub_resource type="BoxShape3D" id="4"]
+size = Vector3(100, 16, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hn15x"]
+albedo_color = Color(0.4001903, 0.99999994, 0.36974356, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_85gjr"]
+albedo_color = Color(0.5870347, 0.72250885, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kch3m"]
+albedo_color = Color(1, 0.6961833, 0.6400863, 1)
+
+[node name="BasicMap" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_d6n2l")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, -0.321394, 0.383022, 0, 0.766044, 0.642788, -0.5, -0.55667, 0.663414, 0, 5, 0)
+light_energy = 0.8
+
+[node name="Ground" type="StaticBody3D" parent="."]
+collision_layer = 8388608
+collision_mask = 8388608
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("7")
+surface_material_override/0 = SubResource("StandardMaterial3D_suunp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource("6")
+
+[node name="Wall1" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -48)
+collision_layer = 8388608
+collision_mask = 8388608
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+mesh = SubResource("8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_yu0yd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -1)
+shape = SubResource("4")
+
+[node name="Wall2" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 48, 0, 0)
+collision_layer = 8388608
+collision_mask = 8388608
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+mesh = SubResource("8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_hn15x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -1)
+shape = SubResource("4")
+
+[node name="Wall3" type="StaticBody3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 48)
+collision_layer = 8388608
+collision_mask = 8388608
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+mesh = SubResource("8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_85gjr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -1)
+shape = SubResource("4")
+
+[node name="Wall4" type="StaticBody3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -48, 0, 0)
+collision_layer = 8388608
+collision_mask = 8388608
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+mesh = SubResource("8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_kch3m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -1)
+shape = SubResource("4")

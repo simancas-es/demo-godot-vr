@@ -4,3 +4,4 @@
 *.tmp
 .editorconfig
 *.po~
+/addons/godotopenxrvendors

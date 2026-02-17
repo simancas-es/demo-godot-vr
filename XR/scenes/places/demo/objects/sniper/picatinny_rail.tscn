@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4v6ejg4vjw4q"]
+
+[ext_resource type="PackedScene" uid="uid://dsstvanwd58r0" path="res://addons/godot-xr-tools/objects/snap_path.tscn" id="1_n2ce7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_or7hd"]
+size = Vector3(0.039, 0.04, 0.3)
+
+[sub_resource type="Curve3D" id="Curve3D_jvra0"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, -0.15, 0, 0, 0, 0.000687748, 0.00171228, -0.00834513, 0, 0, 0.15),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_7io2b"]
+size = Vector3(0.03, 0.01, 0.27)
+
+[node name="PicatinnyRail" instance=ExtResource("1_n2ce7")]
+collision_layer = 33554432
+collision_mask = 33619968
+snap_interval = 0.01
+grab_distance = 0.05
+snap_require = "Picatinny"
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0114136, 0)
+shape = SubResource("BoxShape3D_or7hd")
+
+[node name="AudioStreamPlayer3D" parent="." index="1"]
+max_polyphony = 2
+
+[node name="Path3D" parent="." index="2"]
+curve = SubResource("Curve3D_jvra0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="3"]
+mesh = SubResource("BoxMesh_7io2b")

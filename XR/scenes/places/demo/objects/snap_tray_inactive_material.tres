@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://buhf8p55bu10n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptwmt"]
+albedo_color = Color(0.98838717, 0.45769233, 0.8065185, 1)
+
+[resource]
+next_pass = SubResource("StandardMaterial3D_ptwmt")
+albedo_color = Color(0.247059, 0.247059, 0.247059, 1)
+uv1_triplanar = true

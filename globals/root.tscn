@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://1gnljh2uer8"]
+[gd_scene load_steps=21 format=3 uid="uid://1gnljh2uer8"]
 
 [ext_resource type="Script" uid="uid://ds6ipr7ox8br3" path="res://globals/root.gd" id="1_6d14a"]
 [ext_resource type="Script" uid="uid://d31trbvb6igxn" path="res://menus/fsm/statemachinemenus.gd" id="2_6hyip"]
 [ext_resource type="Script" uid="uid://dr8ts7ehqgh1s" path="res://menus/fsm/menustates/stateintroscreen.gd" id="3_cwfe2"]
 [ext_resource type="Script" uid="uid://la6m8nrtawwv" path="res://menus/fsm/menustates/stateinscene.gd" id="4_n1s3a"]
 [ext_resource type="Script" uid="uid://dyoohpx4duds1" path="res://menus/fsm/menustates/stateinroom.gd" id="5_rtrm1"]
+[ext_resource type="Script" uid="uid://chwfkgt6mwbsc" path="res://menus/fsm/menustates/stateinvr.gd" id="6_bm7q0"]
 [ext_resource type="Script" uid="uid://be108fdsaiduh" path="res://menus/fsm/menustates/stateloadingscene.gd" id="6_hm43d"]
 [ext_resource type="Script" uid="uid://d1xobjt0rfbe1" path="res://menus/ui_canvaslayer.gd" id="7_bm7q0"]
 [ext_resource type="Script" uid="uid://q20rn3ctmrhp" path="res://menus/fsm/menustates/stateselectenv.gd" id="7_cwfe2"]
@@ -14,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bb61r87co1wd4" path="res://menus/settings/menusettings.tscn" id="10_2hlt0"]
 [ext_resource type="PackedScene" uid="uid://bnij78dscig28" path="res://systems/system-inventory/inventory-ui/inventory_ui.tscn" id="10_n1s3a"]
 [ext_resource type="PackedScene" uid="uid://cx1wgq0gx0mxe" path="res://clases/helpers/task_text/menu/debug_task_list.tscn" id="12_wgoxm"]
+[ext_resource type="Script" uid="uid://c18y55wo8tllg" path="res://globals/XR/xr_detector.gd" id="16_bm7q0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhhay"]
 content_margin_left = 15.0
@@ -64,6 +66,10 @@ metadata/_custom_type_script = "uid://8v151neia71f"
 
 [node name="InRoom" type="Node" parent="StateMachine"]
 script = ExtResource("5_rtrm1")
+metadata/_custom_type_script = "uid://8v151neia71f"
+
+[node name="InVR" type="Node" parent="StateMachine"]
+script = ExtResource("6_bm7q0")
 metadata/_custom_type_script = "uid://8v151neia71f"
 
 [node name="Loading" type="Node" parent="StateMachine"]
@@ -150,3 +156,6 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
 alignment = 1
+
+[node name="XRDetector" type="Node" parent="."]
+script = ExtResource("16_bm7q0")

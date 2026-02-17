@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://devc01bu3o7sq"]
+
+[ext_resource type="Script" uid="uid://bi2fepdnwi6gk" path="res://XR/scenes/xrplayer/function_pickup_disables_collision.gd" id="1_u8u18"]
+
+[node name="FunctionPickupDisablesCollision" type="Node"]
+script = ExtResource("1_u8u18")
