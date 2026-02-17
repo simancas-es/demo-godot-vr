@@ -45,7 +45,7 @@ export/convert_text_resources_to_binary=false
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/file_dialog_in_editor/plugin.cfg")
+enabled=PackedStringArray("res://addons/file_dialog_in_editor/plugin.cfg", "res://addons/godot-xr-tools/plugin.cfg")
 
 [global_group]
 
@@ -251,7 +251,19 @@ locale/locale_filter_mode=0
 3d_physics/layer_14="WORLD_LADDERS"
 3d_physics/layer_15="WORLD_WALLS"
 3d_physics/layer_16="WORLD_FLOOR"
+3d_physics/layer_17="Held Objects"
+3d_physics/layer_18="Player Hand"
+3d_physics/layer_19="Grab handles"
 3d_physics/layer_20="FPV"
+3d_physics/layer_21="Pointable"
+3d_physics/layer_22="Hand Pose Area"
+3d_physics/layer_23="UI Objects"
+3d_physics/layer_24="Static World"
+3d_physics/layer_25="Dynamic World"
+3d_physics/layer_26="Pickable Objects"
+3d_physics/layer_27="Wall Walking Surface"
+3d_physics/layer_28="Grappling Target"
+3d_physics/layer_29="Player Body"
 
 [physics]
 

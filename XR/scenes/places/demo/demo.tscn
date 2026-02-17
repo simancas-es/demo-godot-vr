@@ -116,18 +116,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.584, 0.829, 0.973725)
 [node name="TeacupStand" parent="VRGrabbing/Table" index="14" instance=ExtResource("4_2vdp7")]
 transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 1.8563632, 0.8000001, 0.9320507)
 
-[node name="SnapZone" parent="VRGrabbing/Table/TeacupStand" index="8" groups=["Teacup"] instance=ExtResource("15_e2eke")]
-transform = Transform3D(0.99999994, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, 0.99999994, -0.04392171, 0.2823404, 0.07789612)
+[node name="SnapZone" parent="VRGrabbing/Table/TeacupStand" index="8" groups=["TeacupStand"] instance=ExtResource("15_e2eke")]
+transform = Transform3D(0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, 0.8660253, -0.04392171, 0.2823404, 0.07789612)
 grab_distance = 0.05
 snap_require = "Teacup"
 
-[node name="SnapZone4" parent="VRGrabbing/Table/TeacupStand" index="9" groups=["Teacup"] instance=ExtResource("15_e2eke")]
-transform = Transform3D(0.99999994, 0, -1.1920929e-07, 0, 1, 0, 1.1920929e-07, 0, 0.99999994, 0.09113157, 0.2823404, 0.0002706051)
+[node name="SnapZone4" parent="VRGrabbing/Table/TeacupStand" index="9" groups=["TeacupStand"] instance=ExtResource("15_e2eke")]
+transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, 0.09113157, 0.2823404, 0.0002708435)
 grab_distance = 0.05
 snap_require = "Teacup"
+initial_object = NodePath("../../Teacup2")
 
-[node name="SnapZone5" parent="VRGrabbing/Table/TeacupStand" index="10" groups=["Teacup"] instance=ExtResource("15_e2eke")]
-transform = Transform3D(0.99999994, 0, -1.4901161e-07, 0, 1, 0, 1.4901161e-07, 0, 0.99999994, -0.04630983, 0.2823404, -0.08463526)
+[node name="SnapZone5" parent="VRGrabbing/Table/TeacupStand" index="10" groups=["TeacupStand"] instance=ExtResource("15_e2eke")]
+transform = Transform3D(-0.8660253, 0, -0.5, 0, 1, 0, 0.5, 0, -0.8660253, -0.04630983, 0.2823404, -0.08463526)
 grab_distance = 0.05
 snap_require = "Teacup"
 
@@ -144,10 +145,7 @@ transform = Transform3D(-0.8829638, 0, -0.46944082, 0, 1, 0, 0.46944082, 0, -0.8
 shape = SubResource("BoxShape3D_e2eke")
 
 [node name="Teacup" parent="VRGrabbing/Table" index="15" instance=ExtResource("5_3bi1u")]
-transform = Transform3D(-2.6077032e-08, 0, 0.9999997, 0.993909, -0.110203, 0, 0.110203, 0.993909, 1.7881393e-07, 1.9420325, 1.013736, 0.89303255)
-collision_layer = 58720256
-collision_mask = 58916864
-freeze = true
+transform = Transform3D(1.9106853e-15, 4.3711385e-08, 0.9999997, 0.9999999, -4.3711385e-08, 0, 4.3711385e-08, 0.9999999, -4.3711374e-08, 1.9420325, 1.013736, 0.89303255)
 
 [node name="XRToolsReturnToSnapZone" type="Node" parent="VRGrabbing/Table/Teacup" index="6"]
 script = ExtResource("28_4o5f8")
@@ -156,7 +154,6 @@ snap_zone_path = NodePath("../../TeacupStand/SnapZone4")
 [node name="Teacup2" parent="VRGrabbing/Table" index="16" instance=ExtResource("5_3bi1u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.235, 0.825, 0.973725)
 collision_layer = 58720256
-collision_mask = 58916864
 
 [node name="Table1#Knife1" parent="VRGrabbing/Table" index="17" instance=ExtResource("6_lgff3")]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0.306, 0.834, 0.707725)
