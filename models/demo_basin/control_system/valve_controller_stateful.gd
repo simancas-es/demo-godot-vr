@@ -9,6 +9,7 @@ extends Node
 @export var valve : ENTITY_CATALOG.ValveRotating# = $FillingValve
 @export var leftinter : Interaction# = $ValveLeftDirection
 @export var rightinter : Interaction# = $ValveRightDirection
+@export var rotation_velocity_degs = 180.0 #Degrees per second for left and right interactions
 
 signal valve_changed(new_fraction: float)
 @export var state: DEMO_BASIN.BasinState
@@ -47,45 +48,57 @@ func initialize_from_state() -> void:
 		return
 
 	var init_turn_deg = (state.valve_fraction - 0.5) * rotations_to_max * 360
-	await valve.rotate_wheel(init_turn_deg)
+	await valve.rotate_wheel(init_turn_deg, rotation_velocity_degs)
 
+func apply_rotation_delta(delta_radians: float, is_instant : bool = false) -> void:
+	if current_state == STATE.SPINNING:
+		return
+	
+	var delta_degrees = rad_to_deg(delta_radians)
+	var delta_fraction = delta_degrees / (rotations_to_max * 360.0)
+	
+	var new_fraction = clamp(
+		state.valve_fraction + delta_fraction,
+		_min,
+		_max
+	)
+	
+	var clamped_delta_fraction = new_fraction - state.valve_fraction
+	var clamped_delta_degrees = clamped_delta_fraction * rotations_to_max * 360.0
+	
+	var deg_per_s : float
+	if is_instant: deg_per_s = rotation_velocity_degs
+	else: deg_per_s = -1.0
+	
+	current_state = STATE.SPINNING
+	await valve.rotate_wheel(clamped_delta_degrees, deg_per_s)
+	
+	state.valve_fraction = new_fraction
+	valve_changed.emit(state.valve_fraction)
+	current_state = STATE.AVAILABLE
 	
 ##Drain
 func spin_to_left(...args) -> bool:
-	if current_state == STATE.SPINNING:	return false
-	current_state = STATE.SPINNING
-
-	var new_fraction = min(_max, state.valve_fraction + +180.0/(rotations_to_max*360) )
-	var degree_diff = (new_fraction - state.valve_fraction) * rotations_to_max*360
-	
-	await valve.rotate_wheel(degree_diff) #Cosmetic
-	
-	state.valve_fraction = clamp(new_fraction, _min, _max)
-	valve_changed.emit(state.valve_fraction)
-	
-	current_state = STATE.AVAILABLE
+	apply_rotation_delta(deg_to_rad(180.0), rotation_velocity_degs)
 	return true
 	
 #Fill
 func spin_to_right(...args) -> bool:
-	if current_state == STATE.SPINNING:	return false
-	current_state = STATE.SPINNING
-	
-	var new_fraction = max(_min, state.valve_fraction + -180.0/(rotations_to_max*360) ) 
-	var degree_diff = (new_fraction - state.valve_fraction) * rotations_to_max*360
-
-	await valve.rotate_wheel(degree_diff) #Cosmetic
-	
-	state.valve_fraction = clamp(new_fraction, _min, _max)
-	valve_changed.emit(state.valve_fraction)
-	
-	current_state = STATE.AVAILABLE
+	apply_rotation_delta(deg_to_rad(-180.0), rotation_velocity_degs)
 	return true
 
-func spin_to_target(fraction : float) -> void:
-	fraction = clamp(fraction, _min, _max)
-	var diff = fraction - state.valve_fraction
-	var diffdeg = diff * rotations_to_max * 360
-	await valve.rotate_wheel(diffdeg)
-	state.valve_fraction = fraction
+func spin_to_target_deg(target_deg: float, is_instant : bool = false) -> void:
+	# Total mechanical range in degrees
+	var total_deg = rotations_to_max * 360.0
 	
+	# Clamp requested angle to physical limits
+	target_deg = clamp(target_deg, 0.0, total_deg)
+	
+	# Current angle derived from fraction
+	var current_deg = state.valve_fraction * total_deg
+	
+	# Compute delta
+	var delta_deg = target_deg - current_deg
+	
+	# Convert to radians and apply
+	apply_rotation_delta(deg_to_rad(delta_deg), is_instant)
