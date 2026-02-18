@@ -2,7 +2,6 @@
 class_name Portal
 extends Node3D
 
-const ALLOWED_CLASS := XR_UIDREF.PlayerXROrigin3D
 
 ## Type of spawn-point data
 enum SpawnDataType {
@@ -44,8 +43,7 @@ var _scene_base : XRToolsSceneBase
 
 func _ready():
 	_scene_base = XRTools.find_xr_ancestor(self, "*", "XRToolsSceneBase")
-
-
+	$PortalArea3D.body_entered.connect(_on_TeleportArea_body_entered)
 
 # Called when the player enters the teleport area
 func _on_TeleportArea_body_entered(body: Node3D):
@@ -54,13 +52,17 @@ func _on_TeleportArea_body_entered(body: Node3D):
 		return
 
 	# Skip if not the player body
-	if not body is ALLOWED_CLASS:
+	if not body is XRToolsPlayerBody:
 		return
 
 	# Skip if not active
 	if not active:
 		return
+	teleport()
+	
 
+#Teleport should be able to be called separatedly
+func teleport() -> void:
 	# Teleport
 	if scene == "":
 		_scene_base.exit_to_main_menu()

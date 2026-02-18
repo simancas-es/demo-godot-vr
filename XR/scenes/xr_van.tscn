@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://vb3fpby81rqy"]
+
+[ext_resource type="Script" uid="uid://bvfa2y43ye0n7" path="res://XR/scenes/xr_van.gd" id="1_cpyed"]
+[ext_resource type="PackedScene" uid="uid://8k1q807gv3b8" path="res://models/van/van.tscn" id="2_xp057"]
+[ext_resource type="PackedScene" uid="uid://d3jcjeus6qmgt" path="res://XR/scenes/portal/portal.tscn" id="3_8w5vc"]
+
+[node name="XrVan" type="Node3D"]
+script = ExtResource("1_cpyed")
+
+[node name="Van" parent="." instance=ExtResource("2_xp057")]
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.93372464, 1.9759581, 0.5792586)
+text = "DESTINATIONDESTINATIONDEST"
+horizontal_alignment = 0
+vertical_alignment = 0
+
+[node name="Portal" parent="." instance=ExtResource("3_8w5vc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3929573, 0.40312636, 1.203589)
