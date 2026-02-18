@@ -284,3 +284,4 @@ openxr/default_action_map="uid://cv1tl7assnmqv"
 openxr/foveation_level=1
 openxr/foveation_dynamic=true
 openxr/submit_depth_buffer=true
+shaders/enabled=true

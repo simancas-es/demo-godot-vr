@@ -8,7 +8,9 @@ extends StateMenus
 	#Signal : function 
 }
 
-@export var entry_point : PackedScene
+@export var entry_point : PackedScene = preload("res://XR/demo_staging.tscn")#Default Staging
+@export var XR_DEBUG : bool = false
+@export var intro_map : PackedScene = preload("res://XR/zones_xr/zone_xr_hochschule.tscn")
 
 func connect_signals() -> void:	
 	for s in signals_fs.keys():
@@ -40,6 +42,12 @@ func load_staging() -> void:
 	if not entry_point:
 		push_error("VR: Missing entry point in InVR state!!!");
 		return
-	var staging = entry_point.instantiate()
+	var staging : XRToolsStaging = entry_point.instantiate()
 	parent.current_scene = staging
+	
+	if not XR_DEBUG:
+		staging.main_scene = intro_map.resource_path
+		
 	parent.add_child(staging)
+	
+	
