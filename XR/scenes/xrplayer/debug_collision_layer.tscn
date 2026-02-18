@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://ikhwc4myfycb"]
+
+[ext_resource type="Script" uid="uid://c54b6fryq4fx4" path="res://XR/scenes/xrplayer/debug_collision_layer.gd" id="1_lq6jh"]
+
+[node name="DebugCollisionLayer" type="Label3D"]
+billboard = 1
+text = "Name: ...
+Layer: ...
+Mask: ..."
+font_size = 8
+outline_size = 4
+script = ExtResource("1_lq6jh")
