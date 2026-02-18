@@ -10,11 +10,15 @@ extends Node
 
 func _ready() -> void:
 	if zone == null: push_error("Missing zone to adapt!!")
+	
 	var player : XRToolsPlayerBody = XRTools.find_xr_child(get_parent(), "*", "XRToolsPlayerBody")
 	adapt_collision_mask(player)		
+	
+	var hands = XRTools.find_xr_children(get_parent(), "*", "XRToolsCollisionHand")
+	for h in hands: adapt_collision_mask(h)
 
 
-func adapt_collision_mask(playerbody : XRToolsPlayerBody) -> void:
-	playerbody.collision_mask |= (1 << (15-1)) | (1 <<(16-1))
+func adapt_collision_mask(obj : CollisionObject3D) -> void:
+	obj.collision_mask |= (1 << (15-1)) | (1 <<(16-1))
 	
 	pass
