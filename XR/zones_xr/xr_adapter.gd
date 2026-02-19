@@ -11,14 +11,15 @@ extends Node
 
 
 func _ready() -> void:
-	if basezone == null: push_error("Missing zone to adapt!!")
-	
 	var player : XRToolsPlayerBody = XRTools.find_xr_child(get_parent(), "*", "XRToolsPlayerBody")
 	adapt_collision_mask(player)		
 	
 	var hands = XRTools.find_xr_children(get_parent(), "*", "XRToolsCollisionHand")
 	for h in hands: adapt_collision_mask(h)
 	
+	if basezone == null:
+		push_error("Missing zone to adapt!!")
+		return
 	do_delete_vans()
 	do_delete_inventorypickups()
 

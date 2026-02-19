@@ -6,10 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="4_0ga37"]
 [ext_resource type="Script" uid="uid://dmdr4j8plvntu" path="res://addons/godot-xr-tools/objects/snap_path_guide.gd" id="5_17hqw"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_f44k4"]
-margin = 0.01
-size = Vector3(0.0432129, 0.0544434, 0.332031)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ybnhb"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_mmp6s"]
@@ -47,14 +43,13 @@ shadow_mesh = SubResource("ArrayMesh_mmp6s")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_emf3t"]
 albedo_color = Color(0.09239707, 0.09239706, 0.09239706, 1)
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f4qlj"]
+points = PackedVector3Array(-0.00090728933, 0.030220635, -0.16612697, -0.0157, -0.02994015, -0.055258997, 0.004347707, -0.032826982, -0.061031155, 0.009597561, 0.024962552, 0.17012697, -0.027166847, 0.019710641, 0.17012697, -0.032421842, -0.0065550846, -0.16612697, 0.020107552, -0.0013031736, -0.16612697, 0.009597561, -0.011806996, 0.17012697, -0.027166847, -0.0065550846, 0.17012697, -0.027166847, 0.024962552, -0.16612697, -0.016661994, -0.032826982, 0.05449854, 0.004347707, -0.022316989, -0.16612697, 0.014852558, -0.0065550846, 0.17012697, 0.014852558, 0.019710641, -0.16612697, -0.021911848, 0.024962552, 0.17012697, 0.009597561, -0.0275689, 0.05449854, 0.014852558, 0.014458731, 0.17012697, -0.032421842, 0.014458731, -0.10832921, -0.016661994, -0.022316989, -0.16612697, -0.00090728933, -0.017065078, 0.17012697, 0.004347707, -0.032826982, 0.05449854, -0.016661994, 0.030220635, -0.16612697, 0.020107552, 0.009200648, -0.11356261, -0.016661994, -0.017065078, 0.17012697, -0.027166847, -0.017065078, -0.16612697, -0.032421842, -0.0065550846, -0.10832921, 0.009597561, -0.0275689, -0.055764843, 0.009597561, 0.024962552, -0.16612697, 0.020107552, -0.0013031736, -0.11356261, 0.014852558, -0.011806996, -0.16612697, -0.032421842, 0.014458731, -0.16612697, -0.027166847, 0.024962552, -0.10832921)
+
 [node name="PicatinnyScope" groups=["Picatinny"] instance=ExtResource("1_140n8")]
 mass = 0.5
 
-[node name="CollisionShape3D" parent="." index="0"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0.0028, 0.0212133, -0.0617341)
-shape = SubResource("BoxShape3D_f44k4")
-
-[node name="Scope" type="MeshInstance3D" parent="." index="1"]
+[node name="Scope" type="MeshInstance3D" parent="." index="0"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0042, 0.0232924, -0.0607575)
 mesh = SubResource("ArrayMesh_u5vpv")
 skeleton = NodePath("")
@@ -62,7 +57,10 @@ surface_material_override/0 = SubResource("StandardMaterial3D_emf3t")
 
 [node name="ScopeDisplay" parent="Scope" index="0" instance=ExtResource("2_oxs3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00747162, 0.00605679, 0.161537)
-script = null
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.0042, 0.0232924, -0.0607575)
+shape = SubResource("ConvexPolygonShape3D_f4qlj")
 
 [node name="GrabPointHandLeft" parent="." index="2" instance=ExtResource("3_c6vyi")]
 transform = Transform3D(-0.707107, 1.18331e-07, 0.707107, -0.707107, -3.09086e-08, -0.707107, -6.18173e-08, -1, 1.05529e-07, -0.0672, 0.0778826, -0.0907575)

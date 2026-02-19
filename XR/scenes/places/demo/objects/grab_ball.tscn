@@ -8,10 +8,6 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bv5s3"]
 bounce = 0.8
 
-[sub_resource type="SphereShape3D" id="2"]
-margin = 0.01
-radius = 0.2
-
 [sub_resource type="SphereMesh" id="3"]
 radius = 0.2
 height = 0.4
@@ -32,8 +28,10 @@ rings = 7
 shading_mode = 0
 albedo_color = Color(1, 1, 0, 1)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_3h8xq"]
+radius = 0.19929698
+
 [node name="GrabBall" instance=ExtResource("1_0bwk0")]
-collision_layer = 33554432
 collision_mask = 327352320
 mass = 10.0
 physics_material_override = SubResource("PhysicsMaterial_bv5s3")
@@ -46,17 +44,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19, 0.04, -0.065)
 [node name="GrabPointHandRight" parent="." index="1" instance=ExtResource("3_76mpj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19, 0.04, -0.065)
 
-[node name="CollisionShape3D" parent="." index="2"]
-shape = SubResource("2")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="3"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
 mesh = SubResource("3")
 surface_material_override/0 = SubResource("StandardMaterial3D_o2d7d")
 
-[node name="GrabHighlight" type="Node3D" parent="." index="4"]
+[node name="GrabHighlight" type="Node3D" parent="." index="3"]
 script = ExtResource("4_8jxby")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="GrabHighlight" index="0"]
 mesh = SubResource("4")
 skeleton = NodePath("../../MeshInstance3D")
 surface_material_override/0 = SubResource("StandardMaterial3D_qeoic")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="4"]
+shape = SubResource("SphereShape3D_3h8xq")

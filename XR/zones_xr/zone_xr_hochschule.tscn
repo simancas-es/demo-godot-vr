@@ -1,10 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://cakq3l4d46c36"]
+[gd_scene load_steps=30 format=3 uid="uid://cakq3l4d46c36"]
 
 [ext_resource type="Script" uid="uid://177gygw2xqqu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_ym0g8"]
 [ext_resource type="PackedScene" uid="uid://cc72bld411pp5" path="res://zones/hochschule/zonehochschule.tscn" id="2_ked7q"]
 [ext_resource type="PackedScene" uid="uid://dqlioxrtse7dm" path="res://XR/zones_xr/xr_adapter.tscn" id="2_p5wne"]
 [ext_resource type="PackedScene" uid="uid://d4mkpkdujnxn" path="res://XR/scenes/xrplayer/xrplayer.tscn" id="2_u3r6m"]
-[ext_resource type="PackedScene" uid="uid://d3jcjeus6qmgt" path="res://XR/scenes/portal/portal.tscn" id="4_r8pxb"]
 [ext_resource type="PackedScene" uid="uid://vb3fpby81rqy" path="res://XR/scenes/xr_van.tscn" id="6_p5wne"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rgwg5"]
@@ -154,16 +153,17 @@ tree_root = SubResource("AnimationNodeBlendTree_6sjsv")
 [node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2" index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_k0yro")
 
-[node name="Portal" parent="." instance=ExtResource("4_r8pxb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.59433, 2.5235043, -104.31243)
-scene = "uid://cakq3l4d46c36"
-
 [node name="ZoneHochschule" parent="." instance=ExtResource("2_ked7q")]
 
 [node name="XrVanBasin" parent="." instance=ExtResource("6_p5wne")]
-transform = Transform3D(-0.9799908, 0, -0.19904292, 0, 1, 0, 0.19904292, 0, -0.9799908, 48.921906, 2.23587, -109.99778)
+transform = Transform3D(-0.9799908, 0, -0.19904292, 0, 1, 0, 0.19904292, 0, -0.9799908, 49.311867, 2.2358694, -106.72814)
 target_scene = "uid://b0wlrvdhqnj2e"
 labeltext = "Tech demo for basin"
+
+[node name="XrVanTools" parent="." instance=ExtResource("6_p5wne")]
+transform = Transform3D(-0.93641526, 0, 0.35089397, 0, 1, 0, -0.35089397, 0, -0.93641526, 47.887276, 2.23587, -92.113)
+target_scene = "uid://dy3cx7np4mdg"
+labeltext = "To the Godot Tools Tech Demo!"
 
 [editable path="XRPlayer"]
 [editable path="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand"]
