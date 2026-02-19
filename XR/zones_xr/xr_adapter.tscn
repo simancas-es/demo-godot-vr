@@ -2,6 +2,5 @@
 
 [ext_resource type="Script" uid="uid://d2dcx1dna1w1c" path="res://XR/zones_xr/xr_adapter.gd" id="1_vatay"]
 
-[node name="XR_ADAPTER" type="Node" node_paths=PackedStringArray("zone")]
+[node name="XR_ADAPTER" type="Node"]
 script = ExtResource("1_vatay")
-zone = NodePath("")

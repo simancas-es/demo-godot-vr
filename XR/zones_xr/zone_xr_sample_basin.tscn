@@ -142,6 +142,7 @@ metadata/_custom_type_script = "uid://177gygw2xqqu"
 [node name="XR_ADAPTER" parent="." node_paths=PackedStringArray("basezone") instance=ExtResource("2_mvgnd")]
 basezone = NodePath("../ZoneObservatorio")
 delete_vans = true
+delete_inventorypickups = true
 
 [node name="ZoneObservatorio" parent="." instance=ExtResource("5_14ude")]
 
@@ -186,6 +187,8 @@ script = ExtResource("9_t66qr")
 
 [node name="LogicXRButtons" type="Node" parent="."]
 script = ExtResource("8_ijleo")
+
+[node name="XRPickables" type="Node3D" parent="."]
 
 [editable path="ZoneObservatorio"]
 [editable path="ZoneObservatorio/DemoConcreteBasin"]
