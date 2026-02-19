@@ -1,11 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://dqpu4ej7811ev"]
+[gd_scene load_steps=25 format=3 uid="uid://dqpu4ej7811ev"]
 
 [ext_resource type="Script" uid="uid://dow7n2v05dt1l" path="res://zones/demo_vista/zoneobservatorio.gd" id="1_hi4wa"]
 [ext_resource type="Texture2D" uid="uid://bfm31womnlm63" path="res://assets/zones/demo_vista/vista_background.jpg" id="2_yhe0a"]
 [ext_resource type="PackedScene" uid="uid://b623h3v5o1rym" path="res://assets/zones/demo_vista/models/observatorio.gltf" id="3_7dx48"]
 [ext_resource type="PackedScene" uid="uid://8k1q807gv3b8" path="res://models/van/van.tscn" id="4_m205r"]
 [ext_resource type="Script" uid="uid://18j8vlq04ixt" path="res://clases/falconview.gd" id="5_h04p4"]
-[ext_resource type="PackedScene" uid="uid://c3l83mavpioil" path="res://clases/room360/roomloader.tscn" id="6_a8o0u"]
 [ext_resource type="Script" uid="uid://kyd2m2onq8wi" path="res://clases/interaction/inventory_object_pickupable.gd" id="7_0c6xu"]
 [ext_resource type="PackedScene" uid="uid://bl8xsj2hbqfmr" path="res://models/demo_basin/demo_concrete_basin.tscn" id="7_47ml6"]
 [ext_resource type="PackedScene" uid="uid://dw2qf0uwaki7y" path="res://systems/system-inventory/test/beaker/beaker.gltf" id="8_k30he"]
@@ -103,17 +102,6 @@ curve = SubResource("Curve3D_2rlkq")
 script = ExtResource("5_h04p4")
 lookatnode = NodePath("../lookat")
 speed = 10.0
-
-[node name="RoomLoader" parent="." instance=ExtResource("6_a8o0u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1822, 0, -13.6084)
-room_id = 3
-
-[node name="RoomLoader2" parent="." instance=ExtResource("6_a8o0u")]
-room_id = 1
-
-[node name="RoomLoader3" parent="." instance=ExtResource("6_a8o0u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.03485, 0, -19.6943)
-room_id = 3
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
