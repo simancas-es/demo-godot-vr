@@ -31,13 +31,15 @@ func _ready() -> void:
 	aeratorquest.state = state
 	basindeath.state = state
 	
-	valve_controller.initialize_from_state()
 	
 	
 	#Persistence
 	persistence.saved_attributes = ["water_volume", "max_volume", "valve_fraction", "blower_target_on", "safety_blower_volume_fraction", "aerator_ok"]
 	persistence.target = state
 	add_child(persistence)
+	
+	
+	valve_controller.initialize_from_state()
 	
 	pass
 

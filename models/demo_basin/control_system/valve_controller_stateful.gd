@@ -40,7 +40,7 @@ func _ready() -> void:
 	#TODO: Checks and Errors
 	leftinter.activated.connect(spin_to_left.bind()) #Ignore player
 	rightinter.activated.connect(spin_to_right.bind())
-	
+	#initialize_from_state()
 
 func initialize_from_state() -> void:
 	if state == null:
