@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://b0wlrvdhqnj2e"]
+[gd_scene load_steps=48 format=3 uid="uid://b0wlrvdhqnj2e"]
 
 [ext_resource type="Script" uid="uid://177gygw2xqqu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_14ude"]
 [ext_resource type="PackedScene" uid="uid://dqlioxrtse7dm" path="res://XR/zones_xr/xr_adapter.tscn" id="2_mvgnd"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://cp56rklbq8lqf" path="res://XR/scenes/interactables/snap_interaction.tscn" id="15_0oekp"]
 [ext_resource type="Script" uid="uid://btflngrpj3umg" path="res://XR/zones_xr/zone_xr_sample_basin/logic_xr_door.gd" id="16_yyg01"]
 [ext_resource type="Script" uid="uid://ddpxuupqkou2m" path="res://XR/zones_xr/zone_xr_sample_basin/logic_xr_diffuser_interaction.gd" id="17_xo6c6"]
+[ext_resource type="PackedScene" uid="uid://q3pa72xp41cq" path="res://XR/scenes/places/demo/environment/climb_ladder.tscn" id="18_wlig4"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xo6c6"]
 animation = &"Grip"
@@ -291,6 +292,204 @@ show_model = NodePath("../..")
 script = ExtResource("17_xo6c6")
 basesystem = NodePath("../../..")
 
+[node name="LadderShort" parent="." instance=ExtResource("18_wlig4")]
+transform = Transform3D(0.75462943, 0, -0.65615124, 0, 1, 0, 0.65615124, 0, 0.75462943, 5.194629, 4.196081, -5.7475758)
+
+[node name="Left" parent="LadderShort/Meshes" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.51659214, 0, 0, 0, 1, -0.225, -2.4456522, 0)
+
+[node name="Right" parent="LadderShort/Meshes" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.51659214, 0, 0, 0, 1, 0.225, -2.4456522, 0)
+
+[node name="Rung8" parent="LadderShort/Meshes" index="9"]
+visible = false
+
+[node name="Rung9" parent="LadderShort/Meshes" index="10"]
+visible = false
+
+[node name="Rung10" parent="LadderShort/Meshes" index="11"]
+visible = false
+
+[node name="Rung11" parent="LadderShort/Meshes" index="12"]
+visible = false
+
+[node name="Rung12" parent="LadderShort/Meshes" index="13"]
+visible = false
+
+[node name="Rung13" parent="LadderShort/Meshes" index="14"]
+visible = false
+
+[node name="Rung14" parent="LadderShort/Meshes" index="15"]
+visible = false
+
+[node name="Rung15" parent="LadderShort/Meshes" index="16"]
+visible = false
+
+[node name="Rung16" parent="LadderShort/Meshes" index="17"]
+visible = false
+
+[node name="Rung17" parent="LadderShort/Meshes" index="18"]
+visible = false
+
+[node name="GrabPointHandLeft8" parent="LadderShort" index="16"]
+enabled = false
+
+[node name="GrabPointHandRight8" parent="LadderShort" index="17"]
+enabled = false
+
+[node name="GrabPointHandLeft9" parent="LadderShort" index="18"]
+enabled = false
+
+[node name="GrabPointHandRight9" parent="LadderShort" index="19"]
+enabled = false
+
+[node name="GrabPointHandLeft10" parent="LadderShort" index="20"]
+enabled = false
+
+[node name="GrabPointHandRight10" parent="LadderShort" index="21"]
+enabled = false
+
+[node name="GrabPointHandLeft11" parent="LadderShort" index="22"]
+enabled = false
+
+[node name="GrabPointHandRight11" parent="LadderShort" index="23"]
+enabled = false
+
+[node name="GrabPointHandLeft12" parent="LadderShort" index="24"]
+enabled = false
+
+[node name="GrabPointHandRight12" parent="LadderShort" index="25"]
+enabled = false
+
+[node name="GrabPointHandLeft13" parent="LadderShort" index="26"]
+enabled = false
+
+[node name="GrabPointHandRight13" parent="LadderShort" index="27"]
+enabled = false
+
+[node name="GrabPointHandLeft14" parent="LadderShort" index="28"]
+enabled = false
+
+[node name="GrabPointHandRight14" parent="LadderShort" index="29"]
+enabled = false
+
+[node name="GrabPointHandLeft15" parent="LadderShort" index="30"]
+enabled = false
+
+[node name="GrabPointHandRight15" parent="LadderShort" index="31"]
+enabled = false
+
+[node name="GrabPointHandLeft16" parent="LadderShort" index="32"]
+enabled = false
+
+[node name="GrabPointHandRight16" parent="LadderShort" index="33"]
+enabled = false
+
+[node name="GrabPointHandLeft17" parent="LadderShort" index="34"]
+enabled = false
+
+[node name="GrabPointHandRight17" parent="LadderShort" index="35"]
+enabled = false
+
+[node name="LadderShort2" parent="." instance=ExtResource("18_wlig4")]
+transform = Transform3D(0.75462943, 0, -0.65615124, 0, 1, 0, 0.65615124, 0, 0.75462943, 3.1729465, 4.196081, -11.727029)
+
+[node name="Left" parent="LadderShort2/Meshes" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.51659214, 0, 0, 0, 1, -0.225, -2.4456522, 0)
+
+[node name="Right" parent="LadderShort2/Meshes" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.51659214, 0, 0, 0, 1, 0.225, -2.4456522, 0)
+
+[node name="Rung8" parent="LadderShort2/Meshes" index="9"]
+visible = false
+
+[node name="Rung9" parent="LadderShort2/Meshes" index="10"]
+visible = false
+
+[node name="Rung10" parent="LadderShort2/Meshes" index="11"]
+visible = false
+
+[node name="Rung11" parent="LadderShort2/Meshes" index="12"]
+visible = false
+
+[node name="Rung12" parent="LadderShort2/Meshes" index="13"]
+visible = false
+
+[node name="Rung13" parent="LadderShort2/Meshes" index="14"]
+visible = false
+
+[node name="Rung14" parent="LadderShort2/Meshes" index="15"]
+visible = false
+
+[node name="Rung15" parent="LadderShort2/Meshes" index="16"]
+visible = false
+
+[node name="Rung16" parent="LadderShort2/Meshes" index="17"]
+visible = false
+
+[node name="Rung17" parent="LadderShort2/Meshes" index="18"]
+visible = false
+
+[node name="GrabPointHandLeft8" parent="LadderShort2" index="16"]
+enabled = false
+
+[node name="GrabPointHandRight8" parent="LadderShort2" index="17"]
+enabled = false
+
+[node name="GrabPointHandLeft9" parent="LadderShort2" index="18"]
+enabled = false
+
+[node name="GrabPointHandRight9" parent="LadderShort2" index="19"]
+enabled = false
+
+[node name="GrabPointHandLeft10" parent="LadderShort2" index="20"]
+enabled = false
+
+[node name="GrabPointHandRight10" parent="LadderShort2" index="21"]
+enabled = false
+
+[node name="GrabPointHandLeft11" parent="LadderShort2" index="22"]
+enabled = false
+
+[node name="GrabPointHandRight11" parent="LadderShort2" index="23"]
+enabled = false
+
+[node name="GrabPointHandLeft12" parent="LadderShort2" index="24"]
+enabled = false
+
+[node name="GrabPointHandRight12" parent="LadderShort2" index="25"]
+enabled = false
+
+[node name="GrabPointHandLeft13" parent="LadderShort2" index="26"]
+enabled = false
+
+[node name="GrabPointHandRight13" parent="LadderShort2" index="27"]
+enabled = false
+
+[node name="GrabPointHandLeft14" parent="LadderShort2" index="28"]
+enabled = false
+
+[node name="GrabPointHandRight14" parent="LadderShort2" index="29"]
+enabled = false
+
+[node name="GrabPointHandLeft15" parent="LadderShort2" index="30"]
+enabled = false
+
+[node name="GrabPointHandRight15" parent="LadderShort2" index="31"]
+enabled = false
+
+[node name="GrabPointHandLeft16" parent="LadderShort2" index="32"]
+enabled = false
+
+[node name="GrabPointHandRight16" parent="LadderShort2" index="33"]
+enabled = false
+
+[node name="GrabPointHandLeft17" parent="LadderShort2" index="34"]
+enabled = false
+
+[node name="GrabPointHandRight17" parent="LadderShort2" index="35"]
+enabled = false
+
 [editable path="ZoneObservatorio"]
 [editable path="ZoneObservatorio/DemoConcreteBasin"]
 [editable path="ZoneObservatorio/DemoConcreteBasin/ValveStructure/FillingValve"]
@@ -307,3 +506,5 @@ basesystem = NodePath("../../..")
 [editable path="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2"]
 [editable path="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2/Hand_Nails_low_R"]
 [editable path="XRPickables/beaker/beaker2"]
+[editable path="LadderShort"]
+[editable path="LadderShort2"]
