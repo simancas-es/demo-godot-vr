@@ -2,6 +2,7 @@ extends Node3D
 class_name XRToolsInteractableSliderGeneral
 
 @onready var isli : XRToolsInteractableSlider = %InteractableSlider
+signal slider_moved(position)
 
 ## Slider minimum limit
 @export var slider_limit_min : float = 0.0:
@@ -27,3 +28,14 @@ class_name XRToolsInteractableSliderGeneral
 ## If true, the slider moves to the default position when released
 @export var default_on_release : bool = false:
 	set(value): if is_instance_valid(isli): isli.default_on_release = value
+
+func _ready() -> void:
+	if is_instance_valid(isli):
+		isli.default_position = default_position
+		isli.default_on_release = default_on_release
+		isli._set_slider_position(slider_position)
+		isli.slider_steps = slider_steps
+		isli.slider_limit_min = slider_limit_min
+		isli.slider_limit_max = slider_limit_max
+	
+		isli.slider_moved.connect(slider_moved.emit)
