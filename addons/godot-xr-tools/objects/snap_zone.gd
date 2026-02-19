@@ -41,6 +41,9 @@ enum SnapMode {
 ## Deny snapping items in the specified group
 @export var snap_exclude : String = ""
 
+## Function that checks validity of picked object
+var check_function : Callable
+
 ## Require grab-by to be in the specified group
 @export var grab_require : String = ""
 
@@ -49,6 +52,7 @@ enum SnapMode {
 
 ## Initial object in snap zone
 @export var initial_object : NodePath
+
 
 
 # Public fields
@@ -209,7 +213,10 @@ func _on_snap_zone_body_entered(target: Node3D) -> void:
 	# Reject climbable objects
 	if target is XRToolsClimbable:
 		return
-
+	
+	if check_function:
+		if not check_function.call(target): return
+	
 	# Add to the list of objects in grab area
 	_object_in_grab_area.push_back(target)
 

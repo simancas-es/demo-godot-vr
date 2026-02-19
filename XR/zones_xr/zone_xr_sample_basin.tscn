@@ -281,6 +281,10 @@ collision_mask = 8437760
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.66619873, 0)
 shape = SubResource("BoxShape3D_w01w5")
 
+[node name="snap_interaction_diffusers" parent="XRPickables" instance=ExtResource("15_0oekp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3518271, 0.35427284, -12.55136)
+item_id = 2
+
 [editable path="ZoneObservatorio"]
 [editable path="ZoneObservatorio/DemoConcreteBasin"]
 [editable path="ZoneObservatorio/DemoConcreteBasin/ValveStructure/FillingValve"]

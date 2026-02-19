@@ -5,8 +5,10 @@ extends Node3D
 
 @export var item_id : INVENTORYSETTINGS.ID #ID of object that is correct
 @export var group : String #Group of objects that is correct
+@export var only_itemid : bool = true
 
 @export var snap_require : String = "" #Group required for snapping
+
 
 @onready var snapzone : XRToolsSnapZone = $SnapZone
 
@@ -24,6 +26,9 @@ func _ready() -> void:
 	snapzone.snap_require = snap_require
 	snapzone.has_picked_up.connect(on_has_picked_up)
 	snapzone.has_dropped.connect(on_has_dropped)
+	
+	if only_itemid:
+		snapzone.check_function = func(target : ItemPickable): return target.item_id == item_id	
 	pass
 
 func on_has_picked_up(what) -> void:
