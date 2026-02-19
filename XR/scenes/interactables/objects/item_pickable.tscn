@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://h2pe4ytcrmfo"]
+
+[ext_resource type="Script" uid="uid://carmglf74kwfm" path="res://XR/scenes/interactables/objects/item_pickable.gd" id="1_85uch"]
+
+[node name="ItemPickable" type="RigidBody3D"]
+collision_layer = 33554432
+collision_mask = 8437760
+script = ExtResource("1_85uch")
+metadata/_custom_type_script = "uid://bfrlpbsqg5lqr"
