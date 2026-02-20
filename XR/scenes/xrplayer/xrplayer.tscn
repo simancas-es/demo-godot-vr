@@ -150,6 +150,7 @@ nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
 [node name="XRPlayer" type="XROrigin3D"]
+current = true
 script = ExtResource("1_vkrpt")
 enable_ghosthands = false
 
