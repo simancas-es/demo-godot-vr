@@ -8,7 +8,7 @@ class_name ENVIRONMENTS
 enum ID {HOCHSCHULE,
 		GERWISCH,
 		OBSERVATORY,
-		AAA,
+		HILLERSLEBEN
 		
 			}
 
@@ -18,5 +18,5 @@ const ZONEINFORMATION : Dictionary = {
 	ID.HOCHSCHULE : "res://zones/hochschule/zonehochschule.tres",
 	ID.GERWISCH : "res://zones/gerwisch/zonegerwisch.tres",
 	ID.OBSERVATORY : "res://zones/demo_vista/zoneobservatorio.tres",
-	ID.AAA : "res://zones/demo_vista/zoneobservatorio.tres",
+	ID.HILLERSLEBEN : "res://zones/hillersleben/zonehillersleben.tres"
 	}

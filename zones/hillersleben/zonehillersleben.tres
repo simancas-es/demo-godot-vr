@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ZoneInformation" load_steps=3 format=3 uid="uid://duo80spfj5tg0"]
+
+[ext_resource type="Script" uid="uid://2xpoktqdyijn" path="res://clases/zones/zoneinformation.gd" id="1_yftl6"]
+[ext_resource type="Texture2D" uid="uid://dhohj2jp21gpt" path="res://assets/zones/hillersleben/hillersleben.bmp" id="2_jovwu"]
+
+[resource]
+script = ExtResource("1_yftl6")
+latitude = 53.632
+longitude = 10.816
+thumbnail = ExtResource("2_jovwu")
+filepath_description = "res://assets/zones/hillersleben/desc_hillersleben.json"
+environment = "uid://bnbdtip3vptxc"
+metadata/_custom_type_script = "uid://2xpoktqdyijn"
