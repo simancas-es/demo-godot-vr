@@ -10,6 +10,9 @@ func _gui_input(_event: InputEvent) -> void:
 	pass
 
 func populate_entries():	
+	for c in vbcontainer.get_children():
+		vbcontainer.remove_child(c)
+		c.queue_free()
 	var locale = TranslationServer.get_locale()
 	var env_info_keys = Cache.LOADED_ENVIRONMENTS_INFO.keys()
 	for i in env_info_keys:
@@ -40,9 +43,6 @@ func connect_to_children():
 				c.entry_selected.connect(on_update_selection)
 		
 func _ready() -> void:
-	for c in vbcontainer.get_children():
-		vbcontainer.remove_child(c)
-		c.queue_free()
 	populate_entries.call_deferred()
 	connect_to_children.call_deferred()
 
