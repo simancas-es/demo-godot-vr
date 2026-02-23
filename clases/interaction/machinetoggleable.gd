@@ -13,6 +13,8 @@ var _next_state
 @export var time_rest_s : float = 1.0 #seconds between activations
 var _can_activate := true
 
+@export var momentary_button : bool = false #Turns on, then automatically turns off.
+
 func _ready() -> void:
 	activated.connect(toggle_activation)
 	_next_state = initial_state
@@ -28,7 +30,7 @@ func toggle(on : bool) -> void:
 		current_state = STATE.ON
 		turned_on.emit()
 		_next_state = STATE.OFF
-	
+		if momentary_button: current_state = STATE.OFF
 	#rest
 	_can_activate = false
 	await get_tree().create_timer(time_rest_s).timeout
