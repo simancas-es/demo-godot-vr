@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://b10l7m4qjudur"]
+
+[ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="1_3y7ff"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6uclu"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6uclu"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6uclu"]
+cull_mode = 2
+
+[node name="simple_button" type="Area3D"]
+script = ExtResource("1_3y7ff")
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="button-area" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_6uclu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_6uclu")
+surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
