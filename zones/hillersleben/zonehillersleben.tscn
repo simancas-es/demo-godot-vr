@@ -67,50 +67,52 @@ transform = Transform3D(0.2816718, 0, -0.9595108, 0, 1, 0, 0.9595108, 0, 0.28167
 
 [node name="eindicker" parent="." instance=ExtResource("5_fqc7b")]
 
-[node name="betriebsgebaeude_aussen" parent="." instance=ExtResource("6_5rwjt")]
-
 [node name="LogikDoorsContainer" type="Node" parent="."]
 script = ExtResource("8_6uclu")
 
-[node name="Sandwasch-door" parent="." instance=ExtResource("8_1khpx")]
+[node name="Betriebsgebäude" type="Node3D" parent="."]
+
+[node name="betriebsgebaeude_aussen" parent="Betriebsgebäude" instance=ExtResource("6_5rwjt")]
+
+[node name="Sandwasch-door" parent="Betriebsgebäude" instance=ExtResource("8_1khpx")]
 transform = Transform3D(-0.90377647, 0, -0.42800474, 0, 1, 0, 0.42800474, 0, -0.90377647, -30.477528, 48.64245, 12.921708)
 y_degrees_opened = -100.0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Sandwasch-door"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Betriebsgebäude/Sandwasch-door"]
 transform = Transform3D(-9.980675e-17, -1, -2.980232e-08, 0.99999994, -6.5035355e-17, -2.9802322e-08, -6.1722645e-09, 1.41485e-08, 1.0000001, 3.2237715e-08, 1, -0.58171827)
 mesh = SubResource("PlaneMesh_1khpx")
 
-[node name="BGebaeude-doorside" parent="." instance=ExtResource("8_1khpx")]
+[node name="BGebaeude-doorside" parent="Betriebsgebäude" instance=ExtResource("8_1khpx")]
 transform = Transform3D(-0.42299795, 0, 0.9061306, 0, 1, 0, -0.9061306, 0, -0.42299795, -28.08672, 48.675896, 22.129314)
 y_degrees_opened = -100.0
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="BGebaeude-doorside"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/BGebaeude-doorside"]
 transform = Transform3D(-4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0, 1, -1.9349636e-07, 1.0176926, -0.58513916)
 mesh = SubResource("PlaneMesh_1khpx")
 skeleton = NodePath("../../Sandwasch-door")
 
-[node name="BGebaeude-doorfront" parent="." instance=ExtResource("8_1khpx")]
+[node name="BGebaeude-doorfront" parent="Betriebsgebäude" instance=ExtResource("8_1khpx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.504585, 48.67551, 10.713326)
 y_degrees_opened = 100.0
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="BGebaeude-doorfront"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/BGebaeude-doorfront"]
 transform = Transform3D(2.6417584e-09, 0.90377647, -0.42800477, 0.99999994, -6.5035355e-17, -2.9802322e-08, 5.5783476e-09, -0.42800474, -0.9037766, -0.18053244, 1.0176163, -0.53575706)
 mesh = SubResource("PlaneMesh_1khpx")
 skeleton = NodePath("../../Sandwasch-door")
 
-[node name="BGebaeude-doordop-link" parent="." instance=ExtResource("8_1khpx")]
+[node name="BGebaeude-doordop-link" parent="Betriebsgebäude" instance=ExtResource("8_1khpx")]
 transform = Transform3D(0.9053392, 0, 0.42468932, 0, 1, 0, -0.42468932, 0, 0.9053392, -35.261, 48.57, 2.276)
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="BGebaeude-doordop-link"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/BGebaeude-doordop-link"]
 transform = Transform3D(2.262257e-11, 0.9999933, -0.0036652386, 0.99999994, -6.5035355e-17, -2.9802322e-08, 6.172223e-09, -0.0036652386, -0.99999344, -0.002, 0.99, -0.558)
 mesh = SubResource("PlaneMesh_1khpx")
 skeleton = NodePath("../../Sandwasch-door")
 
-[node name="Bgebaeude-doordop-recht" parent="." instance=ExtResource("8_1khpx")]
+[node name="Bgebaeude-doordop-recht" parent="Betriebsgebäude" instance=ExtResource("8_1khpx")]
 transform = Transform3D(-0.9085957, 0, -0.4176768, 0, 1, 0, 0.4176768, 0, -0.9085957, -36.175, 48.57, 0.299)
 y_degrees_opened = -115.0
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Bgebaeude-doordop-recht"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Betriebsgebäude/Bgebaeude-doordop-recht"]
 transform = Transform3D(-7.034373e-11, -0.99993503, 0.011396766, 0.99999994, -6.5035355e-17, -2.9802322e-08, -6.171864e-09, 0.0113967955, 0.9999352, -0.007, 0.99, -0.573)
 mesh = SubResource("PlaneMesh_1khpx")
 skeleton = NodePath("../../Sandwasch-door")
