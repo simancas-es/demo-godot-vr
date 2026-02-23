@@ -30,7 +30,9 @@ func toggle(on : bool) -> void:
 		current_state = STATE.ON
 		turned_on.emit()
 		_next_state = STATE.OFF
-		if momentary_button: current_state = STATE.OFF
+		if momentary_button:
+			current_state = STATE.OFF
+			_next_state = STATE.ON
 	#rest
 	_can_activate = false
 	await get_tree().create_timer(time_rest_s).timeout
