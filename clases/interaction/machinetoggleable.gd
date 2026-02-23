@@ -36,7 +36,7 @@ func toggle(on : bool) -> void:
 	await get_tree().create_timer(time_rest_s).timeout
 	_can_activate = true
 			
-func toggle_activation(...args) -> void:
+func toggle_activation(..._args) -> void:
 	match _next_state:
 		STATE.OFF:
 			toggle(false)
