@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="VirtualTour"
+config/version="0.2.0"
 run/main_scene="uid://1gnljh2uer8"
 config/features=PackedStringArray("4.5", "Mobile")
 boot_splash/bg_color=Color(0.732139, 0.76047, 0.849627, 1)
