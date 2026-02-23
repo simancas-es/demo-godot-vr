@@ -67,7 +67,7 @@ func lock(item_id : INVENTORYSETTINGS.ID, force : bool = false) -> void:
 func open() -> void:
 	monitorable = false
 	var tween = create_tween()
-	tween.tween_property(self, "rotation_degrees:y", y_degrees_opened, time_to_open_s)
+	tween.tween_property(self, "rotation_degrees:y", original_y_degrees + y_degrees_opened, time_to_open_s)
 	monitorable = true
 	_status = STATUS.OPENED
 	pass
