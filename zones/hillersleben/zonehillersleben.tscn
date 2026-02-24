@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bnbdtip3vptxc"]
+[gd_scene load_steps=24 format=3 uid="uid://bnbdtip3vptxc"]
 
 [ext_resource type="Script" uid="uid://b78po4wueig00" path="res://clases/zones/basezone.gd" id="1_37tqx"]
 [ext_resource type="PackedScene" uid="uid://c85i5l4tpjwwb" path="res://assets/zones/hillersleben/models/Basisskala_referenz.gltf" id="2_we5og"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://c7yhfipghxiyv" path="res://models/doors/basedoor2m.tscn" id="8_1khpx"]
 [ext_resource type="Script" uid="uid://jgo7k1ecvdjx" path="res://zones/hillersleben/scripts/logik_doors_container.gd" id="8_6uclu"]
 [ext_resource type="PackedScene" uid="uid://b10l7m4qjudur" path="res://models/interaction/simple_button.tscn" id="8_duhpb"]
+[ext_resource type="Script" uid="uid://3cibq28us4hi" path="res://zones/hillersleben/scripts/bg-containers/bg_garage_controller.gd" id="9_0nlau"]
+[ext_resource type="Script" uid="uid://d2x1a26haj0vt" path="res://zones/hillersleben/scripts/bg-containers/bg_garage_state.gd" id="10_5rld8"]
 [ext_resource type="Script" uid="uid://dfx637qtcm1wm" path="res://zones/hillersleben/scripts/logik_container_movement.gd" id="10_duhpb"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xi370"]
@@ -36,6 +38,11 @@ size = Vector3(0.39, 2.35, 4.98)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0nlau"]
 size = Vector2(2.525, 4.97)
+
+[sub_resource type="Resource" id="Resource_8upog"]
+script = ExtResource("10_5rld8")
+container_states = [0, 0]
+metadata/_custom_type_script = "uid://d2x1a26haj0vt"
 
 [sub_resource type="Curve3D" id="Curve3D_6uclu"]
 _data = {
@@ -177,10 +184,30 @@ metadata/_edit_lock_ = true
 [node name="BGebaeude-garagedoor-button" parent="Betriebsgebäude" instance=ExtResource("8_duhpb")]
 transform = Transform3D(-0.36271465, 0, 0.93190026, 0, 1, 0, -0.93190026, 0, -0.36271465, -28.934345, 49.92099, 18.841993)
 
-[node name="LogikDoorsContainer" type="Node" parent="Betriebsgebäude" node_paths=PackedStringArray("button_garage_door", "garage_door_body")]
+[node name="GarageController" type="Node" parent="Betriebsgebäude" node_paths=PackedStringArray("door_controller", "container_controllers", "container_out_buttons", "container_in_buttons", "halt_buttons", "door_button")]
+script = ExtResource("9_0nlau")
+state = SubResource("Resource_8upog")
+door_controller = NodePath("LogikDoorsContainer")
+container_controllers = [NodePath("LogikContainerMovementGarbage"), NodePath("LogikContainerMovementSand")]
+container_out_buttons = [NodePath("../GarbageContainer/ContainerGarbageMOVEFW"), NodePath("../SandContainer/ContainerSandMOVEFW")]
+container_in_buttons = [NodePath("../GarbageContainer/ContainerGarbageMOVEBACK"), NodePath("../SandContainer/ContainerSandMOVEBACK")]
+halt_buttons = [NodePath("../GarbageContainer/ContainerGarbageHALT"), NodePath("../SandContainer/ContainerSandHALT")]
+door_button = NodePath("../BGebaeude-garagedoor-button")
+
+[node name="LogikDoorsContainer" type="Node" parent="Betriebsgebäude/GarageController" node_paths=PackedStringArray("garage_door_body")]
 script = ExtResource("8_6uclu")
-button_garage_door = NodePath("../BGebaeude-garagedoor-button")
-garage_door_body = NodePath("../BGebaeude-garagedoor-body")
+garage_door_body = NodePath("../../BGebaeude-garagedoor-body")
+
+[node name="LogikContainerMovementGarbage" type="Node" parent="Betriebsgebäude/GarageController" node_paths=PackedStringArray("path", "target_node")]
+script = ExtResource("10_duhpb")
+path = NodePath("../../RailsContainerGarbage")
+target_node = NodePath("../../RailsContainerGarbage/PathFollow3D/ContainerGarbage")
+
+[node name="LogikContainerMovementSand" type="Node" parent="Betriebsgebäude/GarageController" node_paths=PackedStringArray("path", "target_node")]
+script = ExtResource("10_duhpb")
+path = NodePath("../../RailsContainerSand")
+target_node = NodePath("../../RailsContainerSand/PathFollow3D/ContainerSand")
+container_index = 1
 
 [node name="GarbageContainer" type="Node3D" parent="Betriebsgebäude"]
 transform = Transform3D(-0.92587054, 0, -0.3778409, 0, 1, 0, 0.3778409, 0, -0.92587054, -29.312416, 49.92099, 19.023296)
@@ -196,14 +223,6 @@ momentary_button = true
 transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 1.5978279, 0, -0.11316204)
 momentary_button = true
 
-[node name="LogikContainerMovementGarbage" type="Node" parent="Betriebsgebäude/GarbageContainer" node_paths=PackedStringArray("out_button", "in_button", "halt_button", "path", "target_node")]
-script = ExtResource("10_duhpb")
-out_button = NodePath("../ContainerGarbageMOVEFW")
-in_button = NodePath("../ContainerGarbageMOVEBACK")
-halt_button = NodePath("../ContainerGarbageHALT")
-path = NodePath("../../RailsContainerGarbage")
-target_node = NodePath("../../RailsContainerGarbage/PathFollow3D/ContainerGarbage")
-
 [node name="SandContainer" type="Node3D" parent="Betriebsgebäude"]
 transform = Transform3D(-0.92587054, 0, -0.3778409, 0, 1, 0, 0.3778409, 0, -0.92587054, -29.312416, 50.250576, 19.023296)
 
@@ -217,14 +236,6 @@ momentary_button = true
 [node name="ContainerSandMOVEBACK" parent="Betriebsgebäude/SandContainer" instance=ExtResource("8_duhpb")]
 transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 1.5978279, 0, -0.11316204)
 momentary_button = true
-
-[node name="LogikContainerMovementSand" type="Node" parent="Betriebsgebäude/SandContainer" node_paths=PackedStringArray("out_button", "in_button", "halt_button", "path", "target_node")]
-script = ExtResource("10_duhpb")
-out_button = NodePath("../ContainerSandMOVEFW")
-in_button = NodePath("../ContainerSandMOVEBACK")
-halt_button = NodePath("../ContainerSandHALT")
-path = NodePath("../../RailsContainerSand")
-target_node = NodePath("../../RailsContainerSand/PathFollow3D/ContainerSand")
 
 [node name="RailsContainerGarbage" type="Path3D" parent="Betriebsgebäude"]
 transform = Transform3D(0.90693355, 0, 0.42127314, 0, 1, 0, -0.42127314, 0, 0.90693355, -30.00641, 48.64245, 17.858938)
