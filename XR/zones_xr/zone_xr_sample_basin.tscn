@@ -293,6 +293,7 @@ basesystem = NodePath("../../..")
 
 [node name="LadderShort" parent="." instance=ExtResource("18_wlig4")]
 transform = Transform3D(0.75462943, 0, -0.65615124, 0, 1, 0, 0.65615124, 0, 0.75462943, 5.194629, 4.196081, -5.7475758)
+metadata/_edit_lock_ = true
 
 [node name="Left" parent="LadderShort/Meshes" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.51659214, 0, 0, 0, 1, -0.225, -2.4456522, 0)
@@ -392,6 +393,7 @@ enabled = false
 
 [node name="LadderShort2" parent="." instance=ExtResource("18_wlig4")]
 transform = Transform3D(0.75462943, 0, -0.65615124, 0, 1, 0, 0.65615124, 0, 0.75462943, 3.1729465, 4.196081, -11.727029)
+metadata/_edit_lock_ = true
 
 [node name="Left" parent="LadderShort2/Meshes" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.51659214, 0, 0, 0, 1, -0.225, -2.4456522, 0)
