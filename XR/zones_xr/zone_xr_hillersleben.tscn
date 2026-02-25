@@ -140,6 +140,60 @@ metadata/_custom_type_script = "uid://177gygw2xqqu"
 [node name="Zonehillersleben" parent="." instance=ExtResource("4_ylnmi")]
 metadata/_edit_lock_ = true
 
+[node name="Cube_066" parent="Zonehillersleben/Basisskala_referenz_boden" index="192"]
+visible = false
+
+[node name="Cube_071" parent="Zonehillersleben/Basisskala_referenz_boden" index="196"]
+visible = false
+
+[node name="Cube_117" parent="Zonehillersleben/Basisskala_referenz_boden" index="230"]
+visible = false
+
+[node name="Cube_118" parent="Zonehillersleben/Basisskala_referenz_boden" index="231"]
+visible = false
+
+[node name="Cube_119" parent="Zonehillersleben/Basisskala_referenz_boden" index="232"]
+visible = false
+
+[node name="Cube_120" parent="Zonehillersleben/Basisskala_referenz_boden" index="233"]
+visible = false
+
+[node name="Cube_121" parent="Zonehillersleben/Basisskala_referenz_boden" index="234"]
+visible = false
+
+[node name="Cube_122" parent="Zonehillersleben/Basisskala_referenz_boden" index="235"]
+visible = false
+
+[node name="Cube_123" parent="Zonehillersleben/Basisskala_referenz_boden" index="236"]
+visible = false
+
+[node name="Cube_124" parent="Zonehillersleben/Basisskala_referenz_boden" index="237"]
+visible = false
+
+[node name="Cube_125" parent="Zonehillersleben/Basisskala_referenz_boden" index="238"]
+visible = false
+
+[node name="Cube_126" parent="Zonehillersleben/Basisskala_referenz_boden" index="239"]
+visible = false
+
+[node name="Cube_127" parent="Zonehillersleben/Basisskala_referenz_boden" index="240"]
+visible = false
+
+[node name="Cube_128" parent="Zonehillersleben/Basisskala_referenz_boden" index="241"]
+visible = false
+
+[node name="Cube_129" parent="Zonehillersleben/Basisskala_referenz_boden" index="242"]
+visible = false
+
+[node name="Cube_130" parent="Zonehillersleben/Basisskala_referenz_boden" index="243"]
+visible = false
+
+[node name="Cube_131" parent="Zonehillersleben/Basisskala_referenz_boden" index="244"]
+visible = false
+
+[node name="CollisionShape3D6" parent="Zonehillersleben/SimpleGeometry/StaticBody3D9" index="0"]
+visible = false
+
 [node name="XR_ADAPTER" type="Node" parent="." node_paths=PackedStringArray("basezone")]
 script = ExtResource("2_qeqsy")
 basezone = NodePath("../Zonehillersleben")
@@ -167,6 +221,16 @@ transform = Transform3D(0.114607684, 0, 0.9934108, 0, 1, 0, -0.9934108, 0, 0.114
 target_scene = "uid://cakq3l4d46c36"
 labeltext = "Back to the Hochschule!"
 metadata/_edit_lock_ = true
+
+[node name="XrVan2" parent="." instance=ExtResource("5_g30re")]
+transform = Transform3D(0.114607684, 0, 0.9934108, 0, 1, 0, -0.9934108, 0, 0.114607684, -8.759325, 46.580467, 72.57292)
+target_scene = "uid://cakq3l4d46c36"
+labeltext = "Back to the Hochschule!"
+
+[node name="XrVan3" parent="." instance=ExtResource("5_g30re")]
+transform = Transform3D(0.114607684, 0, 0.9934108, 0, 1, 0, -0.9934108, 0, 0.114607684, -79.66183, 50.591293, 26.226444)
+target_scene = "uid://cakq3l4d46c36"
+labeltext = "Back to the Hochschule!"
 
 [node name="BGebaeude" type="Node3D" parent="."]
 metadata/_edit_lock_ = true
@@ -214,10 +278,117 @@ buttongarbagehalt = NodePath("../../Zonehillersleben/Betriebsgebäude/GarbageCon
 transform = Transform3D(-0.062093742, 0, 0.9980703, 0, 1, 0, -0.9980703, 0, -0.062093742, 28.589895, 47.31136, 67.76201)
 
 [node name="LadderShort" parent="GasSpeicher" instance=ExtResource("8_j68eo")]
-transform = Transform3D(-1, 0, 8.568168e-08, 0, 1, 0, -8.568168e-08, 0, -1, -0.042907715, 3.3199592, -5.155382)
+transform = Transform3D(-0.95265085, 0, 0.3040664, 0, 1, 0, -0.3040664, 0, -0.95265085, 2.473344, 3.3199592, -5.4348736)
+
+[node name="LadderShort4FMittel" parent="GasSpeicher" instance=ExtResource("8_j68eo")]
+transform = Transform3D(-0.99429524, 0, 0.10666329, 0, 1, 0, -0.10666329, 0, -0.99429524, 49.070145, 6.8754463, -90.430115)
+
+[node name="LadderShort2" parent="GasSpeicher" instance=ExtResource("8_j68eo")]
+transform = Transform3D(-0.95265085, 0, 0.3040664, 0, 1, 0, -0.3040664, 0, -0.95265085, 2.473344, 10.294222, -5.4348736)
+
+[node name="LadderShort3" parent="GasSpeicher" instance=ExtResource("8_j68eo")]
+transform = Transform3D(-0.95265085, 0, 0.3040664, 0, 1, 0, -0.3040664, 0, -0.95265085, 2.473344, 17.191916, -5.4348736)
+
+[node name="Left" parent="GasSpeicher/LadderShort3/Meshes" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.4260569, 0, 0, 0, 1.1, -0.225, -1.8726423, 0)
+
+[node name="Right" parent="GasSpeicher/LadderShort3/Meshes" index="1"]
+transform = Transform3D(1, 0, 0, 0, 0.4260569, 0, 0, 0, 1.1, 0.225, -1.8726423, 0)
+
+[node name="Rung8" parent="GasSpeicher/LadderShort3/Meshes" index="9"]
+visible = false
+
+[node name="Rung9" parent="GasSpeicher/LadderShort3/Meshes" index="10"]
+visible = false
+
+[node name="Rung10" parent="GasSpeicher/LadderShort3/Meshes" index="11"]
+visible = false
+
+[node name="Rung11" parent="GasSpeicher/LadderShort3/Meshes" index="12"]
+visible = false
+
+[node name="Rung12" parent="GasSpeicher/LadderShort3/Meshes" index="13"]
+visible = false
+
+[node name="Rung13" parent="GasSpeicher/LadderShort3/Meshes" index="14"]
+visible = false
+
+[node name="Rung14" parent="GasSpeicher/LadderShort3/Meshes" index="15"]
+visible = false
+
+[node name="Rung15" parent="GasSpeicher/LadderShort3/Meshes" index="16"]
+visible = false
+
+[node name="Rung16" parent="GasSpeicher/LadderShort3/Meshes" index="17"]
+visible = false
+
+[node name="Rung17" parent="GasSpeicher/LadderShort3/Meshes" index="18"]
+visible = false
+
+[node name="GrabPointHandLeft8" parent="GasSpeicher/LadderShort3" index="16"]
+enabled = false
+
+[node name="GrabPointHandRight8" parent="GasSpeicher/LadderShort3" index="17"]
+enabled = false
+
+[node name="GrabPointHandLeft9" parent="GasSpeicher/LadderShort3" index="18"]
+enabled = false
+
+[node name="GrabPointHandRight9" parent="GasSpeicher/LadderShort3" index="19"]
+enabled = false
+
+[node name="GrabPointHandLeft10" parent="GasSpeicher/LadderShort3" index="20"]
+enabled = false
+
+[node name="GrabPointHandRight10" parent="GasSpeicher/LadderShort3" index="21"]
+enabled = false
+
+[node name="GrabPointHandLeft11" parent="GasSpeicher/LadderShort3" index="22"]
+enabled = false
+
+[node name="GrabPointHandRight11" parent="GasSpeicher/LadderShort3" index="23"]
+enabled = false
+
+[node name="GrabPointHandLeft12" parent="GasSpeicher/LadderShort3" index="24"]
+enabled = false
+
+[node name="GrabPointHandRight12" parent="GasSpeicher/LadderShort3" index="25"]
+enabled = false
+
+[node name="GrabPointHandLeft13" parent="GasSpeicher/LadderShort3" index="26"]
+enabled = false
+
+[node name="GrabPointHandRight13" parent="GasSpeicher/LadderShort3" index="27"]
+enabled = false
+
+[node name="GrabPointHandLeft14" parent="GasSpeicher/LadderShort3" index="28"]
+enabled = false
+
+[node name="GrabPointHandRight14" parent="GasSpeicher/LadderShort3" index="29"]
+enabled = false
+
+[node name="GrabPointHandLeft15" parent="GasSpeicher/LadderShort3" index="30"]
+enabled = false
+
+[node name="GrabPointHandRight15" parent="GasSpeicher/LadderShort3" index="31"]
+enabled = false
+
+[node name="GrabPointHandLeft16" parent="GasSpeicher/LadderShort3" index="32"]
+enabled = false
+
+[node name="GrabPointHandRight16" parent="GasSpeicher/LadderShort3" index="33"]
+enabled = false
+
+[node name="GrabPointHandLeft17" parent="GasSpeicher/LadderShort3" index="34"]
+enabled = false
+
+[node name="GrabPointHandRight17" parent="GasSpeicher/LadderShort3" index="35"]
+enabled = false
 
 [editable path="Zonehillersleben"]
-[editable path="Zonehillersleben/Basisskala_referenz"]
+[editable path="Zonehillersleben/Basisskala_referenz_boden"]
+[editable path="Zonehillersleben/LadderFlockungsmittel"]
+[editable path="Zonehillersleben/LadderGasspeicher1"]
 [editable path="XRPlayer"]
 [editable path="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand"]
 [editable path="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand/Hand_Nails_low_L"]
@@ -228,3 +399,6 @@ transform = Transform3D(-1, 0, 8.568168e-08, 0, 1, 0, -8.568168e-08, 0, -1, -0.0
 [editable path="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2"]
 [editable path="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2/Hand_Nails_low_R"]
 [editable path="GasSpeicher/LadderShort"]
+[editable path="GasSpeicher/LadderShort4FMittel"]
+[editable path="GasSpeicher/LadderShort2"]
+[editable path="GasSpeicher/LadderShort3"]
