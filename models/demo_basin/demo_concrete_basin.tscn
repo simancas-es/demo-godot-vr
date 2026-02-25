@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bl8xsj2hbqfmr"]
+[gd_scene load_steps=25 format=3 uid="uid://bl8xsj2hbqfmr"]
 
 [ext_resource type="Script" uid="uid://c115fvopay46j" path="res://models/demo_basin/demo_basin_controller.gd" id="1_2lndu"]
 [ext_resource type="PackedScene" uid="uid://docoieikc6j0v" path="res://models/platform_rusty/platform_rusty.tscn" id="2_wla5t"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://g84geloayuv6" path="res://models/demo_pipes/basic_pipe_valve.tscn" id="7_5s37b"]
 [ext_resource type="Script" uid="uid://bw0y2sq3sbao6" path="res://models/demo_basin/control_system/blower_controller.gd" id="7_wla5t"]
 [ext_resource type="PackedScene" uid="uid://drqrwbx5e5nqw" path="res://models/demo_basin/demo_blower/blower.tscn" id="10_4he58"]
+[ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="11_1inje"]
 [ext_resource type="Script" uid="uid://cbkd2d8p88nn2" path="res://models/demo_basin/task/aerator_quest_controller.gd" id="11_engif"]
 [ext_resource type="Script" uid="uid://cpye5rmdal8l5" path="res://models/demo_basin/basin_death.gd" id="12_wla5t"]
 [ext_resource type="Script" uid="uid://c6qt6kqkt2eng" path="res://clases/interaction/interaction_with_inventory_slot.gd" id="13_2lndu"]
@@ -159,18 +160,8 @@ monitorable = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029212, 0.388245, 0.00381374)
 shape = SubResource("BoxShape3D_t5cnw")
 
-[node name="Ladder" type="Area3D" parent="."]
-transform = Transform3D(0.102914, 0, -0.99469, 0, 1, 0, 0.99469, 0, 0.102914, -6.87243, 0, -0.591695)
-script = ExtResource("3_2lndu")
-metadata/_custom_type_script = "uid://s14wlv4lqne3"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ladder"]
-transform = Transform3D(-0.993859, 0, 0.110654, 0, 1, 0, -0.110654, 0, -0.993859, 0, 1.03027, 0)
-mesh = SubResource("BoxMesh_qfylk")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ladder"]
-transform = Transform3D(0.0242926, 0, 0.999704, 0, 1, 0, -0.999704, 0, 0.0242926, 0.0640841, 1.00739, -0.143054)
-shape = SubResource("BoxShape3D_engif")
+[node name="Ladder" parent="." instance=ExtResource("11_1inje")]
+transform = Transform3D(-0.010471789, 0, -0.99994487, 0, 1, 0, 0.99994487, 0, -0.010471789, -6.87243, 0, -0.591695)
 
 [node name="Ladder2" type="Area3D" parent="."]
 transform = Transform3D(0.102914, 0, -0.99469, 0, 1, 0, 0.99469, 0, 0.102914, -2.65984, 0, -4.9999)
