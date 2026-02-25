@@ -446,19 +446,19 @@ bone_index = 9
 [node name="PlayerBody" parent="." instance=ExtResource("12_ptqt2")]
 safe_margin = 0.05
 
-[node name="BeltSnapZone01" parent="PlayerBody" instance=ExtResource("13_5bwuw")]
+[node name="BeltSnapZone01" parent="PlayerBody" groups=["beltsnap"] instance=ExtResource("13_5bwuw")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -0.177, 1, -0.177)
 
-[node name="BeltSnapZone02" parent="PlayerBody" instance=ExtResource("13_5bwuw")]
+[node name="BeltSnapZone02" parent="PlayerBody" groups=["beltsnap"] instance=ExtResource("13_5bwuw")]
 transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -0.096, 1, -0.231)
 
-[node name="BeltSnapZone03" parent="PlayerBody" instance=ExtResource("13_5bwuw")]
+[node name="BeltSnapZone03" parent="PlayerBody" groups=["beltsnap"] instance=ExtResource("13_5bwuw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.25)
 
-[node name="BeltSnapZone04" parent="PlayerBody" instance=ExtResource("13_5bwuw")]
+[node name="BeltSnapZone04" parent="PlayerBody" groups=["beltsnap"] instance=ExtResource("13_5bwuw")]
 transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 0.096, 1, -0.231)
 
-[node name="BeltSnapZone05" parent="PlayerBody" instance=ExtResource("13_5bwuw")]
+[node name="BeltSnapZone05" parent="PlayerBody" groups=["beltsnap"] instance=ExtResource("13_5bwuw")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0.177, 1, -0.177)
 
 [node name="ControlPad" parent="." instance=ExtResource("25_5bwuw")]
