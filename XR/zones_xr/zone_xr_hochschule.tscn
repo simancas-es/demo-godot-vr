@@ -170,6 +170,11 @@ transform = Transform3D(-0.93641526, 0, 0.35089397, 0, 1, 0, -0.35089397, 0, -0.
 target_scene = "uid://dy3cx7np4mdg"
 labeltext = "To the Godot Tools Tech Demo!"
 
+[node name="XrVanDoors" parent="." instance=ExtResource("6_p5wne")]
+transform = Transform3D(0.34777048, 0, 0.9375798, 0, 1, 0, -0.9375798, 0, 0.34777048, 41.202236, 2.23587, -100.46523)
+target_scene = "uid://dc3sv4o68rv51"
+labeltext = "DoorsDemo"
+
 [editable path="XRPlayer"]
 [editable path="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand"]
 [editable path="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand/Hand_Nails_low_L"]

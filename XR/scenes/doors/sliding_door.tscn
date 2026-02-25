@@ -1,0 +1,114 @@
+[gd_scene load_steps=14 format=3 uid="uid://b8uajlhd20xae"]
+
+[ext_resource type="Script" uid="uid://bv4x2wou5f8ly" path="res://XR/scenes/doors/sliding_door_api.gd" id="1"]
+[ext_resource type="Script" uid="uid://bijfwo0eovvp7" path="res://XR/scenes/doors/door_handle_grab.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://71hltqcfxq13" path="res://XR/scenes/doors/fixed_hand_sliding_right.tscn" id="3_8bi1d"]
+[ext_resource type="Script" uid="uid://x43mk3s6towp" path="res://XR/scenes/doors/sliding_door_body.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://bus8ktoiol1hh" path="res://XR/scenes/doors/fixed_hand_sliding_left.tscn" id="4_xck0t"]
+[ext_resource type="Script" uid="uid://c3c4tr2cpwvtn" path="res://XR/scenes/doors/door_sounds.gd" id="5"]
+[ext_resource type="AudioStream" uid="uid://dhl4q7uuxofen" path="res://assets/audio/freesound.org/12738__leady__door-handle-turn.mp3" id="6"]
+[ext_resource type="AudioStream" uid="uid://dwfqxn4ysxa7c" path="res://assets/audio/freesound.org/431118__inspectorj__door-front-closing-a.mp3" id="7"]
+
+[sub_resource type="BoxShape3D" id="1"]
+size = Vector3(1, 2.4, 0.1)
+
+[sub_resource type="BoxMesh" id="2"]
+size = Vector3(1, 2.4, 0.1)
+
+[sub_resource type="BoxMesh" id="4"]
+size = Vector3(0.02, 0.2, 0.02)
+
+[sub_resource type="BoxShape3D" id="5"]
+size = Vector3(0.14, 0.26, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xck0t"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="SlidingDoor" type="Node3D"]
+script = ExtResource("1")
+
+[node name="SlidingDoorBody" type="RigidBody3D" parent="."]
+collision_layer = 16384
+collision_mask = 0
+mass = 50.0
+gravity_scale = 0.0
+can_sleep = false
+script = ExtResource("4")
+
+[node name="DoorBodyShape" type="CollisionShape3D" parent="SlidingDoorBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, 0)
+shape = SubResource("1")
+
+[node name="DoorBodyMesh" type="MeshInstance3D" parent="SlidingDoorBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, 0)
+mesh = SubResource("2")
+
+[node name="DoorHandleOrigin" type="Node3D" parent="SlidingDoorBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07, 1, 0)
+
+[node name="DoorHandleModel" type="Node3D" parent="SlidingDoorBody/DoorHandleOrigin"]
+
+[node name="Pick01" type="MeshInstance3D" parent="SlidingDoorBody/DoorHandleOrigin/DoorHandleModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0609024)
+mesh = SubResource("4")
+
+[node name="FHRight" parent="SlidingDoorBody/DoorHandleOrigin/DoorHandleModel/Pick01" instance=ExtResource("3_8bi1d")]
+transform = Transform3D(0.6653, -0.428256, -0.611533, 0.458437, 0.880844, -0.118111, 0.589246, -0.20177, 0.782354, -0.0217737, 0, 0.10514)
+visible = false
+
+[node name="FHLeft" parent="SlidingDoorBody/DoorHandleOrigin/DoorHandleModel/Pick01" instance=ExtResource("4_xck0t")]
+transform = Transform3D(0.935155, 0.198859, 0.293156, -0.207997, 0.978129, 0, -0.286745, -0.0609756, 0.956065, 0.0106571, 0.00495768, 0.00118503)
+visible = false
+
+[node name="Pick02" type="MeshInstance3D" parent="SlidingDoorBody/DoorHandleOrigin/DoorHandleModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0589243)
+mesh = SubResource("4")
+
+[node name="FHRight" parent="SlidingDoorBody/DoorHandleOrigin/DoorHandleModel/Pick02" instance=ExtResource("3_8bi1d")]
+transform = Transform3D(-0.763438, 0.353886, 0.540303, 0.335642, 0.932086, -0.136238, -0.551821, 0.0773392, -0.830369, 0.00968691, 0, -0.123272)
+visible = false
+
+[node name="FHLeft" parent="SlidingDoorBody/DoorHandleOrigin/DoorHandleModel/Pick02" instance=ExtResource("4_xck0t")]
+transform = Transform3D(-0.877363, -0.186569, -0.442069, -0.207997, 0.978129, 3.62818e-09, 0.432401, 0.0919491, -0.896981, -0.00910051, 0.00495768, 0.00502399)
+visible = false
+
+[node name="DoorHandleGrab" type="RigidBody3D" parent="SlidingDoorBody/DoorHandleOrigin" node_paths=PackedStringArray("pick_01", "pick_02", "pick_01_hand_right", "pick_01_hand_left", "pick_02_hand_right", "pick_02_hand_left")]
+collision_layer = 33554432
+collision_mask = 0
+gravity_scale = 0.0
+sleeping = true
+lock_rotation = true
+freeze = true
+script = ExtResource("3")
+pick_01 = NodePath("../DoorHandleModel/Pick01")
+pick_02 = NodePath("../DoorHandleModel/Pick02")
+pick_01_hand_right = NodePath("../DoorHandleModel/Pick01/FHRight")
+pick_01_hand_left = NodePath("../DoorHandleModel/Pick01/FHLeft")
+pick_02_hand_right = NodePath("../DoorHandleModel/Pick02/FHRight")
+pick_02_hand_left = NodePath("../DoorHandleModel/Pick02/FHLeft")
+picked_up_layer = 0
+picked_by_exclude = "beltsnap"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SlidingDoorBody/DoorHandleOrigin/DoorHandleGrab"]
+shape = SubResource("5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="SlidingDoorBody/DoorHandleOrigin/DoorHandleGrab"]
+visible = false
+mesh = SubResource("BoxMesh_xck0t")
+
+[node name="PinJoint3D" type="PinJoint3D" parent="SlidingDoorBody/DoorHandleOrigin"]
+node_a = NodePath("../DoorHandleGrab")
+node_b = NodePath("../..")
+
+[node name="DoorSounds" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("5")
+
+[node name="DoorOpened" type="AudioStreamPlayer3D" parent="DoorSounds"]
+stream = ExtResource("6")
+
+[node name="DoorClosed" type="AudioStreamPlayer3D" parent="DoorSounds"]
+stream = ExtResource("7")
+
+[connection signal="door_closed" from="." to="DoorSounds" method="_on_door_closed"]
+[connection signal="door_opened" from="." to="DoorSounds" method="_on_door_opened"]

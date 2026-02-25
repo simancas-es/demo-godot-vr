@@ -265,6 +265,7 @@ locale/locale_filter_mode=0
 3d_physics/layer_27="Wall Walking Surface"
 3d_physics/layer_28="Grappling Target"
 3d_physics/layer_29="Player Body"
+3d_physics/layer_30="XRDoors"
 
 [physics]
 

@@ -1,0 +1,135 @@
+[gd_scene load_steps=15 format=3 uid="uid://cef6giv3yfb8v"]
+
+[ext_resource type="Script" uid="uid://chcrq4anji11l" path="res://XR/scenes/doors/hinged_door_api.gd" id="1"]
+[ext_resource type="Script" uid="uid://bijfwo0eovvp7" path="res://XR/scenes/doors/door_handle_grab.gd" id="2"]
+[ext_resource type="Script" uid="uid://cqv50x213ws0c" path="res://XR/scenes/doors/hinged_door_body.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://ddym7kilhtyq2" path="res://XR/scenes/doors/fixed_hand_right.tscn" id="3_fkh8a"]
+[ext_resource type="PackedScene" uid="uid://bok2ywfo8jipb" path="res://XR/scenes/doors/fixed_hand_left.tscn" id="4_nysu4"]
+[ext_resource type="AudioStream" uid="uid://dhl4q7uuxofen" path="res://assets/audio/freesound.org/12738__leady__door-handle-turn.mp3" id="5"]
+[ext_resource type="Script" uid="uid://c3c4tr2cpwvtn" path="res://XR/scenes/doors/door_sounds.gd" id="6"]
+[ext_resource type="AudioStream" uid="uid://dwfqxn4ysxa7c" path="res://assets/audio/freesound.org/431118__inspectorj__door-front-closing-a.mp3" id="7"]
+
+[sub_resource type="BoxShape3D" id="1"]
+size = Vector3(1, 2.4, 0.1)
+
+[sub_resource type="BoxMesh" id="2"]
+size = Vector3(1, 2.4, 0.1)
+
+[sub_resource type="BoxMesh" id="3"]
+size = Vector3(0.02, 0.02, 0.2)
+
+[sub_resource type="BoxMesh" id="4"]
+size = Vector3(0.1, 0.02, 0.02)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ogaye"]
+size = Vector3(0.1, 0.1, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ogaye"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="HingedDoor" type="Node3D"]
+script = ExtResource("1")
+door_minimum_angle = null
+door_maximum_angle = null
+handle_minimum_angle = null
+handle_maximum_angle = null
+handle_open_angle = null
+latch_angle = null
+close_force = null
+friction = null
+bounce = null
+latch_on_close = null
+door_locked = null
+
+[node name="HingedDoorBody" type="RigidBody3D" parent="."]
+collision_layer = 16384
+collision_mask = 268435456
+mass = 50.0
+gravity_scale = 0.0
+can_sleep = false
+script = ExtResource("3")
+
+[node name="DoorBodyShape" type="CollisionShape3D" parent="HingedDoorBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, 0)
+shape = SubResource("1")
+
+[node name="DoorBodyMesh" type="MeshInstance3D" parent="HingedDoorBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, 0)
+mesh = SubResource("2")
+
+[node name="DoorHandleOrigin" type="Node3D" parent="HingedDoorBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.93, 1, 0)
+
+[node name="DoorHandleModel" type="Node3D" parent="HingedDoorBody/DoorHandleOrigin"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00131702, 0.100484, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel"]
+mesh = SubResource("3")
+
+[node name="Handle1" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04, 0, 0.09)
+mesh = SubResource("4")
+
+[node name="FHRight" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle1" instance=ExtResource("3_fkh8a")]
+transform = Transform3D(-0.156165, -0.959524, 0.234362, 0.987013, -0.160639, 3.67691e-09, 0.0376477, 0.231318, 0.972149, -0.0118994, 0.0196892, 0.0657559)
+visible = false
+
+[node name="FHLeft" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle1" instance=ExtResource("4_nysu4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0209175, 0.031698)
+visible = false
+
+[node name="Handle2" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04, 0, -0.09)
+mesh = SubResource("4")
+
+[node name="FHLeft" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle2" instance=ExtResource("4_nysu4")]
+transform = Transform3D(-0.9632, 0, 0.268785, 0, 1, 0, -0.268785, 0, -0.9632, -0.0286745, 0.0209175, -0.0362553)
+visible = false
+
+[node name="FHRight" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle2" instance=ExtResource("3_fkh8a")]
+transform = Transform3D(0.244126, 0.968114, 0.0561875, 0.969646, -0.244512, 0, 0.0137385, 0.0544821, -0.99842, -0.00411975, 0.0214645, -0.0854271)
+visible = false
+
+[node name="DoorHandleGrab" type="RigidBody3D" parent="HingedDoorBody/DoorHandleOrigin" node_paths=PackedStringArray("pick_01", "pick_02", "pick_01_hand_right", "pick_01_hand_left", "pick_02_hand_right", "pick_02_hand_left")]
+collision_layer = 33554432
+collision_mask = 0
+mass = 0.001
+gravity_scale = 0.0
+sleeping = true
+lock_rotation = true
+freeze = true
+script = ExtResource("2")
+pick_01 = NodePath("../DoorHandleModel/Handle1")
+pick_02 = NodePath("../DoorHandleModel/Handle2")
+pick_01_hand_right = NodePath("../DoorHandleModel/Handle1/FHRight")
+pick_01_hand_left = NodePath("../DoorHandleModel/Handle1/FHLeft")
+pick_02_hand_right = NodePath("../DoorHandleModel/Handle2/FHRight")
+pick_02_hand_left = NodePath("../DoorHandleModel/Handle2/FHLeft")
+picked_up_layer = 0
+picked_by_exclude = "beltsnap"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleGrab"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0438764, 0.0958737, -0.0109467)
+shape = SubResource("BoxShape3D_ogaye")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleGrab"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0977987, 0.0287403)
+visible = false
+mesh = SubResource("BoxMesh_ogaye")
+
+[node name="PinJoint3D" type="PinJoint3D" parent="HingedDoorBody/DoorHandleOrigin"]
+node_a = NodePath("../DoorHandleGrab")
+node_b = NodePath("../..")
+
+[node name="DoorSounds" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("6")
+
+[node name="DoorOpened" type="AudioStreamPlayer3D" parent="DoorSounds"]
+stream = ExtResource("5")
+
+[node name="DoorClosed" type="AudioStreamPlayer3D" parent="DoorSounds"]
+stream = ExtResource("7")
+
+[connection signal="door_closed" from="." to="DoorSounds" method="_on_door_closed"]
+[connection signal="door_opened" from="." to="DoorSounds" method="_on_door_opened"]
