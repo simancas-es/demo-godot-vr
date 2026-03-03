@@ -29,9 +29,9 @@ func on_activated(...args) -> void:
 		Signals.ui_msg_top.emit(tr("Aerator is broken!"))
 	
 
-	if blower_machine.current_state == MachineToggleable.STATE.ON:
+	if blower_machine.current_state == MachineToggleable.STATE.OFF:
 		state.blower_target_on[blower_number] = false
-	else:
+	elif blower_machine.current_state == MachineToggleable.STATE.ON:
 		state.blower_target_on[blower_number] = true
 	pass
 	
