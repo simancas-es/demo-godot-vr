@@ -15,13 +15,20 @@ func init_root():
 		current_scene.call_deferred("queue_free")
 		
 		
-func _ready():
+func _ready(): 
 		
 	#Check if there is a VR headset
 	var xrstart : XRToolsStartXR = $StartXR
 	#if xrstart.xr_interface:
-	if xrstart.xr_interface:
-		state_machine_menus.starting_state = $StateMachine/InVR
+	if not (xrstart.xr_interface == null): #BUG
+		var misses := 0
+		while not xrstart.is_xr_active():
+			misses += 1
+			push_error("XR Interface should exist but is not active!")
+			await get_tree().create_timer(1.0).timeout
+			if misses >= 3: break;
+		if xrstart.is_xr_active():
+			state_machine_menus.starting_state = $StateMachine/InVR
 	#else:
 		#xrstart.queue_free()
 	state_machine_menus.init(self)
@@ -44,12 +51,14 @@ func change_environment(id : ENVIRONMENTS.ID) -> BaseZone:
 
 
 func _process(delta : float):
+	if not state_machine_menus.current_state: return
 	state_machine_menus.process_frame(delta)
 	if debug_label_state: debug_label_state.text = "State: %s  - Topic: %s" % [state_machine_menus.current_state.name, GameState._current_topic]
 #func _physics_process(delta: float) -> void:
 	#state_machine_menus.process_physics(delta)
 	
 func _input(event: InputEvent) -> void:
+	if not state_machine_menus.current_state: return
 	state_machine_menus.process_input(event)
 
 ##Pauses the current_scene in the Root object. Menus are not direct children
