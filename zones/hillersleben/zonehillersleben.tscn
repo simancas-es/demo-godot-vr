@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://bnbdtip3vptxc"]
+[gd_scene load_steps=67 format=3 uid="uid://bnbdtip3vptxc"]
 
 [ext_resource type="Script" uid="uid://b78po4wueig00" path="res://clases/zones/basezone.gd" id="1_37tqx"]
 [ext_resource type="PackedScene" uid="uid://d4i7huvosagj1" path="res://zones/hillersleben/scripts/hl_flow_model/main.tscn" id="2_0nlau"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://doyyrvn116gfv" path="res://models/labels/flow_simulation_volume_label.tscn" id="3_5rld8"]
 [ext_resource type="PackedScene" uid="uid://8k1q807gv3b8" path="res://models/van/van.tscn" id="3_xi370"]
 [ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="4_0nlau"]
+[ext_resource type="PackedScene" uid="uid://cs507u3nvuu12" path="res://models/labels/flow_simulation_throughput_label.tscn" id="4_8upog"]
 [ext_resource type="PackedScene" uid="uid://c7yhfipghxiyv" path="res://models/doors/basedoor2m.tscn" id="8_1khpx"]
 [ext_resource type="Script" uid="uid://jgo7k1ecvdjx" path="res://zones/hillersleben/scripts/logik_doors_container.gd" id="8_6uclu"]
 [ext_resource type="PackedScene" uid="uid://b10l7m4qjudur" path="res://models/interaction/simple_button.tscn" id="8_duhpb"]
@@ -188,15 +189,41 @@ starting_position = NodePath("spawn")
 starting_lookat = NodePath("lookat")
 metadata/_custom_type_script = "uid://b78po4wueig00"
 
-[node name="FlowSimulation" parent="." instance=ExtResource("2_0nlau")]
+[node name="FlowSimulation" parent="." groups=["FLOWSIMULATION"] instance=ExtResource("2_0nlau")]
 
 [node name="FlowSimulationLabels" type="Node3D" parent="."]
 
-[node name="FlowSimulationVolumeLabel" parent="FlowSimulationLabels" node_paths=PackedStringArray("flow_simulation_main") instance=ExtResource("3_5rld8")]
+[node name="Volumes" type="Node3D" parent="FlowSimulationLabels"]
+
+[node name="FlowSimulationVolumeLabel" parent="FlowSimulationLabels/Volumes" node_paths=PackedStringArray("flow_simulation_main") instance=ExtResource("3_5rld8")]
 transform = Transform3D(0.41553485, 0, -0.9095773, 0, 1, 0, 0.9095773, 0, 0.41553485, -22.90168, 50.45558, 2.4328036)
 title_name_en = "Voreindicker I"
 flow_simulation_container = 8
-flow_simulation_main = NodePath("../../FlowSimulation")
+flow_simulation_main = NodePath("../../../FlowSimulation")
+
+[node name="Pumps" type="Node3D" parent="FlowSimulationLabels"]
+
+[node name="RLSPW" type="Node3D" parent="FlowSimulationLabels/Pumps"]
+
+[node name="FlowSimulationThroughputLabel" parent="FlowSimulationLabels/Pumps/RLSPW" instance=ExtResource("4_8upog")]
+transform = Transform3D(-0.49967998, 0, 0.017885758, 0, 0.5, 0, -0.017885758, 0, -0.49967998, -102.733215, 51.25075, 33.42398)
+title_name_en = "RSP1"
+flow_simulation_edge = 9
+
+[node name="FlowSimulationThroughputLabel2" parent="FlowSimulationLabels/Pumps/RLSPW" instance=ExtResource("4_8upog")]
+transform = Transform3D(-0.49967998, 0, 0.017885758, 0, 0.5, 0, -0.017885758, 0, -0.49967998, -103.733215, 51.25075, 33.42398)
+title_name_en = "RSP2"
+flow_simulation_edge = 10
+
+[node name="FlowSimulationThroughputLabel3" parent="FlowSimulationLabels/Pumps/RLSPW" instance=ExtResource("4_8upog")]
+transform = Transform3D(-0.49967998, 0, 0.017885758, 0, 0.5, 0, -0.017885758, 0, -0.49967998, -104.733215, 51.25075, 33.42398)
+title_name_en = "RSP3"
+flow_simulation_edge = 11
+
+[node name="FlowSimulationThroughputLabel4" parent="FlowSimulationLabels/Pumps/RLSPW" instance=ExtResource("4_8upog")]
+transform = Transform3D(-0.49967998, 0, 0.017885758, 0, 0.5, 0, -0.017885758, 0, -0.49967998, -105.733215, 51.25075, 33.42398)
+title_name_en = "RSP4"
+flow_simulation_edge = 12
 
 [node name="North" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2994995, 0, -45.07723)

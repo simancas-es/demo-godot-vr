@@ -22,6 +22,11 @@ func _ready() -> void:
 		title.text = tr(title_name_en)
 	set_numbers(0, 0)
 	
+	#HACK: avoid adding manually, but crashes if not found
+	for node in get_tree().get_nodes_in_group("FLOWSIMULATION"):
+		if node is SimulationMain:
+			flow_simulation_main = node
+	
 func set_numbers(volume, fill_level) -> void:
 	if stats_vol:
 		stats_vol.text = tr(t_current_volume) + "%d m3" % volume
@@ -42,6 +47,7 @@ func update() -> void:
 var update_interval : float = 5.0 # seconds
 var time_accum : float = 0.0
 func _process(delta: float) -> void: #TODO: Disable when not in view
+	if not flow_simulation_main : return
 	time_accum += delta
 	if time_accum >= update_interval:
 		time_accum = 0.0

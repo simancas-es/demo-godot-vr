@@ -60,64 +60,103 @@ var nb2_rlspw := Ref.SimEdge.new()
 var nb2_sspw := Ref.SimEdge.new()
 
 
+enum ID {
+	ZULAUF_FF,
+	FF_PSB,
+	FF_MSB,
+	FF_VED1,
+	PSB_BB1,
+	PSB_BB2,
+	PSB_PSPW,
+	PSPW_VED1,
+	SSPW_VED1,
+	RLSPW_RSP1_PSB,
+	RLSPW_RSP2_PSB,
+	RLSPW_RSP3_PSB,
+	RLSPW_RSP4_PSB,
+	RLSPW_ÜSP1_VED1,
+
+	TWSWPW_FF,
+	TWSWPW_MSB,
+
+	#MSB
+	MSB_KWPW,
+	MSB_VED2,
+
+	#KWPW
+	KWPW_BB1,
+	KWPW_BB2,
+
+	#FMDS
+	FMDS_BB1,
+	FMDS_BB2,
+
+	#BB
+	BB1_NB1,
+	BB1_NB2,
+	BB2_NB1,
+	BB2_NB2,
+
+	#NB
+	NB1_ABLAUF,
+	NB1_RLSPW,
+	NB1_SSPW,
+	NB2_ABLAUF,
+	NB2_RLSPW,
+	NB2_SSPW,
+	
+}
+
+var LIST : Dictionary[ID, Ref.SimEdge] = {
+	ID.ZULAUF_FF : zulauf_ff,
+	ID.FF_PSB : ff_psb,
+	ID.FF_MSB : ff_msb,
+	ID.FF_VED1 : ff_ved1,
+	ID.PSB_BB1 : psb_bb1,
+	ID.PSB_BB2 : psb_bb2,
+	ID.PSB_PSPW : psb_pspw,
+	ID.PSPW_VED1 : pspw_ved1,
+	ID.SSPW_VED1 : sspw_ved1,
+	ID.RLSPW_RSP1_PSB : rlspw_rsp1_psb,
+	ID.RLSPW_RSP2_PSB : rlspw_rsp2_psb,
+	ID.RLSPW_RSP3_PSB : rlspw_rsp2_psb,
+	ID.RLSPW_RSP4_PSB : rlspw_rsp4_psb,
+	ID.RLSPW_ÜSP1_VED1 : rlspw_üsp1_ved1,
+
+	ID.TWSWPW_FF : twswpw_ff,
+	ID.TWSWPW_MSB : twswpw_msb,
+
+	#MSB
+	ID.MSB_KWPW : msb_kwpw,
+	ID.MSB_VED2 : msb_ved2,
+
+	#KWPW
+	ID.KWPW_BB1 : kwpw_bb1,
+	ID.KWPW_BB2 : kwpw_bb2,
+
+	#FMDS
+	ID.FMDS_BB1 : fmds_bb1,
+	ID.FMDS_BB2 : fmds_bb2,
+
+	#BB
+	ID.BB1_NB1 : bb1_nb1,
+	ID.BB1_NB2 : bb1_nb2,
+	ID.BB2_NB1 : bb2_nb1,
+	ID.BB2_NB2 : bb2_nb2,
+
+	#NB
+	ID.NB1_ABLAUF : nb1_ablauf,
+	ID.NB1_RLSPW : nb1_rlspw,
+	ID.NB1_SSPW : nb1_sspw,
+	ID.NB2_ABLAUF : nb2_ablauf,
+	ID.NB2_RLSPW : nb2_rlspw,
+	ID.NB2_SSPW : nb2_sspw
+}
+	
+
 
 func get_edges() -> Array[Ref.SimEdge]:
-	var edges = [
-		zulauf_ff,
-		#ff
-		ff_psb,
-		ff_msb,
-		ff_ved1,
-
-		#PSB
-		psb_bb1,
-		psb_bb2,
-		psb_pspw,
-
-		#PSPW
-		pspw_ved1,
-		
-		#SSPW
-		sspw_ved1,
-
-		#RLSPW
-		rlspw_rsp1_psb,
-		rlspw_rsp2_psb,
-		rlspw_rsp3_psb,
-		rlspw_rsp4_psb,
-		rlspw_üsp1_ved1,
-
-		twswpw_ff,
-		twswpw_msb,
-
-		#MSB
-		msb_kwpw,
-		msb_ved2,
-
-		#KWPW
-		kwpw_bb1,
-		kwpw_bb2,
-
-		#FMDS
-		fmds_bb1,
-		fmds_bb2,
-
-		#BB
-		bb1_nb1,
-		bb1_nb2,
-		bb2_nb1,
-		bb2_nb2,
-
-		#NB
-		nb1_ablauf,
-		nb1_rlspw,
-		nb1_sspw,
-		nb2_ablauf,
-		nb2_rlspw,
-		nb2_sspw,
-				
-	] as Array[Ref.SimEdge]
-	
+	var edges = LIST.values() as Array[Ref.SimEdge]	
 	return edges
 
 func initialize(containers : Containers) -> void:
