@@ -37,7 +37,14 @@ func init(_containers : Containers, _edges : Edges) -> void:
 	edges = _edges
 	set_process(true)
 
+
 func _ready() -> void:
+	set_process(false)
+	update()
+	
+func start() -> void:
+	set_process(true)
+func stop() -> void:
 	set_process(false)
 	
 func update() -> void:

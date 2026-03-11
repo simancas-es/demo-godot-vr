@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://pbnqh5y64xbq"]
 
-[ext_resource type="Texture2D" uid="uid://dvxv6sgcx7nc0" path="res://hl_flow_model/fotos/west.png" id="1_cgmy2"]
-[ext_resource type="Script" uid="uid://0pdeiee3huqx" path="res://hl_flow_model/overview.gd" id="1_njw0v"]
-[ext_resource type="Texture2D" uid="uid://c5plst4s67dot" path="res://hl_flow_model/fotos/eindicker.png" id="2_njw0v"]
+[ext_resource type="Texture2D" uid="uid://dvxv6sgcx7nc0" path="res://zones/hillersleben/scripts/hl_flow_model/fotos/west.png" id="1_cgmy2"]
+[ext_resource type="Script" uid="uid://0pdeiee3huqx" path="res://zones/hillersleben/scripts/hl_flow_model/overview.gd" id="1_njw0v"]
+[ext_resource type="Texture2D" uid="uid://c5plst4s67dot" path="res://zones/hillersleben/scripts/hl_flow_model/fotos/eindicker.png" id="2_njw0v"]
 
-[node name="status_show" type="Control"]
+[node name="overview" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,10 +19,9 @@ script = ExtResource("1_njw0v")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = -56.0
-offset_top = -14.0
-offset_right = 163.0
-offset_bottom = 9.0
+offset_left = 4.0
+offset_right = 223.0
+offset_bottom = 23.0
 text = "Overview"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
