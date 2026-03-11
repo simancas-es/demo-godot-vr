@@ -26,7 +26,7 @@ func toggle(on : bool) -> void:
 		current_state = STATE.OFF
 		turned_off.emit()
 		_next_state = STATE.ON
-	if on:
+	elif on:
 		current_state = STATE.ON
 		turned_on.emit()
 		_next_state = STATE.OFF
