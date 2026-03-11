@@ -195,11 +195,82 @@ metadata/_custom_type_script = "uid://b78po4wueig00"
 
 [node name="Volumes" type="Node3D" parent="FlowSimulationLabels"]
 
-[node name="FlowSimulationVolumeLabel" parent="FlowSimulationLabels/Volumes" node_paths=PackedStringArray("flow_simulation_main") instance=ExtResource("3_5rld8")]
+[node name="ED" type="Node3D" parent="FlowSimulationLabels/Volumes"]
+
+[node name="FlowSimulationVolumeLabel" parent="FlowSimulationLabels/Volumes/ED" node_paths=PackedStringArray("flow_simulation_main") instance=ExtResource("3_5rld8")]
 transform = Transform3D(0.41553485, 0, -0.9095773, 0, 1, 0, 0.9095773, 0, 0.41553485, -22.90168, 50.45558, 2.4328036)
 title_name_en = "Voreindicker I"
 flow_simulation_container = 8
-flow_simulation_main = NodePath("../../../FlowSimulation")
+flow_simulation_main = NodePath("../../../../FlowSimulation")
+
+[node name="FlowSimulationVolumeLabel2" parent="FlowSimulationLabels/Volumes/ED" instance=ExtResource("3_5rld8")]
+transform = Transform3D(0.9111733, 0, 0.41202334, 0, 1, 0, -0.41202334, 0, 0.9111733, -4.324496, 50.13927, 1.2443225)
+
+[node name="FlowSimulationVolumeLabel3" parent="FlowSimulationLabels/Volumes/ED" instance=ExtResource("3_5rld8")]
+transform = Transform3D(0.8739165, 0, 0.48607612, 0, 1, 0, -0.48607612, 0, 0.8739165, -14.149677, 50.49138, -5.80049)
+
+[node name="FlowSimulationVolumeLabel4" parent="FlowSimulationLabels/Volumes/ED" instance=ExtResource("3_5rld8")]
+transform = Transform3D(0.82029164, 0, 0.5719455, 0, 1, 0, -0.5719455, 0, 0.82029164, -1.9235961, 50.23654, -11.613716)
+
+[node name="vol_psb" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(0.62641335, -0.20174713, 0.7529306, 0, 0.9659258, 0.25881904, -0.77949107, -0.1621277, 0.6050688, -52.51169, 52.136063, 21.553852)
+title_name_en = "Primary Clarifier"
+flow_simulation_container = 2
+
+[node name="vol_ff" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(-0.90974396, 0.29356933, -0.29356933, 0, 0.70710677, 0.7071067, 0.41516972, 0.6432861, -0.64328617, -47.778393, 52.01331, 22.917755)
+title_name_en = "Grit and Grease Trap"
+flow_simulation_container = 1
+
+[node name="vol_msb" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(-0.8823406, 0, -0.4706115, 0, 1, 0, 0.4706115, 0, -0.8823406, -49.416473, 52.15118, 38.539513)
+title_name_en = "Equalization Basin"
+flow_simulation_container = 18
+
+[node name="vol_kwpw" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(-0.6728189, 0.7398073, 2.9802322e-08, 0, -4.371139e-08, 1, 0.73980737, 0.6728189, 0, -56.369602, 50.535545, 36.850792)
+title_name_en = "Clarified Water PS"
+flow_simulation_container = 6
+
+[node name="vol_bb1" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(-0.9478018, 0, 0.31886, 0, 1, 0, -0.31886, 0, -0.9478018, -74.17081, 51.719334, 28.767414)
+title_name_en = "Aeration Basin I"
+flow_simulation_container = 13
+
+[node name="vol_bb2" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(0.47720477, 0, 0.8787921, 0, 1, 0, -0.8787921, 0, 0.47720477, -80.37061, 51.660217, 19.260107)
+title_name_en = "Aeration Basin II"
+flow_simulation_container = 14
+
+[node name="vol_fmds" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(0.70603234, 0.7081797, -1.839362e-08, 2.9802322e-08, 2.2351742e-08, 1, 0.7081796, -0.7060323, 1.4901161e-08, -69.442535, 50.702522, 25.313564)
+title_name_en = "Flocculant Tank"
+flow_simulation_container = 12
+
+[node name="vol_pspw" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(0.9852052, 0.1713789, 0, 7.491209e-09, -4.3064684e-08, 1, 0.1713789, -0.9852052, -4.371139e-08, -63.354458, 50.824802, 27.751738)
+title_name_en = "Primary Sludge PS"
+flow_simulation_container = 3
+
+[node name="vol_sspw" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(0.9967872, -0.08009452, 0, -3.501043e-09, -4.3570953e-08, 1, -0.08009452, -0.9967872, -4.371139e-08, -106.84991, 50.639473, 27.79809)
+title_name_en = "Floating sludge PS"
+flow_simulation_container = 4
+
+[node name="vol_nb2" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -111.42454, 50.86376, 30.191355)
+title_name_en = "Secondary Clarifier II"
+flow_simulation_container = 16
+
+[node name="vol_nb1" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(-0.9958177, 0, 0.09136261, 0, 1, 0, -0.09136261, 0, -0.9958177, -109.574036, 51.002518, 39.865463)
+title_name_en = "Secondary Clarifier I"
+flow_simulation_container = 15
+
+[node name="vol_ablauf" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+transform = Transform3D(0.6166787, 0.7775445, -0.12301186, 3.7252903e-08, 0.15626206, 0.9877156, 0.78721493, -0.60910314, 0.096363455, -96.80842, 49.92179, 54.799793)
+title_name_en = "Effluent Tank"
+flow_simulation_container = 17
 
 [node name="Pumps" type="Node3D" parent="FlowSimulationLabels"]
 
