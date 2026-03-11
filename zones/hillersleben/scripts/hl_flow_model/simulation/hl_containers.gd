@@ -1,6 +1,7 @@
 extends Node
 const Ref = preload("uid://b6alvcbiyby3g")
 
+
 class Rechen extends Node:
 	var sc = Ref.SimContainer.new()
 	func _init() -> void:
@@ -106,6 +107,31 @@ class MSB extends Node:
 var msb := MSB.new()
 
 
+enum ID {
+	RECHEN, FETTFANG,PSB, PSPW, SSPW, TWSWPW, KWPW, RLSPW,
+	VED1, VED2, VED3, NED1, FMDS, BB1, BB2, NB1, NB2, ABLAUF, MSB
+}
+var LIST : Dictionary[ID, Ref.SimContainer] = {
+	ID.RECHEN : rechen.sc,
+	ID.FETTFANG : fettfang.sc,
+	ID.PSB : psb.sc,
+	ID.PSPW : pspw.sc,
+	ID.SSPW : sspw.sc,
+	ID.TWSWPW : twswpw.sc,
+	ID.KWPW : kwpw.sc,
+	ID.RLSPW : rlspw.sc,
+	ID.VED1 : ed.ved1,
+	ID.VED2 : ed.ved2,
+	ID.VED3 : ed.ved3,
+	ID.NED1 : ed.ned1,
+	ID.FMDS : fmds.sc,
+	ID.BB1 : bb1.sc,
+	ID.BB2 : bb2.sc,
+	ID.NB1 : nb1.sc,
+	ID.NB2 : nb2.sc,
+	ID.ABLAUF : ablauf.sc,
+	ID.MSB : msb.sc,
+}
 
 #Bad but it works
 func _init() -> void:

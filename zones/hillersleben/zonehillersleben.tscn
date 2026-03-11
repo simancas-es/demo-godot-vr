@@ -1,8 +1,9 @@
-[gd_scene load_steps=65 format=3 uid="uid://bnbdtip3vptxc"]
+[gd_scene load_steps=66 format=3 uid="uid://bnbdtip3vptxc"]
 
 [ext_resource type="Script" uid="uid://b78po4wueig00" path="res://clases/zones/basezone.gd" id="1_37tqx"]
 [ext_resource type="PackedScene" uid="uid://d4i7huvosagj1" path="res://zones/hillersleben/scripts/hl_flow_model/main.tscn" id="2_0nlau"]
 [ext_resource type="PackedScene" uid="uid://bciyk2psrrnwj" path="res://assets/zones/hillersleben/models/Basisskala_referenz_boden.gltf" id="2_duhpb"]
+[ext_resource type="PackedScene" uid="uid://doyyrvn116gfv" path="res://models/labels/flow_simulation_volume_label.tscn" id="3_5rld8"]
 [ext_resource type="PackedScene" uid="uid://8k1q807gv3b8" path="res://models/van/van.tscn" id="3_xi370"]
 [ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="4_0nlau"]
 [ext_resource type="PackedScene" uid="uid://c7yhfipghxiyv" path="res://models/doors/basedoor2m.tscn" id="8_1khpx"]
@@ -189,11 +190,20 @@ metadata/_custom_type_script = "uid://b78po4wueig00"
 
 [node name="FlowSimulation" parent="." instance=ExtResource("2_0nlau")]
 
+[node name="FlowSimulationLabels" type="Node3D" parent="."]
+
+[node name="FlowSimulationVolumeLabel" parent="FlowSimulationLabels" node_paths=PackedStringArray("flow_simulation_main") instance=ExtResource("3_5rld8")]
+transform = Transform3D(0.41553485, 0, -0.9095773, 0, 1, 0, 0.9095773, 0, 0.41553485, -22.90168, 50.45558, 2.4328036)
+title_name_en = "Voreindicker I"
+flow_simulation_container = 8
+flow_simulation_main = NodePath("../../FlowSimulation")
+
 [node name="North" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2994995, 0, -45.07723)
 metadata/_edit_lock_ = true
 
 [node name="Basisskala_referenz_boden" parent="." instance=ExtResource("2_duhpb")]
+metadata/_edit_lock_ = true
 
 [node name="Boden" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -3.5762787e-07, 0.99999994, 0, -0.99999994, -3.5762787e-07, 0, 0, 0)
@@ -203,6 +213,7 @@ metadata/_edit_lock_ = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Boden"]
 shape = SubResource("ConcavePolygonShape3D_xi370")
+metadata/_edit_lock_ = true
 
 [node name="spawn" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.9022, 48.459286, -48.095055)
@@ -240,6 +251,7 @@ transform = Transform3D(0.024292529, 0, 0.99970436, 0, 1, 0, -0.99970436, 0, 0.0
 shape = SubResource("BoxShape3D_5rld8")
 
 [node name="Betriebsgebäude" type="Node3D" parent="."]
+metadata/_edit_lock_ = true
 
 [node name="Sandwasch-door" parent="Betriebsgebäude" instance=ExtResource("8_1khpx")]
 transform = Transform3D(-0.90377647, 0, -0.42800474, 0, 1, 0, 0.42800474, 0, -0.90377647, -30.477528, 48.64245, 12.921708)
@@ -409,6 +421,7 @@ mesh = SubResource("BoxMesh_duhpb")
 
 [node name="SimpleGeometry" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.258194, 45.288044, 24.39973)
+metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="SimpleGeometry"]
 collision_layer = 49152
