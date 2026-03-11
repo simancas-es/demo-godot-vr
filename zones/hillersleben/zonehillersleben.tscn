@@ -1,6 +1,7 @@
-[gd_scene load_steps=64 format=3 uid="uid://bnbdtip3vptxc"]
+[gd_scene load_steps=65 format=3 uid="uid://bnbdtip3vptxc"]
 
 [ext_resource type="Script" uid="uid://b78po4wueig00" path="res://clases/zones/basezone.gd" id="1_37tqx"]
+[ext_resource type="PackedScene" uid="uid://d4i7huvosagj1" path="res://zones/hillersleben/scripts/hl_flow_model/main.tscn" id="2_0nlau"]
 [ext_resource type="PackedScene" uid="uid://bciyk2psrrnwj" path="res://assets/zones/hillersleben/models/Basisskala_referenz_boden.gltf" id="2_duhpb"]
 [ext_resource type="PackedScene" uid="uid://8k1q807gv3b8" path="res://models/van/van.tscn" id="3_xi370"]
 [ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="4_0nlau"]
@@ -185,6 +186,8 @@ north_point = NodePath("North")
 starting_position = NodePath("spawn")
 starting_lookat = NodePath("lookat")
 metadata/_custom_type_script = "uid://b78po4wueig00"
+
+[node name="FlowSimulation" parent="." instance=ExtResource("2_0nlau")]
 
 [node name="North" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2994995, 0, -45.07723)

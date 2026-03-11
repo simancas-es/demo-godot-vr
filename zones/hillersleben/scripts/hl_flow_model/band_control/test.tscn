@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://db0iip8bwfjsy"]
+
+[ext_resource type="Script" uid="uid://dp5fpmqgegfkr" path="res://hl_flow_model/band_control/test.gd" id="1_lwjwv"]
+
+[node name="Test-BandControl" type="Node"]
+script = ExtResource("1_lwjwv")

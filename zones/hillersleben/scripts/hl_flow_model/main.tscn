@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4i7huvosagj1"]
+
+[ext_resource type="Script" uid="uid://novqlqgqjj6t" path="res://hl_flow_model/main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://pbnqh5y64xbq" path="res://hl_flow_model/overview.tscn" id="2_h2yge"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_0xm2m")
+overview = ExtResource("2_h2yge")

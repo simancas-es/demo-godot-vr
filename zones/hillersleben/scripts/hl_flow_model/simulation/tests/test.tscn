@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5idudyw7305t"]
+
+[ext_resource type="Script" uid="uid://0md7lejq2mm0" path="res://hl_flow_model/simulation/tests/test.gd" id="1_3qroh"]
+[ext_resource type="Script" uid="uid://bwr2uo7j6tybd" path="res://hl_flow_model/simulation/hl_simulation.gd" id="2_14fft"]
+[ext_resource type="PackedScene" uid="uid://duicid0vsrboo" path="res://hl_flow_model/pid/test.tscn" id="2_bvn7t"]
+[ext_resource type="PackedScene" uid="uid://db0iip8bwfjsy" path="res://hl_flow_model/band_control/test.tscn" id="3_xtxly"]
+
+[node name="Test" type="Node"]
+script = ExtResource("1_3qroh")
+
+[node name="Test-pid" parent="." instance=ExtResource("2_bvn7t")]
+
+[node name="Test-BandControl" parent="." instance=ExtResource("3_xtxly")]
+
+[node name="simulation" type="Node" parent="."]
+script = ExtResource("2_14fft")
