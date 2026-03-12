@@ -28,7 +28,7 @@ size = Vector3(0.1, 0.1, 0.1)
 script = ExtResource("1")
 
 [node name="SlidingDoorBody" type="RigidBody3D" parent="."]
-collision_layer = 16384
+collision_layer = 536870912
 collision_mask = 0
 mass = 50.0
 gravity_scale = 0.0
@@ -73,7 +73,7 @@ transform = Transform3D(-0.877363, -0.186569, -0.442069, -0.207997, 0.978129, 3.
 visible = false
 
 [node name="DoorHandleGrab" type="RigidBody3D" parent="SlidingDoorBody/DoorHandleOrigin" node_paths=PackedStringArray("pick_01", "pick_02", "pick_01_hand_right", "pick_01_hand_left", "pick_02_hand_right", "pick_02_hand_left")]
-collision_layer = 33554432
+collision_layer = 1073741824
 collision_mask = 0
 gravity_scale = 0.0
 sleeping = true
@@ -87,7 +87,6 @@ pick_01_hand_left = NodePath("../DoorHandleModel/Pick01/FHLeft")
 pick_02_hand_right = NodePath("../DoorHandleModel/Pick02/FHRight")
 pick_02_hand_left = NodePath("../DoorHandleModel/Pick02/FHLeft")
 picked_up_layer = 0
-picked_by_exclude = "beltsnap"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SlidingDoorBody/DoorHandleOrigin/DoorHandleGrab"]
 shape = SubResource("5")

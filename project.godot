@@ -266,11 +266,13 @@ locale/locale_filter_mode=0
 3d_physics/layer_28="Grappling Target"
 3d_physics/layer_29="Player Body"
 3d_physics/layer_30="XRDoors"
+3d_physics/layer_31="XRDoorsHandle"
 
 [physics]
 
 3d/physics_engine="Jolt Physics"
 3d/solver/solver_iterations=8
+common/enable_pause_aware_picking=true
 
 [rendering]
 
@@ -284,5 +286,4 @@ openxr/enabled=true
 openxr/default_action_map="uid://cv1tl7assnmqv"
 openxr/foveation_level=1
 openxr/foveation_dynamic=true
-openxr/submit_depth_buffer=true
 shaders/enabled=true

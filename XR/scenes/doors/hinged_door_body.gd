@@ -194,12 +194,12 @@ func _apply_average_motion():
 
 
 # Update the sliding-window average angular velocity of the door body
-func _update_average_velocity(time_delta: float, global_transform: Transform3D):
+func _update_average_velocity(time_delta: float, _global_transform: Transform3D):
 	# Calculate the angular delta
-	var angular_delta : Vector3 = (global_transform.basis * _avg_last_transform.basis.inverse()).get_euler()
+	var angular_delta : Vector3 = (_global_transform.basis * _avg_last_transform.basis.inverse()).get_euler()
 
 	# Update the last transform
-	_avg_last_transform = global_transform
+	_avg_last_transform = _global_transform
 
 	# Update the average lists
 	_avg_time_deltas.push_back(time_delta)

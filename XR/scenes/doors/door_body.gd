@@ -97,6 +97,7 @@ func _set_door_state(new_state) -> void:
 			_door_api._on_door_opened()
 	else:
 		# Door is open, set physics to MODE_RIGID for environmental effects
+		self.freeze_mode = RigidBody3D.FREEZE_MODE_KINEMATIC
 		self.freeze = false
 		_apply_average_motion()
 

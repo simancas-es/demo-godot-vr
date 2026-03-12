@@ -444,7 +444,7 @@ func _pick_up_object(target: Node3D) -> void:
 		_copy_collisions()
 
 		picked_up_object.request_highlight(self, false)
-		emit_signal("has_picked_up", picked_up_object)
+		has_picked_up.emit(picked_up_object)
 
 
 # Copy collision shapes on the held object to our collision hand (if applicable).

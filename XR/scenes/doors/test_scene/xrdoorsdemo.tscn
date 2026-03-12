@@ -64,8 +64,8 @@ ambient_light_energy = 3.05
 [node name="Demo" type="Node3D"]
 
 [node name="Ground" type="StaticBody3D" parent="."]
-collision_layer = 8421377
-collision_mask = 8421377
+collision_layer = 8421376
+collision_mask = 8421376
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -96,12 +96,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
 
 [node name="LeftDoor" parent="HingedDoors/Locked" instance=ExtResource("4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+door_minimum_angle = -90.0
+door_maximum_angle = 0.0
+handle_minimum_angle = 0.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
+close_force = 0.0
+friction = 0.1
+bounce = 0.25
+latch_on_close = true
 door_locked = true
 
 [node name="RightDoor" parent="HingedDoors/Locked" instance=ExtResource("4")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 2.38419e-07)
 door_minimum_angle = 0.0
 door_maximum_angle = 90.0
+handle_minimum_angle = 0.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
+close_force = 0.0
+friction = 0.1
+bounce = 0.25
+latch_on_close = true
 door_locked = true
 
 [node name="Sprite3D" type="Sprite3D" parent="HingedDoors/Locked"]
@@ -121,11 +139,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -2)
 
 [node name="LeftDoor" parent="HingedDoors/OutOnlyLatchOnClose" instance=ExtResource("4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+door_minimum_angle = -90.0
+door_maximum_angle = 0.0
+handle_minimum_angle = 0.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
+close_force = 0.0
+friction = 0.1
+bounce = 0.25
+latch_on_close = true
+door_locked = false
 
 [node name="RightDoor" parent="HingedDoors/OutOnlyLatchOnClose" instance=ExtResource("4")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 2.38419e-07)
 door_minimum_angle = 0.0
 door_maximum_angle = 90.0
+handle_minimum_angle = 0.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
+close_force = 0.0
+friction = 0.1
+bounce = 0.25
+latch_on_close = true
+door_locked = false
 
 [node name="Sprite3D2" type="Sprite3D" parent="HingedDoors/OutOnlyLatchOnClose"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
@@ -145,11 +183,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
 
 [node name="LeftDoor" parent="HingedDoors/BidirectionalLatchOnClose" instance=ExtResource("4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+door_minimum_angle = -90.0
 door_maximum_angle = 90.0
+handle_minimum_angle = 0.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
+close_force = 0.0
+friction = 0.1
+bounce = 0.25
+latch_on_close = true
+door_locked = false
 
 [node name="RightDoor" parent="HingedDoors/BidirectionalLatchOnClose" instance=ExtResource("4")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 2.38419e-07)
+door_minimum_angle = -90.0
 door_maximum_angle = 90.0
+handle_minimum_angle = 0.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
+close_force = 0.0
+friction = 0.1
+bounce = 0.25
+latch_on_close = true
+door_locked = false
 
 [node name="Sprite3D3" type="Sprite3D" parent="HingedDoors/BidirectionalLatchOnClose"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
@@ -169,15 +227,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
 
 [node name="LeftDoor" parent="HingedDoors/SelfClosingLatchOnClose" instance=ExtResource("4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2.132842)
+door_minimum_angle = -90.0
 door_maximum_angle = 90.0
 handle_minimum_angle = -70.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
 close_force = 1.0
+friction = 0.1
+bounce = 0.25
+latch_on_close = true
+door_locked = false
 
 [node name="RightDoor" parent="HingedDoors/SelfClosingLatchOnClose" instance=ExtResource("4")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, -2.1328416)
+door_minimum_angle = -90.0
 door_maximum_angle = 90.0
 handle_minimum_angle = -70.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
 close_force = 1.0
+friction = 0.1
+bounce = 0.25
+latch_on_close = true
+door_locked = false
 
 [node name="Sprite3D4" type="Sprite3D" parent="HingedDoors/SelfClosingLatchOnClose"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
@@ -197,13 +271,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
 
 [node name="LeftDoor" parent="HingedDoors/Bidirectional" instance=ExtResource("4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+door_minimum_angle = -90.0
 door_maximum_angle = 90.0
+handle_minimum_angle = 0.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
+close_force = 0.0
+friction = 0.1
+bounce = 0.25
 latch_on_close = false
+door_locked = false
 
 [node name="RightDoor" parent="HingedDoors/Bidirectional" instance=ExtResource("4")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 2.38419e-07)
+door_minimum_angle = -90.0
 door_maximum_angle = 90.0
+handle_minimum_angle = 0.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
+close_force = 0.0
+friction = 0.1
+bounce = 0.25
 latch_on_close = false
+door_locked = false
 
 [node name="Sprite3D5" type="Sprite3D" parent="HingedDoors/Bidirectional"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
@@ -222,17 +314,31 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -2)
 
 [node name="LeftDoor" parent="HingedDoors/SelfClosing" instance=ExtResource("4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0)
+door_minimum_angle = -90.0
 door_maximum_angle = 90.0
+handle_minimum_angle = 0.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
 close_force = 1.0
 friction = 0.3
+bounce = 0.25
 latch_on_close = false
+door_locked = false
 
 [node name="RightDoor" parent="HingedDoors/SelfClosing" instance=ExtResource("4")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1, 0, 2.38419e-07)
+door_minimum_angle = -90.0
 door_maximum_angle = 90.0
+handle_minimum_angle = 0.0
+handle_maximum_angle = 70.0
+handle_open_angle = 40.0
+latch_angle = 3.0
 close_force = 1.0
 friction = 0.3
+bounce = 0.25
 latch_on_close = false
+door_locked = false
 
 [node name="Sprite3D6" type="Sprite3D" parent="HingedDoors/SelfClosing"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

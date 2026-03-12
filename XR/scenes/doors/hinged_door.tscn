@@ -29,21 +29,10 @@ size = Vector3(0.1, 0.1, 0.1)
 
 [node name="HingedDoor" type="Node3D"]
 script = ExtResource("1")
-door_minimum_angle = null
-door_maximum_angle = null
-handle_minimum_angle = null
-handle_maximum_angle = null
-handle_open_angle = null
-latch_angle = null
-close_force = null
-friction = null
-bounce = null
-latch_on_close = null
-door_locked = null
 
 [node name="HingedDoorBody" type="RigidBody3D" parent="."]
-collision_layer = 16384
-collision_mask = 268435456
+collision_layer = 536870912
+collision_mask = 0
 mass = 50.0
 gravity_scale = 0.0
 can_sleep = false
@@ -52,6 +41,7 @@ script = ExtResource("3")
 [node name="DoorBodyShape" type="CollisionShape3D" parent="HingedDoorBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, 0)
 shape = SubResource("1")
+debug_color = Color(0, 0.6392157, 0.34901962, 1)
 
 [node name="DoorBodyMesh" type="MeshInstance3D" parent="HingedDoorBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, 0)
@@ -91,7 +81,7 @@ transform = Transform3D(0.244126, 0.968114, 0.0561875, 0.969646, -0.244512, 0, 0
 visible = false
 
 [node name="DoorHandleGrab" type="RigidBody3D" parent="HingedDoorBody/DoorHandleOrigin" node_paths=PackedStringArray("pick_01", "pick_02", "pick_01_hand_right", "pick_01_hand_left", "pick_02_hand_right", "pick_02_hand_left")]
-collision_layer = 33554432
+collision_layer = 1073741824
 collision_mask = 0
 mass = 0.001
 gravity_scale = 0.0
@@ -99,18 +89,20 @@ sleeping = true
 lock_rotation = true
 freeze = true
 script = ExtResource("2")
+snap_distance = 0.6
 pick_01 = NodePath("../DoorHandleModel/Handle1")
 pick_02 = NodePath("../DoorHandleModel/Handle2")
 pick_01_hand_right = NodePath("../DoorHandleModel/Handle1/FHRight")
 pick_01_hand_left = NodePath("../DoorHandleModel/Handle1/FHLeft")
 pick_02_hand_right = NodePath("../DoorHandleModel/Handle2/FHRight")
 pick_02_hand_left = NodePath("../DoorHandleModel/Handle2/FHLeft")
-picked_up_layer = 0
+picked_up_layer = 2147483648
 picked_by_exclude = "beltsnap"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleGrab"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0438764, 0.0958737, -0.0109467)
 shape = SubResource("BoxShape3D_ogaye")
+debug_color = Color(1, 0.25882354, 0.4, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleGrab"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0977987, 0.0287403)
