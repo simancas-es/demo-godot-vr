@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuwst8kcvigrx"]
+
+[ext_resource type="Script" uid="uid://dlh7fi6vygxk4" path="res://zones/hillersleben/scripts/utils/steal_meshinstance.gd" id="1_8dhnb"]
+
+[node name="steal_meshinstance" type="Node"]
+script = ExtResource("1_8dhnb")

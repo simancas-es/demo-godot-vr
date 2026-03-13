@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://1gnljh2uer8"]
+[gd_scene load_steps=22 format=3 uid="uid://1gnljh2uer8"]
 
 [ext_resource type="Script" uid="uid://ds6ipr7ox8br3" path="res://globals/root.gd" id="1_6d14a"]
 [ext_resource type="Script" uid="uid://d31trbvb6igxn" path="res://menus/fsm/statemachinemenus.gd" id="2_6hyip"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://be108fdsaiduh" path="res://menus/fsm/menustates/stateloadingscene.gd" id="6_hm43d"]
 [ext_resource type="Script" uid="uid://d1xobjt0rfbe1" path="res://menus/ui_canvaslayer.gd" id="7_bm7q0"]
 [ext_resource type="Script" uid="uid://q20rn3ctmrhp" path="res://menus/fsm/menustates/stateselectenv.gd" id="7_cwfe2"]
+[ext_resource type="PackedScene" uid="uid://dc3sv4o68rv51" path="res://XR/zones_xr/zone_xr_door_demos.tscn" id="7_vuvmw"]
 [ext_resource type="Script" uid="uid://y08oej2rtpdq" path="res://menus/fsm/menustates/state_menu_settings.gd" id="8_cwfe2"]
 [ext_resource type="PackedScene" uid="uid://bb17hv1ufo6l0" path="res://menus/environmentselector/environmentselector.tscn" id="9_5uipj"]
 [ext_resource type="Script" uid="uid://b54m2yj3786pt" path="res://menus/fsm/menustates/state_menu_inventory.gd" id="9_n1s3a"]
@@ -70,6 +71,7 @@ metadata/_custom_type_script = "uid://8v151neia71f"
 
 [node name="InVR" type="Node" parent="StateMachine"]
 script = ExtResource("6_bm7q0")
+intro_map = ExtResource("7_vuvmw")
 metadata/_custom_type_script = "uid://8v151neia71f"
 
 [node name="Loading" type="Node" parent="StateMachine"]
