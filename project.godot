@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="VirtualTour"
-config/version="0.2.0"
+config/version="0.2.2"
 run/main_scene="uid://1gnljh2uer8"
 config/features=PackedStringArray("4.5", "Mobile")
 boot_splash/bg_color=Color(0.732139, 0.76047, 0.849627, 1)
@@ -271,6 +271,7 @@ locale/locale_filter_mode=0
 [physics]
 
 3d/physics_engine="Jolt Physics"
+jolt_physics_3d/joints/world_node=1
 3d/solver/solver_iterations=8
 common/enable_pause_aware_picking=true
 
