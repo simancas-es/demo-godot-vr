@@ -1,13 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://cef6giv3yfb8v"]
+[gd_scene load_steps=16 format=3 uid="uid://cef6giv3yfb8v"]
 
 [ext_resource type="Script" uid="uid://chcrq4anji11l" path="res://XR/scenes/doors/hinged_door_api.gd" id="1"]
 [ext_resource type="Script" uid="uid://bijfwo0eovvp7" path="res://XR/scenes/doors/door_handle_grab.gd" id="2"]
-[ext_resource type="Script" uid="uid://cqv50x213ws0c" path="res://XR/scenes/doors/hinged_door_body.gd" id="3"]
+[ext_resource type="Script" uid="uid://jc0js3dq6nue" path="res://XR/scenes/doors/hinged_door_body.gd" id="2_3impf"]
 [ext_resource type="PackedScene" uid="uid://ddym7kilhtyq2" path="res://XR/scenes/doors/fixed_hand_right.tscn" id="3_fkh8a"]
 [ext_resource type="PackedScene" uid="uid://bok2ywfo8jipb" path="res://XR/scenes/doors/fixed_hand_left.tscn" id="4_nysu4"]
-[ext_resource type="AudioStream" uid="uid://dhl4q7uuxofen" path="res://assets/audio/freesound.org/12738__leady__door-handle-turn.mp3" id="5"]
+[ext_resource type="AudioStream" uid="uid://c856lopbs7enk" path="res://assets/audio/freesound.org/12738__leady__door-handle-turn.mp3" id="5"]
 [ext_resource type="Script" uid="uid://c3c4tr2cpwvtn" path="res://XR/scenes/doors/door_sounds.gd" id="6"]
-[ext_resource type="AudioStream" uid="uid://dwfqxn4ysxa7c" path="res://assets/audio/freesound.org/431118__inspectorj__door-front-closing-a.mp3" id="7"]
+[ext_resource type="Script" uid="uid://ddqprfdnejyt4" path="res://XR/scenes/doors/debug_label.gd" id="6_dy50l"]
+[ext_resource type="AudioStream" uid="uid://bp4oxgcnwsdt7" path="res://assets/audio/freesound.org/431118__inspectorj__door-front-closing-a.mp3" id="7"]
 
 [sub_resource type="BoxShape3D" id="1"]
 size = Vector3(1, 2.4, 0.1)
@@ -30,13 +31,18 @@ size = Vector3(0.1, 0.1, 0.1)
 [node name="HingedDoor" type="Node3D"]
 script = ExtResource("1")
 
-[node name="HingedDoorBody" type="RigidBody3D" parent="."]
+[node name="HingedDoorBody" type="RigidBody3D" parent="." node_paths=PackedStringArray("DoorHandleGrab", "DoorHandleOrigin", "Hinge", "DoorHandleModel")]
 collision_layer = 536870912
 collision_mask = 0
 mass = 50.0
 gravity_scale = 0.0
 can_sleep = false
-script = ExtResource("3")
+script = ExtResource("2_3impf")
+DoorHandleGrab = NodePath("DoorHandleOrigin/DoorHandleGrab")
+DoorHandleOrigin = NodePath("DoorHandleOrigin")
+Hinge = NodePath("../HingeJoint3D")
+DoorHandleModel = NodePath("DoorHandleOrigin/DoorHandleModel")
+handle_turn_threshold_deg = 60.0
 
 [node name="DoorBodyShape" type="CollisionShape3D" parent="HingedDoorBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, 0)
@@ -109,9 +115,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0977987, 0.0287403)
 visible = false
 mesh = SubResource("BoxMesh_ogaye")
 
-[node name="PinJoint3D" type="PinJoint3D" parent="HingedDoorBody/DoorHandleOrigin"]
-node_a = NodePath("../DoorHandleGrab")
-node_b = NodePath("../..")
+[node name="Label3D" type="Label3D" parent="HingedDoorBody"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02832377, 1.1575801, 5.9604645e-08)
+no_depth_test = true
+text = "Current angle: xx.x
+Target angle: xx.x"
+font_size = 20
+horizontal_alignment = 0
+script = ExtResource("6_dy50l")
+debug = true
 
 [node name="DoorSounds" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -122,6 +134,14 @@ stream = ExtResource("5")
 
 [node name="DoorClosed" type="AudioStreamPlayer3D" parent="DoorSounds"]
 stream = ExtResource("7")
+
+[node name="HingeJoint3D" type="HingeJoint3D" parent="."]
+transform = Transform3D(-4.3711385e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 0, 0, 0, 0)
+node_a = NodePath("../HingedDoorBody")
+node_b = NodePath("../StaticBody3D")
+angular_limit/enable = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [connection signal="door_closed" from="." to="DoorSounds" method="_on_door_closed"]
 [connection signal="door_opened" from="." to="DoorSounds" method="_on_door_opened"]

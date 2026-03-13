@@ -1,5 +1,5 @@
 extends XR_DOORS_UID_CLASSREF.DoorAPI
-
+const XR_DOORS_UID_CLASSREF = preload("uid://dbtdc5f1qkd3m")
 
 ##
 ## Hinged Door API script
@@ -10,10 +10,10 @@ extends XR_DOORS_UID_CLASSREF.DoorAPI
 ##
 
 
-## Minimum angle the door can swing to (0 is closed)
+## Minimum angle the door can swing to (0 is closed). Towards the front, hinge left, handle right
 @export var door_minimum_angle := -90.0 # (float, -180.0, 180.0, 1.0)
 
-## Maximum angle the door can swing to (0 is closed)
+## Maximum angle the door can swing to (0 is closed). Towards the front, hinge left, handle right
 @export var door_maximum_angle := 0.0 # (float, -180.0, 180.0, 1.0)
 
 ## Minium angle the door handle can swing to (0 is flat)

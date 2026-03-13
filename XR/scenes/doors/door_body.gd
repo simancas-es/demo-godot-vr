@@ -1,4 +1,5 @@
 extends RigidBody3D
+const XR_DOORS_UID_CLASSREF = preload("uid://dbtdc5f1qkd3m")
 const DoorAPI = XR_DOORS_UID_CLASSREF.DoorAPI
 const DoorHandleGrab = XR_DOORS_UID_CLASSREF.DoorHandleGrab
 ##

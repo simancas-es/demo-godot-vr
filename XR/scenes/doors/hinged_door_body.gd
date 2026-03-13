@@ -1,235 +1,217 @@
-extends XR_DOORS_UID_CLASSREF.DoorBody
-
-
-
+extends RigidBody3D
+const XR_DOORS_UID_CLASSREF = preload("uid://dbtdc5f1qkd3m")
 ##
-## Hinged Door Body script
+## VR Hinged Door Body
 ##
-## @desc:
-##     This script manages the hinged door body and performs complex physics
-##     operations to handle door velocity, limits, and user control.
+## Door receives torque depending on how the grabbed handle moves.
+## HingeJoint3D constrains the rotation axis.
 ##
 
+@onready var parent : XR_DOORS_UID_CLASSREF.DoorHingedAPI = get_parent()
 
-# Horizontal vector (multiply by this to get only the horizontal components
-const HORIZONTAL := Vector3(1.0, 0.0, 1.0)
+@export var DoorHandleGrab: XRToolsPickable
+@export var DoorHandleOrigin: Node3D
+@export var Hinge: HingeJoint3D #The door rotates on the XY plane of this joint
+@export var DoorHandleModel : Node3D #A handle that will rotate with code
 
-# Is the handle twisted to an open position
-var _handle_twisted := false
+@export var requires_handle_turn: bool = true
+@export var handle_turn_threshold_deg: float = 90.0
+@export var latch_on_close: bool = true
 
-# Angle of the door handle
-var _handle_angle := 0.0
+@export var torque_multiplier: float = 40.0
+@export var friction: float = 0.2
+@export var close_force: float = 4.0
 
-# Angle of the door
-var _door_angle := 0.0
-var _closed_direction: Vector3
+@export var velocity_average_samples: int = 5
 
-# Velocity of the door
-var _door_velocity := 0.0
+var _handle_minimum_angle : float = 0.0
+var _handle_maximum_angle : float = 0.0
 
-# Velocity averaging fields
-const averages := 5
-var _avg_time_deltas := Array()
-var _avg_angle_deltas := Array()
-var _avg_last_transform := Transform3D.IDENTITY
-var _average_velocity := 0.0
+var _handle_grabbed := false
+var _latched := true
 
-# Node references
-@onready var _parent : XR_DOORS_UID_CLASSREF.DoorHingedAPI = get_parent()
-@onready var _handle_model : Node3D = get_node_or_null("DoorHandleOrigin/DoorHandleModel")
+var _handle_base_basis: Basis
+var _handle_base_position : Vector3 # Position of the handle when door is closed
+var _handle_rotation_rad : float
+
+var _body_a : CollisionObject3D
+var _body_b : CollisionObject3D
+
+var _deadzone = deg_to_rad(1.0)  # Dont move door when hand in the deadzone
+
+var _initial_transform : Transform3D
+var _closed_vec : Vector3
+var _current_vec : Vector3
+var _current_angle : float
+var _target_angle : float
+
 
 
 func _ready():
-	super()
-	# If no handle model then just assume the handle is twisted
-	if !_handle_model:
-		_handle_twisted = true
-		set_process(false)
+	_handle_base_basis = DoorHandleOrigin.global_transform.basis
+	_handle_base_position = DoorHandleOrigin.global_transform.origin	
+
+
+	DoorHandleGrab.picked_up.connect(_on_handle_grabbed)
+	DoorHandleGrab.dropped.connect(_on_handle_released)
 	
-	#For the angle of opening
-	# Closed direction: vector from pivot to handle at start
-	var handle_start_dir = (_handle_origin.global_transform.origin - _parent.global_transform.origin) * HORIZONTAL
-	_closed_direction = handle_start_dir.normalized()
+	_body_a = Hinge.get_node(Hinge.get_node_a())
+	_body_b = Hinge.get_node(Hinge.get_node_b())
 	
-	# Set the initial door state
-	_door_angle = _measure_door_angle()
-	if !_parent.latch_on_close or _handle_twisted or abs(_door_angle) > deg_to_rad(_parent.latch_angle):
-		_set_door_state(DoorState.OPEN)
-	else:
-		_set_door_state(DoorState.LATCHED)
+	_closed_vec = Hinge.global_transform.basis.y.normalized()
+	_initial_transform = global_transform
+	
+	setup()
 
+func setup() -> void:
+	#Upper Limit of Hinge: XY Plane -> directon towards -Y.
+	#So 45 Upper lets the door front (towards local +z, handle towards local +x) to half open.
+	Hinge.set_param(HingeJoint3D.PARAM_LIMIT_UPPER, deg_to_rad(parent.door_maximum_angle))
+	Hinge.set_param(HingeJoint3D.PARAM_LIMIT_LOWER, deg_to_rad(parent.door_minimum_angle))
+	_handle_minimum_angle = deg_to_rad(parent.handle_minimum_angle)
+	_handle_maximum_angle = deg_to_rad(parent.handle_maximum_angle)
+	handle_turn_threshold_deg = parent.latch_angle
+	
+	pass
+	
+func reset_door():
+	freeze = true
+	global_transform = _initial_transform
+	linear_velocity = Vector3.ZERO
+	angular_velocity = Vector3.ZERO
+	freeze = false
 
-# Process door handle mechanics on each frame
-func _process(_delta):
-	# Skip if no handle model
-	if !_handle_model:
-		return
-
-	# Measure the door handle angle and whether we consider it twisted to open
-	var new_angle := 0.0
-	var new_can_open := false
+func _physics_process(delta):
+	if _latched: angular_velocity.y = 0.0
+	
+	_current_vec = project_point_to_hinge_xy(Hinge, DoorHandleOrigin.global_transform.origin)
+	_current_angle = get_signed_hinge_angle(Hinge, _current_vec, _closed_vec)
+	
 	if _handle_grabbed:
-		# Measure the handle twist angle in relationship to the door
-		var right : Vector3 = _handle_origin.global_transform.basis.inverse() * (
-			_handle_grab.global_transform.basis * Vector3.RIGHT
-		)
-		new_angle = Vector3.RIGHT.signed_angle_to(right, Vector3.BACK)
+		# Handle latch logic
+		if requires_handle_turn:
+			_handle_rotation_rad = compute_handle_rotation()
+			DoorHandleModel.rotation.z = clampf(_handle_rotation_rad, _handle_minimum_angle, _handle_maximum_angle)
+			if not (parent.door_locked) and _latched and abs(rad_to_deg(_handle_rotation_rad)) >= handle_turn_threshold_deg:
+				unlatch_door()
+		else:
+			_latched = false
 
-		# Clamp the angle to the permitted range
-		new_angle = clamp(new_angle, deg_to_rad(_parent.handle_minimum_angle), deg_to_rad(_parent.handle_maximum_angle))
+		if not _latched:
+			# Current vector from hinge to grabbed handle, projected onto hinge plane
+			_target_angle = compute_target_door_angle()
+			# Angle error for control
+			var angle_error := _current_angle - _target_angle
+			# Deadzone: stop if very close
+			if abs(angle_error) < _deadzone:
+				angular_velocity.y = 0
+				return
 
-		# Detect if the door handle has been twisted to an open position
-		if abs(new_angle) > deg_to_rad(_parent.handle_open_angle):
-			new_can_open = true
-		_can_open_door = new_can_open
-		
-		# Detect turning the handle to open the door and update the state information 
-		if (_door_state != DoorState.GRABBED) and (not _parent.door_locked) and _can_open_door:
-			_set_door_state(DoorState.GRABBED)
-		
-	# Mmove the door handle model if necessary
-	if _handle_angle != new_angle:
-		_handle_angle = new_angle
-		_handle_model.transform.basis = Basis(Vector3.BACK, new_angle)
+			# Desired angular velocity proportional to angle error
+			const max_angular_speed := 3.0  # rad/s, tune for responsiveness
+			var desired_angular_velocity : float = clamp(angle_error * 5.0, -max_angular_speed, max_angular_speed)
 
-	
+			# Smoothly interpolate angular velocity for stability
+			angular_velocity.y = lerp(angular_velocity.y, desired_angular_velocity, 0.6)
 
+	elif not _latched:
+		# Auto-close when not grabbed
+		_apply_auto_close(delta)
+		if parent.latch_on_close and (abs(_current_angle) < 0.02):
+			latch_door()
+			reset_door()
 
-# Perform the physics processing on the door body
-func _integrate_forces(state):
-	# Get the current door angle and velocity
-	_door_angle = _measure_door_angle()
-	_door_velocity = state.angular_velocity.y
-
-	
-	# Check if the player has grabbed the door
-	if _door_state == DoorState.GRABBED:
-		# Update the kinematic angular velocity
-		_update_average_velocity(state.step, state.transform)
-		_door_velocity = _average_velocity
-
-		# Get the handle grab position in the parent door space
-		var handle_grab_position : Vector3 = (_handle_grab.global_transform.origin) * _parent.global_transform * HORIZONTAL
-		_door_angle = Vector3.RIGHT.signed_angle_to(handle_grab_position, Vector3.UP)
-
-	# Clamp the door angle - also affects velocity when hitting limits
-	var max_angle_rad = deg_to_rad(_parent.door_maximum_angle)
-	var min_angle_rad = deg_to_rad(_parent.door_minimum_angle)
-
-	if _door_angle > max_angle_rad:
-		_door_angle = max_angle_rad
-		if _door_velocity > 0.0:
-			_door_velocity *= -_parent.bounce
-	elif _door_angle < min_angle_rad:
-		_door_angle = min_angle_rad
-		if _door_velocity < 0.0:
-			_door_velocity *= -_parent.bounce
-
-	# Handle auto-latching
-	if _door_state == DoorState.OPEN and _parent.latch_on_close:
-		if abs(_door_angle) < deg_to_rad(_parent.latch_angle):
-			call_deferred("_latch_door")
-
-	# Apply door close-force and friction terms
-	_door_velocity -= _door_angle * _parent.close_force * state.step
-	_door_velocity *= 1.0 - _parent.friction * state.step
-	
-
-	# Set the door body velocities
-	state.linear_velocity = Vector3.ZERO
-	state.angular_velocity = Vector3(0.0, _door_velocity, 0.0)
-	
-	#Removing this line creates an interesting floating effect.
-	# Set the door body transform
-	state.transform = _parent.global_transform * Transform3D(Basis(Vector3.UP, _door_angle), _door_origin)
-
-
-# Called when the user grabs the door handle
-func _on_handle_grab_picked_up(_pickable):
-	# Indicate the door is grabbed
+func _on_handle_grabbed(_pickable):
 	_handle_grabbed = true
 
-	# If the door is OPEN then transition to GRABBED
-	if _door_state == DoorState.OPEN:
-		_set_door_state(DoorState.GRABBED)
 
-	# Report the door grabbed (emits public signal)
-	_parent._on_door_grabbed()
-
-func _on_handle_grab_dropped(_pickable):
-	# Indicate the handle is not grabbed
+func _on_handle_released(_pickable):
 	_handle_grabbed = false
 
-	# If the door is grabbed then release it
-	if _door_state == DoorState.GRABBED:
-		_set_door_state(DoorState.OPEN)
-
-	# Report the door released (emits public signal)
-	_parent._on_door_released()
-
-# Measure the angle of the door body (in relation to the parent door)
-func _measure_door_angle() -> float:
-	var door_origin = _parent.global_transform.origin
-	var handle_origin = _handle_origin.global_transform.origin
-	# Current handle direction relative to pivot
-	var handle_dir = (handle_origin - door_origin) * HORIZONTAL
-	handle_dir = handle_dir.normalized()
-	# Signed angle around Y axis from closed
-	var sig_angle = _closed_direction.signed_angle_to(handle_dir, Vector3.UP)
-
-	return sig_angle
-
-
-# Clear the motion averager
-func _clear_motion_averager():
-	_avg_last_transform = global_transform
-	_avg_time_deltas.clear()
-	_avg_angle_deltas.clear()
-	_average_velocity = 0.0
-
-
-# Apply the average motion
-func _apply_average_motion():
-	angular_velocity = Vector3(0.0, _average_velocity, 0.0)
-
-
-# Update the sliding-window average angular velocity of the door body
-func _update_average_velocity(time_delta: float, _global_transform: Transform3D):
-	# Calculate the angular delta
-	var angular_delta : Vector3 = (_global_transform.basis * _avg_last_transform.basis.inverse()).get_euler()
-
-	# Update the last transform
-	_avg_last_transform = _global_transform
-
-	# Update the average lists
-	_avg_time_deltas.push_back(time_delta)
-	_avg_angle_deltas.push_back(angular_delta.y)
-	if _avg_time_deltas.size() > averages:
-		_avg_time_deltas.pop_front()
-		_avg_angle_deltas.pop_front()
-
-	# Sum the times
-	var total_time := 0.0
-	for dt in _avg_time_deltas:
-		total_time += dt
-
-	# Sum the angles
-	var total_angle := 0.0
-	for dd in _avg_angle_deltas:
-		total_angle += dd
-
-	# Update the average angular velocity
-	_average_velocity = total_angle / total_time
-
-
-func _latch_door():
-	# Set the door state to latched (static)
-	_set_door_state(DoorState.LATCHED)
+func latch_door() -> void:
+	if not _latched:
+		parent._on_door_closed()
+		_latched = true
+		angular_velocity.y = 0.0
+	pass
 	
-	# Set the door to closed
-	_door_angle = 0.0
-	_door_velocity = 0.0
-	transform = Transform3D(Basis.IDENTITY, _door_origin)
+func unlatch_door() -> void:
+	if _latched:
+		parent._on_door_opened()
+		_latched = false
+	pass
 
-	# Report the door closed (emits public signal)
-	_parent._on_door_closed()
+func compute_target_door_angle() -> float:
+	# Get the handle vector in hinge plane
+	var t_vec = project_point_to_hinge_xy(Hinge, DoorHandleGrab.global_transform.origin)
+	var t_angle = get_signed_hinge_angle(Hinge, t_vec, _closed_vec)
+	return t_angle
+
+
+func compute_handle_rotation() -> float:
+	"""
+	Returns rotation of the grabbed handle (DoorHandleGrab) around the local Z axis
+	of the DoorHandleOrigin, scaled by how aligned the grabber's Z is with the handle Z.
+	"""
+	
+	 # Local Z axis of the handle
+	var handle_z := DoorHandleOrigin.global_transform.basis.z.normalized()
+	 # Local Z axis of the grabber cube
+	var grab_z := DoorHandleGrab.global_transform.basis.z.normalized()
+	 # Alignment factor: dot product (1 = perfectly aligned, 0 = perpendicular)
+	var alignment : float = clamp(handle_z.dot(grab_z), 0.0, 1.0)
+	 # Relative rotation from handle to grabber
+	var relative_basis := DoorHandleGrab.global_transform.basis.inverse() * DoorHandleOrigin.global_transform.basis
+	 # Project the rotation around handle Z
+	 # Formula: angle = atan2( Y_proj, X_proj ) in the plane perpendicular to Z
+	 # Extract X and Y axes of grabber in handle space
+	var x_axis := relative_basis.x
+	var y_axis := relative_basis.y
+	 # Compute rotation around Z in radians
+	var angle := atan2(y_axis.dot(Vector3.RIGHT), x_axis.dot(Vector3.RIGHT))
+	 # Scale by alignment so misaligned grabs contribute less
+	return angle * alignment
+
+
+
+static func get_hinge_angle(hinge: HingeJoint3D, current_vec: Vector3, closed_vec: Vector3) -> float:
+	var hinge_axis := hinge.global_transform.basis.y.normalized() #y axis is the horizontal on the floor for the door plane
+	return closed_vec.signed_angle_to(current_vec, hinge_axis)
+	
+	
+func _apply_auto_close(delta):
+	var angle_error := _current_angle
+	var hinge_axis := Hinge.global_transform.basis.z.normalized()
+	#Summing some torque to make it faster
+	var torque : float = -(_current_angle + (sign(_current_angle)*0.7)) * (close_force / mass)
+
+	apply_torque_impulse(hinge_axis * torque * delta)
+	#angular_velocity *= (1.0 - friction * delta)
+	
+	
+static func project_point_to_hinge_xy(hinge: HingeJoint3D, point: Vector3) -> Vector3:
+	"""
+	Projects a 3D world-space point onto the hinge's local XY plane and normalizes it.
+	
+	hinge: the HingeJoint3D whose XY plane we project onto
+	point: world-space point to project
+	returns: normalized vector from hinge origin to projected point in world space
+	"""
+	# Hinge origin and axes
+	var hinge_origin := hinge.global_transform.origin
+	var hinge_basis := hinge.global_transform.basis
+	# Vector from hinge to point
+	var vec := point - hinge_origin
+	# Hinge Z axis = normal of the hinge XY plane
+	var hinge_normal := hinge_basis.z.normalized()  # local Z axis is perpendicular to XY plane
+	# Project vector onto XY plane (remove component along hinge Z axis)
+	vec -= vec.dot(hinge_normal) * hinge_normal
+	vec = vec.normalized()
+	return vec
+	
+static func get_signed_hinge_angle(hinge: HingeJoint3D, current_vec: Vector3, reference_vec: Vector3) -> float:
+	"""
+	Returns the signed angle in radians between reference_vec and current_vec around the hinge axis.
+	"""
+	var hinge_axis := hinge.global_transform.basis.z.normalized()
+	return reference_vec.signed_angle_to(current_vec, hinge_axis)

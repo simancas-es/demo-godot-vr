@@ -1,5 +1,5 @@
 extends Node3D
-
+const XR_DOORS_UID_CLASSREF = preload("uid://dbtdc5f1qkd3m")
 
 ##
 ## Door API script
@@ -29,8 +29,6 @@ signal door_closed(door)
 ## Door friction
 @export var friction := 0.1 # (float, 0.0, 10.0, 0.1)
 
-## Door bounce-factor at end-stops
-@export var bounce := 0.25 # (float, 0.0, 1.0, 0.01)
 
 ## Flag to set the door to latch when closed
 @export var latch_on_close := true

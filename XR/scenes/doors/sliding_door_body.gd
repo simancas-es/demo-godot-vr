@@ -1,5 +1,5 @@
 extends XR_DOORS_UID_CLASSREF.DoorBody
-
+const XR_DOORS_UID_CLASSREF = preload("uid://dbtdc5f1qkd3m")
 ##
 ## Hinged Door Body script
 ##
