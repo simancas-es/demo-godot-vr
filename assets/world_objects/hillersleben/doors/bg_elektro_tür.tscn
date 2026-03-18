@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=4 uid="uid://0rgup1huwr3e"]
+
+[ext_resource type="Texture2D" uid="uid://br40el1qv36k6" path="res://assets/zones/hillersleben/models/Referenz/Tuer-Elektroanschlussraum.jpg" id="1_26jmm"]
+[ext_resource type="Texture2D" uid="uid://c0d7u3tm72ir5" path="res://assets/zones/hillersleben/models/Referenz/Roughness-05.png.png" id="2_8qlmd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1aips"]
+resource_name = "Lueftungsschacht"
+cull_mode = 2
+albedo_texture = ExtResource("1_26jmm")
+metallic_texture = ExtResource("2_8qlmd")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_8qlmd")
+roughness_texture_channel = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_3hruv"]
+_surfaces = [{
+"aabb": AABB(-0.03196907, 0, -0.6689205, 1.3386688, 2.7519608, 0.7367096),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "Lueftungsschacht",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AABwvAAA6DP////8AAP////8cLwAAOgwAAP//AAAAAP//4tAAAMTzAAAAAAAAxPP//wAAAAAAAAAA4tAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_28enn"]
+resource_name = "Referenz_Cube_024"
+_surfaces = [{
+"aabb": AABB(-0.03196907, 0, -0.6689205, 1.3386688, 2.7519608, 0.7367096),
+"attribute_data": PackedByteArray("Ebm7+up/jYURuY2F6n+7+mD6/////7rC/////2D6usIi+TX6QcAnhSL5J4VBwDX6avo8x83+wozN/jzHavrCjP/7A+Ki//yqrP/R4fX7L6sV+g2E0oHggBX64IDSgQ2E"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_1aips"),
+"name": "Lueftungsschacht",
+"primitive": 3,
+"uv_scale": Vector4(1.9971341, 1.984537, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("//8AABwv85E6DP/////zkf////8cL/OROgwAAP//85E6DAAA///YywAA///i0NjLOgz/////2MsAAAAA4tDYywAAAADi0AvuxPP//wAAC+4AAP//4tAL7sTzAAAAAAvuxPMAAAAAWuD/////HC9a4MTz//8AAFrg//8AABwvWuA6DAAA//8/4cTzAAAAAD/hAAAAAOLQP+H//wAAHC8/4QAA///i0Frz/////xwvWvM6DP////9a88Tz//8AAFrz/38AAP9/AAD/fwAA/38AADbcNtw23DbcNtw23DbcNtz/f////3////9/////f///lzCXMJcwlzCXMJcwlzCXMBBi904QYvdOEGL3ThBi907jjI2544yNueOMjbnjjI25")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_3hruv")
+
+[node name="bg_elektro_tür" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_28enn")
+skeleton = NodePath("")

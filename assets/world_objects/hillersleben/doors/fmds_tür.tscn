@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://be80en2v8wupl"]
+
+[ext_resource type="Texture2D" uid="uid://5k3i61cucfx6" path="res://assets/zones/hillersleben/models/Referenz/Tuer-Faellmitteldosierstation.jpg.jpg" id="1_q1cps"]
+[ext_resource type="Texture2D" uid="uid://c8s05kuirbsse" path="res://assets/zones/hillersleben/models/Referenz/Roughness-05.png" id="2_y2rip"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eyc7d"]
+resource_name = "tuer-faellmitteldosierstation.002"
+cull_mode = 2
+albedo_texture = ExtResource("1_q1cps")
+metallic_texture = ExtResource("2_y2rip")
+metallic_texture_channel = 2
+roughness = 0.5
+roughness_texture = ExtResource("2_y2rip")
+roughness_texture_channel = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_u0uck"]
+_surfaces = [{
+"aabb": AABB(-0.94018555, 0, -0.6072197, 0.94018555, 2.3517609, 0.6072197),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "tuer-faellmitteldosierstation.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_j8x4m"]
+resource_name = "Referenz_Plane_046"
+_surfaces = [{
+"aabb": AABB(-0.94018555, 0, -0.6072197, 0.94018555, 2.3517609, 0.6072197),
+"attribute_data": PackedByteArray(131, 255, 146, 255, 123, 0, 108, 0, 131, 255, 108, 0, 123, 0, 146, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_eyc7d"),
+"name": "tuer-faellmitteldosierstation.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 0, 0, 255, 255, 92, 151, 0, 0, 255, 255, 0, 0, 92, 151, 255, 255, 255, 255, 255, 255, 92, 151, 0, 0, 0, 0, 0, 0, 92, 151, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_u0uck")
+
+[node name="fmds_tür" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_j8x4m")
+skeleton = NodePath("")

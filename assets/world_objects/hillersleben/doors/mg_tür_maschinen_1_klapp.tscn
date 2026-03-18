@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=4 uid="uid://bm7u038g83rmk"]
+
+[ext_resource type="Texture2D" uid="uid://b15srhfda1g5a" path="res://assets/zones/hillersleben/models/Referenz/Maschinenraum-Tuer.jpg" id="1_6lq7t"]
+[ext_resource type="Texture2D" uid="uid://c8s05kuirbsse" path="res://assets/zones/hillersleben/models/Referenz/Roughness-05.png" id="2_34esc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_88ted"]
+resource_name = "Maschinenraum-Tuer"
+cull_mode = 2
+albedo_texture = ExtResource("1_6lq7t")
+metallic_texture = ExtResource("2_34esc")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_34esc")
+roughness_texture_channel = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ms4k6"]
+_surfaces = [{
+"aabb": AABB(-0.9710455, 0, -0.02629757, 0.982914, 2.595913, 0.4854784),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAAAEAAMAAQAFAAIAAQAGAAUABwAAAAIAAAAHAAQABwACAAUABwAGAAQABwAFAAYACAAJAAoACAALAAkA"),
+"name": "Maschinenraum-Tuer",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("LgYAAP//AAD/////uxsAAC4G/////wAA//8AALsbAADQ+QAAAAAAAAAA//9D5AAA0Pn//wAAAAAAAAAAQ+QAAP//AAC7GwAA0Pn+/wAAAAD///7/uxsAAND5AAAAAAAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bruxi"]
+resource_name = "Referenz_Plane_034"
+_surfaces = [{
+"aabb": AABB(-0.9710455, 0, -0.02629757, 0.982914, 2.595913, 0.4854784),
+"attribute_data": PackedByteArray("1qj//8h//3/WqP9/yH///+ao3v/Ffx+AxX/e/+aoH4Dx1q7+////////rv7x1v//9v86gBPXboIT1zqA9v9ugvOB7P8fgBGA84ERgB+A7P+3qIOPvaoT8beopNIbqoOP"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_88ted"),
+"name": "Maschinenraum-Tuer",
+"primitive": 3,
+"uv_scale": Vector4(2, 2, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("LgYAAP//uO7/////uxu47i4G/////7ju//8AALsbuO4AAAAAQ+QAAND5//8AAAAA0PkAAAAAAAAAAP//Q+QAAC4GAAD//zE+0PkAAAAAMT7//wAAuxsxPgAAAABD5DE+/////7sbzcEAAP//Q+TNwS4G/////83B0Pn//wAAzcH//wAAuxu5rtD5/v8AALmu///+/7sbua7Q+QAAAAC5rgAAAABD5K7/Lgb/////AOEAAP//Q+TA4C4GAAD//////3////9/////f////3///6qW/3+qlv9/qpb/f6qW/3+97HtZvex7Wb3se1m97HtZgya9bIMmvWyDJr1sgya9bP9/////f////3////9///9vzXF/hrGCUUSxFVHFzf9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ms4k6")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_13vjb"]
+resource_name = "Referenz_Plane_033"
+_surfaces = [{
+"aabb": AABB(-1.0087523, 0, -0.026296616, 1.0206203, 2.595909, 0.50249577),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEABQACAAMABQAAAAIAAAAGAAQAAAAFAAYABwABAAQAAQAHAAMABwAEAAYABQADAAcABQAHAAYA"),
+"name": "Maschinenraum-Tuer",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("9AUAAP//AAD/////yxoAAPQF/////wAAAAD//zPlAAD//wAAyxoAAAAAAAAz5QAACvoAAAAAAAAK+v//AAAAAA==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_bruxi")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_fq1nm"]
+resource_name = "Referenz_Plane_041"
+_surfaces = [{
+"aabb": AABB(-1.0087523, 0, -0.026296616, 1.0206203, 2.595909, 0.50249577),
+"attribute_data": PackedByteArray("Aqf//61RAAACpwAArVH//49YXf3krf//5K1d/Y9Y//8ornUALVndBC1ZdQAort0ETKe+/81RQADNUb7/TKdAAFZSbSL5U/znVlL85/lTbSK0UG0iVlL857RQ/OdWUm0i"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_88ted"),
+"name": "Maschinenraum-Tuer",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("9AUAAP//uO7/////yxq47vQF/////7ju//8AAMsauO70BQAA//8xPgr6AAAAADE+//8AAMsaMT4AAAAAM+UxPv/////LGs3BAAD//zPlzcH0Bf/////NwQr6//8AAM3BAAAAADPlAAAK+v//AAAAAAr6AAAAAAAAAAD//zPlAAAK+v//AAC5rv//AADLGrmuCvoAAAAAua7/////yxq5rgAAAAAz5f//9AX///////8AAP//M+X///QFAAD//////3////9/////f////3///73se1m97HtZvex7Wb3se1mDJr1sgya9bIMmvWyDJr1sqpb/f6qW/3+qlv9/qpb/f/9/////f////3////9////Fzf9/xc3/f8XN/3/Fzf9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_13vjb")
+
+[node name="mg_tür_maschinen1-klapp" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_fq1nm")
+skeleton = NodePath("")

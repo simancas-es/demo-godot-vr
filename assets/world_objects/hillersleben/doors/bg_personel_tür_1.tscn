@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4fq8m4vs518p"]
+
+[ext_resource type="Texture2D" uid="uid://n2bupowbxnp" path="res://assets/zones/hillersleben/models/Referenz/Betriebsgebaeude-Werkstatt-Tuer.jpg" id="1_x5vyy"]
+[ext_resource type="Texture2D" uid="uid://br0elbptxv47e" path="res://assets/zones/hillersleben/models/Referenz/Wasser-Roughness.png" id="2_tgcte"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aihm4"]
+resource_name = "Tuer-Werkstatt"
+cull_mode = 2
+albedo_texture = ExtResource("1_x5vyy")
+metallic_texture = ExtResource("2_tgcte")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_tgcte")
+roughness_texture_channel = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_7gn5i"]
+_surfaces = [{
+"aabb": AABB(-0.4342308, 0, -0.9566221, 0.4342308, 2.124485, 0.9566221),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "Tuer-Werkstatt",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6s78t"]
+resource_name = "Referenz_Plane_031"
+_surfaces = [{
+"aabb": AABB(-0.4342308, 0, -0.9566221, 0.4342308, 2.124485, 0.9566221),
+"attribute_data": PackedByteArray(24, 128, 252, 127, 254, 255, 255, 255, 24, 128, 255, 255, 255, 255, 252, 127),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": SubResource("StandardMaterial3D_aihm4"),
+"name": "Tuer-Werkstatt",
+"primitive": 3,
+"uv_scale": Vector4(0.9856016, 2.0002108, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(255, 255, 255, 255, 255, 255, 91, 209, 0, 0, 0, 0, 0, 0, 91, 209, 255, 255, 0, 0, 255, 255, 91, 209, 0, 0, 255, 255, 0, 0, 91, 209, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_7gn5i")
+
+[node name="bg_personel_tür1" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_6s78t")
+skeleton = NodePath("")

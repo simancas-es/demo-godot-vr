@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=4 uid="uid://dt34pyxe1wy8y"]
+
+[ext_resource type="Texture2D" uid="uid://deoy0sk0jwyv7" path="res://assets/zones/hillersleben/models/Referenz/Tuer-Rechengutraum.jpg" id="1_8i8kq"]
+[ext_resource type="Texture2D" uid="uid://c8s05kuirbsse" path="res://assets/zones/hillersleben/models/Referenz/Roughness-05.png" id="2_idguo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k0532"]
+resource_name = "Tuer-Rechengutraum"
+cull_mode = 2
+albedo_texture = ExtResource("1_8i8kq")
+metallic_texture = ExtResource("2_idguo")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_idguo")
+roughness_texture_channel = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_mmodf"]
+_surfaces = [{
+"aabb": AABB(-0.24349403, 0, -0.5374117, 0.48698807, 2.5361137, 1.0748234),
+"format": 34359742465,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
+"name": "Tuer-Rechengutraum",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("gPd0vrBPIkDQkwm/gFZ5PgAAAADwFQk/gFZ5PrBPIkDwFQk/gPd0PrBPIkDQkwk/gPd0vgAAAADQkwm/gFZ5vrBPIkDwFQm/gFZ5vgAAAADwFQm/gPd0PgAAAADQkwk/")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_sk2k1"]
+resource_name = "Referenz_Plane_015"
+_surfaces = [{
+"aabb": AABB(-0.24349403, 0, -0.5374117, 0.48698807, 2.5361137, 1.0748234),
+"attribute_data": PackedByteArray("OOd/PwAA3bgAOMY5dAOAPwAwxjkAAN24Oud/P3QDgD84538/AADduAA4xjl0A4A/Oud/P3QDgD8AMMY5AADduPcvxjl0A4A/Oed/P3QDgD85538/dAOAP/cvxjl0A4A/Oud/PwAA3bhbO8Y5AADduFs7xjkAAN24Oud/PwAA3bg5538/dAOAPzrnfz8AAN24Oud/PwAA3bg5538/dAOAP1s7xjkAAN249y/GOXQDgD/3L8Y5dAOAP1s7xjkAAN24"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_k0532"),
+"name": "Tuer-Rechengutraum",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("gPd0vrBPIkDQkwm/gFZ5PgAAAADwFQk/gFZ5PrBPIkDwFQk/gPd0vgAAAADQkwm/gFZ5vrBPIkDwFQm/gPd0PgAAAADQkwk/gFZ5vgAAAADwFQm/gPd0PrBPIkDQkwk/gPd0vgAAAADQkwm/gPd0PgAAAADQkwk/gFZ5PgAAAADwFQk/gFZ5vgAAAADwFQm/gFZ5PrBPIkDwFQk/gFZ5vrBPIkDwFQm/gPd0vrBPIkDQkwm/gPd0PrBPIkDQkwk/gFZ5PgAAAADwFQk/gPd0PrBPIkDQkwk/gFZ5PrBPIkDwFQk/gPd0PgAAAADQkwk/gPd0vrBPIkDQkwm/gFZ5vgAAAADwFQm/gPd0vgAAAADQkwm/gFZ5vrBPIkDwFQm///+3pwAAIuz//7enAAAi7P//t6cAACLs//+3pwAAIuy4J/9/AADcE7gn/38AANwTuCf/fwAA3BO4J/9/AADcE/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//3///////7//f///////v/9///////+//3///////7+3p/9/////P7en/3////8/t6f/f////z+3p/9/////PwAARtj///+/AABG2P///78AAEbY////vwAARtj///+/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_mmodf")
+
+[node name="bg_garage_tür" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_sk2k1")
+skeleton = NodePath("")

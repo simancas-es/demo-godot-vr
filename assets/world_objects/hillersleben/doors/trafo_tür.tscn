@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=4 uid="uid://s8m7asbtu8yf"]
+
+[ext_resource type="Texture2D" uid="uid://0tgl4xmrxeef" path="res://assets/zones/hillersleben/models/Referenz/Tuer-Trafostation.jpg" id="1_xg4wh"]
+[ext_resource type="Texture2D" uid="uid://ehbqj6x75vrj" path="res://assets/zones/hillersleben/models/Referenz/Stromkasten.png" id="2_28gik"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3l45"]
+resource_name = "Tuer-Trafostation"
+cull_mode = 2
+albedo_texture = ExtResource("1_xg4wh")
+metallic_texture = ExtResource("2_28gik")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_28gik")
+roughness_texture_channel = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6y745"]
+_surfaces = [{
+"aabb": AABB(-0.007863998, 0, -0.514843, 1.1768055, 2.2741165, 0.53323364),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAQADAAIAAAAEAAEAAgADAAUAAgAFAAAAAAAGAAQAAAAFAAYABAAHAAEAAQAHAAMABAAGAAcABQADAAcABQAHAAYA"),
+"name": "Tuer-Trafostation",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("/////6gRAABrAwAA//8AAGsD/////wAAAAD//1fuAAD//wAAqBEAAJP8//8AAAAAk/wAAAAAAAAAAAAAV+4AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_g5ml3"]
+resource_name = "Referenz_Plane_023"
+_surfaces = [{
+"aabb": AABB(-0.007863998, 0, -0.514843, 1.1768055, 2.2741165, 0.53323364),
+"attribute_data": PackedByteArray("KH2w+2n6kQRp+rD7KH2RBEYAcgSnfI37RgCN+6d8cgSK9+EEJnugBiZ74QSK96AG43wB++t4MQXjfDEF63gB+4t3pfq3cwoFi3cKBbdzpfo5T1H/TMhp/UzIUf85T2n9"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_d3l45"),
+"name": "Tuer-Trafostation",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("/////6gR//9rAwAA/////2sD//////////8AAKgR//+T/P//AACI7wAAAABX7ojvk/wAAAAAiO8AAP//V+6I72sD/////2X0k/z//wAAZfT/////qBFl9AAA//9X7mX0awMAAP//iK8AAP//V+6Ir2sD/////4ivAAAAAFfuiK//////qBH//5P8AAAAAP////8AAKgR//+T/P//AAD/////AACoEWX0AAAAAFfuZfRrAwAA//9l9JP8AAAAAGX0wZX/f8GV/3/Blf9/wZX/f/9/////f/7//3/+//9////jiw2644sNuuOLDbrjiw26/3////9/////f////3///xrN/38azf9/Gs3/fxrN/38NOhr0DTob9A06G/QNOhr0")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6y745")
+
+[node name="trafo_tür" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_g5ml3")
+skeleton = NodePath("")

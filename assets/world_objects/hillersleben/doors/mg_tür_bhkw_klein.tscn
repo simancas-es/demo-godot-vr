@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=4 uid="uid://dcrp81uv1ce3j"]
+
+[ext_resource type="Texture2D" uid="uid://c35n28it86fto" path="res://assets/zones/hillersleben/models/Referenz/Tuer-BHKW.jpg" id="1_d56tf"]
+[ext_resource type="Texture2D" uid="uid://c0d7u3tm72ir5" path="res://assets/zones/hillersleben/models/Referenz/Roughness-05.png.png" id="2_70q4x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3v1l"]
+resource_name = "Tuer-BHKW"
+cull_mode = 2
+albedo_texture = ExtResource("1_d56tf")
+metallic_texture = ExtResource("2_70q4x")
+metallic_texture_channel = 2
+roughness = 0.5
+roughness_texture = ExtResource("2_70q4x")
+roughness_texture_channel = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_jbagx"]
+_surfaces = [{
+"aabb": AABB(-0.2721634, 0, -0.5382776, 0.3090067, 2.4645767, 0.5548973),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEABAADAAEABQAAAAIAAgADAAUABgAEAAAABQAGAAAABAAHAAMABwAFAAMABgAHAAQABwAGAAUA"),
+"name": "Tuer-BHKW",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("Cz0AAAAAAAD/////qfAAAAs9//8AAAAA88L/////AAD//wAAqfAAAAAA//9VDwAAAAAAAFUPAADzwgAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0irww"]
+resource_name = "Referenz_Cube_139"
+_surfaces = [{
+"aabb": AABB(-0.2721634, 0, -0.5382776, 0.3090067, 2.4645767, 0.5548973),
+"attribute_data": PackedByteArray("Xvn//2SAHoBe+R6AZID//wyA+f+Gjap/DICqf4aN+f+r+yuE+pysgZD6qoEVni2EcvhZhLaGNYFy+DWBtoZZhC6Ajf8V+QaALoAGgBX5jf8l/KeB//8H2SX8B9n//6eB"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_x3v1l"),
+"name": "Tuer-BHKW",
+"primitive": 3,
+"uv_scale": Vector4(0.6452106, 2.004453, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("Cz0AAAAAQ9H/////qfBD0Qs9//8AAEPR//8AAKnwQ9H//wAAqfAAAPPC/////wAA/////6nwAADzwgAA//8AAAAAAABVD+vf//8AAKnw698LPQAAAADr3/PCAAD//+vfCz3//wAA6N/zwv/////o3wAA//9VD+jf/////6nw6N/zwgAA//8AAAAA//9VDwAA88L/////AAAAAAAAVQ8AAAAA//9VD9XzCz0AAAAA1fMLPf//AADV8wAAAABVD9Xz/38AAP9/AAD/fwAA/38AAKiWAoColv9/qJb/f6iWAoDDYJ1Pw2CdT8NgnU/DYJ1Pns8/H57PPx+ezz8fns8/H8RN/3/ETf9/xE3/f8RN/382Rsi5NkbIuTZGyLk2Rsi5")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_jbagx")
+
+[node name="mg_tür_bhkw-klein" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_0irww")
+skeleton = NodePath("")

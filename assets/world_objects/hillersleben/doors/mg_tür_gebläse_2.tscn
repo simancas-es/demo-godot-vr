@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=4 uid="uid://dy4aqxqox16i0"]
+
+[ext_resource type="Texture2D" uid="uid://bus415qpgl7bk" path="res://assets/zones/hillersleben/models/Referenz/Tuer-Geblaesestation.jpg" id="1_dlope"]
+[ext_resource type="Texture2D" uid="uid://c8s05kuirbsse" path="res://assets/zones/hillersleben/models/Referenz/Roughness-05.png" id="2_dtyja"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8isvt"]
+resource_name = "Tuer-Geblaesestation.002"
+cull_mode = 2
+albedo_texture = ExtResource("1_dlope")
+metallic_texture = ExtResource("2_dtyja")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_dtyja")
+roughness_texture_channel = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_6ltal"]
+_surfaces = [{
+"aabb": AABB(-0.74834347, 0, -1.5677338, 0.79316425, 3.002205, 1.5881138),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAgABAAMAAAAEAAEABAADAAEABQAAAAIAAgADAAUABgAEAAAABQAGAAAABAAHAAMABwAFAAMABgAHAAQABwAGAAUA"),
+"name": "Tuer-Geblaesestation.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("7hwAAAAAAAD/////bfkAAO4c//8AAAAAEOP/////AAD//wAAbfkAAAAA//+RBgAAAAAAAJEGAAAQ4wAA//8AAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_36po0"]
+resource_name = "Referenz_Cube_151"
+_surfaces = [{
+"aabb": AABB(-0.74834347, 0, -1.5677338, 0.79316425, 3.002205, 1.5881138),
+"attribute_data": PackedByteArray("Ib7//4d/0MHqvdfBh3///5r7kLr//3iA//+Qupr7eIAl/JnGzf+zqtL/Z8Yg/Oaq6r3XwXaAtr60vba+doDewfV/FYBdvm++9X9vvl2+FYCy0bifr+astLLRrLSv5rif"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_8isvt"),
+"name": "Tuer-Geblaesestation.002",
+"primitive": 3,
+"uv_scale": Vector4(1.9944725, 1.9977181, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("7hwAAAAAYtH/////bfli0e4c//8AAGLR//8AAG35YtH//wAAbfnTwRDj/////9PB/////23508EQ4wAA///TwQAAAACRBv3C//8AAG35/cLuHAAAAAD9whDjAAD///3C7hz//wAA/d8Q4//////63wAA//+RBv3f/////235+t8Q4wAA/////wAA//+RBv//EOP///////8AAAAAkQb//wAA//+RBr/z7hwAAAAAv/PuHP//AAC/8wAAAACRBr/z+H8EAPF/CADqfwwA/38AAFkTWRNZE1kTWRNZE1kTWRMZLvJoGS7yaBku8mgZLvJolc8sH5fPLx+Vzywfl88vH91N/3/dTf9/3U3/f91N/39BRr25QUa9uUFGvblBRr25")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_6ltal")
+
+[node name="mg_tür_gebläse2" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_36po0")
+skeleton = NodePath("")

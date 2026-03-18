@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=4 uid="uid://c3j7r5gcp03o5"]
+
+[ext_resource type="Texture2D" uid="uid://bus415qpgl7bk" path="res://assets/zones/hillersleben/models/Referenz/Tuer-Geblaesestation.jpg" id="1_0q45l"]
+[ext_resource type="Texture2D" uid="uid://c8s05kuirbsse" path="res://assets/zones/hillersleben/models/Referenz/Roughness-05.png" id="2_tylwn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8isvt"]
+resource_name = "Tuer-Geblaesestation.002"
+cull_mode = 2
+albedo_texture = ExtResource("1_0q45l")
+metallic_texture = ExtResource("2_tylwn")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_tylwn")
+roughness_texture_channel = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kk6ve"]
+_surfaces = [{
+"aabb": AABB(-0.044820786, 0, -0.02038002, 0.76942444, 3.002205, 1.5358982),
+"format": 34896613377,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAACAAIAAAAAAAIAAwACAAEABAADAAEAAAAEAAEABAAFAAMABQAGAAMAAwAGAAIABAAHAAUABAAAAAcABQAHAAYABwAAAAAAAgAHAAAABwAHAAAAAgACAAYAAgAGAAcAAgAGAAYABgAHAAcABgAGAAcA"),
+"name": "Tuer-Geblaesestation.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("K+IAAP//AAAAAP//ywYAACvi/////wAA0x3//wAAAAAAAAAAywYAANMdAAAAAAAA/////zP5AAD//wAAM/kAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_kn6sx"]
+resource_name = "Referenz_Cube_001"
+_surfaces = [{
+"aabb": AABB(-0.044820786, 0, -0.02038002, 0.76942444, 3.002205, 1.5358982),
+"attribute_data": PackedByteArray("Y3wsAKf0unxjfLp8p/QsAGj0BP6h/26Eof8E/mj0boQa8ZaDEntKfRrxSn1/e4mDf3uJgxJ7Sn3re7T/63u0/6X3hMLy/qeM+/4fwpv3C42Q9LT/f3uJg5D0e4Pre7T/tcPdRb6j1GW+o91FtcPUZWN8LABjfLp8Y3y6fGN8LADy/qeMm/cLjZv3C43y/qeM"),
+"format": 34896613399,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkACQAMAAsACQANAAwACwAMAA4ACwAOAA8AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEA"),
+"material": SubResource("StandardMaterial3D_8isvt"),
+"name": "Tuer-Geblaesestation.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("K+IAAP////8AAP//ywb//yvi////////AAAAAMsG//8AAAAAywa/89Md//8AAL/zAAD//8sGv/PTHQAAAAC/89Md//8AAPzfK+L/////AOAAAP//ywb83/////8z+QDg/////zP5AOAr4v////8A4P//AAAz+f+///8AADP5/78AAAAAywb9wv//AAAz+f3C0x0AAAAA/cIr4gAA///9wtMdAAAAAGLR/////zP5YtHTHf//AABi0f//AAAz+WLRK+L/////08H//wAAM/nTwSviAAD//9PB/////zP508Er4gAA////vyvi//////+/K+L//////78r4gAA////v///AAAz+f+/K+IAAP///78r4gAA////v///AAAz+f+/3U3/f91N/3/dTf9/3U3/f0DGQMZAxkDGQMZAxkDGQMaVzysfk88oH5XPKx+Tzygfk88oH5PPKB////9/////fxku8mgZLvJoGS7yaBku8mgDgAYACIAOAAyAFQD/fwAAWRNZE1kTWRNZE1kTWRNZE////3////9/////f////3////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_kk6ve")
+
+[node name="mg_tür_gebläse1" type="MeshInstance3D"]
+mesh = SubResource("ArrayMesh_kn6sx")
+skeleton = NodePath("")
