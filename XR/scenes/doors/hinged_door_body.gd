@@ -120,6 +120,12 @@ func _physics_process(delta):
 		if parent.latch_on_close and (abs(_current_angle) < 0.02):
 			latch_door()
 			reset_door()
+		
+		if not parent.latch_at_angle.is_empty():
+			for angle in parent.latch_at_angle:
+				if abs(_current_angle - deg_to_rad(angle)) < 0.02:
+					latch_door()
+				
 
 func _on_handle_grabbed(_pickable):
 	_handle_grabbed = true

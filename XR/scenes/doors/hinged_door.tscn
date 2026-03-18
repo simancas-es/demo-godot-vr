@@ -5,13 +5,13 @@
 [ext_resource type="Script" uid="uid://jc0js3dq6nue" path="res://XR/scenes/doors/hinged_door_body.gd" id="2_3impf"]
 [ext_resource type="PackedScene" uid="uid://ddym7kilhtyq2" path="res://XR/scenes/doors/fixed_hand_right.tscn" id="3_fkh8a"]
 [ext_resource type="PackedScene" uid="uid://bok2ywfo8jipb" path="res://XR/scenes/doors/fixed_hand_left.tscn" id="4_nysu4"]
-[ext_resource type="AudioStream" uid="uid://c856lopbs7enk" path="res://assets/audio/freesound.org/12738__leady__door-handle-turn.mp3" id="5"]
+[ext_resource type="AudioStream" uid="uid://dhl4q7uuxofen" path="res://assets/audio/freesound.org/12738__leady__door-handle-turn.mp3" id="5"]
 [ext_resource type="Script" uid="uid://c3c4tr2cpwvtn" path="res://XR/scenes/doors/door_sounds.gd" id="6"]
 [ext_resource type="Script" uid="uid://ddqprfdnejyt4" path="res://XR/scenes/doors/debug_label.gd" id="6_dy50l"]
-[ext_resource type="AudioStream" uid="uid://bp4oxgcnwsdt7" path="res://assets/audio/freesound.org/431118__inspectorj__door-front-closing-a.mp3" id="7"]
+[ext_resource type="AudioStream" uid="uid://dwfqxn4ysxa7c" path="res://assets/audio/freesound.org/431118__inspectorj__door-front-closing-a.mp3" id="7"]
 
 [sub_resource type="BoxShape3D" id="1"]
-size = Vector3(1, 2.4, 0.1)
+size = Vector3(1, 2, 0.1)
 
 [sub_resource type="BoxMesh" id="2"]
 size = Vector3(1, 2.4, 0.1)

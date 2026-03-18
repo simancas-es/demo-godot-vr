@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2a7ff8mk0fi8"]
+
+[ext_resource type="Script" uid="uid://bijfwo0eovvp7" path="res://XR/scenes/doors/door_handle_grab.gd" id="1_qjeej"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ogaye"]
+size = Vector3(0.1, 0.1, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ogaye"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="DoorHandleGrab" type="RigidBody3D" node_paths=PackedStringArray("pick_01", "pick_02", "pick_01_hand_right", "pick_01_hand_left", "pick_02_hand_right", "pick_02_hand_left")]
+collision_layer = 1073741824
+collision_mask = 0
+mass = 0.001
+gravity_scale = 0.0
+sleeping = true
+lock_rotation = true
+freeze = true
+script = ExtResource("1_qjeej")
+snap_distance = 0.6
+pick_01 = NodePath("")
+pick_02 = NodePath("")
+pick_01_hand_right = NodePath("")
+pick_01_hand_left = NodePath("")
+pick_02_hand_right = NodePath("")
+pick_02_hand_left = NodePath("")
+picked_up_layer = 2147483648
+picked_by_exclude = "beltsnap"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0438764, 0.0958737, -0.0109467)
+shape = SubResource("BoxShape3D_ogaye")
+debug_color = Color(1, 0.25882354, 0.4, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0977987, 0.0287403)
+visible = false
+mesh = SubResource("BoxMesh_ogaye")
