@@ -9,6 +9,9 @@ extends Node
 @export var delete_vans : bool = false
 @export var delete_inventorypickups : bool = false #deletes the kbm inventory pickups
 
+@export var delete_interactiondoors : bool = true #Deletes the doors used by the base model to allow for XR
+
+
 
 func _ready() -> void:
 	var player : XRToolsPlayerBody = XRTools.find_xr_child(get_parent(), "*", "XRToolsPlayerBody")
@@ -22,6 +25,7 @@ func _ready() -> void:
 		return
 	do_delete_vans()
 	do_delete_inventorypickups()
+	do_delete_doors()
 
 func do_delete_vans() -> void:
 	if delete_vans:
@@ -38,3 +42,17 @@ func adapt_collision_mask(obj : CollisionObject3D) -> void:
 	obj.collision_mask |= (1 << (15-1)) | (1 <<(16-1))
 	
 	pass
+
+
+func do_delete_doors():
+	if not delete_interactiondoors: return
+	var doors = basezone.find_children("*", "InteractionDoor", true, false)
+	for door in doors:
+		_free_when_ready(door)
+
+func _free_when_ready(door: Node):
+	# Already initialized → safe to free
+	if door.is_node_ready():
+		door.queue_free()
+	else:
+		door.ready.connect(func():	if is_instance_valid(door):	door.queue_free(), CONNECT_ONE_SHOT)
