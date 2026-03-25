@@ -23,17 +23,17 @@ var zorder : float
 			
 
 func with(text_ : String = text, duration_s : float = DISPLAY_DURATION,
-			amplitude : float = 40.0, frequency : float = 1.0, speed : float = 2.0,
-			zorder : float = -1
+			_amplitude : float = 40.0, _frequency : float = 1.0, _speed : float = 2.0,
+			_zorder : float = -1
 			) -> UI_MSGTOP:
 	text = text_
 	DISPLAY_DURATION = duration_s
 	
 	# Setup z_index to be under other UI
-	zorder = zorder
-	amplitude = amplitude
-	frequency = frequency
-	speed = speed
+	zorder = _zorder
+	amplitude = _amplitude
+	frequency = _frequency
+	speed = _speed
 	
 	return self
 
