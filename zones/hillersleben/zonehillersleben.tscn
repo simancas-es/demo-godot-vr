@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://bnbdtip3vptxc"]
+[gd_scene load_steps=97 format=3 uid="uid://bnbdtip3vptxc"]
 
 [ext_resource type="Script" uid="uid://b78po4wueig00" path="res://clases/zones/basezone.gd" id="1_37tqx"]
 [ext_resource type="PackedScene" uid="uid://d4i7huvosagj1" path="res://zones/hillersleben/scripts/hl_flow_model/main.tscn" id="2_0nlau"]
@@ -27,7 +27,65 @@
 
 [sub_resource type="Curve3D" id="Curve3D_gfnr6"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.4348378, 1.4119937e-21),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.1, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_7sq4a"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.14, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_yuvhm"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.5, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_60g3o"]
+size = Vector2(16.345, 7.025)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfnr6"]
+albedo_color = Color(0.37254903, 0.34117648, 0.36078432, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w4u61"]
+size = Vector2(2.065, 3.715)
+
+[sub_resource type="Curve3D" id="Curve3D_w4u61"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.4, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_edwb7"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.4, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_sktl7"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.18, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_du4yn"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.18, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve3D" id="Curve3D_r5bnc"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5.4, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -35,12 +93,52 @@ point_count = 2
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_du4yn"]
 albedo_color = Color(0.34901962, 0.36078432, 0.21568628, 1)
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_gfnr6"]
+material = SubResource("StandardMaterial3D_du4yn")
+top_radius = 0.0
+bottom_radius = 5.375
+height = 0.001
+radial_segments = 25
+rings = 1
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_du4yn"]
+material = SubResource("StandardMaterial3D_du4yn")
+top_radius = 0.0
+bottom_radius = 9.13
+height = 0.001
+radial_segments = 25
+rings = 1
+cap_top = false
+cap_bottom = false
+
 [sub_resource type="CylinderMesh" id="CylinderMesh_w4u61"]
 material = SubResource("StandardMaterial3D_du4yn")
 top_radius = 0.0
-bottom_radius = 5.35
+bottom_radius = 14.08
 height = 0.001
-radial_segments = 12
+radial_segments = 25
+rings = 1
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_edwb7"]
+material = SubResource("StandardMaterial3D_du4yn")
+top_radius = 0.0
+bottom_radius = 15.335
+height = 0.001
+radial_segments = 25
+rings = 1
+cap_top = false
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_sktl7"]
+material = SubResource("StandardMaterial3D_du4yn")
+top_radius = 0.0
+bottom_radius = 15.335
+height = 0.001
+radial_segments = 25
 rings = 1
 cap_top = false
 cap_bottom = false
@@ -292,48 +390,132 @@ meshplane = NodePath("../Test")
 flow_model = NodePath("../../../FlowSimulation")
 
 [node name="VED1WaterLevelMesh" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
-transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 12.716552, -0.26135635, 3.6128376)
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 13.016773, -2.0445328, 3.2672153)
 curve = SubResource("Curve3D_gfnr6")
-meshplane = NodePath("../VED1")
+meshplane = NodePath("../VED1-WSpiegel")
 flow_model = NodePath("../../../FlowSimulation")
 container_id = 8
 
 [node name="VED2WaterLevelMesh" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
-transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 25.737265, -0.26135635, -1.1041033)
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 24.96506, -2.045, -1.8177977)
 curve = SubResource("Curve3D_gfnr6")
-meshplane = NodePath("../VED2")
+meshplane = NodePath("../VED2-WSpiegel")
 flow_model = NodePath("../../../FlowSimulation")
 container_id = 9
 
 [node name="VED3WaterLevelMesh" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
-transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 26.918934, -0.26135635, -14.33936)
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 26.369106, -2.045, -14.284378)
 curve = SubResource("Curve3D_gfnr6")
-meshplane = NodePath("../VED3")
+meshplane = NodePath("../VED3-WSpiegel")
 flow_model = NodePath("../../../FlowSimulation")
 container_id = 10
 
 [node name="NED1WaterLevelMesh" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
-transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 14.834043, -0.26135635, -8.75855)
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 14.834043, -2.045, -8.75855)
 curve = SubResource("Curve3D_gfnr6")
-meshplane = NodePath("../NED1")
+meshplane = NodePath("../NED1-WSpiegel")
 flow_model = NodePath("../../../FlowSimulation")
 container_id = 11
 
-[node name="VED1" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.135928, 0.36790848, 3.241087)
+[node name="PSB-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, -28.993435, 0.061252594, 17.350039)
+curve = SubResource("Curve3D_7sq4a")
+meshplane = NodePath("../../../Visuals/Referenz/psb_water")
+flow_model = NodePath("../../../FlowSimulation")
+
+[node name="FF-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.9999997, 8.4703295e-21, 0, -8.4703295e-21, 0.9999997, -14.48247, -0.4042549, 28.407158)
+curve = SubResource("Curve3D_yuvhm")
+meshplane = NodePath("../../../Visuals/Referenz/psb_water")
+flow_model = NodePath("../../../FlowSimulation")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS/FF-WaterLevelFollower/PathFollow3D" index="0"]
+transform = Transform3D(0.39297915, 0, -0.9195474, 0.9195474, -4.3711392e-08, 0.39297915, -4.0194696e-08, -1, -1.7177666e-08, 0, 0, -3.5332031)
+mesh = SubResource("PlaneMesh_60g3o")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_gfnr6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS/FF-WaterLevelFollower/PathFollow3D" index="1"]
+transform = Transform3D(0.39297915, 0, -0.9195474, 0.9195474, -4.3711392e-08, 0.39297915, -4.0194696e-08, -1, -1.7177666e-08, -3.6840916, -8.62055, -3.5332026)
+mesh = SubResource("PlaneMesh_w4u61")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_gfnr6")
+
+[node name="BB2-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, -62.91014, -2.821148, 13.031668)
+curve = SubResource("Curve3D_w4u61")
+meshplane = NodePath("../BB2-WSpiegel")
+flow_model = NodePath("../../../FlowSimulation")
+container_id = 14
+
+[node name="BB1-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, -49.56784, -2.821148, 45.468876)
+curve = SubResource("Curve3D_edwb7")
+meshplane = NodePath("../BB1-WSpiegel")
+flow_model = NodePath("../../../FlowSimulation")
+container_id = 13
+
+[node name="NB2-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, -94.38506, -2.6437035, 27.032713)
+curve = SubResource("Curve3D_sktl7")
+meshplane = NodePath("../NB2-WSpiegel")
+flow_model = NodePath("../../../FlowSimulation")
+container_id = 16
+
+[node name="NB1-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, -81.67321, -2.6437035, 56.46296)
+curve = SubResource("Curve3D_du4yn")
+meshplane = NodePath("../NB1-WSpiegel")
+flow_model = NodePath("../../../FlowSimulation")
+container_id = 15
+
+[node name="MSB-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, -12.718941, -2.4725647, 53.682003)
+curve = SubResource("Curve3D_r5bnc")
+meshplane = NodePath("../MSB-WSpiegel")
+flow_model = NodePath("../../../FlowSimulation")
+container_id = 18
+
+[node name="VED1-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.135928, 2.0263977, 3.241087)
+mesh = SubResource("CylinderMesh_gfnr6")
+
+[node name="VED2-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.954353, 2.0263977, -1.9012799)
+mesh = SubResource("CylinderMesh_gfnr6")
+
+[node name="NED1-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.817408, 2.0263977, -8.727055)
+mesh = SubResource("CylinderMesh_gfnr6")
+
+[node name="VED3-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.366383, 2.0263977, -14.271176)
+mesh = SubResource("CylinderMesh_gfnr6")
+
+[node name="PSB-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -28.948263, 3.5105782, 17.491814)
+visible = false
+mesh = SubResource("CylinderMesh_du4yn")
+
+[node name="MSB-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -12.889017, 2.8082657, 53.55912)
 mesh = SubResource("CylinderMesh_w4u61")
 
-[node name="VED2" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.954353, 0.36790848, -1.9012799)
+[node name="NB1-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -81.778854, 1.5233307, 56.31951)
 mesh = SubResource("CylinderMesh_w4u61")
 
-[node name="NED1" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.817408, 0.36790848, -8.727055)
+[node name="NB2-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -94.50067, 1.5233307, 27.155348)
 mesh = SubResource("CylinderMesh_w4u61")
 
-[node name="VED3" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.366383, 0.36790848, -14.271176)
-mesh = SubResource("CylinderMesh_w4u61")
+[node name="BB2-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -62.96248, 2.157959, 13.012322)
+mesh = SubResource("CylinderMesh_edwb7")
+
+[node name="BB1-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -49.17684, 2.157959, 45.295147)
+mesh = SubResource("CylinderMesh_sktl7")
 
 [node name="Config" type="Node3D" parent="."]
 
@@ -844,7 +1026,6 @@ nodepath = NodePath("../../Visuals/Referenz/fmds_tür")
 
 [node name="SimpleGeometry" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.258194, 45.288044, 24.39973)
-visible = false
 metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="SimpleGeometry"]
@@ -1183,7 +1364,15 @@ shape = SubResource("ConcavePolygonShape3D_ht8a3")
 
 [node name="Referenz" parent="Visuals" instance=ExtResource("15_h3jyd")]
 
+[node name="Plane_084" parent="Visuals/Referenz" index="838"]
+visible = false
+
+[node name="Plane_085" parent="Visuals/Referenz" index="839"]
+visible = false
+
+[editable path="Reference_point_floor/WATERLEVELS/FF-WaterLevelFollower"]
 [editable path="LadderFlockungsmittel"]
 [editable path="LadderGasspeicher1"]
 [editable path="Maschinengebäude/door_gebläse_1"]
 [editable path="Maschinengebäude/door_gebläse_2"]
+[editable path="Visuals/Referenz"]
