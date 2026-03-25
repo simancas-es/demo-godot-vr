@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bcyt1b5low3w4"]
+[gd_scene load_steps=25 format=3 uid="uid://bcyt1b5low3w4"]
 
 [ext_resource type="Script" uid="uid://pitm0eunqjp7" path="res://clases/fpv/fpv.gd" id="1_q2fis"]
 [ext_resource type="Script" uid="uid://davyaem2knud4" path="res://clases/fpv/area_check.gd" id="2_vvcos"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://dreqtcsfqkorx" path="res://clases/fpv/fsm/in_inventory.gd" id="14_2awh3"]
 [ext_resource type="Script" uid="uid://b82vk7yxsrrnf" path="res://fsm/state_base.gd" id="14_is72l"]
 [ext_resource type="Script" uid="uid://bb27t6hsjidrs" path="res://clases/fpv/fsm/mov_death.gd" id="17_2ykp4"]
+[ext_resource type="Script" uid="uid://cgnsbk378t0aq" path="res://systems/system-tasks/system_tasks_locator.gd" id="19_is72l"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8q5hm"]
 radius = 0.374904
@@ -161,7 +162,7 @@ curve = SubResource("Curve3D_2ykp4")
 
 [node name="camera_death_anim_follow" type="PathFollow3D" parent="CameraBasePosition/Camera_death_animation"]
 unique_name_in_owner = true
-transform = Transform3D(-0.9818075, 0.026466059, 0.18797815, 0, 0.99022967, -0.13941753, -0.18983126, -0.13688248, -0.97222316, 0, 0, 0)
+transform = Transform3D(-0.9818075, 0.026466062, 0.18797815, 0, 0.9902298, -0.13941753, -0.18983126, -0.1368825, -0.97222316, 0, 0, 0)
 loop = false
 tilt_enabled = false
 
@@ -226,3 +227,8 @@ metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
 [node name="SMNotControlled" type="Node" parent="StateMachineMovement"]
 unique_name_in_owner = true
 script = ExtResource("14_is72l")
+
+[node name="Locator_id_who" type="Node" parent="."]
+script = ExtResource("19_is72l")
+locator_id = 1
+locator_group = 1

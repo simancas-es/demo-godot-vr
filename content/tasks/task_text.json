@@ -26,6 +26,97 @@
 				"de": "Der Belüfterkopf ist kaputt!",
 				"es": "Se ha roto el cabezal de aireación!",
 			}
-		}
+		},
+		{
+	  "unit_id": "Q_HL_SECURITYCHECK1",
+	  "title": {
+		"en": "Security Check 1",
+		"de": "Sicherheitsprüfung 1",
+		"es": "Control de seguridad 1"
+	  },
+	  "text": {
+		"en": "Inspect the first monitoring point in the treatment plant.",
+		"de": "Überprüfe den ersten Kontrollpunkt in der Kläranlage.",
+		"es": "Inspecciona el primer punto de control en la planta de tratamiento."
+	  }
+	},
+	{
+	  "unit_id": "Q_HL_SECURITYCHECK2",
+	  "title": {
+		"en": "Security Check 2",
+		"de": "Sicherheitsprüfung 2",
+		"es": "Control de seguridad 2"
+	  },
+	  "text": {
+		"en": "Inspect the second monitoring point in the treatment plant.",
+		"de": "Überprüfe den zweiten Kontrollpunkt in der Kläranlage.",
+		"es": "Inspecciona el segundo punto de control en la planta de tratamiento."
+	  }
+	},
+	{
+	  "unit_id": "Q_HL_SECURITYCHECK3",
+	  "title": {
+		"en": "Security Check 3",
+		"de": "Sicherheitsprüfung 3",
+		"es": "Control de seguridad 3"
+	  },
+	  "text": {
+		"en": "Inspect the third monitoring point in the treatment plant.",
+		"de": "Überprüfe den dritten Kontrollpunkt in der Kläranlage.",
+		"es": "Inspecciona el tercer punto de control en la planta de tratamiento."
+	  }
+	},
+	{
+	  "unit_id": "Q_HL_SECURITYCHECK4",
+	  "title": {
+		"en": "Security Check 4",
+		"de": "Sicherheitsprüfung 4",
+		"es": "Control de seguridad 4"
+	  },
+	  "text": {
+		"en": "Inspect the fourth monitoring point in the treatment plant.",
+		"de": "Überprüfe den vierten Kontrollpunkt in der Kläranlage.",
+		"es": "Inspecciona el cuarto punto de control en la planta de tratamiento."
+	  }
+	},
+	{
+	  "unit_id": "Q_HL_SECURITYCHECK5",
+	  "title": {
+		"en": "Security Check 5",
+		"de": "Sicherheitsprüfung 5",
+		"es": "Control de seguridad 5"
+	  },
+	  "text": {
+		"en": "Inspect the fifth monitoring point in the treatment plant.",
+		"de": "Überprüfe den fünften Kontrollpunkt in der Kläranlage.",
+		"es": "Inspecciona el quinto punto de control en la planta de tratamiento."
+	  }
+	},
+	{
+	  "unit_id": "Q_HL_SECURITYCHECK6",
+	  "title": {
+		"en": "Security Check 6",
+		"de": "Sicherheitsprüfung 6",
+		"es": "Control de seguridad 6"
+	  },
+	  "text": {
+		"en": "Inspect the sixth and final monitoring point in the treatment plant.",
+		"de": "Überprüfe den sechsten und letzten Kontrollpunkt in der Kläranlage.",
+		"es": "Inspecciona el sexto y último punto de control en la planta de tratamiento."
+	  }
+	},
+	{
+	  "unit_id": "Q_HL_SECURITYCHECK_ALL",
+	  "title": {
+		"en": "Morning Security Sweep Complete",
+		"de": "Morgendliche Sicherheitsrunde abgeschlossen",
+		"es": "Barrido de seguridad matutino completado"
+	  },
+	  "text": {
+		"en": "All security checkpoints have been inspected. The morning safety sweep of the wastewater treatment plant is complete.",
+		"de": "Alle Sicherheitskontrollpunkte wurden überprüft. Die morgendliche Sicherheitsrunde der Kläranlage ist abgeschlossen.",
+		"es": "Todos los puntos de control de seguridad han sido inspeccionados. El recorrido de seguridad matutino de la planta de tratamiento de aguas residuales ha finalizado."
+	  }
+	}
 	]
 }

@@ -1,13 +1,17 @@
-[gd_scene load_steps=74 format=3 uid="uid://bnbdtip3vptxc"]
+[gd_scene load_steps=78 format=3 uid="uid://bnbdtip3vptxc"]
 
 [ext_resource type="Script" uid="uid://b78po4wueig00" path="res://clases/zones/basezone.gd" id="1_37tqx"]
 [ext_resource type="PackedScene" uid="uid://d4i7huvosagj1" path="res://zones/hillersleben/scripts/hl_flow_model/main.tscn" id="2_0nlau"]
+[ext_resource type="PackedScene" uid="uid://c16huirsom8ef" path="res://zones/hillersleben/scripts/task_locators/security_checks/Area3DVisual.tscn" id="2_5r3qd"]
+[ext_resource type="Script" uid="uid://cgnsbk378t0aq" path="res://systems/system-tasks/system_tasks_locator.gd" id="2_rm34v"]
 [ext_resource type="PackedScene" uid="uid://doyyrvn116gfv" path="res://models/labels/flow_simulation_volume_label.tscn" id="3_5rld8"]
 [ext_resource type="PackedScene" uid="uid://8k1q807gv3b8" path="res://models/van/van.tscn" id="3_xi370"]
 [ext_resource type="PackedScene" uid="uid://pbnqh5y64xbq" path="res://zones/hillersleben/scripts/hl_flow_model/overview.tscn" id="3_ybcmd"]
 [ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="4_0nlau"]
 [ext_resource type="PackedScene" uid="uid://cs507u3nvuu12" path="res://models/labels/flow_simulation_throughput_label.tscn" id="4_8upog"]
+[ext_resource type="PackedScene" uid="uid://d3qp4a3ahe2gf" path="res://models/demo_basin/task_blackboard/demo_task_blackboard.tscn" id="5_0p6js"]
 [ext_resource type="Script" uid="uid://d33fw1e70sdha" path="res://models/labels/function_map_reference.gd" id="6_h3jyd"]
+[ext_resource type="Script" uid="uid://dih0abuhxu7o5" path="res://systems/system-tasks/system_tasks_starter.gd" id="6_t3rbc"]
 [ext_resource type="PackedScene" uid="uid://c7yhfipghxiyv" path="res://models/doors/basedoor2m.tscn" id="8_1khpx"]
 [ext_resource type="Script" uid="uid://jgo7k1ecvdjx" path="res://zones/hillersleben/scripts/logik_doors_container.gd" id="8_6uclu"]
 [ext_resource type="PackedScene" uid="uid://b10l7m4qjudur" path="res://models/interaction/simple_button.tscn" id="8_duhpb"]
@@ -204,6 +208,53 @@ starting_position = NodePath("Config/spawn")
 starting_lookat = NodePath("Config/lookat")
 metadata/_custom_type_script = "uid://b78po4wueig00"
 
+[node name="Reference_point_floor" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, -2.842171e-14, 0, 2.842171e-14, 0.99999994, -30.67491, 48.741016, -2.301975)
+
+[node name="SECURITY_CHECKS" type="Node3D" parent="Reference_point_floor"]
+
+[node name="Area3D1" parent="Reference_point_floor/SECURITY_CHECKS" instance=ExtResource("2_5r3qd")]
+transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, 1.0337334, 1.3195686, -2.9768963)
+
+[node name="Locator_SecurityCheck1" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D1"]
+script = ExtResource("2_rm34v")
+locator_id = 5
+
+[node name="Area3D2" parent="Reference_point_floor/SECURITY_CHECKS" instance=ExtResource("2_5r3qd")]
+transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, 10.06057, -0.16364312, 35.998352)
+
+[node name="Locator_SecurityCheck2" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D2"]
+script = ExtResource("2_rm34v")
+locator_id = 6
+
+[node name="Area3D3" parent="Reference_point_floor/SECURITY_CHECKS" instance=ExtResource("2_5r3qd")]
+transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -39.949463, 2.8690605, 29.273115)
+
+[node name="Locator_SecurityCheck3" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D3"]
+script = ExtResource("2_rm34v")
+locator_id = 7
+
+[node name="Area3D4" parent="Reference_point_floor/SECURITY_CHECKS" instance=ExtResource("2_5r3qd")]
+transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -78.39233, 2.8690605, 23.400398)
+
+[node name="Locator_SecurityCheck4" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D4"]
+script = ExtResource("2_rm34v")
+locator_id = 8
+
+[node name="Area3D5" parent="Reference_point_floor/SECURITY_CHECKS" instance=ExtResource("2_5r3qd")]
+transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -73.36659, 2.8690605, 42.15164)
+
+[node name="Locator_SecurityCheck5" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D5"]
+script = ExtResource("2_rm34v")
+locator_id = 9
+
+[node name="Area3D6" parent="Reference_point_floor/SECURITY_CHECKS" instance=ExtResource("2_5r3qd")]
+transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -65.49611, 2.5643272, 62.471817)
+
+[node name="Locator_SecurityCheck6" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D6"]
+script = ExtResource("2_rm34v")
+locator_id = 10
+
 [node name="Config" type="Node3D" parent="."]
 
 [node name="North" type="Node3D" parent="Config"]
@@ -227,6 +278,13 @@ environment = SubResource("Environment_5rwjt")
 
 [node name="FlowSimulation" parent="." groups=["FLOWSIMULATION"] instance=ExtResource("2_0nlau")]
 overview_scene = ExtResource("3_ybcmd")
+
+[node name="DemoTaskBlackboard" parent="." instance=ExtResource("5_0p6js")]
+transform = Transform3D(-0.99986374, 1.4901163e-08, 0.01651007, 4.171066e-08, 1.0000001, 5.964481e-08, -0.01651001, 2.9802326e-08, -0.9998637, -70.62009, 48.376984, -37.925884)
+
+[node name="TasksStarter" type="Node" parent="DemoTaskBlackboard"]
+script = ExtResource("6_t3rbc")
+tasks_id = Array[int]([4, 5, 6, 7, 8, 9, 10])
 
 [node name="FlowSimulationLabels" type="Node3D" parent="."]
 

@@ -11,6 +11,154 @@
 					},
 	  "results": {
 		"success": [{"type": "SystemTasksResultUIPrint","text": "You repaired the aerator!!!" }]}
+	},
+	{
+	  "id": "Q_HL_SECURITYCHECK1",
+	  "conditions": {
+		"success": {
+		  "any": [
+			{
+			  "type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SECURITYCHECK1"
+			}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "Checkpoint 1 inspected."
+		  }
+		]
+	  }
+	},
+	{
+	  "id": "Q_HL_SECURITYCHECK2",
+	  "conditions": {
+		"success": {
+		  "any": [
+			{
+			  "type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SECURITYCHECK2"
+			}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "Checkpoint 2 inspected."
+		  }
+		]
+	  }
+	},
+	{
+	  "id": "Q_HL_SECURITYCHECK3",
+	  "conditions": {
+		"success": {
+		  "any": [
+			{
+			  "type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SECURITYCHECK3"
+			}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "Checkpoint 3 inspected."
+		  }
+		]
+	  }
+	},
+	{
+	  "id": "Q_HL_SECURITYCHECK4",
+	  "conditions": {
+		"success": {
+		  "any": [
+			{
+			  "type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SECURITYCHECK4"
+			}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "Checkpoint 4 inspected."
+		  }
+		]
+	  }
+	},
+	{
+	  "id": "Q_HL_SECURITYCHECK5",
+	  "conditions": {
+		"success": {
+		  "any": [
+			{
+			  "type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SECURITYCHECK5"
+			}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "Checkpoint 5 inspected."
+		  }
+		]
+	  }
+	},
+	{
+	  "id": "Q_HL_SECURITYCHECK6",
+	  "conditions": {
+		"success": {
+		  "any": [
+			{
+			  "type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SECURITYCHECK6"
+			}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "Checkpoint 6 inspected."
+		  }
+		]
+	  }
+	},
+	{
+	  "id": "Q_HL_SECURITYCHECK_ALL",
+	  "conditions": {
+		"success": {
+		  "all": [
+			{
+			  "type": "SystemTasksConditionFinishedTask",
+			  "units_id_completed": [
+				"Q_HL_SECURITYCHECK1",
+				"Q_HL_SECURITYCHECK2",
+				"Q_HL_SECURITYCHECK3",
+				"Q_HL_SECURITYCHECK4",
+				"Q_HL_SECURITYCHECK5",
+                "Q_HL_SECURITYCHECK6"
+			  ]
+			}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "All security checkpoints inspected. Morning routine complete."
+		  }
+		]
+	  }
 	}
 	]
 }

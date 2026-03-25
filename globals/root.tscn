@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://be108fdsaiduh" path="res://menus/fsm/menustates/stateloadingscene.gd" id="6_hm43d"]
 [ext_resource type="Script" uid="uid://d1xobjt0rfbe1" path="res://menus/ui_canvaslayer.gd" id="7_bm7q0"]
 [ext_resource type="Script" uid="uid://q20rn3ctmrhp" path="res://menus/fsm/menustates/stateselectenv.gd" id="7_cwfe2"]
-[ext_resource type="PackedScene" uid="uid://dc3sv4o68rv51" path="res://XR/zones_xr/zone_xr_door_demos.tscn" id="7_vuvmw"]
+[ext_resource type="PackedScene" uid="uid://cy6yaaww8s0it" path="res://XR/zones_xr/zone_xr_hillersleben.tscn" id="7_vuvmw"]
 [ext_resource type="Script" uid="uid://y08oej2rtpdq" path="res://menus/fsm/menustates/state_menu_settings.gd" id="8_cwfe2"]
 [ext_resource type="PackedScene" uid="uid://bb17hv1ufo6l0" path="res://menus/environmentselector/environmentselector.tscn" id="9_5uipj"]
 [ext_resource type="Script" uid="uid://b54m2yj3786pt" path="res://menus/fsm/menustates/state_menu_inventory.gd" id="9_n1s3a"]
