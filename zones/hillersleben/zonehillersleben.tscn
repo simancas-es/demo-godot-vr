@@ -423,11 +423,11 @@ curve = SubResource("Curve3D_7sq4a")
 meshplane = NodePath("../PSB-WSpiegel")
 flow_model = NodePath("../../../FlowSimulation")
 
-[node name="FF-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
-transform = Transform3D(1, 0, 0, 0, 0.9999997, 8.4703295e-21, 0, -8.4703295e-21, 0.9999997, -14.48247, -0.4042549, 28.407158)
+[node name="FF-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.9999997, 8.4703295e-21, 0, -8.4703295e-21, 0.9999997, -14.48247, 0.025829345, 28.407158)
 curve = SubResource("Curve3D_yuvhm")
-meshplane = NodePath("../../../Visuals/Referenz/psb_water")
 flow_model = NodePath("../../../FlowSimulation")
+container_id = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS/FF-WaterLevelFollower/PathFollow3D" index="0"]
 transform = Transform3D(0.39297915, 0, -0.9195474, 0.9195474, -4.3711392e-08, 0.39297915, -4.0194696e-08, -1, -1.7177666e-08, 0, 0, -3.5332031)
@@ -1375,33 +1375,8 @@ shape = SubResource("ConcavePolygonShape3D_ht8a3")
 
 [node name="Referenz" parent="Visuals" instance=ExtResource("15_h3jyd")]
 
-[node name="msb_water" parent="Visuals/Referenz" index="11"]
-visible = false
-
-[node name="bb2_water" parent="Visuals/Referenz" index="15"]
-visible = false
-
-[node name="bb1_water" parent="Visuals/Referenz" index="16"]
-visible = false
-
-[node name="psb_water" parent="Visuals/Referenz" index="32"]
-visible = false
-
-[node name="Cylinder_022" parent="Visuals/Referenz" index="820"]
-visible = false
-
-[node name="Cylinder_030" parent="Visuals/Referenz" index="823"]
-visible = false
-
-[node name="Plane_084" parent="Visuals/Referenz" index="838"]
-visible = false
-
-[node name="Plane_085" parent="Visuals/Referenz" index="839"]
-visible = false
-
 [editable path="Reference_point_floor/WATERLEVELS/FF-WaterLevelFollower"]
 [editable path="LadderFlockungsmittel"]
 [editable path="LadderGasspeicher1"]
 [editable path="Maschinengebäude/door_gebläse_1"]
 [editable path="Maschinengebäude/door_gebläse_2"]
-[editable path="Visuals/Referenz"]
