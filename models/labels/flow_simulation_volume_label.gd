@@ -11,7 +11,7 @@ const SimContainer = SimulationMain.Simulation.Ref.SimContainer
 @export var title_name_en : String = "BASIN XXXX" #Translate later automatically
 
 @export var flow_simulation_container : Containers.ID
-@export var flow_simulation_main : SimulationMain = null
+@export var flow_simulation_main : SimulationMain = null ##No need to add it since we will look for it if it doesnt exist
 
 const t_current_volume : String = "Current Volume (m3): "
 const t_current_fill_level : String = "Current Fill Level (%): "
@@ -23,9 +23,10 @@ func _ready() -> void:
 	set_numbers(0, 0)
 	
 	#HACK: avoid adding manually, but crashes if not found
-	for node in get_tree().get_nodes_in_group("FLOWSIMULATION"):
-		if node is SimulationMain:
-			flow_simulation_main = node
+	if flow_simulation_main == null:
+		for node in get_tree().get_nodes_in_group("FLOWSIMULATION"):
+			if node is SimulationMain:
+				flow_simulation_main = node
 	
 func set_numbers(volume, fill_level) -> void:
 	if stats_vol:
