@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx8l2qbku8m3t"]
+
+[ext_resource type="Script" uid="uid://c8numdvqfohul" path="res://zones/hillersleben/scripts/water_visuals/logik_waterlevel_path.gd" id="1_tluhg"]
+
+[sub_resource type="Curve3D" id="Curve3D_w4u61"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1.14, 0),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[node name="Path3D" type="Path3D" node_paths=PackedStringArray("meshplane", "flow_model")]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+curve = SubResource("Curve3D_w4u61")
+script = ExtResource("1_tluhg")
+meshplane = NodePath("")
+flow_model = NodePath("")
+container_id = 2
+
+[node name="PathFollow3D" type="PathFollow3D" parent="."]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, 0, 0, 0)
