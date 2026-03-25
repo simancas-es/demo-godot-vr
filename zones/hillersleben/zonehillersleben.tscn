@@ -556,23 +556,33 @@ tasks_id = Array[int]([4, 5, 6, 7, 8, 9, 10])
 
 [node name="FlowSimulationVolumeLabel" parent="FlowSimulationLabels/Volumes/ED" node_paths=PackedStringArray("flow_simulation_main") instance=ExtResource("3_5rld8")]
 transform = Transform3D(0.41553485, 0, -0.9095773, 0, 1, 0, 0.9095773, 0, 0.41553485, -22.90168, 50.45558, 2.4328036)
-title_name_en = "Voreindicker I"
+title_name_en = "Thickener I"
 flow_simulation_container = 8
 flow_simulation_main = NodePath("../../../../FlowSimulation")
 
-[node name="FlowSimulationVolumeLabel2" parent="FlowSimulationLabels/Volumes/ED" instance=ExtResource("3_5rld8")]
+[node name="FlowSimulationVolumeLabel2" parent="FlowSimulationLabels/Volumes/ED" node_paths=PackedStringArray("flow_simulation_main") instance=ExtResource("3_5rld8")]
 transform = Transform3D(0.9111733, 0, 0.41202334, 0, 1, 0, -0.41202334, 0, 0.9111733, -4.324496, 50.13927, 1.2443225)
+title_name_en = "Thickener II"
+flow_simulation_container = 9
+flow_simulation_main = NodePath("../../../../FlowSimulation")
 
-[node name="FlowSimulationVolumeLabel3" parent="FlowSimulationLabels/Volumes/ED" instance=ExtResource("3_5rld8")]
+[node name="FlowSimulationVolumeLabel3" parent="FlowSimulationLabels/Volumes/ED" node_paths=PackedStringArray("flow_simulation_main") instance=ExtResource("3_5rld8")]
 transform = Transform3D(0.8739165, 0, 0.48607612, 0, 1, 0, -0.48607612, 0, 0.8739165, -14.149677, 50.49138, -5.80049)
+title_name_en = "Post-thickener I"
+flow_simulation_container = 11
+flow_simulation_main = NodePath("../../../../FlowSimulation")
 
-[node name="FlowSimulationVolumeLabel4" parent="FlowSimulationLabels/Volumes/ED" instance=ExtResource("3_5rld8")]
+[node name="FlowSimulationVolumeLabel4" parent="FlowSimulationLabels/Volumes/ED" node_paths=PackedStringArray("flow_simulation_main") instance=ExtResource("3_5rld8")]
 transform = Transform3D(0.82029164, 0, 0.5719455, 0, 1, 0, -0.5719455, 0, 0.82029164, -1.9235961, 50.23654, -11.613716)
+title_name_en = "Thickener III"
+flow_simulation_container = 10
+flow_simulation_main = NodePath("../../../../FlowSimulation")
 
-[node name="vol_psb" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
+[node name="vol_psb" parent="FlowSimulationLabels/Volumes" node_paths=PackedStringArray("flow_simulation_main") instance=ExtResource("3_5rld8")]
 transform = Transform3D(0.62641335, -0.20174713, 0.7529306, 0, 0.9659258, 0.25881904, -0.77949107, -0.1621277, 0.6050688, -52.51169, 52.136063, 21.553852)
 title_name_en = "Primary Clarifier"
 flow_simulation_container = 2
+flow_simulation_main = NodePath("../../../FlowSimulation")
 
 [node name="vol_ff" parent="FlowSimulationLabels/Volumes" instance=ExtResource("3_5rld8")]
 transform = Transform3D(-0.90974396, 0.29356933, -0.29356933, 0, 0.70710677, 0.7071067, 0.41516972, 0.6432861, -0.64328617, -47.778393, 52.01331, 22.917755)
