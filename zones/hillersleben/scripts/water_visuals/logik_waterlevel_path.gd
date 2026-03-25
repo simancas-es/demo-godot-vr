@@ -23,7 +23,7 @@ func _ready() -> void:
 	
 func on_update() -> void:
 	var vol = container.get_volume("water")
-	var fraction = (vol/container.max_volume_m3)
+	var fraction = clampf((vol/container.max_volume_m3 + 0.0001),0, 1)
 	pathfollow3d.progress_ratio = fraction
 	if meshplane == null : return
 	meshplane.global_position = pathfollow3d.global_position
