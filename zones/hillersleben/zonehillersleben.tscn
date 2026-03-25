@@ -420,7 +420,7 @@ container_id = 11
 [node name="PSB-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, -28.993435, 0.061252594, 17.350039)
 curve = SubResource("Curve3D_7sq4a")
-meshplane = NodePath("../../../Visuals/Referenz/psb_water")
+meshplane = NodePath("../PSB-WSpiegel")
 flow_model = NodePath("../../../FlowSimulation")
 
 [node name="FF-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
@@ -494,7 +494,6 @@ mesh = SubResource("CylinderMesh_gfnr6")
 
 [node name="PSB-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -28.948263, 3.5105782, 17.491814)
-visible = false
 mesh = SubResource("CylinderMesh_du4yn")
 
 [node name="MSB-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
@@ -503,10 +502,12 @@ mesh = SubResource("CylinderMesh_w4u61")
 
 [node name="NB1-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -81.778854, 1.5233307, 56.31951)
+visible = false
 mesh = SubResource("CylinderMesh_w4u61")
 
 [node name="NB2-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -94.50067, 1.5233307, 27.155348)
+visible = false
 mesh = SubResource("CylinderMesh_w4u61")
 
 [node name="BB2-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
@@ -1373,6 +1374,24 @@ shape = SubResource("ConcavePolygonShape3D_ht8a3")
 [node name="Visuals" type="Node3D" parent="."]
 
 [node name="Referenz" parent="Visuals" instance=ExtResource("15_h3jyd")]
+
+[node name="msb_water" parent="Visuals/Referenz" index="11"]
+visible = false
+
+[node name="bb2_water" parent="Visuals/Referenz" index="15"]
+visible = false
+
+[node name="bb1_water" parent="Visuals/Referenz" index="16"]
+visible = false
+
+[node name="psb_water" parent="Visuals/Referenz" index="32"]
+visible = false
+
+[node name="Cylinder_022" parent="Visuals/Referenz" index="820"]
+visible = false
+
+[node name="Cylinder_030" parent="Visuals/Referenz" index="823"]
+visible = false
 
 [node name="Plane_084" parent="Visuals/Referenz" index="838"]
 visible = false
