@@ -5,11 +5,14 @@ const Ref = preload("uid://b6alvcbiyby3g")
 var containers: Array[Ref.SimContainer] = []
 var edges: Array[Ref.SimEdge] = []
 
+signal updated
+
 func register_container(c: Ref.SimContainer) -> void:
 	containers.append(c)
 
 func register_edge(e: Ref.SimEdge) -> void:
 	edges.append(e)
+	
 func step(dt: float) -> void:
 
 	var transfers := []
@@ -51,3 +54,5 @@ func step(dt: float) -> void:
 		e.source.add_material(e.material, -flow)
 		# distribute to targets safely
 		e.apply_flow(flow)
+	
+	updated.emit()

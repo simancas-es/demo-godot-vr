@@ -6,10 +6,11 @@ var sim : Simulation
 @export var overview_scene : PackedScene
 var overview : Overview
 
-func _ready() -> void:
+func _init() -> void:
 	sim = Simulation.new()	
-	add_child(sim)
 	
+func _ready() -> void:	
+	add_child(sim)	
 	sim.set_speed(5.0)
 	sim.start()
 	
