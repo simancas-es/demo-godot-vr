@@ -25,6 +25,7 @@ func on_update() -> void:
 	var vol = container.get_volume("water")
 	var fraction = (vol/container.max_volume_m3)
 	pathfollow3d.progress_ratio = fraction
+	if meshplane == null : return
 	meshplane.global_position = pathfollow3d.global_position
 	if fraction < fraction_to_disappear : meshplane.visible = false
 	else: meshplane.visible = true
