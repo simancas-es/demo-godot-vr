@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://bnbdtip3vptxc"]
+[gd_scene load_steps=83 format=3 uid="uid://bnbdtip3vptxc"]
 
 [ext_resource type="Script" uid="uid://b78po4wueig00" path="res://clases/zones/basezone.gd" id="1_37tqx"]
 [ext_resource type="PackedScene" uid="uid://d4i7huvosagj1" path="res://zones/hillersleben/scripts/hl_flow_model/main.tscn" id="2_0nlau"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://pbnqh5y64xbq" path="res://zones/hillersleben/scripts/hl_flow_model/overview.tscn" id="3_ybcmd"]
 [ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="4_0nlau"]
 [ext_resource type="PackedScene" uid="uid://cs507u3nvuu12" path="res://models/labels/flow_simulation_throughput_label.tscn" id="4_8upog"]
+[ext_resource type="PackedScene" uid="uid://dx8l2qbku8m3t" path="res://zones/hillersleben/scripts/water_visuals/WaterLevelFollower.tscn" id="4_gfnr6"]
 [ext_resource type="PackedScene" uid="uid://d3qp4a3ahe2gf" path="res://models/demo_basin/task_blackboard/demo_task_blackboard.tscn" id="5_0p6js"]
 [ext_resource type="Script" uid="uid://d33fw1e70sdha" path="res://models/labels/function_map_reference.gd" id="6_h3jyd"]
 [ext_resource type="Script" uid="uid://dih0abuhxu7o5" path="res://systems/system-tasks/system_tasks_starter.gd" id="6_t3rbc"]
@@ -21,6 +22,28 @@
 [ext_resource type="PackedScene" uid="uid://cuwst8kcvigrx" path="res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn" id="10_ybcmd"]
 [ext_resource type="PackedScene" uid="uid://dl3g3hke6ex3m" path="res://assets/zones/hillersleben/models/Referenz/Referenz.gltf" id="15_h3jyd"]
 [ext_resource type="Script" uid="uid://b5sdbpkp587p8" path="res://zones/hillersleben/scripts/mg_klappbare_tür.gd" id="16_k6604"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_du4yn"]
+
+[sub_resource type="Curve3D" id="Curve3D_gfnr6"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.4348378, 1.4119937e-21),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_du4yn"]
+albedo_color = Color(0.34901962, 0.36078432, 0.21568628, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_w4u61"]
+material = SubResource("StandardMaterial3D_du4yn")
+top_radius = 0.0
+bottom_radius = 5.35
+height = 0.001
+radial_segments = 12
+rings = 1
+cap_top = false
+cap_bottom = false
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ir53q"]
 
@@ -254,6 +277,63 @@ transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235,
 [node name="Locator_SecurityCheck6" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D6"]
 script = ExtResource("2_rm34v")
 locator_id = 10
+
+[node name="WATERLEVELS" type="Node3D" parent="Reference_point_floor"]
+
+[node name="Test" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 1.6940659e-21, 0, -1.6940659e-21, 0.9999998, 0, 0, 0)
+visible = false
+mesh = SubResource("PlaneMesh_du4yn")
+
+[node name="WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 5.0821977e-21, 0, -5.0821977e-21, 0.9999998, 0, 0, 0)
+visible = false
+meshplane = NodePath("../Test")
+flow_model = NodePath("../../../FlowSimulation")
+
+[node name="VED1WaterLevelMesh" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 12.716552, -0.26135635, 3.6128376)
+curve = SubResource("Curve3D_gfnr6")
+meshplane = NodePath("../VED1")
+flow_model = NodePath("../../../FlowSimulation")
+container_id = 8
+
+[node name="VED2WaterLevelMesh" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 25.737265, -0.26135635, -1.1041033)
+curve = SubResource("Curve3D_gfnr6")
+meshplane = NodePath("../VED2")
+flow_model = NodePath("../../../FlowSimulation")
+container_id = 9
+
+[node name="VED3WaterLevelMesh" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 26.918934, -0.26135635, -14.33936)
+curve = SubResource("Curve3D_gfnr6")
+meshplane = NodePath("../VED3")
+flow_model = NodePath("../../../FlowSimulation")
+container_id = 10
+
+[node name="NED1WaterLevelMesh" parent="Reference_point_floor/WATERLEVELS" node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 6.7762636e-21, 0, -6.7762636e-21, 0.99999976, 14.834043, -0.26135635, -8.75855)
+curve = SubResource("Curve3D_gfnr6")
+meshplane = NodePath("../NED1")
+flow_model = NodePath("../../../FlowSimulation")
+container_id = 11
+
+[node name="VED1" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.135928, 0.36790848, 3.241087)
+mesh = SubResource("CylinderMesh_w4u61")
+
+[node name="VED2" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.954353, 0.36790848, -1.9012799)
+mesh = SubResource("CylinderMesh_w4u61")
+
+[node name="NED1" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.817408, 0.36790848, -8.727055)
+mesh = SubResource("CylinderMesh_w4u61")
+
+[node name="VED3" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.366383, 0.36790848, -14.271176)
+mesh = SubResource("CylinderMesh_w4u61")
 
 [node name="Config" type="Node3D" parent="."]
 
@@ -764,6 +844,7 @@ nodepath = NodePath("../../Visuals/Referenz/fmds_tür")
 
 [node name="SimpleGeometry" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.258194, 45.288044, 24.39973)
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="SimpleGeometry"]
