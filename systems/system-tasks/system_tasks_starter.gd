@@ -2,6 +2,7 @@ extends Node
 #Note: Onlz works if the task manager is global, else it needs to write its own logic to find it.
 
 @export var task_id : SYSTEMTASKSSETTINGS.UNIT_ID = SYSTEMTASKSSETTINGS.UNIT_ID.UNKNOWN
+@export var tasks_id : Array[SYSTEMTASKSSETTINGS.UNIT_ID] = [SYSTEMTASKSSETTINGS.UNIT_ID.UNKNOWN]
 @export var is_autoloaded_taskmanager : bool = true #If global then it will try to find a singleton for it
 @export var activate_on_enter_tree : bool = true
 
@@ -30,6 +31,8 @@ func _enter_tree() -> void:
 func activate() -> void:
 	if manager:
 		manager.activate_task(task_id)
+		for t in tasks_id:
+			manager.activate_task(t)
 	else:
 		push_error("Activating tasks starter without manager!!")
 

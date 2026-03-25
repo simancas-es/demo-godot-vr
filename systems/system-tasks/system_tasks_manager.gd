@@ -51,6 +51,7 @@ func add_task(task : SystemTasksUnit) -> ERROR:
 	return ERROR.NO_ERROR
 	
 func activate_task(task_id : int) -> ERROR:
+	if task_id == SYSTEMTASKSSETTINGS.UNIT_ID.UNKNOWN : return ERROR.ERROR
 	if task_id in tasks:
 		tasks[task_id].start()
 		updated.emit(task_id, tasks[task_id].status)
