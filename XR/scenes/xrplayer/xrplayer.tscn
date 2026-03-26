@@ -305,7 +305,8 @@ tracker = &"right_hand"
 pose = &"grip"
 show_when_tracked = true
 
-[node name="DebugCollisionLayer" parent="RightHand" node_paths=PackedStringArray("object") instance=ExtResource("20_ptqt2")]
+[node name="DebugCollisionLayer" parent="RightHand" unique_id=1282177437 node_paths=PackedStringArray("object") instance=ExtResource("20_ptqt2")]
+visible = false
 object = NodePath("../XRToolsCollisionHand")
 
 [node name="DebugCollisionLayer2" parent="RightHand" unique_id=820139247 node_paths=PackedStringArray("object") instance=ExtResource("20_ptqt2")]
