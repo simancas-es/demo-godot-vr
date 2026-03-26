@@ -9,9 +9,6 @@ var task_text_manager : HELPREF.TaskTextManager
 @onready var task_items_container := $ScrollContainer/VBoxContainer
 var task_panels : Dictionary[int, PanelContainer] = {} #References in form of task_id - panel
 
-# The locale for titles/descriptions
-var locale: String = "en"
-
 @export_range (8, 256) var font_size : int = 14
 @export var filter_only : Array[TasksUnit.STATUS] = [TasksUnit.STATUS.IN_PROGRESS, TasksUnit.STATUS.COMPLETED] #show only
 
@@ -75,7 +72,7 @@ func populate_task_list():
 	
 	var tasks = world_task_manager.tasks.keys() + world_task_manager.history.keys()
 	for task_id in tasks:
-		var task_data = task_text_manager.get_text(task_id, locale)
+		var task_data = task_text_manager.get_text(task_id, TranslationServer.get_locale())
 		var status_enum = world_task_manager.check_task_status(task_id)
 
 		var task_panel = _create_task_panel(task_id, task_data, status_enum)
@@ -150,7 +147,7 @@ func update_task_text(task_id: int) -> void:
 		return
 
 	var panel = task_panels[task_id]
-	var task_data = task_text_manager.get_text(task_id, locale)
+	var task_data = task_text_manager.get_text(task_id,  TranslationServer.get_locale())
 
 	var vbox = panel.get_child(0) as VBoxContainer
 	if vbox and vbox.get_child_count() >= 2:
@@ -158,3 +155,9 @@ func update_task_text(task_id: int) -> void:
 		(vbox.get_child(0) as Label).text = task_data.get("title", "MISSING TITLE")
 		# Update description
 		(vbox.get_child(1) as Label).text = task_data.get("text", "MISSING TEXT")
+		
+##Listen to changes in the locale
+func _notification(what):
+	if what == NOTIFICATION_TRANSLATION_CHANGED :
+		for t_id in task_panels.keys():
+			update_task_text(t_id)
