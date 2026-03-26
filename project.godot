@@ -8,19 +8,23 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="VirtualTour"
 config/version="0.2.2"
 run/main_scene="uid://1gnljh2uer8"
-config/features=PackedStringArray("4.5", "Mobile")
+config/features=PackedStringArray("4.6", "Mobile")
 boot_splash/bg_color=Color(0.732139, 0.76047, 0.849627, 1)
 config/icon="res://icon.svg"
 
 [autoload]
 
-XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
-XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
+XRToolsUserSettings="*uid://bqgb8i74tm0t"
+XRToolsRumbleManager="*uid://by853dk86g1qw"
 ConfigManager="*res://globals/configmanager.gd"
 Cache="*res://globals/cache.gd"
 AudioManager="*res://globals/audiomanager.gd"
@@ -38,6 +42,10 @@ gdscript/warnings/unused_signal=0
 window/size/viewport_width=1360
 window/size/viewport_height=768
 window/size/borderless=true
+
+[dotnet]
+
+project/assembly_name="VirtualTour"
 
 [editor]
 
