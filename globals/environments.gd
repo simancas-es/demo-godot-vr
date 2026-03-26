@@ -5,10 +5,10 @@ class_name ENVIRONMENTS
 #Each Environment can have a different camera and controls.
 #When exiting from a ROOM ID, active environment looks for the 3D position
 
-enum ID {HOCHSCHULE,
-		GERWISCH,
+enum ID {HILLERSLEBEN,
 		OBSERVATORY,
-		HILLERSLEBEN
+		HOCHSCHULE,
+		GERWISCH,		
 		
 			}
 
