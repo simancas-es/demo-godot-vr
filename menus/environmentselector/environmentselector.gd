@@ -24,6 +24,7 @@ var default_position : Vector2
 func _ready() -> void:
 	load_button.load_current.connect(load_current)
 	entry_list.change_current_selected.connect(on_update_selection)	
+	entry_list.load_current.connect(load_current)
 	default_position = position
 	#position.x = -self.size.x
 	visible = false

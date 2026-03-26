@@ -2,6 +2,7 @@ extends ScrollContainer
 class_name EnvSelectorEntryContainer
 
 signal change_current_selected(id : ENVIRONMENTS.ID)
+signal load_current
 
 @onready var vbcontainer : VBoxContainer = $VBoxContainer
 
@@ -41,11 +42,17 @@ func connect_to_children():
 			var c : EnvEntry = ch
 			if not c.entry_selected.is_connected(on_update_selection):
 				c.entry_selected.connect(on_update_selection)
-		
+			if not c.entry_doubleclicked.is_connected(on_doubleclick_entry):
+				c.entry_doubleclicked.connect(on_doubleclick_entry)
+	
 func _ready() -> void:
 	populate_entries.call_deferred()
 	connect_to_children.call_deferred()
 
+func on_doubleclick_entry(env_id : ENVIRONMENTS.ID, _coor_latlong : Vector2):
+	change_current_selected.emit(env_id)
+	load_current.emit()
+	
 
 func on_update_selection(env_id : ENVIRONMENTS.ID, _coor_latlong : Vector2):
 	change_current_selected.emit(env_id)
