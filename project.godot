@@ -242,7 +242,7 @@ pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://translation/en.po", "res://translation/es.po", "res://translation/de.po", "res://translation/fr.po")
+locale/translations=PackedStringArray("res://translation/de.po", "res://translation/en.po", "res://translation/es.po", "res://translation/fr.po")
 locale/translation_add_builtin_strings_to_pot=true
 locale/test="es"
 locale/locale_filter_mode=0
