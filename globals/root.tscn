@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://1gnljh2uer8"]
+[gd_scene format=3 uid="uid://1gnljh2uer8"]
 
 [ext_resource type="Script" uid="uid://ds6ipr7ox8br3" path="res://globals/root.gd" id="1_6d14a"]
 [ext_resource type="Script" uid="uid://d31trbvb6igxn" path="res://menus/fsm/statemachinemenus.gd" id="2_6hyip"]
@@ -47,66 +47,69 @@ Button/styles/hover = SubResource("StyleBoxFlat_mhhay")
 Button/styles/normal = SubResource("StyleBoxFlat_psfs6")
 Button/styles/pressed = SubResource("StyleBoxFlat_85c3v")
 
-[node name="Root" type="Node" node_paths=PackedStringArray("state_machine_menus")]
+[sub_resource type="LabelSettings" id="LabelSettings_vuvmw"]
+font_size = 15
+
+[node name="Root" type="Node" unique_id=960715490 node_paths=PackedStringArray("state_machine_menus")]
 script = ExtResource("1_6d14a")
 state_machine_menus = NodePath("StateMachine")
 
-[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
+[node name="StateMachine" type="Node" parent="." unique_id=440481474 node_paths=PackedStringArray("starting_state")]
 process_mode = 3
 script = ExtResource("2_6hyip")
 starting_state = NodePath("IntroScreen")
 metadata/_custom_type_script = "uid://d31trbvb6igxn"
 
-[node name="IntroScreen" type="Node" parent="StateMachine"]
+[node name="IntroScreen" type="Node" parent="StateMachine" unique_id=1252799340]
 script = ExtResource("3_cwfe2")
 
-[node name="InScene" type="Node" parent="StateMachine"]
+[node name="InScene" type="Node" parent="StateMachine" unique_id=270508357]
 unique_name_in_owner = true
 script = ExtResource("4_n1s3a")
 metadata/_custom_type_script = "uid://8v151neia71f"
 
-[node name="InRoom" type="Node" parent="StateMachine"]
+[node name="InRoom" type="Node" parent="StateMachine" unique_id=1575718548]
 script = ExtResource("5_rtrm1")
 metadata/_custom_type_script = "uid://8v151neia71f"
 
-[node name="InVR" type="Node" parent="StateMachine"]
+[node name="InVR" type="Node" parent="StateMachine" unique_id=2078234947]
 script = ExtResource("6_bm7q0")
 intro_map = ExtResource("7_vuvmw")
 metadata/_custom_type_script = "uid://8v151neia71f"
 
-[node name="Loading" type="Node" parent="StateMachine"]
+[node name="Loading" type="Node" parent="StateMachine" unique_id=1912303094]
 unique_name_in_owner = true
 script = ExtResource("6_hm43d")
 metadata/_custom_type_script = "uid://8v151neia71f"
 
-[node name="StateMenuEnvSelector" type="Node" parent="StateMachine"]
+[node name="StateMenuEnvSelector" type="Node" parent="StateMachine" unique_id=127388866]
 unique_name_in_owner = true
 script = ExtResource("7_cwfe2")
 metadata/_custom_type_script = "uid://q20rn3ctmrhp"
 
-[node name="StateMenuSettings" type="Node" parent="StateMachine"]
+[node name="StateMenuSettings" type="Node" parent="StateMachine" unique_id=1284571840]
 unique_name_in_owner = true
 script = ExtResource("8_cwfe2")
 metadata/_custom_type_script = "uid://8v151neia71f"
 
-[node name="StateMenuInventory" type="Node" parent="StateMachine"]
+[node name="StateMenuInventory" type="Node" parent="StateMachine" unique_id=1831812371]
 unique_name_in_owner = true
 script = ExtResource("9_n1s3a")
 inventoryui_scene = ExtResource("10_n1s3a")
 metadata/_custom_type_script = "uid://8v151neia71f"
 
-[node name="UI_CanvasLayer" type="CanvasLayer" parent="."]
+[node name="UI_CanvasLayer" type="CanvasLayer" parent="." unique_id=773268813]
 unique_name_in_owner = true
 process_mode = 3
 script = ExtResource("7_bm7q0")
 
-[node name="DebugTaskShow" parent="UI_CanvasLayer" instance=ExtResource("12_wgoxm")]
+[node name="DebugTaskShow" parent="UI_CanvasLayer" unique_id=630792426 instance=ExtResource("12_wgoxm")]
 unique_name_in_owner = true
 visible = false
 anchor_right = 0.25
 filter_only = Array[int]([1])
 
-[node name="DebugStateText" type="Label" parent="UI_CanvasLayer"]
+[node name="DebugStateText" type="Label" parent="UI_CanvasLayer" unique_id=1354467370]
 unique_name_in_owner = true
 auto_translate_mode = 2
 anchors_preset = 2
@@ -115,7 +118,7 @@ anchor_bottom = 1.0
 grow_vertical = 0
 text = "PLACEHOLDER_ROOTTEXT"
 
-[node name="PanelContainer" type="PanelContainer" parent="UI_CanvasLayer"]
+[node name="PanelContainer" type="PanelContainer" parent="UI_CanvasLayer" unique_id=1907333030]
 unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
@@ -128,18 +131,18 @@ size_flags_vertical = 3
 mouse_filter = 2
 theme = SubResource("Theme_mfm05")
 
-[node name="EnvironmentSelector" parent="UI_CanvasLayer/PanelContainer" instance=ExtResource("9_5uipj")]
+[node name="EnvironmentSelector" parent="UI_CanvasLayer/PanelContainer" unique_id=1814480720 instance=ExtResource("9_5uipj")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 mouse_filter = 1
 
-[node name="MenuSettings" parent="UI_CanvasLayer/PanelContainer" instance=ExtResource("10_2hlt0")]
+[node name="MenuSettings" parent="UI_CanvasLayer/PanelContainer" unique_id=890496253 instance=ExtResource("10_2hlt0")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 
-[node name="PanelContainerTemporal" type="PanelContainer" parent="UI_CanvasLayer"]
+[node name="PanelContainerTemporal" type="PanelContainer" parent="UI_CanvasLayer" unique_id=1679327692]
 unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = -1
@@ -153,10 +156,33 @@ size_flags_vertical = 3
 mouse_filter = 2
 theme = SubResource("Theme_mfm05")
 
-[node name="PanelContainerTemporalVBox" type="VBoxContainer" parent="UI_CanvasLayer/PanelContainerTemporal"]
+[node name="PanelContainerTemporalVBox" type="VBoxContainer" parent="UI_CanvasLayer/PanelContainerTemporal" unique_id=1075163312]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
 alignment = 1
 
-[node name="StartXR" parent="." instance=ExtResource("16_bm7q0")]
+[node name="Panel" type="Panel" parent="UI_CanvasLayer" unique_id=1880803786]
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 0.825
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.080078125
+offset_top = -0.16003418
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="UI_CanvasLayer/Panel" unique_id=1222142220]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "WASD - Bewegung/Movement
+ ␣ - Springen/Jump , 🡅 - Rennen/Run
+E - Interaction, LMB
+RT - Inventarzyklen, I-Inventar
+Mausrad/Mousewheel - Zoom
+"
+label_settings = SubResource("LabelSettings_vuvmw")
+
+[node name="StartXR" parent="." unique_id=1145080393 instance=ExtResource("16_bm7q0")]
