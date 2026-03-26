@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bb17hv1ufo6l0"]
+[gd_scene format=3 uid="uid://bb17hv1ufo6l0"]
 
 [ext_resource type="Script" uid="uid://cmcn2qjicc1yr" path="res://menus/environmentselector/environmentselector.gd" id="1_lf1o8"]
 [ext_resource type="Script" uid="uid://jbqdaeh7ciwa" path="res://menus/environmentselector/scrollenv.gd" id="1_mhfwo"]
@@ -27,7 +27,7 @@ VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_gwcsd")
 VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_xs6fq")
 VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_sygnq")
 
-[node name="EnvironmentSelector" type="Control"]
+[node name="EnvironmentSelector" type="Control" unique_id=765801795]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 15
@@ -39,7 +39,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_lf1o8")
 
-[node name="ScrollEntryContainer" type="ScrollContainer" parent="."]
+[node name="ScrollEntryContainer" type="ScrollContainer" parent="." unique_id=371675585]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -57,14 +57,14 @@ vertical_scroll_mode = 2
 script = ExtResource("1_mhfwo")
 metadata/_edit_use_anchors_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollEntryContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollEntryContainer" unique_id=393304632]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
 theme_override_constants/separation = 10
 
-[node name="LOADENV" type="TextureButton" parent="."]
+[node name="LOADENV" type="TextureButton" parent="." unique_id=1253145724]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
@@ -78,7 +78,7 @@ mouse_filter = 1
 script = ExtResource("5_605b5")
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="LOADENV"]
+[node name="ColorRect" type="ColorRect" parent="LOADENV" unique_id=1760236364]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -88,7 +88,7 @@ grow_vertical = 2
 mouse_filter = 1
 color = Color(0.595444, 0.588846, 1.34766e-06, 1)
 
-[node name="LoadText" type="Label" parent="LOADENV"]
+[node name="LoadText" type="Label" parent="LOADENV" unique_id=1079282348]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -105,7 +105,7 @@ text = "LOAD"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MapConstraint" type="Control" parent="."]
+[node name="MapConstraint" type="Control" parent="." unique_id=323329970]
 unique_name_in_owner = true
 clip_contents = true
 layout_mode = 1
@@ -115,7 +115,7 @@ anchor_right = 0.95
 anchor_bottom = 0.7
 script = ExtResource("5_gwcsd")
 
-[node name="MapPanel" parent="MapConstraint" instance=ExtResource("5_lf1o8")]
+[node name="MapPanel" parent="MapConstraint" unique_id=599340775 instance=ExtResource("5_lf1o8")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1

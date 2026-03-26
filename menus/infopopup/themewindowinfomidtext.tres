@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://kyc6vue6ofpi"]
+[gd_resource type="Theme" format=3 uid="uid://kyc6vue6ofpi"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkhh6"]
 draw_center = false

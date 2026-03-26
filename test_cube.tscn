@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bb6gwaomhbe4y"]
+[gd_scene format=3 uid="uid://bb6gwaomhbe4y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pvttt"]
 transparency = 1
@@ -9,8 +9,8 @@ emission_energy_multiplier = 4.2
 [sub_resource type="BoxMesh" id="BoxMesh_pvttt"]
 material = SubResource("StandardMaterial3D_pvttt")
 
-[node name="TestCube" type="Node3D"]
+[node name="TestCube" type="Node3D" unique_id=253896372]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=81591719]
 transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
 mesh = SubResource("BoxMesh_pvttt")

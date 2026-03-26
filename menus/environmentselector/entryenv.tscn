@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d38japcdse6jl"]
+[gd_scene format=3 uid="uid://d38japcdse6jl"]
 
 [ext_resource type="Script" uid="uid://2f0eglb5rmb3" path="res://menus/environmentselector/enventry.gd" id="1_h731h"]
 [ext_resource type="Texture2D" uid="uid://dbw2o2ynsa5nh" path="res://assets/zones/demo_vista/demo_vista.bmp" id="3_cm4qs"]
@@ -6,7 +6,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_15m78"]
 font_size = 20
 
-[node name="EnvEntry" type="TextureButton"]
+[node name="EnvEntry" type="TextureButton" unique_id=546873951]
 custom_minimum_size = Vector2(50, 200)
 anchors_preset = 14
 anchor_top = 0.5
@@ -21,7 +21,7 @@ mouse_filter = 1
 ignore_texture_size = true
 script = ExtResource("1_h731h")
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=368091479]
 layout_mode = 1
 anchor_left = 0.05
 anchor_right = 0.95
@@ -29,7 +29,7 @@ anchor_bottom = 1.0
 mouse_filter = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=1013578477]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,7 +39,7 @@ grow_vertical = 2
 theme_override_constants/separation = 30
 metadata/_edit_use_anchors_ = true
 
-[node name="Preview" type="TextureRect" parent="Control/HBoxContainer"]
+[node name="Preview" type="TextureRect" parent="Control/HBoxContainer" unique_id=1012325297]
 unique_name_in_owner = true
 clip_contents = true
 custom_minimum_size = Vector2(200, 200)
@@ -49,12 +49,12 @@ texture = ExtResource("3_cm4qs")
 expand_mode = 1
 stretch_mode = 2
 
-[node name="Control" type="Control" parent="Control/HBoxContainer"]
+[node name="Control" type="Control" parent="Control/HBoxContainer" unique_id=1645292634]
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 1
 
-[node name="Description" type="VBoxContainer" parent="Control/HBoxContainer/Control"]
+[node name="Description" type="VBoxContainer" parent="Control/HBoxContainer/Control" unique_id=487776958]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
@@ -62,7 +62,7 @@ anchor_bottom = 1.0
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Title" type="Label" parent="Control/HBoxContainer/Control/Description"]
+[node name="Title" type="Label" parent="Control/HBoxContainer/Control/Description" unique_id=1277339372]
 unique_name_in_owner = true
 auto_translate_mode = 2
 custom_minimum_size = Vector2(0, 10)
@@ -72,7 +72,7 @@ text = "PLACEHOLDER_ENVENTRY_TITLE"
 label_settings = SubResource("LabelSettings_15m78")
 autowrap_mode = 2
 
-[node name="Descriptiontext" type="Label" parent="Control/HBoxContainer/Control/Description"]
+[node name="Descriptiontext" type="Label" parent="Control/HBoxContainer/Control/Description" unique_id=2094619981]
 unique_name_in_owner = true
 auto_translate_mode = 2
 custom_minimum_size = Vector2(0, 10)
