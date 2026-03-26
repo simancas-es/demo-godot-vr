@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dsuvjembw0hgm"]
+[gd_scene format=3 uid="uid://dsuvjembw0hgm"]
 
 [ext_resource type="Script" uid="uid://chcrq4anji11l" path="res://XR/scenes/doors/hinged_door_api.gd" id="1_qk8nm"]
 [ext_resource type="Script" uid="uid://jc0js3dq6nue" path="res://XR/scenes/doors/hinged_door_body.gd" id="2_xoiej"]
@@ -31,10 +31,10 @@ size = Vector3(0.1, 0.1, 0.3)
 [sub_resource type="BoxMesh" id="BoxMesh_ogaye"]
 size = Vector3(0.1, 0.1, 0.1)
 
-[node name="HingedDoor" type="Node3D"]
+[node name="HingedDoor" type="Node3D" unique_id=2143822964]
 script = ExtResource("1_qk8nm")
 
-[node name="HingedDoorBody" type="RigidBody3D" parent="." node_paths=PackedStringArray("DoorHandleGrab", "DoorHandleOrigin", "Hinge", "DoorHandleModel")]
+[node name="HingedDoorBody" type="RigidBody3D" parent="." unique_id=1094397032 node_paths=PackedStringArray("DoorHandleGrab", "DoorHandleOrigin", "Hinge", "DoorHandleModel")]
 collision_layer = 536870912
 collision_mask = 0
 mass = 50.0
@@ -47,56 +47,56 @@ Hinge = NodePath("../HingeJoint3D")
 DoorHandleModel = NodePath("DoorHandleOrigin/DoorHandleModel")
 handle_turn_threshold_deg = 60.0
 
-[node name="DoorBodyShape" type="CollisionShape3D" parent="HingedDoorBody"]
+[node name="DoorBodyShape" type="CollisionShape3D" parent="HingedDoorBody" unique_id=1222565205]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6411514, 1.377372, -0.016021738)
 shape = SubResource("1")
 debug_color = Color(0, 0.6392157, 0.34901962, 1)
 
-[node name="trafo_tür" parent="HingedDoorBody" instance=ExtResource("3_qk8nm")]
-transform = Transform3D(0.9392262, -8.210975e-08, -0.3432991, 8.7422784e-08, 1, -8.606524e-16, 0.3432991, -3.0012153e-08, 0.9392262, 0, 0, 0)
+[node name="trafo_tür" parent="HingedDoorBody" unique_id=899452159 instance=ExtResource("3_qk8nm")]
+transform = Transform3D(0.922363, -8.063551e-08, -0.38632464, 8.742278e-08, 1, 7.179819e-16, 0.38632464, -3.3773564e-08, 0.922363, 0, 0, 0)
 
-[node name="DoorBodyMesh" type="MeshInstance3D" parent="HingedDoorBody"]
+[node name="DoorBodyMesh" type="MeshInstance3D" parent="HingedDoorBody" unique_id=30978185]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, 0)
 visible = false
 mesh = SubResource("2")
 
-[node name="DoorHandleOrigin" type="Node3D" parent="HingedDoorBody"]
+[node name="DoorHandleOrigin" type="Node3D" parent="HingedDoorBody" unique_id=1010835756]
 transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.9772899, 1.1555322, 5.9604645e-08)
 
-[node name="DoorHandleModel" type="Node3D" parent="HingedDoorBody/DoorHandleOrigin"]
+[node name="DoorHandleModel" type="Node3D" parent="HingedDoorBody/DoorHandleOrigin" unique_id=712707882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00131702, 0.100484, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel" unique_id=1881701817]
 mesh = SubResource("3")
 surface_material_override/0 = SubResource("StandardMaterial3D_xoiej")
 
-[node name="Handle1" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel"]
+[node name="Handle1" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel" unique_id=842135898]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04, 0, 0.09)
 mesh = SubResource("4")
 surface_material_override/0 = SubResource("StandardMaterial3D_xoiej")
 
-[node name="FHRight" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle1" instance=ExtResource("4_0gwbt")]
+[node name="FHRight" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle1" unique_id=859936247 instance=ExtResource("4_0gwbt")]
 transform = Transform3D(-0.156165, -0.959524, 0.234362, 0.987013, -0.160639, 3.67691e-09, 0.0376477, 0.231318, 0.972149, -0.0118994, 0.0196892, 0.0657559)
 visible = false
 
-[node name="FHLeft" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle1" instance=ExtResource("5_eoyhx")]
+[node name="FHLeft" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle1" unique_id=1814813270 instance=ExtResource("5_eoyhx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0209175, 0.031698)
 visible = false
 
-[node name="Handle2" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel"]
+[node name="Handle2" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel" unique_id=392785943]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04, 0, -0.09)
 mesh = SubResource("4")
 surface_material_override/0 = SubResource("StandardMaterial3D_xoiej")
 
-[node name="FHLeft" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle2" instance=ExtResource("5_eoyhx")]
+[node name="FHLeft" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle2" unique_id=263014073 instance=ExtResource("5_eoyhx")]
 transform = Transform3D(-0.9632, 0, 0.268785, 0, 1, 0, -0.268785, 0, -0.9632, -0.0286745, 0.0209175, -0.0362553)
 visible = false
 
-[node name="FHRight" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle2" instance=ExtResource("4_0gwbt")]
+[node name="FHRight" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle2" unique_id=2065492688 instance=ExtResource("4_0gwbt")]
 transform = Transform3D(0.244126, 0.968114, 0.0561875, 0.969646, -0.244512, 0, 0.0137385, 0.0544821, -0.99842, -0.00411975, 0.0214645, -0.0854271)
 visible = false
 
-[node name="DoorHandleGrab" type="RigidBody3D" parent="HingedDoorBody/DoorHandleOrigin" node_paths=PackedStringArray("pick_01", "pick_02", "pick_01_hand_right", "pick_01_hand_left", "pick_02_hand_right", "pick_02_hand_left")]
+[node name="DoorHandleGrab" type="RigidBody3D" parent="HingedDoorBody/DoorHandleOrigin" unique_id=468329209 node_paths=PackedStringArray("pick_01", "pick_02", "pick_01_hand_right", "pick_01_hand_left", "pick_02_hand_right", "pick_02_hand_left")]
 collision_layer = 1073741824
 collision_mask = 0
 mass = 0.001
@@ -115,17 +115,17 @@ pick_02_hand_left = NodePath("../DoorHandleModel/Handle2/FHLeft")
 picked_up_layer = 2147483648
 picked_by_exclude = "beltsnap"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleGrab"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleGrab" unique_id=9082547]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0438764, 0.0958737, -0.0109467)
 shape = SubResource("BoxShape3D_ogaye")
 debug_color = Color(1, 0.25882354, 0.4, 1)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleGrab"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleGrab" unique_id=284077977]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0977987, 0.0287403)
 visible = false
 mesh = SubResource("BoxMesh_ogaye")
 
-[node name="Label3D" type="Label3D" parent="HingedDoorBody"]
+[node name="Label3D" type="Label3D" parent="HingedDoorBody" unique_id=111650961]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02832377, 1.1575801, 5.9604645e-08)
 no_depth_test = true
 text = "Current angle: xx.x
@@ -135,23 +135,23 @@ horizontal_alignment = 0
 script = ExtResource("7_74fcy")
 debug = true
 
-[node name="DoorSounds" type="Node3D" parent="."]
+[node name="DoorSounds" type="Node3D" parent="." unique_id=1071318820]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("8_kprvd")
 
-[node name="DoorOpened" type="AudioStreamPlayer3D" parent="DoorSounds"]
+[node name="DoorOpened" type="AudioStreamPlayer3D" parent="DoorSounds" unique_id=903363350]
 stream = ExtResource("9_kl64l")
 
-[node name="DoorClosed" type="AudioStreamPlayer3D" parent="DoorSounds"]
+[node name="DoorClosed" type="AudioStreamPlayer3D" parent="DoorSounds" unique_id=404503428]
 stream = ExtResource("10_kqs4e")
 
-[node name="HingeJoint3D" type="HingeJoint3D" parent="."]
+[node name="HingeJoint3D" type="HingeJoint3D" parent="." unique_id=176437244]
 transform = Transform3D(-4.3711385e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 0, 0, 0, 0)
 node_a = NodePath("../HingedDoorBody")
 node_b = NodePath("../StaticBody3D")
 angular_limit/enable = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1664887401]
 
 [connection signal="door_closed" from="." to="DoorSounds" method="_on_door_closed"]
 [connection signal="door_opened" from="." to="DoorSounds" method="_on_door_opened"]
