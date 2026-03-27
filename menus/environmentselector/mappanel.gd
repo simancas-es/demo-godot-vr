@@ -204,69 +204,79 @@ func animate_loading_screen():
 
 
 ##Changes pivot and scales it up...
-func zoom_pivot(olat : float, olong : float, tlat : float, tlong : float, margin : float = 0.2) -> void:
-	#Map geom
-	var geom : Rect2 = maptexture.get_rect()
-	#Note. -1 anchor means -100% parent width/height
-	var w : float = geom.size.x
-	var h : float = geom.size.y
-	var L : float = geom.size.y #Assuming it fits vertically
-	var W : float = (geom.position.x + w/2)/ maptexture.anchor_left ##Assuming centered at 0.5...
+func zoom_pivot(olat: float, olong: float, tlat: float, tlong: float, margin: float = 0.2) -> void:
+	# --- 1. Compute map geometry ---
+	var geom: Rect2 = maptexture.get_rect()
+	var w = geom.size.x
+	var h = geom.size.y
+	var L = h
+	var W = (geom.position.x + w/2) / maptexture.anchor_left
 
-	var leftmost : float = min(olong, tlong)
-	var rightmost : float = max(olong, tlong)
-	var topmost : float = max(olat, tlat)
-	var bottommost : float = min(olat, tlat)
-	
-	var points_long_diff : float = rightmost - leftmost ##This is 1 - 2xmargin as a fraction
-	var long_margin : float = points_long_diff/(1 - 2*margin) * margin
-	var margin_pos_left : float = leftmost - long_margin
-	var margin_pos_right : float = rightmost + long_margin
-	
-	var points_lat_diff : float = topmost - bottommost
-	var lat_margin : float = points_lat_diff/(1 - 2*margin) * margin
-	var margin_pos_top : float = topmost + lat_margin
-	var margin_pos_bottom : float = bottommost - lat_margin
-	
-	#in degrees
-	var midpoint_horizontal : float = margin_pos_left/2 + margin_pos_right/2
-	var midpoint_vertical : float = margin_pos_top/2 + margin_pos_bottom/2
-	var pct_midpoint : Vector2 = calculate_pct(midpoint_vertical, midpoint_horizontal)
-	
-	#Scaling how much.
-	var total_longitudinal : float = max(margin_pos_right - margin_pos_left, 1 )
-	var total_vertical : float = max(margin_pos_top - margin_pos_bottom, 1)
-	
-	var zoom_square_x : float = total_longitudinal/longdif * w #px
-	var zoom_square_y : float = total_vertical/latdif * h
-	var sc : float = W / zoom_square_x
+	# --- 2. Compute bounds with margin ---
+	var leftmost = min(olong, tlong)
+	var rightmost = max(olong, tlong)
+	var topmost = max(olat, tlat)
+	var bottommost = min(olat, tlat)
+
+	var points_long_diff = rightmost - leftmost
+	var long_margin = points_long_diff / (1 - 2*margin) * margin
+	var margin_pos_left = leftmost - long_margin
+	var margin_pos_right = rightmost + long_margin
+
+	var points_lat_diff = topmost - bottommost
+	var lat_margin = points_lat_diff / (1 - 2*margin) * margin
+	var margin_pos_top = topmost + lat_margin
+	var margin_pos_bottom = bottommost - lat_margin
+
+	# --- 3. Midpoint in percent ---
+	var midpoint_horizontal = (margin_pos_left + margin_pos_right) / 2
+	var midpoint_vertical = (margin_pos_top + margin_pos_bottom) / 2
+	var pct_midpoint = calculate_pct(midpoint_vertical, midpoint_horizontal)
+
+	# --- 4. Compute scale ---
+	var total_longitudinal = max(margin_pos_right - margin_pos_left, 1)
+	var total_vertical = max(margin_pos_top - margin_pos_bottom, 1)
+
+	var zoom_square_x = total_longitudinal / longdif * w
+	var zoom_square_y = total_vertical / latdif * h
+	var sc = W / zoom_square_x
 	if sc * zoom_square_y > L:
-		sc = L/zoom_square_y
-		
-	var pivotx : float = pct_midpoint.y * w
-	var pivoty : float = (1 - pct_midpoint.x)* h
-	var position2x: float = maptexture.position.x - (pivotx - w/2)
-	var position2y: float = maptexture.position.y - (pivoty - h/2)
+		sc = L / zoom_square_y
 
+	# --- 5. Compute new pivot and position ---
+	var pivotx = pct_midpoint.y * w
+	var pivoty = (1 - pct_midpoint.x) * h
+	var position2x = maptexture.position.x - (pivotx - w/2)
+	var position2y = maptexture.position.y - (pivoty - h/2)
 
+	# --- 6. Store default map info ---
 	default_mt_pivot = maptexture.pivot_offset
 	default_mt_position = maptexture.position
-	
-	var tween : Tween = create_tween()
-	tween.tween_property(maptexture, "position", Vector2(position2x, position2y), 0.5).set_trans(Tween.TRANS_LINEAR)
-	tween.chain()
-	#tween.set_parallel()	
-	tween.tween_property(maptexture, "pivot_offset", Vector2(pivotx, pivoty) , 0.5).set_trans(Tween.TRANS_LINEAR)
-	tween.tween_property(maptexture, "scale", Vector2(sc, sc), 2.0).set_trans(Tween.TRANS_LINEAR)
-	
+	var default_mt_scale = maptexture.scale
 
-	
-	await tween.finished
-	#maptexture.pivot_offset = Vector2(pct_midpoint.y * w, pct_midpoint.x * h)
-	#maptexture.scale = Vector2(sc, sc)
-	
-	
-	pass
+	# --- 7. Compute label offsets relative to pivot & scale ---
+	var label_offsets = []
+	for label in maptexture.get_children():
+		# Store relative offset from pivot in normalized coordinates
+		var offset = (label.position - maptexture.pivot_offset) / maptexture.scale
+		label_offsets.append({"node": label, "offset": offset})
+
+	# --- 8. Create Tween ---
+	var tween: Tween = create_tween()
+	tween.tween_property(maptexture, "position", Vector2(position2x, position2y), 0.5).set_trans(Tween.TRANS_LINEAR)
+	tween.tween_property(maptexture, "pivot_offset", Vector2(pivotx, pivoty), 0.5).set_trans(Tween.TRANS_LINEAR)
+	tween.tween_property(maptexture, "scale", Vector2(sc, sc), 2.0).set_trans(Tween.TRANS_LINEAR)
+
+	# --- 9. Tween labels positions to match pivot & scale ---
+	for entry in label_offsets:
+		var label = entry["node"]
+		var offset = entry["offset"]
+		# Compute target position after pivot & scale change
+		var target_pos = Vector2(
+			pivotx + offset.x * sc,
+			pivoty + offset.y * sc
+		)
+		tween.tween_property(label, "position", target_pos, 2.0).set_trans(Tween.TRANS_LINEAR)
 	
 	
 	

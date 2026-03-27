@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvl88x3bipot1"]
+[gd_scene format=3 uid="uid://bvl88x3bipot1"]
 
 [ext_resource type="Script" uid="uid://dmo4shrj7gbp5" path="res://menus/environmentselector/mappanel.gd" id="1_wg0vv"]
 [ext_resource type="Script" uid="uid://daxocisxiqvn6" path="res://menus/animatemenutransition.gd" id="2_vrc6j"]
+[ext_resource type="Texture2D" uid="uid://cpr35wrvutt0s" path="res://assets/pictures/Deutschlandkarte.jpg" id="3_nduj4"]
 [ext_resource type="Texture2D" uid="uid://du8yb6bwnpgtu" path="res://assets/menus/map/maps/map1.svg" id="3_qieve"]
 [ext_resource type="Texture2D" uid="uid://b8vo8e3b4guqx" path="res://assets/world_objects/van/van.png" id="4_vrc6j"]
 
@@ -11,7 +12,7 @@ bg_color = Color(0.434301, 0.569404, 1, 1)
 [sub_resource type="Theme" id="Theme_mdxdi"]
 Panel/styles/panel = SubResource("StyleBoxFlat_605b5")
 
-[node name="MapPanel" type="Panel"]
+[node name="MapPanel" type="Panel" unique_id=1325609440]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -21,17 +22,18 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_mdxdi")
 script = ExtResource("1_wg0vv")
+transition_van_s = 4.5
 leftlong = 6.0
-rightlong = 15.0
-toplat = 54.5
-botlat = 47.75
+rightlong = 16.2
+toplat = 55.6
+botlat = 47.0
 metadata/_edit_use_anchors_ = true
 
-[node name="AnimateMenuScaleIn" type="Node" parent="."]
+[node name="AnimateMenuScaleIn" type="Node" parent="." unique_id=1706495466]
 script = ExtResource("2_vrc6j")
 metadata/_custom_type_script = "uid://daxocisxiqvn6"
 
-[node name="DebugCoords" type="Label" parent="."]
+[node name="DebugCoords" type="Label" parent="." unique_id=2123571337]
 auto_translate_mode = 2
 visible = false
 layout_mode = 1
@@ -40,8 +42,35 @@ offset_bottom = 23.0
 text = "FromTo
 "
 
-[node name="MapTexture" type="TextureRect" parent="."]
+[node name="MapTexture" type="TextureRect" parent="." unique_id=275605346]
 unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -269.29413
+offset_right = 269.29413
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nduj4")
+expand_mode = 3
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Van" type="Sprite2D" parent="MapTexture" unique_id=1034075991]
+unique_name_in_owner = true
+z_index = 5
+z_as_relative = false
+position = Vector2(317.294, 346.04)
+scale = Vector2(0.0738055, 0.0738055)
+texture = ExtResource("4_vrc6j")
+centered = false
+offset = Vector2(-76.3562, -198.297)
+region_rect = Rect2(0, 0, 556, 214)
+
+[node name="MapTexture3" type="TextureRect" parent="." unique_id=297880511]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -54,8 +83,7 @@ expand_mode = 3
 stretch_mode = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="Van" type="Sprite2D" parent="MapTexture"]
-unique_name_in_owner = true
+[node name="Van2" type="Sprite2D" parent="MapTexture3" unique_id=400276643]
 z_index = 5
 z_as_relative = false
 position = Vector2(317.294, 346.04)
@@ -65,7 +93,7 @@ centered = false
 offset = Vector2(-76.3562, -198.297)
 region_rect = Rect2(0, 0, 556, 214)
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=234985692]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = -1
