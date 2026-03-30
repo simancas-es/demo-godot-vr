@@ -64,7 +64,7 @@ signal request_current_fpvmode
 
 #Special
 #signal setup_introscreen
-
+signal reset_position
 
 #Tool Signals
 signal request_editor_file_json(file_path : String, node : Node)

@@ -85,6 +85,11 @@ func process_input(_event: InputEvent) -> StateMenus:
 		get_viewport().set_input_as_handled()
 		return state_settings
 	
+	if Input.is_action_just_pressed("reset_position"):
+		get_viewport().set_input_as_handled()
+		Signals.reset_position.emit()
+		return null
+	
 	##TEMPORARY: Trigger save
 	if Input.is_action_just_pressed("system_persistence_save"):
 		if Engine.has_singleton(SYSTEMSTATEFULPERSISTENCE_SETTINGS.MANAGER_AUTOLOAD_NAME):

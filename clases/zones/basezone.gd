@@ -52,7 +52,8 @@ var signal_functions : Dictionary[Signal, Callable] = {
 		#Signals.set_falcon_camera: set_falcon_camera,
 		#Signals.set_env_camera: set_env_camera ,
 		#Signals.set_room_camera: set_room_camera,
-		 Signals.topic_changed: set_topic
+		 Signals.topic_changed: set_topic,
+		Signals.reset_position: _on_reset_position_player
 	}
 
 
@@ -84,6 +85,8 @@ func _ready() -> void:
 	#
 	#if not Signals.change_room.is_connected(_on_change_room):
 		#Signals.change_room.connect(_on_change_room)
+		
+	
 
 	pass
 
@@ -125,7 +128,11 @@ func _on_exit_tree() -> void:
 		if s.is_connected(signal_functions[s]):
 			s.disconnect(signal_functions[s])
 	
-	
+
+func _on_reset_position_player() -> void:
+	reset_fpv_to_default_starting_position()
+	pass
+
 ##Aligns the position and look_at target for the FPV
 func reset_fpv_to_default_starting_position() -> void:
 	#LOAD FPV in this INSTANCE
