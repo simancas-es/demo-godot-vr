@@ -159,6 +159,9 @@ func get_edges() -> Array[Ref.SimEdge]:
 	var edges = LIST.values() as Array[Ref.SimEdge]	
 	return edges
 
+func get_edge_by_id(id : ID) -> Ref.SimEdge:
+	return LIST[id]
+
 func initialize(containers : Containers) -> void:
 	var cs = containers #intantiate the container script
 

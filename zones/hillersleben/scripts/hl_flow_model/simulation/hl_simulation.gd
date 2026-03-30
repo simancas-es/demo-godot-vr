@@ -17,9 +17,9 @@ var es := Edges.new()
 var _containers : Array[Ref.SimContainer]
 var _edges : Array[Ref.SimEdge]
 
-var pidbindings : Dictionary[String, PIDBinding] = {}
-var bandbindings : Dictionary[String, BandControl.Controller] = {}
-var manualbindings : Dictionary = {} #[Array or Ref.SimEdge]
+var pidbindings : Dictionary[Edges.ID, PIDBinding] = {}
+var bandbindings : Dictionary[Edges.ID, BandControl.Controller] = {}
+var manualbindings : Dictionary = {} # Edges.ID , [Array or Ref.SimEdge]
 var _handledbindings : Array = []
 
 
@@ -104,22 +104,23 @@ func print_flows() -> void:
 	print("FF: %s" % cs.fettfang.sc.get_volume("water"))
 	print("FF: to_psb %s m3s, to_msb %s m3s, to..." % [es.ff_psb.throughput, es.ff_msb.throughput])
 
-func set_manual_throughput(_name : String, edges : Variant, value : float) -> void:
-	if is_instance_of(edges, Ref.SimEdge): edges.set_throughput(value)
-	if edges is Array:
-		for e in edges:
-			if e is Ref.SimEdge: e.set_throughput(value)
-	manualbindings[_name] = edges
+func set_manual_throughput(edges_ref : Variant, value : float) -> void:
+	#if is_instance_of(edges, Ref.SimEdge): edges.set_throughput(value)
+	if edges_ref is Edges.ID : es.get_edge_by_id(edges_ref).set_throughput(value)
+	if edges_ref is Array:
+		for e in edges_ref:
+			es.get_edge_by_id(e).set_throughput(value)
+	manualbindings[edges_ref] = edges_ref
 
 #Removes the priority for manual
-func remove_manual_throughput(_name : String) -> void:
-	if _name in manualbindings:
-		var obj = manualbindings[_name]
+func remove_manual_throughput(id : Edges.ID) -> void:
+	if id in manualbindings:
+		var obj = manualbindings[id]
 		if obj is Ref.SimEdge: obj.set_throughput(0)
 		elif obj is Array:
 			for o in obj:
 				if o is Ref.SimEdge: o.set_throughput(0)
-		manualbindings.erase(_name)
+		manualbindings.erase(id)
 	
 	
 #init storage
@@ -132,33 +133,34 @@ func init_state() -> void:
 
 #init pid setup
 func init_pid() ->  void:
-	bandbindings["ff_psb"] = BandBinding.new(
+	bandbindings[Edges.ID.FF_PSB] = BandBinding.new(
 					func() : return cs.fettfang.sc.total_volume(),
 					func(v) : es.ff_psb.throughput = v,
 					Band.new(0, 100, 0), Band.new(80,150,0.08), Band.new(140,225,0.15), Band.new(200,300, 0.3)
 	)
 		
 	#ff_msb,
-	bandbindings["ff_msb"] = BandBinding.new(
+	bandbindings[Edges.ID.FF_MSB] = BandBinding.new(
 					func() : return cs.fettfang.sc.total_volume(),
 					func(v) : es.ff_msb.throughput = v,
 					Band.new(0, 200, 0), Band.new(200, 300, 0.15)
 	)
 	#ff_ved1,
-	set_manual_throughput("ff_ved1", es.ff_ved1, 0.00)
+	set_manual_throughput(Edges.ID.FF_VED1, 0.00)
 	
 	##PSB 
-	set_manual_throughput("psb_bb1",es.psb_bb1, 0.04)
-	set_manual_throughput("psb_bb2",es.psb_bb2, 0.04)
-	set_manual_throughput("psb_pspw",es.psb_pspw, 0.00)
+	set_manual_throughput(Edges.ID.PSB_BB1, 0.04)
+	set_manual_throughput(Edges.ID.PSB_BB2, 0.04)
+	set_manual_throughput(Edges.ID.PSB_PSPW, 0.00)
 
 	##PSPW
 	#pspw_ved1,	#Manually regulated?
-	es.pspw_ved1.throughput = 0.00; manualbindings.set("pspw_ved1", 0)
-	set_manual_throughput("pspw_ved1",es.pspw_ved1, 0.00)
+	#es.pspw_ved1.throughput = 0.00; manualbindings.set("pspw_ved1", 0)
+	set_manual_throughput(Edges.ID.PSPW_VED1, 0.04)
+	set_manual_throughput(Edges.ID.PSPW_VED1, 0.00)
 	##RLSPW #HACK
 	#rlspw_rsp1_psb,		#rlspw_rsp2_psb,		#rlspw_rsp3_psb,		#rlspw_rsp4_psb,
-	pidbindings["rlspw_psb"] = PIDBinding.new( 
+	pidbindings[Edges.ID.RLSPW_RSP1_PSB] = PIDBinding.new( 
 		#Note: Negative values because the container is the measurement and not the target of the pumping
 		PID.new(cs.rlspw.sc.max_volume_m3/2, 0.01, 0.00002, 0, -0.16, 0.0), #TODO Adjust
 		func(): return cs.rlspw.sc.total_volume(),
@@ -169,7 +171,7 @@ func init_pid() ->  void:
 			es.rlspw_rsp4_psb.throughput = -v*0.25
 	)		
 	#rlspw_üsp1_ved1,
-	bandbindings["rlspw_üsp1_ved1"] = BandBinding.new(
+	bandbindings[Edges.ID.RLSPW_ÜSP1_VED1] = BandBinding.new(
 					func() : return cs.rlspw.sc.total_volume(),
 					func(v) : es.rlspw_üsp1_ved1.throughput = v,
 					Band.new(0, cs.rlspw.sc.max_volume_m3/2, 0.02), Band.new(cs.rlspw.sc.max_volume_m3/2, cs.rlspw.sc.max_volume_m3, 0.2)
@@ -177,34 +179,34 @@ func init_pid() ->  void:
 	
 	##MSB
 	#msb_kwpw
-	bandbindings["msb_kwpw"] = BandBinding.new(
+	bandbindings[Edges.ID.MSB_KWPW] = BandBinding.new(
 					func() : return cs.kwpw.sc.total_volume(),
 					func(v) : es.msb_kwpw.throughput = v,
 					Band.new(0, cs.kwpw.sc.max_volume_m3/2, 0.05),
 					Band.new(cs.kwpw.sc.max_volume_m3/2, cs.rlspw.sc.max_volume_m3, 0)
 	)
 	#msb_ved2
-	set_manual_throughput("msb_ved2",es.msb_ved2, 0.00)
+	set_manual_throughput(Edges.ID.MSB_VED2, 0.00)
 	##KWPW
-	set_manual_throughput("kwpw_bb1",es.kwpw_bb1, 0.00)
-	set_manual_throughput("kwpw_bb2",es.kwpw_bb2, 0.00)
+	set_manual_throughput(Edges.ID.KWPW_BB1, 0.00)
+	set_manual_throughput(Edges.ID.KWPW_BB2, 0.00)
 		
 	##FMDS
-	set_manual_throughput("fmds_bb1",es.fmds_bb1, 0.0001)
-	set_manual_throughput("fmds_bb2",es.fmds_bb2, 0.0001)
+	set_manual_throughput(Edges.ID.FMDS_BB1, 0.0001)
+	set_manual_throughput(Edges.ID.FMDS_BB2, 0.0001)
 
 #
 	##BB
-	set_manual_throughput("bb1_nb1",es.bb1_nb1, 0.05)
-	set_manual_throughput("bb1_nb2",es.bb1_nb2, 0.05)
-	set_manual_throughput("bb2_nb1",es.bb2_nb1, 0.05)
-	set_manual_throughput("bb2_nb2",es.bb2_nb2, 0.05)
+	set_manual_throughput(Edges.ID.BB1_NB1, 0.05)
+	set_manual_throughput(Edges.ID.BB1_NB2, 0.05)
+	set_manual_throughput(Edges.ID.BB2_NB1, 0.05)
+	set_manual_throughput(Edges.ID.BB2_NB2, 0.05)
 #
 	##NB
-	set_manual_throughput("nb1_ablauf",es.nb1_ablauf, 0.05)
-	set_manual_throughput("nb1_rlspw",es.nb1_rlspw, 0.02)
-	set_manual_throughput("nb1_sspw",es.nb1_sspw, 0.01)
+	set_manual_throughput(Edges.ID.NB1_ABLAUF, 0.05)
+	set_manual_throughput(Edges.ID.NB1_RLSPW, 0.02)
+	set_manual_throughput(Edges.ID.NB1_SSPW, 0.01)
 	
-	set_manual_throughput("nb2_ablauf",es.nb2_ablauf, 0.05)
-	set_manual_throughput("nb2_rlspw",es.nb2_rlspw, 0.02)
-	set_manual_throughput("nb2_sspw",es.nb2_sspw, 0.01)
+	set_manual_throughput(Edges.ID.NB2_ABLAUF, 0.05)
+	set_manual_throughput(Edges.ID.NB2_RLSPW, 0.02)
+	set_manual_throughput(Edges.ID.NB2_SSPW, 0.01)
