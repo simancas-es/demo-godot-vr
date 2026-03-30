@@ -60,6 +60,12 @@ var nb2_rlspw := Ref.SimEdge.new()
 var nb2_sspw := Ref.SimEdge.new()
 
 
+#ED
+var ved1_twswpw := Ref.SimEdge.new()
+var ned1_twswpw := Ref.SimEdge.new()
+var ved2_twswpw := Ref.SimEdge.new()
+var ved3_twswpw := Ref.SimEdge.new()
+
 enum ID {
 	ZULAUF_FF,
 	FF_PSB,
@@ -104,6 +110,12 @@ enum ID {
 	NB2_ABLAUF,
 	NB2_RLSPW,
 	NB2_SSPW,
+	
+	#ED
+	VED1_TWSWPW,
+	NED1_TWSWPW,
+	VED2_TWSWPW,
+	VED3_TWSWPW
 	
 }
 
@@ -150,7 +162,13 @@ var LIST : Dictionary[ID, Ref.SimEdge] = {
 	ID.NB1_SSPW : nb1_sspw,
 	ID.NB2_ABLAUF : nb2_ablauf,
 	ID.NB2_RLSPW : nb2_rlspw,
-	ID.NB2_SSPW : nb2_sspw
+	ID.NB2_SSPW : nb2_sspw,
+	
+	#ED,
+	ID.VED1_TWSWPW : ved1_twswpw,
+	ID.NED1_TWSWPW : ned1_twswpw,
+	ID.VED2_TWSWPW : ved2_twswpw,
+	ID.VED3_TWSWPW : ved3_twswpw
 }
 	
 
@@ -226,6 +244,12 @@ func initialize(containers : Containers) -> void:
 	Ref.SimEdge.add_target_to_edges(cs.sspw.sc,		nb1_sspw, nb2_sspw)
 	Ref.SimEdge.add_source_to_edges(cs.nb1.sc, nb1_ablauf, nb1_rlspw, nb1_sspw)
 	Ref.SimEdge.add_source_to_edges(cs.nb2.sc, nb2_ablauf, nb2_rlspw, nb2_sspw)
+	
+	#ED
+	ved1_twswpw.link(cs.ed.ved1, cs.twswpw.sc)
+	ved2_twswpw.link(cs.ed.ved2, cs.twswpw.sc)
+	ved3_twswpw.link(cs.ed.ved3, cs.twswpw.sc)
+	ned1_twswpw.link(cs.ed.ned1, cs.twswpw.sc)
 	
 	#Check
 	for e in get_edges():
