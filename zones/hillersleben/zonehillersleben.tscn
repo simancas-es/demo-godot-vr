@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cs507u3nvuu12" path="res://models/labels/flow_simulation_throughput_label.tscn" id="4_8upog"]
 [ext_resource type="PackedScene" uid="uid://dx8l2qbku8m3t" path="res://zones/hillersleben/scripts/water_visuals/WaterLevelFollower.tscn" id="4_gfnr6"]
 [ext_resource type="PackedScene" uid="uid://d3qp4a3ahe2gf" path="res://models/demo_basin/task_blackboard/demo_task_blackboard.tscn" id="5_0p6js"]
+[ext_resource type="PackedScene" uid="uid://g6utn56lubnu" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_placeholder.tscn" id="5_w4u61"]
 [ext_resource type="Script" uid="uid://d33fw1e70sdha" path="res://models/labels/function_map_reference.gd" id="6_h3jyd"]
 [ext_resource type="Script" uid="uid://dih0abuhxu7o5" path="res://systems/system-tasks/system_tasks_starter.gd" id="6_t3rbc"]
 [ext_resource type="PackedScene" uid="uid://c7yhfipghxiyv" path="res://models/doors/basedoor2m.tscn" id="8_1khpx"]
@@ -340,9 +341,11 @@ metadata/_custom_type_script = "uid://b78po4wueig00"
 transform = Transform3D(1, 0, 0, 0, 0.99999994, -2.842171e-14, 0, 2.842171e-14, 0.99999994, -30.67491, 48.741016, -2.301975)
 
 [node name="SECURITY_CHECKS" type="Node3D" parent="Reference_point_floor" unique_id=1959220266]
+metadata/_edit_lock_ = true
 
 [node name="Area3D1" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=700219985 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, 1.0337334, 1.3195686, -2.9768963)
+metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck1" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D1" unique_id=1874932154]
 script = ExtResource("2_rm34v")
@@ -350,6 +353,7 @@ locator_id = 5
 
 [node name="Area3D2" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=2033405942 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, 10.06057, -0.16364312, 35.998352)
+metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck2" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D2" unique_id=211977936]
 script = ExtResource("2_rm34v")
@@ -357,6 +361,7 @@ locator_id = 6
 
 [node name="Area3D3" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=698821275 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -39.949463, 2.8690605, 29.273115)
+metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck3" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D3" unique_id=1671141585]
 script = ExtResource("2_rm34v")
@@ -364,6 +369,7 @@ locator_id = 7
 
 [node name="Area3D4" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=551003196 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -78.39233, 2.8690605, 23.400398)
+metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck4" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D4" unique_id=2121476343]
 script = ExtResource("2_rm34v")
@@ -371,6 +377,7 @@ locator_id = 8
 
 [node name="Area3D5" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=1104014646 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -73.36659, 2.8690605, 42.15164)
+metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck5" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D5" unique_id=1307487462]
 script = ExtResource("2_rm34v")
@@ -378,6 +385,7 @@ locator_id = 9
 
 [node name="Area3D6" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=105502572 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -65.49611, 2.5643272, 62.471817)
+metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck6" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D6" unique_id=1553275981]
 script = ExtResource("2_rm34v")
@@ -528,6 +536,223 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -49.17684, 
 visible = false
 mesh = SubResource("CylinderMesh_sktl7")
 
+[node name="PUMP-TOGGLES" type="Node3D" parent="Reference_point_floor" unique_id=933199667]
+
+[node name="zulauf_ff" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=403730820 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.924559, 2.4613908e-14, -0.38103828, 3.900167e-14, 0.9999997, -3.0037503e-14, 0.38103828, -4.263257e-14, -0.924559, -12.938143, 3.800476, 23.368412)
+text = "Intake Inflows"
+flow_model = NodePath("../../../FlowSimulation")
+
+[node name="ff_psb" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1677298820 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.6989019, 2.4613908e-14, 0.71521723, -4.769427e-14, 0.9999997, 1.21916976e-14, -0.71521723, -4.2632574e-14, 0.6989019, -22.978245, 3.800476, 24.89011)
+text = "Pump Sandtrap -> Primary clarifier"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 1
+
+[node name="ff_msb" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1889188957 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.96287525, -2.8421704e-14, -0.26994535, -1.9694255e-14, 0.99999934, -3.5038853e-14, 0.26994503, -2.842169e-14, -0.96287507, -17.010984, 3.3335648, 40.101276)
+text = "Pump Sandtrap -> Equalization Basin"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 2
+
+[node name="ff_ved1" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=299766450 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.7987194, 1.7241781e-14, -0.6017029, -1.0265131e-14, 0.99999934, 1.5028689e-14, 0.601703, -5.8271377e-15, 0.79871935, 10.097138, 1.9712219, 7.8406405)
+text = "Pump Sandtrap -> Thickener I"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 3
+
+[node name="psb_bb1" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1096963910 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.99480253, 2.4613907e-14, -0.10181987, -2.0145129e-14, 0.9999996, 4.4917195e-14, 0.10182005, -4.263257e-14, 0.99480253, -29.390377, 3.5817451, 27.05371)
+text = "Pump Primary Clarifier-> Aeration Basin I"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 4
+
+[node name="psb_bb2" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=21113137 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.018970907, 2.4613908e-14, -0.9998197, 4.2157975e-14, 0.99999964, 2.5418268e-14, 0.9998199, -4.2632578e-14, 0.018970951, -38.454506, 3.800476, 17.476204)
+text = "Pump Primary Clarifier-> Aeration Basin II"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 5
+
+[node name="psb_pspw" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=576484844 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.99094546, 2.4613905e-14, 0.13426322, -3.011503e-14, 0.99999964, 3.8941825e-14, -0.13426319, -4.263257e-14, 0.99094546, -27.199953, 3.993103, 26.8596)
+text = "Pump Primary Clarifier -> Primary Sludge PS"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 6
+
+[node name="pspw_ved1" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1619537659 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.99647796, 2.4613907e-14, -0.08385137, -2.0952415e-14, 0.99999964, 4.4546347e-14, 0.08385143, -4.263257e-14, 0.99647796, 12.555727, 1.7380865, 8.731881)
+text = "Pump Primary Sludge PS -> Thickener I"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 7
+
+[node name="ved1_twswpw" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1143277923 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.99647796, 2.4613907e-14, -0.08385137, -2.0952415e-14, 0.99999964, 4.4546347e-14, 0.08385143, -4.263257e-14, 0.99647796, 12.555727, 1.2161291, 8.731881)
+text = "Pump Thickener I ->  TWSW PS"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 32
+
+[node name="ved2_twswpw" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=220089718 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.98593724, 5.2715915e-14, -0.16711208, -3.8095747e-14, 0.99999917, 9.069267e-14, 0.16711217, -8.305105e-14, 0.9859371, 24.061253, 1.7144051, 3.531281)
+text = "Pump Thickener III ->  TWSW PS"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 34
+
+[node name="ved3_twswpw" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1361664009 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.8944501, 5.2715922e-14, 0.44716626, -8.428943e-14, 0.99999917, 5.0712283e-14, -0.44716626, -8.3051045e-14, 0.89444995, 29.569357, 2.4322586, -9.649292)
+text = "Pump Thickener III ->  TWSW PS"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 35
+
+[node name="ned1_twswpw" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1518876353 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.8897902, 5.2715915e-14, 0.45636845, -8.480803e-14, 0.99999917, 4.9840174e-14, -0.45636845, -8.305105e-14, 0.88979, 17.216639, 2.4322586, -3.7980976)
+text = "Pump Post-thickener I ->  TWSW PS"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 33
+
+[node name="sspw_ved1" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1234745742 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.99821043, 2.4613908e-14, 0.059794545, -2.7119057e-14, 0.99999964, 4.1084517e-14, -0.059794456, -4.263257e-14, 0.99821043, -75.074524, 3.800476, 29.830452)
+text = "Pump Floating Sludge PS -> Thickener I"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 8
+
+[node name="rlspw_rsp1_psb" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=605743927 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.9956026, 2.4613907e-14, 0.09367357, 2.0512134e-14, 0.99999964, -4.475079e-14, -0.0936736, -4.2632578e-14, -0.9956026, -75.85693, 3.800476, 35.417736)
+text = "Pump Activated Sludge RPS1-> Primary Clarifier"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 9
+
+[node name="rlspw_rsp2_psb" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1862780264 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.99983054, 2.461391e-14, 0.01839447, 2.382554e-14, 0.99999964, -4.3078117e-14, -0.01839456, -4.2632568e-14, -0.9998306, -75.789215, 3.3754616, 35.52588)
+text = "Pump Activated Sludge RPS2-> Primary Clarifier"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 10
+
+[node name="rlspw_rsp3_psb" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1136701872 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.9986547, 2.4613907e-14, 0.051847637, 2.2370408e-14, 0.99999964, -4.3851404e-14, -0.051847667, -4.2632578e-14, -0.9986547, -72.049164, 3.7917976, 35.68494)
+text = "Pump Activated Sludge RPS3-> Primary Clarifier"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 11
+
+[node name="rlspw_rsp4_psb" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1828902666 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.9977406, 2.4613903e-14, 0.06717917, 2.1694293e-14, 0.99999964, -4.418981e-14, -0.06717926, -4.2632574e-14, -0.9977406, -72.04541, 3.3691864, 35.702362)
+text = "Pump Activated Sludge RPS4-> Primary Clarifier"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 12
+
+[node name="rlspw_üsp1_ved1" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=921396042 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.99998575, 2.4613913e-14, -0.00528872, 2.4839038e-14, 0.99999964, -4.250181e-14, 0.0052886605, -4.2632574e-14, -0.9999858, -71.95624, 2.987236, 35.743454)
+text = "Pump Activated Sludge ÜSP1-> Thickener I"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 13
+
+[node name="twswpw_ff" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1657466261 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.525234, 2.4613907e-14, 0.8509575, -2.335046e-14, 0.99999964, -4.3337472e-14, -0.8509576, -4.263258e-14, -0.52523404, 4.037473, 0.503849, 37.166126)
+text = "Pump TWSW PS -> Fat trap"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 14
+
+[node name="twswpw_msb" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=854357011 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.51472396, 2.4613917e-14, 0.8573556, -2.3881914e-14, 0.99999964, -4.30469e-14, -0.85735565, -4.2632574e-14, -0.514724, 5.4714527, 0.5189438, 39.66842)
+text = "Pump TWSW PS -> Equalization basin"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 15
+
+[node name="msb_kwpw" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=64398616 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.8253793, 2.4613903e-14, -0.56457824, 4.438525e-14, 0.9999997, -2.1291583e-14, 0.56457824, -4.2632568e-14, -0.8253793, -21.626606, 3.211773, 42.379)
+text = "Pump Equalization Basin-> Clarified Water PS"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 16
+
+[node name="msb_ved2" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=500874667 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.9903236, 2.4613907e-14, -0.13877517, -1.8459389e-14, 0.99999964, 4.563586e-14, 0.13877529, -4.263257e-14, 0.9903236, 24.196678, 2.204918, 3.6054947)
+text = "Pump Equalization Basin -> Thickener II"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 17
+
+[node name="kwpw_bb1" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=953041354 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.11049792, 2.4613907e-14, -0.99387604, 3.9651723e-14, 0.99999964, 2.9174e-14, 0.9938761, -4.2632568e-14, 0.11049801, -26.514044, 2.842289, 41.597797)
+text = "Pump Clarified Water-> Aeration Basin I"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 18
+
+[node name="kwpw_bb2" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1619809623 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.13865483, 2.4613908e-14, -0.9903405, 3.8807943e-14, 0.99999964, 3.0287377e-14, 0.9903405, -4.263257e-14, 0.13865486, -26.420607, 3.1862907, 41.556934)
+text = "Pump Clarified Water-> Aeration Basin II"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 19
+
+[node name="fmds_bb1" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=528024960 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.6297407, 2.4613903e-14, -0.7768049, 1.7616825e-14, 0.99999964, 4.59677e-14, 0.776805, -4.2632574e-14, 0.6297408, -37.843414, 3.4906197, 28.462584)
+text = "Pump Flocculant Tank-> Aeration Basin I"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 20
+
+[node name="fmds_bb2" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1977815635 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.59138, 2.4613907e-14, -0.8063926, 1.9822438e-14, 0.99999964, 4.506054e-14, 0.8063927, -4.263257e-14, 0.5913801, -37.815804, 3.9009514, 28.46693)
+text = "Pump Flocculant Tank-> Aeration Basin II"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 21
+
+[node name="bb1_nb1" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1094033209 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.52649546, 2.4613907e-14, -0.85017765, 4.9204395e-14, 0.99999964, -1.519655e-15, 0.8501776, -4.2632578e-14, -0.52649534, -62.881325, 3.5720444, 37.790478)
+text = "Pump Aeration Basin I -> Secondary Clarifier I"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 22
+
+[node name="bb1_nb2" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=826748528 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.51726496, 2.461391e-14, -0.85582507, 4.9217954e-14, 0.99999964, -9.871322e-16, 0.855825, -4.2632574e-14, -0.5172649, -63.015858, 3.192112, 37.75608)
+text = "Pump Aeration Basin I -> Secondary Clarifier II"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 23
+
+[node name="bb2_nb1" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=901648946 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.8928294, 2.461391e-14, -0.45039406, -2.7745521e-15, 0.9999996, 4.91496e-14, 0.4503942, -4.2632568e-14, 0.89282954, -71.31769, 3.3039017, 26.335941)
+text = "Pump Aeration Basin II -> Secondary Clarifier I"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 24
+
+[node name="bb2_nb2" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=454747751 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.8928294, 2.461391e-14, -0.45039406, -2.7745521e-15, 0.9999996, 4.91496e-14, 0.4503942, -4.2632568e-14, 0.89282954, -71.350105, 3.800476, 26.371677)
+text = "Pump Aeration Basin II -> Secondary Clarifier II"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 25
+
+[node name="nb1_ablauf" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1039075087 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.9864263, 2.461391e-14, 0.1642037, 1.7279386e-14, 0.99999964, -4.6095597e-14, -0.16420376, -4.263257e-14, -0.98642623, -77.33707, 3.800476, 42.2394)
+text = "Pump Secondary Clarifier I -> Discharge station"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 26
+
+[node name="nb1_rlspw" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=800426023 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.98362786, 0.0077695125, 0.1800421, 0, 0.9990698, -0.043113712, -0.18020976, -0.042407855, -0.9827134, -77.33589, 3.3171158, 42.254147)
+text = "Pump Secondary Clarifier I -> RLS PS"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 27
+
+[node name="nb1_sspw" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=583737000 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(-0.9816537, 2.4613903e-14, 0.19067141, 1.603352e-14, 0.99999964, -4.6543607e-14, -0.19067152, -4.2632574e-14, -0.9816537, -77.34786, 2.8936424, 42.229404)
+text = "Pump Secondary Clarifier I -> Floating Sludge PW"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 28
+
+[node name="nb2_ablauf" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=1831742121 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.50419575, 2.4613907e-14, 0.86358917, -4.9227265e-14, 0.99999964, 2.3885313e-16, -0.8635891, -4.263257e-14, 0.5041957, -81.60614, 2.9301033, 34.183834)
+text = "Pump Secondary Clarifier II -> Discharge station"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 29
+
+[node name="nb2_rlspw" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=564950932 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.50419575, 2.4613907e-14, 0.86358917, -4.9227265e-14, 0.99999964, 2.3885313e-16, -0.8635891, -4.263257e-14, 0.5041957, -81.56148, 3.2994041, 34.176414)
+text = "Pump Secondary Clarifier II -> RLS PS"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 30
+
+[node name="nb2_sspw" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=994671173 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
+transform = Transform3D(0.50419575, 2.4613907e-14, 0.86358917, -4.9227265e-14, 0.99999964, 2.3885313e-16, -0.8635891, -4.263257e-14, 0.5041957, -81.559586, 2.5845795, 34.191288)
+text = "Pump Secondary Clarifier II -> Floating Sludge PW"
+flow_model = NodePath("../../../FlowSimulation")
+flow_id = 31
+
 [node name="Config" type="Node3D" parent="." unique_id=701552541]
 
 [node name="North" type="Node3D" parent="Config" unique_id=14118345]
@@ -611,6 +836,11 @@ flow_simulation_container = 18
 
 [node name="vol_kwpw" parent="FlowSimulationLabels/Volumes" unique_id=1740226510 instance=ExtResource("3_5rld8")]
 transform = Transform3D(-0.6728189, 0.7398073, 2.9802322e-08, 0, -4.371139e-08, 1, 0.73980737, 0.6728189, 0, -56.369602, 50.535545, 36.850792)
+title_name_en = "Clarified Water PS"
+flow_simulation_container = 6
+
+[node name="vol_twswpw" parent="FlowSimulationLabels/Volumes" unique_id=2008427094 instance=ExtResource("3_5rld8")]
+transform = Transform3D(-0.32558188, -0.9262956, 0.18966542, 0.08201832, 0.1721704, 0.9816466, -0.9419498, 0.3351623, 0.019917617, -22.339844, 47.33587, 35.671818)
 title_name_en = "Clarified Water PS"
 flow_simulation_container = 6
 
@@ -1395,6 +1625,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -43.
 shape = SubResource("ConcavePolygonShape3D_ht8a3")
 
 [node name="Visuals" type="Node3D" parent="." unique_id=1671551082]
+metadata/_edit_lock_ = true
 
 [node name="Referenz" parent="Visuals" unique_id=1498720788 instance=ExtResource("15_h3jyd")]
 
