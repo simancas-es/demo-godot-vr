@@ -15,6 +15,10 @@ var _can_activate := true
 
 @export var momentary_button : bool = false #Turns on, then automatically turns off.
 
+@export_category("Interaction Strings")
+@export var string_on : String = "Press [E] to turn off"
+@export var string_off : String = "Press [E] to turn on"
+
 func _ready() -> void:
 	activated.connect(toggle_activation)
 	_next_state = initial_state
@@ -25,10 +29,12 @@ func toggle(on : bool) -> void:
 	if not on:
 		current_state = STATE.OFF
 		turned_off.emit()
+		hint_text[ENUMS.ACTION.INTERACT] = string_off
 		_next_state = STATE.ON
 	elif on:
 		current_state = STATE.ON
 		turned_on.emit()
+		hint_text[ENUMS.ACTION.INTERACT] = string_on
 		_next_state = STATE.OFF
 		if momentary_button:
 			current_state = STATE.OFF
