@@ -86,7 +86,7 @@ func update_config():
 	var res_vector = RESOLUTION_VECTOR.get(resolution)
 	DisplayServer.window_set_size(res_vector)
 	
-	var lan = config.get_value("Game", "locale", "en")
+	var lan = config.get_value("Game", "locale", "de") ## German as default locale
 	var topic = config.get_value("Game", "topic", TOPICS.LAYER.ABWASSER)
 	#topic = UTILS.log2_int(topic)
 	topic = pow(2, topic)
