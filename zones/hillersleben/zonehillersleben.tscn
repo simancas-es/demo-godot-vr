@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://dih0abuhxu7o5" path="res://systems/system-tasks/system_tasks_starter.gd" id="6_t3rbc"]
 [ext_resource type="PackedScene" uid="uid://c7yhfipghxiyv" path="res://models/doors/basedoor2m.tscn" id="8_1khpx"]
 [ext_resource type="Script" uid="uid://jgo7k1ecvdjx" path="res://zones/hillersleben/scripts/logik_doors_container.gd" id="8_6uclu"]
+[ext_resource type="Script" uid="uid://sefhuc62i04i" path="res://zones/hillersleben/scripts/water_visuals/logik_wasserrad.gd" id="8_du4yn"]
 [ext_resource type="PackedScene" uid="uid://b10l7m4qjudur" path="res://models/interaction/simple_button.tscn" id="8_duhpb"]
 [ext_resource type="Script" uid="uid://3cibq28us4hi" path="res://zones/hillersleben/scripts/bg-containers/bg_garage_controller.gd" id="9_0nlau"]
 [ext_resource type="Script" uid="uid://d2x1a26haj0vt" path="res://zones/hillersleben/scripts/bg-containers/bg_garage_state.gd" id="10_5rld8"]
@@ -550,6 +551,10 @@ environment = SubResource("Environment_5rwjt")
 
 [node name="FlowSimulation" parent="." unique_id=1869696998 groups=["FLOWSIMULATION"] instance=ExtResource("2_0nlau")]
 overview_scene = ExtResource("3_ybcmd")
+
+[node name="Logik-Wasserrad" type="Node" parent="FlowSimulation" unique_id=651757122 node_paths=PackedStringArray("wasserrad_drehen")]
+script = ExtResource("8_du4yn")
+wasserrad_drehen = NodePath("../../Visuals/Referenz/wasserrad")
 
 [node name="DemoTaskBlackboard" parent="." unique_id=1111715364 instance=ExtResource("5_0p6js")]
 transform = Transform3D(-0.99986374, 1.4901163e-08, 0.01651007, 4.171066e-08, 1.0000001, 5.964481e-08, -0.01651001, 2.9802326e-08, -0.9998637, -70.62009, 48.376984, -37.925884)
@@ -1392,6 +1397,9 @@ shape = SubResource("ConcavePolygonShape3D_ht8a3")
 [node name="Visuals" type="Node3D" parent="." unique_id=1671551082]
 
 [node name="Referenz" parent="Visuals" unique_id=1498720788 instance=ExtResource("15_h3jyd")]
+
+[node name="wasserrad" parent="Visuals/Referenz" index="111" unique_id=1968748430]
+transform = Transform3D(0.2220347, -0.97503877, 4.2620297e-08, 0, -4.371139e-08, -1, 0.97503877, 0.2220347, -9.7054444e-09, -89.51488, 49.242992, 73.64935)
 
 [node name="base_ortophoto" parent="Visuals/Referenz" index="139" unique_id=413235020]
 visible = false
