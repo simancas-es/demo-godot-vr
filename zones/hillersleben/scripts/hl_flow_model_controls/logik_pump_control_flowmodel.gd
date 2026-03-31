@@ -6,11 +6,12 @@ const Simulation := preload("uid://b6alvcbiyby3g")
 
 @export var flow_model : FlowModel = null
 @export var flow_id : FlowModel.Simulation.Edges.ID
-@onready var button = $MachineToggleable
+@onready var button : MachineToggleable = $MachineToggleable
 
 func _ready() -> void:
 	button.turned_on.connect(_on_on)
 	button.turned_off.connect(_on_off)
+	button.toggle(true)
 	pass
 
 func _on_on(...args) -> void:

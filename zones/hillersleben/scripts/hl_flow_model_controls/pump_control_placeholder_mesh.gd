@@ -6,7 +6,15 @@ extends MeshInstance3D
 func _ready() -> void:
 	button.turned_on.connect(_on_on)
 	button.turned_off.connect(_on_off)
+	
+	if button.is_on():
+		_on_on()
+	else:
+		_on_off()
+	
+	#print("Button State: %s, Mesh color: %s" % [button.current_state, get_active_material(0).albedo_color])
 	pass
+
 
 func _on_on(...args) -> void:
 	modulate(Color(0, 1, 0))  # RGB: green

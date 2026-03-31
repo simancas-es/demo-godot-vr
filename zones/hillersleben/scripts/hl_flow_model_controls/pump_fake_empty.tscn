@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b6k1fx74eaju1"]
+
+[ext_resource type="Script" uid="uid://cp1mvhmnun1iy" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_fake_empty.gd" id="1_xs6pa"]
+[ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="2_r0ihr"]
+[ext_resource type="Script" uid="uid://gh4kugk3fe4g" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_placeholder_mesh.gd" id="3_rt4pj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7sq4a"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yuvhm"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="FakeEntleerung" type="Label3D" unique_id=898526135]
+text = "ENTLEEREN MIT 100 m3/s"
+script = ExtResource("1_xs6pa")
+
+[node name="MachineToggleable" type="Area3D" parent="." unique_id=1587898709]
+transform = Transform3D(1, 2.5410988e-21, 8.940697e-08, -2.5410988e-21, 0.99999964, 1.6940659e-21, 0, 5.9292306e-21, 0.99999994, 0, -0.15040207, 0)
+script = ExtResource("2_r0ihr")
+time_rest_s = 0.5
+string_on = "Press [E] to turn off."
+string_off = "Press [E] to turn on."
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MachineToggleable" unique_id=1108462088]
+shape = SubResource("BoxShape3D_7sq4a")
+
+[node name="MeshInstance3D-Button" type="MeshInstance3D" parent="." unique_id=820221545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15040207, 0)
+mesh = SubResource("BoxMesh_yuvhm")
+skeleton = NodePath("")
+script = ExtResource("3_rt4pj")
