@@ -18,12 +18,20 @@ var _can_activate := true
 @export_category("Interaction Strings")
 @export var string_on : String = "Press [E] to turn off"
 @export var string_off : String = "Press [E] to turn on"
+@export var string_not_initialized : String = "Press [E] to initialize."
 
 func _ready() -> void:
 	activated.connect(toggle_activation)
 	_next_state = initial_state
 	toggle_activation()
 
+func is_on() -> bool:
+	match current_state:
+		STATE.OFF: return false
+		STATE.ON: return true
+		STATE.NOT_INITIALIZED: return false
+	return false
+	
 func toggle(on : bool) -> void:
 	if not _can_activate: return
 	if not on:
