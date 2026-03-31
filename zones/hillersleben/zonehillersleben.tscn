@@ -12,8 +12,10 @@
 [ext_resource type="PackedScene" uid="uid://dx8l2qbku8m3t" path="res://zones/hillersleben/scripts/water_visuals/WaterLevelFollower.tscn" id="4_gfnr6"]
 [ext_resource type="PackedScene" uid="uid://d3qp4a3ahe2gf" path="res://models/demo_basin/task_blackboard/demo_task_blackboard.tscn" id="5_0p6js"]
 [ext_resource type="PackedScene" uid="uid://g6utn56lubnu" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_placeholder.tscn" id="5_w4u61"]
+[ext_resource type="PackedScene" uid="uid://d1usv83amjvqe" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_inflow.tscn" id="6_edwb7"]
 [ext_resource type="Script" uid="uid://d33fw1e70sdha" path="res://models/labels/function_map_reference.gd" id="6_h3jyd"]
 [ext_resource type="Script" uid="uid://dih0abuhxu7o5" path="res://systems/system-tasks/system_tasks_starter.gd" id="6_t3rbc"]
+[ext_resource type="PackedScene" uid="uid://b6k1fx74eaju1" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn" id="7_sktl7"]
 [ext_resource type="PackedScene" uid="uid://c7yhfipghxiyv" path="res://models/doors/basedoor2m.tscn" id="8_1khpx"]
 [ext_resource type="Script" uid="uid://jgo7k1ecvdjx" path="res://zones/hillersleben/scripts/logik_doors_container.gd" id="8_6uclu"]
 [ext_resource type="Script" uid="uid://sefhuc62i04i" path="res://zones/hillersleben/scripts/water_visuals/logik_wasserrad.gd" id="8_du4yn"]
@@ -753,6 +755,18 @@ transform = Transform3D(0.50419575, 2.4613907e-14, 0.86358917, -4.9227265e-14, 0
 text = "Pump Secondary Clarifier II -> Floating Sludge PW"
 flow_model = NodePath("../../../FlowSimulation")
 flow_id = 31
+
+[node name="PUMP-FAKEFLOWS" type="Node3D" parent="Reference_point_floor" unique_id=1274962145]
+
+[node name="FakeFüllen" parent="Reference_point_floor/PUMP-FAKEFLOWS" unique_id=898526135 node_paths=PackedStringArray("flow_model") instance=ExtResource("6_edwb7")]
+transform = Transform3D(-0.7808776, 0, 0.62468404, 0, 1, 0, -0.62468404, 0, -0.7808776, -37.074455, 3.766735, 35.28305)
+flow_model = NodePath("../../../FlowSimulation")
+container_id = 13
+
+[node name="FakeEntleerung" parent="Reference_point_floor/PUMP-FAKEFLOWS" unique_id=757823687 node_paths=PackedStringArray("flow_model") instance=ExtResource("7_sktl7")]
+transform = Transform3D(-0.7808776, 0, 0.62468404, 0, 0.99999994, -1.6940659e-21, -0.624684, 0, -0.78087753, -37.074455, 3.3563728, 35.283047)
+flow_model = NodePath("../../../FlowSimulation")
+container_id = 13
 
 [node name="Config" type="Node3D" parent="." unique_id=701552541]
 
