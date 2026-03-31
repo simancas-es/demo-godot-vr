@@ -162,28 +162,33 @@ layout_mode = 2
 size_flags_vertical = 0
 alignment = 1
 
-[node name="Panel" type="Panel" parent="UI_CanvasLayer" unique_id=1880803786]
-anchors_preset = -1
-anchor_left = 0.8
-anchor_top = 0.825
+[node name="Label" type="Label" parent="UI_CanvasLayer" unique_id=1222142220]
+z_index = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -0.080078125
-offset_top = -15.599976
+offset_left = -265.0
+offset_top = -197.0
 grow_horizontal = 0
 grow_vertical = 0
-
-[node name="Label" type="Label" parent="UI_CanvasLayer/Panel" unique_id=1222142220]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
 text = "WASD - Bewegung/Movement
- ␣ - Springen/Jump , 🡅 - Rennen/Run
+Space / Leertaste   - Springen/Jump
+Shift / Umschalt - Rennen/Run
 E - Interaction, LMB
 RT - Inventarzyklen, I-Inventar
 Mausrad/Mousewheel - Zoom
-Esc - Menu, H - Reset Position
-"
+Esc - Menu, H - Reset Position"
 label_settings = SubResource("LabelSettings_vuvmw")
+
+[node name="Panel" type="Panel" parent="UI_CanvasLayer/Label" unique_id=1880803786]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="StartXR" parent="." unique_id=1145080393 instance=ExtResource("16_bm7q0")]
