@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://rhfkspdhddrv"]
+[gd_scene format=3 uid="uid://rhfkspdhddrv"]
 
 [ext_resource type="Script" uid="uid://s14wlv4lqne3" path="res://models/ladders/simple_ladder/ladder.gd" id="1_fj4s5"]
 
@@ -8,15 +8,15 @@ size = Vector3(0.6, 2, 0.1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_engif"]
 size = Vector3(0.299866, 1.703, 1)
 
-[node name="Ladder" type="Area3D"]
+[node name="Ladder" type="Area3D" unique_id=2028809728]
 transform = Transform3D(0.102914, 0, -0.99469, 0, 1, 0, 0.99469, 0, 0.102914, 0, 0, 0)
 script = ExtResource("1_fj4s5")
 metadata/_custom_type_script = "uid://s14wlv4lqne3"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=282152593]
 transform = Transform3D(-0.993859, 0, 0.110654, 0, 1, 0, -0.110654, 0, -0.993859, 0, 1.03027, 0)
 mesh = SubResource("BoxMesh_qfylk")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=49423198]
 transform = Transform3D(0.0242926, 0, 0.999704, 0, 1, 0, -0.999704, 0, 0.0242926, 0.0640841, 1.00739, -0.143054)
 shape = SubResource("BoxShape3D_engif")

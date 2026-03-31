@@ -11,6 +11,11 @@ class_name Ladder
 ##Looking 45 degree angle down or less: downwards
 ##Looking 45 degrees angle down or more: upwards 
 
+@export var minimum_looking_angle_deg : float = 45
+@export var minimum_horizontal_angle : float = 90
+@export var allowed_from_behind : bool = true
+@export var allowed_backwards : bool = true
+
 func _ready() -> void:
 	monitoring = false
 	collision_layer = ENUMS.COLLISION_LAYER.LADDERS
