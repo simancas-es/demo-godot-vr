@@ -771,6 +771,7 @@ flow_model = NodePath("../../../FlowSimulation")
 container_id = 13
 
 [node name="LADDERS" type="Node3D" parent="Reference_point_floor" unique_id=2044307667]
+visible = false
 
 [node name="LadderFlockungsmittel" parent="Reference_point_floor/LADDERS" unique_id=853920858 instance=ExtResource("4_0nlau")]
 transform = Transform3D(0.10210503, 0, -0.9947733, 2.8273162e-14, 1, 2.9019999e-15, 0.9947733, -2.8421713e-14, 0.10210503, -34.104576, 1.9372063, 26.661737)
