@@ -6,7 +6,7 @@ const Ref = preload("uid://b6alvcbiyby3g")
 @export var fractions: Array[float] = []            # fractions per target, sum <= 1.0
 
 @export var material: String = "water"
-@export var throughput: float = 0.0   # m3/s
+@export var throughput: float = 0.0   # m3/s must be positive
 @export var active: bool = true
 
 func add_target(container : Ref.SimContainer, fraction : float = 1.0) -> void:
@@ -20,6 +20,10 @@ func add_targets(...containers) -> void:
 		if is_instance_of(c, Ref.SimContainer):
 			add_target(c)
 	pass
+	
+func remove_targets() -> void:
+	targets = []
+	fractions = []
 		
 func link(_source : Ref.SimContainer, target : Ref.SimContainer, fraction : float = 1.0) -> void:
 	source = _source
