@@ -62,15 +62,15 @@ func process_physics(_delta : float) -> StateBase:
 	## If -1: fpv looking towards ladder front
 	
 	var angle_degrees = get_looking_angle_degrees(fpv)
-	var looking_up = 2*float(angle_degrees < 45) - 1
+	var looking_up_direction = 2*float(angle_degrees < 45) - 1
 	##cos fw1: s: up, w: down
 	##cos fw-1: s: down, w : looking_up
 	if cos_forward > 0: #Looking away from the ladder
 		fpv.velocity.y = movedir.z * fpv.SPEED
-	elif looking_up > 0: #Looking towards the ladder
-		fpv.velocity.y = looking_up * -movedir.z * fpv.SPEED
+	elif looking_up_direction > 0: #Looking towards the ladder
+		fpv.velocity.y = looking_up_direction * -movedir.z * fpv.SPEED
 	else:
-		fpv.velocity.y = -looking_up * abs(movedir.z) * fpv.SPEED
+		fpv.velocity.y = -looking_up_direction * abs(movedir.z) * fpv.SPEED
 			
 	fpv.move_and_slide()
 	

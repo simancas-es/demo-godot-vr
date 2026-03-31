@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bcyt1b5low3w4"]
+[gd_scene format=3 uid="uid://bcyt1b5low3w4"]
 
 [ext_resource type="Script" uid="uid://pitm0eunqjp7" path="res://clases/fpv/fpv.gd" id="1_q2fis"]
 [ext_resource type="Script" uid="uid://davyaem2knud4" path="res://clases/fpv/area_check.gd" id="2_vvcos"]
@@ -41,7 +41,7 @@ _data = {
 }
 point_count = 2
 
-[node name="FPV" type="CharacterBody3D" groups=["FPV"]]
+[node name="FPV" type="CharacterBody3D" unique_id=1667993730 groups=["FPV"]]
 collision_layer = 524288
 collision_mask = 59392
 collision_priority = 5.0
@@ -55,72 +55,72 @@ platform_wall_layers = 16384
 safe_margin = 0.01
 script = ExtResource("1_q2fis")
 
-[node name="CollisionShape_Standing" type="CollisionShape3D" parent="."]
+[node name="CollisionShape_Standing" type="CollisionShape3D" parent="." unique_id=1809146673]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.859176, 0)
 shape = SubResource("CapsuleShape3D_8q5hm")
 
-[node name="CollisionShape_Crouching" type="CollisionShape3D" parent="."]
+[node name="CollisionShape_Crouching" type="CollisionShape3D" parent="." unique_id=1651044485]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.514625, 0)
 shape = SubResource("CapsuleShape3D_2ykp4")
 
-[node name="AreaCheck" type="Area3D" parent="."]
+[node name="AreaCheck" type="Area3D" parent="." unique_id=1236836520]
 unique_name_in_owner = true
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("2_vvcos")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCheck"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCheck" unique_id=1938086473]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("BoxShape3D_8q5hm")
 
-[node name="LadderCheck" type="Area3D" parent="."]
+[node name="LadderCheck" type="Area3D" parent="." unique_id=595232364]
 unique_name_in_owner = true
 collision_layer = 0
 collision_mask = 8192
 monitorable = false
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LadderCheck"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LadderCheck" unique_id=1954602476]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("BoxShape3D_8q5hm")
 
-[node name="DebugPosition" type="MeshInstance3D" parent="."]
+[node name="DebugPosition" type="MeshInstance3D" parent="." unique_id=1036197791]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.762753, 0)
 visible = false
 mesh = SubResource("CapsuleMesh_8q5hm")
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1599445204]
 unique_name_in_owner = true
 debug_enabled = true
 
-[node name="InteractionLogic" type="Node" parent="."]
+[node name="InteractionLogic" type="Node" parent="." unique_id=1170981063]
 unique_name_in_owner = true
 script = ExtResource("8_xbfv4")
 
-[node name="SystemPhysicalControlGrabber" type="Node" parent="." node_paths=PackedStringArray("line_of_sight_drop_exclusion", "body_movement_object")]
+[node name="SystemPhysicalControlGrabber" type="Node" parent="." unique_id=884120055 node_paths=PackedStringArray("line_of_sight_drop_exclusion", "body_movement_object")]
 unique_name_in_owner = true
 script = ExtResource("4_2awh3")
 line_of_sight_drop_exclusion = [NodePath("..")]
 body_movement_object = NodePath("..")
 metadata/_custom_type_script = "uid://w3alf3er3kwf"
 
-[node name="CameraBasePosition" type="Node3D" parent="."]
+[node name="CameraBasePosition" type="Node3D" parent="." unique_id=588044910]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
-[node name="Camera3D" type="Camera3D" parent="CameraBasePosition"]
+[node name="Camera3D" type="Camera3D" parent="CameraBasePosition" unique_id=205004129]
 unique_name_in_owner = true
 transform = Transform3D(1, 8.04664e-07, -4.32135e-07, -8.04665e-07, 1, 1.2666e-07, 4.32135e-07, -1.26659e-07, 1, -1.52737e-07, 0, 1.2815e-06)
 current = true
 script = ExtResource("3_07gqe")
 
-[node name="TestLabel" type="Label" parent="CameraBasePosition/Camera3D"]
+[node name="TestLabel" type="Label" parent="CameraBasePosition/Camera3D" unique_id=1729413716]
 auto_translate_mode = 2
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
 text = "PLACEHOLDER_FPV_DEBUG"
 
-[node name="RayCast3D" type="RayCast3D" parent="CameraBasePosition/Camera3D"]
+[node name="RayCast3D" type="RayCast3D" parent="CameraBasePosition/Camera3D" unique_id=700200823]
 unique_name_in_owner = true
 visible = false
 target_position = Vector3(0, 0, -1.5)
@@ -130,7 +130,7 @@ collide_with_areas = true
 debug_shape_custom_color = Color(1, 0, 0, 1)
 script = ExtResource("3_e1rf4")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CameraBasePosition/Camera3D"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CameraBasePosition/Camera3D" unique_id=1958022882]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -142,7 +142,7 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="CenterAim" type="Label" parent="CameraBasePosition/Camera3D/VBoxContainer"]
+[node name="CenterAim" type="Label" parent="CameraBasePosition/Camera3D/VBoxContainer" unique_id=1028907459]
 unique_name_in_owner = true
 auto_translate_mode = 2
 layout_mode = 2
@@ -151,84 +151,84 @@ label_settings = ExtResource("6_0xl0r")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ActionHints" type="VBoxContainer" parent="CameraBasePosition/Camera3D/VBoxContainer"]
+[node name="ActionHints" type="VBoxContainer" parent="CameraBasePosition/Camera3D/VBoxContainer" unique_id=1214125374]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Camera_death_animation" type="Path3D" parent="CameraBasePosition"]
+[node name="Camera_death_animation" type="Path3D" parent="CameraBasePosition" unique_id=944137361]
 transform = Transform3D(-0.0121821, 0, -0.999926, 0, 1, 0, 0.999926, 0, -0.0121821, 0, 0, 0.253642)
 curve = SubResource("Curve3D_2ykp4")
 
-[node name="camera_death_anim_follow" type="PathFollow3D" parent="CameraBasePosition/Camera_death_animation"]
+[node name="camera_death_anim_follow" type="PathFollow3D" parent="CameraBasePosition/Camera_death_animation" unique_id=962675740]
 unique_name_in_owner = true
-transform = Transform3D(-0.9818075, 0.026466062, 0.18797815, 0, 0.9902298, -0.13941753, -0.18983126, -0.1368825, -0.97222316, 0, 0, 0)
+transform = Transform3D(-0.9818075, 0.026466064, 0.18797815, 0, 0.99022985, -0.13941753, -0.18983126, -0.13688251, -0.97222316, 0, 0, 0)
 loop = false
 tilt_enabled = false
 
-[node name="StateMachineInteraction" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
+[node name="StateMachineInteraction" type="Node" parent="." unique_id=792364268 node_paths=PackedStringArray("starting_state")]
 unique_name_in_owner = true
 script = ExtResource("8_2awh3")
 starting_state = NodePath("Fixed")
 
-[node name="Fixed" type="Node" parent="StateMachineInteraction"]
+[node name="Fixed" type="Node" parent="StateMachineInteraction" unique_id=1566889548]
 unique_name_in_owner = true
 script = ExtResource("5_vy32a")
 metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
 
-[node name="Environment" type="Node" parent="StateMachineInteraction"]
+[node name="Environment" type="Node" parent="StateMachineInteraction" unique_id=1990882294]
 unique_name_in_owner = true
 script = ExtResource("8_8yfdh")
 metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
 
-[node name="Room" type="Node" parent="StateMachineInteraction"]
+[node name="Room" type="Node" parent="StateMachineInteraction" unique_id=1569613752]
 unique_name_in_owner = true
 script = ExtResource("9_xbfv4")
 metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
 
-[node name="Falcon" type="Node" parent="StateMachineInteraction"]
+[node name="Falcon" type="Node" parent="StateMachineInteraction" unique_id=139530810]
 unique_name_in_owner = true
 script = ExtResource("10_wsyud")
 metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
 
-[node name="inInventory" type="Node" parent="StateMachineInteraction"]
+[node name="inInventory" type="Node" parent="StateMachineInteraction" unique_id=1307728733]
 script = ExtResource("14_2awh3")
 metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
 
-[node name="SINotControlled" type="Node" parent="StateMachineInteraction"]
+[node name="SINotControlled" type="Node" parent="StateMachineInteraction" unique_id=2124845239]
 unique_name_in_owner = true
 script = ExtResource("14_is72l")
 
-[node name="StateMachineMovement" type="Node" parent="." node_paths=PackedStringArray("starting_state")]
+[node name="StateMachineMovement" type="Node" parent="." unique_id=602816105 node_paths=PackedStringArray("starting_state")]
 unique_name_in_owner = true
 script = ExtResource("8_2awh3")
 starting_state = NodePath("mov_still")
 
-[node name="mov_still" type="Node" parent="StateMachineMovement"]
+[node name="mov_still" type="Node" parent="StateMachineMovement" unique_id=1887664565]
 unique_name_in_owner = true
 script = ExtResource("12_wh5ok")
 metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
 
-[node name="mov_physics" type="Node" parent="StateMachineMovement"]
+[node name="mov_physics" type="Node" parent="StateMachineMovement" unique_id=1274535082]
 unique_name_in_owner = true
 script = ExtResource("13_0srtr")
 metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
 
-[node name="mov_ladder" type="Node" parent="StateMachineMovement"]
+[node name="mov_ladder" type="Node" parent="StateMachineMovement" unique_id=1657864307]
 unique_name_in_owner = true
 script = ExtResource("14_0srtr")
 metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
 
-[node name="mov_death" type="Node" parent="StateMachineMovement"]
+[node name="mov_death" type="Node" parent="StateMachineMovement" unique_id=1589384707]
 unique_name_in_owner = true
 script = ExtResource("17_2ykp4")
 metadata/_custom_type_script = "uid://ctgxmt1f40tkr"
 
-[node name="SMNotControlled" type="Node" parent="StateMachineMovement"]
+[node name="SMNotControlled" type="Node" parent="StateMachineMovement" unique_id=2001820029]
 unique_name_in_owner = true
 script = ExtResource("14_is72l")
 
-[node name="Locator_id_who" type="Node" parent="."]
+[node name="Locator_id_who" type="Node" parent="." unique_id=1878056883]
 script = ExtResource("19_is72l")
 locator_id = 1
 locator_group = 1
