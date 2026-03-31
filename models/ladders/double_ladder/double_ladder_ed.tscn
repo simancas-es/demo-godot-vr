@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dn7gboqa4u7d5"]
+
+[ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="1_i4yad"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_i4yad"]
+size = Vector3(0.6, 1.455, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ysfgr"]
+size = Vector3(0.59285164, 1.3584404, 0.037597656)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nth20"]
+size = Vector3(0.865, 6.84, 0.06)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nm8on"]
+size = Vector3(0.84311295, 9.391938, 0.06530762)
+
+[node name="DoubleLadder" type="Node3D" unique_id=278877708]
+transform = Transform3D(0.953979, 0, -0.2998734, 8.522916e-15, 1, 2.7113718e-14, 0.2998734, -2.8421713e-14, 0.953979, 0, 0, 0)
+
+[node name="Node3D" type="Node3D" parent="." unique_id=305337263]
+transform = Transform3D(-0.9999997, 0, -8.742275e-08, 0, 0.99999994, 0, 8.742275e-08, 0, -0.99999964, 0, 0, 0)
+
+[node name="LadderBB1_out" parent="Node3D" unique_id=2028809728 instance=ExtResource("1_i4yad")]
+transform = Transform3D(-0.9999999, 0, -8.742277e-08, 0, 0.9999998, 0, 8.742277e-08, 0, -0.9999999, -0.032751955, 0.5378166, 0.66386557)
+allowed_from_behind = false
+
+[node name="MeshInstance3D" parent="Node3D/LadderBB1_out" index="0" unique_id=282152593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_i4yad")
+
+[node name="CollisionShape3D" parent="Node3D/LadderBB1_out" index="1" unique_id=49423198]
+transform = Transform3D(1.0000184, 1.1481056e-19, 0, -1.1481267e-19, 1, 0, 0, 1.0322985e-31, 1.0000014, 0, 0.049173355, 0)
+shape = SubResource("BoxShape3D_ysfgr")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="LadderBB1_in" parent="Node3D" unique_id=845749504 instance=ExtResource("1_i4yad")]
+transform = Transform3D(1, 0, 0, -1.2705494e-21, 0.99999964, 1.0164395e-20, 0, 5.0821977e-21, 1, -0.00097273214, -2.178469, 0.009476973)
+allowed_from_behind = false
+
+[node name="MeshInstance3D" parent="Node3D/LadderBB1_in" index="0" unique_id=282152593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_nth20")
+
+[node name="CollisionShape3D" parent="Node3D/LadderBB1_in" index="1" unique_id=49423198]
+transform = Transform3D(0.9999994, 3.7360452e-27, 0, 7.4720905e-27, 0.99997604, 0, -3.874302e-07, -2.8272775e-27, 1.0000007, 0, -1.2434502, 0)
+shape = SubResource("BoxShape3D_nm8on")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[editable path="Node3D/LadderBB1_out"]
+[editable path="Node3D/LadderBB1_in"]
