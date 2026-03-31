@@ -4,6 +4,8 @@ const StateMachineBase := FSM_UIDCLASSREF.StateMachineBase
 
 var gc : ControllerBase
 
+const MovLadder := preload("uid://cknc20whxaqec")
+
 @onready var camera : FPVCamera = %Camera3D
 @onready var raycast_center = %RayCast3D
 @onready var raycast_fixed = (%Camera3D).raycast_fixed
@@ -34,7 +36,13 @@ func is_looking_at_ladder(area : Area3D) -> bool:
 		if angle_deg < (30):
 			return true
 	return false
-
+	
+func is_moving_toward_ladder(fpv: Node3D, ladder: Node3D, movedir_z: float) -> bool:
+	var dist : float = fpv.global_position.z - ladder.global_position.z
+	return (sign(dist) != sign(movedir_z))
+	#Positive distance -> player higher than ladder in z axis, forward = negative z, closes distance
+	#Negative distance -> player lower than ladder in z axis, forward = negative z, makes distance even bigger.
+	
 #---------------PHYSICS MOVEMENT--------------
 
 #Tweak constants
@@ -72,22 +80,19 @@ func process_physics(delta: float) -> StateBase:
 	if !fpv : return null
 	#if fsm_ix.current_state != state_env: return #Not needed
 	
+	camera.position = Vector3.ZERO #BUG 
+	movedir = gc.movedir.rotated(Vector3(0, 1, 0), fpv.rotation.y)
+	
 	#Check for ladders
 	ladder_check_overlapping_areas = area_ladder.get_overlapping_areas()
 	if ladder_check_overlapping_areas.size() > 0:
-		for _area_collision in ladder_check_overlapping_areas:
-			#if is_looking_at_ladder(_area_collision) and gc.movedir.z < 0:
-				###Both looking at ladder and moving towards it
-				#return state_movladder
-			var angle_deg = rad_to_deg(UTILS.get_angle_between_forward_vectors(fpv, _area_collision))
-			if angle_deg < 30 and ((fpv.velocity.y < 0) or (gc.movedir.z < 0)):
-				return state_movladder
-			elif angle_deg > 130 and ((fpv.velocity.y < 0) or (gc.movedir.z > 0)):
-				return state_movladder
-	#//End check for ladders
-	
-	camera.position = Vector3.ZERO #BUG 
-	movedir = gc.movedir.rotated(Vector3(0, 1, 0), fpv.rotation.y)
+		var ladder_check := MovLadder.is_atleast_one_ladder(ladder_check_overlapping_areas, fpv) #HACK
+		if ladder_check:
+			for _area_collision in ladder_check_overlapping_areas:
+				if not (_area_collision is Ladder): continue
+				if is_moving_toward_ladder(fpv, _area_collision, movedir.z) or fpv.velocity.y < 0:
+					return state_movladder
+			#//End check for ladders
 	
 	if not fpv.is_on_floor():
 		fpv.velocity.y -= GRAV * delta

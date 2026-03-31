@@ -205,14 +205,22 @@ static func read_json(path : String, default_path : String) -> Dictionary:
 
 ##Returns the angle between two Node3Ds and their forward directions in radians.
 static func get_angle_between_forward_vectors(a: Node3D, b: Node3D) -> float:
-	var a_forward = a.global_transform.basis.z.normalized()
-	var b_forward = -b.global_transform.basis.z.normalized()
+	var a_forward := a.global_transform.basis.z.normalized()
+	var b_forward := -b.global_transform.basis.z.normalized()
 	return a_forward.angle_to(b_forward)
 
 static func get_cosine_two_forwards(a : Node3D, b: Node3D) -> float:
-	var a_forward = a.global_transform.basis.z.normalized()
-	var b_forward = b.global_transform.basis.z.normalized()
+	var a_forward := a.global_transform.basis.z.normalized()
+	var b_forward := b.global_transform.basis.z.normalized()
 	return a_forward.dot(b_forward)
+	
+static func get_horizontal_cos_to_node2(node1: Node3D, node2: Node3D) -> float:
+	var V := node1.global_transform.origin - node2.global_transform.origin
+	V.y = 0.0
+	var front := node2.global_transform.basis.z.normalized()
+	front.y = 0.0
+	front = front.normalized()
+	return front.dot(V.normalized())
 
 ##Gets distance to object along path. -1 if not found
 static func get_distance_to_body(from_global : Vector3, to_global : Vector3, object : PhysicsBody3D) -> float:
