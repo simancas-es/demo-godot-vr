@@ -16,4 +16,4 @@ var _tween : Tween
 func _process(delta: float) -> void:
 	if wasserrad_drehen == null:
 		return
-	wasserrad_drehen.rotate(wasserrad_drehen.transform.basis.y, deg_to_rad(-_speed_deg_s) * delta)
+	wasserrad_drehen.rotate(wasserrad_drehen.transform.basis.y.normalized(), deg_to_rad(-_speed_deg_s) * delta)
