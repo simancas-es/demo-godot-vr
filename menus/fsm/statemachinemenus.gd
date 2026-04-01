@@ -8,6 +8,7 @@ class_name StateMachineMenus
 var current_state: StateMenus = null
 var history : Array = []
 
+signal updated
 
 func _ready():
 	#num_states = starting_states.size()
@@ -42,6 +43,7 @@ func change_state(new_state: StateMenus) -> void:
 	current_state.enter()
 	#print("history current:", history)
 	#print("current state:", current_state)
+	updated.emit()
 
 func back():
 	#print("back from ", current_state)

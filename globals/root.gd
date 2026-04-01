@@ -6,8 +6,9 @@ var current_scene : Node = null
 #@export var canvas : MenuManager
 
 @export var state_machine_menus : StateMachineMenus
-
 @onready var debug_label_state = %DebugStateText
+
+signal updated
 
 func init_root():
 	#Clean Slate
@@ -32,6 +33,7 @@ func _ready():
 	#else:
 		#xrstart.queue_free()
 	state_machine_menus.init(self)
+	state_machine_menus.updated.connect(updated.emit)
 	#if get_tree().current_scene :
 		#_on_introscreen()
 
@@ -83,12 +85,15 @@ func load_environment(environment : Node):
 	current_scene.set_process(true)
 	#current_scene.request_ready()
 	add_child(current_scene)
-	
+	updated.emit()
 	#entry animation
 
 func exit_game() -> void:
 	get_tree().quit()
-		
+
+func is_xr() -> bool:
+	return state_machine_menus.current_state == $StateMachine/InVR
+	
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
