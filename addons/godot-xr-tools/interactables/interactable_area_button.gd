@@ -23,6 +23,9 @@ signal button_released(button)
 ## Displacement when pressed
 @export var displacement : Vector3 = Vector3(0.0, -0.02, 0.0)
 
+## Displacement toggled
+@export var displacement_toggle : bool = false
+
 ## Displacement duration
 @export var duration : float = 0.1
 
@@ -73,6 +76,7 @@ func _on_button_entered(item: Node3D) -> void:
 		# Update state to pressed
 		pressed = true
 
+	
 		# Kill the current tween
 		if _tween:
 			_tween.kill()
@@ -85,7 +89,9 @@ func _on_button_entered(item: Node3D) -> void:
 
 		# Emit the pressed signal
 		button_pressed.emit(self)
-
+	
+	elif pressed and displacement_toggle:
+		_on_button_exited(item)
 
 # Called when an area or body exits the button area
 func _on_button_exited(item: Node3D) -> void:
@@ -96,16 +102,17 @@ func _on_button_exited(item: Node3D) -> void:
 	if pressed and _trigger_items.is_empty():
 		# Update state to released
 		pressed = false
+	
+		if not displacement_toggle:
+			# Kill the current tween
+			if _tween:
+				_tween.kill()
 
-		# Kill the current tween
-		if _tween:
-			_tween.kill()
-
-		# Construct the button animation tween
-		_tween = create_tween()
-		_tween.set_trans(Tween.TRANS_LINEAR)
-		_tween.set_ease(Tween.EASE_IN_OUT)
-		_tween.tween_property(_button, "position", _button_up, duration)
+			# Construct the button animation tween
+			_tween = create_tween()
+			_tween.set_trans(Tween.TRANS_LINEAR)
+			_tween.set_ease(Tween.EASE_IN_OUT)
+			_tween.tween_property(_button, "position", _button_up, duration)
 
 		# Emit the released signal
 		button_released.emit(self)
