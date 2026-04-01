@@ -7,10 +7,15 @@ const Simulation := preload("uid://b6alvcbiyby3g")
 @export var flow_model : FlowModel = null
 @export var flow_id : FlowModel.Simulation.Edges.ID
 @onready var button : MachineToggleable = $MachineToggleable
+@onready var xr_button : XRToolsInteractablePushbuttonGeneral = $PushButton
 
 func _ready() -> void:
 	button.turned_on.connect(_on_on)
 	button.turned_off.connect(_on_off)
+	
+	xr_button.button_pressed.connect(_on_on)
+	xr_button.button_released.connect(_on_off)	
+	
 	button.toggle(true)
 	pass
 

@@ -10,20 +10,23 @@ func _ready() -> void:
 	root = get_tree().current_scene
 	root.updated.connect(check_xr)
 	parent.ready.connect(setup)
+	
+	parent.button_pressed.connect(_on_on)
+	parent.button_released.connect(_on_off)
 
 func check_xr() -> void:
 	if root is GameRoot:
 		if not root.is_xr():
 			parent.queue_free(); return
+		else:
+			$"../../MeshInstance3D-Button".visible = false
 	pass
 	
 func setup() -> void:
-	button.turned_on.connect(_on_on)
-	button.turned_off.connect(_on_off)
 	if button.is_on():
-		_on_on()
+		parent.toggle(true)
 	else:
-		_on_off()	
+		parent.toggle(false)
 	pass
 
 
