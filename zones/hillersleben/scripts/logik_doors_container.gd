@@ -22,7 +22,8 @@ func _ready() -> void:
 		push_error("Missing garage_door_body!")
 		return
 
-	_mesh = garage_door_body.get_node("MeshInstance3D")
+	#_mesh = garage_door_body.get_node("MeshInstance3D")
+	_mesh = garage_door_body #Quick HACK
 	_static_body = garage_door_body.get_node("StaticBody3D")
 
 	_closed_position = _mesh.position
