@@ -1115,6 +1115,8 @@ nodepath = NodePath("../../../Visuals/Referenz/bg_garage_tor")
 
 [node name="BGebaeude-garagedoor-button" parent="Betriebsgebäude" unique_id=1858723037 instance=ExtResource("8_duhpb")]
 transform = Transform3D(-0.36271465, 0, 0.93190026, 0, 1, 0, -0.93190026, 0, -0.36271465, -28.934345, 49.92099, 18.841993)
+string_on = "Press [E] to turn close the door."
+string_off = "Press [E] to open the door."
 
 [node name="GarageController" type="Node" parent="Betriebsgebäude" unique_id=1529548299 node_paths=PackedStringArray("door_controller", "container_controllers", "container_out_buttons", "container_in_buttons", "halt_buttons", "door_button")]
 script = ExtResource("9_0nlau")
@@ -1146,10 +1148,12 @@ transform = Transform3D(-0.92587054, 0, -0.3778409, 0, 1, 0, 0.3778409, 0, -0.92
 
 [node name="ContainerGarbageHALT" parent="Betriebsgebäude/GarbageContainer" unique_id=1953550971 instance=ExtResource("8_duhpb")]
 momentary_button = true
+string_off = "Press [E] to stop the garbage container."
 
 [node name="ContainerGarbageMOVEFW" parent="Betriebsgebäude/GarbageContainer" unique_id=1534832071 instance=ExtResource("8_duhpb")]
 transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 0.34945297, 0, -0.04181099)
 momentary_button = true
+string_off = "Press [E] to take the garbage container out."
 
 [node name="ContainerGarbageMOVEBACK" parent="Betriebsgebäude/GarbageContainer" unique_id=1710939427 instance=ExtResource("8_duhpb")]
 transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 1.5978279, 0, -0.11316204)
@@ -1160,10 +1164,12 @@ transform = Transform3D(-0.92587054, 0, -0.3778409, 0, 1, 0, 0.3778409, 0, -0.92
 
 [node name="ContainerSandHALT" parent="Betriebsgebäude/SandContainer" unique_id=480945116 instance=ExtResource("8_duhpb")]
 momentary_button = true
+string_off = "Press [E] to stop the sand container."
 
 [node name="ContainerSandMOVEFW" parent="Betriebsgebäude/SandContainer" unique_id=1916060645 instance=ExtResource("8_duhpb")]
 transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 0.34945297, 0, -0.04181099)
 momentary_button = true
+string_off = "Press [E] to take the sand container out."
 
 [node name="ContainerSandMOVEBACK" parent="Betriebsgebäude/SandContainer" unique_id=165711960 instance=ExtResource("8_duhpb")]
 transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 1.5978279, 0, -0.11316204)
