@@ -84,7 +84,7 @@ func _on_button_entered(item: Node3D) -> void:
 		pressed = not pressed
 		if pressed:
 			button_pressed.emit(self)
-		print("Target down, p %s, target: %s" % [pressed, _button_down])
+		#print("Target down, p %s, target: %s" % [pressed, _button_down])
 	else:
 		# Standard button: pressing always goes down
 		if not pressed:
@@ -110,7 +110,7 @@ func _on_button_exited(item: Node3D) -> void:
 				button_released.emit(self)
 			_set_button_target(target)
 
-			print("Target up  , p %s, target: %s" % [pressed, target])
+			#print("Target up  , p %s, target: %s" % [pressed, target])
 		else:
 			# Standard button: release to UP
 			pressed = false
