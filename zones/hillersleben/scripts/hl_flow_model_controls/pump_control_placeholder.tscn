@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://4wba5jvobiid" path="res://zones/hillersleben/scripts/hl_flow_model_controls/logik_pump_control_flowmodel.gd" id="1_h5g65"]
 [ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="2_61hee"]
 [ext_resource type="Script" uid="uid://gh4kugk3fe4g" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_placeholder_mesh.gd" id="3_geo1i"]
+[ext_resource type="PackedScene" uid="uid://dbv1hvxufc1al" path="res://XR/scenes/interactables/objects/push_button.tscn" id="4_geo1i"]
+[ext_resource type="Script" uid="uid://ibm10jycppjv" path="res://zones/hillersleben/scripts/hl_flow_model_controls/xr_pump_control_button.gd" id="5_844sd"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_edwb7"]
 size = Vector3(0.1, 0.1, 0.1)
@@ -11,7 +13,7 @@ size = Vector3(0.1, 0.1, 0.1)
 size = Vector3(0.1, 0.1, 0.1)
 
 [node name="PumpControlPlaceholder" type="Label3D" unique_id=403730820]
-transform = Transform3D(-0.50000006, 2.461392e-14, 0.86602527, -2.4613925e-14, 0.9999997, -4.263255e-14, -0.8660252, -4.2632564e-14, -0.49999988, 0, 0, 0)
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999997, 0, 0, 0, 0.9999998, 0, 0, 0)
 text = "PumpXXX"
 script = ExtResource("1_h5g65")
 
@@ -32,3 +34,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15040207, 0)
 mesh = SubResource("BoxMesh_edwb7")
 skeleton = NodePath("")
 script = ExtResource("3_geo1i")
+
+[node name="PushButton" parent="." unique_id=1653285408 instance=ExtResource("4_geo1i")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.15643549, 0.032016255)
+toggle_displacement = true
+
+[node name="XRControl" type="Node" parent="PushButton" unique_id=1168203974]
+script = ExtResource("5_844sd")
