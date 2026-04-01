@@ -27,7 +27,15 @@ func _ready() -> void:
 		if not rumbler: return
 		rumbler.queue_free() #HACK
 		
-
+func toggle(enable : bool) -> void: #HACK
+	if enable:
+		iab._on_button_entered(self)
+		iab._trigger_items.clear() # HACK
+	else:
+		iab._trigger_items.clear() # HACK
+		iab._on_button_exited(self)
+	pass
+	
 func modulate_color(color : Color) -> void:
 	modulate($Button/MeshInstance3D, color)
 	

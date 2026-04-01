@@ -73,7 +73,6 @@ collision_layer = 0
 collision_mask = 131072
 script = ExtResource("2")
 button = NodePath("../Button")
-displacement_toggle = null
 
 [node name="Rumbler" type="Node" parent="InteractableAreaButton" unique_id=643767851]
 unique_name_in_owner = true
