@@ -446,7 +446,7 @@ bone_index = 9
 [node name="MovementClimb" parent="." unique_id=1968881862 instance=ExtResource("13_dl2y0")]
 
 [node name="PlayerBody" parent="." unique_id=879004537 instance=ExtResource("12_ptqt2")]
-collision_mask = 796917760
+collision_mask = 796950528
 safe_margin = 0.05
 
 [node name="BeltSnapZone01" parent="PlayerBody" unique_id=277655760 groups=["beltsnap"] instance=ExtResource("13_5bwuw")]
