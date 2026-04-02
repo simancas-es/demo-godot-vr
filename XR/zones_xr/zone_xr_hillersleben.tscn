@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://cy6yaaww8s0it"]
+[gd_scene format=3 uid="uid://cy6yaaww8s0it"]
 
 [ext_resource type="Script" uid="uid://177gygw2xqqu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_g30re"]
 [ext_resource type="Script" uid="uid://d2dcx1dna1w1c" path="res://XR/zones_xr/xr_adapter.gd" id="2_qeqsy"]
@@ -12,209 +12,240 @@
 [ext_resource type="PackedScene" uid="uid://dbv1hvxufc1al" path="res://XR/scenes/interactables/objects/push_button.tscn" id="6_qeqsy"]
 [ext_resource type="Script" uid="uid://dpiig52hphovq" path="res://XR/zones_xr/zone_xr_hillersleben/xr_logik_bgebaeude_container_u_gdoor.gd" id="7_3tkdv"]
 [ext_resource type="PackedScene" uid="uid://q3pa72xp41cq" path="res://XR/scenes/places/demo/environment/climb_ladder.tscn" id="8_j68eo"]
+[ext_resource type="Script" uid="uid://bqb3cy0ekk685" path="res://addons/godot-xr-tools/objects/climbable.gd" id="9_blbn6"]
 [ext_resource type="PackedScene" uid="uid://slucrp1xvh1f" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn" id="10_7c5co"]
 [ext_resource type="PackedScene" uid="uid://dtbf2svlpoqn2" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_inne.tscn" id="11_dxf5d"]
 [ext_resource type="PackedScene" uid="uid://do4avecb8ff63" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_1.tscn" id="12_ql5yn"]
 [ext_resource type="PackedScene" uid="uid://vldcbssbhvst" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_2.tscn" id="13_7kms6"]
+[ext_resource type="PackedScene" uid="uid://dbxhbvm10ly04" path="res://XR/zones_xr/zone_xr_hillersleben/leiter/xr_leiter_becken.tscn" id="15_gn0sx"]
 [ext_resource type="PackedScene" uid="uid://cmpsfqqm2b01w" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn" id="17_jjegv"]
 [ext_resource type="PackedScene" uid="uid://dsuvjembw0hgm" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn" id="18_8b71c"]
 [ext_resource type="PackedScene" uid="uid://c30j781b35eik" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn" id="19_gyhl1"]
 [ext_resource type="PackedScene" uid="uid://cx4lh6xxcfd3t" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn" id="20_8e2ce"]
 [ext_resource type="PackedScene" uid="uid://d1dk6he6swidm" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn" id="21_5m8dp"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8e2ce"]
-animation = &"Grip"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5m8dp"]
-animation = &"Grip"
-
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_pcgtb"]
-filter_enabled = true
-filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kgmhy"]
-animation = &"Grip 5"
-
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_1hgw2"]
-filter_enabled = true
-filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
-
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_foycb"]
-graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_8e2ce")
-nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_5m8dp")
-nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_pcgtb")
-nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_kgmhy")
-nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_1hgw2")
-nodes/Trigger/position = Vector2(-360, 20)
-node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_blbn6"]
-animation = &"Grip"
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="23_gn0sx"]
+[ext_resource type="Animation" uid="uid://dqa0h82y3qn1t" path="res://addons/godot-xr-tools/hands/animations/left/Grip 1.res" id="24_tegc5"]
+[ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="25_rpwcs"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="26_48yfo"]
+[ext_resource type="Animation" uid="uid://daqddcrbpam0c" path="res://addons/godot-xr-tools/hands/animations/right/Grip 1.res" id="27_pwsyg"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gn0sx"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_tegc5"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tegc5"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_rpwcs"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rpwcs"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_48yfo"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_48yfo"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_pwsyg"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_pwsyg"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_0uh4r"]
 graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_blbn6")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_gn0sx")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_gn0sx")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_tegc5")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_tegc5")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_rpwcs")
 nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_rpwcs")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_48yfo")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_48yfo")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_pwsyg")
 nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_0uh4r"]
-animation = &"Grip"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kaumj"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_1v164"]
-filter_enabled = true
-filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1v164"]
+animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pq2yi"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_pq2yi"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fc3he"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_fc3he"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_a2s05"]
 filter_enabled = true
-filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
+filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_a2s05"]
-graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_0uh4r")
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_xbb2l"]
+graph_offset = Vector2(-536, 11)
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_kaumj")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_kaumj")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_1v164")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_1v164")
-nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_pq2yi")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_pq2yi")
+nodes/Grip/position = Vector2(0, 20)
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_fc3he")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_fc3he")
-nodes/Trigger/position = Vector2(-360, 40)
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_a2s05")
+nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xbb2l"]
-animation = &"Grip"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8vbyn"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ffxoy"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ffxoy"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_hbpbv"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hbpbv"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bf5gv"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_bf5gv"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_dfmot"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_dfmot"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_xmg2b"]
 graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_xbb2l")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_8vbyn")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_8vbyn")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_ffxoy")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_ffxoy")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_hbpbv")
 nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_hbpbv")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_bf5gv")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_bf5gv")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_dfmot")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
-[node name="ZoneXrHillersleben" type="Node3D"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fx8ep"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pcvjf"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ebyq7"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iny6i"]
+animation = &"Grip 5"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_yixve"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_rd0tb"]
+graph_offset = Vector2(-552.664, 107.301)
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_fx8ep")
+nodes/ClosedHand1/position = Vector2(-600, 300)
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_pcvjf")
+nodes/ClosedHand2/position = Vector2(-360, 300)
+nodes/Grip/node = SubResource("AnimationNodeBlend2_ebyq7")
+nodes/Grip/position = Vector2(0, 40)
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_iny6i")
+nodes/OpenHand/position = Vector2(-600, 100)
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_yixve")
+nodes/Trigger/position = Vector2(-360, 40)
+node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4n540"]
+size = Vector3(0.91015625, 6.8653564, 0.05)
+
+[sub_resource type="Resource" id="Resource_j1r2j"]
+script = ExtResource("25_rpwcs")
+open_pose = ExtResource("24_tegc5")
+closed_pose = ExtResource("24_tegc5")
+
+[sub_resource type="Resource" id="Resource_emqla"]
+script = ExtResource("25_rpwcs")
+open_pose = ExtResource("27_pwsyg")
+closed_pose = ExtResource("27_pwsyg")
+
+[sub_resource type="Resource" id="Resource_gn0sx"]
+script = ExtResource("25_rpwcs")
+open_pose = ExtResource("24_tegc5")
+closed_pose = ExtResource("24_tegc5")
+
+[sub_resource type="Resource" id="Resource_tegc5"]
+script = ExtResource("25_rpwcs")
+open_pose = ExtResource("27_pwsyg")
+closed_pose = ExtResource("27_pwsyg")
+
+[node name="ZoneXrHillersleben" type="Node3D" unique_id=1504601241]
 script = ExtResource("1_g30re")
 metadata/_custom_type_script = "uid://177gygw2xqqu"
 
-[node name="Zonehillersleben" parent="." instance=ExtResource("4_ylnmi")]
+[node name="Zonehillersleben" parent="." unique_id=987701965 instance=ExtResource("4_ylnmi")]
+metadata/_edit_lock_ = true
 
-[node name="XR_ADAPTER" type="Node" parent="." node_paths=PackedStringArray("basezone")]
+[node name="XR_ADAPTER" type="Node" parent="." unique_id=1209909459 node_paths=PackedStringArray("basezone")]
 script = ExtResource("2_qeqsy")
 basezone = NodePath("../Zonehillersleben")
 delete_vans = true
 delete_inventorypickups = true
 
-[node name="XRPlayer" parent="." instance=ExtResource("3_3tkdv")]
+[node name="XRPlayer" parent="." unique_id=922481156 instance=ExtResource("3_3tkdv")]
 transform = Transform3D(-0.9768592, 0, -0.21388295, 0, 1, 0, 0.21388295, 0, -0.9768592, -70.6641, 48.444527, -47.639496)
 metadata/_edit_lock_ = true
 
-[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand" index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_foycb")
+[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand" parent_id_path=PackedInt32Array(922481156, 1009909507) index="1"]
+tree_root = SubResource("AnimationNodeBlendTree_0uh4r")
 
-[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand2/LeftHand2" index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_pwsyg")
+[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand2/LeftHand2" parent_id_path=PackedInt32Array(922481156, 102583930) index="1"]
+tree_root = SubResource("AnimationNodeBlendTree_xbb2l")
 
-[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand" index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_a2s05")
+[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand" parent_id_path=PackedInt32Array(922481156, 1329846119) index="1"]
+tree_root = SubResource("AnimationNodeBlendTree_xmg2b")
 
-[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2" index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_dfmot")
+[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2" parent_id_path=PackedInt32Array(922481156, 1240763572) index="1"]
+tree_root = SubResource("AnimationNodeBlendTree_rd0tb")
 
-[node name="XrVan" parent="." instance=ExtResource("5_g30re")]
+[node name="XrVan" parent="." unique_id=1359098335 instance=ExtResource("5_g30re")]
 transform = Transform3D(0.114607684, 0, 0.9934108, 0, 1, 0, -0.9934108, 0, 0.114607684, -76.34318, 48.444527, -45.056103)
 target_scene = "uid://cakq3l4d46c36"
 labeltext = "Back to the Hochschule!"
 metadata/_edit_lock_ = true
 
-[node name="XrVan2" parent="." instance=ExtResource("5_g30re")]
+[node name="XrVan2" parent="." unique_id=1962759830 instance=ExtResource("5_g30re")]
 transform = Transform3D(0.114607684, 0, 0.9934108, 0, 1, 0, -0.9934108, 0, 0.114607684, -8.759325, 46.580467, 72.57292)
 target_scene = "uid://cakq3l4d46c36"
 labeltext = "Back to the Hochschule!"
 
-[node name="XrVan3" parent="." instance=ExtResource("5_g30re")]
+[node name="XrVan3" parent="." unique_id=1499496112 instance=ExtResource("5_g30re")]
 transform = Transform3D(0.114607684, 0, 0.9934108, 0, 1, 0, -0.9934108, 0, 0.114607684, -79.66183, 50.591293, 26.226444)
 target_scene = "uid://cakq3l4d46c36"
 labeltext = "Back to the Hochschule!"
 
-[node name="BGebaeude" type="Node3D" parent="."]
+[node name="BGebaeude" type="Node3D" parent="." unique_id=1138574631]
 metadata/_edit_lock_ = true
 
-[node name="ButtonSandHALT" parent="BGebaeude" instance=ExtResource("6_qeqsy")]
+[node name="ButtonSandHALT" parent="BGebaeude" unique_id=1134693256 instance=ExtResource("6_qeqsy")]
 transform = Transform3D(0.0045726225, -0.41257057, 0.9109142, -0.9999386, -0.011082585, -6.1318794e-09, 0.010095288, -0.91085833, -0.4125958, -29.312416, 50.250576, 19.023296)
 
-[node name="ButtonSandFW" parent="BGebaeude" instance=ExtResource("6_qeqsy")]
+[node name="ButtonSandFW" parent="BGebaeude" unique_id=1125965214 instance=ExtResource("6_qeqsy")]
 transform = Transform3D(0.0045726225, -0.41257057, 0.9109142, -0.9999386, -0.011082585, -6.1318794e-09, 0.010095288, -0.91085833, -0.4125958, -29.634098, 50.250576, 19.169)
 
-[node name="ButtonSandBK" parent="BGebaeude" instance=ExtResource("6_qeqsy")]
+[node name="ButtonSandBK" parent="BGebaeude" unique_id=1985326653 instance=ExtResource("6_qeqsy")]
 transform = Transform3D(0.0045726225, -0.41257057, 0.9109142, -0.9999386, -0.011082585, -6.1318794e-09, 0.010095288, -0.91085833, -0.4125958, -30.779583, 50.250576, 19.687843)
 
-[node name="ButtonGarbageHALT" parent="BGebaeude" instance=ExtResource("6_qeqsy")]
+[node name="ButtonGarbageHALT" parent="BGebaeude" unique_id=1012948784 instance=ExtResource("6_qeqsy")]
 transform = Transform3D(0.0045726225, -0.41257057, 0.9109142, -0.9999386, -0.011082585, -6.1318794e-09, 0.010095288, -0.91085833, -0.4125958, -29.310902, 49.91947, 19.02664)
 
-[node name="ButtonGarbageFW" parent="BGebaeude" instance=ExtResource("6_qeqsy")]
+[node name="ButtonGarbageFW" parent="BGebaeude" unique_id=2138421166 instance=ExtResource("6_qeqsy")]
 transform = Transform3D(0.0045726225, -0.41257057, 0.9109142, -0.9999386, -0.011082585, -6.1318794e-09, 0.010095288, -0.91085833, -0.4125958, -29.632584, 49.91947, 19.172344)
 
-[node name="ButtonGarbageBK" parent="BGebaeude" instance=ExtResource("6_qeqsy")]
+[node name="ButtonGarbageBK" parent="BGebaeude" unique_id=1823113761 instance=ExtResource("6_qeqsy")]
 transform = Transform3D(0.0045726225, -0.41257057, 0.9109142, -0.9999386, -0.011082585, -6.1318794e-09, 0.010095288, -0.91085833, -0.4125958, -30.778069, 49.91947, 19.691187)
 
-[node name="ButtonDoor" parent="BGebaeude" instance=ExtResource("6_qeqsy")]
+[node name="ButtonDoor" parent="BGebaeude" unique_id=462829160 instance=ExtResource("6_qeqsy")]
 transform = Transform3D(0.0045726225, -0.41257057, 0.9109142, -0.9999386, -0.011082585, -6.1318794e-09, 0.010095288, -0.91085833, -0.4125958, -28.92321, 49.91947, 18.851036)
 
-[node name="XRLogikContainer_u_Door" type="Node" parent="BGebaeude" node_paths=PackedStringArray("basemap", "xrbuttondoor", "xrbuttonsandout", "xrbuttonsandin", "xrbuttonsandhalt", "xrbuttongarbageout", "xrbuttongarbagein", "xrbuttongarbagehalt", "buttondoor", "buttonsandout", "buttonsandin", "buttonsandhalt", "buttongarbageout", "buttongarbagein", "buttongarbagehalt")]
+[node name="XRLogikContainer_u_Door" type="Node" parent="BGebaeude" unique_id=1087492140 node_paths=PackedStringArray("basemap", "xrbuttondoor", "xrbuttonsandout", "xrbuttonsandin", "xrbuttonsandhalt", "xrbuttongarbageout", "xrbuttongarbagein", "xrbuttongarbagehalt", "buttondoor", "buttonsandout", "buttonsandin", "buttonsandhalt", "buttongarbageout", "buttongarbagein", "buttongarbagehalt")]
 script = ExtResource("7_3tkdv")
 basemap = NodePath("../../Zonehillersleben")
 xrbuttondoor = NodePath("../ButtonDoor")
@@ -232,170 +263,580 @@ buttongarbageout = NodePath("../../Zonehillersleben/Betriebsgebäude/GarbageCont
 buttongarbagein = NodePath("../../Zonehillersleben/Betriebsgebäude/GarbageContainer/ContainerGarbageMOVEBACK")
 buttongarbagehalt = NodePath("../../Zonehillersleben/Betriebsgebäude/GarbageContainer/ContainerGarbageHALT")
 
-[node name="GasSpeicher" type="Node3D" parent="."]
+[node name="GasSpeicher" type="Node3D" parent="." unique_id=2061814908]
 transform = Transform3D(-0.062093742, 0, 0.9980703, 0, 1, 0, -0.9980703, 0, -0.062093742, 28.589895, 47.31136, 67.76201)
 
-[node name="LadderShort" parent="GasSpeicher" instance=ExtResource("8_j68eo")]
-transform = Transform3D(-0.95265085, 0, 0.3040664, 0, 1, 0, -0.3040664, 0, -0.95265085, 2.473344, 3.3199592, -5.4348736)
+[node name="Türen" type="Node3D" parent="." unique_id=993182334]
 
-[node name="LadderShort4FMittel" parent="GasSpeicher" instance=ExtResource("8_j68eo")]
-transform = Transform3D(-0.99429524, 0, 0.10666329, 0, 1, 0, -0.10666329, 0, -0.99429524, 49.070145, 6.8754463, -90.430115)
-
-[node name="LadderShort2" parent="GasSpeicher" instance=ExtResource("8_j68eo")]
-transform = Transform3D(-0.95265085, 0, 0.3040664, 0, 1, 0, -0.3040664, 0, -0.95265085, 2.473344, 10.294222, -5.4348736)
-
-[node name="LadderShort3" parent="GasSpeicher" instance=ExtResource("8_j68eo")]
-transform = Transform3D(-0.95265085, 0, 0.3040664, 0, 1, 0, -0.3040664, 0, -0.95265085, 2.473344, 17.191916, -5.4348736)
-
-[node name="Left" parent="GasSpeicher/LadderShort3/Meshes" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.4260569, 0, 0, 0, 1.1, -0.225, -1.8726423, 0)
-
-[node name="Right" parent="GasSpeicher/LadderShort3/Meshes" index="1"]
-transform = Transform3D(1, 0, 0, 0, 0.4260569, 0, 0, 0, 1.1, 0.225, -1.8726423, 0)
-
-[node name="Rung8" parent="GasSpeicher/LadderShort3/Meshes" index="9"]
-visible = false
-
-[node name="Rung9" parent="GasSpeicher/LadderShort3/Meshes" index="10"]
-visible = false
-
-[node name="Rung10" parent="GasSpeicher/LadderShort3/Meshes" index="11"]
-visible = false
-
-[node name="Rung11" parent="GasSpeicher/LadderShort3/Meshes" index="12"]
-visible = false
-
-[node name="Rung12" parent="GasSpeicher/LadderShort3/Meshes" index="13"]
-visible = false
-
-[node name="Rung13" parent="GasSpeicher/LadderShort3/Meshes" index="14"]
-visible = false
-
-[node name="Rung14" parent="GasSpeicher/LadderShort3/Meshes" index="15"]
-visible = false
-
-[node name="Rung15" parent="GasSpeicher/LadderShort3/Meshes" index="16"]
-visible = false
-
-[node name="Rung16" parent="GasSpeicher/LadderShort3/Meshes" index="17"]
-visible = false
-
-[node name="Rung17" parent="GasSpeicher/LadderShort3/Meshes" index="18"]
-visible = false
-
-[node name="GrabPointHandLeft8" parent="GasSpeicher/LadderShort3" index="16"]
-enabled = false
-
-[node name="GrabPointHandRight8" parent="GasSpeicher/LadderShort3" index="17"]
-enabled = false
-
-[node name="GrabPointHandLeft9" parent="GasSpeicher/LadderShort3" index="18"]
-enabled = false
-
-[node name="GrabPointHandRight9" parent="GasSpeicher/LadderShort3" index="19"]
-enabled = false
-
-[node name="GrabPointHandLeft10" parent="GasSpeicher/LadderShort3" index="20"]
-enabled = false
-
-[node name="GrabPointHandRight10" parent="GasSpeicher/LadderShort3" index="21"]
-enabled = false
-
-[node name="GrabPointHandLeft11" parent="GasSpeicher/LadderShort3" index="22"]
-enabled = false
-
-[node name="GrabPointHandRight11" parent="GasSpeicher/LadderShort3" index="23"]
-enabled = false
-
-[node name="GrabPointHandLeft12" parent="GasSpeicher/LadderShort3" index="24"]
-enabled = false
-
-[node name="GrabPointHandRight12" parent="GasSpeicher/LadderShort3" index="25"]
-enabled = false
-
-[node name="GrabPointHandLeft13" parent="GasSpeicher/LadderShort3" index="26"]
-enabled = false
-
-[node name="GrabPointHandRight13" parent="GasSpeicher/LadderShort3" index="27"]
-enabled = false
-
-[node name="GrabPointHandLeft14" parent="GasSpeicher/LadderShort3" index="28"]
-enabled = false
-
-[node name="GrabPointHandRight14" parent="GasSpeicher/LadderShort3" index="29"]
-enabled = false
-
-[node name="GrabPointHandLeft15" parent="GasSpeicher/LadderShort3" index="30"]
-enabled = false
-
-[node name="GrabPointHandRight15" parent="GasSpeicher/LadderShort3" index="31"]
-enabled = false
-
-[node name="GrabPointHandLeft16" parent="GasSpeicher/LadderShort3" index="32"]
-enabled = false
-
-[node name="GrabPointHandRight16" parent="GasSpeicher/LadderShort3" index="33"]
-enabled = false
-
-[node name="GrabPointHandLeft17" parent="GasSpeicher/LadderShort3" index="34"]
-enabled = false
-
-[node name="GrabPointHandRight17" parent="GasSpeicher/LadderShort3" index="35"]
-enabled = false
-
-[node name="Türen" type="Node3D" parent="."]
-
-[node name="mg_tür_maschinen_2" parent="Türen" instance=ExtResource("3_ncjka")]
+[node name="mg_tür_maschinen_2" parent="Türen" unique_id=2006149417 instance=ExtResource("3_ncjka")]
 transform = Transform3D(0.9110294, 0, 0.41234136, 0, 1, 0, -0.41234136, 0, 0.9110294, -6.31759, 48.393173, 13.46573)
 
-[node name="mg_tür_maschinen_1" parent="Türen" instance=ExtResource("10_7c5co")]
+[node name="mg_tür_maschinen_1" parent="Türen" unique_id=1864134531 instance=ExtResource("10_7c5co")]
 transform = Transform3D(-0.9109358, 0, -0.41254812, 0, 1, 0, 0.41254812, 0, -0.9109358, -3.4051895, 48.395157, 12.163254)
 door_minimum_angle = 0.0
 door_maximum_angle = 100.0
 latch_at_angle = Array[float]([98.0])
 
-[node name="mg_maschinen_inne" parent="Türen" instance=ExtResource("11_dxf5d")]
+[node name="mg_maschinen_inne" parent="Türen" unique_id=1365228725 instance=ExtResource("11_dxf5d")]
 transform = Transform3D(0.90630776, 0, 0.42261824, 0, 1, 0, -0.42261824, 0, 0.90630776, -10.950475, 48.55024, 15.579069)
 door_minimum_angle = -95.0
 
-[node name="mg_tür_gebläse_1" parent="Türen" instance=ExtResource("12_ql5yn")]
+[node name="mg_tür_gebläse_1" parent="Türen" unique_id=522156768 instance=ExtResource("12_ql5yn")]
 transform = Transform3D(0.4212099, 0, -0.90696317, 0, 1, 0, 0.90696317, 0, 0.4212099, -15.9682865, 48.29094, 21.74334)
 door_minimum_angle = 0.0
 door_maximum_angle = 100.0
 
-[node name="mg_tür_gebläse_2" parent="Türen" instance=ExtResource("13_7kms6")]
+[node name="mg_tür_gebläse_2" parent="Türen" unique_id=661827278 instance=ExtResource("13_7kms6")]
 transform = Transform3D(-0.42121, 0, 0.9069631, 0, 1, 0, -0.9069631, 0, -0.42121, -14.62731, 48.29094, 24.630775)
 door_minimum_angle = -100.0
 
-[node name="bg_elektro_tür2" parent="Türen" instance=ExtResource("3_y72we")]
+[node name="bg_elektro_tür2" parent="Türen" unique_id=1076608792 instance=ExtResource("3_y72we")]
 transform = Transform3D(0.9156626, 0, 0.40194777, 0, 1, 0, -0.40194777, 0, 0.9156626, -29.29302, 48.641914, 22.79278)
 
-[node name="bg_personel_tür3" parent="Türen" instance=ExtResource("4_jjegv")]
+[node name="bg_personel_tür3" parent="Türen" unique_id=200706687 instance=ExtResource("4_jjegv")]
 transform = Transform3D(-0.42814672, 0, 0.90370923, 0, 1, 0, -0.90370923, 0, -0.42814672, -35.298283, 48.601997, 2.1574316)
 door_minimum_angle = 0.0
 door_maximum_angle = 100.0
 
-[node name="bg_personel_tür4" parent="Türen" instance=ExtResource("5_8b71c")]
+[node name="bg_personel_tür4" parent="Türen" unique_id=2058478305 instance=ExtResource("5_8b71c")]
 transform = Transform3D(0.42814663, 0, -0.9037093, 0, 1, 0, 0.9037093, 0, 0.42814663, -36.163948, 48.601997, 0.3302353)
 door_minimum_angle = -100.0
 
-[node name="bg_garage_tür" parent="Türen" instance=ExtResource("17_jjegv")]
+[node name="bg_garage_tür" parent="Türen" unique_id=938715651 instance=ExtResource("17_jjegv")]
 transform = Transform3D(0.4175023, 0, -0.9086759, 0, 1, 0, 0.9086759, 0, 0.4175023, -30.410107, 48.580532, 12.853606)
 
-[node name="trafo_tür" parent="Türen" instance=ExtResource("18_8b71c")]
+[node name="trafo_tür" parent="Türen" unique_id=1088707556 instance=ExtResource("18_8b71c")]
 transform = Transform3D(0.93485665, 0, 0.35502544, 0, 1, 0, -0.35502544, 0, 0.93485665, -20.154446, 46.878807, 44.065697)
 
-[node name="fmds_tür" parent="Türen" instance=ExtResource("19_gyhl1")]
+[node name="fmds_tür" parent="Türen" unique_id=1670301095 instance=ExtResource("19_gyhl1")]
 transform = Transform3D(-0.84119946, 0, 0.54072493, 0, 1, 0, -0.54072493, 0, -0.84119946, -70.80831, 50.871883, 23.642939)
 
-[node name="mg_tür_bhkw_klein" parent="Türen" instance=ExtResource("20_8e2ce")]
+[node name="mg_tür_bhkw_klein" parent="Türen" unique_id=1532330986 instance=ExtResource("20_8e2ce")]
 transform = Transform3D(-0.41653472, 0, 0.90911984, 0, 1, 0, -0.90911984, 0, -0.41653472, 9.911774, 48.5761, 11.913491)
 visible = false
 door_minimum_angle = 90.0
 door_locked = true
 
-[node name="mg_tür_bhkw_main" parent="Türen" instance=ExtResource("21_5m8dp")]
+[node name="mg_tür_bhkw_main" parent="Türen" unique_id=1022413571 instance=ExtResource("21_5m8dp")]
 transform = Transform3D(0.41653466, 0, -0.9091199, 0, 1, 0, 0.9091199, 0, 0.41653466, 9.132837, 48.5761, 10.2134)
+
+[node name="LEITER" type="Node3D" parent="." unique_id=545633224]
+
+[node name="LadderShort" parent="LEITER" unique_id=1994353417 instance=ExtResource("8_j68eo")]
+transform = Transform3D(-0.24432598, 0, -0.9696931, 0, 1, 0, 0.9696931, 0, -0.24432598, 23.01193, 50.631317, 65.63091)
+
+[node name="LadderShort2" parent="LEITER" unique_id=1865593409 instance=ExtResource("8_j68eo")]
+transform = Transform3D(-0.24432598, 0, -0.9696931, 0, 1, 0, 0.9696931, 0, -0.24432598, 23.01193, 57.605583, 65.63091)
+
+[node name="LadderShort3" parent="LEITER" unique_id=1391726302 instance=ExtResource("8_j68eo")]
+transform = Transform3D(-0.24432598, 0, -0.9696931, 0, 1, 0, 0.9696931, 0, -0.24432598, 23.01193, 64.50327, 65.63091)
+
+[node name="Left" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="0" unique_id=2086654056]
+transform = Transform3D(1, 0, 0, 0, 0.4260569, 0, 0, 0, 1.1, -0.225, -1.8726423, 0)
+
+[node name="Right" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="1" unique_id=2094135372]
+transform = Transform3D(1, 0, 0, 0, 0.4260569, 0, 0, 0, 1.1, 0.225, -1.8726423, 0)
+
+[node name="Rung8" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="9" unique_id=1917132887]
+visible = false
+
+[node name="Rung9" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="10" unique_id=1178998737]
+visible = false
+
+[node name="Rung10" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="11" unique_id=1916795303]
+visible = false
+
+[node name="Rung11" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="12" unique_id=60012607]
+visible = false
+
+[node name="Rung12" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="13" unique_id=1949433814]
+visible = false
+
+[node name="Rung13" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="14" unique_id=700391990]
+visible = false
+
+[node name="Rung14" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="15" unique_id=1494852174]
+visible = false
+
+[node name="Rung15" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="16" unique_id=62761588]
+visible = false
+
+[node name="Rung16" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="17" unique_id=1539399282]
+visible = false
+
+[node name="Rung17" parent="LEITER/LadderShort3/Meshes" parent_id_path=PackedInt32Array(1391726302, 268813291) index="18" unique_id=1349446793]
+visible = false
+
+[node name="GrabPointHandLeft8" parent="LEITER/LadderShort3" index="16" unique_id=1430356820]
+enabled = false
+
+[node name="GrabPointHandRight8" parent="LEITER/LadderShort3" index="17" unique_id=965285859]
+enabled = false
+
+[node name="GrabPointHandLeft9" parent="LEITER/LadderShort3" index="18" unique_id=1855024355]
+enabled = false
+
+[node name="GrabPointHandRight9" parent="LEITER/LadderShort3" index="19" unique_id=672596571]
+enabled = false
+
+[node name="GrabPointHandLeft10" parent="LEITER/LadderShort3" index="20" unique_id=1353102063]
+enabled = false
+
+[node name="GrabPointHandRight10" parent="LEITER/LadderShort3" index="21" unique_id=1649651213]
+enabled = false
+
+[node name="GrabPointHandLeft11" parent="LEITER/LadderShort3" index="22" unique_id=834051239]
+enabled = false
+
+[node name="GrabPointHandRight11" parent="LEITER/LadderShort3" index="23" unique_id=100590838]
+enabled = false
+
+[node name="GrabPointHandLeft12" parent="LEITER/LadderShort3" index="24" unique_id=1189263940]
+enabled = false
+
+[node name="GrabPointHandRight12" parent="LEITER/LadderShort3" index="25" unique_id=328445696]
+enabled = false
+
+[node name="GrabPointHandLeft13" parent="LEITER/LadderShort3" index="26" unique_id=450862745]
+enabled = false
+
+[node name="GrabPointHandRight13" parent="LEITER/LadderShort3" index="27" unique_id=2079503342]
+enabled = false
+
+[node name="GrabPointHandLeft14" parent="LEITER/LadderShort3" index="28" unique_id=530168776]
+enabled = false
+
+[node name="GrabPointHandRight14" parent="LEITER/LadderShort3" index="29" unique_id=3456899]
+enabled = false
+
+[node name="GrabPointHandLeft15" parent="LEITER/LadderShort3" index="30" unique_id=2049730091]
+enabled = false
+
+[node name="GrabPointHandRight15" parent="LEITER/LadderShort3" index="31" unique_id=1257076287]
+enabled = false
+
+[node name="GrabPointHandLeft16" parent="LEITER/LadderShort3" index="32" unique_id=1485977068]
+enabled = false
+
+[node name="GrabPointHandRight16" parent="LEITER/LadderShort3" index="33" unique_id=1448359155]
+enabled = false
+
+[node name="GrabPointHandLeft17" parent="LEITER/LadderShort3" index="34" unique_id=1385938257]
+enabled = false
+
+[node name="GrabPointHandRight17" parent="LEITER/LadderShort3" index="35" unique_id=679028]
+enabled = false
+
+[node name="LadderShort4FMittel" type="StaticBody3D" parent="LEITER" unique_id=756335642]
+transform = Transform3D(-0.03472498, 0, 0.9993969, 0, 1, 0, -0.9993969, 0, -0.03472498, -64.71267, 54.186806, 24.4017)
+collision_layer = 262145
+collision_mask = 0
+script = ExtResource("9_blbn6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LEITER/LadderShort4FMittel" unique_id=987505410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.04207802, 0, 3.8146973e-05)
+shape = SubResource("BoxShape3D_4n540")
+
+[node name="GrabPointHandLeft1" parent="LEITER/LadderShort4FMittel" unique_id=1241236372 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.25881925, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.031404495, -3.1144905, -0.08583069)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight1" parent="LEITER/LadderShort4FMittel" unique_id=106491607 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.9659264, 0.25881922, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301302, 0.683013, 0.075525284, -3.1169167, -0.0821228)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft2" parent="LEITER/LadderShort4FMittel" unique_id=378259359 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.25881928, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.028770447, -2.7487526, -0.08573151)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight2" parent="LEITER/LadderShort4FMittel" unique_id=1052001376 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.96592647, 0.25881925, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301304, 0.683013, 0.075525284, -2.7487526, -0.08211517)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft3" parent="LEITER/LadderShort4FMittel" unique_id=1896770399 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.25881928, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.014888763, -2.4124374, -0.085258484)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight3" parent="LEITER/LadderShort4FMittel" unique_id=2106424665 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.96592647, 0.25881925, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301304, 0.683013, 0.075525284, -2.4124374, -0.08211517)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft4" parent="LEITER/LadderShort4FMittel" unique_id=1040352514 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.25881928, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.010568619, -2.0655441, -0.08509827)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight4" parent="LEITER/LadderShort4FMittel" unique_id=1548387792 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.96592647, 0.25881925, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301304, 0.683013, 0.075525284, -2.0655441, -0.08211517)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft5" parent="LEITER/LadderShort4FMittel" unique_id=4062667 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.25881928, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.0066566467, -1.7154655, -0.08496094)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight5" parent="LEITER/LadderShort4FMittel" unique_id=1459343163 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.9659265, 0.25881928, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301302, 0.683013, 0.10376549, -1.7154655, -0.08112335)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft6" parent="LEITER/LadderShort4FMittel" unique_id=1316304558 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.25881928, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.022872925, -1.3642769, -0.08552551)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight6" parent="LEITER/LadderShort4FMittel" unique_id=1601548392 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.96592647, 0.25881925, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301304, 0.683013, 0.075525284, -1.3642769, -0.08211517)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft7" parent="LEITER/LadderShort4FMittel" unique_id=1954405808 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.25881928, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.05382538, -1.0193062, -0.08660126)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight7" parent="LEITER/LadderShort4FMittel" unique_id=1070866159 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.96592647, 0.25881925, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301304, 0.683013, 0.075525284, -1.0193062, -0.08211517)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft8" parent="LEITER/LadderShort4FMittel" unique_id=174847772 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.25881928, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, 0.003440857, -0.65366364, -0.084609985)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight8" parent="LEITER/LadderShort4FMittel" unique_id=1747743898 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.96592647, 0.25881925, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301304, 0.683013, 0.075525284, -0.65366364, -0.08211517)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft9" parent="LEITER/LadderShort4FMittel" unique_id=1065779113 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.25881928, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, 0.0059928894, -0.3087082, -0.08453369)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight9" parent="LEITER/LadderShort4FMittel" unique_id=266004268 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.96592647, 0.25881925, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301304, 0.683013, 0.075525284, -0.3087082, -0.08211517)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft10" parent="LEITER/LadderShort4FMittel" unique_id=1315195417 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.2588193, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, 0.010585785, 0.04450226, -0.084365845)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight10" parent="LEITER/LadderShort4FMittel" unique_id=1376866571 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.9659265, 0.25881928, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301302, 0.683013, 0.075525284, 0.04450226, -0.082107544)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft11" parent="LEITER/LadderShort4FMittel" unique_id=981219425 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.2588193, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.022506714, 0.3944397, -0.08553314)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight11" parent="LEITER/LadderShort4FMittel" unique_id=1268809145 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.9659265, 0.25881928, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301302, 0.683013, 0.075525284, 0.40255737, -0.082107544)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft12" parent="LEITER/LadderShort4FMittel" unique_id=1741350188 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.2588193, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, 0.003921509, 0.7464905, -0.0845871)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight12" parent="LEITER/LadderShort4FMittel" unique_id=2120988691 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.9659266, 0.2588193, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301302, 0.683013, 0.118463516, 0.7480202, -0.08063507)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft13" parent="LEITER/LadderShort4FMittel" unique_id=453450737 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.2588193, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.02481842, 1.0896797, -0.08558655)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight13" parent="LEITER/LadderShort4FMittel" unique_id=1715795443 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.9659265, 0.25881928, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301302, 0.683013, 0.075525284, 1.0917053, -0.082107544)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft14" parent="LEITER/LadderShort4FMittel" unique_id=2068213105 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.2588193, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.018993378, 1.4321136, -0.08541107)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight14" parent="LEITER/LadderShort4FMittel" unique_id=377993554 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.9659266, 0.2588193, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301302, 0.683013, 0.12723541, 1.4278374, -0.080329895)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft15" parent="LEITER/LadderShort4FMittel" unique_id=738942861 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.2588193, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.01225853, 1.7961502, -0.0851593)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight15" parent="LEITER/LadderShort4FMittel" unique_id=1825802891 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.9659266, 0.2588193, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301302, 0.683013, 0.07513046, 1.8000069, -0.070747375)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft16" parent="LEITER/LadderShort4FMittel" unique_id=62332754 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(-4.284084e-08, 0.965926, -0.2588193, -0.707107, -0.183013, -0.683013, -0.707107, 0.183013, 0.6830132, -0.04138565, 2.143505, -0.08618927)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight16" parent="LEITER/LadderShort4FMittel" unique_id=2081240990 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.284084e-08, -0.9659266, 0.2588193, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301302, 0.683013, 0.084602356, 2.1438408, -0.08179474)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft17" parent="LEITER/LadderShort4FMittel" unique_id=2029666034 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(0.7174439, 0.33571404, 0.61038625, -0.14109337, 0.9280831, -0.34460807, -0.68217885, 0.16111568, 0.71321476, -0.32357025, 2.7066345, -0.07345581)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight17" parent="LEITER/LadderShort4FMittel" unique_id=1082681154 instance=ExtResource("26_48yfo")]
+transform = Transform3D(0.71886003, -0.20995298, -0.66269225, -0.04255004, 0.93822443, -0.34340283, 0.6938519, 0.2750563, 0.665519, 0.400568, 2.7066345, -0.052330017)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft18" parent="LEITER/LadderShort4FMittel" unique_id=2021006849 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(0.7174439, 0.335714, 0.61038625, -0.14109337, 0.9280831, -0.34460807, -0.6821789, 0.16111566, 0.7132148, -0.32357025, 3.2934418, -0.07344818)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight18" parent="LEITER/LadderShort4FMittel" unique_id=1863792176 instance=ExtResource("26_48yfo")]
+transform = Transform3D(0.71886003, -0.20995298, -0.66269225, -0.04255004, 0.93822443, -0.34340283, 0.6938519, 0.2750563, 0.66551906, 0.400568, 3.2934418, -0.052322388)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="XRLeiterBB1" parent="LEITER" unique_id=743817656 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(0.99909204, 0, 0.042608008, 0, 1, 0, -0.042608008, 0, 0.99909204, -81.74822, 50.464046, 28.478073)
+
+[node name="XRLeiterBB2" parent="LEITER" unique_id=955825396 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(-0.9056136, 0, -0.4241048, 0, 1, 0, 0.4241048, 0, -0.9056136, -86.06625, 50.41319, 23.678867)
+
+[node name="XRLeiterMSB" parent="LEITER" unique_id=704863928 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(0.3299547, 0, 0.94399804, 0, 1, 0, -0.94399804, 0, 0.3299547, -56.65081, 50.537685, 48.42724)
+
+[node name="XRLeiterMSB2" parent="LEITER" unique_id=78824637 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(0.9546061, 0, -0.2978751, 0, 1, 0, 0.2978751, 0, 0.9546061, -40.600655, 50.537685, 38.231937)
+
+[node name="XRLeiterMSB3" parent="LEITER" unique_id=1701981815 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(-0.6818715, 0, -0.7314736, 0, 1, 0, 0.7314736, 0, -0.6818715, -32.795387, 50.537685, 59.815918)
+
+[node name="XRLeiterVED1" parent="LEITER" unique_id=1593601472 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(0.93620193, 0, -0.35146624, 0, 1, 0, 0.35146624, 0, 0.93620193, -16.162851, 50.00436, -3.6614227)
+
+[node name="GrabPointHandLeft20" parent="LEITER/XRLeiterVED1" unique_id=498924162 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(1.4901161e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -5.2204475, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight20" parent="LEITER/XRLeiterVED1" unique_id=768042835 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.96592635, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301298, 0.6830129, 0.14661217, -5.2228737, -0.06581807)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft21" parent="LEITER/XRLeiterVED1" unique_id=804581381 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(2.9802322e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -5.7158203, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight21" parent="LEITER/XRLeiterVED1" unique_id=1650707568 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.9659262, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301296, 0.6830129, 0.14660454, -5.7182465, -0.0658164)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft22" parent="LEITER/XRLeiterVED1" unique_id=1886988939 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(0.0013867468, 0.96630025, -0.25741452, -0.6730172, -0.18948904, -0.7149424, -0.7396258, 0.17423591, 0.65007395, -0.12981415, -4.684719, -0.07709837)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight22" parent="LEITER/XRLeiterVED1" unique_id=1552340238 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-0.0013868958, -0.96554804, 0.26022294, 0.67301714, -0.19336936, -0.7139027, 0.7396258, 0.1741447, 0.65009844, 0.1466217, -4.6870995, -0.066269636)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft23" parent="LEITER/XRLeiterVED1" unique_id=1654497959 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(2.9802322e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -4.163124, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight23" parent="LEITER/XRLeiterVED1" unique_id=2027856414 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.9659262, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301296, 0.6830129, 0.14660454, -4.16555, -0.0658164)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="XRLeiterVED2" parent="LEITER" unique_id=547134530 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(0.8120234, 0, 0.583627, 0, 1, 0, -0.583627, 0, 0.8120234, -8.770029, 50.00436, -7.8719482)
+
+[node name="GrabPointHandLeft20" parent="LEITER/XRLeiterVED2" unique_id=838758087 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(1.4901161e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -5.2204475, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight20" parent="LEITER/XRLeiterVED2" unique_id=1616468049 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.96592635, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301298, 0.6830129, 0.14661217, -5.2228737, -0.06581807)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft21" parent="LEITER/XRLeiterVED2" unique_id=666663136 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(2.9802322e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -5.7158203, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight21" parent="LEITER/XRLeiterVED2" unique_id=1575703403 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.9659262, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301296, 0.6830129, 0.14660454, -5.7182465, -0.0658164)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft22" parent="LEITER/XRLeiterVED2" unique_id=1452405576 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(0.0013867468, 0.96630025, -0.25741452, -0.6730172, -0.18948904, -0.7149424, -0.7396258, 0.17423591, 0.65007395, -0.12981415, -4.684719, -0.07709837)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight22" parent="LEITER/XRLeiterVED2" unique_id=729719489 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-0.0013868958, -0.96554804, 0.26022294, 0.67301714, -0.19336936, -0.7139027, 0.7396258, 0.1741447, 0.65009844, 0.1466217, -4.6870995, -0.066269636)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft23" parent="LEITER/XRLeiterVED2" unique_id=1242387795 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(2.9802322e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -4.163124, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight23" parent="LEITER/XRLeiterVED2" unique_id=36876589 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.9659262, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301296, 0.6830129, 0.14660454, -4.16555, -0.0658164)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="XRLeiterVED3" parent="LEITER" unique_id=1695124784 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(-0.4047909, 0, 0.91441065, 0, 1, 0, -0.91441065, 0, -0.4047909, -8.551783, 49.69623, -14.343796)
+
+[node name="GrabPointHandLeft20" parent="LEITER/XRLeiterVED3" unique_id=91645471 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(1.4901161e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -5.2204475, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight20" parent="LEITER/XRLeiterVED3" unique_id=859263995 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.96592635, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301298, 0.6830129, 0.14661217, -5.2228737, -0.06581807)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft21" parent="LEITER/XRLeiterVED3" unique_id=832865848 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(2.9802322e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -5.7158203, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight21" parent="LEITER/XRLeiterVED3" unique_id=238096267 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.9659262, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301296, 0.6830129, 0.14660454, -5.7182465, -0.0658164)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft22" parent="LEITER/XRLeiterVED3" unique_id=1050667541 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(0.0013867468, 0.96630025, -0.25741452, -0.6730172, -0.18948904, -0.7149424, -0.7396258, 0.17423591, 0.65007395, -0.12981415, -4.684719, -0.07709837)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight22" parent="LEITER/XRLeiterVED3" unique_id=459492248 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-0.0013868958, -0.96554804, 0.26022294, 0.67301714, -0.19336936, -0.7139027, 0.7396258, 0.1741447, 0.65009844, 0.1466217, -4.6870995, -0.066269636)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft23" parent="LEITER/XRLeiterVED3" unique_id=1228812774 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(2.9802322e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -4.163124, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight23" parent="LEITER/XRLeiterVED3" unique_id=309964119 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.9659262, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301296, 0.6830129, 0.14660454, -4.16555, -0.0658164)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="XRLeiterNED1" parent="LEITER" unique_id=1224040588 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(-0.6690277, 0, -0.74323916, 0, 1, 0, 0.74323916, 0, -0.6690277, -12.113573, 50.005924, -8.059586)
+
+[node name="GrabPointHandLeft20" parent="LEITER/XRLeiterNED1" unique_id=1181989956 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(1.4901161e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -5.2204475, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight20" parent="LEITER/XRLeiterNED1" unique_id=1990814617 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.96592635, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301298, 0.6830129, 0.14661217, -5.2228737, -0.06581807)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft21" parent="LEITER/XRLeiterNED1" unique_id=1983024542 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(2.9802322e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -5.7158203, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight21" parent="LEITER/XRLeiterNED1" unique_id=95563245 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.9659262, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301296, 0.6830129, 0.14660454, -5.7182465, -0.0658164)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft22" parent="LEITER/XRLeiterNED1" unique_id=415925311 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(0.0013867468, 0.96630025, -0.25741452, -0.6730172, -0.18948904, -0.7149424, -0.7396258, 0.17423591, 0.65007395, -0.12981415, -4.684719, -0.07709837)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight22" parent="LEITER/XRLeiterNED1" unique_id=1664673445 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-0.0013868958, -0.96554804, 0.26022294, 0.67301714, -0.19336936, -0.7139027, 0.7396258, 0.1741447, 0.65009844, 0.1466217, -4.6870995, -0.066269636)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
+
+[node name="GrabPointHandLeft23" parent="LEITER/XRLeiterNED1" unique_id=1906606300 instance=ExtResource("23_gn0sx")]
+transform = Transform3D(2.9802322e-08, 0.96592593, -0.25881922, -0.707107, -0.183013, -0.683013, -0.70710677, 0.18301308, 0.68301296, -0.12980843, -4.163124, -0.07675767)
+visible = true
+hand_pose = SubResource("Resource_gn0sx")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight23" parent="LEITER/XRLeiterNED1" unique_id=885911165 instance=ExtResource("26_48yfo")]
+transform = Transform3D(-4.4703484e-08, -0.9659262, 0.2588191, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301296, 0.6830129, 0.14660454, -4.16555, -0.0658164)
+visible = true
+hand_pose = SubResource("Resource_tegc5")
 
 [editable path="XRPlayer"]
 [editable path="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand"]
@@ -406,7 +847,10 @@ transform = Transform3D(0.41653466, 0, -0.9091199, 0, 1, 0, 0.9091199, 0, 0.4165
 [editable path="XRPlayer/RightHand/XRToolsCollisionHand/RightHand/Hand_Nails_low_R"]
 [editable path="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2"]
 [editable path="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2/Hand_Nails_low_R"]
-[editable path="GasSpeicher/LadderShort"]
-[editable path="GasSpeicher/LadderShort4FMittel"]
-[editable path="GasSpeicher/LadderShort2"]
-[editable path="GasSpeicher/LadderShort3"]
+[editable path="LEITER/LadderShort"]
+[editable path="LEITER/LadderShort2"]
+[editable path="LEITER/LadderShort3"]
+[editable path="LEITER/XRLeiterVED1"]
+[editable path="LEITER/XRLeiterVED2"]
+[editable path="LEITER/XRLeiterVED3"]
+[editable path="LEITER/XRLeiterNED1"]
