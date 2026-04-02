@@ -211,7 +211,7 @@ func _on_left_picked_up(what : Node3D) -> void:
 	# If collision hands present then target the handle
 	if _left_collision_hand:
 		_left_collision_hand.add_target_override(_left_handle, 0)
-	elif _left_hand:
+	if _left_hand:
 		_left_hand.add_target_override(_left_handle, 0)
 
 
@@ -233,7 +233,7 @@ func _on_right_picked_up(what : Node3D) -> void:
 	# If collision hands present then target the handle
 	if _right_collision_hand:
 		_right_collision_hand.add_target_override(_right_handle, 0)
-	elif _right_hand:
+	if _right_hand:
 		_right_hand.add_target_override(_right_handle, 0)
 
 
