@@ -179,12 +179,13 @@ offset_top = -197.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "WASD - Bewegung/Movement
-Space / Leertaste   - Springen/Jump
-Shift / Umschalt - Rennen/Run
+Leertaste / Space   - Springen/Jump
+Umschalt / Shift - Rennen/Run
 E - Interaction, LMB
 RT - Inventarzyklen, I-Inventar
 Mausrad/Mousewheel - Zoom
-Esc - Menu, H - Reset Position"
+Esc - Menu, H - Reset Position
+V-Aufgaben / Tasks on/off"
 label_settings = SubResource("LabelSettings_vuvmw")
 
 [node name="Panel" type="Panel" parent="UI_CanvasLayer/Label" unique_id=1880803786]
