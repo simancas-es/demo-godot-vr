@@ -107,7 +107,7 @@ script = ExtResource("7_bm7q0")
 [node name="DebugTaskShow" parent="UI_CanvasLayer" unique_id=630792426 instance=ExtResource("12_wgoxm")]
 unique_name_in_owner = true
 visible = false
-anchor_right = 0.25
+anchor_right = 0.5
 filter_only = Array[int]([1])
 
 [node name="Toggle" type="Node" parent="UI_CanvasLayer/DebugTaskShow" unique_id=226249598]

@@ -9,6 +9,8 @@ var task_text_manager : HELPREF.TaskTextManager
 @onready var task_items_container := $ScrollContainer/VBoxContainer
 var task_panels : Dictionary[int, PanelContainer] = {} #References in form of task_id - panel
 
+@onready var scrollpanel : ScrollContainer = $ScrollContainer
+
 @export_range (8, 256) var font_size : int = 14
 @export var filter_only : Array[TasksUnit.STATUS] = [TasksUnit.STATUS.IN_PROGRESS, TasksUnit.STATUS.COMPLETED] #show only
 
@@ -25,6 +27,7 @@ const STATUSTEXT : Dictionary = {
 	TasksUnit.STATUS.COMPLETED : _text_completed,
 	TasksUnit.STATUS.FAILED : _text_failed,	
 }
+
 
 
 func _ready():
@@ -161,3 +164,31 @@ func _notification(what):
 	if what == NOTIFICATION_TRANSLATION_CHANGED :
 		for t_id in task_panels.keys():
 			update_task_text(t_id)
+
+
+func _process(delta):
+	scroll_cyclic(delta)
+
+var _scrolling_down := true  # direction flag
+var _scroll_speed := 50.0
+# Function to scroll the container cyclically
+
+func scroll_cyclic(delta: float) -> void:
+	# Current scroll position
+	var current := scrollpanel.scroll_vertical
+	# Maximum scroll position (content height - viewport height)
+	var max_scroll : int = task_items_container.get_combined_minimum_size().y - scrollpanel.size.y # Scroll doesnt scroll completely.
+
+	if _scrolling_down:
+		current += _scroll_speed * delta
+		if current >= max_scroll:
+			current = max_scroll
+			_scrolling_down = false  # reverse direction
+	else:
+		current -= _scroll_speed * delta
+		if current <= 0:
+			current = 0
+			_scrolling_down = true  # reverse direction
+
+	# Apply clamped scroll position
+	scrollpanel.scroll_vertical = clamp(current, 0, max_scroll)
