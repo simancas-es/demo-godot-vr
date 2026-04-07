@@ -18,7 +18,7 @@ config/name="VirtualTour"
 config/version="0.2.2"
 run/main_scene="uid://1gnljh2uer8"
 config/features=PackedStringArray("4.6", "Mobile")
-boot_splash/bg_color=Color(0.732139, 0.76047, 0.849627, 1)
+boot_splash/bg_color=Color(0.13015828, 0.1481483, 0.21301624, 1)
 boot_splash/image="uid://dv2pijmspunj4"
 config/icon="res://icon.svg"
 
