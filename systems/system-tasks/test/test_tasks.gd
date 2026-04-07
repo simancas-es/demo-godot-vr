@@ -114,6 +114,7 @@ func test_task_finished_task() -> SystemTasksUnit:
 	assert (task_unit.success_conditions_all[0].units_id_completed[0] == 5)
 	return task_unit
 
+## Deprecated
 func test_task_starters() -> bool:
 	var task : SystemTasksUnit = test_task_existing()
 	assert (task) 
@@ -136,7 +137,7 @@ func test_task_starters() -> bool:
 	#Try autodetecting the manager
 	starter1.is_autoloaded_taskmanager = true
 	add_child(starter1)
-	assert (starter1.manager == sm)
+	assert (starter1.manager == sm) # Test based on SM registering itself on .new(), but inside this project there is one already.
 	
 	
 	return true
@@ -351,7 +352,7 @@ func _ready() -> void:
 	assert ( test_task_existing() )
 	assert ( test_task_signal())
 	assert ( test_task_finished_task())
-	assert ( test_task_starters())
+	#assert ( test_task_starters()) ## Deprecated. Badly written test. Test based on SM registering itself on .new(). This project has an autoload
 	
 	assert( test_locator_init() )
 	assert ( test_task_condition_existing_locatorgroup_success() )

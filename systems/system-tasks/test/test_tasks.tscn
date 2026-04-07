@@ -1,10 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://blr8yg7d30gle"]
+[gd_scene format=3 uid="uid://blr8yg7d30gle"]
 
-[ext_resource type="Script" uid="uid://dpwgn55qkbeb7" path="res://system-tasks/test/test_tasks.gd" id="1_f6ofr"]
-[ext_resource type="Script" uid="uid://ctl8ggd8ya5w5" path="res://system-tasks/test/test_signal.gd" id="2_u8gck"]
-[ext_resource type="Script" uid="uid://bwkmkhwoaetkd" path="res://system-tasks/test/test_camera.gd" id="3_djxiq"]
-[ext_resource type="Script" uid="uid://cgnsbk378t0aq" path="res://system-tasks/system_tasks_locator.gd" id="4_6bx34"]
-[ext_resource type="Script" uid="uid://b6omc07jcpye1" path="res://system-tasks/test/cilinder_get_quest.gd" id="4_qma14"]
+[ext_resource type="Script" uid="uid://dpwgn55qkbeb7" path="res://systems/system-tasks/test/test_tasks.gd" id="1_f6ofr"]
+[ext_resource type="Script" uid="uid://ctl8ggd8ya5w5" path="res://systems/system-tasks/test/test_signal.gd" id="2_u8gck"]
+[ext_resource type="Script" uid="uid://bwkmkhwoaetkd" path="res://systems/system-tasks/test/test_camera.gd" id="3_djxiq"]
+[ext_resource type="Script" uid="uid://cgnsbk378t0aq" path="res://systems/system-tasks/system_tasks_locator.gd" id="4_6bx34"]
+[ext_resource type="Script" uid="uid://b6omc07jcpye1" path="res://systems/system-tasks/test/cilinder_get_quest.gd" id="4_qma14"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djxiq"]
 
@@ -26,43 +26,43 @@ script/source = "extends MeshInstance3D
 #Anyone in the scene tree
 "
 
-[node name="TestTasks" type="Node"]
+[node name="TestTasks" type="Node" unique_id=723353830]
 script = ExtResource("1_f6ofr")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=327145211]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.990607, 0, 3.08634)
 fov = 59.0625
 script = ExtResource("3_djxiq")
 
-[node name="signal_body" type="MeshInstance3D" parent="."]
+[node name="signal_body" type="MeshInstance3D" parent="." unique_id=58483793]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.77697, 0, 0)
 mesh = SubResource("BoxMesh_f6ofr")
 script = ExtResource("2_u8gck")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="signal_body"]
+[node name="StaticBody3D" type="StaticBody3D" parent="signal_body" unique_id=1591321193]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="signal_body/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="signal_body/StaticBody3D" unique_id=1541514155]
 shape = SubResource("ConcavePolygonShape3D_djxiq")
 
-[node name="SystemTasksLocator" type="Node" parent="signal_body"]
+[node name="SystemTasksLocator" type="Node" parent="signal_body" unique_id=1394362818]
 script = ExtResource("4_6bx34")
 metadata/_custom_type_script = "uid://cgnsbk378t0aq"
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=432478355]
 transform = Transform3D(1, 0, 0, 0, 0.836669, 0.547709, 0, -0.547709, 0.836669, 0, 4.5557, 1.00934)
 omni_range = 10.9997
 
-[node name="cilinder_get_quest" type="MeshInstance3D" parent="."]
+[node name="cilinder_get_quest" type="MeshInstance3D" parent="." unique_id=1055644700]
 mesh = SubResource("CylinderMesh_qma14")
 script = ExtResource("4_qma14")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="cilinder_get_quest"]
+[node name="StaticBody3D2" type="StaticBody3D" parent="cilinder_get_quest" unique_id=472400048]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="cilinder_get_quest/StaticBody3D2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="cilinder_get_quest/StaticBody3D2" unique_id=1090451528]
 shape = SubResource("CylinderShape3D_djxiq")
 
-[node name="User" type="MeshInstance3D" parent="."]
+[node name="User" type="MeshInstance3D" parent="." unique_id=1638838789]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14441, 0, 0.606163)
 mesh = SubResource("PrismMesh_n87aa")
