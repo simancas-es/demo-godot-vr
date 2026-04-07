@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="4_0nlau"]
 [ext_resource type="PackedScene" uid="uid://cs507u3nvuu12" path="res://models/labels/flow_simulation_throughput_label.tscn" id="4_8upog"]
 [ext_resource type="PackedScene" uid="uid://dx8l2qbku8m3t" path="res://zones/hillersleben/scripts/water_visuals/WaterLevelFollower.tscn" id="4_gfnr6"]
+[ext_resource type="Script" uid="uid://coekj8jimafya" path="res://zones/hillersleben/scripts/task_locators/task_sequencer.gd" id="4_yuvhm"]
 [ext_resource type="PackedScene" uid="uid://d3qp4a3ahe2gf" path="res://models/demo_basin/task_blackboard/demo_task_blackboard.tscn" id="5_0p6js"]
 [ext_resource type="PackedScene" uid="uid://g6utn56lubnu" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_placeholder.tscn" id="5_w4u61"]
 [ext_resource type="PackedScene" uid="uid://d1usv83amjvqe" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_inflow.tscn" id="6_edwb7"]
@@ -345,14 +346,26 @@ starting_lookat = NodePath("Config/lookat")
 van = NodePath("Config/Van")
 metadata/_custom_type_script = "uid://b78po4wueig00"
 
+[node name="DemoTaskBlackboard" parent="." unique_id=1111715364 instance=ExtResource("5_0p6js")]
+transform = Transform3D(-0.99986374, 1.4901163e-08, 0.01651007, 4.171066e-08, 1.0000001, 5.964481e-08, -0.01651001, 2.9802326e-08, -0.9998637, -70.62009, 48.376984, -37.925884)
+
+[node name="TasksStarter" type="Node" parent="DemoTaskBlackboard" unique_id=1357511862]
+script = ExtResource("6_t3rbc")
+tasks_id = Array[int]([4, 5])
+
+[node name="TaskSequencerSecurityCheckpoints" type="Node" parent="DemoTaskBlackboard" unique_id=1818928367]
+script = ExtResource("4_yuvhm")
+
 [node name="Reference_point_floor" type="Node3D" parent="." unique_id=1002333968]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, -2.842171e-14, 0, 2.842171e-14, 0.99999994, -30.67491, 48.741016, -2.301975)
 
 [node name="SECURITY_CHECKS" type="Node3D" parent="Reference_point_floor" unique_id=1959220266]
+unique_name_in_owner = true
 metadata/_edit_lock_ = true
 
 [node name="Area3D1" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=700219985 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, 1.0337334, 1.3195686, -2.9768963)
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck1" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D1" unique_id=1874932154]
@@ -361,6 +374,7 @@ locator_id = 5
 
 [node name="Area3D2" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=2033405942 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, 10.06057, -0.16364312, 35.998352)
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck2" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D2" unique_id=211977936]
@@ -369,6 +383,7 @@ locator_id = 6
 
 [node name="Area3D3" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=698821275 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -39.949463, 2.8690605, 29.273115)
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck3" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D3" unique_id=1671141585]
@@ -377,6 +392,7 @@ locator_id = 7
 
 [node name="Area3D4" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=551003196 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -78.39233, 2.8690605, 23.400398)
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck4" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D4" unique_id=2121476343]
@@ -385,6 +401,7 @@ locator_id = 8
 
 [node name="Area3D5" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=1104014646 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -73.36659, 2.8690605, 42.15164)
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck5" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D5" unique_id=1307487462]
@@ -393,6 +410,7 @@ locator_id = 9
 
 [node name="Area3D6" parent="Reference_point_floor/SECURITY_CHECKS" unique_id=105502572 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880232, 0, 0.99999994, 0, -0.41880235, 0, 0.90807736, -65.49611, 2.5643272, 62.471817)
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="Locator_SecurityCheck6" type="Node" parent="Reference_point_floor/SECURITY_CHECKS/Area3D6" unique_id=1553275981]
@@ -841,13 +859,6 @@ overview_scene = ExtResource("3_ybcmd")
 [node name="Logik-Wasserrad" type="Node" parent="FlowSimulation" unique_id=651757122 node_paths=PackedStringArray("wasserrad_drehen")]
 script = ExtResource("8_du4yn")
 wasserrad_drehen = NodePath("../../Visuals/Referenz/wasserrad")
-
-[node name="DemoTaskBlackboard" parent="." unique_id=1111715364 instance=ExtResource("5_0p6js")]
-transform = Transform3D(-0.99986374, 1.4901163e-08, 0.01651007, 4.171066e-08, 1.0000001, 5.964481e-08, -0.01651001, 2.9802326e-08, -0.9998637, -70.62009, 48.376984, -37.925884)
-
-[node name="TasksStarter" type="Node" parent="DemoTaskBlackboard" unique_id=1357511862]
-script = ExtResource("6_t3rbc")
-tasks_id = Array[int]([4, 5, 6, 7, 8, 9, 10])
 
 [node name="FlowSimulationLabels" type="Node3D" parent="." unique_id=256407371]
 
