@@ -152,6 +152,9 @@ cap_bottom = false
 [sub_resource type="BoxShape3D" id="BoxShape3D_0nlau"]
 size = Vector3(0.299866, 10.133537, 0.72558594)
 
+[sub_resource type="BoxMesh" id="BoxMesh_7sq4a"]
+size = Vector3(1, 1.8, 1)
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ir53q"]
 
 [sub_resource type="Sky" id="Sky_5sa2k"]
@@ -806,6 +809,10 @@ transform = Transform3D(-0.46143907, -3.3881318e-21, 0.88717186, -2.5214944e-14,
 
 [node name="ned1" parent="Reference_point_floor/LADDERS" unique_id=1327856870 instance=ExtResource("10_7sq4a")]
 transform = Transform3D(-0.612769, 1.6940659e-21, -0.7902619, 2.24606e-14, 0.99999976, -1.7415936e-14, 0.7902619, -2.8421706e-14, -0.61276895, 18.773026, 1.7855835, -5.5755205)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Reference_point_floor" unique_id=1338571825]
+transform = Transform3D(1, 0, 0, 0, 0.9999995, 1.1858461e-20, 0, -1.1858461e-20, 0.9999995, -24.64586, 2.6937256, 44.8578)
+mesh = SubResource("BoxMesh_7sq4a")
 
 [node name="Config" type="Node3D" parent="." unique_id=701552541]
 
