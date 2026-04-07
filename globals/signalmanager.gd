@@ -37,6 +37,7 @@ signal inventory_action_open
 signal credits
 #signal enter_introscreen
 signal select_env(from : ENVIRONMENTS.ID)
+signal toggle_tasks_menu
 
 #Messages to screen
 signal ui_msg_top(text : float)
