@@ -39,6 +39,8 @@ func init_bar(inventory_ : Inventory) -> void:
 	if not inventory.changed_currently_selected.is_connected(on_inventory_updated_selected):
 		inventory.changed_currently_selected.connect(on_inventory_updated_selected)
 		
+func is_selecting() -> bool:
+	return inventory.currently_selected_idx != -1
 	
 ##Deselects current inventory item
 func deselect() -> void:	

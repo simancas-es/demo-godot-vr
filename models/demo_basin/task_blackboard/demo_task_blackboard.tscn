@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3qp4a3ahe2gf"]
+[gd_scene format=3 uid="uid://d3qp4a3ahe2gf"]
 
 [ext_resource type="PackedScene" uid="uid://cx1wgq0gx0mxe" path="res://clases/helpers/task_text/menu/debug_task_list.tscn" id="1_ubk6a"]
 
@@ -16,15 +16,15 @@ metallic_specular = 0.0
 emission_enabled = true
 emission_texture = SubResource("ViewportTexture_7kfum")
 
-[node name="DemoTaskBlackboard" type="Node3D"]
+[node name="DemoTaskBlackboard" type="Node3D" unique_id=2042287808]
 
-[node name="SubViewport" type="SubViewport" parent="."]
+[node name="SubViewport" type="SubViewport" parent="." unique_id=2033402533]
 disable_3d = true
 transparent_bg = true
 size = Vector2i(512, 1024)
 render_target_update_mode = 4
 
-[node name="Control" type="Control" parent="SubViewport"]
+[node name="Control" type="Control" parent="SubViewport" unique_id=1845094678]
 custom_minimum_size = Vector2(512, 1024)
 layout_mode = 3
 anchors_preset = 0
@@ -33,12 +33,12 @@ offset_bottom = 40.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="DebugTaskShow" parent="SubViewport/Control" instance=ExtResource("1_ubk6a")]
+[node name="DebugTaskShow" parent="SubViewport/Control" unique_id=2131064208 instance=ExtResource("1_ubk6a")]
 layout_mode = 1
 font_size = 48
 filter_only = Array[int]([1, 2, 3])
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1050374619]
 transform = Transform3D(1, 0, 0, 0, 0.30305195, -0.952974, 0, 0.952974, 0.30305195, 0, 0.98601425, -0.17811863)
 mesh = SubResource("PlaneMesh_ubk6a")
 surface_material_override/0 = SubResource("StandardMaterial3D_7kfum")

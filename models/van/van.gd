@@ -16,7 +16,7 @@ func _ready() -> void:
 
 	idle()
 	
-	Signals.entered_room.connect(mute_audio)
+	#Signals.entered_room.connect(mute_audio)
 	activated.connect(on_activated)
 	looked_at.connect(on_lookedat)
 	dropped_looked_at.connect(on_droppedlook)

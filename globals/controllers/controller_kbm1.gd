@@ -49,29 +49,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			mousewheeldown.emit()
 			get_viewport().set_input_as_handled()
 		return
-	
-	if Input.is_action_just_pressed("interact"):
-		interact.emit() #Dont consume this
-		get_viewport().set_input_as_handled()
 
 ##KEYS
 func _unhandled_key_input(_event: InputEvent) -> void:
-	#Debug
-	#if Input.is_action_just_pressed("lock_movement"):
-		#_conobj.wants_movement = not _conobj.wants_movement
-		#get_viewport().set_input_as_handled()
-		#pass
-	
-	#Debug
-	if Input.is_action_just_pressed("change_panorama"):
-		Signals.request_change_room.emit(ROOMS.ID.DEMO_VISTA)
-		get_viewport().set_input_as_handled()
-		#
-	#elif Input.is_action_just_pressed("exit_panorama"):
-		#Signals.request_exit_roomspace.emit()
-		#get_viewport().set_input_as_handled()
-
-	elif Input.is_action_just_pressed("interact"):
+	if Input.is_action_just_pressed("interact"):
 		interact.emit() #Dont consume this
 		get_viewport().set_input_as_handled()
 	
@@ -84,7 +65,13 @@ func _unhandled_key_input(_event: InputEvent) -> void:
 		if is_mouse_captured: Signals.release_mouse.emit()
 		else: Signals.capture_mouse.emit()
 		get_viewport().set_input_as_handled()
-	
+		
+	elif Input.is_action_just_pressed("tasks"):
+		Signals.toggle_tasks_menu.emit()
+		get_viewport().set_input_as_handled()
+	elif _event is InputEventKey:
+		if _event.keycode == KEY_V:
+			pass	
 	#Update some keys
 	is_shift = Input.is_action_pressed("movement_shift")
 	is_jumping = Input.is_action_pressed("movement_space")

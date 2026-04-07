@@ -49,8 +49,9 @@ func process_input(_event : InputEvent) -> StateBase:
 		bbar.select_offset(+1)
 		get_viewport().set_input_as_handled()	
 	elif Input.is_action_just_pressed(INVENTORYUISETTINGS.ACTION_DESELECT):
-		bbar.deselect()
-		get_viewport().set_input_as_handled()	
+		if bbar.is_selecting():
+			bbar.deselect()
+			get_viewport().set_input_as_handled()	
 
 	
 	return null

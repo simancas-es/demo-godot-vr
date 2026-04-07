@@ -46,12 +46,12 @@ signal ui_msg_top(text : float)
 #signal precache_room(id : ROOMS.ID)
 signal change_zone(id : ENVIRONMENTS.ID)
 #signal change_room(id : ROOMS.ID)
-signal entered_room
-signal exit_room
+#signal entered_room
+#signal exit_room
 
-#Requests to states
-signal request_change_room(id : ROOMS.ID)
-signal request_exit_roomspace
+##Requests to states
+#signal request_change_room(id : ROOMS.ID)
+#signal request_exit_roomspace
 
 
 #Camera changes
