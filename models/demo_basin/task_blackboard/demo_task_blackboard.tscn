@@ -4,7 +4,7 @@
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_ubk6a"]
 resource_local_to_scene = true
-size = Vector2(1, 2)
+size = Vector2(2, 1)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_7kfum"]
 viewport_path = NodePath("SubViewport")
@@ -21,22 +21,23 @@ emission_texture = SubResource("ViewportTexture_7kfum")
 [node name="SubViewport" type="SubViewport" parent="." unique_id=2033402533]
 disable_3d = true
 transparent_bg = true
-size = Vector2i(512, 1024)
+size = Vector2i(1024, 512)
 render_target_update_mode = 4
 
 [node name="Control" type="Control" parent="SubViewport" unique_id=1845094678]
-custom_minimum_size = Vector2(512, 1024)
+custom_minimum_size = Vector2(1024, 512)
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="DebugTaskShow" parent="SubViewport/Control" unique_id=2131064208 instance=ExtResource("1_ubk6a")]
 layout_mode = 1
-font_size = 48
-filter_only = Array[int]([1, 2, 3])
+font_size = 32
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1050374619]
 transform = Transform3D(1, 0, 0, 0, 0.30305195, -0.952974, 0, 0.952974, 0.30305195, 0, 0.98601425, -0.17811863)
