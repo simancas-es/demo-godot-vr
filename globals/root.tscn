@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bb61r87co1wd4" path="res://menus/settings/menusettings.tscn" id="10_2hlt0"]
 [ext_resource type="PackedScene" uid="uid://bnij78dscig28" path="res://systems/system-inventory/inventory-ui/inventory_ui.tscn" id="10_n1s3a"]
 [ext_resource type="PackedScene" uid="uid://cx1wgq0gx0mxe" path="res://clases/helpers/task_text/menu/debug_task_list.tscn" id="12_wgoxm"]
+[ext_resource type="Script" uid="uid://bfcilkbewoyoh" path="res://menus/tasks/toggle_menu.gd" id="15_5uipj"]
 [ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="16_bm7q0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhhay"]
@@ -108,6 +109,10 @@ unique_name_in_owner = true
 visible = false
 anchor_right = 0.25
 filter_only = Array[int]([1])
+
+[node name="Toggle" type="Node" parent="UI_CanvasLayer/DebugTaskShow" unique_id=226249598]
+script = ExtResource("15_5uipj")
+signal_name = "toggle_tasks_menu"
 
 [node name="DebugStateText" type="Label" parent="UI_CanvasLayer" unique_id=1354467370]
 unique_name_in_owner = true
