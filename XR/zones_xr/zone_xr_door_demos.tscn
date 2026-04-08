@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dc3sv4o68rv51"]
+[gd_scene format=3 uid="uid://dc3sv4o68rv51"]
 
 [ext_resource type="Script" uid="uid://177gygw2xqqu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_ewc70"]
 [ext_resource type="Script" uid="uid://d2dcx1dna1w1c" path="res://XR/zones_xr/xr_adapter.gd" id="2_wvr2v"]
@@ -6,18 +6,18 @@
 [ext_resource type="PackedScene" uid="uid://candrioiutbw2" path="res://XR/scenes/doors/test_scene/xrdoorsdemo.tscn" id="5_ewc70"]
 [ext_resource type="PackedScene" uid="uid://vb3fpby81rqy" path="res://XR/scenes/xr_van.tscn" id="5_jymb3"]
 
-[node name="ZoneXrTechDemos" type="Node3D"]
+[node name="ZoneXrTechDemos" type="Node3D" unique_id=1851958091]
 script = ExtResource("1_ewc70")
 metadata/_custom_type_script = "uid://177gygw2xqqu"
 
-[node name="XR_ADAPTER" type="Node" parent="."]
+[node name="XR_ADAPTER" type="Node" parent="." unique_id=459860312]
 script = ExtResource("2_wvr2v")
 
-[node name="XRPlayer" parent="." instance=ExtResource("3_361fx")]
+[node name="XRPlayer" parent="." unique_id=487918731 instance=ExtResource("3_361fx")]
 transform = Transform3D(0.9890751, 0, 0.14741245, 0, 1, 0, -0.14741245, 0, 0.9890751, 1.6007103, 0.16624641, 3.2160335)
 
-[node name="XrVan" parent="." instance=ExtResource("5_jymb3")]
+[node name="XrVan" parent="." unique_id=1077546651 instance=ExtResource("5_jymb3")]
 transform = Transform3D(-0.4914055, 0, 0.8709309, 0, 1, 0, -0.8709309, 0, -0.4914055, 4.631035, 0, 6.5976925)
-labeltext = "To the Hochschule!"
+labeltext_text = "To the Hochschule"
 
-[node name="Demo" parent="." instance=ExtResource("5_ewc70")]
+[node name="Demo" parent="." unique_id=1713980253 instance=ExtResource("5_ewc70")]

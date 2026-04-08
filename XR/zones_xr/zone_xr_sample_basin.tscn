@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://b0wlrvdhqnj2e"]
+[gd_scene format=3 uid="uid://b0wlrvdhqnj2e"]
 
 [ext_resource type="Script" uid="uid://177gygw2xqqu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_14ude"]
 [ext_resource type="PackedScene" uid="uid://dqlioxrtse7dm" path="res://XR/zones_xr/xr_adapter.tscn" id="2_mvgnd"]
@@ -158,337 +158,337 @@ radius = 0.025
 [sub_resource type="BoxShape3D" id="BoxShape3D_w01w5"]
 size = Vector3(1, 1.3258057, 1)
 
-[node name="ZoneXrBasin" type="Node3D"]
+[node name="ZoneXrBasin" type="Node3D" unique_id=1610661768]
 script = ExtResource("1_14ude")
 metadata/_custom_type_script = "uid://177gygw2xqqu"
 
-[node name="XR_ADAPTER" parent="." node_paths=PackedStringArray("basezone") instance=ExtResource("2_mvgnd")]
+[node name="XR_ADAPTER" parent="." unique_id=1716675389 node_paths=PackedStringArray("basezone") instance=ExtResource("2_mvgnd")]
 basezone = NodePath("../ZoneObservatorio")
 delete_vans = true
 delete_inventorypickups = true
 
-[node name="ZoneObservatorio" parent="." instance=ExtResource("5_14ude")]
+[node name="ZoneObservatorio" parent="." unique_id=1090593337 instance=ExtResource("5_14ude")]
 
-[node name="XRPlayer" parent="." instance=ExtResource("3_dfvsd")]
+[node name="XRPlayer" parent="." unique_id=1548611922 instance=ExtResource("3_dfvsd")]
 transform = Transform3D(0.6445775, 0, 0.764539, 0, 1, 0, -0.764539, 0, 0.6445775, 6.1037292, 0.25880432, -0.37846684)
 
-[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand" index="1"]
+[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand" parent_id_path=PackedInt32Array(1548611922, 1009909507) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_l0wje")
 
-[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand2/LeftHand2" index="1"]
+[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand2/LeftHand2" parent_id_path=PackedInt32Array(1548611922, 102583930) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_8ygd4")
 
-[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand" index="1"]
+[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand" parent_id_path=PackedInt32Array(1548611922, 1329846119) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_hg2ky")
 
-[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2" index="1"]
+[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2" parent_id_path=PackedInt32Array(1548611922, 1240763572) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_7vpfn")
 
-[node name="Portal" parent="." instance=ExtResource("4_ijleo")]
+[node name="Portal" parent="." unique_id=608985235 instance=ExtResource("4_ijleo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.59433, 2.5235043, -104.31243)
 scene = "uid://cakq3l4d46c36"
 
-[node name="XrVanHS" parent="." instance=ExtResource("6_mvgnd")]
+[node name="XrVanHS" parent="." unique_id=312015144 instance=ExtResource("6_mvgnd")]
 transform = Transform3D(0.980683, 0, 0.1956039, 0, 1, 0, -0.1956039, 0, 0.980683, 1.2696819, -0.046569943, -1.515338)
 target_scene = "uid://cakq3l4d46c36"
-labeltext = "Zur Hochschule"
+labeltext_text = "To the Hochschule!"
 
-[node name="PushButton" parent="." instance=ExtResource("7_dfvsd")]
+[node name="PushButton" parent="." unique_id=1276277858 instance=ExtResource("7_dfvsd")]
 transform = Transform3D(-0.009800553, 0.8842661, -0.46688062, -0.9999386, -0.011082585, -6.181753e-09, -0.00517425, 0.46685195, 0.8843204, 2.35403, 3.621404, -13.278099)
 
-[node name="PushButton2" parent="." instance=ExtResource("7_dfvsd")]
+[node name="PushButton2" parent="." unique_id=385215471 instance=ExtResource("7_dfvsd")]
 transform = Transform3D(-0.009800553, 0.8198083, -0.57255423, -0.9999386, -0.010997675, 0.001369242, -0.0051742494, 0.5725325, 0.8198657, 2.9482894, 3.597378, -14.264146)
 
-[node name="WheelValve" parent="." instance=ExtResource("8_phu2a")]
+[node name="WheelValve" parent="." unique_id=385349813 instance=ExtResource("8_phu2a")]
 transform = Transform3D(-0.59593076, 0.38510823, -0.7046687, -5.9604645e-08, 0.8775063, 0.47956544, 0.803036, 0.28578767, -0.52293277, 4.824843, 3.314994, -11.968372)
 visible = false
 hinge_limit_min = 0.0
 hinge_limit_max = 720.0
 
-[node name="LogicXRWheel" type="Node" parent="WheelValve"]
+[node name="LogicXRWheel" type="Node" parent="WheelValve" unique_id=1558990408]
 script = ExtResource("9_t66qr")
 
-[node name="LogicXRButtons" type="Node" parent="."]
+[node name="LogicXRButtons" type="Node" parent="." unique_id=426368370]
 script = ExtResource("8_ijleo")
 
-[node name="XRPickables" type="Node3D" parent="."]
+[node name="XRPickables" type="Node3D" parent="." unique_id=2040354760]
 
-[node name="dungeonkeys" parent="XRPickables" instance=ExtResource("11_oua7j")]
+[node name="dungeonkeys" parent="XRPickables" unique_id=381379919 instance=ExtResource("11_oua7j")]
 transform = Transform3D(0.61824375, 0.7859864, 0, -0.016076481, 0.01264549, -0.9997908, -0.785822, 0.6181144, 0.020453893, 5.6568193, 1.2391803, -12.645402)
 sleeping = true
 item_id = 1
 
-[node name="dungeonkeys" parent="XRPickables/dungeonkeys" instance=ExtResource("12_oua7j")]
+[node name="dungeonkeys" parent="XRPickables/dungeonkeys" unique_id=1359130649 instance=ExtResource("12_oua7j")]
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="XRPickables/dungeonkeys"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="XRPickables/dungeonkeys" unique_id=1174552238]
 shape = SubResource("BoxShape3D_55kdo")
 
-[node name="aerator" parent="XRPickables" instance=ExtResource("11_oua7j")]
+[node name="aerator" parent="XRPickables" unique_id=1140202612 instance=ExtResource("11_oua7j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3318014, 3.091591, -13.559586)
 sleeping = true
 item_id = 2
 
-[node name="aerator_head" parent="XRPickables/aerator" instance=ExtResource("14_yyg01")]
+[node name="aerator_head" parent="XRPickables/aerator" unique_id=1121618901 instance=ExtResource("14_yyg01")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="XRPickables/aerator"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XRPickables/aerator" unique_id=1204812386]
 shape = SubResource("BoxShape3D_oua7j")
 
-[node name="beaker" parent="XRPickables" groups=["xrg_beaker"] instance=ExtResource("11_oua7j")]
+[node name="beaker" parent="XRPickables" unique_id=687837180 groups=["xrg_beaker"] instance=ExtResource("11_oua7j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.6395235, 1.0099546, -13.804302)
 sleeping = true
 
-[node name="beaker2" parent="XRPickables/beaker" instance=ExtResource("13_0oekp")]
+[node name="beaker2" parent="XRPickables/beaker" unique_id=1499120290 instance=ExtResource("13_0oekp")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="XRPickables/beaker"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XRPickables/beaker" unique_id=1247401598]
 shape = SubResource("CylinderShape3D_oua7j")
 
-[node name="snap_interaction_key" parent="XRPickables" node_paths=PackedStringArray("show_model") instance=ExtResource("15_0oekp")]
+[node name="snap_interaction_key" parent="XRPickables" unique_id=599593958 node_paths=PackedStringArray("show_model") instance=ExtResource("15_0oekp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7744272, 3.0148804, -11.851285)
 item_id = 1
 show_model = NodePath("show_on_success/dungeonkeys")
 
-[node name="show_on_success" type="Node3D" parent="XRPickables/snap_interaction_key"]
+[node name="show_on_success" type="Node3D" parent="XRPickables/snap_interaction_key" unique_id=428101547]
 
-[node name="dungeonkeys" parent="XRPickables/snap_interaction_key/show_on_success" instance=ExtResource("12_oua7j")]
+[node name="dungeonkeys" parent="XRPickables/snap_interaction_key/show_on_success" unique_id=639400368 instance=ExtResource("12_oua7j")]
 transform = Transform3D(0.045796994, 0.8718223, -0.48767692, -0.99862325, 0.052457917, 2.6077032e-08, 0.025582463, 0.48700535, 0.8730243, 0.034318935, -0.05127191, -0.12916957)
 
-[node name="LogicXRDoor" type="Node" parent="XRPickables/snap_interaction_key" node_paths=PackedStringArray("basesystem")]
+[node name="LogicXRDoor" type="Node" parent="XRPickables/snap_interaction_key" unique_id=1394749618 node_paths=PackedStringArray("basesystem")]
 script = ExtResource("16_yyg01")
 basesystem = NodePath("../../..")
 
-[node name="snap_interaction_beakers" parent="XRPickables" node_paths=PackedStringArray("show_model") instance=ExtResource("15_0oekp")]
+[node name="snap_interaction_beakers" parent="XRPickables" unique_id=1861803215 node_paths=PackedStringArray("show_model") instance=ExtResource("15_0oekp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8844814, 1.008128, -10.686099)
 snap_require = "xrg_beaker"
 show_model = NodePath("show_on_success")
 
-[node name="show_on_success" type="Node3D" parent="XRPickables/snap_interaction_beakers"]
+[node name="show_on_success" type="Node3D" parent="XRPickables/snap_interaction_beakers" unique_id=1181646566]
 
-[node name="beaker2" parent="XRPickables/snap_interaction_beakers/show_on_success" instance=ExtResource("13_0oekp")]
+[node name="beaker2" parent="XRPickables/snap_interaction_beakers/show_on_success" unique_id=546798555 instance=ExtResource("13_0oekp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07939196, 0, 0)
 
-[node name="beaker3" parent="XRPickables/snap_interaction_beakers/show_on_success" instance=ExtResource("13_0oekp")]
+[node name="beaker3" parent="XRPickables/snap_interaction_beakers/show_on_success" unique_id=1925315420 instance=ExtResource("13_0oekp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.061800003)
 
-[node name="beaker4" parent="XRPickables/snap_interaction_beakers/show_on_success" instance=ExtResource("13_0oekp")]
+[node name="beaker4" parent="XRPickables/snap_interaction_beakers/show_on_success" unique_id=1462470779 instance=ExtResource("13_0oekp")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XRPickables/snap_interaction_beakers"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XRPickables/snap_interaction_beakers" unique_id=457090514]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.50432706, 0)
 mesh = SubResource("BoxMesh_pbukp")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="XRPickables/snap_interaction_beakers"]
+[node name="StaticBody3D" type="StaticBody3D" parent="XRPickables/snap_interaction_beakers" unique_id=1349086557]
 collision_layer = 0
 collision_mask = 8437760
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="XRPickables/snap_interaction_beakers/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="XRPickables/snap_interaction_beakers/StaticBody3D" unique_id=1650615433]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.66619873, 0)
 shape = SubResource("BoxShape3D_w01w5")
 
-[node name="snap_interaction_diffusers" parent="XRPickables" instance=ExtResource("15_0oekp")]
+[node name="snap_interaction_diffusers" parent="XRPickables" unique_id=703710216 instance=ExtResource("15_0oekp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3518271, 0.35427284, -12.55136)
 item_id = 2
 
-[node name="LogicXRDiffuserInteraction" type="Node" parent="XRPickables/snap_interaction_diffusers" node_paths=PackedStringArray("basesystem")]
+[node name="LogicXRDiffuserInteraction" type="Node" parent="XRPickables/snap_interaction_diffusers" unique_id=1226663605 node_paths=PackedStringArray("basesystem")]
 script = ExtResource("17_xo6c6")
 basesystem = NodePath("../../..")
 
-[node name="LadderShort" parent="." instance=ExtResource("18_wlig4")]
+[node name="LadderShort" parent="." unique_id=1375753625 instance=ExtResource("18_wlig4")]
 transform = Transform3D(0.75462943, 0, -0.65615124, 0, 1, 0, 0.65615124, 0, 0.75462943, 5.194629, 4.196081, -5.7475758)
 metadata/_edit_lock_ = true
 
-[node name="Left" parent="LadderShort/Meshes" index="0"]
+[node name="Left" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="0" unique_id=2086654056]
 transform = Transform3D(1, 0, 0, 0, 0.51659214, 0, 0, 0, 1, -0.225, -2.4456522, 0)
 
-[node name="Right" parent="LadderShort/Meshes" index="1"]
+[node name="Right" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="1" unique_id=2094135372]
 transform = Transform3D(1, 0, 0, 0, 0.51659214, 0, 0, 0, 1, 0.225, -2.4456522, 0)
 
-[node name="Rung8" parent="LadderShort/Meshes" index="9"]
+[node name="Rung8" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="9" unique_id=1917132887]
 visible = false
 
-[node name="Rung9" parent="LadderShort/Meshes" index="10"]
+[node name="Rung9" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="10" unique_id=1178998737]
 visible = false
 
-[node name="Rung10" parent="LadderShort/Meshes" index="11"]
+[node name="Rung10" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="11" unique_id=1916795303]
 visible = false
 
-[node name="Rung11" parent="LadderShort/Meshes" index="12"]
+[node name="Rung11" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="12" unique_id=60012607]
 visible = false
 
-[node name="Rung12" parent="LadderShort/Meshes" index="13"]
+[node name="Rung12" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="13" unique_id=1949433814]
 visible = false
 
-[node name="Rung13" parent="LadderShort/Meshes" index="14"]
+[node name="Rung13" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="14" unique_id=700391990]
 visible = false
 
-[node name="Rung14" parent="LadderShort/Meshes" index="15"]
+[node name="Rung14" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="15" unique_id=1494852174]
 visible = false
 
-[node name="Rung15" parent="LadderShort/Meshes" index="16"]
+[node name="Rung15" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="16" unique_id=62761588]
 visible = false
 
-[node name="Rung16" parent="LadderShort/Meshes" index="17"]
+[node name="Rung16" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="17" unique_id=1539399282]
 visible = false
 
-[node name="Rung17" parent="LadderShort/Meshes" index="18"]
+[node name="Rung17" parent="LadderShort/Meshes" parent_id_path=PackedInt32Array(1375753625, 268813291) index="18" unique_id=1349446793]
 visible = false
 
-[node name="GrabPointHandLeft8" parent="LadderShort" index="16"]
+[node name="GrabPointHandLeft8" parent="LadderShort" index="16" unique_id=1430356820]
 enabled = false
 
-[node name="GrabPointHandRight8" parent="LadderShort" index="17"]
+[node name="GrabPointHandRight8" parent="LadderShort" index="17" unique_id=965285859]
 enabled = false
 
-[node name="GrabPointHandLeft9" parent="LadderShort" index="18"]
+[node name="GrabPointHandLeft9" parent="LadderShort" index="18" unique_id=1855024355]
 enabled = false
 
-[node name="GrabPointHandRight9" parent="LadderShort" index="19"]
+[node name="GrabPointHandRight9" parent="LadderShort" index="19" unique_id=672596571]
 enabled = false
 
-[node name="GrabPointHandLeft10" parent="LadderShort" index="20"]
+[node name="GrabPointHandLeft10" parent="LadderShort" index="20" unique_id=1353102063]
 enabled = false
 
-[node name="GrabPointHandRight10" parent="LadderShort" index="21"]
+[node name="GrabPointHandRight10" parent="LadderShort" index="21" unique_id=1649651213]
 enabled = false
 
-[node name="GrabPointHandLeft11" parent="LadderShort" index="22"]
+[node name="GrabPointHandLeft11" parent="LadderShort" index="22" unique_id=834051239]
 enabled = false
 
-[node name="GrabPointHandRight11" parent="LadderShort" index="23"]
+[node name="GrabPointHandRight11" parent="LadderShort" index="23" unique_id=100590838]
 enabled = false
 
-[node name="GrabPointHandLeft12" parent="LadderShort" index="24"]
+[node name="GrabPointHandLeft12" parent="LadderShort" index="24" unique_id=1189263940]
 enabled = false
 
-[node name="GrabPointHandRight12" parent="LadderShort" index="25"]
+[node name="GrabPointHandRight12" parent="LadderShort" index="25" unique_id=328445696]
 enabled = false
 
-[node name="GrabPointHandLeft13" parent="LadderShort" index="26"]
+[node name="GrabPointHandLeft13" parent="LadderShort" index="26" unique_id=450862745]
 enabled = false
 
-[node name="GrabPointHandRight13" parent="LadderShort" index="27"]
+[node name="GrabPointHandRight13" parent="LadderShort" index="27" unique_id=2079503342]
 enabled = false
 
-[node name="GrabPointHandLeft14" parent="LadderShort" index="28"]
+[node name="GrabPointHandLeft14" parent="LadderShort" index="28" unique_id=530168776]
 enabled = false
 
-[node name="GrabPointHandRight14" parent="LadderShort" index="29"]
+[node name="GrabPointHandRight14" parent="LadderShort" index="29" unique_id=3456899]
 enabled = false
 
-[node name="GrabPointHandLeft15" parent="LadderShort" index="30"]
+[node name="GrabPointHandLeft15" parent="LadderShort" index="30" unique_id=2049730091]
 enabled = false
 
-[node name="GrabPointHandRight15" parent="LadderShort" index="31"]
+[node name="GrabPointHandRight15" parent="LadderShort" index="31" unique_id=1257076287]
 enabled = false
 
-[node name="GrabPointHandLeft16" parent="LadderShort" index="32"]
+[node name="GrabPointHandLeft16" parent="LadderShort" index="32" unique_id=1485977068]
 enabled = false
 
-[node name="GrabPointHandRight16" parent="LadderShort" index="33"]
+[node name="GrabPointHandRight16" parent="LadderShort" index="33" unique_id=1448359155]
 enabled = false
 
-[node name="GrabPointHandLeft17" parent="LadderShort" index="34"]
+[node name="GrabPointHandLeft17" parent="LadderShort" index="34" unique_id=1385938257]
 enabled = false
 
-[node name="GrabPointHandRight17" parent="LadderShort" index="35"]
+[node name="GrabPointHandRight17" parent="LadderShort" index="35" unique_id=679028]
 enabled = false
 
-[node name="LadderShort2" parent="." instance=ExtResource("18_wlig4")]
+[node name="LadderShort2" parent="." unique_id=1089995221 instance=ExtResource("18_wlig4")]
 transform = Transform3D(0.75462943, 0, -0.65615124, 0, 1, 0, 0.65615124, 0, 0.75462943, 3.1729465, 4.196081, -11.727029)
 metadata/_edit_lock_ = true
 
-[node name="Left" parent="LadderShort2/Meshes" index="0"]
+[node name="Left" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="0" unique_id=2086654056]
 transform = Transform3D(1, 0, 0, 0, 0.51659214, 0, 0, 0, 1, -0.225, -2.4456522, 0)
 
-[node name="Right" parent="LadderShort2/Meshes" index="1"]
+[node name="Right" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="1" unique_id=2094135372]
 transform = Transform3D(1, 0, 0, 0, 0.51659214, 0, 0, 0, 1, 0.225, -2.4456522, 0)
 
-[node name="Rung8" parent="LadderShort2/Meshes" index="9"]
+[node name="Rung8" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="9" unique_id=1917132887]
 visible = false
 
-[node name="Rung9" parent="LadderShort2/Meshes" index="10"]
+[node name="Rung9" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="10" unique_id=1178998737]
 visible = false
 
-[node name="Rung10" parent="LadderShort2/Meshes" index="11"]
+[node name="Rung10" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="11" unique_id=1916795303]
 visible = false
 
-[node name="Rung11" parent="LadderShort2/Meshes" index="12"]
+[node name="Rung11" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="12" unique_id=60012607]
 visible = false
 
-[node name="Rung12" parent="LadderShort2/Meshes" index="13"]
+[node name="Rung12" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="13" unique_id=1949433814]
 visible = false
 
-[node name="Rung13" parent="LadderShort2/Meshes" index="14"]
+[node name="Rung13" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="14" unique_id=700391990]
 visible = false
 
-[node name="Rung14" parent="LadderShort2/Meshes" index="15"]
+[node name="Rung14" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="15" unique_id=1494852174]
 visible = false
 
-[node name="Rung15" parent="LadderShort2/Meshes" index="16"]
+[node name="Rung15" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="16" unique_id=62761588]
 visible = false
 
-[node name="Rung16" parent="LadderShort2/Meshes" index="17"]
+[node name="Rung16" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="17" unique_id=1539399282]
 visible = false
 
-[node name="Rung17" parent="LadderShort2/Meshes" index="18"]
+[node name="Rung17" parent="LadderShort2/Meshes" parent_id_path=PackedInt32Array(1089995221, 268813291) index="18" unique_id=1349446793]
 visible = false
 
-[node name="GrabPointHandLeft8" parent="LadderShort2" index="16"]
+[node name="GrabPointHandLeft8" parent="LadderShort2" index="16" unique_id=1430356820]
 enabled = false
 
-[node name="GrabPointHandRight8" parent="LadderShort2" index="17"]
+[node name="GrabPointHandRight8" parent="LadderShort2" index="17" unique_id=965285859]
 enabled = false
 
-[node name="GrabPointHandLeft9" parent="LadderShort2" index="18"]
+[node name="GrabPointHandLeft9" parent="LadderShort2" index="18" unique_id=1855024355]
 enabled = false
 
-[node name="GrabPointHandRight9" parent="LadderShort2" index="19"]
+[node name="GrabPointHandRight9" parent="LadderShort2" index="19" unique_id=672596571]
 enabled = false
 
-[node name="GrabPointHandLeft10" parent="LadderShort2" index="20"]
+[node name="GrabPointHandLeft10" parent="LadderShort2" index="20" unique_id=1353102063]
 enabled = false
 
-[node name="GrabPointHandRight10" parent="LadderShort2" index="21"]
+[node name="GrabPointHandRight10" parent="LadderShort2" index="21" unique_id=1649651213]
 enabled = false
 
-[node name="GrabPointHandLeft11" parent="LadderShort2" index="22"]
+[node name="GrabPointHandLeft11" parent="LadderShort2" index="22" unique_id=834051239]
 enabled = false
 
-[node name="GrabPointHandRight11" parent="LadderShort2" index="23"]
+[node name="GrabPointHandRight11" parent="LadderShort2" index="23" unique_id=100590838]
 enabled = false
 
-[node name="GrabPointHandLeft12" parent="LadderShort2" index="24"]
+[node name="GrabPointHandLeft12" parent="LadderShort2" index="24" unique_id=1189263940]
 enabled = false
 
-[node name="GrabPointHandRight12" parent="LadderShort2" index="25"]
+[node name="GrabPointHandRight12" parent="LadderShort2" index="25" unique_id=328445696]
 enabled = false
 
-[node name="GrabPointHandLeft13" parent="LadderShort2" index="26"]
+[node name="GrabPointHandLeft13" parent="LadderShort2" index="26" unique_id=450862745]
 enabled = false
 
-[node name="GrabPointHandRight13" parent="LadderShort2" index="27"]
+[node name="GrabPointHandRight13" parent="LadderShort2" index="27" unique_id=2079503342]
 enabled = false
 
-[node name="GrabPointHandLeft14" parent="LadderShort2" index="28"]
+[node name="GrabPointHandLeft14" parent="LadderShort2" index="28" unique_id=530168776]
 enabled = false
 
-[node name="GrabPointHandRight14" parent="LadderShort2" index="29"]
+[node name="GrabPointHandRight14" parent="LadderShort2" index="29" unique_id=3456899]
 enabled = false
 
-[node name="GrabPointHandLeft15" parent="LadderShort2" index="30"]
+[node name="GrabPointHandLeft15" parent="LadderShort2" index="30" unique_id=2049730091]
 enabled = false
 
-[node name="GrabPointHandRight15" parent="LadderShort2" index="31"]
+[node name="GrabPointHandRight15" parent="LadderShort2" index="31" unique_id=1257076287]
 enabled = false
 
-[node name="GrabPointHandLeft16" parent="LadderShort2" index="32"]
+[node name="GrabPointHandLeft16" parent="LadderShort2" index="32" unique_id=1485977068]
 enabled = false
 
-[node name="GrabPointHandRight16" parent="LadderShort2" index="33"]
+[node name="GrabPointHandRight16" parent="LadderShort2" index="33" unique_id=1448359155]
 enabled = false
 
-[node name="GrabPointHandLeft17" parent="LadderShort2" index="34"]
+[node name="GrabPointHandLeft17" parent="LadderShort2" index="34" unique_id=1385938257]
 enabled = false
 
-[node name="GrabPointHandRight17" parent="LadderShort2" index="35"]
+[node name="GrabPointHandRight17" parent="LadderShort2" index="35" unique_id=679028]
 enabled = false
 
 [editable path="ZoneObservatorio"]

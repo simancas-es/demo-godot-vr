@@ -8,7 +8,7 @@ const SimContainer = SimulationMain.Simulation.Ref.SimContainer
 @onready var stats_vol = $Stats_vol
 @onready var stats_fl = $Stats_fl
 
-@export var title_name_en : String = "BASIN XXXX" #Translate later automatically
+@export var title_name_en_text : String = tr("BASIN XXXX") #Translate later automatically
 
 @export var flow_simulation_container : Containers.ID
 @export var flow_simulation_main : SimulationMain = null ##No need to add it since we will look for it if it doesnt exist
@@ -19,7 +19,7 @@ const t_current_fill_level : String = "Current Fill Level (%): "
 
 func _ready() -> void:
 	if title:
-		title.text = tr(title_name_en)
+		title.text = tr(title_name_en_text)
 	set_numbers(0, 0)
 	
 	#HACK: avoid adding manually, but crashes if not found
@@ -44,6 +44,8 @@ func update() -> void:
 	set_numbers(vol, 100*vol/(cont.max_volume_m3+0.00001)) #Prevent 0
 	pass
 
+func update_language() -> void:
+	if title: title.text = tr(title_name_en_text)
 
 var update_interval : float = 5.0 # seconds
 var time_accum : float = 0.0
@@ -53,3 +55,10 @@ func _process(delta: float) -> void: #TODO: Disable when not in view
 	if time_accum >= update_interval:
 		time_accum = 0.0
 		update() 
+
+
+
+##Listen to changes in the locale
+func _notification(what):
+	if what == NOTIFICATION_TRANSLATION_CHANGED :
+		update_language()

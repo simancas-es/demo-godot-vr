@@ -9,7 +9,7 @@ const SimEdge = SimulationMain.Simulation.Ref.SimEdge
 @onready var title = $Title	
 @onready var stats_vol = $Stats_vol
 
-@export var title_name_en : String = "BASIN XXXX" #Translate later automatically
+@export var title_name_en_text : String = "PUMP XXXX" #Translate later automatically
 
 @export var flow_simulation_edge : Edges.ID
 @export var flow_simulation_main : SimulationMain = null
@@ -19,7 +19,7 @@ const t_current_throughput : String = "Current Throughput: "
 
 func _ready() -> void:
 	if title:
-		title.text = tr(title_name_en)
+		title.text = tr(title_name_en_text)
 	set_numbers(0)
 	
 	#HACK: avoid adding manually, but crashes if not found
@@ -53,3 +53,13 @@ func _process(delta: float) -> void: #TODO: Disable when not in view
 	if time_accum >= update_interval:
 		time_accum = 0.0
 		update() 
+		
+		
+
+func update_language() -> void:
+	if title: title.text = tr(title_name_en_text)
+
+##Listen to changes in the locale
+func _notification(what):
+	if what == NOTIFICATION_TRANSLATION_CHANGED :
+		update_language()

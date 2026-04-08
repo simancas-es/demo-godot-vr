@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cakq3l4d46c36"]
+[gd_scene format=3 uid="uid://cakq3l4d46c36"]
 
 [ext_resource type="Script" uid="uid://177gygw2xqqu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_ym0g8"]
 [ext_resource type="PackedScene" uid="uid://cc72bld411pp5" path="res://zones/hochschule/zonehochschule.tscn" id="2_ked7q"]
@@ -130,50 +130,50 @@ nodes/Trigger/node = SubResource("AnimationNodeBlend2_lwxxt")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
-[node name="ZoneXrHochschule" type="Node3D"]
+[node name="ZoneXrHochschule" type="Node3D" unique_id=1833161536]
 script = ExtResource("1_ym0g8")
 metadata/_custom_type_script = "uid://177gygw2xqqu"
 
-[node name="XR_ADAPTER" parent="." node_paths=PackedStringArray("basezone") instance=ExtResource("2_p5wne")]
+[node name="XR_ADAPTER" parent="." unique_id=1051167945 node_paths=PackedStringArray("basezone") instance=ExtResource("2_p5wne")]
 basezone = NodePath("../ZoneHochschule")
 delete_vans = true
 
-[node name="XRPlayer" parent="." instance=ExtResource("2_u3r6m")]
+[node name="XRPlayer" parent="." unique_id=1769919299 instance=ExtResource("2_u3r6m")]
 transform = Transform3D(-0.30391666, 0, -0.95269865, 0, 1, 0, 0.95269865, 0, -0.30391666, 41.02974, 4.6929665, -107.22988)
 
-[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand" index="1"]
+[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand" parent_id_path=PackedInt32Array(1769919299, 1009909507) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_am5tl")
 
-[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand2/LeftHand2" index="1"]
+[node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand2/LeftHand2" parent_id_path=PackedInt32Array(1769919299, 102583930) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_24o8d")
 
-[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand" index="1"]
+[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand" parent_id_path=PackedInt32Array(1769919299, 1329846119) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_4ue7m")
 
-[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2" index="1"]
+[node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2" parent_id_path=PackedInt32Array(1769919299, 1240763572) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_hclvl")
 
-[node name="ZoneHochschule" parent="." instance=ExtResource("2_ked7q")]
+[node name="ZoneHochschule" parent="." unique_id=678616754 instance=ExtResource("2_ked7q")]
 
-[node name="XrVanBasin" parent="." instance=ExtResource("6_p5wne")]
+[node name="XrVanBasin" parent="." unique_id=1878686260 instance=ExtResource("6_p5wne")]
 transform = Transform3D(-0.9799908, 0, -0.19904292, 0, 1, 0, 0.19904292, 0, -0.9799908, 49.311867, 2.2358694, -106.72814)
 target_scene = "uid://b0wlrvdhqnj2e"
-labeltext = "Tech demo for basin"
+labeltext_text = "To the demo basin!!"
 
-[node name="XrVanHillersleben" parent="." instance=ExtResource("6_p5wne")]
+[node name="XrVanHillersleben" parent="." unique_id=772435114 instance=ExtResource("6_p5wne")]
 transform = Transform3D(-0.99877447, 0, 0.049494833, 0, 1, 0, -0.049494833, 0, -0.99877447, 47.266815, 2.2358694, -100.880165)
 target_scene = "uid://cy6yaaww8s0it"
-labeltext = "To Hillersleben!"
+labeltext_text = "To Hillersleben!"
 
-[node name="XrVanTools" parent="." instance=ExtResource("6_p5wne")]
+[node name="XrVanTools" parent="." unique_id=950962436 instance=ExtResource("6_p5wne")]
 transform = Transform3D(-0.93641526, 0, 0.35089397, 0, 1, 0, -0.35089397, 0, -0.93641526, 47.887276, 2.23587, -92.113)
 target_scene = "uid://dy3cx7np4mdg"
-labeltext = "To the Godot Tools Tech Demo!"
+labeltext_text = "To the tools demo!"
 
-[node name="XrVanDoors" parent="." instance=ExtResource("6_p5wne")]
+[node name="XrVanDoors" parent="." unique_id=1591482476 instance=ExtResource("6_p5wne")]
 transform = Transform3D(0.34777048, 0, 0.9375798, 0, 1, 0, -0.9375798, 0, 0.34777048, 41.202236, 2.23587, -100.46523)
 target_scene = "uid://dc3sv4o68rv51"
-labeltext = "DoorsDemo"
+labeltext_text = "To the doors demo!"
 
 [editable path="XRPlayer"]
 [editable path="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand"]
