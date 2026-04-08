@@ -216,14 +216,21 @@ msgstr ""
 #: globals/root.tscn
 msgid ""
 "WASD - Bewegung/Movement\n"
-"Leertaste / Space   - Springen/Jump\n"
+"Leertaste / Space - Springen/Jump\n"
 "Umschalt / Shift - Rennen/Run\n"
 "E - Interaction, LMB\n"
 "RT - Inventarzyklen, I-Inventar\n"
 "Mausrad/Mousewheel - Zoom\n"
 "Esc - Menu, H - Reset Position\n"
 "V-Aufgaben / Tasks on/off"
-msgstr ""
+msgstr "WASD - Movement\n"
+"Space - Jump\n"
+"Shift - Run\n"
+"E - Interaction, LMB\n"
+"RT - Cycle Items, I-Inventory\n"
+"Mousewheel - Zoom\n"
+"Esc - Menu, H - Reset Position\n"
+"V - Tasks on/off"
 
 #: globals/topics.gd:27
 msgid "Wastewater"
@@ -246,7 +253,7 @@ msgid ""
 "You are playing a tech demo for a 3D World / 360º Virtual tour tool\n"
 " Continue [{key}]"
 msgstr ""
-"You are playing a tech demo for a 3D World / 360º Virtual tour tool\n"
+"You are playing a tech demo for a 3D World as a learning tool\n"
 " Continue [{key}]"
 
 #: menus/infopopup/infopopup.tscn
@@ -296,7 +303,7 @@ msgstr ""
 
 #: models/demo_basin/control_system/blower_controller.gd:29
 msgid "Aerator is broken!"
-msgstr ""
+msgstr "Diffusor is broken!"
 
 #: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
 #: models/demo_basin/basin_death.gd:33
@@ -548,7 +555,7 @@ msgstr ""
 
 #: Tasks
 msgid "You repaired the aerator!!!"
-msgstr ""
+msgstr "You repaired the diffusor!!!"
 
 msgid "Checkpoint 1 inspected."
 msgstr ""

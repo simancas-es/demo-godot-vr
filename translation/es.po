@@ -155,40 +155,35 @@ msgstr ""
 
 #: clases/interaction/door_base.gd:56
 msgid "Couldn't unlock..."
-msgstr ""
+msgstr "No se pudo desbloquear..."
 
 #: clases/interaction/door_base.gd:64
 msgid "Couldn't lock..."
-msgstr ""
+msgstr "No se pudo cerrar con llave..."
 
 #: clases/interaction/door_base.gd:132
-#, fuzzy
 msgid "Unlock [{key}]"
-msgstr "Interactuar [{key}]"
+msgstr "Desbloquear [{key}]"
 
 #: clases/interaction/door_base.gd:136
-#, fuzzy
 msgid "Lock [{key}]"
-msgstr "Quitar [{key}]"
+msgstr "Cerrar con llave [{key}]"
 
 #: clases/interaction/door_base.gd:138
-#, fuzzy
 msgid "Open [{key}]"
-msgstr "Leer [{key}]"
+msgstr "Abrir [{key}]"
 
 #: clases/interaction/door_base.gd:142
-#, fuzzy
 msgid "Close [{key}]"
-msgstr "Quitar [{key}]"
+msgstr "Cerrar [{key}]"
 
 #: clases/room360/datapolygonlocation.gd:63
 msgid "Read [{key}]"
 msgstr "Leer [{key}]"
 
 #: clases/room360/roomloader.gd:12
-#, fuzzy
 msgid "Press [{key}] to enter 360º room!"
-msgstr "Pulsa [{key}] para viajar!"
+msgstr "¡Pulsa [{key}] para entrar en la sala 360º!"
 
 #: globals/enums.gd:88
 msgid "Interact [{key}]"
@@ -217,7 +212,7 @@ msgstr ""
 #: globals/root.tscn
 msgid ""
 "WASD - Bewegung/Movement\n"
-"Leertaste / Space   - Springen/Jump\n"
+"Leertaste / Space - Springen/Jump\n"
 "Umschalt / Shift - Rennen/Run\n"
 "E - Interaction, LMB\n"
 "RT - Inventarzyklen, I-Inventar\n"
@@ -225,6 +220,14 @@ msgid ""
 "Esc - Menu, H - Reset Position\n"
 "V-Aufgaben / Tasks on/off"
 msgstr ""
+"WASD - Movimiento\n"
+"Espacio - Saltar\n"
+"Mayus. - Correr\n"
+"E - Interactuar, LMB\n"
+"RT - Ciclar items, I-Inventario\n"
+"Rueda del ratón - Zoom\n"
+"Esc - Menu, H - Reset Position\n"
+"V - Tareas on/off"
 
 #: globals/topics.gd:27
 msgid "Wastewater"
@@ -247,8 +250,7 @@ msgid ""
 "You are playing a tech demo for a 3D World / 360º Virtual tour tool\n"
 " Continue [{key}]"
 msgstr ""
-"Estás jugando a una demo de un mundo 3D / tour virtual de 360º como "
-"herramienta\n"
+"Estás jugando a una demo de una herramienta de aprendizaje en mundo 3D\n"
 " Continuar [{key}]"
 
 #: menus/infopopup/infopopup.tscn
@@ -294,11 +296,11 @@ msgstr "Ventana sin bordes"
 
 #: models/demo_basin/control_system/blower_controller.gd:24
 msgid "Not enough water to activate the blower!"
-msgstr ""
+msgstr "¡No hay suficiente agua para activar el soplador!"
 
 #: models/demo_basin/control_system/blower_controller.gd:29
 msgid "Aerator is broken!"
-msgstr ""
+msgstr "¡El difusor está roto!"
 
 #: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
 #: models/demo_basin/basin_death.gd:33
@@ -308,35 +310,35 @@ msgstr "Te ahogaste! No saltes a un tanque lleno..."
 #: models/labels/flow_simulation_throughput_label.gd:33
 #: models/labels/flow_simulation_throughput_label.gd:35
 msgid "Current Throughput: "
-msgstr ""
+msgstr "Caudal actual: "
 
 #: models/labels/flow_simulation_throughput_label.tscn
 msgid "PUMP_AAAAAAAAAAA"
-msgstr ""
+msgstr "BOMBA_AAAAAAAAAAA"
 
 #: models/labels/flow_simulation_throughput_label.tscn
 msgid "Current Throughput: 0000 L/s"
-msgstr ""
+msgstr "Caudal actual: 0000 L/s"
 
 #: models/labels/flow_simulation_volume_label.gd:33
 msgid "Current Volume (m3): "
-msgstr ""
+msgstr "Volumen actual (m3): "
 
 #: models/labels/flow_simulation_volume_label.gd:36
 msgid "Current Fill Level (%): "
-msgstr ""
+msgstr "Nivel de llenado actual (%): "
 
 #: models/labels/flow_simulation_volume_label.tscn
 msgid "BASIN_AAAAAAAAAAA"
-msgstr ""
+msgstr "TANQUE_AAAAAAAAAAA"
 
 #: models/labels/flow_simulation_volume_label.tscn
 msgid "Current Volume: 0000 m3"
-msgstr ""
+msgstr "Volumen actual: 0000 m3"
 
 #: models/labels/flow_simulation_volume_label.tscn
 msgid "Current Fill Level (%): xxx%"
-msgstr ""
+msgstr "Nivel de llenado actual (%): xxx%"
 
 #: models/van/van.gd:15
 msgid "Press [{key}] to travel!"
@@ -385,8 +387,10 @@ msgstr ""
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
 msgid ""
 "Current angle: xx.x\n"
-"Target angle: xx.x"
+"Target angle: xx.x\n"
 msgstr ""
+"Ángulo actual: xx.x\n"
+"Ángulo objetivo: xx.x\n"
 
 #: zones/demo_vista/rooms/vista_outside.tscn
 msgid "Vertical SPL"
@@ -398,180 +402,180 @@ msgstr "VISTA"
 
 #: zones/hillersleben/scripts/hl_flow_model/overview.tscn
 msgid "Overview"
-msgstr ""
+msgstr "Vista general"
 
 #: zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn
 msgid "ENTLEEREN MIT 100 m3/s"
-msgstr ""
+msgstr "VACIAR A 100 m3/s"
 
 #: zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_inflow.tscn
 msgid "FÜLLEN MIT 100 m3/s"
-msgstr ""
+msgstr "LLENAR A 100 m3/s"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"
-msgstr ""
+msgstr "Afluencias de entrada"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Sandtrap -> Primary clarifier"
-msgstr ""
+msgstr "Bomba Desarenador -> Clarificador primario"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Sandtrap -> Equalization Basin"
-msgstr ""
+msgstr "Bomba Desarenador -> Tanque de igualación"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Sandtrap -> Thickener I"
-msgstr ""
+msgstr "Bomba Desarenador -> Espesador I"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Primary Clarifier-> Aeration Basin I"
-msgstr ""
+msgstr "Bomba Clarificador primario -> Tanque de aireación I"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Primary Clarifier-> Aeration Basin II"
-msgstr ""
+msgstr "Bomba Clarificador primario -> Tanque de aireación II"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Primary Clarifier -> Primary Sludge PS"
-msgstr ""
+msgstr "Bomba Clarificador primario -> Lodo primario PS"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Primary Sludge PS -> Thickener I"
-msgstr ""
+msgstr "Bomba Lodo primario PS -> Espesador I"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Thickener I ->  TWSW PS"
-msgstr ""
+msgstr "Bomba Espesador I -> TWSW PS"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Thickener III ->  TWSW PS"
-msgstr ""
+msgstr "Bomba Espesador III -> TWSW PS"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Post-thickener I ->  TWSW PS"
-msgstr ""
+msgstr "Bomba Post-espesador I -> TWSW PS"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Floating Sludge PS -> Thickener I"
-msgstr ""
+msgstr "Bomba Lodo flotante PS -> Espesador I"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Activated Sludge RPS1-> Primary Clarifier"
-msgstr ""
+msgstr "Bomba Lodo activado RPS1 -> Clarificador primario"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Activated Sludge RPS2-> Primary Clarifier"
-msgstr ""
+msgstr "Bomba Lodo activado RPS2 -> Clarificador primario"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Activated Sludge RPS3-> Primary Clarifier"
-msgstr ""
+msgstr "Bomba Lodo activado RPS3 -> Clarificador primario"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Activated Sludge RPS4-> Primary Clarifier"
-msgstr ""
+msgstr "Bomba Lodo activado RPS4 -> Clarificador primario"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Activated Sludge ÜSP1-> Thickener I"
-msgstr ""
+msgstr "Bomba Lodo activado ÜSP1 -> Espesador I"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump TWSW PS -> Fat trap"
-msgstr ""
+msgstr "Bomba TWSW PS -> Trampa de grasas"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump TWSW PS -> Equalization basin"
-msgstr ""
+msgstr "Bomba TWSW PS -> Tanque de igualación"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Equalization Basin-> Clarified Water PS"
-msgstr ""
+msgstr "Bomba Tanque de igualación -> Agua clarificada PS"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Equalization Basin -> Thickener II"
-msgstr ""
+msgstr "Bomba Tanque de igualación -> Espesador II"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Clarified Water-> Aeration Basin I"
-msgstr ""
+msgstr "Bomba Agua clarificada -> Tanque de aireación I"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Clarified Water-> Aeration Basin II"
-msgstr ""
+msgstr "Bomba Agua clarificada -> Tanque de aireación II"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Flocculant Tank-> Aeration Basin I"
-msgstr ""
+msgstr "Bomba Tanque de floculante -> Tanque de aireación I"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Flocculant Tank-> Aeration Basin II"
-msgstr ""
+msgstr "Bomba Tanque de floculante -> Tanque de aireación II"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Aeration Basin I -> Secondary Clarifier I"
-msgstr ""
+msgstr "Bomba Tanque de aireación I -> Clarificador secundario I"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Aeration Basin I -> Secondary Clarifier II"
-msgstr ""
+msgstr "Bomba Tanque de aireación I -> Clarificador secundario II"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Aeration Basin II -> Secondary Clarifier I"
-msgstr ""
+msgstr "Bomba Tanque de aireación II -> Clarificador secundario I"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Aeration Basin II -> Secondary Clarifier II"
-msgstr ""
+msgstr "Bomba Tanque de aireación II -> Clarificador secundario II"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Secondary Clarifier I -> Discharge station"
-msgstr ""
+msgstr "Bomba Clarificador secundario I -> Estación de descarga"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Secondary Clarifier I -> RLS PS"
-msgstr ""
+msgstr "Bomba Clarificador secundario I -> RLS PS"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Secondary Clarifier I -> Floating Sludge PW"
-msgstr ""
+msgstr "Bomba Clarificador secundario I -> Lodo flotante PW"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Secondary Clarifier II -> Discharge station"
-msgstr ""
+msgstr "Bomba Clarificador secundario II -> Estación de descarga"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Secondary Clarifier II -> RLS PS"
-msgstr ""
+msgstr "Bomba Clarificador secundario II -> RLS PS"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Secondary Clarifier II -> Floating Sludge PW"
-msgstr ""
+msgstr "Bomba Clarificador secundario II -> Lodo flotante PW"
 
 #: Tasks
 msgid "You repaired the aerator!!!"
-msgstr "Has reparado el aireador!!!"
+msgstr "Has reparado el difusor!!!"
 
 msgid "Checkpoint 1 inspected."
-msgstr ""
+msgstr "Punto de control 1 inspeccionado."
 
 msgid "Checkpoint 2 inspected."
-msgstr ""
+msgstr "Punto de control 2 inspeccionado."
 
 msgid "Checkpoint 3 inspected."
-msgstr ""
+msgstr "Punto de control 3 inspeccionado."
 
 msgid "Checkpoint 4 inspected."
-msgstr ""
+msgstr "Punto de control 4 inspeccionado."
 
 msgid "Checkpoint 5 inspected."
-msgstr ""
+msgstr "Punto de control 5 inspeccionado."
 
 msgid "Checkpoint 6 inspected."
-msgstr ""
+msgstr "Punto de control 6 inspeccionado."
 
 msgid "All security checkpoints inspected. Morning routine complete."
-msgstr ""
+msgstr "Todos los puntos de control de seguridad inspeccionados. Rutina matutina completada."
 
 #~ msgid "JSON Files"
 #~ msgstr "Archivos JSON"
@@ -585,8 +589,8 @@ msgstr ""
 #~ msgid ""
 #~ "Second blower is not working!! There is a problem with the aerator heads"
 #~ msgstr ""
-#~ "El segundo aireador no funciona!! Hay un problema con las cabezas "
+#~ "El segundo difusor no funciona!! Hay un problema con las cabezas "
 #~ "difusoras"
 
 #~ msgid "Can't turn the blower on until you fill the basin"
-#~ msgstr "No puedes encender el aireador hasta que llenes el tanque"
+#~ msgstr "No puedes encender el difusor hasta que llenes el tanque"
