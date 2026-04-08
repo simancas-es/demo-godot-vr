@@ -599,6 +599,72 @@ msgstr "¡A la demostración de puertas!"
 msgid "To the Hochschule!"
 msgstr "¡A la Hochschule!"
 
+msgid "Thickener I"
+msgstr "Espesador I"
+
+msgid "Thickener II"
+msgstr "Espesador II"
+
+msgid "Post-thickener"
+msgstr "Espesador secundario"
+
+msgid "Thickener III"
+msgstr "Espesador III"
+
+msgid "Primary decanter"
+msgstr "Decantador primario"
+
+msgid "Sand and Grease Trap"
+msgstr "Desarenador y desengrasador"
+
+msgid "Equalization basin"
+msgstr "Tanque de igualación"
+
+msgid "Clarified water PS"
+msgstr "Est. bombeo de sobrenadantes"
+
+msgid "TWSW PW"
+msgstr "TWSW PW"
+
+msgid "Aeration basin I"
+msgstr "Tanque de tratamiento secundario I"
+
+msgid "Aeration basin II"
+msgstr "Tanque de tratamiento secundario II"
+
+msgid "Dosing station"
+msgstr "Est. bombeo de floculantes"
+
+msgid "Primary sludge PS"
+msgstr "Est. bombeo de fangos primarios"
+
+#, fuzzy
+msgid "Floating sludge PS"
+msgstr "Est. bombeo de espumas"
+
+#, fuzzy
+msgid "Secondary clarifier II"
+msgstr "Decantador secundario II"
+
+#, fuzzy
+msgid "Secondary clarifier I"
+msgstr "Decantador primario I"
+
+msgid "Discharge point"
+msgstr "Efluente"
+
+msgid "Return sludge pump I"
+msgstr "Bomba de retorno de lodos I"
+
+msgid "Return sludge pump II"
+msgstr "Bomba de retorno de lodos II"
+
+msgid "Return sludge pump III"
+msgstr "Bomba de retorno de lodos III"
+
+msgid "Return sludge pump IV"
+msgstr "Bomba de retorno de lodos IV"
+
 #~ msgid "JSON Files"
 #~ msgstr "Archivos JSON"
 

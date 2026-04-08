@@ -598,6 +598,69 @@ msgstr ""
 msgid "To the Hochschule!"
 msgstr ""
 
+msgid "Thickener I"
+msgstr ""
+
+msgid "Thickener II"
+msgstr ""
+
+msgid "Post-thickener"
+msgstr ""
+
+msgid "Thickener III"
+msgstr ""
+
+msgid "Primary decanter"
+msgstr ""
+
+msgid "Sand and Grease Trap"
+msgstr ""
+
+msgid "Equalization basin"
+msgstr ""
+
+msgid "Clarified water PS"
+msgstr ""
+
+msgid "TWSW PW"
+msgstr ""
+
+msgid "Aeration basin I"
+msgstr ""
+
+msgid "Aeration basin II"
+msgstr ""
+
+msgid "Dosing station"
+msgstr ""
+
+msgid "Primary sludge PS"
+msgstr ""
+
+msgid "Floating sludge PS"
+msgstr ""
+
+msgid "Secondary clarifier II"
+msgstr ""
+
+msgid "Secondary clarifier I"
+msgstr ""
+
+msgid "Discharge point"
+msgstr ""
+
+msgid "Return sludge pump I"
+msgstr ""
+
+msgid "Return sludge pump II"
+msgstr ""
+
+msgid "Return sludge pump III"
+msgstr ""
+
+msgid "Return sludge pump IV"
+msgstr ""
+
 #~ msgid "JSON Files"
 #~ msgstr "JSON Files"
 

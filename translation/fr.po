@@ -597,3 +597,70 @@ msgstr "À la démonstration des portes !"
 
 msgid "To the Hochschule!"
 msgstr "À la Hochschule !"
+msgid "Thickener I"
+msgstr "Épaississeur I"
+
+msgid "Thickener II"
+msgstr "Épaississeur II"
+
+msgid "Post-thickener"
+msgstr "Post-Épaississeur"
+
+#, fuzzy
+msgid "Thickener III"
+msgstr "Épaississeur III"
+
+msgid "Primary decanter"
+msgstr "Décanteur primaire"
+
+msgid "Sand and Grease Trap"
+msgstr "Dégrilleur sable et graisse"
+
+#, fuzzy
+msgid "Equalization basin"
+msgstr "Bassin d'égalisation"
+
+msgid "Clarified water PS"
+msgstr "Eau clarifiée PS"
+
+msgid "TWSW PW"
+msgstr "Eaux troubles PW"
+
+msgid "Aeration basin I"
+msgstr "Bassin d'aération I"
+
+msgid "Aeration basin II"
+msgstr "Bassin d'aération II"
+
+msgid "Dosing station"
+msgstr "Station de dosage"
+
+msgid "Primary sludge PS"
+msgstr "Boue primaire PS"
+
+#, fuzzy
+msgid "Floating sludge PS"
+msgstr "Boue flottante PS"
+
+#, fuzzy
+msgid "Secondary clarifier II"
+msgstr "Clarificateur secondaire II"
+
+#, fuzzy
+msgid "Secondary clarifier I"
+msgstr "Clarificateur secondaire I"
+
+msgid "Discharge point"
+msgstr "Point de rejet"
+
+msgid "Return sludge pump I"
+msgstr "Pompe de retour boues I"
+
+msgid "Return sludge pump II"
+msgstr "Pompe de retour boues II"
+
+msgid "Return sludge pump III"
+msgstr "Pompe de retour boues III"
+
+msgid "Return sludge pump IV"
+msgstr "Pompe de retour boues IV"

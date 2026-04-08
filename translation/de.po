@@ -596,6 +596,73 @@ msgstr "Zu der Türen Demo!"
 
 msgid "To the Hochschule!"
 msgstr "Zu der Hochschule!"
+msgid "Thickener I"
+msgstr "Eindicker I"
+
+msgid "Thickener II"
+msgstr "Eindicker II"
+
+msgid "Post-thickener"
+msgstr "Nach-Eindicker"
+
+#, fuzzy
+msgid "Thickener III"
+msgstr "Eindicker III"
+
+msgid "Primary decanter"
+msgstr "Primärklärer"
+
+msgid "Sand and Grease Trap"
+msgstr "Sand- und Fettsammelbecken"
+
+#, fuzzy
+msgid "Equalization basin"
+msgstr "Ausgleichsbecken"
+
+msgid "Clarified water PS"
+msgstr "Geklärtes Wasser PS"
+
+msgid "TWSW PW"
+msgstr "Trübes Wasser PW"
+
+msgid "Aeration basin I"
+msgstr "Belüftungsbecken I"
+
+msgid "Aeration basin II"
+msgstr "Belüftungsbecken II"
+
+msgid "Dosing station"
+msgstr "Dosierstation"
+
+msgid "Primary sludge PS"
+msgstr "Primärschlamm PS"
+
+#, fuzzy
+msgid "Floating sludge PS"
+msgstr "Schwimmschlamm PS"
+
+#, fuzzy
+msgid "Secondary clarifier II"
+msgstr "Nachklärbecken II"
+
+#, fuzzy
+msgid "Secondary clarifier I"
+msgstr "Nachklärbecken I"
+
+msgid "Discharge point"
+msgstr "Ablasspunkt"
+
+msgid "Return sludge pump I"
+msgstr "Rücklaufschlammpumpe I"
+
+msgid "Return sludge pump II"
+msgstr "Rücklaufschlammpumpe II"
+
+msgid "Return sludge pump III"
+msgstr "Rücklaufschlammpumpe III"
+
+msgid "Return sludge pump IV"
+msgstr "Rücklaufschlammpumpe IV"
 
 #~ msgid "JSON Files"
 #~ msgstr "JSON Dateien"
