@@ -433,13 +433,13 @@ msgstr ""
 #: globals/root.tscn
 msgid ""
 "WASD - Bewegung/Movement\n"
-"Leertaste / Space   - Springen/Jump\n"
+"Leertaste / Space - Springen/Jump\n"
 "Umschalt / Shift - Rennen/Run\n"
 "E - Interaction, LMB\n"
-"RT - Inventarzyklen, I-Inventar\n"
+"RT - Inventarzyklen, I - Inventar\n"
 "Mausrad/Mousewheel - Zoom\n"
 "Esc - Menu, H - Reset Position\n"
-"V-Aufgaben / Tasks on/off"
+"V - Aufgaben / Tasks on/off"
 msgstr ""
 
 #: globals/topics.gd:27
@@ -532,6 +532,10 @@ msgstr ""
 msgid "Current Throughput: 0000 L/s"
 msgstr ""
 
+#: models/labels/flow_simulation_volume_label.gd:11
+msgid "BASIN XXXX"
+msgstr ""
+
 #: models/labels/flow_simulation_volume_label.gd:33
 msgid "Current Volume (m3): "
 msgstr ""
@@ -602,6 +606,31 @@ msgid ""
 "Target angle: xx.x"
 msgstr ""
 
+#: XR/zones_xr/zone_xr_door_demos.tscn
+#: XR/zones_xr/zone_xr_hillersleben.tscn
+msgid "To the Hochschule"
+msgstr ""
+
+#: XR/zones_xr/zone_xr_hochschule.tscn
+msgid "To the demo basin!!"
+msgstr ""
+
+#: XR/zones_xr/zone_xr_hochschule.tscn
+msgid "To Hillersleben!"
+msgstr ""
+
+#: XR/zones_xr/zone_xr_hochschule.tscn
+msgid "To the tools demo!"
+msgstr ""
+
+#: XR/zones_xr/zone_xr_hochschule.tscn
+msgid "To the doors demo!"
+msgstr ""
+
+#: XR/zones_xr/zone_xr_sample_basin.tscn
+msgid "To the Hochschule!"
+msgstr ""
+
 #: zones/demo_vista/rooms/vista_outside.tscn
 msgid "Vertical SPL"
 msgstr ""
@@ -614,7 +643,17 @@ msgstr ""
 msgid "Overview"
 msgstr ""
 
+#: zones/hillersleben/scripts/hl_flow_model/overview.tscn
+msgid "BASIN_XXXX : 300m3 75%"
+msgstr ""
 
+#: zones/hillersleben/scripts/hl_flow_model/overview.tscn
+msgid "XXX -> YYY 0.040 m3s"
+msgstr ""
+
+#: zones/hillersleben/scripts/hl_flow_model_controls/pump_control_placeholder.tscn
+msgid "PumpXXX"
+msgstr ""
 
 #: zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn
 msgid "ENTLEEREN MIT 100 m3/s"
@@ -764,148 +803,88 @@ msgstr ""
 msgid "Pump Secondary Clarifier II -> Floating Sludge PW"
 msgstr ""
 
-#: Tasks
-msgid "You repaired the aerator!!!"
-msgstr ""
-
-msgid "Checkpoint 1 inspected."
-msgstr ""
-
-msgid "Checkpoint 2 inspected."
-msgstr ""
-
-msgid "Checkpoint 3 inspected."
-msgstr ""
-
-msgid "Checkpoint 4 inspected."
-msgstr ""
-
-msgid "Checkpoint 5 inspected."
-msgstr ""
-
-msgid "Checkpoint 6 inspected."
-msgstr ""
-
-msgid "All security checkpoints inspected. Morning routine complete."
-msgstr ""
-
-msgid "To the Hochschule"
-msgstr ""
-
-msgid "To the Hochschule"
-msgstr ""
-
-msgid "To the Hochschule"
-msgstr ""
-
-msgid "To the Hochschule"
-msgstr ""
-
-msgid "To the demo basin!!"
-msgstr ""
-
-msgid "To Hillersleben!"
-msgstr ""
-
-msgid "To the tools demo!"
-msgstr ""
-
-msgid "To the doors demo!"
-msgstr ""
-
-msgid "To the Hochschule!"
-msgstr ""
-
-msgid "To the Hochschule"
-msgstr ""
- msgid "To the Hochschule"
-msgstr ""
-
-msgid "To the Hochschule"
-msgstr ""
-
-msgid "To the Hochschule"
-msgstr ""
-
-msgid "To the Hochschule"
-msgstr ""
-
-msgid "To the demo basin!!"
-msgstr ""
-
-msgid "To Hillersleben!"
-msgstr ""
-
-msgid "To the tools demo!"
-msgstr ""
-
-msgid "To the doors demo!"
-msgstr ""
-
-msgid "To the Hochschule!"
-msgstr ""
-
-msgid "To the Hochschule"
-msgstr ""
-
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Thickener I"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Thickener II"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Post-thickener"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Thickener III"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Primary decanter"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Sand and Grease Trap"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Equalization basin"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Clarified water PS"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "TWSW PW"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Aeration basin I"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Aeration basin II"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Dosing station"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Primary sludge PS"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Floating sludge PS"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Secondary clarifier II"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Secondary clarifier I"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Discharge point"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Return sludge pump I"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Return sludge pump II"
 msgstr ""
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Return sludge pump III"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Return sludge pump IV"
 msgstr ""
 
 msgid "Return sludge pump IV"

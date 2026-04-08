@@ -38,6 +38,7 @@ func set_numbers(throughput_m3s : float) -> void:
 
 
 func update() -> void:
+	if !flow_simulation_main: return
 	# Finds the appropiate container and pulls the information
 	var edge : SimEdge = flow_simulation_main.sim.es.LIST[flow_simulation_edge]
 	var flow : float = edge.throughput

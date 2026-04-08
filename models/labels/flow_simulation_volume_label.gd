@@ -39,6 +39,7 @@ func set_numbers(volume, fill_level) -> void:
 
 func update() -> void:
 	# Finds the appropiate container and pulls the information
+	if !flow_simulation_main: return
 	var cont : SimContainer = flow_simulation_main.sim.cs.LIST[flow_simulation_container]
 	var vol : float = cont.total_volume()
 	set_numbers(vol, 100*vol/(cont.max_volume_m3+0.00001)) #Prevent 0

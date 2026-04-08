@@ -210,16 +210,15 @@ msgstr ""
 "Tenir [{key}]"
 
 #: globals/root.tscn
-#, fuzzy
 msgid ""
 "WASD - Bewegung/Movement\n"
-"Leertaste / Space   - Springen/Jump\n"
+"Leertaste / Space - Springen/Jump\n"
 "Umschalt / Shift - Rennen/Run\n"
 "E - Interaction, LMB\n"
-"RT - Inventarzyklen, I-Inventar\n"
+"RT - Inventarzyklen, I - Inventar\n"
 "Mausrad/Mousewheel - Zoom\n"
 "Esc - Menu, H - Reset Position\n"
-"V-Aufgaben / Tasks on/off"
+"V - Aufgaben / Tasks on/off"
 msgstr ""
 "WASD - Déplacement\n"
 "Espace - Saut\n"
@@ -321,6 +320,10 @@ msgstr "POMPE_AAAAAAAAAAA"
 msgid "Current Throughput: 0000 L/s"
 msgstr "Débit actuel : 0000 L/s"
 
+#: models/labels/flow_simulation_volume_label.gd:11
+msgid "BASIN XXXX"
+msgstr ""
+
 #: models/labels/flow_simulation_volume_label.gd:33
 msgid "Current Volume (m3): "
 msgstr "Volume actuel (m3) : "
@@ -386,13 +389,37 @@ msgstr ""
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
-#, fuzzy
+
 msgid ""
 "Current angle: xx.x\n"
 "Target angle: xx.x"
 msgstr ""
 "Angle actuel : xx.x\n"
 "Angle cible : xx.x\n"
+
+#: XR/zones_xr/zone_xr_door_demos.tscn XR/zones_xr/zone_xr_hillersleben.tscn
+msgid "To the Hochschule"
+msgstr "À la Hochschule"
+
+#: XR/zones_xr/zone_xr_hochschule.tscn
+msgid "To the demo basin!!"
+msgstr "Au bassin de démonstration !!"
+
+#: XR/zones_xr/zone_xr_hochschule.tscn
+msgid "To Hillersleben!"
+msgstr "À Hillersleben !"
+
+#: XR/zones_xr/zone_xr_hochschule.tscn
+msgid "To the tools demo!"
+msgstr "À la démonstration des outils !"
+
+#: XR/zones_xr/zone_xr_hochschule.tscn
+msgid "To the doors demo!"
+msgstr "À la démonstration des portes !"
+
+#: XR/zones_xr/zone_xr_sample_basin.tscn
+msgid "To the Hochschule!"
+msgstr "À la Hochschule !"
 
 #: zones/demo_vista/rooms/vista_outside.tscn
 msgid "Vertical SPL"
@@ -405,6 +432,18 @@ msgstr "VISTA"
 #: zones/hillersleben/scripts/hl_flow_model/overview.tscn
 msgid "Overview"
 msgstr "Vue d'ensemble"
+
+#: zones/hillersleben/scripts/hl_flow_model/overview.tscn
+msgid "BASIN_XXXX : 300m3 75%"
+msgstr ""
+
+#: zones/hillersleben/scripts/hl_flow_model/overview.tscn
+msgid "XXX -> YYY 0.040 m3s"
+msgstr ""
+
+#: zones/hillersleben/scripts/hl_flow_model_controls/pump_control_placeholder.tscn
+msgid "PumpXXX"
+msgstr ""
 
 #: zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn
 msgid "ENTLEEREN MIT 100 m3/s"
@@ -554,113 +593,117 @@ msgstr "Pompe Clarificateur secondaire II -> RLS PS"
 msgid "Pump Secondary Clarifier II -> Floating Sludge PW"
 msgstr "Pompe Clarificateur secondaire II -> Boue flottante PW"
 
-#: Tasks
-msgid "You repaired the aerator!!!"
-msgstr "Vous avez réparé l'aérateur !!!"
-
-msgid "Checkpoint 1 inspected."
-msgstr "Point de contrôle 1 inspecté."
-
-msgid "Checkpoint 2 inspected."
-msgstr "Point de contrôle 2 inspecté."
-
-msgid "Checkpoint 3 inspected."
-msgstr "Point de contrôle 3 inspecté."
-
-msgid "Checkpoint 4 inspected."
-msgstr "Point de contrôle 4 inspecté."
-
-msgid "Checkpoint 5 inspected."
-msgstr "Point de contrôle 5 inspecté."
-
-msgid "Checkpoint 6 inspected."
-msgstr "Point de contrôle 6 inspecté."
-
-msgid "All security checkpoints inspected. Morning routine complete."
-msgstr ""
-"Tous les points de contrôle de sécurité inspectés. Routine matinale terminée."
-
-msgid "To the Hochschule"
-msgstr "À la Hochschule"
-
-msgid "To the demo basin!!"
-msgstr "Au bassin de démonstration !!"
-
-msgid "To Hillersleben!"
-msgstr "À Hillersleben !"
-
-msgid "To the tools demo!"
-msgstr "À la démonstration des outils !"
-
-msgid "To the doors demo!"
-msgstr "À la démonstration des portes !"
-
-msgid "To the Hochschule!"
-msgstr "À la Hochschule !"
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Thickener I"
 msgstr "Épaississeur I"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Thickener II"
 msgstr "Épaississeur II"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Post-thickener"
 msgstr "Post-Épaississeur"
 
-#, fuzzy
+#: zones/hillersleben/zonehillersleben.tscn
+
 msgid "Thickener III"
 msgstr "Épaississeur III"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Primary decanter"
 msgstr "Décanteur primaire"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Sand and Grease Trap"
 msgstr "Dégrilleur sable et graisse"
 
-#, fuzzy
+#: zones/hillersleben/zonehillersleben.tscn
+
 msgid "Equalization basin"
 msgstr "Bassin d'égalisation"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Clarified water PS"
 msgstr "Eau clarifiée PS"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "TWSW PW"
 msgstr "Eaux troubles PW"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Aeration basin I"
 msgstr "Bassin d'aération I"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Aeration basin II"
 msgstr "Bassin d'aération II"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Dosing station"
 msgstr "Station de dosage"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Primary sludge PS"
 msgstr "Boue primaire PS"
 
-#, fuzzy
+#: zones/hillersleben/zonehillersleben.tscn
+
 msgid "Floating sludge PS"
 msgstr "Boue flottante PS"
 
-#, fuzzy
+#: zones/hillersleben/zonehillersleben.tscn
+
 msgid "Secondary clarifier II"
 msgstr "Clarificateur secondaire II"
 
-#, fuzzy
+#: zones/hillersleben/zonehillersleben.tscn
+
 msgid "Secondary clarifier I"
 msgstr "Clarificateur secondaire I"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Discharge point"
 msgstr "Point de rejet"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Return sludge pump I"
 msgstr "Pompe de retour boues I"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Return sludge pump II"
 msgstr "Pompe de retour boues II"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Return sludge pump III"
 msgstr "Pompe de retour boues III"
 
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Return sludge pump IV"
 msgstr "Pompe de retour boues IV"
+
+#~ msgid "You repaired the aerator!!!"
+#~ msgstr "Vous avez réparé l'aérateur !!!"
+
+#~ msgid "Checkpoint 1 inspected."
+#~ msgstr "Point de contrôle 1 inspecté."
+
+#~ msgid "Checkpoint 2 inspected."
+#~ msgstr "Point de contrôle 2 inspecté."
+
+#~ msgid "Checkpoint 3 inspected."
+#~ msgstr "Point de contrôle 3 inspecté."
+
+#~ msgid "Checkpoint 4 inspected."
+#~ msgstr "Point de contrôle 4 inspecté."
+
+#~ msgid "Checkpoint 5 inspected."
+#~ msgstr "Point de contrôle 5 inspecté."
+
+#~ msgid "Checkpoint 6 inspected."
+#~ msgstr "Point de contrôle 6 inspecté."
+
+#~ msgid "All security checkpoints inspected. Morning routine complete."
+#~ msgstr ""
+#~ "Tous les points de contrôle de sécurité inspectés. Routine matinale "
+#~ "terminée."
