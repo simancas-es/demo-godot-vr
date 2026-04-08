@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://ciatc0fbcj3tq"]
+[gd_resource type="Resource" format=3 uid="uid://ciatc0fbcj3tq"]
 
 [ext_resource type="PackedScene" uid="uid://dw2qf0uwaki7y" path="res://systems/system-inventory/test/beaker/beaker.gltf" id="1_m7dvb"]
 [ext_resource type="Script" uid="uid://dwue6j575oyyx" path="res://systems/system-inventory/inventory-backend/inventory_object_information.gd" id="2_tuu35"]
