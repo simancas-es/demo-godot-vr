@@ -58,7 +58,7 @@ func _process(delta: float) -> void: #TODO: Disable when not in view
 
 func update_language() -> void:
 	if title: title.text = tr(title_name_en_text)
-
+	update()
 ##Listen to changes in the locale
 func _notification(what):
 	if what == NOTIFICATION_TRANSLATION_CHANGED :

@@ -46,6 +46,7 @@ func update() -> void:
 
 func update_language() -> void:
 	if title: title.text = tr(title_name_en_text)
+	update()
 
 var update_interval : float = 5.0 # seconds
 var time_accum : float = 0.0
