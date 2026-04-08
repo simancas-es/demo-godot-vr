@@ -210,9 +210,10 @@ msgstr ""
 "Sostener [{key}]"
 
 #: globals/root.tscn
+#, fuzzy
 msgid ""
 "WASD - Bewegung/Movement\n"
-"Leertaste / Space - Springen/Jump\n"
+"Leertaste / Space   - Springen/Jump\n"
 "Umschalt / Shift - Rennen/Run\n"
 "E - Interaction, LMB\n"
 "RT - Inventarzyklen, I-Inventar\n"
@@ -385,9 +386,10 @@ msgstr ""
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
+#, fuzzy
 msgid ""
 "Current angle: xx.x\n"
-"Target angle: xx.x\n"
+"Target angle: xx.x"
 msgstr ""
 "Ángulo actual: xx.x\n"
 "Ángulo objetivo: xx.x\n"
@@ -575,7 +577,27 @@ msgid "Checkpoint 6 inspected."
 msgstr "Punto de control 6 inspeccionado."
 
 msgid "All security checkpoints inspected. Morning routine complete."
-msgstr "Todos los puntos de control de seguridad inspeccionados. Rutina matutina completada."
+msgstr ""
+"Todos los puntos de control de seguridad inspeccionados. Rutina matutina "
+"completada."
+
+msgid "To the Hochschule"
+msgstr "A la Hochschule"
+
+msgid "To the demo basin!!"
+msgstr "¡Al tanque de demostración!"
+
+msgid "To Hillersleben!"
+msgstr "¡A Hillersleben!"
+
+msgid "To the tools demo!"
+msgstr "¡A la demostración de herramientas!"
+
+msgid "To the doors demo!"
+msgstr "¡A la demostración de puertas!"
+
+msgid "To the Hochschule!"
+msgstr "¡A la Hochschule!"
 
 #~ msgid "JSON Files"
 #~ msgstr "Archivos JSON"
@@ -589,8 +611,7 @@ msgstr "Todos los puntos de control de seguridad inspeccionados. Rutina matutina
 #~ msgid ""
 #~ "Second blower is not working!! There is a problem with the aerator heads"
 #~ msgstr ""
-#~ "El segundo difusor no funciona!! Hay un problema con las cabezas "
-#~ "difusoras"
+#~ "El segundo difusor no funciona!! Hay un problema con las cabezas difusoras"
 
 #~ msgid "Can't turn the blower on until you fill the basin"
 #~ msgstr "No puedes encender el difusor hasta que llenes el tanque"

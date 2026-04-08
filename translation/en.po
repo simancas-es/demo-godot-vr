@@ -214,16 +214,18 @@ msgstr ""
 "Hold [{key}]"
 
 #: globals/root.tscn
+#, fuzzy
 msgid ""
 "WASD - Bewegung/Movement\n"
-"Leertaste / Space - Springen/Jump\n"
+"Leertaste / Space   - Springen/Jump\n"
 "Umschalt / Shift - Rennen/Run\n"
 "E - Interaction, LMB\n"
 "RT - Inventarzyklen, I-Inventar\n"
 "Mausrad/Mousewheel - Zoom\n"
 "Esc - Menu, H - Reset Position\n"
 "V-Aufgaben / Tasks on/off"
-msgstr "WASD - Movement\n"
+msgstr ""
+"WASD - Movement\n"
 "Space - Jump\n"
 "Shift - Run\n"
 "E - Interaction, LMB\n"
@@ -576,6 +578,24 @@ msgid "Checkpoint 6 inspected."
 msgstr ""
 
 msgid "All security checkpoints inspected. Morning routine complete."
+msgstr ""
+
+msgid "To the Hochschule"
+msgstr ""
+
+msgid "To the demo basin!!"
+msgstr ""
+
+msgid "To Hillersleben!"
+msgstr ""
+
+msgid "To the tools demo!"
+msgstr ""
+
+msgid "To the doors demo!"
+msgstr ""
+
+msgid "To the Hochschule!"
 msgstr ""
 
 #~ msgid "JSON Files"

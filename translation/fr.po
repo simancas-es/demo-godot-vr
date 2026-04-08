@@ -210,9 +210,10 @@ msgstr ""
 "Tenir [{key}]"
 
 #: globals/root.tscn
+#, fuzzy
 msgid ""
 "WASD - Bewegung/Movement\n"
-"Leertaste / Space - Springen/Jump\n"
+"Leertaste / Space   - Springen/Jump\n"
 "Umschalt / Shift - Rennen/Run\n"
 "E - Interaction, LMB\n"
 "RT - Inventarzyklen, I-Inventar\n"
@@ -385,9 +386,10 @@ msgstr ""
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
+#, fuzzy
 msgid ""
 "Current angle: xx.x\n"
-"Target angle: xx.x\n"
+"Target angle: xx.x"
 msgstr ""
 "Angle actuel : xx.x\n"
 "Angle cible : xx.x\n"
@@ -575,4 +577,23 @@ msgid "Checkpoint 6 inspected."
 msgstr "Point de contrôle 6 inspecté."
 
 msgid "All security checkpoints inspected. Morning routine complete."
-msgstr "Tous les points de contrôle de sécurité inspectés. Routine matinale terminée."
+msgstr ""
+"Tous les points de contrôle de sécurité inspectés. Routine matinale terminée."
+
+msgid "To the Hochschule"
+msgstr "À la Hochschule"
+
+msgid "To the demo basin!!"
+msgstr "Au bassin de démonstration !!"
+
+msgid "To Hillersleben!"
+msgstr "À Hillersleben !"
+
+msgid "To the tools demo!"
+msgstr "À la démonstration des outils !"
+
+msgid "To the doors demo!"
+msgstr "À la démonstration des portes !"
+
+msgid "To the Hochschule!"
+msgstr "À la Hochschule !"

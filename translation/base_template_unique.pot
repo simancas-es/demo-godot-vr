@@ -1,0 +1,805 @@
+# LANGUAGE translation for VirtualTour for the following files:
+# res://assets/inventory_objects/demo_aerator/aerator_head.json
+# res://assets/world_objects/hillersleben/doors/bg_elektro_tür.tscn
+# res://assets/world_objects/hillersleben/doors/bg_garage_tür.tscn
+# res://assets/world_objects/hillersleben/doors/bg_personel_tür_1.tscn
+# res://assets/world_objects/hillersleben/doors/bg_personel_tür_2.tscn
+# res://assets/world_objects/hillersleben/doors/fmds_tür.tscn
+# res://assets/world_objects/hillersleben/doors/mg_tür_bhkw_klein.tscn
+# res://assets/world_objects/hillersleben/doors/mg_tür_bhkw_main.tscn
+# res://assets/world_objects/hillersleben/doors/mg_tür_gebläse_1.tscn
+# res://assets/world_objects/hillersleben/doors/mg_tür_gebläse_2.tscn
+# res://assets/world_objects/hillersleben/doors/mg_tür_inne.tscn
+# res://assets/world_objects/hillersleben/doors/mg_tür_maschinen_1_klapp.tscn
+# res://assets/world_objects/hillersleben/doors/mg_tür_maschinen_1_main.tscn
+# res://assets/world_objects/hillersleben/doors/mg_tür_maschinen_2.tscn
+# res://assets/world_objects/hillersleben/doors/trafo_tür.tscn
+# res://assets/zones/demo_gerwisch/desc_gerwisch.json
+# res://assets/zones/demo_hochschule/desc_hochschule.json
+# res://assets/zones/demo_vista/rooms/vista_outside/gebäude.json
+# res://assets/zones/demo_vista/rooms/vista_outside/schutzplanke.json
+# res://assets/zones/demo_vista/rooms/vista_outside/schutzplanke2.json
+# res://assets/zones/demo_vista/rooms/vista_outside/vista_observatory_.json
+# res://assets/zones/demo_vista/rooms/vista_outside/vista_rechtesding.json
+# res://assets/zones/demo_vista/rooms/vista_vlt3/controlroom.json
+# res://assets/zones/demo_vista/rooms/vista_vlt3/palletjack.json
+# res://assets/zones/demo_vista/rooms/vista_vlt3/telescopestructure.json
+# res://assets/zones/demo_vista/desc_vista.json
+# res://assets/zones/hillersleben/desc_hillersleben.json
+# res://clases/fpv/fsm/environment.gd
+# res://clases/fpv/fsm/falcon.gd
+# res://clases/fpv/fsm/fixed.gd
+# res://clases/fpv/fsm/in_inventory.gd
+# res://clases/fpv/fsm/mov_death.gd
+# res://clases/fpv/fsm/mov_ladder.gd
+# res://clases/fpv/fsm/physics.gd
+# res://clases/fpv/fsm/room.gd
+# res://clases/fpv/fsm/still.gd
+# res://clases/fpv/test/test_fpv_ladder.gd
+# res://clases/fpv/test/test_fpv_ladder.tscn
+# res://clases/fpv/area_check.gd
+# res://clases/fpv/fpv.gd
+# res://clases/fpv/fpv.tscn
+# res://clases/fpv/fpv_camera.gd
+# res://clases/fpv/fpv_raycast.gd
+# res://clases/fpv/interaction_logic.gd
+# res://clases/fpv/system_physical_control_grabber.gd
+# res://clases/helpers/task_text/menu/debug_task_list.gd
+# res://clases/helpers/task_text/menu/debug_task_list.tscn
+# res://clases/helpers/task_text/test/debug_task_list_test.gd
+# res://clases/helpers/task_text/test/debug_task_list_test.tscn
+# res://clases/helpers/task_text/test/task_text_test.gd
+# res://clases/helpers/task_text/test/task_text_test.tscn
+# res://clases/helpers/task_text/task_text_manager.gd
+# res://clases/helpers/helpers.gd
+# res://clases/helpers/inventory_object_pickupable_persistence.gd
+# res://clases/helpers/inventory_persistence.gd
+# res://clases/helpers/systemtasks_result_ui_print.gd
+# res://clases/helpers/systemtasks_tasksmanager_persistence.gd
+# res://clases/interaction/door_base.gd
+# res://clases/interaction/interaction.gd
+# res://clases/interaction/interaction_with_inventory_slot.gd
+# res://clases/interaction/inventory_object_pickupable.gd
+# res://clases/interaction/machinetoggleable.gd
+# res://clases/panorama/informationtemplate.json
+# res://clases/panorama/interactivepanel.gd
+# res://clases/panorama/interactivepanel.tscn
+# res://clases/panorama/label3dfixedsize.gd
+# res://clases/panorama/panorama2d.gd
+# res://clases/panorama/panorama2d.tscn
+# res://clases/panorama/panoramainformationdoor.gd
+# res://clases/panorama/panoramainformationpolygon.gd
+# res://clases/panorama/ui_text3d.gd
+# res://clases/room360/datapolygonlocation.gd
+# res://clases/room360/room360.gd
+# res://clases/room360/roomloader.gd
+# res://clases/room360/roomloader.tscn
+# res://clases/zones/basezone.gd
+# res://clases/zones/zoneinformation.gd
+# res://clases/zones/zoneinformationtemplate.json
+# res://clases/controlledobject.gd
+# res://clases/falconview.gd
+# res://clases/player_data.gd
+# res://content/inv_objects/default_model.tscn
+# res://content/tasks/task_database_demo.json
+# res://content/tasks/task_text.json
+# res://fsm/fsm_uid_classref.gd
+# res://fsm/state.gd
+# res://fsm/statemachine.gd
+# res://fsm/statemachine.tscn
+# res://fsm/statemachine_base.gd
+# res://fsm/state_base.gd
+# res://globals/controllers/controller_base.gd
+# res://globals/controllers/controller_kbm1.gd
+# res://globals/controllers/controller_manager.gd
+# res://globals/audiomanager.gd
+# res://globals/cache.gd
+# res://globals/configmanager.gd
+# res://globals/entity_catalog.gd
+# res://globals/enums.gd
+# res://globals/environments.gd
+# res://globals/gamestate.gd
+# res://globals/groups.gd
+# res://globals/inputprioritymanager.gd
+# res://globals/resources.gd
+# res://globals/rooms.gd
+# res://globals/root.gd
+# res://globals/root.tscn
+# res://globals/signalmanager.gd
+# res://globals/signalmanager.tscn
+# res://globals/topics.gd
+# res://globals/utils.gd
+# res://menus/choicebutton/buttonchoice.gd
+# res://menus/choicebutton/buttonchoice.tscn
+# res://menus/components/toppanel.gd
+# res://menus/components/toppanel.tscn
+# res://menus/components/vboxscrollbar.gd
+# res://menus/components/vboxscrollbar.tscn
+# res://menus/dialog/basedialog.gd
+# res://menus/dialog/dialog.gd
+# res://menus/dialog/dialog.tscn
+# res://menus/environmentselector/entryenv.tscn
+# res://menus/environmentselector/entrypanel.gd
+# res://menus/environmentselector/enventry.gd
+# res://menus/environmentselector/environmentselector.gd
+# res://menus/environmentselector/environmentselector.tscn
+# res://menus/environmentselector/loadbutton.gd
+# res://menus/environmentselector/mapconstraint.gd
+# res://menus/environmentselector/mappanel.gd
+# res://menus/environmentselector/scrollenv.gd
+# res://menus/fsm/menustates/statecredits.gd
+# res://menus/fsm/menustates/stateinroom.gd
+# res://menus/fsm/menustates/stateinscene.gd
+# res://menus/fsm/menustates/stateintroscreen.gd
+# res://menus/fsm/menustates/stateinvr.gd
+# res://menus/fsm/menustates/stateloadingscene.gd
+# res://menus/fsm/menustates/statenullmenu.gd
+# res://menus/fsm/menustates/stateselectenv.gd
+# res://menus/fsm/menustates/statesettings.gd
+# res://menus/fsm/menustates/state_menu_inventory.gd
+# res://menus/fsm/menustates/state_menu_settings.gd
+# res://menus/fsm/statemachinemenus.gd
+# res://menus/fsm/statemenus.gd
+# res://menus/icons/scenes/ui_icon_door.tscn
+# res://menus/icons/scenes/ui_icon_info.tscn
+# res://menus/icons/ui_icon.gd
+# res://menus/icons/ui_icon.tscn
+# res://menus/infopopup/buttonclose.gd
+# res://menus/infopopup/infopopup.gd
+# res://menus/infopopup/infopopup.tscn
+# res://menus/infopopup/midtext.gd
+# res://menus/map/mappanel.tscn
+# res://menus/msgtop/msgtop.gd
+# res://menus/msgtop/msgtop.tscn
+# res://menus/settings/menusettings.tscn
+# res://menus/tasks/toggle_menu.gd
+# res://menus/animatemenutransition.gd
+# res://menus/menumaintitle.gd
+# res://menus/menuoptions.gd
+# res://menus/ui_canvaslayer.gd
+# res://models/demo_basin/concrete_basin/aerator_spine/aerator_spine.tscn
+# res://models/demo_basin/concrete_basin/aeration_node.gd
+# res://models/demo_basin/concrete_basin/concrete_basin.tscn
+# res://models/demo_basin/concrete_basin/fillable_tank.gd
+# res://models/demo_basin/concrete_basin/test_fillable_tank.gd
+# res://models/demo_basin/concrete_basin/test_fillable_tank.tscn
+# res://models/demo_basin/control_system/test/test_basin.gd
+# res://models/demo_basin/control_system/test/test_basin.tscn
+# res://models/demo_basin/control_system/basin_controller.gd
+# res://models/demo_basin/control_system/basin_state.gd
+# res://models/demo_basin/control_system/basin_system.gd
+# res://models/demo_basin/control_system/blower_controller.gd
+# res://models/demo_basin/control_system/demo_basin_catalog.gd
+# res://models/demo_basin/control_system/tank_controller.gd
+# res://models/demo_basin/control_system/valve_controller_stateful.gd
+# res://models/demo_basin/control_system/valve_controller_stateless.gd
+# res://models/demo_basin/demo_blower/blower.gd
+# res://models/demo_basin/demo_blower/blower.tscn
+# res://models/demo_basin/task/aerator_quest_controller.gd
+# res://models/demo_basin/task_blackboard/demo_task_blackboard.tscn
+# res://models/demo_basin/basin_death.gd
+# res://models/demo_basin/demo_basin_controller.gd
+# res://models/demo_basin/demo_concrete_basin.tscn
+# res://models/demo_manhole/manholecover.tscn
+# res://models/demo_pipes/basic_pipe_valve.gd
+# res://models/demo_pipes/basic_pipe_valve.tscn
+# res://models/demo_pipes/test_basic_pipe_valve.gd
+# res://models/demo_pipes/test_basic_pipe_valve.tscn
+# res://models/doors/basedoor2m.tscn
+# res://models/drone_falcon/drone_falcon.gd
+# res://models/interaction/simple_button.tscn
+# res://models/labels/flow_simulation_throughput_label.gd
+# res://models/labels/flow_simulation_throughput_label.tscn
+# res://models/labels/flow_simulation_volume_label.gd
+# res://models/labels/flow_simulation_volume_label.tscn
+# res://models/labels/function_map_reference.gd
+# res://models/labels/map.tscn
+# res://models/ladders/double_ladder/double_ladder.tscn
+# res://models/ladders/double_ladder/double_ladder_ed.tscn
+# res://models/ladders/simple_ladder/ladder.gd
+# res://models/ladders/simple_ladder/simple_ladder.tscn
+# res://models/platform_rusty/platform_rusty.tscn
+# res://models/van/van.gd
+# res://models/van/van.tscn
+# res://systems/system-differential-diffusion/system_differential_diffusion_controller.gd
+# res://systems/system-differential-diffusion/system_differential_diffusion_settings.gd
+# res://systems/system-differential-diffusion/system_differential_diffusion_volume.gd
+# res://systems/system-differential-diffusion/test_differential_diffusion.gd
+# res://systems/system-differential-diffusion/test_differential_diffusion.tscn
+# res://systems/system-differential-diffusion/test_grid_update_color.gd
+# res://systems/system-differential-diffusion/test_grid_volume.gd
+# res://systems/system-inventory/inventory-backend/inspect_translations_template.json
+# res://systems/system-inventory/inventory-backend/inventory.gd
+# res://systems/system-inventory/inventory-backend/inventory_object.gd
+# res://systems/system-inventory/inventory-backend/inventory_object_information.gd
+# res://systems/system-inventory/inventory-backend/inventory_resources_autoload.gd
+# res://systems/system-inventory/inventory-backend/inventory_utils.gd
+# res://systems/system-inventory/inventory-ui/fsm/grid.gd
+# res://systems/system-inventory/inventory-ui/fsm/inspect.gd
+# res://systems/system-inventory/inventory-ui/fsm/invisible.gd
+# res://systems/system-inventory/inventory-ui/fsm/only_bar.gd
+# res://systems/system-inventory/inventory-ui/fsm/statemachine_base.gd
+# res://systems/system-inventory/inventory-ui/fsm/state_base.gd
+# res://systems/system-inventory/inventory-ui/inventory_grid/inventorygrid.gd
+# res://systems/system-inventory/inventory-ui/inventory_grid/inventorygrid.tscn
+# res://systems/system-inventory/inventory-ui/item_inspect/inspecttext.gd
+# res://systems/system-inventory/inventory-ui/item_inspect/inventory_panelinspect.gd
+# res://systems/system-inventory/inventory-ui/item_inspect/item_inspect.gd
+# res://systems/system-inventory/inventory-ui/item_inspect/item_inspect.tscn
+# res://systems/system-inventory/inventory-ui/inventory_bottombar.gd
+# res://systems/system-inventory/inventory-ui/inventory_ui.gd
+# res://systems/system-inventory/inventory-ui/inventory_ui.tscn
+# res://systems/system-inventory/inventory-ui/item_slot.gd
+# res://systems/system-inventory/inventory-ui/item_slot.tscn
+# res://systems/system-inventory/inventory-ui/test_inventory_signalmanager.gd
+# res://systems/system-inventory/test/beaker/beaker.json
+# res://systems/system-inventory/test/dungeon_keys/dungeonkeys.json
+# res://systems/system-inventory/test/inventory_test.tscn
+# res://systems/system-inventory/test/test_inventory_backend.gd
+# res://systems/system-inventory/test/test_inventory_backend.tscn
+# res://systems/system-inventory/test/test_inventory_ui.gd
+# res://systems/system-inventory/test/test_inventory_ui.tscn
+# res://systems/system-inventory/inventory_settings.gd
+# res://systems/system-inventory/inventory_uid_classref.gd
+# res://systems/system-inventory/inventory_ui_settings.gd
+# res://systems/system-physics-control/default_markers/test_grab_icon_activated.tscn
+# res://systems/system-physics-control/default_markers/test_grab_icon_available.tscn
+# res://systems/system-physics-control/system_physical_control_grabber.gd
+# res://systems/system-physics-control/system_physical_control_object.gd
+# res://systems/system-physics-control/system_physical_control_settings.gd
+# res://systems/system-physics-control/system_physical_control_utils.gd
+# res://systems/system-physics-control/test_first_person_mov.gd
+# res://systems/system-physics-control/test_physics_grab.gd
+# res://systems/system-physics-control/test_physics_grab.tscn
+# res://systems/system-spatial-concentration/system_spatial_concentration_detector.gd
+# res://systems/system-spatial-concentration/system_spatial_concentration_settings.gd
+# res://systems/system-spatial-concentration/system_spatial_concentration_source.gd
+# res://systems/system-spatial-concentration/test_spatial_concentration.gd
+# res://systems/system-spatial-concentration/test_spatial_concentration.tscn
+# res://systems/system-stateful-persistence/interfaces/system_world_state_registry_interface_position.gd
+# res://systems/system-stateful-persistence/interfaces/system_world_state_registry_interface_simpleattributes.gd
+# res://systems/system-stateful-persistence/examples.gd
+# res://systems/system-stateful-persistence/system_world_state_manager.gd
+# res://systems/system-stateful-persistence/system_world_state_registry.gd
+# res://systems/system-stateful-persistence/system_world_state_registry_interface.gd
+# res://systems/system-stateful-persistence/system_world_state_registry_settings.gd
+# res://systems/system-stateful-persistence/system_world_state_registry_uid_classref.gd
+# res://systems/system-stateful-persistence/test_world_state.gd
+# res://systems/system-stateful-persistence/test_world_state.tscn
+# res://systems/system-stateful-persistence/test_world_state_interfaces.gd
+# res://systems/system-stateful-persistence/test_world_state_manager.gd
+# res://systems/system-stateful-persistence/utils.gd
+# res://systems/system-tasks/base_conditions/cond_existing.gd
+# res://systems/system-tasks/base_conditions/cond_finished_task.gd
+# res://systems/system-tasks/base_conditions/cond_location.gd
+# res://systems/system-tasks/base_conditions/cond_signal.gd
+# res://systems/system-tasks/base_results/result_giveitem.gd
+# res://systems/system-tasks/base_results/result_print.gd
+# res://systems/system-tasks/test/cilinder_get_quest.gd
+# res://systems/system-tasks/test/task_database.json
+# res://systems/system-tasks/test/test_camera.gd
+# res://systems/system-tasks/test/test_signal.gd
+# res://systems/system-tasks/test/test_tasks.gd
+# res://systems/system-tasks/test/test_tasks.tscn
+# res://systems/system-tasks/system_tasks_condition.gd
+# res://systems/system-tasks/system_tasks_locator.gd
+# res://systems/system-tasks/system_tasks_manager.gd
+# res://systems/system-tasks/system_tasks_result.gd
+# res://systems/system-tasks/system_tasks_settings.gd
+# res://systems/system-tasks/system_tasks_starter.gd
+# res://systems/system-tasks/system_tasks_uid_classref.gd
+# res://systems/system-tasks/system_tasks_unit.gd
+# res://XR/scenes/xr_van.gd
+# res://XR/scenes/xr_van.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür2.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_1.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_2.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_inne.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/leiter/xr_leiter_becken.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/xr_logik_bgebaeude_container_u_gdoor.gd
+# res://XR/zones_xr/zone_xr_sample_basin/logic_xr_blowers.gd
+# res://XR/zones_xr/zone_xr_sample_basin/logic_xr_diffuser_interaction.gd
+# res://XR/zones_xr/zone_xr_sample_basin/logic_xr_door.gd
+# res://XR/zones_xr/zone_xr_sample_basin/logic_xr_wheel.gd
+# res://XR/zones_xr/xr_adapter.gd
+# res://XR/zones_xr/xr_adapter.tscn
+# res://XR/zones_xr/zone_xr_door_demos.tscn
+# res://XR/zones_xr/zone_xr_hillersleben.tscn
+# res://XR/zones_xr/zone_xr_hochschule.tscn
+# res://XR/zones_xr/zone_xr_sample_basin.tscn
+# res://zones/demo_vista/rooms/vista_outside.tscn
+# res://zones/demo_vista/rooms/vista_vlt3-inside.tscn
+# res://zones/demo_vista/zoneobservatorio.gd
+# res://zones/demo_vista/zoneobservatorio.tscn
+# res://zones/gerwisch/zonegerwisch.tscn
+# res://zones/hillersleben/scripts/bg-containers/bg_garage_controller.gd
+# res://zones/hillersleben/scripts/bg-containers/bg_garage_state.gd
+# res://zones/hillersleben/scripts/bg-containers/bg_garage_system.gd
+# res://zones/hillersleben/scripts/hl_flow_model/band_control/bandcontrol.gd
+# res://zones/hillersleben/scripts/hl_flow_model/band_control/test.gd
+# res://zones/hillersleben/scripts/hl_flow_model/band_control/test.tscn
+# res://zones/hillersleben/scripts/hl_flow_model/pid/binding.gd
+# res://zones/hillersleben/scripts/hl_flow_model/pid/pid.gd
+# res://zones/hillersleben/scripts/hl_flow_model/pid/test.gd
+# res://zones/hillersleben/scripts/hl_flow_model/pid/test.tscn
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/derived/source_edge.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/container.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/controller.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/edge.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/uidref.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/tests/test.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/tests/test.tscn
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_containers.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_edges.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_simulation.gd
+# res://zones/hillersleben/scripts/hl_flow_model/main.gd
+# res://zones/hillersleben/scripts/hl_flow_model/main.tscn
+# res://zones/hillersleben/scripts/hl_flow_model/overview.gd
+# res://zones/hillersleben/scripts/hl_flow_model/overview.tscn
+# res://zones/hillersleben/scripts/hl_flow_model_controls/logik_pump_control_flowmodel.gd
+# res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_fake_empty.gd
+# res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_fake_flow.gd
+# res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_placeholder.tscn
+# res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_placeholder_mesh.gd
+# res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn
+# res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_inflow.tscn
+# res://zones/hillersleben/scripts/hl_flow_model_controls/xr_pump_control_button.gd
+# res://zones/hillersleben/scripts/task_locators/security_checks/Area3DVisual.tscn
+# res://zones/hillersleben/scripts/task_locators/security_checks/area_3d_visual.gd
+# res://zones/hillersleben/scripts/task_locators/task_sequencer.gd
+# res://zones/hillersleben/scripts/utils/steal_meshinstance.gd
+# res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn
+# res://zones/hillersleben/scripts/water_visuals/logik_wasserrad.gd
+# res://zones/hillersleben/scripts/water_visuals/logik_waterlevel_path.gd
+# res://zones/hillersleben/scripts/water_visuals/WaterLevelFollower.tscn
+# res://zones/hillersleben/scripts/logik_container_movement.gd
+# res://zones/hillersleben/scripts/logik_doors_container.gd
+# res://zones/hillersleben/scripts/mg_klappbare_tür.gd
+# res://zones/hillersleben/zonehillersleben.tscn
+# res://zones/hochschule/zonehochschule.gd
+# res://zones/hochschule/zonehochschule.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: VirtualTour\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: clases/interaction/door_base.gd:56
+msgid "Couldn't unlock..."
+msgstr ""
+
+#: clases/interaction/door_base.gd:64
+msgid "Couldn't lock..."
+msgstr ""
+
+#: clases/interaction/door_base.gd:132
+msgid "Unlock [{key}]"
+msgstr ""
+
+#: clases/interaction/door_base.gd:136
+msgid "Lock [{key}]"
+msgstr ""
+
+#: clases/interaction/door_base.gd:138
+msgid "Open [{key}]"
+msgstr ""
+
+#: clases/interaction/door_base.gd:142
+msgid "Close [{key}]"
+msgstr ""
+
+#: clases/room360/datapolygonlocation.gd:63
+msgid "Read [{key}]"
+msgstr ""
+
+#: clases/room360/roomloader.gd:12
+msgid "Press [{key}] to enter 360º room!"
+msgstr ""
+
+#: globals/enums.gd:88
+msgid "Interact [{key}]"
+msgstr ""
+
+#: globals/enums.gd:89
+msgid "Remove [{key}]"
+msgstr ""
+
+#: globals/enums.gd:90
+msgid ""
+"{name}\n"
+"Take [{key}]"
+msgstr ""
+
+#: globals/enums.gd:91
+msgid ""
+"{name}\n"
+"Hold [{key}]"
+msgstr ""
+
+#: globals/root.tscn
+msgid ""
+"WASD - Bewegung/Movement\n"
+"Leertaste / Space   - Springen/Jump\n"
+"Umschalt / Shift - Rennen/Run\n"
+"E - Interaction, LMB\n"
+"RT - Inventarzyklen, I-Inventar\n"
+"Mausrad/Mousewheel - Zoom\n"
+"Esc - Menu, H - Reset Position\n"
+"V-Aufgaben / Tasks on/off"
+msgstr ""
+
+#: globals/topics.gd:27
+msgid "Wastewater"
+msgstr ""
+
+#: globals/topics.gd:28
+msgid "Drinking Water"
+msgstr ""
+
+#: globals/topics.gd:29
+msgid "Eletrotechnics"
+msgstr ""
+
+#: menus/environmentselector/environmentselector.tscn
+msgid "LOAD"
+msgstr ""
+
+#: menus/fsm/menustates/stateintroscreen.gd:39
+msgid ""
+"You are playing a tech demo for a 3D World / 360º Virtual tour tool\n"
+" Continue [{key}]"
+msgstr ""
+
+#: menus/infopopup/infopopup.tscn
+msgid "END NOTE END NOTE\n"
+msgstr ""
+
+#: menus/msgtop/msgtop.tscn
+msgid "DEFAULT_MSGTOP_TEXT"
+msgstr ""
+
+#: menus/settings/menusettings.tscn
+msgid "Window mode"
+msgstr ""
+
+#: menus/settings/menusettings.tscn
+msgid "Resolution"
+msgstr ""
+
+#: menus/settings/menusettings.tscn
+msgid "Language"
+msgstr ""
+
+#: menus/settings/menusettings.tscn
+msgid "Topic"
+msgstr ""
+
+#: menus/settings/menusettings.tscn
+msgid "Back"
+msgstr ""
+
+#: menus/menuoptions.gd:9
+msgid "Fullscreen"
+msgstr ""
+
+#: menus/menuoptions.gd:9
+msgctxt "Window mode as an option"
+msgid "Window"
+msgstr ""
+
+#: menus/menuoptions.gd:9
+msgid "Borderless Window"
+msgstr ""
+
+#: models/demo_basin/control_system/blower_controller.gd:24
+msgid "Not enough water to activate the blower!"
+msgstr ""
+
+#: models/demo_basin/control_system/blower_controller.gd:29
+msgid "Aerator is broken!"
+msgstr ""
+
+#: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
+#: models/demo_basin/basin_death.gd:33
+msgid "You drowned! Don't just jump into a basin..."
+msgstr ""
+
+#: models/labels/flow_simulation_throughput_label.gd:33
+#: models/labels/flow_simulation_throughput_label.gd:35
+msgid "Current Throughput: "
+msgstr ""
+
+#: models/labels/flow_simulation_throughput_label.tscn
+msgid "PUMP_AAAAAAAAAAA"
+msgstr ""
+
+#: models/labels/flow_simulation_throughput_label.tscn
+msgid "Current Throughput: 0000 L/s"
+msgstr ""
+
+#: models/labels/flow_simulation_volume_label.gd:33
+msgid "Current Volume (m3): "
+msgstr ""
+
+#: models/labels/flow_simulation_volume_label.gd:36
+msgid "Current Fill Level (%): "
+msgstr ""
+
+#: models/labels/flow_simulation_volume_label.tscn
+msgid "BASIN_AAAAAAAAAAA"
+msgstr ""
+
+#: models/labels/flow_simulation_volume_label.tscn
+msgid "Current Volume: 0000 m3"
+msgstr ""
+
+#: models/labels/flow_simulation_volume_label.tscn
+msgid "Current Fill Level (%): xxx%"
+msgstr ""
+
+#: models/van/van.gd:15
+msgid "Press [{key}] to travel!"
+msgstr ""
+
+#: models/van/van.gd:48
+msgid "You clicked on the van"
+msgstr ""
+
+#: systems/system-differential-diffusion/test_grid_update_color.gd:9
+msgid " -1.0"
+msgstr ""
+
+#: systems/system-inventory/inventory-ui/item_slot.tscn
+msgid "999"
+msgstr ""
+
+#: systems/system-physics-control/default_markers/test_grab_icon_activated.tscn
+msgid "x"
+msgstr ""
+
+#: systems/system-physics-control/default_markers/test_grab_icon_available.tscn
+msgid "o"
+msgstr ""
+
+#: systems/system-spatial-concentration/test_spatial_concentration.tscn
+msgid "Concentration: 4.25"
+msgstr ""
+
+#: XR/scenes/xr_van.tscn
+msgid "DESTINATIONDESTINATIONDEST"
+msgstr ""
+
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_1.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_inne.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
+msgid ""
+"Current angle: xx.x\n"
+"Target angle: xx.x"
+msgstr ""
+
+#: zones/demo_vista/rooms/vista_outside.tscn
+msgid "Vertical SPL"
+msgstr ""
+
+#: zones/demo_vista/rooms/vista_outside.tscn
+msgid "VISTA"
+msgstr ""
+
+#: zones/hillersleben/scripts/hl_flow_model/overview.tscn
+msgid "Overview"
+msgstr ""
+
+#: zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn
+msgid "ENTLEEREN MIT 100 m3/s"
+msgstr ""
+
+#: zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_inflow.tscn
+msgid "FÜLLEN MIT 100 m3/s"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Intake Inflows"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Sandtrap -> Primary clarifier"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Sandtrap -> Equalization Basin"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Sandtrap -> Thickener I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Primary Clarifier-> Aeration Basin I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Primary Clarifier-> Aeration Basin II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Primary Clarifier -> Primary Sludge PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Primary Sludge PS -> Thickener I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Thickener I ->  TWSW PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Thickener III ->  TWSW PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Post-thickener I ->  TWSW PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Floating Sludge PS -> Thickener I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Activated Sludge RPS1-> Primary Clarifier"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Activated Sludge RPS2-> Primary Clarifier"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Activated Sludge RPS3-> Primary Clarifier"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Activated Sludge RPS4-> Primary Clarifier"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Activated Sludge ÜSP1-> Thickener I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump TWSW PS -> Fat trap"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump TWSW PS -> Equalization basin"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Equalization Basin-> Clarified Water PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Equalization Basin -> Thickener II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Clarified Water-> Aeration Basin I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Clarified Water-> Aeration Basin II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Flocculant Tank-> Aeration Basin I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Flocculant Tank-> Aeration Basin II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Aeration Basin I -> Secondary Clarifier I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Aeration Basin I -> Secondary Clarifier II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Aeration Basin II -> Secondary Clarifier I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Aeration Basin II -> Secondary Clarifier II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier I -> Discharge station"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier I -> RLS PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier I -> Floating Sludge PW"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier II -> Discharge station"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier II -> RLS PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier II -> Floating Sludge PW"
+msgstr ""
+
+#: Tasks
+msgid "You repaired the aerator!!!"
+msgstr ""
+
+msgid "Checkpoint 1 inspected."
+msgstr ""
+
+msgid "Checkpoint 2 inspected."
+msgstr ""
+
+msgid "Checkpoint 3 inspected."
+msgstr ""
+
+msgid "Checkpoint 4 inspected."
+msgstr ""
+
+msgid "Checkpoint 5 inspected."
+msgstr ""
+
+msgid "Checkpoint 6 inspected."
+msgstr ""
+
+msgid "All security checkpoints inspected. Morning routine complete."
+msgstr ""
+
+msgid "To the Hochschule"
+msgstr ""
+
+msgid "To the demo basin!!"
+msgstr ""
+
+msgid "To Hillersleben!"
+msgstr ""
+
+msgid "To the tools demo!"
+msgstr ""
+
+msgid "To the doors demo!"
+msgstr ""
+
+msgid "To the Hochschule!"
+msgstr ""

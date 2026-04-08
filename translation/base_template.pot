@@ -789,3 +789,32 @@ msgstr ""
 msgid "All security checkpoints inspected. Morning routine complete."
 msgstr ""
 
+msgid "To the Hochschule"
+msgstr ""
+
+msgid "To the Hochschule"
+msgstr ""
+
+msgid "To the Hochschule"
+msgstr ""
+
+msgid "To the Hochschule"
+msgstr ""
+
+msgid "To the demo basin!!"
+msgstr ""
+
+msgid "To Hillersleben!"
+msgstr ""
+
+msgid "To the tools demo!"
+msgstr ""
+
+msgid "To the doors demo!"
+msgstr ""
+
+msgid "To the Hochschule!"
+msgstr ""
+
+msgid "To the Hochschule"
+msgstr ""
