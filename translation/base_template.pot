@@ -289,26 +289,6 @@
 # res://systems/system-tasks/system_tasks_starter.gd
 # res://systems/system-tasks/system_tasks_uid_classref.gd
 # res://systems/system-tasks/system_tasks_unit.gd
-# res://XR/scenes/doors/parts/door_handle_grab.tscn
-# res://XR/scenes/doors/test_scene/xrdoorsdemo.tscn
-# res://XR/scenes/doors/test_scene/xrstart.gd
-# res://XR/scenes/doors/debug_label.gd
-# res://XR/scenes/doors/door_api.gd
-# res://XR/scenes/doors/door_body.gd
-# res://XR/scenes/doors/door_handle_grab.gd
-# res://XR/scenes/doors/door_sounds.gd
-# res://XR/scenes/doors/fixed_hand_left.tscn
-# res://XR/scenes/doors/fixed_hand_right.tscn
-# res://XR/scenes/doors/fixed_hand_sliding_left.tscn
-# res://XR/scenes/doors/fixed_hand_sliding_right.tscn
-# res://XR/scenes/doors/gph_door.gd
-# res://XR/scenes/doors/hinged_door.tscn
-# res://XR/scenes/doors/hinged_door_api.gd
-# res://XR/scenes/doors/hinged_door_body.gd
-# res://XR/scenes/doors/sliding_door.tscn
-# res://XR/scenes/doors/sliding_door_api.gd
-# res://XR/scenes/doors/sliding_door_body.gd
-# res://XR/scenes/doors/xrdoors_uid_classref.gd
 # res://XR/scenes/xr_van.gd
 # res://XR/scenes/xr_van.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
@@ -336,7 +316,6 @@
 # res://XR/zones_xr/zone_xr_hillersleben.tscn
 # res://XR/zones_xr/zone_xr_hochschule.tscn
 # res://XR/zones_xr/zone_xr_sample_basin.tscn
-# res://XR/zones_xr/zone_xr_tech_demos.tscn
 # res://zones/demo_vista/rooms/vista_outside.tscn
 # res://zones/demo_vista/rooms/vista_vlt3-inside.tscn
 # res://zones/demo_vista/zoneobservatorio.gd
@@ -601,45 +580,10 @@ msgstr ""
 msgid "Concentration: 4.25"
 msgstr ""
 
-#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
-msgid "Locked Doors"
+#: XR/scenes/xr_van.tscn
+msgid "DESTINATIONDESTINATIONDEST"
 msgstr ""
 
-#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
-msgid ""
-"Open Out Only\n"
-"Latch on Close"
-msgstr ""
-
-#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
-msgid ""
-"Bidirectional\n"
-"Latch on Close"
-msgstr ""
-
-#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
-msgid ""
-"Self Closing\n"
-"Latch on Close"
-msgstr ""
-
-#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
-msgid "Bidirectional"
-msgstr ""
-
-#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
-msgid "Self Closing"
-msgstr ""
-
-#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
-msgid "Latch on Close"
-msgstr ""
-
-#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
-msgid "No Latch"
-msgstr ""
-
-#: XR/scenes/doors/hinged_door.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
@@ -658,10 +602,6 @@ msgid ""
 "Target angle: xx.x"
 msgstr ""
 
-#: XR/scenes/xr_van.tscn
-msgid "DESTINATIONDESTINATIONDEST"
-msgstr ""
-
 #: zones/demo_vista/rooms/vista_outside.tscn
 msgid "Vertical SPL"
 msgstr ""
@@ -674,17 +614,7 @@ msgstr ""
 msgid "Overview"
 msgstr ""
 
-#: zones/hillersleben/scripts/hl_flow_model/overview.tscn
-msgid "BASIN_XXXX : 300m3 75%"
-msgstr ""
 
-#: zones/hillersleben/scripts/hl_flow_model/overview.tscn
-msgid "XXX -> YYY 0.040 m3s"
-msgstr ""
-
-#: zones/hillersleben/scripts/hl_flow_model_controls/pump_control_placeholder.tscn
-msgid "PumpXXX"
-msgstr ""
 
 #: zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn
 msgid "ENTLEEREN MIT 100 m3/s"
@@ -834,463 +764,28 @@ msgstr ""
 msgid "Pump Secondary Clarifier II -> Floating Sludge PW"
 msgstr ""
 
-msgid "New Code Region"
+#: Tasks
+msgid "You repaired the aerator!!!"
 msgstr ""
 
-msgid "Linear"
+msgid "Checkpoint 1 inspected."
 msgstr ""
 
-msgid "Pick a color from the screen."
+msgid "Checkpoint 2 inspected."
 msgstr ""
 
-msgid "Pick a color from the application window."
+msgid "Checkpoint 3 inspected."
 msgstr ""
 
-msgid "Alpha"
+msgid "Checkpoint 4 inspected."
 msgstr ""
 
-msgid "Intensity"
+msgid "Checkpoint 5 inspected."
 msgstr ""
 
-msgid "Expr"
+msgid "Checkpoint 6 inspected."
 msgstr ""
 
-msgid "Hex"
+msgid "All security checkpoints inspected. Morning routine complete."
 msgstr ""
 
-msgid "Enter a hex code (\"#ff0000\") or named color (\"red\")."
-msgstr ""
-
-msgid "Load Color Palette"
-msgstr ""
-
-msgid "Save Color Palette"
-msgstr ""
-
-msgid "The changes to this palette have not been saved to a file."
-msgstr ""
-
-msgid "Save"
-msgstr ""
-
-msgid "Save the current color palette to reuse later."
-msgstr ""
-
-msgid "Save As"
-msgstr ""
-
-msgid "Save the current color palette as a new to reuse later."
-msgstr ""
-
-msgid "Load"
-msgstr ""
-
-msgid "Load existing color palette."
-msgstr ""
-
-msgid "Clear"
-msgstr ""
-
-msgid "Clear the currently loaded color palettes in the picker."
-msgstr ""
-
-msgid "Pick"
-msgstr ""
-
-msgid "Select a picker shape."
-msgstr ""
-
-msgid "Select a picker mode."
-msgstr ""
-
-msgid "Colorized Sliders"
-msgstr ""
-
-msgid "Hexadecimal Values"
-msgstr ""
-
-msgid "Hex code or named color"
-msgstr ""
-
-msgid "Swatches"
-msgstr ""
-
-msgid "Show all options available."
-msgstr ""
-
-msgid "Recent Colors"
-msgstr ""
-
-msgid "Add current color as a preset."
-msgstr ""
-
-msgid "Screen Recording permission missing!"
-msgstr ""
-
-msgid ""
-"Screen Recording permission is required to pick colors from the other application windows.\n"
-"Click here to request access..."
-msgstr ""
-
-msgid ""
-"Color: %s\n"
-"LMB: Apply color"
-msgstr ""
-
-msgid ""
-"Color: %s\n"
-"LMB: Apply color\n"
-"RMB: Remove preset"
-msgstr ""
-
-msgid "Color: %s"
-msgstr ""
-
-msgid "HSV Rectangle"
-msgstr ""
-
-msgid "OK HS Rectangle"
-msgstr ""
-
-msgid "OK HL Rectangle"
-msgstr ""
-
-msgid "HSV Wheel"
-msgstr ""
-
-msgid "VHS Circle"
-msgstr ""
-
-msgid "OKHSL Circle"
-msgstr ""
-
-msgid "Cancel"
-msgstr ""
-
-msgid "OK"
-msgstr ""
-
-msgid "Alert!"
-msgstr ""
-
-msgid "Please Confirm..."
-msgstr ""
-
-msgid "Network"
-msgstr ""
-
-msgid ""
-"File \"%s\" already exists.\n"
-"Do you want to overwrite it?"
-msgstr ""
-
-msgid "Open"
-msgstr ""
-
-msgid "Select Current Folder"
-msgstr ""
-
-msgid "Select This Folder"
-msgstr ""
-
-msgid "Copy Path"
-msgstr ""
-
-msgid "Delete"
-msgstr ""
-
-msgid "New Folder..."
-msgstr ""
-
-msgid "Refresh"
-msgstr ""
-
-msgid "Open in File Manager"
-msgstr ""
-
-msgid "Show in File Manager"
-msgstr ""
-
-msgid "Show Package Contents"
-msgstr ""
-
-msgid "You don't have permission to access contents of this folder."
-msgstr ""
-
-msgid "All Recognized"
-msgstr ""
-
-msgid "All Files"
-msgstr ""
-
-msgid "Open a File"
-msgstr ""
-
-msgid "Open File(s)"
-msgstr ""
-
-msgid "Open a Directory"
-msgstr ""
-
-msgid "Open a File or Directory"
-msgstr ""
-
-msgid "Save a File"
-msgstr ""
-
-msgid "Go to previous folder."
-msgstr ""
-
-msgid "Go to next folder."
-msgstr ""
-
-msgid "Go to parent folder."
-msgstr ""
-
-msgid "Path:"
-msgstr ""
-
-msgid "Drive"
-msgstr ""
-
-msgid "Refresh files."
-msgstr ""
-
-msgid "(Un)favorite current folder."
-msgstr ""
-
-msgid "Create a new folder."
-msgstr ""
-
-msgid "Favorites:"
-msgstr ""
-
-msgid "Recent:"
-msgstr ""
-
-msgid "Directories & Files:"
-msgstr ""
-
-msgid "Toggle the visibility of hidden files."
-msgstr ""
-
-msgid "View items as a grid of thumbnails."
-msgstr ""
-
-msgid "View items as a list."
-msgstr ""
-
-msgid "Toggle the visibility of the filter for file names."
-msgstr ""
-
-msgid "Sort files"
-msgstr ""
-
-msgid "Sort by Name (Ascending)"
-msgstr ""
-
-msgid "Sort by Name (Descending)"
-msgstr ""
-
-msgid "Sort by Type (Ascending)"
-msgstr ""
-
-msgid "Sort by Type (Descending)"
-msgstr ""
-
-msgid "Sort by Modified Time (Newest First)"
-msgstr ""
-
-msgid "Sort by Modified Time (Oldest First)"
-msgstr ""
-
-msgid "Filter:"
-msgstr ""
-
-msgid "Filename Filter:"
-msgstr ""
-
-msgid "File:"
-msgstr ""
-
-msgid ""
-"Delete the selected file?\n"
-"Depending on your filesystem configuration, the files will either be moved to the system trash or deleted permanently."
-msgstr ""
-
-msgid "Create Folder"
-msgstr ""
-
-msgid "Name:"
-msgstr ""
-
-msgid "Could not create folder."
-msgstr ""
-
-msgid "Invalid extension, or empty filename."
-msgstr ""
-
-msgid "connection to %s (%s) port %d"
-msgstr ""
-
-msgid "connection from %s (%s) port %d"
-msgstr ""
-
-msgid "Zoom Out"
-msgstr ""
-
-msgid "Zoom Reset"
-msgstr ""
-
-msgid "Zoom In"
-msgstr ""
-
-msgid "Toggle the visual grid."
-msgstr ""
-
-msgid "Toggle snapping to the grid."
-msgstr ""
-
-msgid "Change the snapping distance."
-msgstr ""
-
-msgid "Toggle the graph minimap."
-msgstr ""
-
-msgid "Automatically arrange selected nodes."
-msgstr ""
-
-msgid "graph node %s (%s)"
-msgstr ""
-
-msgid "slot %d of %d"
-msgstr ""
-
-msgid "input port, type: %s"
-msgstr ""
-
-msgid "input port, type: %d"
-msgstr ""
-
-msgid "no connections"
-msgstr ""
-
-msgid "output port, type: %s"
-msgstr ""
-
-msgid "output port, type: %d"
-msgstr ""
-
-msgid "currently selecting target port"
-msgstr ""
-
-msgid "has %d slots"
-msgstr ""
-
-msgid "Edit Input Port Connection"
-msgstr ""
-
-msgid "Edit Output Port Connection"
-msgstr ""
-
-msgid "Follow Input Port Connection"
-msgstr ""
-
-msgid "Follow Output Port Connection"
-msgstr ""
-
-msgid ", in slot %d of graph node %s (%s)"
-msgstr ""
-
-msgid "Same as Layout Direction"
-msgstr ""
-
-msgid "Auto-Detect Direction"
-msgstr ""
-
-msgid "Left-to-Right"
-msgstr ""
-
-msgid "Right-to-Left"
-msgstr ""
-
-msgid "Left-to-Right Mark (LRM)"
-msgstr ""
-
-msgid "Right-to-Left Mark (RLM)"
-msgstr ""
-
-msgid "Start of Left-to-Right Embedding (LRE)"
-msgstr ""
-
-msgid "Start of Right-to-Left Embedding (RLE)"
-msgstr ""
-
-msgid "Start of Left-to-Right Override (LRO)"
-msgstr ""
-
-msgid "Start of Right-to-Left Override (RLO)"
-msgstr ""
-
-msgid "Pop Direction Formatting (PDF)"
-msgstr ""
-
-msgid "Arabic Letter Mark (ALM)"
-msgstr ""
-
-msgid "Left-to-Right Isolate (LRI)"
-msgstr ""
-
-msgid "Right-to-Left Isolate (RLI)"
-msgstr ""
-
-msgid "First Strong Isolate (FSI)"
-msgstr ""
-
-msgid "Pop Direction Isolate (PDI)"
-msgstr ""
-
-msgid "Zero-Width Joiner (ZWJ)"
-msgstr ""
-
-msgid "Zero-Width Non-Joiner (ZWNJ)"
-msgstr ""
-
-msgid "Word Joiner (WJ)"
-msgstr ""
-
-msgid "Soft Hyphen (SHY)"
-msgstr ""
-
-msgid "Emoji & Symbols"
-msgstr ""
-
-msgid "Cut"
-msgstr ""
-
-msgid "Copy"
-msgstr ""
-
-msgid "Paste"
-msgstr ""
-
-msgid "Select All"
-msgstr ""
-
-msgid "Undo"
-msgstr ""
-
-msgid "Redo"
-msgstr ""
-
-msgid "Text Writing Direction"
-msgstr ""
-
-msgid "Display Control Characters"
-msgstr ""
-
-msgid "Insert Control Character"
-msgstr ""
-
-msgid "VirtualTour"
-msgstr ""

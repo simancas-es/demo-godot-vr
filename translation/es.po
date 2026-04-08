@@ -153,27 +153,52 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: addons/file_dialog_in_editor/file_dialog_in_editor.gd
-msgid "JSON Files"
-msgstr "Archivos JSON"
+#: clases/interaction/door_base.gd:56
+msgid "Couldn't unlock..."
+msgstr ""
 
-#: clases/inventory/ui/item_slot.tscn
-msgid "999"
-msgstr "999"
+#: clases/interaction/door_base.gd:64
+msgid "Couldn't lock..."
+msgstr ""
 
-#: clases/room360/datapolygonlocation.gd
+#: clases/interaction/door_base.gd:132
+#, fuzzy
+msgid "Unlock [{key}]"
+msgstr "Interactuar [{key}]"
+
+#: clases/interaction/door_base.gd:136
+#, fuzzy
+msgid "Lock [{key}]"
+msgstr "Quitar [{key}]"
+
+#: clases/interaction/door_base.gd:138
+#, fuzzy
+msgid "Open [{key}]"
+msgstr "Leer [{key}]"
+
+#: clases/interaction/door_base.gd:142
+#, fuzzy
+msgid "Close [{key}]"
+msgstr "Quitar [{key}]"
+
+#: clases/room360/datapolygonlocation.gd:63
 msgid "Read [{key}]"
 msgstr "Leer [{key}]"
 
-#: globals/enums.gd
+#: clases/room360/roomloader.gd:12
+#, fuzzy
+msgid "Press [{key}] to enter 360º room!"
+msgstr "Pulsa [{key}] para viajar!"
+
+#: globals/enums.gd:88
 msgid "Interact [{key}]"
 msgstr "Interactuar [{key}]"
 
-#: globals/enums.gd
+#: globals/enums.gd:89
 msgid "Remove [{key}]"
 msgstr "Quitar [{key}]"
 
-#: globals/enums.gd
+#: globals/enums.gd:90
 msgid ""
 "{name}\n"
 "Take [{key}]"
@@ -181,7 +206,7 @@ msgstr ""
 "{name}\n"
 "Coger [{key}]"
 
-#: globals/enums.gd
+#: globals/enums.gd:91
 msgid ""
 "{name}\n"
 "Hold [{key}]"
@@ -189,15 +214,27 @@ msgstr ""
 "{name}\n"
 "Sostener [{key}]"
 
-#: globals/topics.gd
+#: globals/root.tscn
+msgid ""
+"WASD - Bewegung/Movement\n"
+"Leertaste / Space   - Springen/Jump\n"
+"Umschalt / Shift - Rennen/Run\n"
+"E - Interaction, LMB\n"
+"RT - Inventarzyklen, I-Inventar\n"
+"Mausrad/Mousewheel - Zoom\n"
+"Esc - Menu, H - Reset Position\n"
+"V-Aufgaben / Tasks on/off"
+msgstr ""
+
+#: globals/topics.gd:27
 msgid "Wastewater"
 msgstr "Aguas residuales"
 
-#: globals/topics.gd
+#: globals/topics.gd:28
 msgid "Drinking Water"
 msgstr "Agua potable"
 
-#: globals/topics.gd
+#: globals/topics.gd:29
 msgid "Eletrotechnics"
 msgstr "Electrotécnica"
 
@@ -205,7 +242,7 @@ msgstr "Electrotécnica"
 msgid "LOAD"
 msgstr "CARGAR"
 
-#: menus/fsm/menustates/stateintroscreen.gd
+#: menus/fsm/menustates/stateintroscreen.gd:39
 msgid ""
 "You are playing a tech demo for a 3D World / 360º Virtual tour tool\n"
 " Continue [{key}]"
@@ -222,77 +259,334 @@ msgstr ""
 msgid "DEFAULT_MSGTOP_TEXT"
 msgstr ""
 
-#: menus/settings/MenuSettings.tscn
+#: menus/settings/menusettings.tscn
 msgid "Window mode"
 msgstr "Modo de ventana"
 
-#: menus/settings/MenuSettings.tscn
+#: menus/settings/menusettings.tscn
 msgid "Resolution"
 msgstr "Resolución"
 
-#: menus/settings/MenuSettings.tscn
+#: menus/settings/menusettings.tscn
 msgid "Language"
 msgstr "Idioma"
 
-#: menus/settings/MenuSettings.tscn
+#: menus/settings/menusettings.tscn
 msgid "Topic"
 msgstr "Tema"
 
-#: menus/settings/MenuSettings.tscn
+#: menus/settings/menusettings.tscn
 msgid "Back"
 msgstr "Atrás"
 
-#: menus/menuoptions.gd
+#: menus/menuoptions.gd:9
 msgid "Fullscreen"
 msgstr "Pantalla completa"
 
-#: menus/menuoptions.gd
+#: menus/menuoptions.gd:9
 msgctxt "Window mode as an option"
 msgid "Window"
 msgstr "Ventana"
 
-#: menus/menuoptions.gd
+#: menus/menuoptions.gd:9
 msgid "Borderless Window"
 msgstr "Ventana sin bordes"
 
-#: zones/demo_vista/world_controls/quest_concrete_basin_blower_controller.gd
-msgid "The air pressure blows your eardrums out and you fall. You died."
-msgstr "La presión del aire te estalla los oídos y te caes. Has muerto."
+#: models/demo_basin/control_system/blower_controller.gd:24
+msgid "Not enough water to activate the blower!"
+msgstr ""
 
-#: zones/demo_vista/rooms/vista_outside/vista_outside.tscn
-msgid "Vertical SPL"
-msgstr "SPL Vertical"
+#: models/demo_basin/control_system/blower_controller.gd:29
+msgid "Aerator is broken!"
+msgstr ""
 
-#: zones/demo_vista/rooms/vista_outside/vista_outside.tscn
-msgid "VISTA"
-msgstr "VISTA"
-
-#: models/concrete_basin/aeration_repair.gd
-msgid "You repaired the aerator!!!"
-msgstr "Has reparado el aireador!!!"
-
-#: models/concrete_basin/concrete_basin.gd
+#: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
+#: models/demo_basin/basin_death.gd:33
 msgid "You drowned! Don't just jump into a basin..."
 msgstr "Te ahogaste! No saltes a un tanque lleno..."
 
-#: models/concrete_basin/concrete_basin_controller.gd
-msgid "It's not safe to drain the basin while the blowers are on!"
-msgstr "No es seguro drenar el tanque mientras la aireación esta activada!"
-
-#: models/concrete_basin/concrete_basin_controller.gd
-msgid ""
-"Second blower is not working!! There is a problem with the aerator heads"
+#: models/labels/flow_simulation_throughput_label.gd:33
+#: models/labels/flow_simulation_throughput_label.gd:35
+msgid "Current Throughput: "
 msgstr ""
-"El segundo aireador no funciona!! Hay un problema con las cabezas difusoras"
 
-#: models/concrete_basin/concrete_basin_controller.gd
-msgid "Can't turn the blower on until you fill the basin"
-msgstr "No puedes encender el aireador hasta que llenes el tanque"
+#: models/labels/flow_simulation_throughput_label.tscn
+msgid "PUMP_AAAAAAAAAAA"
+msgstr ""
 
-#: models/van/van.gd
+#: models/labels/flow_simulation_throughput_label.tscn
+msgid "Current Throughput: 0000 L/s"
+msgstr ""
+
+#: models/labels/flow_simulation_volume_label.gd:33
+msgid "Current Volume (m3): "
+msgstr ""
+
+#: models/labels/flow_simulation_volume_label.gd:36
+msgid "Current Fill Level (%): "
+msgstr ""
+
+#: models/labels/flow_simulation_volume_label.tscn
+msgid "BASIN_AAAAAAAAAAA"
+msgstr ""
+
+#: models/labels/flow_simulation_volume_label.tscn
+msgid "Current Volume: 0000 m3"
+msgstr ""
+
+#: models/labels/flow_simulation_volume_label.tscn
+msgid "Current Fill Level (%): xxx%"
+msgstr ""
+
+#: models/van/van.gd:15
 msgid "Press [{key}] to travel!"
 msgstr "Pulsa [{key}] para viajar!"
 
-#: models/van/van.gd
+#: models/van/van.gd:48
 msgid "You clicked on the van"
 msgstr "Has pulsado en la furgoneta"
+
+#: systems/system-differential-diffusion/test_grid_update_color.gd:9
+msgid " -1.0"
+msgstr ""
+
+#: systems/system-inventory/inventory-ui/item_slot.tscn
+msgid "999"
+msgstr "999"
+
+#: systems/system-physics-control/default_markers/test_grab_icon_activated.tscn
+msgid "x"
+msgstr ""
+
+#: systems/system-physics-control/default_markers/test_grab_icon_available.tscn
+msgid "o"
+msgstr ""
+
+#: systems/system-spatial-concentration/test_spatial_concentration.tscn
+msgid "Concentration: 4.25"
+msgstr ""
+
+#: XR/scenes/xr_van.tscn
+msgid "DESTINATIONDESTINATIONDEST"
+msgstr ""
+
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_1.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_inne.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
+msgid ""
+"Current angle: xx.x\n"
+"Target angle: xx.x"
+msgstr ""
+
+#: zones/demo_vista/rooms/vista_outside.tscn
+msgid "Vertical SPL"
+msgstr "SPL Vertical"
+
+#: zones/demo_vista/rooms/vista_outside.tscn
+msgid "VISTA"
+msgstr "VISTA"
+
+#: zones/hillersleben/scripts/hl_flow_model/overview.tscn
+msgid "Overview"
+msgstr ""
+
+#: zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn
+msgid "ENTLEEREN MIT 100 m3/s"
+msgstr ""
+
+#: zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_inflow.tscn
+msgid "FÜLLEN MIT 100 m3/s"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Intake Inflows"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Sandtrap -> Primary clarifier"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Sandtrap -> Equalization Basin"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Sandtrap -> Thickener I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Primary Clarifier-> Aeration Basin I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Primary Clarifier-> Aeration Basin II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Primary Clarifier -> Primary Sludge PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Primary Sludge PS -> Thickener I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Thickener I ->  TWSW PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Thickener III ->  TWSW PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Post-thickener I ->  TWSW PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Floating Sludge PS -> Thickener I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Activated Sludge RPS1-> Primary Clarifier"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Activated Sludge RPS2-> Primary Clarifier"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Activated Sludge RPS3-> Primary Clarifier"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Activated Sludge RPS4-> Primary Clarifier"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Activated Sludge ÜSP1-> Thickener I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump TWSW PS -> Fat trap"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump TWSW PS -> Equalization basin"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Equalization Basin-> Clarified Water PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Equalization Basin -> Thickener II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Clarified Water-> Aeration Basin I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Clarified Water-> Aeration Basin II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Flocculant Tank-> Aeration Basin I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Flocculant Tank-> Aeration Basin II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Aeration Basin I -> Secondary Clarifier I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Aeration Basin I -> Secondary Clarifier II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Aeration Basin II -> Secondary Clarifier I"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Aeration Basin II -> Secondary Clarifier II"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier I -> Discharge station"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier I -> RLS PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier I -> Floating Sludge PW"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier II -> Discharge station"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier II -> RLS PS"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Pump Secondary Clarifier II -> Floating Sludge PW"
+msgstr ""
+
+#: Tasks
+msgid "You repaired the aerator!!!"
+msgstr "Has reparado el aireador!!!"
+
+msgid "Checkpoint 1 inspected."
+msgstr ""
+
+msgid "Checkpoint 2 inspected."
+msgstr ""
+
+msgid "Checkpoint 3 inspected."
+msgstr ""
+
+msgid "Checkpoint 4 inspected."
+msgstr ""
+
+msgid "Checkpoint 5 inspected."
+msgstr ""
+
+msgid "Checkpoint 6 inspected."
+msgstr ""
+
+msgid "All security checkpoints inspected. Morning routine complete."
+msgstr ""
+
+#~ msgid "JSON Files"
+#~ msgstr "Archivos JSON"
+
+#~ msgid "The air pressure blows your eardrums out and you fall. You died."
+#~ msgstr "La presión del aire te estalla los oídos y te caes. Has muerto."
+
+#~ msgid "It's not safe to drain the basin while the blowers are on!"
+#~ msgstr "No es seguro drenar el tanque mientras la aireación esta activada!"
+
+#~ msgid ""
+#~ "Second blower is not working!! There is a problem with the aerator heads"
+#~ msgstr ""
+#~ "El segundo aireador no funciona!! Hay un problema con las cabezas "
+#~ "difusoras"
+
+#~ msgid "Can't turn the blower on until you fill the basin"
+#~ msgstr "No puedes encender el aireador hasta que llenes el tanque"
