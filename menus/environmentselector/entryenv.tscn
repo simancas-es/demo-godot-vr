@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d38japcdse6jl"]
 
 [ext_resource type="Script" uid="uid://2f0eglb5rmb3" path="res://menus/environmentselector/enventry.gd" id="1_h731h"]
-[ext_resource type="Texture2D" uid="uid://dbw2o2ynsa5nh" path="res://assets/zones/demo_vista/demo_vista.bmp" id="3_cm4qs"]
+[ext_resource type="Texture2D" uid="uid://s1785lmqjijs" path="res://assets/zones/hillersleben/hillersleben.png" id="2_wlfts"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_15m78"]
 font_size = 20
@@ -45,9 +45,9 @@ clip_contents = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 0
-texture = ExtResource("3_cm4qs")
-expand_mode = 1
-stretch_mode = 2
+texture = ExtResource("2_wlfts")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="Control" type="Control" parent="Control/HBoxContainer" unique_id=1645292634]
 layout_mode = 2
