@@ -126,7 +126,7 @@ func map_preview(from_env : ENVIRONMENTS.ID, to_env : ENVIRONMENTS.ID):
 func hide_nonmap(hidden_ : bool) -> void:
 	entry_list.visible = not hidden_
 	load_button.visible = not hidden_
-	
+	%LoadContainer.visible = not hidden_
 	pass
 	
 ##Makes the map section big and prepares it for the travel animation.
