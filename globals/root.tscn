@@ -19,6 +19,9 @@
 [ext_resource type="Script" uid="uid://bfcilkbewoyoh" path="res://menus/tasks/toggle_menu.gd" id="15_5uipj"]
 [ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="16_bm7q0"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_vuvmw"]
+font_size = 15
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhhay"]
 content_margin_left = 15.0
 content_margin_right = 12.0
@@ -47,9 +50,6 @@ shadow_size = 3
 Button/styles/hover = SubResource("StyleBoxFlat_mhhay")
 Button/styles/normal = SubResource("StyleBoxFlat_psfs6")
 Button/styles/pressed = SubResource("StyleBoxFlat_85c3v")
-
-[sub_resource type="LabelSettings" id="LabelSettings_vuvmw"]
-font_size = 15
 
 [node name="Root" type="Node" unique_id=960715490 node_paths=PackedStringArray("state_machine_menus")]
 script = ExtResource("1_6d14a")
@@ -104,6 +104,36 @@ unique_name_in_owner = true
 process_mode = 3
 script = ExtResource("7_bm7q0")
 
+[node name="Label" type="Label" parent="UI_CanvasLayer" unique_id=1222142220]
+z_index = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -265.0
+offset_top = -197.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "WASD - Bewegung/Movement
+Leertaste / Space - Springen/Jump
+Umschalt / Shift - Rennen/Run
+E - Interaction, LMB
+RT - Inventarzyklen, I - Inventar
+Mausrad/Mousewheel - Zoom
+Esc - Menu, H - Reset Position
+V - Aufgaben / Tasks on/off"
+label_settings = SubResource("LabelSettings_vuvmw")
+
+[node name="Panel" type="Panel" parent="UI_CanvasLayer/Label" unique_id=1880803786]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="DebugTaskShow" parent="UI_CanvasLayer" unique_id=630792426 instance=ExtResource("12_wgoxm")]
 unique_name_in_owner = true
 visible = false
@@ -134,7 +164,6 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
-theme = SubResource("Theme_mfm05")
 
 [node name="EnvironmentSelector" parent="UI_CanvasLayer/PanelContainer" unique_id=1814480720 instance=ExtResource("9_5uipj")]
 unique_name_in_owner = true
@@ -166,35 +195,5 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 0
 alignment = 1
-
-[node name="Label" type="Label" parent="UI_CanvasLayer" unique_id=1222142220]
-z_index = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -265.0
-offset_top = -197.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "WASD - Bewegung/Movement
-Leertaste / Space - Springen/Jump
-Umschalt / Shift - Rennen/Run
-E - Interaction, LMB
-RT - Inventarzyklen, I - Inventar
-Mausrad/Mousewheel - Zoom
-Esc - Menu, H - Reset Position
-V - Aufgaben / Tasks on/off"
-label_settings = SubResource("LabelSettings_vuvmw")
-
-[node name="Panel" type="Panel" parent="UI_CanvasLayer/Label" unique_id=1880803786]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="StartXR" parent="." unique_id=1145080393 instance=ExtResource("16_bm7q0")]
