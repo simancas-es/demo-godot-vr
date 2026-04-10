@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://d38japcdse6jl"]
 
 [ext_resource type="Script" uid="uid://2f0eglb5rmb3" path="res://menus/environmentselector/enventry.gd" id="1_h731h"]
+[ext_resource type="Theme" uid="uid://ckoicjdkt77up" path="res://menus/environmentselector/env_selector_theme.tres" id="1_pbumh"]
 [ext_resource type="Texture2D" uid="uid://s1785lmqjijs" path="res://assets/zones/hillersleben/hillersleben.png" id="2_wlfts"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_15m78"]
 font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j367l"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="EnvEntry" type="TextureButton" unique_id=546873951]
 custom_minimum_size = Vector2(50, 200)
@@ -18,8 +23,17 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 mouse_filter = 1
+theme = ExtResource("1_pbumh")
 ignore_texture_size = true
 script = ExtResource("1_h731h")
+
+[node name="Panel" type="Panel" parent="." unique_id=1806833242]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Control" type="Control" parent="." unique_id=368091479]
 layout_mode = 1
@@ -57,9 +71,11 @@ mouse_filter = 1
 [node name="Description" type="VBoxContainer" parent="Control/HBoxContainer/Control" unique_id=487776958]
 layout_mode = 1
 anchors_preset = -1
+anchor_top = 0.05
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3
+theme_override_constants/separation = 20
 metadata/_edit_use_anchors_ = true
 
 [node name="Title" type="Label" parent="Control/HBoxContainer/Control/Description" unique_id=1277339372]
@@ -79,6 +95,7 @@ custom_minimum_size = Vector2(0, 10)
 layout_mode = 2
 size_flags_vertical = 3
 text = "PLACEHOLDER_ENVENTRY_DESCRIPTION"
+label_settings = SubResource("LabelSettings_j367l")
 autowrap_mode = 2
 text_overrun_behavior = 4
 max_lines_visible = 8

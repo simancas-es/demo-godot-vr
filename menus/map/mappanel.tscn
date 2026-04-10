@@ -5,12 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://cpr35wrvutt0s" path="res://assets/pictures/Deutschlandkarte.jpg" id="3_nduj4"]
 [ext_resource type="Texture2D" uid="uid://b8vo8e3b4guqx" path="res://assets/world_objects/van/van.png" id="4_vrc6j"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_605b5"]
-bg_color = Color(0.434301, 0.569404, 1, 1)
-
-[sub_resource type="Theme" id="Theme_mdxdi"]
-Panel/styles/panel = SubResource("StyleBoxFlat_605b5")
-
 [node name="MapPanel" type="Panel" unique_id=1325609440]
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,7 +13,6 @@ offset_top = -0.0399895
 offset_bottom = -0.039978
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_mdxdi")
 script = ExtResource("1_wg0vv")
 transition_van_s = 4.5
 leftlong = 6.0

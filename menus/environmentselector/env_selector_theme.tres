@@ -1,0 +1,25 @@
+[gd_resource type="Theme" format=3 uid="uid://ckoicjdkt77up"]
+
+[ext_resource type="FontFile" uid="uid://djt44qe81e1vs" path="res://assets/fonts/FrutigerLTPro/FrutigerLTPro/FrutigerLTPro-Black.otf" id="1_uq6uc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rv2qk"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.09019608, 0.54509807, 0.7764706, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uq6uc"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e4e3o"]
+bg_color = Color(1, 1, 1, 1)
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_uq6uc")
+Button/styles/normal = SubResource("StyleBoxFlat_rv2qk")
+Panel/styles/panel = SubResource("StyleBoxFlat_uq6uc")
+ScrollContainer/styles/panel = SubResource("StyleBoxFlat_e4e3o")

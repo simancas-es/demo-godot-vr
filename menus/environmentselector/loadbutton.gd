@@ -1,4 +1,4 @@
-extends TextureButton
+extends Button
 class_name EnvSelectorLoadButton
 
 signal load_current
