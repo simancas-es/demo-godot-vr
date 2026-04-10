@@ -1,18 +1,18 @@
 {
-	"en": {
-			"zone_title":"VISTA Telescope in Paranal",
-			"zone_description":"Zone description...",
-	},
-	"de": {
-			"zone_title":"Teleskop VISTA in Paranal",
-			"zone_description":"Beschreibung der Anlage...",
-	},
-	"es": {
-			"zone_title":"Telescopio VISTA en Paranal",
-			"zone_description":"Descripción de zona...",
-	},
-	"fr": {
-			"zone_title":"ZoneTitleFR",
-			"zone_description":"Zone description...FR",
-	},
+  "en": {
+	"zone_title": "VISTA Telescope in Paranal",
+	"zone_description": "At the VISTA Telescope, there is a test environment for a treatment basin. Your task: replace a defective aerator. Plan the process, use various tools, and bring the system back into operation quickly."
+  },
+  "de": {
+	"zone_title": "VISTA Teleskop in Paranal",
+	"zone_description": "Beim VISTA Telescope befindet sich eine Testumgebung eines Klärbeckens. Deine Aufgabe: einen defekten Belüfter austauschen. Plane den Ablauf, setze verschiedene Werkzeuge ein und bringe die Anlage schnell wieder in Betrieb."
+  },
+  "es": {
+	"zone_title": "Telescopio VISTA en Paranal",
+	"zone_description": "En el telescopio VISTA hay un entorno de prueba de un tanque de tratamiento. Tu tarea: reemplazar un aireador defectuoso. Planifica el proceso, utiliza diferentes herramientas y pon el sistema nuevamente en funcionamiento lo más rápido posible."
+  },
+  "fr": {
+	"zone_title": "Télescope VISTA à Paranal",
+	"zone_description": "Au télescope VISTA, il existe un environnement de test d’un bassin de traitement. Votre tâche : remplacer un aérateur défectueux. Planifiez les étapes, utilisez différents outils et remettez rapidement l’installation en service."
+  }
 }

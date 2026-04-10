@@ -1,18 +1,18 @@
 {
-	"en": {
-			"zone_title":"WWTP Gerwisch",
-			"zone_description":"Zone description...",
-	},
-	"de": {
-			"zone_title":"KA Gerwisch",
-			"zone_description":"Beschreibung der Anlage...",
-	},
-	"es": {
-			"zone_title":"EDAR Gerwisch",
-			"zone_description":"Descripción de zona...",
-	},
-	"fr": {
-			"zone_title":"KA Gerwisch (FR)",
-			"zone_description":"Zone description...FR",
-	},
+  "en": {
+	"zone_title": "WWTP Gerwisch",
+	"zone_description": "The Gerwisch wastewater treatment plant in Magdeburg is a large-scale facility. High volumes of water, heavy utilization, and unexpected disruptions challenge your management as you ensure efficiency, safety, and stability in continuous operation."
+  },
+  "de": {
+	"zone_title": "Kläranlage Gerwisch",
+	"zone_description": "Das Klärwerk Gerwisch in Magdeburg ist eine weitläufige Anlage. Große Wassermengen, hohe Auslastung und unerwartete Störungen fordern dein Management, während du Effizienz, Sicherheit und Stabilität im Dauerbetrieb sicherstellst."
+  },
+  "es": {
+	"zone_title": "EDAR Gerwisch",
+	"zone_description": "La estación depuradora de aguas residuales de Gerwisch en Magdeburgo es grande. Grandes volúmenes de agua, alta carga de trabajo y fallos inesperados ponen a prueba tu gestión mientras garantizas eficiencia, seguridad y estabilidad en operación continua."
+  },
+  "fr": {
+	"zone_title": "STEP Gerwisch",
+	"zone_description": "La station d’épuration des eaux usées de Gerwisch à Magdebourg est de grande envergure. D’importants volumes d’eau, une forte charge et des perturbations imprévues mettent votre gestion à l’épreuve, tandis que vous assurez l’efficacité, la sécurité et la stabilité en fonctionnement continu."
+  }
 }

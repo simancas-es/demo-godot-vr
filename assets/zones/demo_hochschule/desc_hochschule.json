@@ -1,18 +1,18 @@
 {
-	"en": {
-			"zone_title":"University of Applied Sciences MD-ST",
-			"zone_description":"Zone description...",
-	},
-	"de": {
-			"zone_title":"Hochschule Magdeburg-Stendal",
-			"zone_description":"Beschreibung der Anlage...",
-	},
-	"es": {
-			"zone_title":"Universidad Aplicada Magdeburg-Stendal",
-			"zone_description":"Descripción de zona...",
-	},
-	"fr": {
-			"zone_title":"ZoneTitleFR",
-			"zone_description":"Zone description...FR",
-	},
+  "en": {
+	"zone_title": "Magdeburg-Stendal University of Applied Sciences",
+	"zone_description": "Visit the Magdeburg-Stendal University of Applied Sciences and start various excursions from there."
+  },
+  "de": {
+	"zone_title": "Hochschule Magdeburg Stendal",
+	"zone_description": "Besichtige die Hochschule Magdeburg Stendal und starte dort in verschiedene Exkursionen."
+  },
+  "es": {
+	"zone_title": "Universidad de Ciencias Aplicadas de Magdeburgo-Stendal",
+	"zone_description": "Visita la Universidad de Ciencias Aplicadas de Magdeburgo-Stendal y comienza desde allí diversas excursiones."
+  },
+  "fr": {
+	"zone_title": "Université des sciences appliquées de Magdebourg-Stendal",
+	"zone_description": "Visitez l’université des sciences appliquées de Magdebourg-Stendal et lancez différentes excursions depuis cet endroit."
+  }
 }

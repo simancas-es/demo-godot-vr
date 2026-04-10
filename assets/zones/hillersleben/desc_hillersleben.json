@@ -1,18 +1,18 @@
 {
-	"en": {
-			"zone_title":"Wastewater treatment plant Hillersleben",
-			"zone_description":"Zone description...",
-	},
-	"de": {
-			"zone_title":"Kläranlage Hillersleben",
-			"zone_description":"Beschreibung der Anlage...",
-	},
-	"es": {
-			"zone_title":"Planta depuradora Hillersleben",
-			"zone_description":"Descripción de zona...",
-	},
-	"fr": {
-			"zone_title":"Station d'épuration des eaux usées Hillersleben",
-			"zone_description":"Zone description...FR",
-	},
+  "en": {
+	"zone_title": "WWTP Hillersleben",
+	"zone_description": "In the game, you are a wastewater treatment technician at the Hillersleben treatment plant. You control pumps, monitor readings, and keep the mechanical, biological, and chemical treatment processes stable. In addition to routine tasks, you will face disruptions, maintenance work, and optimizations. Weather changes and system failures add extra challenges to ongoing operations."
+  },
+  "de": {
+	"zone_title": "Kläranlage Hillersleben",
+	"zone_description": "Im Spiel bist du Fachkraft für Abwassertechnik in der Kläranlage Hillersleben. Du steuerst Pumpen, überwachst Messwerte und hältst die mechanische, biologische und chemische Reinigung stabil. Neben Routineaufgaben erwarten dich Störungen, Wartungen und Optimierungen. Wetterumschwünge und Ausfälle sorgen für zusätzliche Spannung im laufenden Betrieb."
+  },
+  "es": {
+	"zone_title": "EDAR Hillersleben",
+	"zone_description": "En el juego, eres técnico en tratamiento de aguas residuales en la planta de Hillersleben. Controlas bombas, supervisas mediciones y mantienes estables los procesos de tratamiento mecánico, biológico y químico. Además de las tareas rutinarias, te enfrentarás a fallos, labores de mantenimiento y optimización. Cambios de tiempo y averías añaden desafíos al funcionamiento de la planta."
+  },
+  "fr": {
+	"zone_title": "STEP Hillersleben",
+	"zone_description": "Dans le jeu, vous êtes technicien en traitement des eaux usées à la station d’épuration de Hillersleben. Vous contrôlez les pompes, surveillez les mesures et maintenez la stabilité des traitements mécaniques, biologiques et chimiques. En plus des tâches de routine, vous devrez faire face à des pannes, des opérations de maintenance et des optimisations. Les changements météorologiques et les défaillances apportent des défis supplémentaires au fonctionnement continu."
+  }
 }
