@@ -15,6 +15,7 @@ signal entry_doubleclicked(id : ENVIRONMENTS.ID, coords : Vector2)
 @export var normal_color: Color = Color.WHITE
 @export var hover_color: Color = Color.GRAY
 @export var focus_color: Color = Color.YELLOW
+@onready var background_panel : Panel = $Panel
 
 func _ready() -> void:
 	self.button_up.connect(show_preview)
@@ -49,20 +50,21 @@ func _gui_input(_event: InputEvent) -> void:
 	pass
 
 func _on_mouse_entered():
-	if not has_focus():	modulate = hover_color
+	if not has_focus():	background_panel.modulate = hover_color
 
 func _on_mouse_exited():
 	# If focused, show focus color; otherwise normal
 	if has_focus():
-		modulate = focus_color
+		background_panel.modulate = focus_color
 	else:
-		if not has_focus():	modulate = normal_color
+		if not has_focus():	background_panel.modulate = normal_color
 
 func _on_focus_entered():
-	modulate = focus_color
+	background_panel.modulate = focus_color
 
 func _on_focus_exited():
-	modulate = normal_color
+	background_panel.modulate = normal_color
+
 	
 func populate_entry(id : ENVIRONMENTS.ID, title : String, text : String, image : CompressedTexture2D, coor_latlong : Vector2):
 	self.title_label.text = title
