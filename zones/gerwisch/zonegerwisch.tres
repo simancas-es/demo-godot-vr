@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="ZoneInformation" load_steps=3 format=3 uid="uid://cj82lfmrj1n6f"]
+[gd_resource type="Resource" script_class="ZoneInformation" format=3 uid="uid://cj82lfmrj1n6f"]
 
 [ext_resource type="Script" uid="uid://2xpoktqdyijn" path="res://clases/zones/zoneinformation.gd" id="1_gvhe6"]
-[ext_resource type="Texture2D" uid="uid://m7c4ns0k13ov" path="res://assets/zones/demo_gerwisch/thumbnail.bmp" id="2_yw8lu"]
+[ext_resource type="Texture2D" uid="uid://dpxdexasl4s54" path="res://assets/zones/demo_gerwisch/gerwisch.png" id="2_yw8lu"]
 
 [resource]
 script = ExtResource("1_gvhe6")

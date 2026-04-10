@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="ZoneInformation" load_steps=3 format=3 uid="uid://duo80spfj5tg0"]
+[gd_resource type="Resource" script_class="ZoneInformation" format=3 uid="uid://duo80spfj5tg0"]
 
 [ext_resource type="Script" uid="uid://2xpoktqdyijn" path="res://clases/zones/zoneinformation.gd" id="1_yftl6"]
-[ext_resource type="Texture2D" uid="uid://dhohj2jp21gpt" path="res://assets/zones/hillersleben/hillersleben.bmp" id="2_jovwu"]
+[ext_resource type="Texture2D" uid="uid://s1785lmqjijs" path="res://assets/zones/hillersleben/hillersleben.png" id="2_jovwu"]
 
 [resource]
 script = ExtResource("1_yftl6")

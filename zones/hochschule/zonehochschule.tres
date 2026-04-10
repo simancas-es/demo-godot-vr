@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="ZoneInformation" load_steps=3 format=3 uid="uid://chgoy8gt8a557"]
+[gd_resource type="Resource" script_class="ZoneInformation" format=3 uid="uid://chgoy8gt8a557"]
 
 [ext_resource type="Script" uid="uid://2xpoktqdyijn" path="res://clases/zones/zoneinformation.gd" id="1_40jow"]
-[ext_resource type="Texture2D" uid="uid://cgyl746acp7bs" path="res://assets/zones/demo_hochschule/hsmd.bmp" id="2_hc4sf"]
+[ext_resource type="Texture2D" uid="uid://m5ao8eguyebs" path="res://assets/zones/demo_hochschule/hsmd.png" id="2_40jow"]
 
 [resource]
 script = ExtResource("1_40jow")
 latitude = 52.141
 longitude = 11.816
-thumbnail = ExtResource("2_hc4sf")
+thumbnail = ExtResource("2_40jow")
 filepath_description = "res://assets/zones/demo_hochschule/desc_hochschule.json"
 environment = "uid://cc72bld411pp5"
 room_ids = Array[int]([0])
