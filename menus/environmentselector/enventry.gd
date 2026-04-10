@@ -42,6 +42,8 @@ func show_preview():
 func _gui_input(_event: InputEvent) -> void:
 	if _event is InputEventMouseButton:
 		if _event.pressed:
+			if _event.button_index == MOUSE_BUTTON_WHEEL_UP or _event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+				return
 			# Set focus on click
 			grab_focus()
 	if _event is InputEventMouseButton:
