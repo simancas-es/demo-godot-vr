@@ -1,0 +1,18 @@
+{
+	"en": {
+			"name":"Fence wire",
+			"description":"WIRE DESCRIPTION EN",
+	},
+	"de": {
+			"name":"Zaundraht",
+			"description":"WIRE DESCRIPTION DE",
+	},
+	"es": {
+			"name":"Alambre de valla",
+			"description":"WIRE DESCRIPTION ES",
+	},
+	"fr": {
+			"name":"Objet",
+			"description":"WIRE DESCRIPTION FR",
+	},
+}

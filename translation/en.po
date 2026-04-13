@@ -162,22 +162,18 @@ msgid "Couldn't lock..."
 msgstr ""
 
 #: clases/interaction/door_base.gd:132
-
 msgid "Unlock [{key}]"
 msgstr "Interact [{key}]"
 
 #: clases/interaction/door_base.gd:136
-
 msgid "Lock [{key}]"
 msgstr "Remove [{key}]"
 
 #: clases/interaction/door_base.gd:138
-
 msgid "Open [{key}]"
 msgstr "Read [{key}]"
 
 #: clases/interaction/door_base.gd:142
-
 msgid "Close [{key}]"
 msgstr "Remove [{key}]"
 
@@ -246,7 +242,8 @@ msgid "Eletrotechnics"
 msgstr "Eletrotechnics"
 
 #: menus/environmentselector/environmentselector.tscn
-msgid "LOAD"
+#, fuzzy
+msgid "LOAD\n"
 msgstr "LOAD"
 
 #: menus/fsm/menustates/stateintroscreen.gd:39
@@ -376,10 +373,45 @@ msgstr ""
 msgid "Concentration: 4.25"
 msgstr ""
 
-#: XR/scenes/xr_van.tscn
-msgid "DESTINATIONDESTINATIONDEST"
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid "Locked Doors"
 msgstr ""
 
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid ""
+"Open Out Only\n"
+"Latch on Close"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid ""
+"Bidirectional\n"
+"Latch on Close"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid ""
+"Self Closing\n"
+"Latch on Close"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid "Bidirectional"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid "Self Closing"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid "Latch on Close"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid "No Latch"
+msgstr ""
+
+#: XR/scenes/doors/hinged_door.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
@@ -398,7 +430,133 @@ msgid ""
 "Target angle: xx.x"
 msgstr ""
 
+#: XR/scenes/helpers/axis/axis.tscn
+msgid "Z"
+msgstr ""
+
+#: XR/scenes/helpers/axis/axis.tscn
+msgid "Y\n"
+msgstr ""
+
+#: XR/scenes/helpers/axis/axis.tscn
+msgid "X\t"
+msgstr ""
+
+#: XR/scenes/helpers/axis/axis.tscn
+msgid "XRNode3D"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Body"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Position:"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "0, 0, 0"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Velocity:\n"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Scale:"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Settings"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Panel:"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Left"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Right\n"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Scene:"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Main"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Quit"
+msgstr ""
+
+#: XR/scenes/interactables/instructions_2d.tscn
+msgid ""
+"Interactables Demo\n"
+"\n"
+"\n"
+"This scene demonstrates interactable objects. The user may control the "
+"sliders, levers, joysticks, and wheel by grabbing them and dragging the "
+"interactable around. The push-button is activated when a part of the hand "
+"enters the button area.\n"
+"\n"
+"Some objects override the hand poses while the hands are near, such as the "
+"buttons which force the hand to point with the index finger.\n"
+msgstr ""
+
+#: XR/scenes/laser/keyboard_test_screen.tscn
+msgid ""
+"Press trigger on controller to switch active pointer to that controller, or "
+"interact with the UI."
+msgstr ""
+
+#: XR/scenes/laser/keyboard_test_screen.tscn
+msgid "Line 1:"
+msgstr ""
+
+#: XR/scenes/laser/keyboard_test_screen.tscn
+msgid "Line 2:"
+msgstr ""
+
+#: XR/scenes/laser/keyboard_test_screen.tscn
+msgid "Line 3:"
+msgstr ""
+
+#: XR/scenes/laser/keyboard_test_screen.tscn
+msgid "Clear"
+msgstr ""
+
+#: XR/scenes/places/demo/objects/instructions_2d.tscn
+msgid ""
+"Pickable Demo\n"
+"\n"
+"This scene contains objects that the player can pick up including:\n"
+"\n"
+" - Balls with remote-grab and grab-highlight meshes\n"
+" - Hammers with hand-grab-points and hand-poses\n"
+" - Cubes with hand-bone interactions\n"
+" - Teacups with hand-grab-points and multiple snap-points\n"
+" - Snap-toys that can be snapped into holders\n"
+" - Snap-holders that can be enabled/disabled by pointer"
+msgstr ""
+
+#: XR/scenes/xrplayer/debug_collision_layer.tscn
+msgid ""
+"Name: ...\n"
+"Layer: ...\n"
+"Mask: ..."
+msgstr ""
+
+#: XR/scenes/xr_van.tscn
+msgid "DESTINATIONDESTINATIONDEST"
+msgstr ""
+
 #: XR/zones_xr/zone_xr_door_demos.tscn XR/zones_xr/zone_xr_hillersleben.tscn
+#: XR/zones_xr/zone_xr_tech_demos.tscn
 msgid "To the Hochschule"
 msgstr ""
 
@@ -678,8 +836,44 @@ msgstr ""
 msgid "Return sludge pump IV"
 msgstr ""
 
-#~ msgid "You repaired the aerator!!!"
-#~ msgstr "You repaired the diffusor!!!"
+msgid "VirtualTour"
+msgstr ""
+
+msgid "You repaired the aerator!!!"
+msgstr "You repaired the diffusor!!!"
+
+msgid "Checkpoint 1 inspected."
+msgstr ""
+
+msgid "Checkpoint 2 inspected."
+msgstr ""
+
+msgid "Checkpoint 3 inspected."
+msgstr ""
+
+msgid "Checkpoint 4 inspected."
+msgstr ""
+
+msgid "Checkpoint 5 inspected."
+msgstr ""
+
+msgid "Checkpoint 6 inspected."
+msgstr ""
+
+msgid "All security checkpoints inspected. Morning routine complete."
+msgstr ""
+
+msgid "Fence damage located."
+msgstr ""
+
+msgid "Wire acquired."
+msgstr ""
+
+msgid "Wire repaired."
+msgstr ""
+
+msgid "Fence successfully repaired."
+msgstr ""
 
 #~ msgid "JSON Files"
 #~ msgstr "JSON Files"

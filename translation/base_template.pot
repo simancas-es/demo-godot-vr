@@ -1,4 +1,5 @@
 # LANGUAGE translation for VirtualTour for the following files:
+# 
 # res://assets/inventory_objects/demo_aerator/aerator_head.json
 # res://assets/world_objects/hillersleben/doors/bg_elektro_tür.tscn
 # res://assets/world_objects/hillersleben/doors/bg_garage_tür.tscn
@@ -80,6 +81,7 @@
 # res://clases/controlledobject.gd
 # res://clases/falconview.gd
 # res://clases/player_data.gd
+# res://content/inv_objects/wire/wire.json
 # res://content/inv_objects/default_model.tscn
 # res://content/tasks/task_database_demo.json
 # res://content/tasks/task_text.json
@@ -156,6 +158,8 @@
 # res://menus/animatemenutransition.gd
 # res://menus/menumaintitle.gd
 # res://menus/menuoptions.gd
+# res://menus/testing.gd
+# res://menus/testing.tscn
 # res://menus/ui_canvaslayer.gd
 # res://models/demo_basin/concrete_basin/aerator_spine/aerator_spine.tscn
 # res://models/demo_basin/concrete_basin/aeration_node.gd
@@ -289,6 +293,104 @@
 # res://systems/system-tasks/system_tasks_starter.gd
 # res://systems/system-tasks/system_tasks_uid_classref.gd
 # res://systems/system-tasks/system_tasks_unit.gd
+# res://test_utils/frame_time_tester.gd
+# res://test_utils/frame_time_tester.tscn
+# res://XR/scenes/doors/parts/door_handle_grab.tscn
+# res://XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+# res://XR/scenes/doors/test_scene/xrstart.gd
+# res://XR/scenes/doors/debug_label.gd
+# res://XR/scenes/doors/door_api.gd
+# res://XR/scenes/doors/door_body.gd
+# res://XR/scenes/doors/door_handle_grab.gd
+# res://XR/scenes/doors/door_sounds.gd
+# res://XR/scenes/doors/fixed_hand_left.tscn
+# res://XR/scenes/doors/fixed_hand_right.tscn
+# res://XR/scenes/doors/fixed_hand_sliding_left.tscn
+# res://XR/scenes/doors/fixed_hand_sliding_right.tscn
+# res://XR/scenes/doors/gph_door.gd
+# res://XR/scenes/doors/hinged_door.tscn
+# res://XR/scenes/doors/hinged_door_api.gd
+# res://XR/scenes/doors/hinged_door_body.gd
+# res://XR/scenes/doors/sliding_door.tscn
+# res://XR/scenes/doors/sliding_door_api.gd
+# res://XR/scenes/doors/sliding_door_body.gd
+# res://XR/scenes/doors/xrdoors_uid_classref.gd
+# res://XR/scenes/helpers/axis/axis.gd
+# res://XR/scenes/helpers/axis/axis.tscn
+# res://XR/scenes/helpers/axis/vector.gd
+# res://XR/scenes/helpers/axis/vector.tscn
+# res://XR/scenes/interactables/control_pad/control_pad.gd
+# res://XR/scenes/interactables/control_pad/control_pad.tscn
+# res://XR/scenes/interactables/control_pad/control_pad_display.gd
+# res://XR/scenes/interactables/control_pad/control_pad_display.tscn
+# res://XR/scenes/interactables/control_pad/control_pad_location.gd
+# res://XR/scenes/interactables/control_pad/control_pad_location_left.tscn
+# res://XR/scenes/interactables/control_pad/control_pad_location_right.tscn
+# res://XR/scenes/interactables/objects/interactable_handle_pickup.gd
+# res://XR/scenes/interactables/objects/item_pickable.gd
+# res://XR/scenes/interactables/objects/item_pickable.tscn
+# res://XR/scenes/interactables/objects/joystick_general.gd
+# res://XR/scenes/interactables/objects/joystick_general.tscn
+# res://XR/scenes/interactables/objects/lever_general.gd
+# res://XR/scenes/interactables/objects/lever_general.tscn
+# res://XR/scenes/interactables/objects/push_button.tscn
+# res://XR/scenes/interactables/objects/push_button_general.gd
+# res://XR/scenes/interactables/objects/slider_general.gd
+# res://XR/scenes/interactables/objects/slider_general.tscn
+# res://XR/scenes/interactables/objects/wheel_general.gd
+# res://XR/scenes/interactables/objects/wheel_general.tscn
+# res://XR/scenes/interactables/instructions.tscn
+# res://XR/scenes/interactables/instructions_2d.tscn
+# res://XR/scenes/interactables/snap_interaction.gd
+# res://XR/scenes/interactables/snap_interaction.tscn
+# res://XR/scenes/laser/color_change_cube.gd
+# res://XR/scenes/laser/color_change_cube.tscn
+# res://XR/scenes/laser/display.tscn
+# res://XR/scenes/laser/keyboard_test_screen.gd
+# res://XR/scenes/laser/keyboard_test_screen.tscn
+# res://XR/scenes/places/demo/environment/climb_ladder.tscn
+# res://XR/scenes/places/demo/environment/tower.tscn
+# res://XR/scenes/places/demo/objects/sniper/firearm_bolt.gd
+# res://XR/scenes/places/demo/objects/sniper/firearm_slide.gd
+# res://XR/scenes/places/demo/objects/sniper/firearm_trigger.gd
+# res://XR/scenes/places/demo/objects/sniper/picatinny_rail.tscn
+# res://XR/scenes/places/demo/objects/sniper/picatinny_scope.tscn
+# res://XR/scenes/places/demo/objects/sniper/scope_display.gd
+# res://XR/scenes/places/demo/objects/sniper/scope_display.tscn
+# res://XR/scenes/places/demo/objects/sniper/sniper_rifle.gd
+# res://XR/scenes/places/demo/objects/sniper/sniper_rifle.tscn
+# res://XR/scenes/places/demo/objects/belt_snap_zone.tscn
+# res://XR/scenes/places/demo/objects/grab_ball.tscn
+# res://XR/scenes/places/demo/objects/grab_cube.gd
+# res://XR/scenes/places/demo/objects/grab_cube.tscn
+# res://XR/scenes/places/demo/objects/hammer.tscn
+# res://XR/scenes/places/demo/objects/instructions.tscn
+# res://XR/scenes/places/demo/objects/instructions_2d.tscn
+# res://XR/scenes/places/demo/objects/knife.gd
+# res://XR/scenes/places/demo/objects/knife.tscn
+# res://XR/scenes/places/demo/objects/saucer.tscn
+# res://XR/scenes/places/demo/objects/snap_toy_red.tscn
+# res://XR/scenes/places/demo/objects/snap_toy_yellow.tscn
+# res://XR/scenes/places/demo/objects/snap_tray.gd
+# res://XR/scenes/places/demo/objects/snap_tray.tscn
+# res://XR/scenes/places/demo/objects/table.tscn
+# res://XR/scenes/places/demo/objects/teacup.tscn
+# res://XR/scenes/places/demo/objects/teacup_stand.tscn
+# res://XR/scenes/places/demo/demo.gd
+# res://XR/scenes/places/demo/demo.tscn
+# res://XR/scenes/places/demo/demo_xr_level.tscn
+# res://XR/scenes/places/basic_map.tscn
+# res://XR/scenes/places/demo_scene_base.gd
+# res://XR/scenes/portal/portal.gd
+# res://XR/scenes/portal/portal.tscn
+# res://XR/scenes/xrplayer/bone_poke.gd
+# res://XR/scenes/xrplayer/bone_poke.tscn
+# res://XR/scenes/xrplayer/debug_collision_layer.gd
+# res://XR/scenes/xrplayer/debug_collision_layer.tscn
+# res://XR/scenes/xrplayer/function_pickup_disables_collision.gd
+# res://XR/scenes/xrplayer/function_pickup_disables_collision.tscn
+# res://XR/scenes/xrplayer/xrplayer.gd
+# res://XR/scenes/xrplayer/xrplayer.tscn
 # res://XR/scenes/xr_van.gd
 # res://XR/scenes/xr_van.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
@@ -316,6 +418,10 @@
 # res://XR/zones_xr/zone_xr_hillersleben.tscn
 # res://XR/zones_xr/zone_xr_hochschule.tscn
 # res://XR/zones_xr/zone_xr_sample_basin.tscn
+# res://XR/zones_xr/zone_xr_tech_demos.tscn
+# res://XR/demo_staging.gd
+# res://XR/demo_staging.tscn
+# res://XR/XR_UIDREF.gd
 # res://zones/demo_vista/rooms/vista_outside.tscn
 # res://zones/demo_vista/rooms/vista_vlt3-inside.tscn
 # res://zones/demo_vista/zoneobservatorio.gd
@@ -353,11 +459,15 @@
 # res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn
 # res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_inflow.tscn
 # res://zones/hillersleben/scripts/hl_flow_model_controls/xr_pump_control_button.gd
+# res://zones/hillersleben/scripts/tasks/fence/q_fence_check.gd
+# res://zones/hillersleben/scripts/tasks/security_check/sequencer_consumer.gd
+# res://zones/hillersleben/scripts/tasks/task_sequencer.tscn
 # res://zones/hillersleben/scripts/task_locators/security_checks/Area3DVisual.tscn
 # res://zones/hillersleben/scripts/task_locators/security_checks/area_3d_visual.gd
 # res://zones/hillersleben/scripts/task_locators/task_sequencer.gd
 # res://zones/hillersleben/scripts/utils/steal_meshinstance.gd
 # res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn
+# res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd
 # res://zones/hillersleben/scripts/water_visuals/logik_wasserrad.gd
 # res://zones/hillersleben/scripts/water_visuals/logik_waterlevel_path.gd
 # res://zones/hillersleben/scripts/water_visuals/WaterLevelFollower.tscn
@@ -367,6 +477,7 @@
 # res://zones/hillersleben/zonehillersleben.tscn
 # res://zones/hochschule/zonehochschule.gd
 # res://zones/hochschule/zonehochschule.tscn
+# res://test_cube.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -455,7 +566,7 @@ msgid "Eletrotechnics"
 msgstr ""
 
 #: menus/environmentselector/environmentselector.tscn
-msgid "LOAD"
+msgid "LOAD\n"
 msgstr ""
 
 #: menus/fsm/menustates/stateintroscreen.gd:39
@@ -584,10 +695,45 @@ msgstr ""
 msgid "Concentration: 4.25"
 msgstr ""
 
-#: XR/scenes/xr_van.tscn
-msgid "DESTINATIONDESTINATIONDEST"
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid "Locked Doors"
 msgstr ""
 
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid ""
+"Open Out Only\n"
+"Latch on Close"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid ""
+"Bidirectional\n"
+"Latch on Close"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid ""
+"Self Closing\n"
+"Latch on Close"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid "Bidirectional"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid "Self Closing"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid "Latch on Close"
+msgstr ""
+
+#: XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+msgid "No Latch"
+msgstr ""
+
+#: XR/scenes/doors/hinged_door.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
@@ -606,8 +752,128 @@ msgid ""
 "Target angle: xx.x"
 msgstr ""
 
+#: XR/scenes/helpers/axis/axis.tscn
+msgid "Z"
+msgstr ""
+
+#: XR/scenes/helpers/axis/axis.tscn
+msgid "Y\n"
+msgstr ""
+
+#: XR/scenes/helpers/axis/axis.tscn
+msgid "X\t"
+msgstr ""
+
+#: XR/scenes/helpers/axis/axis.tscn
+msgid "XRNode3D"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Body"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Position:"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "0, 0, 0"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Velocity:\n"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Scale:"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Settings"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Panel:"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Left"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Right\n"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Scene:"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Main"
+msgstr ""
+
+#: XR/scenes/interactables/control_pad/control_pad_display.tscn
+msgid "Quit"
+msgstr ""
+
+#: XR/scenes/interactables/instructions_2d.tscn
+msgid ""
+"Interactables Demo\n"
+"\n"
+"\n"
+"This scene demonstrates interactable objects. The user may control the sliders, levers, joysticks, and wheel by grabbing them and dragging the interactable around. The push-button is activated when a part of the hand enters the button area.\n"
+"\n"
+"Some objects override the hand poses while the hands are near, such as the buttons which force the hand to point with the index finger.\n"
+msgstr ""
+
+#: XR/scenes/laser/keyboard_test_screen.tscn
+msgid "Press trigger on controller to switch active pointer to that controller, or interact with the UI."
+msgstr ""
+
+#: XR/scenes/laser/keyboard_test_screen.tscn
+msgid "Line 1:"
+msgstr ""
+
+#: XR/scenes/laser/keyboard_test_screen.tscn
+msgid "Line 2:"
+msgstr ""
+
+#: XR/scenes/laser/keyboard_test_screen.tscn
+msgid "Line 3:"
+msgstr ""
+
+#: XR/scenes/laser/keyboard_test_screen.tscn
+msgid "Clear"
+msgstr ""
+
+#: XR/scenes/places/demo/objects/instructions_2d.tscn
+msgid ""
+"Pickable Demo\n"
+"\n"
+"This scene contains objects that the player can pick up including:\n"
+"\n"
+" - Balls with remote-grab and grab-highlight meshes\n"
+" - Hammers with hand-grab-points and hand-poses\n"
+" - Cubes with hand-bone interactions\n"
+" - Teacups with hand-grab-points and multiple snap-points\n"
+" - Snap-toys that can be snapped into holders\n"
+" - Snap-holders that can be enabled/disabled by pointer"
+msgstr ""
+
+#: XR/scenes/xrplayer/debug_collision_layer.tscn
+msgid ""
+"Name: ...\n"
+"Layer: ...\n"
+"Mask: ..."
+msgstr ""
+
+#: XR/scenes/xr_van.tscn
+msgid "DESTINATIONDESTINATIONDEST"
+msgstr ""
+
 #: XR/zones_xr/zone_xr_door_demos.tscn
 #: XR/zones_xr/zone_xr_hillersleben.tscn
+#: XR/zones_xr/zone_xr_tech_demos.tscn
 msgid "To the Hochschule"
 msgstr ""
 
@@ -887,6 +1153,137 @@ msgstr ""
 msgid "Return sludge pump IV"
 msgstr ""
 
+msgid "VirtualTour"
+msgstr ""
+
+msgid "You repaired the aerator!!!"
+msgstr ""
+
+msgid "Checkpoint 1 inspected."
+msgstr ""
+
+msgid "Checkpoint 2 inspected."
+msgstr ""
+
+msgid "Checkpoint 3 inspected."
+msgstr ""
+
+msgid "Checkpoint 4 inspected."
+msgstr ""
+
+msgid "Checkpoint 5 inspected."
+msgstr ""
+
+msgid "Checkpoint 6 inspected."
+msgstr ""
+
+msgid "All security checkpoints inspected. Morning routine complete."
+msgstr ""
+
+msgid "Fence damage located."
+msgstr ""
+
+msgid "Wire acquired."
+msgstr ""
+
+msgid "Wire repaired."
+msgstr ""
+
+msgid "Fence successfully repaired."
+msgstr ""
+
+
+msgid "To the Hochschule"
+msgstr ""
+
+msgid "To the Hochschule"
+msgstr ""
+
+msgid "To the Hochschule"
+msgstr ""
+
+msgid "To the Hochschule"
+msgstr ""
+
+msgid "To the demo basin!!"
+msgstr ""
+
+msgid "To Hillersleben!"
+msgstr ""
+
+msgid "To the tools demo!"
+msgstr ""
+
+msgid "To the doors demo!"
+msgstr ""
+
+msgid "To the Hochschule!"
+msgstr ""
+
+msgid "To the Hochschule"
+msgstr ""
+
+msgid "Thickener I"
+msgstr ""
+
+msgid "Thickener II"
+msgstr ""
+
+msgid "Post-thickener"
+msgstr ""
+
+msgid "Thickener III"
+msgstr ""
+
+msgid "Primary decanter"
+msgstr ""
+
+msgid "Sand and Grease Trap"
+msgstr ""
+
+msgid "Equalization basin"
+msgstr ""
+
+msgid "Clarified water PS"
+msgstr ""
+
+msgid "TWSW PW"
+msgstr ""
+
+msgid "Aeration basin I"
+msgstr ""
+
+msgid "Aeration basin II"
+msgstr ""
+
+msgid "Dosing station"
+msgstr ""
+
+msgid "Primary sludge PS"
+msgstr ""
+
+msgid "Floating sludge PS"
+msgstr ""
+
+msgid "Secondary clarifier II"
+msgstr ""
+
+msgid "Secondary clarifier I"
+msgstr ""
+
+msgid "Discharge point"
+msgstr ""
+
+msgid "Return sludge pump I"
+msgstr ""
+
+msgid "Return sludge pump II"
+msgstr ""
+
+msgid "Return sludge pump III"
+msgstr ""
+
 msgid "Return sludge pump IV"
 msgstr ""
+
 

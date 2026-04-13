@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://df31vkqjk6b40"]
+
+[ext_resource type="PackedScene" uid="uid://dw2qf0uwaki7y" path="res://systems/system-inventory/test/beaker/beaker.gltf" id="1_hberk"]
+[ext_resource type="Script" uid="uid://dwue6j575oyyx" path="res://systems/system-inventory/inventory-backend/inventory_object_information.gd" id="2_3duw2"]
+[ext_resource type="Texture2D" uid="uid://bxqwlpjkublpr" path="res://assets/inventory_objects/wire/wire_icon.bmp" id="3_v3k5t"]
+
+[resource]
+script = ExtResource("2_3duw2")
+ID = 3
+DISAPPEARS_AT_0 = true
+texture = ExtResource("3_v3k5t")
+inspect_model = ExtResource("1_hberk")
+inspect_translations_path = "res://system-inventory/test/beaker/beaker.json"
+qty_string = 1
+metadata/_custom_type_script = "uid://dwue6j575oyyx"

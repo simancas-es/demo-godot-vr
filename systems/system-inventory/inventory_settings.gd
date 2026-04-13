@@ -13,7 +13,11 @@ enum ID {
 	INVALID = -1,
 	BEAKER = 0,
 	DUNGEON_KEYS = 1,
-	BUBBLE_DIFFUSER
+	BUBBLE_DIFFUSER,
+	
+	
+	#Hillersleben
+	WIRE,
 	
 }
 
@@ -21,5 +25,6 @@ enum ID {
 const INFORMATION_RESOURCES : Dictionary[ID, String] = {
 	ID.BEAKER : "uid://ciatc0fbcj3tq",
 	ID.DUNGEON_KEYS : "uid://232qnmcsix10",	
-	ID.BUBBLE_DIFFUSER : "res://models/inventory_objects/demo_aerator/aerator_head.tres"
+	ID.BUBBLE_DIFFUSER : "res://models/inventory_objects/demo_aerator/aerator_head.tres",
+	ID.WIRE : "uid://df31vkqjk6b40"
 }

@@ -134,6 +134,73 @@
 		"fr": "Tous les points de contrôle de sécurité ont été inspectés. La ronde de sécurité matinale de la station d’épuration est terminée.",
 			
 	  }
-	}
+	},
+	
+	
+	
+	
+	
+	
+	{
+	  "unit_id": "Q_HL_FINDHOLE",
+	  "title": {
+		"en": "Locate Fence Damage",
+		"de": "Zaunschaden lokalisieren",
+		"es": "Localizar daño en la valla"
+	  },
+	  "text": {
+		"en": "Inspect the perimeter and locate the damaged section of the fence.",
+		"de": "Überprüfe den Anlagenrand und lokalisiere den beschädigten Zaunbereich.",
+		"es": "Inspecciona el perímetro y localiza la sección dañada de la valla."
+	  }
+	},
+	{
+	  "unit_id": "Q_HL_FINDWIRE",
+	  "title": {
+		"en": "Locate Repair Wire",
+		"de": "Reparaturdraht finden",
+		"es": "Encontrar cable de reparación"
+	  },
+	  "text": {
+		"en": "Find a suitable wire to repair the damaged fence section.",
+		"de": "Finde einen geeigneten Draht, um den beschädigten Zaunabschnitt zu reparieren.",
+		"es": "Encuentra un cable adecuado para reparar la sección dañada de la valla."
+	  }
+	},
+	{
+	  "unit_id": "Q_HL_REPAIRWIRE",
+	  "title": {
+		"en": "Prepare Repair Wire",
+		"de": "Reparaturdraht vorbereiten",
+		"es": "Preparar cable de reparación"
+	  },
+	  "text": {
+		"en": "Prepare and handle the wire for installation at the damaged fence section.",
+		"de": "Bereite den Draht für die Installation am beschädigten Zaunabschnitt vor.",
+		"es": "Prepara el cable para su instalación en la sección dañada de la valla."
+	  }
+	},
+	{
+	  "unit_id": "Q_HL_FIXFENCE",
+	  "title": {
+		"en": "Repair Fence",
+		"de": "Zaun reparieren",
+		"es": "Reparar valla"
+	  },
+	  "text": {
+		"en": "Repair the damaged fence section to restore site security.",
+		"de": "Repariere den beschädigten Zaunabschnitt, um die Anlagensicherheit wiederherzustellen.",
+		"es": "Repara la sección dañada de la valla para restablecer la seguridad de la instalación."
+	  }
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	]
 }

@@ -159,6 +159,142 @@
 		  }
 		]
 	  }
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{
+	  "id": "Q_HL_FINDHOLE",
+	  "conditions": {
+		"success": {
+		  "any": [
+			{
+			  "type": "SystemTasksConditionSignal",
+			  "signal_name": "body_entered",
+			  "locator_id": "HL_FENCE"
+			},
+			{
+			  "type": "SystemTasksConditionSignal",
+			  "signal_name": "fence_fixed",
+			  "locator_id": "HL_FENCE"
+			}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "Fence damage located."
+		  }
+		]
+	  }
+	},
+	{
+	  "id": "Q_HL_FINDWIRE",
+	  "conditions": {
+		"success": {
+		  "any": [
+			{
+			  "type": "SystemTasksConditionSignal",
+			  "signal_name": "wire_picked_up",
+			  "locator_id": "HL_FENCE"
+			},
+			{
+			  "type": "SystemTasksConditionSignal",
+			  "signal_name": "fence_fixed",
+			  "locator_id": "HL_FENCE"
+			}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "Wire acquired."
+		  }
+		]
+	  }
+	},
+	{
+	  "id": "Q_HL_REPAIRWIRE",
+	  "conditions": {
+		"success": {
+		  "any": [
+			{
+			  "type": "SystemTasksConditionSignal",
+			  "signal_name": "wire_interacted",
+			  "locator_id": "HL_FENCE"
+			},
+			{
+			  "type": "SystemTasksConditionSignal",
+			  "signal_name": "fence_fixed",
+			  "locator_id": "HL_FENCE"
+			}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "Wire repaired."
+		  }
+		]
+	  }
+	},
+	{
+	  "id": "Q_HL_FIXFENCE",
+	  "conditions": {
+		"success": {
+		  "any": [
+			{
+			  "type": "SystemTasksConditionSignal",
+			  "signal_name": "wire_repaired",
+			  "locator_id": "HL_FENCE"
+			},
+			{
+			"type": "SystemTasksConditionFinishedTask",
+			  "units_id_completed": ["Q_HL_REPAIRWIRE"]}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "Fence successfully repaired."
+		  }
+		]
+	  }
 	}
-	]
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+]
 }
