@@ -14,7 +14,7 @@ signal entry_doubleclicked(id : ENVIRONMENTS.ID, coords : Vector2)
 @export_category("Color")
 @export var normal_color: Color = Color.WHITE
 @export var hover_color: Color = Color.GRAY
-@export var focus_color: Color = Color.YELLOW
+@export var focus_color: Color = Color("#76b82a")
 @onready var background_panel : Panel = $Panel
 
 func _ready() -> void:

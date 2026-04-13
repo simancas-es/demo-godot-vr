@@ -27,9 +27,6 @@ mouse_filter = 1
 theme = ExtResource("1_pbumh")
 ignore_texture_size = true
 script = ExtResource("1_h731h")
-normal_color = null
-hover_color = null
-focus_color = null
 
 [node name="Panel" type="Panel" parent="." unique_id=1806833242]
 layout_mode = 1

@@ -8,7 +8,7 @@
 bg_color = Color(0.5077644, 0.47765684, 0.4345827, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gnwrl"]
-bg_color = Color(0.865372, 0.9229793, 1.00111965e-05, 1)
+bg_color = Color(0.4627451, 0.72156864, 0.16470589, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
