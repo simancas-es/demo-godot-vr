@@ -45,11 +45,11 @@ func _on_wire_interaction(...args) -> void:
 func next_task(task_id : SYSTEMTASKSSETTINGS.UNIT_ID) -> void:
 	match task_id:
 		SYSTEMTASKSSETTINGS.UNIT_ID.Q_HL_FINDHOLE:
-			area_hole.activate()
+			if area_hole: area_hole.activate()
 		SYSTEMTASKSSETTINGS.UNIT_ID.Q_HL_FINDWIRE:
-			wire_pickup.get_node("Area3D").activate()
+			if wire_pickup: wire_pickup.get_node("Area3D").activate()
 		SYSTEMTASKSSETTINGS.UNIT_ID.Q_HL_REPAIRWIRE:
-			wire_use.get_node("Area3D").activate()
+			if wire_use: wire_use.get_node("Area3D").activate()
 	
 	pass
 	
