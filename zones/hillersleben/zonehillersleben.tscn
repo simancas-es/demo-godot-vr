@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://cuwst8kcvigrx" path="res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn" id="10_ybcmd"]
 [ext_resource type="PackedScene" uid="uid://dl3g3hke6ex3m" path="res://assets/zones/hillersleben/models/Referenz/Referenz.gltf" id="15_h3jyd"]
 [ext_resource type="Script" uid="uid://b5sdbpkp587p8" path="res://zones/hillersleben/scripts/mg_klappbare_tür.gd" id="16_k6604"]
+[ext_resource type="Script" uid="uid://c35twvphwf3u4" path="res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd" id="23_cqg2i"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5gmky"]
 size = Vector3(20, 3, 0.05)
@@ -78,7 +79,7 @@ point_count = 2
 
 [sub_resource type="Curve3D" id="Curve3D_7sq4a"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.14, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.71, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -652,7 +653,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.366383, 2.0263977, -14.271
 mesh = SubResource("CylinderMesh_gfnr6")
 
 [node name="PSB-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS" unique_id=1959521135]
-transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -28.948263, 3.5105782, 17.491814)
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 1.6940659e-21, 0, -1.6940659e-21, 0.9999999, -28.948263, 2.7712326, 17.491812)
 mesh = SubResource("CylinderMesh_du4yn")
 
 [node name="MSB-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS" unique_id=234907485]
@@ -712,7 +713,7 @@ flow_model = NodePath("../../../FlowSimulation")
 flow_id = 4
 
 [node name="psb_bb2" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=21113137 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
-transform = Transform3D(0.018970907, 2.4613908e-14, -0.9998197, 4.2157975e-14, 0.99999964, 2.5418268e-14, 0.9998199, -4.2632578e-14, 0.018970951, -38.454506, 3.800476, 17.476204)
+transform = Transform3D(0.018970907, 2.4613908e-14, -0.9998197, 4.2157975e-14, 0.9999996, 2.5418266e-14, 0.9998198, -4.2632578e-14, 0.01897095, -38.454506, 3.800476, 17.476202)
 text = "Pump Primary Clarifier-> Aeration Basin II"
 flow_model = NodePath("../../../FlowSimulation")
 flow_id = 5
@@ -974,11 +975,12 @@ environment = SubResource("Environment_5rwjt")
 [node name="FlowSimulation" parent="." unique_id=1869696998 groups=["FLOWSIMULATION"] instance=ExtResource("2_0nlau")]
 overview_scene = ExtResource("3_ybcmd")
 
-[node name="Logik-Wasserrad" type="Node" parent="FlowSimulation" unique_id=651757122]
+[node name="Logik-Wasserrad" type="Node" parent="FlowSimulation" unique_id=651757122 node_paths=PackedStringArray("wasserrad_drehen")]
 script = ExtResource("8_du4yn")
+wasserrad_drehen = NodePath("../../Visuals/Referenz/wasserrad")
 
 [node name="Logik-NKB_Visual" type="Node" parent="FlowSimulation" unique_id=17142679 node_paths=PackedStringArray("nkb1_pivot", "nkb2_pivot", "nkb1_schrauben1", "nkb1_schrauben2", "nkb2_schrauben1", "nkb2_schrauben2")]
-script = ExtResource("8_du4yn")
+script = ExtResource("23_cqg2i")
 nkb1_pivot = NodePath("../../Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot")
 nkb2_pivot = NodePath("../../Visuals/Referenz/nachklaerung-becken-2/Brücke_001/nkb-2-pivot")
 nkb1_schrauben1 = NodePath("../../Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot/nkb-1-schraube1")

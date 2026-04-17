@@ -217,7 +217,7 @@ target_scene = "uid://cakq3l4d46c36"
 labeltext_text = "To the Hochschule"
 
 [node name="XrVan3" parent="." unique_id=1499496112 instance=ExtResource("5_g30re")]
-transform = Transform3D(0.114607684, 0, 0.9934108, 0, 1, 0, -0.9934108, 0, 0.114607684, -79.66183, 50.591293, 26.226444)
+transform = Transform3D(0.1146077, 0, 0.99341094, 0.25572333, 0.9662998, -0.029502252, -0.95993274, 0.25741953, 0.11074539, -105.48405, 49.293438, 71.963135)
 target_scene = "uid://cakq3l4d46c36"
 labeltext_text = "To the Hochschule"
 
