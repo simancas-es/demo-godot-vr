@@ -9,12 +9,15 @@ const Simulation := preload("uid://b6alvcbiyby3g")
 @export var flow_units_m3s : float = 100.0
 
 @onready var button : MachineToggleable = $MachineToggleable
-
+@onready var xr_button : XRToolsInteractablePushbuttonGeneral = $PushButton
 var _edge := Simulation.SimEdgeSource.new()
 
 func _ready() -> void:
 	button.turned_on.connect(_on_on)
 	button.turned_off.connect(_on_off)
+	xr_button.button_pressed.connect(_on_on)
+	xr_button.button_released.connect(_on_off)	
+	
 	_edge.set_throughput(flow_units_m3s)
 	button.toggle(false)
 	if flow_model:

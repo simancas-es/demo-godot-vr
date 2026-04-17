@@ -9,7 +9,7 @@ const Simulation := preload("uid://b6alvcbiyby3g")
 @export var extraction_units_m3s : float = 100.0 # must be positive
 
 @onready var button : MachineToggleable = $MachineToggleable
-
+@onready var xr_button : XRToolsInteractablePushbuttonGeneral = $PushButton
 var _edge := Simulation.SimEdge.new()
 var _empty_void := Simulation.SimContainer.new()
 
@@ -17,6 +17,9 @@ func _ready() -> void:
 	_empty_void.infinite_capacity = true
 	button.turned_on.connect(_on_on)
 	button.turned_off.connect(_on_off)
+	xr_button.button_pressed.connect(_on_on)
+	xr_button.button_released.connect(_on_off)
+	
 	_edge.set_throughput(extraction_units_m3s)	
 	_edge.source = flow_model.sim.cs.LIST[container_id]
 	

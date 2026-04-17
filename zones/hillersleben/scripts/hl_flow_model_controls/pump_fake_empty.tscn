@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://cp1mvhmnun1iy" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_fake_empty.gd" id="1_xs6pa"]
 [ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="2_r0ihr"]
 [ext_resource type="Script" uid="uid://gh4kugk3fe4g" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_placeholder_mesh.gd" id="3_rt4pj"]
+[ext_resource type="PackedScene" uid="uid://dbv1hvxufc1al" path="res://XR/scenes/interactables/objects/push_button.tscn" id="4_rt4pj"]
+[ext_resource type="Script" uid="uid://ibm10jycppjv" path="res://zones/hillersleben/scripts/hl_flow_model_controls/xr_pump_control_button.gd" id="5_qc20t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7sq4a"]
 size = Vector3(0.1, 0.1, 0.1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_yuvhm"]
+[sub_resource type="BoxMesh" id="BoxMesh_rt4pj"]
 size = Vector3(0.1, 0.1, 0.1)
 
 [node name="FakeEntleerung" type="Label3D" unique_id=898526135]
@@ -27,6 +29,13 @@ shape = SubResource("BoxShape3D_7sq4a")
 
 [node name="MeshInstance3D-Button" type="MeshInstance3D" parent="." unique_id=820221545]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15040207, 0)
-mesh = SubResource("BoxMesh_yuvhm")
+mesh = SubResource("BoxMesh_rt4pj")
 skeleton = NodePath("")
 script = ExtResource("3_rt4pj")
+
+[node name="PushButton" parent="." unique_id=193149387 instance=ExtResource("4_rt4pj")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -0.15590917, 0.028312057)
+toggle_displacement = true
+
+[node name="Node" type="Node" parent="PushButton" unique_id=169840865]
+script = ExtResource("5_qc20t")
