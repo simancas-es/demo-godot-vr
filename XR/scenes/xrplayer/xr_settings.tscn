@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://5vbcw3gki6h"]
+
+[ext_resource type="Script" uid="uid://d3uaa583f7dxw" path="res://XR/scenes/xrplayer/xr_menuoptions.gd" id="1_kyi6n"]
+
+[node name="MenuSettings" type="CanvasLayer" unique_id=1687416141]
+script = ExtResource("1_kyi6n")
+
+[node name="Panel" type="Panel" parent="." unique_id=1867141879]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1693461486]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxLanguage" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=978865554]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="LabelLanguage" type="Label" parent="Panel/VBoxContainer/HBoxLanguage" unique_id=2064564828]
+layout_mode = 2
+text = "Language"
+
+[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/HBoxLanguage" unique_id=1341831746]
+layout_mode = 2
+
+[node name="OptionButtonLanguages" type="OptionButton" parent="Panel/VBoxContainer/HBoxLanguage" unique_id=1021429247]
+layout_mode = 2
+
+[node name="HBoxTopic" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=920311308]
+visible = false
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+
+[node name="LabelTopic" type="Label" parent="Panel/VBoxContainer/HBoxTopic" unique_id=953524069]
+layout_mode = 2
+text = "Topic"
+
+[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/HBoxTopic" unique_id=1127250056]
+layout_mode = 2
+
+[node name="OptionButtonTopics" type="OptionButton" parent="Panel/VBoxContainer/HBoxTopic" unique_id=466813110]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1474589399]
+visible = false
+layout_mode = 2
+size_flags_vertical = 4
