@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b0wlrvdhqnj2e"]
+[gd_scene format=4 uid="uid://b0wlrvdhqnj2e"]
 
 [ext_resource type="Script" uid="uid://177gygw2xqqu" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_14ude"]
 [ext_resource type="PackedScene" uid="uid://dqlioxrtse7dm" path="res://XR/zones_xr/xr_adapter.tscn" id="2_mvgnd"]
@@ -18,128 +18,132 @@
 [ext_resource type="Script" uid="uid://btflngrpj3umg" path="res://XR/zones_xr/zone_xr_sample_basin/logic_xr_door.gd" id="16_yyg01"]
 [ext_resource type="Script" uid="uid://ddpxuupqkou2m" path="res://XR/zones_xr/zone_xr_sample_basin/logic_xr_diffuser_interaction.gd" id="17_xo6c6"]
 [ext_resource type="PackedScene" uid="uid://q3pa72xp41cq" path="res://XR/scenes/places/demo/environment/climb_ladder.tscn" id="18_wlig4"]
+[ext_resource type="Script" uid="uid://bgyendvlud0ak" path="res://models/doors/door_functions/door_functions.gd" id="19_en5gk"]
+[ext_resource type="Texture2D" uid="uid://waojka27mql4" path="res://assets/world_objects/demo_basin/platform_rusty/platform_rusty.png" id="20_l0wje"]
+[ext_resource type="Texture2D" uid="uid://bq5wuu7shyp84" path="res://assets/world_objects/demo_basin/platform_rusty/platform_rusty_roughness.png" id="21_ybwrk"]
+[ext_resource type="Texture2D" uid="uid://bwnb8md64ay6i" path="res://assets/world_objects/demo_basin/platform_rusty/platform_rusty_normal.png" id="22_qymyc"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wlig4"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_en5gk"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fwqiu"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_l0wje"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_jgccy"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ybwrk"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qoo6q"]
-animation = &"Grip 5"
-
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_en5gk"]
-filter_enabled = true
-filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
-
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_l0wje"]
-graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_wlig4")
-nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_fwqiu")
-nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_jgccy")
-nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_qoo6q")
-nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_en5gk")
-nodes/Trigger/position = Vector2(-360, 20)
-node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ybwrk"]
-animation = &"Grip"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qymyc"]
-animation = &"Grip"
+animation = &"Grip 5"
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_k5rmt"]
 filter_enabled = true
-filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4dwdd"]
-animation = &"Grip 5"
-
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_cmrvy"]
-filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_8ygd4"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_4dwdd"]
 graph_offset = Vector2(-536, 11)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_ybwrk")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_en5gk")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_qymyc")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_l0wje")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_k5rmt")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_ybwrk")
 nodes/Grip/position = Vector2(0, 20)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_4dwdd")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_qymyc")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_cmrvy")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_k5rmt")
 nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ai451"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cmrvy"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ssy1h"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8ygd4"]
 animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_ai451"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Little_Distal_L", "Armature/Skeleton3D:Little_Intermediate_L", "Armature/Skeleton3D:Little_Metacarpal_L", "Armature/Skeleton3D:Little_Proximal_L", "Armature/Skeleton3D:Middle_Distal_L", "Armature/Skeleton3D:Middle_Intermediate_L", "Armature/Skeleton3D:Middle_Metacarpal_L", "Armature/Skeleton3D:Middle_Proximal_L", "Armature/Skeleton3D:Ring_Distal_L", "Armature/Skeleton3D:Ring_Intermediate_L", "Armature/Skeleton3D:Ring_Metacarpal_L", "Armature/Skeleton3D:Ring_Proximal_L", "Armature/Skeleton3D:Thumb_Distal_L", "Armature/Skeleton3D:Thumb_Metacarpal_L", "Armature/Skeleton3D:Thumb_Proximal_L", "Armature/Skeleton:Little_Distal_L", "Armature/Skeleton:Little_Intermediate_L", "Armature/Skeleton:Little_Proximal_L", "Armature/Skeleton:Middle_Distal_L", "Armature/Skeleton:Middle_Intermediate_L", "Armature/Skeleton:Middle_Proximal_L", "Armature/Skeleton:Ring_Distal_L", "Armature/Skeleton:Ring_Intermediate_L", "Armature/Skeleton:Ring_Proximal_L", "Armature/Skeleton:Thumb_Distal_L", "Armature/Skeleton:Thumb_Proximal_L"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ssy1h"]
+animation = &"Grip 5"
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_k7lsq"]
 filter_enabled = true
-filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
+filters = ["Armature/Skeleton3D:Index_Distal_L", "Armature/Skeleton3D:Index_Intermediate_L", "Armature/Skeleton3D:Index_Metacarpal_L", "Armature/Skeleton3D:Index_Proximal_L", "Armature/Skeleton:Index_Distal_L", "Armature/Skeleton:Index_Intermediate_L", "Armature/Skeleton:Index_Proximal_L"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_iu3np"]
-animation = &"Grip 5"
-
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_w2fam"]
-filter_enabled = true
-filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
-
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_hg2ky"]
-graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_ai451")
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_iu3np"]
+graph_offset = Vector2(-536, 11)
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_cmrvy")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_ssy1h")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_8ygd4")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_k7lsq")
-nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_iu3np")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_ai451")
+nodes/Grip/position = Vector2(0, 20)
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_ssy1h")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_w2fam")
-nodes/Trigger/position = Vector2(-360, 40)
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_k7lsq")
+nodes/Trigger/position = Vector2(-360, 20)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wjwrw"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_w2fam"]
 animation = &"Grip"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hwefv"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hg2ky"]
 animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_wjwrw"]
+filter_enabled = true
+filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hwefv"]
+animation = &"Grip 5"
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_55kdo"]
 filter_enabled = true
+filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_pbukp"]
+graph_offset = Vector2(-552.664, 107.301)
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_w2fam")
+nodes/ClosedHand1/position = Vector2(-600, 300)
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_hg2ky")
+nodes/ClosedHand2/position = Vector2(-360, 300)
+nodes/Grip/node = SubResource("AnimationNodeBlend2_wjwrw")
+nodes/Grip/position = Vector2(0, 40)
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_hwefv")
+nodes/OpenHand/position = Vector2(-600, 100)
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_55kdo")
+nodes/Trigger/position = Vector2(-360, 40)
+node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_w01w5"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7vpfn"]
+animation = &"Grip"
+
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_185vs"]
+filter_enabled = true
 filters = ["Armature/Skeleton3D:Little_Distal_R", "Armature/Skeleton3D:Little_Intermediate_R", "Armature/Skeleton3D:Little_Metacarpal_R", "Armature/Skeleton3D:Little_Proximal_R", "Armature/Skeleton3D:Middle_Distal_R", "Armature/Skeleton3D:Middle_Intermediate_R", "Armature/Skeleton3D:Middle_Metacarpal_R", "Armature/Skeleton3D:Middle_Proximal_R", "Armature/Skeleton3D:Ring_Distal_R", "Armature/Skeleton3D:Ring_Intermediate_R", "Armature/Skeleton3D:Ring_Metacarpal_R", "Armature/Skeleton3D:Ring_Proximal_R", "Armature/Skeleton3D:Thumb_Distal_R", "Armature/Skeleton3D:Thumb_Metacarpal_R", "Armature/Skeleton3D:Thumb_Proximal_R", "Armature/Skeleton:Little_Distal_R", "Armature/Skeleton:Little_Intermediate_R", "Armature/Skeleton:Little_Proximal_R", "Armature/Skeleton:Middle_Distal_R", "Armature/Skeleton:Middle_Intermediate_R", "Armature/Skeleton:Middle_Proximal_R", "Armature/Skeleton:Ring_Distal_R", "Armature/Skeleton:Ring_Intermediate_R", "Armature/Skeleton:Ring_Proximal_R", "Armature/Skeleton:Thumb_Distal_R", "Armature/Skeleton:Thumb_Proximal_R"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pbukp"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_haoae"]
 animation = &"Grip 5"
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_w01w5"]
+[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_el5aq"]
 filter_enabled = true
 filters = ["Armature/Skeleton3D:Index_Distal_R", "Armature/Skeleton3D:Index_Intermediate_R", "Armature/Skeleton3D:Index_Metacarpal_R", "Armature/Skeleton3D:Index_Proximal_R", "Armature/Skeleton:Index_Distal_R", "Armature/Skeleton:Index_Intermediate_R", "Armature/Skeleton:Index_Proximal_R"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_7vpfn"]
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_7axmn"]
 graph_offset = Vector2(-552.664, 107.301)
-nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_wjwrw")
+nodes/ClosedHand1/node = SubResource("AnimationNodeAnimation_w01w5")
 nodes/ClosedHand1/position = Vector2(-600, 300)
-nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_hwefv")
+nodes/ClosedHand2/node = SubResource("AnimationNodeAnimation_7vpfn")
 nodes/ClosedHand2/position = Vector2(-360, 300)
-nodes/Grip/node = SubResource("AnimationNodeBlend2_55kdo")
+nodes/Grip/node = SubResource("AnimationNodeBlend2_185vs")
 nodes/Grip/position = Vector2(0, 40)
-nodes/OpenHand/node = SubResource("AnimationNodeAnimation_pbukp")
+nodes/OpenHand/node = SubResource("AnimationNodeAnimation_haoae")
 nodes/OpenHand/position = Vector2(-600, 100)
-nodes/Trigger/node = SubResource("AnimationNodeBlend2_w01w5")
+nodes/Trigger/node = SubResource("AnimationNodeBlend2_el5aq")
 nodes/Trigger/position = Vector2(-360, 40)
 node_connections = [&"output", 0, &"Grip", &"Grip", 0, &"Trigger", &"Grip", 1, &"ClosedHand2", &"Trigger", 0, &"OpenHand", &"Trigger", 1, &"ClosedHand1"]
 
@@ -158,6 +162,56 @@ radius = 0.025
 [sub_resource type="BoxShape3D" id="BoxShape3D_w01w5"]
 size = Vector3(1, 1.3258057, 1)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4dwdd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cmrvy"]
+size = Vector3(0.05078125, 0.95043945, 1.0267334)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_caumk"]
+resource_name = "galvanizedsteel"
+cull_mode = 2
+albedo_texture = ExtResource("20_l0wje")
+metallic_texture = ExtResource("21_ybwrk")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("21_ybwrk")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("22_qymyc")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_y0p4x"]
+_surfaces = [{
+"aabb": AABB(-0.0500002, -4.84288e-08, -1.10241, 0.0999999, 1.1, 1.15241),
+"format": 34359742465,
+"index_count": 324,
+"index_data": PackedByteArray("AAABAAIAAgABAAEAAgACAAEAAAAAAAMAAgADAAAAAAADAAMABQACAAIAAgAFAAMABQAFAAIAAAADAA0ABwAFAAIAAgABAAYAAgAGAAcABgAHAAcABgAGAAcAHAAFAAEAHAABAAQABAAAAAAAAAAEAAEABAAEAAAAHAAEAAgACAAFABwADAAEAAAAAAANAAwACAADAAUAAwADAAgAAwAIAAkACQAIAAQACQAEAAQACgADAAkACgANAAMACQAEAAsACQALAAoADAALAAQACgANAA0ADQAMAAwADAAMAAsADQANAAwADAALAAsACgAOAA0ACwAOAAoAHQANAA4ACwALAA4ADgAGAB0ADgALAAYAHQAPAA0ADAANAA8AHQAGAA8ABwALAAwABwAGAAsADAAPAAcABwAHAA8ABwAPAA8ABwAPAAUAHgAPAAYAHgAGABMAEQAPAB4AHgATABEAEQASAA8AEgASABEAFgARABMAEgARABYAFgATABMAFgATABkAGAASABYAFgAZABgAGAAXABIAGAAXABcAGQAbABgAGAAbABcAGQAZABsAHwAXABsAHwAFABcAGwABAB8AHwABAAUAGwAZAAEAGgAZABkAGgAZABMAGgAaABkAGgAXAAUAFwAaABoAFwAXABoAEAAZABoAEAABABkAGgAFABAAEAAFAAUAFQAXABoAEAAQAAUAGgATABUAEwATABUAFQASABcAEwAVABUAFQASABIAFQAVABIAFQATAAYAFAASABUAFQAGABQAFAAGAAYAFAAUAAYAFAAGAAEAAQABABAAFAABABAAAQAQABAAEAAFAA8AFAAPABIAEAAPABQADwAPABQADwAUABQA"),
+"lods": [0.058761, PackedByteArray("AAABAAIAAgADAAAAAAAEAAEAAgAFAAMABQABAAQAAgABAAYABwAFAAIAAgAGAAcACAADAAUABQAEAAgAAwAIAAkACQAIAAQACgADAAkACQAEAAsACQALAAoABwAGAAsADAALAAQADAAEAAAABwALAAwAAAADAA0ACgANAAMAAAANAAwACwAOAAoACgAOAA0ADgALAAYADAAPAAcADAANAA8ADwANAA4ADgAGAA8ABwAPAAUAEAAFAA8AEQAPAAYAEQASAA8ABgATABEAFAAPABIAEAAPABQAFQAGABQAFQATAAYAFAASABUAFAAGAAEAFAABABAAEgARABYAFgARABMAFgATABMAFQASABcAAQAFABcAGAASABYAGAAXABIAFgATABkAFgAZABgAGgATABUAFQAXABoAGgAZABMAGgAXAAUAGgAFABAAEAAZABoAEAABABkAGQAbABgAGAAbABcAGwAZAAEAAQAXABsA")],
+"name": "galvanizedsteel",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("AACAtMbMzD3AzEy9gMxMPczMDD8AAACAAACAtP7//z7AzEy9AM1MvcDMTD0AAACAgMxMPcDMTD0AAACAAM1MvczMDD8AAACAgMxMPczMDD9StYa/AACAtP7//z7sToC/AACAtMbMzD3AzEw9AACAtAAAULMAAACAAACAtAAAULNStYa/gMxMPcDMTD1StYa/AACAtMbMzD3sToC/AM1MvcDMTD1StYa/AACAtMbMzD24G42/AM1MvczMDD9StYa/AACAtJmZGT/AzEy9AACAtP//fz+4G42/AM1MvWZmhj9StYa/gMxMPWZmhj9StYa/AACAtJmZGT/sToC/AACAtP//fz/sToC/AACAtMzMjD9StYa/AM1MvWZmhj8AAACAAACAtMzMjD8AAACAgMxMPWZmhj8AAACAAACAtP//fz/AzEy9AACAtP//fz/AzEw9AACAtP7//z7AzEw9AACAtP7//z64G42/AACAtJmZGT+4G42/AACAtJmZGT/AzEw9")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_k5rmt"]
+resource_name = "platform_rusty_Plane_006"
+_surfaces = [{
+"aabb": AABB(-0.0500002, -4.84288e-08, -1.10241, 0.0999999, 1.1, 1.15241),
+"attribute_data": PackedByteArray("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"),
+"format": 34359742487,
+"index_count": 324,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUAfwAJAAoAfwCAAAkAgQAOAIIAgQCDAA4AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAaAIQAGAAZABoAhQAcAB0AhQCGABwAHwCHAIgAHwAiAIcAiQAkACUAiQAjACQAJgAnACgAJgApACcAKgArACwAKgAtACsAigCLAIwAigAuAIsANQCNAI4ANQA4AI0AOQA6ADsAOQA8ADoAPQA+AD8APQBAAD4AQQBCAEMAQQBEAEIARQBGAEcARQBIAEYASQBKAEsASQBMAEoATQBOAE8ATQBQAE4AUQBSAFMAUQBUAFIAVQBWAFcAVQBYAFYAWQBaAFsAWQBcAFoAXQBeAF8AXQBgAF4AYQBiAGMAYQBkAGIAZQBmAGcAZQBoAGYAjwAzADQAjwCQADMAaQBqAGsAaQBsAGoAkQCSAJMAkQCUAJIAkwCSAJUAkwCVAJYAlwBuAG8AlwBtAG4AMQAvADIAMQAwAC8AmACZAJoAmgCZAJsAmACcAJkAmgCbAJ0AngCcAJgAnQCbAJ8AngCfAJwAnQCfAJ4AoAA2ADcAoQAgACEAogCjAKQAogClAKMApACjAKYApACmAKcAqABxAHIAqABwAHEAcwB1AKkAcwB0AHUAqgCrAKwAqgCtAKsArACrAK4ArACuAK8AsACxALIAsgCxALMAsAC0ALEAsgCzALUAtgC0ALAAtQCzALcAtgC3ALQAtQC3ALYAuAC5ALoAuAC7ALkAugC5ALwAugC8AL0AvgAMAA8AvgANAAwAdgB4AL8AdgB3AHgAwAAbAB4AwQAIAAsAwgB6AHsAwgB5AHoAfAB+AMMAfAB9AH4A"),
+"lods": [0.058761, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADQAMAA8AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGwAcAB0AGwAeABwAHwAgACEAHwAiACAAIwAkACUAJgAnACgAJgApACcAKgArACwAKgAtACsALgAvADAAMQAwAC8AMQAvADIAMQAyADMAMQAzADQANQA2ADcANQA4ADYAOQA6ADsAOQA8ADoAPQA+AD8APQBAAD4AQQBCAEMAQQBEAEIARQBGAEcARQBIAEYASQBKAEsASQBMAEoATQBOAE8ATQBQAE4AUQBSAFMAUQBUAFIAVQBWAFcAVQBYAFYAWQBaAFsAWQBcAFoAXQBeAF8AXQBgAF4AYQBiAGMAYQBkAGIAZQBmAGcAZQBoAGYAaQBqAGsAaQBsAGoAbQBuAG8AcABxAHIAcwB0AHUAdgB3AHgAeQB6AHsAfAB9AH4A")],
+"material": SubResource("StandardMaterial3D_caumk"),
+"name": "galvanizedsteel",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 196,
+"vertex_data": PackedByteArray("AACAtMbMzD3AzEy9gMxMPczMDD8AAACAAACAtP7//z7AzEy9gMxMPcDMTD0AAACAAACAtP7//z7AzEy9AM1MvcDMTD0AAACAAACAtMbMzD3AzEy9AM1MvczMDD8AAACAAM1MvczMDD8AAACAgMxMPcDMTD0AAACAAACAtMbMzD3AzEw9gMxMPczMDD8AAACAAACAtMbMzD3AzEw9AM1MvcDMTD0AAACAAM1MvczMDD8AAACAAACAtAAAULMAAACAAACAtJmZGT/AzEy9gMxMPWZmhj8AAACAAACAtP//fz/AzEy9gMxMPczMDD8AAACAAACAtP//fz/AzEy9AM1MvczMDD8AAACAAACAtJmZGT/AzEy9AM1MvWZmhj8AAACAAACAtP//fz/AzEw9gMxMPWZmhj8AAACAgMxMPczMDD8AAACAgMxMPczMDD8AAACAAM1MvWZmhj8AAACAAACAtP//fz/AzEw9AM1MvczMDD8AAACAAACAtMbMzD24G42/gMxMPczMDD9StYa/AM1MvczMDD9StYa/gMxMPcDMTD1StYa/AM1MvczMDD9StYa/AM1MvcDMTD1StYa/AACAtMbMzD24G42/AACAtP7//z7sToC/gMxMPcDMTD1StYa/AACAtMbMzD3sToC/gMxMPczMDD9StYa/AACAtMbMzD3sToC/AM1MvczMDD9StYa/AACAtP7//z7sToC/AM1MvcDMTD1StYa/gMxMPczMDD9StYa/gMxMPWZmhj9StYa/AACAtP//fz+4G42/AACAtMzMjD9StYa/gMxMPWZmhj9StYa/gMxMPWZmhj8AAACAAACAtMzMjD8AAACAAACAtP//fz+4G42/AM1MvczMDD9StYa/gMxMPczMDD9StYa/AM1MvWZmhj9StYa/AACAtP//fz/sToC/gMxMPczMDD9StYa/AACAtJmZGT/sToC/gMxMPWZmhj9StYa/AACAtJmZGT/sToC/AM1MvWZmhj9StYa/AACAtP//fz/sToC/AM1MvczMDD9StYa/AACAtMbMzD3sToC/gMxMPcDMTD0AAACAAACAtMbMzD3AzEy9gMxMPcDMTD1StYa/AACAtMbMzD3AzEy9AM1MvcDMTD1StYa/AACAtMbMzD3sToC/AM1MvcDMTD0AAACAAACAtAAAULMAAACAgMxMPcDMTD1StYa/AACAtAAAULNStYa/gMxMPcDMTD0AAACAAACAtAAAULNStYa/AM1MvcDMTD0AAACAAACAtAAAULMAAACAAM1MvcDMTD1StYa/AACAtP7//z7AzEy9gMxMPczMDD9StYa/AACAtP7//z7sToC/gMxMPczMDD8AAACAAACAtP7//z7sToC/AM1MvczMDD8AAACAAACAtP7//z7AzEy9AM1MvczMDD9StYa/AACAtJmZGT/sToC/gMxMPczMDD8AAACAAACAtJmZGT/AzEy9gMxMPczMDD9StYa/AACAtJmZGT/AzEy9AM1MvczMDD9StYa/AACAtJmZGT/sToC/AM1MvczMDD8AAACAAACAtP//fz/AzEy9gMxMPWZmhj9StYa/AACAtP//fz/sToC/gMxMPWZmhj8AAACAAACAtP//fz/sToC/AM1MvWZmhj8AAACAAACAtP//fz/AzEy9AM1MvWZmhj9StYa/AACAtMzMjD8AAACAAM1MvWZmhj9StYa/AACAtMzMjD9StYa/AM1MvWZmhj8AAACAAM1MvWZmhj9StYa/AACAtP//fz+4G42/AACAtMzMjD9StYa/gMxMPcDMTD1StYa/AACAtMbMzD24G42/AACAtAAAULNStYa/AACAtAAAULNStYa/AACAtMbMzD24G42/AM1MvcDMTD1StYa/AACAtAAAULMAAACAAACAtMbMzD3AzEw9gMxMPcDMTD0AAACAgMxMPWZmhj8AAACAAACAtP//fz/AzEw9AACAtMzMjD8AAACAAACAtMzMjD8AAACAAACAtP//fz/AzEw9AM1MvWZmhj8AAACAAACAtP7//z7AzEw9gMxMPczMDD8AAACAAACAtMbMzD3AzEw9AACAtP7//z7AzEw9AM1MvcDMTD0AAACAAACAtJmZGT/AzEw9AACAtJmZGT/AzEw9AM1MvczMDD8AAACAgMxMPczMDD9StYa/AACAtP7//z64G42/AACAtP7//z64G42/AACAtJmZGT+4G42/gMxMPWZmhj9StYa/AACAtP//fz+4G42/AM1MvczMDD9StYa/AACAtJmZGT+4G42/AACAtMzMjD9StYa/gMxMPWZmhj9StYa/gMxMPWZmhj9StYa/AACAtP//fz/sToC/AACAtP//fz/sToC/gMxMPWZmhj9StYa/AM1MvWZmhj9StYa/AM1MvWZmhj9StYa/AM1MvWZmhj9StYa/AM1MvczMDD9StYa/AACAtJmZGT/sToC/AACAtJmZGT/sToC/gMxMPczMDD9StYa/AM1MvczMDD9StYa/gMxMPczMDD9StYa/AACAtP7//z7sToC/AACAtP7//z7sToC/AACAtJmZGT+4G42/AACAtP7//z64G42/AM1MvcDMTD1StYa/AACAtMbMzD3sToC/AACAtMbMzD3sToC/AM1MvcDMTD1StYa/gMxMPcDMTD1StYa/gMxMPcDMTD1StYa/gMxMPcDMTD1StYa/AM1MvcDMTD1StYa/AM1MvWZmhj8AAACAAACAtP//fz/AzEy9AACAtP//fz/AzEy9AM1MvWZmhj8AAACAgMxMPWZmhj8AAACAgMxMPWZmhj8AAACAgMxMPczMDD8AAACAAACAtJmZGT/AzEy9AACAtJmZGT/AzEy9AM1MvczMDD8AAACAgMxMPczMDD8AAACAAM1MvczMDD8AAACAAACAtP7//z7AzEy9AACAtP7//z7AzEy9gMxMPcDMTD0AAACAAACAtMbMzD3AzEy9AACAtMbMzD3AzEy9gMxMPcDMTD0AAACAAM1MvcDMTD0AAACAAM1MvcDMTD0AAACAAM1MvcDMTD0AAACAgMxMPcDMTD0AAACAAACAtJmZGT/AzEw9AACAtP7//z7AzEw9gMxMPWZmhj8AAACAAM1MvWZmhj8AAACA////vzKzMrP///+/MrMys////78yszKz////vzKzMrMAAP+/j+AjmAAA/7+P4COYAAD/v4/gI5gAAP+/j+AjmP9//7/yIMK3/7//f/NJ88n/v/9/80nzyf9//7/yIMK3AGAAYBADIqkAYABgEAMiqf8//3/sArrgAGAAYBADIqn///+/MrMys////78yszKz////vzKzMrP///+/MrMyswAA/7+P4COYAAD/v4/gI5gAAP+/j+AjmAAA/7+P4COY/7//f3VBib7/v/9/dUGJvv+//391QYm+/3//PwAA/7//P/9/bx/a5/8//39vH9rn/3//PwAA/7////+/C7YLtv+///8M3zvI/7///wzfO8j///+/C7YLtgAA/79A5o+ZAAD/v0Dmj5kAAP+/QOaPmf+//3/MTMzM/7//f8xMzMz/v/9/zEzMzP+//3/MTMzM/z//f28f2uf/P/9/bx/a5/8//39vH9rn/z//f28f2uf///+/+av5q//f/9+zxdDH/9//37PF0Mf/3//fs8XQx//f/9////+//7//vxKpdav/v/+/Eql1qwAA/7+P4COY/78AAP7//7//vwAA/v//vwAA/7+P4COY/7//f8xMzMz/v/9/zEzLzP+//3/MTMvM/7//f8xMzMz/P/9/bx/a5/8//39vH9rn/z//f28f2uf/P/9/bx/a5/+//79Prteo/7//v0+u16j/v/+/T67XqP+//79Prteo/z//v/8//5//P/+//z//n/8//7//P/+f/z//v/8//5//v/8//z//n/+//z//P/+f/7//P/8//5//v/8//z//n/8//z//v/+f/z//P/+//5//P/8//7//n/8//z//v/+f/7//P/8//5//v/8//z//n/+//z//P/+f/7//P/8//5//P/8//7//n/8//z//v/+f/z//P/+//5//P/8//7//n/+//79Prteo/7//v0+u16j/v/+/T67XqP+//79Prteo/z//v/8//5//P/+//z//n/8//7//P/+f/z//v/8//5//v/8//z//n/+//z//P/+f/7//P/8//5//v/8//z//n/8//z//v/+f/z//P/+//5//P/8//7//n/8//z//v/+f/z//v/8//5//P/+//z//n/8//7//P/+f/z//v/8//5//H//f/7//3/8f/9//v//f/x//3/+//9//3/8fQsyazf/f/x9CzJrN/9//H0LMms3/H/8f/6f/m/8f/x//p/+b/x//H/+n/5v+nwBg0DDFtv6fAGDQMMW2/p8AYNAwxbb+n/6f5yvcwf6f/p/nK9zB/p/+n+cr3MEAYP6fNyL2pABg/p83IvakAGD+nzci9qT/v/9/80nzyf+//3/zSfPJ/z//f+wCuuD/P/9/7AK64P8//3/sArrg/7//f3VBib7/P/9/bx/b5/8//39vH9vn////vwu2C7b///+/C7YLtgAA/79A5o+Z////v/mr+av///+/+av5q////7/5q/mrAAD/v4/gI5gAAP+/j+AjmP+//78SqXWr/7//vxKpdav/f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//H//f/7//3/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//vwAA/v//v/+///8M3zvI/3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//9//H0LMms3/H/8f/6f/m/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////78AYABgEAMiqf6fAGDQMMW2/3//PwAA/7//f/+/8iDCt/6f/p/nK9zBAGD+nzci9qQ=")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_y0p4x")
+
 [node name="ZoneXrBasin" type="Node3D" unique_id=1610661768]
 script = ExtResource("1_14ude")
 metadata/_custom_type_script = "uid://177gygw2xqqu"
@@ -173,16 +227,19 @@ delete_inventorypickups = true
 transform = Transform3D(0.6445775, 0, 0.764539, 0, 1, 0, -0.764539, 0, 0.6445775, 6.1037292, 0.25880432, -0.37846684)
 
 [node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand" parent_id_path=PackedInt32Array(1548611922, 1009909507) index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_l0wje")
+tree_root = SubResource("AnimationNodeBlendTree_4dwdd")
 
 [node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand2/LeftHand2" parent_id_path=PackedInt32Array(1548611922, 102583930) index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_8ygd4")
+tree_root = SubResource("AnimationNodeBlendTree_iu3np")
+
+[node name="BoneAttachment3D" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand/Hand_Nails_low_R/Armature" index="0" unique_id=371647788]
+transform = Transform3D(0.54082954, -0.8408129, 0.023173578, 0.08262676, 0.08052423, 0.99332196, -0.83706397, -0.5353031, 0.11302352, -0.03990221, 0.040282845, -0.15009618)
 
 [node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand" parent_id_path=PackedInt32Array(1548611922, 1329846119) index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_hg2ky")
+tree_root = SubResource("AnimationNodeBlendTree_pbukp")
 
 [node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand2/RightHand2" parent_id_path=PackedInt32Array(1548611922, 1240763572) index="1"]
-tree_root = SubResource("AnimationNodeBlendTree_7vpfn")
+tree_root = SubResource("AnimationNodeBlendTree_7axmn")
 
 [node name="Portal" parent="." unique_id=608985235 instance=ExtResource("4_ijleo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.59433, 2.5235043, -104.31243)
@@ -252,9 +309,10 @@ show_model = NodePath("show_on_success/dungeonkeys")
 [node name="dungeonkeys" parent="XRPickables/snap_interaction_key/show_on_success" unique_id=639400368 instance=ExtResource("12_oua7j")]
 transform = Transform3D(0.045796994, 0.8718223, -0.48767692, -0.99862325, 0.052457917, 2.6077032e-08, 0.025582463, 0.48700535, 0.8730243, 0.034318935, -0.05127191, -0.12916957)
 
-[node name="LogicXRDoor" type="Node" parent="XRPickables/snap_interaction_key" unique_id=1394749618 node_paths=PackedStringArray("basesystem")]
+[node name="LogicXRDoor" type="Node" parent="XRPickables/snap_interaction_key" unique_id=1394749618 node_paths=PackedStringArray("basesystem", "door")]
 script = ExtResource("16_yyg01")
 basesystem = NodePath("../../..")
+door = NodePath("../../../xr-door-platform")
 
 [node name="snap_interaction_beakers" parent="XRPickables" unique_id=1861803215 node_paths=PackedStringArray("show_model") instance=ExtResource("15_0oekp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8844814, 1.008128, -10.686099)
@@ -490,6 +548,27 @@ enabled = false
 
 [node name="GrabPointHandRight17" parent="LadderShort2" index="35" unique_id=679028]
 enabled = false
+
+[node name="xr-door-platform" type="Node3D" parent="." unique_id=2016098016]
+transform = Transform3D(-0.5716448, 0, -0.8205012, 0, 1, 0, 0.8205012, 0, -0.5716448, 2.849649, 1.9995925, -12.411794)
+script = ExtResource("19_en5gk")
+y_degrees_opened = 135.0
+key_item = Array[int]([1])
+
+[node name="StaticBody3D" type="StaticBody3D" parent="xr-door-platform" unique_id=326389308]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+collision_layer = 16384
+collision_mask = 0
+physics_material_override = SubResource("PhysicsMaterial_4dwdd")
+
+[node name="DoorCollisionShape3D2" type="CollisionShape3D" parent="xr-door-platform/StaticBody3D" unique_id=541997060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0048828125, 0.633667, -0.4993286)
+shape = SubResource("BoxShape3D_cmrvy")
+
+[node name="barrier_door_separated" type="MeshInstance3D" parent="xr-door-platform/StaticBody3D" unique_id=431274445]
+unique_name_in_owner = true
+mesh = SubResource("ArrayMesh_k5rmt")
+skeleton = NodePath("")
 
 [editable path="ZoneObservatorio"]
 [editable path="ZoneObservatorio/DemoConcreteBasin"]

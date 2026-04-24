@@ -199,6 +199,9 @@ tree_root = SubResource("AnimationNodeBlendTree_0uh4r")
 [node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand2/LeftHand2" parent_id_path=PackedInt32Array(922481156, 102583930) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_xbb2l")
 
+[node name="BoneAttachment3D" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand/Hand_Nails_low_R/Armature" index="0" unique_id=371647788]
+transform = Transform3D(0.5408295, -0.8408129, 0.023173584, 0.08262676, 0.08052423, 0.99332196, -0.83706397, -0.53530306, 0.11302353, -0.039909363, 0.040283203, -0.1500969)
+
 [node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand" parent_id_path=PackedInt32Array(922481156, 1329846119) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_xmg2b")
 
@@ -511,7 +514,6 @@ editor_preview_mode = 1
 
 [node name="GrabPointHandRight7" parent="LEITER/LadderShort4FMittel" unique_id=1070866159 instance=ExtResource("26_48yfo")]
 transform = Transform3D(-4.284084e-08, -0.96592647, 0.25881925, 0.707107, -0.183013, -0.683013, 0.707107, 0.18301304, 0.683013, 0.075525284, -1.0193062, -0.08211517)
-visible = true
 hand_pose = SubResource("Resource_emqla")
 
 [node name="GrabPointHandLeft8" parent="LEITER/LadderShort4FMittel" unique_id=174847772 instance=ExtResource("23_gn0sx")]
