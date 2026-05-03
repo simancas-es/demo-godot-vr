@@ -17,7 +17,10 @@ signal failed_item_interaction
 func _ready() -> void:
 	activated.connect(on_activated)
 	
-func on_activated(pd : PlayerData, _il : FPVInteractionLogic) -> void:
+func on_activated(context: InteractionContext) -> void:
+	if context == null or context.playerdata == null:
+		return
+	var pd := context.playerdata
 	var info = pd.inventory.check_at_selected()
 	if info == null : return
 	var id = info.id

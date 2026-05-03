@@ -23,15 +23,13 @@ func _enter_tree() -> void:
 	basemap.ready.connect(initialize)
 
 func initialize() -> void:
-	xrbuttondoor.button_pressed.connect(func (..._args): buttondoor.activated.emit(null,null) )
-	xrbuttonsandout.button_pressed.connect(func (..._args): buttonsandout.activated.emit(null,null) )
-	xrbuttonsandin.button_pressed.connect(func (..._args): buttonsandin.activated.emit(null,null) )
-	xrbuttonsandhalt.button_pressed.connect(func (..._args): buttonsandhalt.activated.emit(null,null) )
-	xrbuttongarbageout.button_pressed.connect(func (..._args): buttongarbageout.activated.emit(null,null) )
-	xrbuttongarbagein.button_pressed.connect(func (..._args): buttongarbagein.activated.emit(null,null) )
-	xrbuttongarbagehalt.button_pressed.connect(func (..._args): buttongarbagehalt.activated.emit(null,null) )
+	xrbuttondoor.button_pressed.connect(func (..._args): buttondoor.activated.emit(_create_context()) )
+	xrbuttonsandout.button_pressed.connect(func (..._args): buttonsandout.activated.emit(_create_context()) )
+	xrbuttonsandin.button_pressed.connect(func (..._args): buttonsandin.activated.emit(_create_context()) )
+	xrbuttonsandhalt.button_pressed.connect(func (..._args): buttonsandhalt.activated.emit(_create_context()) )
+	xrbuttongarbageout.button_pressed.connect(func (..._args): buttongarbageout.activated.emit(_create_context()) )
+	xrbuttongarbagein.button_pressed.connect(func (..._args): buttongarbagein.activated.emit(_create_context()) )
+	xrbuttongarbagehalt.button_pressed.connect(func (..._args): buttongarbagehalt.activated.emit(_create_context()) )
 
-	
-	
-	
-	
+func _create_context() -> InteractionContext:
+	return InteractionContext.compatibility(self, &"xr")

@@ -11,8 +11,10 @@ func _ready() -> void:
 	actions = [ENUMS.ACTION.TAKE]
 	taken.connect(on_taken)
 	
-func on_taken(playerdata : PlayerData, _il : FPVInteractionLogic) -> void:
-	var inv = playerdata.get_inventory() ##TODO More than one inv?
+func on_taken(context: InteractionContext) -> void:
+	if context == null or context.playerdata == null:
+		return
+	var inv = context.playerdata.get_inventory() ##TODO More than one inv?
 	var err : INVENTORY_UIDCLASSREF.Inventory.ERROR
 	if not item_id in inv.info:
 		push_error("Missing InventoryObject information for %s!!" % item_id )

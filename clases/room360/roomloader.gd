@@ -31,14 +31,14 @@ func on_exit_tree() -> void:
 	looked_at.disconnect(on_looked_at)
 	dropped_looked_at.disconnect(on_dropped_lookedat)
 	
-func on_activate(_by_player : PlayerData, _il : FPVInteractionLogic):
+func on_activate(context: InteractionContext):
 	#Signals.request_change_room.emit(room_id)
 	var room360 = await create_room_object(room_id)
 	##Send the created room to the interaction logic so that it alters the fpv
-	change_room(room360, _il)
+	change_room(room360, context)
 
 
-func on_looked_at(_by_player : PlayerData):
+func on_looked_at(_context: InteractionContext):
 	##TODO asynchronous load
 	pass	
 
@@ -49,9 +49,10 @@ func create_room_object(id : ROOMS.ID, _force_rebuild : bool = false) -> Room360
 	var room360 = await Room360.create_room(id, north_reference)
 	return room360
 	
-func change_room(room360 : Room360, il : FPVInteractionLogic) -> void:
+func change_room(room360: Room360, context: InteractionContext) -> void:
 	if not room360.get_parent():
 		add_child(room360)
-	if not room360.request_change_internal_room.is_connected(change_room.bind(il)):
-		room360.request_change_internal_room.connect(change_room.bind(il), CONNECT_ONE_SHOT )
-	il.sent_room_to_fpv.emit(room360)
+	if not room360.request_change_internal_room.is_connected(change_room.bind(context)):
+		room360.request_change_internal_room.connect(change_room.bind(context), CONNECT_ONE_SHOT)
+	if context != null:
+		context.request_room(room360)

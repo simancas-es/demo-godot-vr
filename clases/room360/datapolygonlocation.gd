@@ -1,7 +1,7 @@
 class_name DataPolygonLocation extends Node3D
 
 #Panorama polygons that react to the mouse.
-signal pressed_door(door_to : ROOMS.ID, il : FPVInteractionLogic)
+signal pressed_door(door_to: ROOMS.ID, context: InteractionContext)
 
 #var coor_spherical : Array[Vector3]
 var info : Dictionary ## locale/hint,title,bbcode_text
@@ -112,7 +112,7 @@ func make_visible(enable : bool) -> void:
 		ip.set_visible(enable and highlight_hover)
 
 		
-func on_looked_at(_origin : Node, _il : FPVInteractionLogic):
+func on_looked_at(_context: InteractionContext):
 	make_visible(true)
 	pass	
 
@@ -121,7 +121,7 @@ func on_dropped_lookedat():
 
 	pass
 
-func on_activated(_origin : Node, _il : FPVInteractionLogic):
+func on_activated(context: InteractionContext):
 	if !activatable : return
 	
 	#Populate info menu
@@ -139,7 +139,7 @@ func on_activated(_origin : Node, _il : FPVInteractionLogic):
 	if is_door:
 		if door_to in ROOMS.ID.values():
 			#Signals.request_change_room.emit(door_to) #DE
-			pressed_door.emit(door_to, _il)
+			pressed_door.emit(door_to, context)
 	
 	pass
 	

@@ -20,11 +20,11 @@ enum MODE{ ACTIVATE, LOOK, NOTLOOK}
 #Collision determined in collision mask
 
 
-signal activated(by_player : PlayerData, inter_controller : FPVInteractionLogic) #Do something
-signal taken(by_player : PlayerData, inter_controller : FPVInteractionLogic)
-signal removed(by_player : PlayerData, inter_controller : FPVInteractionLogic)
+signal activated(context: InteractionContext) #Do something
+signal taken(context: InteractionContext)
+signal removed(context: InteractionContext)
 
-signal looked_at(by_player : PlayerData, inter_controller : FPVInteractionLogic) #Get a hint for which key to press
+signal looked_at(context: InteractionContext) #Get a hint for which key to press
 signal dropped_looked_at
 signal entered_area
 signal exited_area

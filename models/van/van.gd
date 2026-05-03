@@ -26,11 +26,11 @@ func mute_audio():
 	#print("Muting van audio")
 	audioplayer.stop()
 	
-func on_activated(_by_player : PlayerData, _il : FPVInteractionLogic) -> void:
+func on_activated(_context: InteractionContext) -> void:
 	activate()
 	pass
 	
-func on_lookedat(_by_player : PlayerData, _il : FPVInteractionLogic) -> void:
+func on_lookedat(_context: InteractionContext) -> void:
 	if !active: semi_selected()
 	#Signals.hint_text.emit("Fahren")
 	pass

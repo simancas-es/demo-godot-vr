@@ -65,6 +65,11 @@ func clear_interactables(array : Array[Interaction]) -> bool:
 	updated_interactables.emit()
 	return true
 	
+func _create_context() -> InteractionContext:
+	return InteractionContext.from_fpv(playerdata, self, Callable(self, "request_room"))
+
+func request_room(room360: Room360) -> void:
+	sent_room_to_fpv.emit(room360)
 
 func _ready() -> void:
 	#Focus Env Area
@@ -80,7 +85,7 @@ func _update_eye_collision(node : Interaction) -> void:
 		clear_interactables(_eye_interact) #TODO OPTIMIZE
 		updated_interactables.emit()
 	elif add_interactable(node, _eye_interact):
-		node.looked_at.emit(playerdata, self)
+		node.looked_at.emit(_create_context())
 		updated_interactables.emit()
 
 func _update_area_collision(node : Interaction) -> void:
@@ -118,22 +123,23 @@ func get_updated_interactable_action_hints() -> Array[String]:
 func interact() -> void:
 	for item in _eye_interact:
 		if not is_instance_valid(item): continue
+		var context := _create_context()
 		if  ENUMS.ACTION.INTERACT in item.actions:
-			item.activated.emit(playerdata, self)
+			item.activated.emit(context)
 			updated_interactables.emit()
 			return
 		if ENUMS.ACTION.TAKE in item.actions:
-			item.taken.emit(playerdata, self) ##TODO take and activate actions
+			item.taken.emit(context) ##TODO take and activate actions
 			updated_interactables.emit()
 			return
 		if ENUMS.ACTION.REMOVE in item.actions:
-			item.removed.emit(playerdata, self)
+			item.removed.emit(context)
 			updated_interactables.emit()
 			return
 		 
 	for item in _area_interact:
 		if is_instance_valid(item) and ENUMS.ACTION.INTERACT in item.actions:
-			item.activated.emit(playerdata, self)
+			item.activated.emit(_create_context())
 			updated_interactables.emit()
 			return
 

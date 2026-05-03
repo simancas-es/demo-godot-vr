@@ -16,9 +16,9 @@ func _ready() -> void:
 	
 	
 func on_pressed1(...args) -> void:
-	blower1.activated.emit(null,null)
+	blower1.activated.emit(InteractionContext.compatibility(self, &"xr"))
 	pass
 	
 func on_pressed2(...args) -> void:
-	blower2.activated.emit(null,null)
+	blower2.activated.emit(InteractionContext.compatibility(self, &"xr"))
 	pass

@@ -18,7 +18,7 @@ var signal_functions : Dictionary[Signal, Callable] = {
 }
 
 signal request_change_internal_room(room360 : Room360)
-signal exit_room_triggered_to(door_to : ROOMS.ID, il: FPVInteractionLogic)
+signal exit_room_triggered_to(door_to: ROOMS.ID, context: InteractionContext)
 
 func exit_panorama() -> void:
 	clean()
@@ -99,7 +99,7 @@ func _init(data_ : PanoramaData) -> void:
 		dpl.pressed_door.connect(on_pressed_door_to)
 	set_topic(GameState._current_topic)
 
-func on_pressed_door_to(door_to : ROOMS.ID, _il : FPVInteractionLogic) -> void:
+func on_pressed_door_to(door_to: ROOMS.ID, _context: InteractionContext) -> void:
 	var new_room =  await create_room(door_to, _north_ref)
 	request_change_internal_room.emit(new_room)
 	self.set_visibility(false)

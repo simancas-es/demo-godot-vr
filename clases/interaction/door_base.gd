@@ -80,8 +80,10 @@ func close() -> void:
 	_status = STATUS.CLOSED
 	pass
 
-func on_activated(by_player : PlayerData, _il : FPVInteractionLogic) -> void:
-	var item_info : InventoryObjectInformation = by_player.get_inventory().get_selected_obj_info()
+func on_activated(context: InteractionContext) -> void:
+	if context == null or context.playerdata == null:
+		return
+	var item_info : InventoryObjectInformation = context.playerdata.get_inventory().get_selected_obj_info()
 	var item_id = -1
 	var item_class = INVENTORYSETTINGS.CLASS.DEFAULT
 	if item_info != null:
