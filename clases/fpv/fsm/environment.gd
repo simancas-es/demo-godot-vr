@@ -33,7 +33,6 @@ func _on_lock_fpv(set_lock : bool) -> void:
 	fpv.get_view_mode_controller().apply_lock_request(set_lock)
 		
 func process_frame(_delta : float) -> StateBase:
-	fpv.rotate_body_and_camera_to_lookdir(gc.lookdir)
-	gc.lookdir = Vector2.ZERO ##Interesting effect if we dont do this
+	fpv.rotate_body_and_camera_to_lookdir(gc.consume_look_delta())
 	return null
 	

@@ -24,6 +24,12 @@ func release_mouse() -> void:
 	is_mouse_captured = false
 	mouse_released.emit()
 
+func is_crouch_pressed() -> bool:
+	return Input.is_action_pressed("crouch")
+
+func is_panorama_exit_requested() -> bool:
+	return Input.is_action_just_pressed("exit_panorama")
+
 
 ##HACK for web. Since you can't just capture the mouse in the browser...
 func _input(event: InputEvent) -> void:

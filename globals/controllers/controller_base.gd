@@ -40,6 +40,32 @@ func enable_movement() -> void:
 func disable_movement() -> void:
 	reading_movement = false
 	pass
+
+func get_look_delta() -> Vector2:
+	return lookdir
+
+func consume_look_delta() -> Vector2:
+	var current_lookdir := lookdir
+	lookdir = Vector2.ZERO
+	return current_lookdir
+
+func get_mouse_position() -> Vector2:
+	return mousepos
+
+func get_movement_direction() -> Vector3:
+	return movedir
+
+func is_jump_pressed() -> bool:
+	return is_jumping
+
+func is_sprint_pressed() -> bool:
+	return is_shift
+
+func is_crouch_pressed() -> bool:
+	return false
+
+func is_panorama_exit_requested() -> bool:
+	return false
 	
 ##Override
 func _input(event: InputEvent) -> void:

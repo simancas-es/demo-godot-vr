@@ -81,7 +81,7 @@ func process_physics(delta: float) -> StateBase:
 	#if fsm_ix.current_state != state_env: return #Not needed
 	
 	camera.position = Vector3.ZERO #BUG 
-	movedir = gc.movedir.rotated(Vector3(0, 1, 0), fpv.rotation.y)
+	movedir = gc.get_movement_direction().rotated(Vector3(0, 1, 0), fpv.rotation.y)
 	
 	#Check for ladders
 	ladder_check_overlapping_areas = area_ladder.get_overlapping_areas()
@@ -98,15 +98,15 @@ func process_physics(delta: float) -> StateBase:
 		fpv.velocity.y -= GRAV * delta
 		fpv.velocity.y = clampf(fpv.velocity.y, -20, 200)
 		
-	if gc.is_jumping and fpv.is_on_floor():
+	if gc.is_jump_pressed() and fpv.is_on_floor():
 		jump_buildup_s = clampf(jump_buildup_s + delta, 0.0, JUMP_TIME)
 
-	if (jump_buildup_s > 0) and (not gc.is_jumping or jump_buildup_s >= JUMP_TIME):
+	if (jump_buildup_s > 0) and (not gc.is_jump_pressed() or jump_buildup_s >= JUMP_TIME):
 		fpv.velocity.y = jumping_vel(jump_buildup_s)
 		jump_buildup_s = 0.0
 	
 	if fpv.is_on_floor():
-		if gc.is_shift: #TODO Lateral movementt
+		if gc.is_sprint_pressed(): #TODO Lateral movementt
 			#Tweak time to max		
 			fraction_gap = min(1, fraction_gap + delta/MAX_SPEED_TIME) 
 		else:
@@ -178,13 +178,13 @@ var crouching_h_m : float = fpv.camera_crouch_height_m
 ##Changes between crouching and standing
 func process_frame(delta : float) -> StateBase:
 	var current_h = fpv.camerabaseposition.position.y
-	if (current_h > crouching_h_m) and Input.is_action_pressed("crouch"):
+	if (current_h > crouching_h_m) and gc.is_crouch_pressed():
 		#Start crouching: camera lowers, when at the end, new shape
 		fpv.camerabaseposition.position.y -= (standing_h_m - crouching_h_m)/ crouching_time_down_s * delta
 		pass
 	
 	#If stopped crouching
-	elif (current_h < standing_h_m) and (not Input.is_action_pressed("crouch")):
+	elif (current_h < standing_h_m) and (not gc.is_crouch_pressed()):
 		#Check that there is room above
 		#TODO
 		#Move upwards

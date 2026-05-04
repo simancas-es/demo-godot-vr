@@ -67,7 +67,7 @@ static func get_upwards_factor(a: int, b : int, c : int) -> int:
 
 ##Moves up and down
 func process_physics(_delta : float) -> StateBase:
-    movedir = gc.movedir #No need to rotate it.rotated(Vector3(0, 1, 0), fpv.rotation.y)
+    movedir = gc.get_movement_direction() #No need to rotate it.rotated(Vector3(0, 1, 0), fpv.rotation.y)
     if movedir == Vector3.ZERO : return null
     
     #Check for ladders

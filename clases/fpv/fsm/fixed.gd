@@ -36,7 +36,7 @@ func _on_lock_fpv(set_lock : bool) -> void:
 	fpv.get_view_mode_controller().apply_lock_request(set_lock)
 		
 func process_frame(_delta) -> StateBase:
-	camera.cast_ray(gc.mousepos)
+	camera.cast_ray(gc.get_mouse_position())
 	return null
 	
 func process_physics(_delta) -> StateBase:

@@ -50,12 +50,11 @@ func _on_lock_fpv(set_lock : bool) -> void:
 	fpv.get_view_mode_controller().apply_lock_request(set_lock)
 		
 func process_frame(_delta : float) -> StateBase:
-	fpv.rotate_body_and_camera_to_lookdir(gc.lookdir)
-	gc.lookdir = Vector2.ZERO
+	fpv.rotate_body_and_camera_to_lookdir(gc.consume_look_delta())
 	return null
 	
 func process_input(_event : InputEvent) -> StateBase:
-	if Input.is_action_just_pressed("exit_panorama"):
+	if gc.is_panorama_exit_requested():
 		fpv.set_mode_environment() #HACK
 		get_viewport().set_input_as_handled()
 	return null
