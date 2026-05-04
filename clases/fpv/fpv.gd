@@ -1,6 +1,7 @@
 class_name FPV extends CharacterBody3D
 const StateMachineBase := FSM_UIDCLASSREF.StateMachineBase
 const StateBase := FSM_UIDCLASSREF.StateBase
+const FPVViewModeController := preload("res://clases/fpv/fpv_view_mode_controller.gd")
 #FPV Object for movement and interaction with the environment.
 #Check collision layers.
 #Collision 16 is the world as an obstacle
@@ -25,12 +26,14 @@ var inventory : INVENTORY_UIDCLASSREF.Inventory
 var gc : ControllerBase
 @onready var fsm_ix : StateMachineBase = %StateMachineInteraction
 @onready var fsm_mov : StateMachineBase = %StateMachineMovement
+var view_mode_controller: FPVViewModeController = null
 
 
 @onready var state_fixed : StateBase = %Fixed
 @onready var state_room : StateBase = %Room
 @onready var state_environment : StateBase = %Environment
 @onready var state_falcon : StateBase = %Falcon
+@onready var state_inventory : StateBase = $StateMachineInteraction/inInventory
 @onready var state_nocam_control : StateBase = %SMNotControlled
 @onready var state_still : StateBase = %mov_still
 @onready var state_physics : StateBase = %mov_physics
@@ -57,12 +60,13 @@ func _ready() -> void:
 	playerdata = GameState.get_player(player_idx)
 	camera = %Camera3D
 	interaction_logic = %InteractionLogic
+	view_mode_controller = FPVViewModeController.new(self, camera, %RayCast3D, camera.raycast_fixed, %AreaCheck, camera.center_aim_x)
 	gc = playerdata.get_controller()
 	inventory = playerdata.get_inventory() ##TODO: Refactor how they are assigned
 	interaction_logic.playerdata = playerdata
 	
-	for st : StateBase in [state_fixed, state_environment, state_room, 
-						state_still, state_physics, state_ladder]:
+	for st : StateBase in [state_fixed, state_environment, state_room,
+						state_falcon, state_inventory, state_still, state_physics, state_ladder]:
 		st.fpv = self #HACK
 		st.gc = gc #HACK
 		
@@ -91,6 +95,9 @@ func _on_exit_tree() -> void:
 	
 func get_camera() -> FPVCamera:
 	return camera
+
+func get_view_mode_controller() -> FPVViewModeController:
+	return view_mode_controller
 	
 func reset_camera() -> void:
 	camera.position = Vector3.ZERO
@@ -128,14 +135,12 @@ func set_mode_panorama() -> void:
 	fsm_mov.change_state(state_still)
 
 func set_mode_environment() -> void:
-	camera.environment = null
 	fsm_ix.change_state(state_environment)
 	fsm_mov.change_state(state_physics)
 	pass
 	
 func set_mode_fixed(keep_background : bool) -> void:
-	if not keep_background:
-		camera.environment = load(RESOURCES.CAMERA_NORMAL_SKY)
+	view_mode_controller.set_fixed_keep_background(keep_background)
 	fsm_ix.change_state(state_fixed)
 	fsm_mov.change_state(state_still)
 

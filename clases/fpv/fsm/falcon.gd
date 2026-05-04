@@ -27,30 +27,10 @@ func enter() -> void:
 	connect_signals()
 	#Movement locked, camera fixed, can't rotate.
 	#Hits determined by mouse position
-	set_current_fpv_mode()
-	
-	raycast_center.enabled = false
-	if not raycast_fixed.enabled : raycast_fixed.enabled = true
-	
-	center_aim_x.visible = false #TODO Tween
-	
-	raycast_center.collision_mask = ENUMS.COLLISION_LAYER.FALCON
-	raycast_fixed.collision_mask = ENUMS.COLLISION_LAYER.FALCON
-	
-	raycast_fixed.collide_with_areas = true #!!
-	#Camera reset
-	camera.position = Vector3.ZERO
-	camera.cull_mask = ENUMS.VISIBILITY.ENV
-
-	area_check.monitoring = false
-	camera.update_actionhints()
-	fpv.entered_mode_falcon.emit()
+	fpv.get_view_mode_controller().apply_falcon()
 	
 func _on_lock_fpv(set_lock : bool) -> void:
-	if !set_lock:
-		Signals.release_mouse.emit()
-	else:
-		Signals.capture_mouse.emit()
+	fpv.get_view_mode_controller().apply_lock_request(set_lock)
 		
 func set_current_fpv_mode() -> void:
-	Signals.release_mouse.emit()
+	fpv.get_view_mode_controller().apply_current_mouse_policy()

@@ -24,30 +24,13 @@ func exit() -> void:
 	
 func enter() -> void:
 	connect_signals()
-	
-	set_current_fpv_mode()
-	raycast_center.enabled = true
-	raycast_fixed.enabled = false
-
-	center_aim_x.visible = true #TODO Tween
-	raycast_center.collision_mask = ENUMS.COLLISION_LAYER.ENVIRONMENT_EYE
-	area_check.monitoring = true
-	
-	#Camera Reset
-	camera.position = Vector3.ZERO
-	camera.cull_mask = ENUMS.VISIBILITY.ENV
-
-	camera.update_actionhints()
-	fpv.entered_mode_env.emit()
+	fpv.get_view_mode_controller().apply_environment()
 
 func set_current_fpv_mode() -> void:
-	Signals.capture_mouse.emit()
+	fpv.get_view_mode_controller().apply_current_mouse_policy()
 
 func _on_lock_fpv(set_lock : bool) -> void:
-	if !set_lock:
-		Signals.release_mouse.emit()
-	else:
-		Signals.capture_mouse.emit()
+	fpv.get_view_mode_controller().apply_lock_request(set_lock)
 		
 func process_frame(_delta : float) -> StateBase:
 	fpv.rotate_body_and_camera_to_lookdir(gc.lookdir)
