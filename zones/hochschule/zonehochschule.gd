@@ -24,25 +24,25 @@ func setup_introscreen():
 	#set_fixed_camera.call_deferred(true)
 	#Signals.release_mouse.emit.call_deferred()
 	
-	##Set fixscreen. TODO: BUG: Fragile, depends on FPV being a group...
-	var group_nodes : Array[FPV] = get_fpvs() #NO_TRANSLATE
-	for fpv : FPV in group_nodes:
+	##Set fixscreen from the current zone FPV.
+	var fpv: FPV = get_active_fpv()
+	if fpv != null:
 		fpv.set_mode_fixed(true)
 	pass
 	
 func activate_falcon() -> void:
 	Signals.set_falcon_camera.emit()
 	if falcon_view:
-		var fpvs = get_fpvs()
-		if fpvs.is_empty(): return
-		falcon_view.activate_view(fpvs[0], fpvs[0].camera)
+		var fpv: FPV = get_active_fpv()
+		if fpv == null: return
+		falcon_view.activate_view(fpv, fpv.camera)
 	
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("test_falcondrop"): #ç
 		if falcon_view:
 			falcon_view.deactivate_view()
-			var fpvs = get_fpvs()
-			if fpvs.is_empty(): return #TODO differently
-			await FalconView.generate_follow_falcondrop(self, fpvs[0].camera, 2.0, starting_lookat, starting_lookat)
+			var fpv: FPV = get_active_fpv()
+			if fpv == null: return #TODO differently
+			await FalconView.generate_follow_falcondrop(self, fpv.camera, 2.0, starting_lookat, starting_lookat)
 	pass

@@ -1,6 +1,8 @@
 extends Node3D
 class_name BaseZone
 
+const ZoneFPVRuntime := preload("res://clases/zones/zone_fpv_runtime.gd")
+
 #Class that allows the creation of 3D environments and coupling them
 #	with different 360x180º virtual ROOMS. These environments are called ZONES
 #	and represent a more or less collection of buildings and rooms that have 
@@ -34,6 +36,7 @@ var ENV_ID : ENVIRONMENTS.ID ##Identification of this environment. We pass it to
 var _room_positions : Array[RoomLoader] = [] #Information about the location of rooms within the 3D environment
 var _last_geo_position : Vector3 #Last informaton about FPV
 var _last_geo_rotation : Vector3 #Last rotation of the FPV
+var _fpv_runtime: ZoneFPVRuntime = null
 #
 #var _cached_panorama_polygons : Dictionary[ROOMS.ID, Array] #Godot doesnt allow nested hints...
 #var _data_rooms : Dictionary[ROOMS.ID, PanoramaData] = {}
@@ -133,6 +136,11 @@ func _on_reset_position_player() -> void:
 	reset_fpv_to_default_starting_position()
 	pass
 
+func get_fpv_runtime() -> ZoneFPVRuntime:
+	if _fpv_runtime == null:
+		_fpv_runtime = ZoneFPVRuntime.new(self)
+	return _fpv_runtime
+
 ##Aligns the position and look_at target for the FPV
 func reset_fpv_to_default_starting_position() -> void:
 	#LOAD FPV in this INSTANCE
@@ -184,26 +192,11 @@ func set_topic(topic : TOPICS.LAYER) -> void:
 
 ##Creates or reactivates a FPV instance and rotates it to the needed position.
 func create_new_fpv(pos : Vector3 = Vector3.ZERO, look_target : Vector3 = Vector3.UP ) -> FPV:
-	for c in get_children():
-		if c is FPV:
-			remove_child(c)
-			c.queue_free()
-	##HACK. TODO. Optimize.
-	var fpv = preload(RESOURCES.FPV).instantiate()
-	add_child(fpv)
-	assert (fpv.is_node_ready())
-	assert (fpv.camera)
-	assert (get_parent() and get_parent().is_inside_tree())
-	fpv.position = pos	
-	if pos != look_target: #TODO. Possible bugs
-		if look_target != Vector3.UP:
-			#look_target = starting_lookat.position
-			fpv.look_at(look_target)
-	
-	#Start with env
-	set_env_camera(fpv)
-	
-	fpv.entered_mode_room.connect(_on_changed_room)
+	var fpv: FPV = get_fpv_runtime().replace_active_fpv(pos, look_target)
+	if fpv == null:
+		return null
+	if not fpv.entered_mode_room.is_connected(_on_changed_room):
+		fpv.entered_mode_room.connect(_on_changed_room)
 	#fpv.entered_mode_falcon.connect(set_falcon_camera.bind(fpv))
 	#fpv.entered_mode_env.connect(set_env_camera.bind(fpv))
 	
@@ -271,9 +264,13 @@ func show_zone() -> void:
 	var fpv = await create_new_fpv(_last_geo_position)
 	#Signals.set_env_camera.emit()
 	#set_env_camera(fpv)
+func get_active_fpv() -> FPV:
+	return get_fpv_runtime().get_active_fpv()
+
 func get_fpvs() -> Array[FPV]:
-	var array : Array[FPV]
-	for fpv in get_tree().get_nodes_in_group("FPV"):
+	var array : Array[FPV] = []
+	var fpv: FPV = get_active_fpv()
+	if fpv != null:
 		array.append(fpv)
 	return array
 	
