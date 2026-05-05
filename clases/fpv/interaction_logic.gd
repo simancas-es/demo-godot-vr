@@ -100,24 +100,10 @@ func _update_area_collision(node : Interaction) -> void:
 
 ##Generates the texts for the action hints and passes them to the camera
 func get_updated_interactable_action_hints() -> Array[String]:
-	var array_strings : Array[String] = []; array_strings.resize(ENUMS.ACTION_KW.size())
-	var i = 0
-	
-	var current_ix_items : Array[Interaction] = get_current_interactable_items()
-	for action in ENUMS.ACTION_KW.keys():
-		#var keyname : String = ENUMS.get_keystring(action)
-		#print("keystring '%s' , keyname '%s'" % [keystring, keyname])
-		for item in current_ix_items:
-			if not is_instance_valid(item) : continue
-			var has_hint = item.available_hint_for_item(playerdata, action)
-			if has_hint:
-				var unformatted_hint = item.get_hint_for_item(playerdata, action)
-				var formatted_hint = ENUMS.format_hints(unformatted_hint, playerdata, action, item)
-				##TODO Improve format with more keywords.
-				array_strings[i] = formatted_hint
-				i += 1 
-				break #Go to next action
-	return array_strings
+	return InteractionHintResolver.resolve_strings(get_current_interactable_items(), playerdata)
+
+func get_updated_interactable_action_hint_entries() -> Array[InteractionHint]:
+	return InteractionHintResolver.resolve(get_current_interactable_items(), playerdata)
 
 ##Selects the first available item from the list of interactables
 func interact() -> void:

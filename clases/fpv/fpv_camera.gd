@@ -43,11 +43,12 @@ func setup_actionhints() -> void:
 
 ##Gets for each available action an object that has it
 func update_actionhints()-> void:
-	var i = -1
+	render_actionhints(interaction_logic.get_updated_interactable_action_hint_entries())
+
+func render_actionhints(hints: Array[InteractionHint]) -> void:
 	var hint_labels_camera = action_hints.get_children()
-	var updated_hint_texts = interaction_logic.get_updated_interactable_action_hints()
 	
-	if updated_hint_texts.size() > hint_labels_camera.size():
+	if hints.size() > hint_labels_camera.size():
 		push_error("Mismatch between Camera hints and Action_KW!!!")
 		return
 		
@@ -57,8 +58,9 @@ func update_actionhints()-> void:
 		l.visible = false
 		l.label_settings = center_aim_x.label_settings
 		
-		l.text = updated_hint_texts[c]
-		if l.text != "": l.visible = true
+		if c < hints.size():
+			l.text = hints[c].text
+			if l.text != "": l.visible = true
 	
 	return
 
