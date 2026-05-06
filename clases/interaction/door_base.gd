@@ -105,6 +105,11 @@ func on_activated(context: InteractionContext) -> void:
 	
 ##Door Logic. TODO do with a state machine
 func available_hint_for_item(playerdata : PlayerData, action : ENUMS.ACTION) -> bool:
+	var context: InteractionHintContextScript = InteractionHintContextScript.from_playerdata(playerdata)
+	return available_hint_for_context(context, action)
+
+##Door Logic. TODO do with a state machine
+func available_hint_for_context(context: InteractionHintContextScript, action: ENUMS.ACTION) -> bool:
 	#var item_info : InventoryObjectInformation = playerdata.get_inventory().get_selected_obj_info()
 	if action != ENUMS.ACTION.INTERACT : return false
 		
@@ -116,17 +121,22 @@ func available_hint_for_item(playerdata : PlayerData, action : ENUMS.ACTION) -> 
 		return true
 	return false
 
-##Door logic. TODO Should use a State machine 
+##Door logic. TODO Should use a State machine
 ##Returns the unformated string for a possible hint of this item
 func get_hint_for_item(playerdata : PlayerData, action : ENUMS.ACTION) -> String:
+	var context: InteractionHintContextScript = InteractionHintContextScript.from_playerdata(playerdata)
+	return get_hint_for_context(context, action)
+
+##Door logic. TODO Should use a State machine
+##Returns the unformated string for a possible hint of this item
+func get_hint_for_context(context: InteractionHintContextScript, action: ENUMS.ACTION) -> String:
 	if action != ENUMS.ACTION.INTERACT : return ""
 	
-	var item_info : InventoryObjectInformation = playerdata.get_inventory().get_selected_obj_info()
-	var item_id = -1
-	var item_class = INVENTORYSETTINGS.CLASS.DEFAULT
-	if item_info != null:
-		item_id = item_info.ID
-		item_class = item_info.CLASS
+	var item_id: INVENTORYSETTINGS.ID = INVENTORYSETTINGS.ID.INVALID
+	var item_class: INVENTORYSETTINGS.CLASS = INVENTORYSETTINGS.CLASS.DEFAULT
+	if context != null:
+		item_id = context.selected_item_id
+		item_class = context.selected_item_class
 	
 	if (_status == STATUS.CLOSED) and (_lock == LOCK.LOCKED): #Available for unlocking
 		#if item_id in key_item:
@@ -136,11 +146,11 @@ func get_hint_for_item(playerdata : PlayerData, action : ENUMS.ACTION) -> String
 		#if item_id in key_item:
 		if item_class == INVENTORYSETTINGS.CLASS.KEY:
 			return tr(lock_text)
-		elif item_id < 0: #Nothing selected
+		elif item_id == INVENTORYSETTINGS.ID.INVALID: #Nothing selected
 			return tr(open_text)
 	elif (_status == STATUS.OPENED): #Available for closing
 		#if not item_id in key_item: #If not holding key
-		if item_id < 0:#Nothing selected
+		if item_id == INVENTORYSETTINGS.ID.INVALID:#Nothing selected
 			return tr(close_text)
 
 	return ""

@@ -1,6 +1,8 @@
 extends Area3D
 class_name Interaction
 
+const InteractionHintContextScript := preload("res://clases/fpv/interaction_hint_context.gd")
+
 enum MODE{ ACTIVATE, LOOK, NOTLOOK}
 
 
@@ -31,7 +33,15 @@ signal exited_area
 
 ##Override as needed as long as it has the same signature
 func available_hint_for_item(playerdata : PlayerData, action : ENUMS.ACTION) -> bool:
-	var item_id : INVENTORYSETTINGS.ID = playerdata.get_inventory().get_selected_id()
+	var context: InteractionHintContextScript = InteractionHintContextScript.from_playerdata(playerdata)
+	return available_hint_for_context(context, action)
+
+##Override as needed as long as it has the same signature
+func available_hint_for_context(context: InteractionHintContextScript, action: ENUMS.ACTION) -> bool:
+	var item_id: INVENTORYSETTINGS.ID = INVENTORYSETTINGS.ID.INVALID
+	if context != null:
+		item_id = context.selected_item_id
+
 	if (action == ENUMS.ACTION.INTERACT) and (item_id in special_hint_text):
 		return true
 	if action in actions:
@@ -41,12 +51,22 @@ func available_hint_for_item(playerdata : PlayerData, action : ENUMS.ACTION) -> 
 ##Override as needed as long as it has the same signature
 ##Returns the unformated string for a possible hint of this item
 func get_hint_for_item(playerdata : PlayerData, action : ENUMS.ACTION) -> String:
-	var item_id : INVENTORYSETTINGS.ID = playerdata.get_inventory().get_selected_id()
+	var context: InteractionHintContextScript = InteractionHintContextScript.from_playerdata(playerdata)
+	return get_hint_for_context(context, action)
+
+##Override as needed as long as it has the same signature
+##Returns the unformated string for a possible hint of this item
+func get_hint_for_context(context: InteractionHintContextScript, action: ENUMS.ACTION) -> String:
+	var item_id: INVENTORYSETTINGS.ID = INVENTORYSETTINGS.ID.INVALID
+	if context != null:
+		item_id = context.selected_item_id
+
 	if (action == ENUMS.ACTION.INTERACT) and (item_id in special_hint_text):
 		return tr(special_hint_text[item_id])
 	if action in hint_text:
 		return tr(hint_text[action])
-	else: return ENUMS.ACTION_TEXT[action]
+	elif action in ENUMS.ACTION_TEXT:
+		return ENUMS.ACTION_TEXT[action]
 	return ""
 
 ##Override as needed

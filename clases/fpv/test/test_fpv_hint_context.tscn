@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://clases/fpv/test/test_fpv_hint_context.gd" id="1_6d2c1"]
+
+[node name="TestFpvHintContext" type="Node"]
+script = ExtResource("1_6d2c1")
