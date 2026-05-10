@@ -2,6 +2,7 @@ extends Node3D
 class_name BaseZone
 
 const ZoneFPVRuntime := preload("res://clases/zones/zone_fpv_runtime.gd")
+const ZoneMinimap := preload("res://clases/zones/zone_minimap.gd")
 
 #Class that allows the creation of 3D environments and coupling them
 #	with different 360x180º virtual ROOMS. These environments are called ZONES
@@ -23,6 +24,7 @@ const ZoneFPVRuntime := preload("res://clases/zones/zone_fpv_runtime.gd")
 @export var starting_position : Node3D #Starting position and rotation of the fpv
 @export var starting_lookat : Node3D
 @export var falcon_view : FalconView = null
+@export var zone_minimap: ZoneMinimap = null
 
 signal finished_setup
 ##Not used as of now.
@@ -266,6 +268,9 @@ func show_zone() -> void:
 	#set_env_camera(fpv)
 func get_active_fpv() -> FPV:
 	return get_fpv_runtime().get_active_fpv()
+
+func get_zone_minimap() -> ZoneMinimap:
+	return zone_minimap
 
 func get_fpvs() -> Array[FPV]:
 	var array : Array[FPV] = []
