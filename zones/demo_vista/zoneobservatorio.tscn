@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dqpu4ej7811ev"]
+[gd_scene format=3 uid="uid://dqpu4ej7811ev"]
 
 [ext_resource type="Script" uid="uid://dow7n2v05dt1l" path="res://zones/demo_vista/zoneobservatorio.gd" id="1_hi4wa"]
 [ext_resource type="Texture2D" uid="uid://bfm31womnlm63" path="res://assets/zones/demo_vista/vista_background.jpg" id="2_yhe0a"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://f65bedyq1jy6" path="res://models/demo_manhole/manholecover.tscn" id="13_5sa2k"]
 [ext_resource type="Script" uid="uid://ieqv0678lw8" path="res://systems/system-stateful-persistence/interfaces/system_world_state_registry_interface_position.gd" id="14_2ctb5"]
 [ext_resource type="PackedScene" uid="uid://d3qp4a3ahe2gf" path="res://models/demo_basin/task_blackboard/demo_task_blackboard.tscn" id="15_fm72i"]
+[ext_resource type="PackedScene" path="res://clases/zones/zone_minimap.tscn" id="16_minimap"]
+[ext_resource type="Texture2D" uid="uid://xyoxheab0a26" path="res://assets/zones/demo_vista/demo_vista.png" id="17_minimap"]
 [ext_resource type="PackedScene" uid="uid://b3otd4yyygom7" path="res://assets/inventory_objects/demo_aerator/aerator_head.gltf" id="20_radj1"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2rlkq"]
@@ -54,68 +56,76 @@ background_mode = 2
 sky = SubResource("Sky_5sa2k")
 sky_rotation = Vector3(0, 3.14159, 0)
 
-[node name="ZoneObservatorio" type="Node3D" node_paths=PackedStringArray("north_point", "starting_position", "starting_lookat", "falcon_view", "navregion_default", "van")]
+[node name="ZoneObservatorio" type="Node3D" unique_id=383696824 node_paths=PackedStringArray("north_point", "starting_position", "starting_lookat", "falcon_view", "zone_minimap", "navregion_default", "van")]
 script = ExtResource("1_hi4wa")
 north_point = NodePath("North")
 starting_position = NodePath("spawn")
 starting_lookat = NodePath("lookat")
 falcon_view = NodePath("FalconView")
+zone_minimap = NodePath("ZoneMinimap")
 navregion_default = NodePath("NavigationRegion3D")
 van = NodePath("Van")
 _object_topics = Dictionary[int, Array]({
 0: []
 })
 
-[node name="observatorio" parent="." instance=ExtResource("3_7dx48")]
+[node name="observatorio" parent="." unique_id=2019084700 instance=ExtResource("3_7dx48")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=434928638]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.7859, 27.9334, -10.3044)
 light_energy = 15.154
 omni_range = 50.04
 omni_attenuation = 0.481
 
-[node name="North" type="Node3D" parent="."]
+[node name="North" type="Node3D" parent="." unique_id=1888584697]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.64, 0, -20.3838)
 
-[node name="spawn" type="Node3D" parent="."]
+[node name="spawn" type="Node3D" parent="." unique_id=557405943]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.72858, 0.120226, -6.70748)
 
-[node name="lookat" type="Node3D" parent="."]
+[node name="lookat" type="Node3D" parent="." unique_id=1102912188]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3714, 0, -19.6792)
 
-[node name="EnvironmentFloor" type="StaticBody3D" parent="."]
+[node name="ZoneMinimap" parent="." unique_id=637047056 node_paths=PackedStringArray("world_anchor_a", "world_anchor_b") instance=ExtResource("16_minimap")]
+map_texture = ExtResource("17_minimap")
+world_anchor_a = NodePath("../North")
+world_anchor_b = NodePath("../spawn")
+map_anchor_a_pixels = Vector2(19, 178)
+map_anchor_b_pixels = Vector2(339, 178)
+
+[node name="EnvironmentFloor" type="StaticBody3D" parent="." unique_id=737231889]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 collision_layer = 32768
 collision_mask = 32768
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentFloor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentFloor" unique_id=2065744542]
 shape = SubResource("ConcavePolygonShape3D_2rlkq")
 
-[node name="Van" parent="." instance=ExtResource("4_m205r")]
+[node name="Van" parent="." unique_id=1653635160 instance=ExtResource("4_m205r")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6318, 0, -14.9966)
 
-[node name="FalconView" type="Path3D" parent="." node_paths=PackedStringArray("lookatnode")]
+[node name="FalconView" type="Path3D" parent="." unique_id=800895136 node_paths=PackedStringArray("lookatnode")]
 transform = Transform3D(0.999883, 0.0153234, 0, -0.0153234, 0.999883, 0, 0, 0, 1, 0, 0, 0)
 curve = SubResource("Curve3D_2rlkq")
 script = ExtResource("5_h04p4")
 lookatnode = NodePath("../lookat")
 speed = 10.0
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=199966213]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
 visible = false
 navigation_mesh = SubResource("NavigationMesh_2rlkq")
 
-[node name="2m_cube" type="MeshInstance3D" parent="."]
+[node name="2m_cube" type="MeshInstance3D" parent="." unique_id=1121420544]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.65201, 1.04395, -19.5207)
 mesh = SubResource("BoxMesh_2rlkq")
 
-[node name="DemoConcreteBasin" parent="." instance=ExtResource("7_47ml6")]
+[node name="DemoConcreteBasin" parent="." unique_id=488144733 instance=ExtResource("7_47ml6")]
 transform = Transform3D(-0.559396, 0, -0.828901, 0, 1, 0, 0.828901, 0, -0.559396, -1.16707, 0, -6.47818)
 
-[node name="item_beaker" type="Area3D" parent="."]
+[node name="item_beaker" type="Area3D" parent="." unique_id=948167063]
 transform = Transform3D(0.58674, 0, -0.809775, 0, 1, 0, 0.809775, 0, 0.58674, 6.54696, 1.58263, -13.6321)
 monitoring = false
 script = ExtResource("7_0c6xu")
@@ -123,19 +133,19 @@ qty = 1
 actions = Array[int]([2])
 metadata/_custom_type_script = "uid://cpxvn4y6ne5kl"
 
-[node name="beaker2" parent="item_beaker" instance=ExtResource("8_k30he")]
+[node name="beaker2" parent="item_beaker" unique_id=1411638848 instance=ExtResource("8_k30he")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="item_beaker"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="item_beaker" unique_id=670536075]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.339325, 0)
 shape = SubResource("BoxShape3D_j27ie")
 
-[node name="InventoryPickupPersistenceHelper2" type="Node" parent="item_beaker"]
+[node name="InventoryPickupPersistenceHelper2" type="Node" parent="item_beaker" unique_id=594139757]
 script = ExtResource("9_fm72i")
 world_id = "DEMO_BEAKER_PICKUP"
 zone_register = 2
 metadata/_custom_type_script = "uid://0a00hsvr441u"
 
-[node name="item_dungeonkeys" type="Area3D" parent="."]
+[node name="item_dungeonkeys" type="Area3D" parent="." unique_id=1620608258]
 transform = Transform3D(0.609578, 0.792726, 0, 3.46512e-08, -2.66455e-08, -1, -0.792726, 0.609578, -4.37114e-08, 5.68412, 1.7066, -12.6568)
 monitoring = false
 script = ExtResource("7_0c6xu")
@@ -143,54 +153,54 @@ item_id = 1
 qty = 1
 actions = Array[int]([2])
 
-[node name="keys" parent="item_dungeonkeys" instance=ExtResource("10_j27ie")]
+[node name="keys" parent="item_dungeonkeys" unique_id=1489021226 instance=ExtResource("10_j27ie")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="item_dungeonkeys"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="item_dungeonkeys" unique_id=963377966]
 transform = Transform3D(1, 0, 5.57776e-13, 0, 1, -2.59348e-13, 0, 5.68434e-13, 1, 0, 0.000610352, 0.0612992)
 shape = SubResource("BoxShape3D_yhi3c")
 
-[node name="InventoryPickupPersistenceHelper" type="Node" parent="item_dungeonkeys"]
+[node name="InventoryPickupPersistenceHelper" type="Node" parent="item_dungeonkeys" unique_id=288078364]
 script = ExtResource("9_fm72i")
 world_id = "DEMO_DUNGEONKEYS_PICKUP"
 zone_register = 2
 metadata/_custom_type_script = "uid://0a00hsvr441u"
 
-[node name="item_areator" type="Area3D" parent="."]
+[node name="item_areator" type="Area3D" parent="." unique_id=850608561]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98979, 3.05656, -13.7336)
 script = ExtResource("7_0c6xu")
 item_id = 2
 qty = 3
 
-[node name="aerator_head" parent="item_areator" instance=ExtResource("20_radj1")]
+[node name="aerator_head" parent="item_areator" unique_id=1049806225 instance=ExtResource("20_radj1")]
 
-[node name="aerator_head2" parent="item_areator" instance=ExtResource("20_radj1")]
+[node name="aerator_head2" parent="item_areator" unique_id=350909166 instance=ExtResource("20_radj1")]
 transform = Transform3D(0.826727, 0, -0.562603, 0, 1, 0, 0.562603, 0, 0.826727, 0, 0.019856, 0)
 
-[node name="aerator_head3" parent="item_areator" instance=ExtResource("20_radj1")]
+[node name="aerator_head3" parent="item_areator" unique_id=15526337 instance=ExtResource("20_radj1")]
 transform = Transform3D(0.129113, -0.00690211, 0.991606, 0.0533817, 0.998574, 0, -0.990192, 0.0529336, 0.129298, 0.0547355, 0.043739, 0.0168832)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="item_areator"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="item_areator" unique_id=374228619]
 shape = SubResource("BoxShape3D_radj1")
 
-[node name="InventoryPickupPersistenceHelper3" type="Node" parent="item_areator"]
+[node name="InventoryPickupPersistenceHelper3" type="Node" parent="item_areator" unique_id=49936585]
 script = ExtResource("9_fm72i")
 world_id = "DEMO_AERATOR_PICKUP"
 zone_register = 2
 metadata/_custom_type_script = "uid://0a00hsvr441u"
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=519558855]
 environment = SubResource("Environment_2ctb5")
 
-[node name="Manholecover" parent="." instance=ExtResource("13_5sa2k")]
+[node name="Manholecover" parent="." unique_id=313294275 instance=ExtResource("13_5sa2k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1031, 0, -4.77878)
 
-[node name="StatefulPersistenceInterfacePosition" type="Node" parent="Manholecover"]
+[node name="StatefulPersistenceInterfacePosition" type="Node" parent="Manholecover" unique_id=921249875]
 script = ExtResource("14_2ctb5")
 world_id = "demo_manholecover"
 zone_register = 2
 metadata/_custom_type_script = "uid://ieqv0678lw8"
 
-[node name="DemoTaskBlackboard" parent="." instance=ExtResource("15_fm72i")]
+[node name="DemoTaskBlackboard" parent="." unique_id=92072286 instance=ExtResource("15_fm72i")]
 transform = Transform3D(0.80457264, 0, -0.5938543, 0, 1, 0, 0.5938543, 0, 0.80457264, 9.947284, 0, -9.222879)
 
 [editable path="item_dungeonkeys/keys"]
