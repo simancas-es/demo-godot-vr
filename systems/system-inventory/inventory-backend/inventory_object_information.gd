@@ -9,7 +9,9 @@ extends Resource
 
 #TODO combinations
 @export var texture : Texture2D = null ##TODO Tool to just take picture from 3D
+@export var world_model : PackedScene = null ##Model used when generating or previewing the world pickup.
 @export var inspect_model : PackedScene = null ##Model for the Item Inspector. GLTF or Node3D scene.
+@export var hint_text : String = "" ##Editor-authored default hint text for generated pickups or UI.
 
 const inspect_translations_default = INVENTORYSETTINGS.INSPECT_TRANSLATIONS_TEMPLATE
 @export_file("*.json") var inspect_translations_path = "" ##File with item inspect desc in format "xx":...
