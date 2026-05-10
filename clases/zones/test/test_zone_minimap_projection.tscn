@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://clases/zones/test/test_zone_minimap_projection.gd" id="1_e58jv"]
+
+[node name="TestZoneMinimapProjection" type="Node"]
+script = ExtResource("1_e58jv")
