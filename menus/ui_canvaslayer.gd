@@ -1,6 +1,9 @@
 extends CanvasLayer
 class_name MenuManager
 
+const ZoneMinimap := preload("res://clases/zones/zone_minimap.gd")
+const MinimapMenu := preload("res://menus/minimap/minimap_menu.gd")
+
 #@onready var sm : StateMachine = %SMMenuManager
 
 @onready var pc : PanelContainer = %PanelContainer ##Panelcontainer for all permanent menus
@@ -12,6 +15,7 @@ class_name MenuManager
 @onready var state_inscene : StateMenus = %InScene
 @onready var state_envselector : StateMenusEnvSelector = %StateMenuEnvSelector
 @onready var state_settings : StateMenus = %StateMenuSettings
+@onready var minimap_menu: MinimapMenu = %MinimapMenu
 
 
 #
@@ -30,6 +34,24 @@ signal launched_env_change(from : ENVIRONMENTS.ID, target : ENVIRONMENTS.ID)
 
 func _ready() -> void:
 	Signals.ui_msg_top.connect(generate_message_top)
+
+func show_minimap(zone_minimap: ZoneMinimap, active_fpv: Node3D) -> void:
+	if minimap_menu == null:
+		return
+	minimap_menu.show_for(zone_minimap, active_fpv)
+
+func hide_minimap() -> void:
+	if minimap_menu == null:
+		return
+	minimap_menu.close()
+
+func is_minimap_visible() -> bool:
+	return minimap_menu != null and minimap_menu.is_open()
+
+func refresh_minimap(zone_minimap: ZoneMinimap, active_fpv: Node3D) -> void:
+	if minimap_menu == null or not minimap_menu.is_open():
+		return
+	minimap_menu.show_for(zone_minimap, active_fpv)
 	
 ##Generates a message at the top of the screen that vanishes. 
 ##It doesnt interact with anything and has a timer

@@ -38,6 +38,7 @@ signal credits
 #signal enter_introscreen
 signal select_env(from : ENVIRONMENTS.ID)
 signal toggle_tasks_menu
+signal no_minimap_available
 
 #Messages to screen
 signal ui_msg_top(text : float)

@@ -1,5 +1,7 @@
 extends StateMenus
 
+const ZoneMinimap := preload("res://clases/zones/zone_minimap.gd")
+
 #This state represents the interface options when inside a zone
 #Menu opens a menu with settings and exit to main screen and exit to desktop
 #Dialogs can be opened here and they get input priority = show mouse.
@@ -51,6 +53,7 @@ func enter():
 func exit():
 	super()
 	disconnect_signals()
+	close_minimap_overlay()
 	self.exited.emit()
 	
 	debug_task_show.visible = false
@@ -80,6 +83,11 @@ func on_back() -> void:
 
 
 func process_input(_event: InputEvent) -> StateMenus:
+	if Input.is_action_just_pressed("open_minimap"):
+		get_viewport().set_input_as_handled()
+		toggle_minimap_overlay()
+		return null
+
 	##Menu	
 	if Input.is_action_just_pressed("escape"):
 		get_viewport().set_input_as_handled()
@@ -88,6 +96,7 @@ func process_input(_event: InputEvent) -> StateMenus:
 	if Input.is_action_just_pressed("reset_position"):
 		get_viewport().set_input_as_handled()
 		Signals.reset_position.emit()
+		_refresh_minimap_overlay_after_reset()
 		return null
 	
 	##TEMPORARY: Trigger save
@@ -101,4 +110,55 @@ func process_input(_event: InputEvent) -> StateMenus:
 			manager.delete_all_registries()
 	
 	return null
+
+func toggle_minimap_overlay() -> void:
+	if menu_manager.is_minimap_visible():
+		menu_manager.hide_minimap()
+		return
+	var active_zone: BaseZone = _get_active_zone()
+	if active_zone == null:
+		_emit_no_minimap_available()
+		return
+	var zone_minimap: ZoneMinimap = active_zone.get_zone_minimap()
+	if zone_minimap == null:
+		_emit_no_minimap_available()
+		return
+	var active_fpv: FPV = active_zone.get_active_fpv()
+	if active_fpv == null:
+		_emit_no_minimap_available()
+		return
+	if not zone_minimap.is_projection_available():
+		push_warning("Minimap unavailable for %s: %s" % [active_zone.name, zone_minimap.get_projection_unavailable_reason()])
+		_emit_no_minimap_available()
+		return
+	menu_manager.show_minimap(zone_minimap, active_fpv)
+
+func close_minimap_overlay() -> void:
+	if menu_manager != null:
+		menu_manager.hide_minimap()
+
+func refresh_minimap_overlay() -> void:
+	if menu_manager == null or not menu_manager.is_minimap_visible():
+		return
+	var active_zone: BaseZone = _get_active_zone()
+	if active_zone == null:
+		return
+	var zone_minimap: ZoneMinimap = active_zone.get_zone_minimap()
+	var active_fpv: FPV = active_zone.get_active_fpv()
+	if zone_minimap == null or active_fpv == null:
+		return
+	menu_manager.refresh_minimap(zone_minimap, active_fpv)
+
+func _get_active_zone() -> BaseZone:
+	if parent == null:
+		return null
+	return parent.current_scene as BaseZone
+
+func _refresh_minimap_overlay_after_reset() -> void:
+	await get_tree().process_frame
+	await get_tree().process_frame
+	refresh_minimap_overlay()
+
+func _emit_no_minimap_available() -> void:
+	Signals.no_minimap_available.emit()
 	

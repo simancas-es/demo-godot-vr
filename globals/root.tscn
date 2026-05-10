@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://cx1wgq0gx0mxe" path="res://clases/helpers/task_text/menu/debug_task_list.tscn" id="12_wgoxm"]
 [ext_resource type="Script" uid="uid://bfcilkbewoyoh" path="res://menus/tasks/toggle_menu.gd" id="15_5uipj"]
 [ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="16_bm7q0"]
+[ext_resource type="PackedScene" path="res://menus/minimap/minimap_menu.tscn" id="17_minimap"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vuvmw"]
 font_size = 15
@@ -142,6 +143,9 @@ filter_only = Array[int]([1])
 [node name="Toggle" type="Node" parent="UI_CanvasLayer/DebugTaskShow" unique_id=226249598]
 script = ExtResource("15_5uipj")
 signal_name = "toggle_tasks_menu"
+
+[node name="MinimapMenu" parent="UI_CanvasLayer" unique_id=712518901 instance=ExtResource("17_minimap")]
+layout_mode = 3
 
 [node name="DebugStateText" type="Label" parent="UI_CanvasLayer" unique_id=1354467370]
 unique_name_in_owner = true
