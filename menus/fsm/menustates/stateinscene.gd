@@ -1,6 +1,7 @@
 extends StateMenus
 
 const ZoneMinimap := preload("res://clases/zones/zone_minimap.gd")
+const MinimapController := preload("res://systems/system-minimap/minimap_controller.gd")
 
 #This state represents the interface options when inside a zone
 #Menu opens a menu with settings and exit to main screen and exit to desktop
@@ -16,6 +17,8 @@ const ZoneMinimap := preload("res://clases/zones/zone_minimap.gd")
 
 
 @onready var debug_task_show : VBoxContainer = %DebugTaskShow
+
+var _minimap_controller: MinimapController = MinimapController.new()
 
 func connect_signals() -> void:	
 	for s in signals_fs.keys():
@@ -123,15 +126,12 @@ func toggle_minimap_overlay() -> void:
 	if zone_minimap == null:
 		_emit_no_minimap_available()
 		return
-	var active_fpv: FPV = active_zone.get_active_fpv()
-	if active_fpv == null:
+	_minimap_controller.bind(zone_minimap, active_zone)
+	if not _minimap_controller.refresh():
+		push_warning("Minimap unavailable for %s: %s" % [active_zone.name, _minimap_controller.get_unavailable_reason()])
 		_emit_no_minimap_available()
 		return
-	if not zone_minimap.is_projection_available():
-		push_warning("Minimap unavailable for %s: %s" % [active_zone.name, zone_minimap.get_projection_unavailable_reason()])
-		_emit_no_minimap_available()
-		return
-	menu_manager.show_minimap(zone_minimap, active_fpv)
+	menu_manager.show_minimap(_minimap_controller)
 
 func close_minimap_overlay() -> void:
 	if menu_manager != null:
@@ -144,10 +144,12 @@ func refresh_minimap_overlay() -> void:
 	if active_zone == null:
 		return
 	var zone_minimap: ZoneMinimap = active_zone.get_zone_minimap()
-	var active_fpv: FPV = active_zone.get_active_fpv()
-	if zone_minimap == null or active_fpv == null:
+	if zone_minimap == null:
 		return
-	menu_manager.refresh_minimap(zone_minimap, active_fpv)
+	_minimap_controller.bind(zone_minimap, active_zone)
+	if not _minimap_controller.refresh():
+		return
+	menu_manager.refresh_minimap(_minimap_controller)
 
 func _get_active_zone() -> BaseZone:
 	if parent == null:

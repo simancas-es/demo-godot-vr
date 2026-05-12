@@ -1,7 +1,7 @@
 extends CanvasLayer
 class_name MenuManager
 
-const ZoneMinimap := preload("res://clases/zones/zone_minimap.gd")
+const MinimapController := preload("res://systems/system-minimap/minimap_controller.gd")
 const MinimapMenu := preload("res://menus/minimap/minimap_menu.gd")
 
 #@onready var sm : StateMachine = %SMMenuManager
@@ -35,10 +35,10 @@ signal launched_env_change(from : ENVIRONMENTS.ID, target : ENVIRONMENTS.ID)
 func _ready() -> void:
 	Signals.ui_msg_top.connect(generate_message_top)
 
-func show_minimap(zone_minimap: ZoneMinimap, active_fpv: Node3D) -> void:
+func show_minimap(minimap_controller: MinimapController) -> void:
 	if minimap_menu == null:
 		return
-	minimap_menu.show_for(zone_minimap, active_fpv)
+	minimap_menu.show_for(minimap_controller)
 
 func hide_minimap() -> void:
 	if minimap_menu == null:
@@ -48,10 +48,10 @@ func hide_minimap() -> void:
 func is_minimap_visible() -> bool:
 	return minimap_menu != null and minimap_menu.is_open()
 
-func refresh_minimap(zone_minimap: ZoneMinimap, active_fpv: Node3D) -> void:
+func refresh_minimap(minimap_controller: MinimapController) -> void:
 	if minimap_menu == null or not minimap_menu.is_open():
 		return
-	minimap_menu.show_for(zone_minimap, active_fpv)
+	minimap_menu.show_for(minimap_controller)
 	
 ##Generates a message at the top of the screen that vanishes. 
 ##It doesnt interact with anything and has a timer

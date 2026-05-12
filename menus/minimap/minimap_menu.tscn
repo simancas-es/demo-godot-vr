@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://menus/minimap/minimap_menu.gd" id="1_hn8py"]
+[ext_resource type="Script" path="res://menus/minimap/minimap_menu.gd" id="1_menu"]
+[ext_resource type="PackedScene" path="res://menus/minimap/minimap_control.tscn" id="2_control"]
 
 [node name="MinimapMenu" type="Control"]
 unique_name_in_owner = true
@@ -13,15 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 clip_contents = true
-script = ExtResource("1_hn8py")
+script = ExtResource("1_menu")
 
-[node name="MapImage" type="TextureRect" parent="."]
+[node name="MinimapControl" parent="." instance=ExtResource("2_control")]
 unique_name_in_owner = true
-mouse_filter = 2
-
-[node name="PlayerImage" type="TextureRect" parent="."]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(24, 24)
-offset_right = 24.0
-offset_bottom = 24.0
-mouse_filter = 2

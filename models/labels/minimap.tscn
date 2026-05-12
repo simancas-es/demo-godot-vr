@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://models/labels/minimap.gd" id="1_minimap"]
+[ext_resource type="PackedScene" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="2_viewport"]
+[ext_resource type="PackedScene" path="res://menus/minimap/minimap_control.tscn" id="3_control"]
+
+[node name="Minimap" type="Node3D"]
+script = ExtResource("1_minimap")
+
+[node name="Viewport2Din3D" parent="." instance=ExtResource("2_viewport")]
+unique_name_in_owner = true
+screen_size = Vector2(2, 2)
+enabled = false
+scene = ExtResource("3_control")
+viewport_size = Vector2(1024, 1024)
+update_mode = 2
+throttle_fps = 15.0
+bind_retry_interval_seconds = 1.0
+input_keyboard = false
+input_gamepad = false

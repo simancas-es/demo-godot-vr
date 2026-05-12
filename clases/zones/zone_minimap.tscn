@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://bv1g53jugxppd"]
 
-[ext_resource type="Script" path="res://clases/zones/zone_minimap.gd" id="1_y0gde"]
+[ext_resource type="Script" uid="uid://clwg6xn5qltap" path="res://clases/zones/zone_minimap.gd" id="1_y0gde"]
 
-[node name="ZoneMinimap" type="Node3D"]
+[node name="ZoneMinimap" type="Node3D" unique_id=1053758297]
 script = ExtResource("1_y0gde")

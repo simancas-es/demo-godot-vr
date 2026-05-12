@@ -13,7 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://f65bedyq1jy6" path="res://models/demo_manhole/manholecover.tscn" id="13_5sa2k"]
 [ext_resource type="Script" uid="uid://ieqv0678lw8" path="res://systems/system-stateful-persistence/interfaces/system_world_state_registry_interface_position.gd" id="14_2ctb5"]
 [ext_resource type="PackedScene" uid="uid://d3qp4a3ahe2gf" path="res://models/demo_basin/task_blackboard/demo_task_blackboard.tscn" id="15_fm72i"]
-[ext_resource type="PackedScene" path="res://clases/zones/zone_minimap.tscn" id="16_minimap"]
+[ext_resource type="PackedScene" uid="uid://bv1g53jugxppd" path="res://clases/zones/zone_minimap.tscn" id="16_minimap"]
+[ext_resource type="PackedScene" path="res://models/labels/minimap.tscn" id="17_ja30v"]
 [ext_resource type="Texture2D" uid="uid://xyoxheab0a26" path="res://assets/zones/demo_vista/demo_vista.png" id="17_minimap"]
 [ext_resource type="PackedScene" uid="uid://b3otd4yyygom7" path="res://assets/inventory_objects/demo_aerator/aerator_head.gltf" id="20_radj1"]
 
@@ -91,8 +92,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.3714, 0, -19.6792)
 map_texture = ExtResource("17_minimap")
 world_anchor_a = NodePath("../North")
 world_anchor_b = NodePath("../spawn")
-map_anchor_a_pixels = Vector2(19, 178)
-map_anchor_b_pixels = Vector2(339, 178)
+map_anchor_a_pixels = Vector2(5, 164)
+map_anchor_b_pixels = Vector2(351, 142)
 
 [node name="EnvironmentFloor" type="StaticBody3D" parent="." unique_id=737231889]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
@@ -202,5 +203,10 @@ metadata/_custom_type_script = "uid://ieqv0678lw8"
 
 [node name="DemoTaskBlackboard" parent="." unique_id=92072286 instance=ExtResource("15_fm72i")]
 transform = Transform3D(0.80457264, 0, -0.5938543, 0, 1, 0, 0.5938543, 0, 0.80457264, 9.947284, 0, -9.222879)
+
+[node name="Minimap" parent="." unique_id=493186053 instance=ExtResource("17_ja30v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.241393, 0.9999995, -6.1953115)
+projection_source_path = NodePath("../ZoneMinimap")
+tracker_root_path = NodePath("..")
 
 [editable path="item_dungeonkeys/keys"]
