@@ -5,3 +5,4 @@
 .editorconfig
 *.po~
 /addons/godotopenxrvendors
+/addons/gut
