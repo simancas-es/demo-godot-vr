@@ -6,3 +6,5 @@
 *.po~
 /addons/godotopenxrvendors
 /addons/gut
+*.log
+*.junit.xml
