@@ -18,6 +18,7 @@ enum ID {
 	
 	#Hillersleben
 	WIRE,
+	BEAKER_FILLED,
 	
 }
 
@@ -26,5 +27,6 @@ const INFORMATION_RESOURCES : Dictionary[ID, String] = {
 	ID.BEAKER : "uid://ciatc0fbcj3tq",
 	ID.DUNGEON_KEYS : "uid://232qnmcsix10",	
 	ID.BUBBLE_DIFFUSER : "res://models/inventory_objects/demo_aerator/aerator_head.tres",
-	ID.WIRE : "uid://df31vkqjk6b40"
+	ID.WIRE : "uid://df31vkqjk6b40",
+	ID.BEAKER_FILLED : "res://content/inv_objects/beaker_filled/beaker_filled.tres",
 }
