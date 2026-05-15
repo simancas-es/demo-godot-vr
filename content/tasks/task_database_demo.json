@@ -279,7 +279,446 @@
 		  }
 		]
 	  }
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{
+	  "id": "Q_HL_SEE_RECHEN",
+	  "comment": "batch1",
+	  "conditions": {
+		"success": {
+		  "any": [
+			{
+			  "type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_RECHEN"
+			}
+		  ]
+		}
+	  },
+	  "results": {
+		"success": [
+		  {
+			"type": "SystemTasksResultUIPrint",
+			"text": "Completed: See Intake."
+		  }
+		]
+	  }
+	},
+  {
+	"id": "Q_HL_SEE_FETTFANG",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_FETTFANG"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: See Sand and Grease trap."
+		}
+	  ]
 	}
+  },
+  {
+	"id": "Q_HL_SEE_VKB",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_VKB"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: See Primary Clarifier."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_SEE_BB",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_BB"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: See Active Sludge Basin."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_SEE_NKB",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_NKB"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: See Secondary Clarifier."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_SEE_RAD",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_RAD"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: See Hydroelectric Water Wheel Generator."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_SEE_VED",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_VED"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: See Thickeners."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_SEE_ENTWAESSERUNG",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_ENTWAESSERUNG"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: See Dewatering Machines."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_SEE_FAULUNG",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_FAULUNG"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: Walk above the reactors."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_SEE_GASMESSRAUM",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_GASMESSRAUM"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: See Biogas Monitoring ROom."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_SEE_BHKW",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_BHKW"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: See Combined Heat and Power Unit."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_SEE_GASSPEICHER",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionLocation", "locator_id_who": "PLAYER", "locator_id_where":"HL_SEE_GASSPEICHER"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: See Gas storage."
+		}
+	  ]
+	}
+  },
+
+
+
+
+
+
+
+
+
+
+{
+	"id": "Q_HL_BHKW_HITEMP",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionSignal",
+			"signal_name": "done",
+			"locator_id": "HL_BHKW_HITEMP"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: Sludge back down to mesophilic range."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_BHKW_LOTEMP",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionSignal",
+			"signal_name": "done",
+			"locator_id": "HL_BHKW_LOTEMP"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: Sludge back into mesophilic range."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_DEKFOERDERBAND_ENTLEEREN",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionSignal",
+			"signal_name": "done",
+			"locator_id": "HL_DEKFOERDERBAND_ENTLEEREN"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: Transport band emptied. It wont freeze now."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_DEKFOERDERBAND_SPILL",
+	"comment": "batch1. Needs one empty IBC and one full of polymer. Change hose.",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionSignal",
+			"signal_name": "done",
+			"locator_id": "HL_DEKFOERDERBAND_SPILL"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: Sludge properly dewatered."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_NH4_HIGH_BELUEFTET",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionSignal",
+			"signal_name": "done",
+			"locator_id": "HL_NH4_HIGH_BELUEFTET"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: NH4 setpoint corrected."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_NKB_SCHNECKE_EIS",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionSignal",
+			"signal_name": "ice_removed",
+			"locator_id": "HL_NKB_SCHNECKE_EIS"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: Removed ice from screw collector."
+		}
+	  ]
+	}
+  },
+  {
+	"id": "Q_HL_BRAUCHWASSER_EIS",
+	"comment": "batch1",
+	"conditions": {
+	  "success": {
+		"any": [
+		  {
+			"type": "SystemTasksConditionSignal",
+			"signal_name": "emptied",
+			"locator_id": "HL_BRAUCHWASSER_EIS"
+		  }
+		]
+	  }
+	},
+	"results": {
+	  "success": [
+		{
+		  "type": "SystemTasksResultUIPrint",
+		  "text": "Completed: Hose protected from ice."
+		}
+	  ]
+	}
+  }
 	
 	
 	

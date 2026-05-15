@@ -202,5 +202,266 @@
 	
 	
 	
+	
+	
+	
+	
+	
+	{
+	"unit_id": "Q_HL_SEE_RECHEN",
+	"title": {
+	  "en": "See the Intake Screening",
+	  "de": "Rechenanlage besichtigen",
+	  "es": "Ve las rejas de desbaste"
+	},
+	"text": {
+	  "en": "Go to the intake room.",
+	  "de": "Gehe zum Rechenraum.",
+	  "es": "Ve a la sala de rejas."
+	}
+  },
+  {
+	"unit_id": "Q_HL_SEE_FETTFANG",
+	"title": {
+	  "en": "See the Sand and Grease Trap",
+	  "de": "Fettfang besichtigen",
+	  "es": "VE la trampa de grasas y arenas"
+	},
+	"text": {
+	  "en": "Go to the grease trap basin.",
+	  "de": "Gehe zum Sand und Fettfangbecken.",
+	  "es": "Ve a la trampa de grasas y arenas."
+	}
+  },
+  {
+	"unit_id": "Q_HL_SEE_VKB",
+	"title": {
+	  "en": "See the Primary Clarifier",
+	  "de": "Vorklärbecken besichtigen",
+	  "es": "Ve el clarificador primario"
+	},
+	"text": {
+	  "en": "Go to the primary clarifier unit.",
+	  "de": "Gehe zum Vorklärbecken.",
+	  "es": "Ve al clarificador primario."
+	}
+  },
+  {
+	"unit_id": "Q_HL_SEE_BB",
+	"title": {
+	  "en": "See the Aeration Basins",
+	  "de": "Belebungsbecken besichtigen",
+	  "es": "Ve los tanques de aireación"
+	},
+	"text": {
+	  "en": "Go to the aeration basins.",
+	  "de": "Gehe zu den Belebungsbecken.",
+	  "es": "Ve a los tanques de aireación."
+	}
+  },
+  {
+	"unit_id": "Q_HL_SEE_NKB",
+	"title": {
+	  "en": "See the Secondary Clarifier",
+	  "de": "Nachklärbecken besichtigen",
+	  "es": "Ve el clarificador secundario"
+	},
+	"text": {
+	  "en": "Go to secondary clarifier.",
+	  "de": "Gehe zum Nachklärbecken.",
+	  "es": "Ve al clarificador secundario."
+	}
+  },
+  {
+	"unit_id": "Q_HL_SEE_RAD",
+	"title": {
+	  "en": "See the hydroelectric power generation water wheel",
+	  "de": "Wasserrad der Energiegewinnung besichtigen",
+	  "es": "Ve la rueda hidráulica de generación de energía"
+	},
+	"text": {
+	  "en": "Go where the waterwheel is.",
+	  "de": "Gehe zum Wasserrad.",
+	  "es": "Ve a la rueda hidráulica."
+	}
+  },
+  {
+	"unit_id": "Q_HL_SEE_VED",
+	"title": {
+	  "en": "See the sludge thickeners",
+	  "de": "Schlammeindicker besichtigen",
+	  "es": "Ve los espesadores de lodo"
+	},
+	"text": {
+	  "en": "Go to the sludge thickeners.",
+	  "de": "Gehe zu den Schlammeindickern.",
+	  "es": "Ve a los espesadores de lodo."
+	}
+  },
+  {
+	"unit_id": "Q_HL_SEE_ENTWAESSERUNG",
+	"title": {
+	  "en": "See the dewatering machines",
+	  "de": "Schlammentwässerung besichtigen",
+	  "es": "Ve la deshidratación de lodos"
+	},
+	"text": {
+	  "en": "Go to the room with the dewatering machines.",
+	  "de": "Gehe in den Raum mit den Schlammentwässerungsmaschinen.",
+	  "es": "Ve a la sala de deshidratación de lodos."
+	}
+  },
+  {
+	"unit_id": "Q_HL_SEE_FAULUNG",
+	"title": {
+	  "en": "Climb the anaerobic digesters",
+	  "de": "Faultürme besichtigen",
+	  "es": "Sube a los digestores anaerobios"
+	},
+	"text": {
+	  "en": "Go to the top of the anaerobic digesters.",
+	  "de": "Gehe auf die Faultürme.",
+	  "es": "Ve a la parte superior de los digestores anaeróbicos."
+	}
+  },
+  {
+	"unit_id": "Q_HL_SEE_GASMESSRAUM",
+	"title": {
+	  "en": "See Gas Measurement Room",
+	  "de": "Gasmessraum besichtigen",
+	  "es": "Ve sala de medición de gas"
+	},
+	"text": {
+	  "en": "Go to the gas measurement room.",
+	  "de": "Gehe zum Gasmessraum.",
+	  "es": "Ve a la sala de medición de gas."
+	}
+  },
+  {
+	"unit_id": "Q_HL_SEE_BHKW",
+	"title": {
+	  "en": "See the Combined Heat and Power Units",
+	  "de": "Blockheizkraftwerk besichtigen",
+	  "es": "Ve planta de cogeneración"
+	},
+	"text": {
+	  "en": "Go to the combined heat and power room.",
+	  "de": "Gehe zum Blockheizkraftwerk.",
+	  "es": "Ve a la sala de cogeneración."
+	}
+  },
+  {
+	"unit_id": "Q_HL_SEE_GASSPEICHER",
+	"title": {
+	  "en": "See Gas Storage Tanks",
+	  "de": "Gasspeicher besichtigen",
+	  "es": "Ver tanques de almacenamiento de gas"
+	},
+	"text": {
+	  "en": "Go to the gas storage tanks.",
+	  "de": "Gehe zu den Gasspeichern.",
+	  "es": "Ve a los tanques de almacenamiento de gas."
+	}
+  },
+
+  {
+	"unit_id": "Q_HL_BHKW_HITEMP",
+	"title": {
+	  "en": "Reduce sludge temperature!",
+	  "de": "Schlammtemperatur senken!",
+	  "es": "Reduce la temperatura del lodo!"
+	},
+	"text": {
+	  "en": "Sludge heating above mesophilic range (39.7°C+). Fix it!",
+	  "de": "Schlammheizung über mesophilem Bereich (39,7°C+). Lös das!",
+	  "es": "Calefacción del lodo por encima del rango mesofílico (39,7°C+). Arréglalo!"
+	}
+  },
+  {
+	"unit_id": "Q_HL_BHKW_LOTEMP",
+	"title": {
+	  "en": "Increase sludge temperature!",
+	  "de": "Schlammtemperatur erhöhen!",
+	  "es": "Aumenta la temperatura del lodo!"
+	},
+	"text": {
+	  "en": "Sludge below optimal mesophilic range (37.8°C-). Fix it!",
+	  "de": "Schlamm unter optimalem mesophilem Bereich (37,8°C-). Lös das!",
+	  "es": "Lodo por debajo del rango mesofílico óptimo (37,8°C-). Arréglalo!"
+	}
+  },
+  {
+	"unit_id": "Q_HL_DEKFOERDERBAND_ENTLEEREN",
+	"title": {
+	  "en": "Prevent ice buildup on dewatered sludge conveyor",
+	  "de": "Maßnahme gegen Eis in Dekanter-Förderband",
+	  "es": "Prevención de hielo en cinta transportadora"
+	},
+	"text": {
+	  "en": "Run system for 30 minutes before shutdown to prevent ice buildup.",
+	  "de": "System 30 Minuten vor Abschaltung betreiben, um Eisbildung zu verhindern.",
+	  "es": "Dejala correr 30 minutos antes de apagarla para evitar acumulación de hielo."
+	}
+  },
+  {
+	"unit_id": "Q_HL_DEKFOERDERBAND_SPILL",
+	"title": {
+	  "en": "Insufficient sludge dewatering",
+	  "de": "Unzureichende Schlammentwässerung",
+	  "es": "Deshidratación insuficiente de lodos"
+	},
+	"text": {
+	  "en": "Check centrifuge for possible polymer shortage.",
+	  "de": "Zentrifuge auf möglichen Polymermangel prüfen.",
+	  "es": "Revisa la centrífuga por posible falta de polímero."
+	}
+  },
+  {
+	"unit_id": "Q_HL_NH4_HIGH_BELUEFTET",
+	"title": {
+	  "en": "High Ammonium in Aeration Basin",
+	  "de": "Hoher Ammoniumwert im Belebungsbecken",
+	  "es": "Amonio elevado en tanque de aireación"
+	},
+	"text": {
+	  "en": "Adjust target ammonium level on the controller.",
+	  "de": "Ammoniumeinstellung am Kontroller korrigieren.",
+	  "es": "Ajusta el nivel objetivo de amonio en controlador."
+	}
+  },
+  {
+	"unit_id": "Q_HL_NKB_SCHNECKE_EIS",
+	"title": {
+	  "en": "Ice in Scum Screw at Secondary Clarifier",
+	  "de": "Eis in Förderschnecke im Nachklärbecken",
+	  "es": "Hielo en sinfín de flotantes en clarificador secundario"
+	},
+	"text": {
+	  "en": "Remove ice buildup in secondary clarifier scum screw.",
+	  "de": "Eisbildung in der Förderschnecke des Nachklärbeckens entfernen.",
+	  "es": "Elimina la acumulación de hielo en el sinfín del clarificador secundario."
+	}
+  },
+  {
+	"unit_id": "Q_HL_BRAUCHWASSER_EIS",
+	"title": {
+	  "en": "Service Water Freeze Protection",
+	  "de": "Frostschutz Brauchwasser",
+	  "es": "Protección contra congelación del agua de servicio"
+	},
+	"text": {
+	  "en": "Shut down service water supply valve to prevent ice buildup.",
+	  "de": "Brauchwasserzufuhr schließen, um Eisbildung zu verhindern.",
+	  "es": "Cierra la válvula de suministro de agua de servicio para evitar acumulación de hielo."
+	}
+  }
+	
+	
+	
+	
+	
+	
+	
+	
 	]
 }

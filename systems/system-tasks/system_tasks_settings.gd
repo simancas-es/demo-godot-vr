@@ -63,6 +63,36 @@ enum UNIT_ID {
 	Q_HL_REPAIRWIRE,
 	Q_HL_FIXFENCE,
 	
+	#--Batch1
+	#Vorstellung: player will go aronud the plant as an introduction.
+	Q_HL_SEE_RECHEN,
+	Q_HL_SEE_FETTFANG,
+	Q_HL_SEE_VKB,
+	Q_HL_SEE_BB,
+	Q_HL_SEE_NKB,
+	Q_HL_SEE_RAD,
+	Q_HL_SEE_VED,
+	Q_HL_SEE_ENTWAESSERUNG,
+	Q_HL_SEE_FAULUNG,
+	Q_HL_SEE_GASMESSRAUM,
+	Q_HL_SEE_BHKW,
+	Q_HL_SEE_GASSPEICHER,
+	
+	#Schlammheizung: mesophilic range
+	Q_HL_BHKW_HITEMP, #Schlamm reaching 39,7+
+	Q_HL_BHKW_LOTEMP, #Schlamm going 37,8-
+	
+	#Dekanter
+	Q_HL_DEKFOERDERBAND_ENTLEEREN, # 30 Minuten abwarten
+	Q_HL_DEKFOERDERBAND_SPILL, # Schlamm nicht entwässert, polymer fehlt
+	
+	#BB
+	Q_HL_NH4_HIGH_BELUEFTET, #Falsche Einstellung
+	
+	#EIS
+	Q_HL_NKB_SCHNECKE_EIS, #Manual operation, ice breaking
+	Q_HL_BRAUCHWASSER_EIS, #Close water, empty hoses and pipes
+	
 	
 }
 
@@ -89,6 +119,35 @@ enum LOCATOR_ID {
 	#Fence
 	HL_FENCE,
 	
+	
+	#Batch1,
+	HL_SEE_RECHEN,
+	HL_SEE_FETTFANG,
+	HL_SEE_VKB,
+	HL_SEE_BB,
+	HL_SEE_NKB,
+	HL_SEE_RAD,
+	HL_SEE_VED,
+	HL_SEE_ENTWAESSERUNG,
+	HL_SEE_FAULUNG,
+	HL_SEE_GASMESSRAUM,
+	HL_SEE_BHKW,
+	HL_SEE_GASSPEICHER,
+	
+	#Schlammheizung: mesophilic range
+	HL_BHKW_HITEMP, #Schlamm reaching 39,7+
+	HL_BHKW_LOTEMP, #Schlamm going 37,8-
+	
+	#Dekanter
+	HL_DEKFOERDERBAND_ENTLEEREN, # 30 Minuten abwarten
+	HL_DEKFOERDERBAND_SPILL, # Schlamm nicht entwässert, polymer fehlt
+	
+	#BB
+	HL_NH4_HIGH_BELUEFTET, #Falsche Einstellung
+	
+	#EIS
+	HL_NKB_SCHNECKE_EIS, #Manual operation, ice breaking
+	HL_BRAUCHWASSER_EIS, #Close water, empty hoses and pipes
 	
 }
 
