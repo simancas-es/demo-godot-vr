@@ -36,7 +36,11 @@
 [ext_resource type="PackedScene" uid="uid://cuwst8kcvigrx" path="res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn" id="10_ybcmd"]
 [ext_resource type="PackedScene" uid="uid://dl3g3hke6ex3m" path="res://assets/zones/hillersleben/models/Referenz/Referenz.gltf" id="15_h3jyd"]
 [ext_resource type="Script" uid="uid://b5sdbpkp587p8" path="res://zones/hillersleben/scripts/mg_klappbare_tür.gd" id="16_k6604"]
+[ext_resource type="Script" uid="uid://codiadaennr2i" path="res://zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd" id="21_y6wga"]
+[ext_resource type="PackedScene" uid="uid://cb6nythpsl3b7" path="res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn" id="21_y253s"]
+[ext_resource type="PackedScene" uid="uid://bbcgtxp630e0v" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction.tscn" id="22_omxot"]
 [ext_resource type="Script" uid="uid://c35twvphwf3u4" path="res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd" id="23_cqg2i"]
+[ext_resource type="Script" uid="uid://bjn6ld6vbr26b" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.gd" id="24_7gw78"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5gmky"]
 size = Vector3(20, 3, 0.05)
@@ -195,6 +199,26 @@ size = Vector3(0.299866, 10.133537, 0.72558594)
 
 [sub_resource type="BoxMesh" id="BoxMesh_7sq4a"]
 size = Vector3(1, 1.8, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_y6wga"]
+size = Vector2(0.5, 0.19)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7gw78"]
+albedo_color = Color(0, 0.54509807, 0.77254903, 1)
+metallic_specular = 0.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_y6wga"]
+top_radius = 0.025
+bottom_radius = 0.04
+height = 0.02
+radial_segments = 12
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y6wga"]
+albedo_color = Color(0.0038444328, 0.0029891224, 0.0063207317, 1)
+emission_enabled = true
+emission = Color(1, 0.6836525, 0.8722928, 1)
+emission_energy_multiplier = 0.0
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ir53q"]
 
@@ -1043,6 +1067,53 @@ transform = Transform3D(1, 0, 0, 0, 0.9999995, 1.1858461e-20, 0, -1.1858461e-20,
 mesh = SubResource("BoxMesh_7sq4a")
 
 [node name="Q_BHKW" type="Node3D" parent="Reference_point_floor" unique_id=684035375]
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 3.3881318e-21, 0, -3.3881318e-21, 0.9999998, 0, 1.5086021, 0)
+script = ExtResource("21_y6wga")
+
+[node name="TemperatureGauge" parent="Reference_point_floor/Q_BHKW" unique_id=714340932 instance=ExtResource("21_y253s")]
+transform = Transform3D(-0.8660254, -1.4210858e-14, -0.50000006, 1.4210856e-14, 0.99999994, -5.303564e-14, 0.5, -5.3035636e-14, -0.8660253, 0, 0, 0)
+
+[node name="ValveStructure" parent="Reference_point_floor/Q_BHKW" unique_id=845928422 instance=ExtResource("22_omxot")]
+transform = Transform3D(-0.86602545, -0.49999967, 1.3411045e-07, -8.1566554e-08, 0, -0.9999997, 0.4999999, -0.86602503, 1.1920929e-07, 0.34304047, -0.13412854, -0.19805406)
+rotation_velocity_degs = 45.0
+deg_rotation_per_interaction = 15.0
+
+[node name="info_display" type="MeshInstance3D" parent="Reference_point_floor/Q_BHKW" unique_id=472249912]
+transform = Transform3D(-0.8660254, 0, -0.5000001, 0, 1.0000001, 0, 0.50000006, 0, -0.8660255, 0.04069519, 0.21274573, 0.07779694)
+mesh = SubResource("PlaneMesh_y6wga")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_7gw78")
+
+[node name="Title" type="Label3D" parent="Reference_point_floor/Q_BHKW/info_display" unique_id=966945133]
+transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, -0.23734283, 0.036520243, 0.013568879)
+text = "Sludge Temperature:"
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 2
+
+[node name="sludge_temp" type="Label3D" parent="Reference_point_floor/Q_BHKW/info_display" unique_id=1810579099]
+auto_translate_mode = 2
+transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, 0.17578202, -0.020353796, 0.013568879)
+text = "39.7°C"
+outline_size = 0
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="sludge_status" type="Label3D" parent="Reference_point_floor/Q_BHKW/info_display" unique_id=1863826514]
+auto_translate_mode = 2
+transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, 0.0123882145, -0.084967144, 0.013568879)
+text = "Status: PLACEHOLDER"
+outline_size = 0
+vertical_alignment = 2
+
+[node name="info_light" type="MeshInstance3D" parent="Reference_point_floor/Q_BHKW" unique_id=1589829020]
+transform = Transform3D(-3.0597974e-08, -0.27999997, -0.48497427, 0.56, -2.4478377e-08, -2.1198897e-08, -1.0599449e-08, -0.48497427, 0.27999997, -0.1555582, 0.22036366, 0.17062935)
+mesh = SubResource("CylinderMesh_y6wga")
+surface_material_override/0 = SubResource("StandardMaterial3D_y6wga")
+script = ExtResource("24_7gw78")
+pulse_speed = 4.0
+pulse_strength = 1.5
+base_energy = 0.5
 
 [node name="Q_MG" type="Node3D" parent="Reference_point_floor" unique_id=740448081]
 

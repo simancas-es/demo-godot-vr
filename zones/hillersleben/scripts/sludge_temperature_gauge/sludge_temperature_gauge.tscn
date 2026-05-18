@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cb6nythpsl3b7"]
+
+[ext_resource type="Script" uid="uid://ywpyc23dbiat" path="res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.gd" id="1_n2g7i"]
+[ext_resource type="FontFile" uid="uid://cpb0yhklfe5sg" path="res://assets/fonts/FrutigerLTPro/FrutigerLTPro/FrutigerLTPro-Bold.otf" id="2_c8yte"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hfut4"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.05
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c8yte"]
+size = Vector2(0.095, 0.005)
+center_offset = Vector3(0.035, 0, 0)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1smy6"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_n2g7i"]
+size = Vector2(0.04, 0.01)
+center_offset = Vector3(0.075, 0, 0)
+orientation = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uxx3"]
+albedo_color = Color(0.933, 0, 0.21924716, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8yte"]
+albedo_color = Color(0.23602036, 0.39191362, 1, 1)
+
+[node name="TemperatureGauge" type="Node3D" unique_id=714340932]
+script = ExtResource("1_n2g7i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1500336675]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, -0.030947857)
+mesh = SubResource("CylinderMesh_hfut4")
+
+[node name="pointer" type="MeshInstance3D" parent="." unique_id=1337736711]
+transform = Transform3D(0.70508, -0.70912796, 0, 0.70912796, 0.70508, 0, 0, 0, 1, 0, 0, 0.0023790784)
+mesh = SubResource("PlaneMesh_c8yte")
+surface_material_override/0 = SubResource("StandardMaterial3D_1smy6")
+
+[node name="pointer40" type="MeshInstance3D" parent="." unique_id=1840469814]
+transform = Transform3D(0.7071068, -0.7071068, 0, 0.7071068, 0.7071068, 0, 0, 0, 1, 0, 0, 0.00034504756)
+mesh = SubResource("PlaneMesh_n2g7i")
+surface_material_override/0 = SubResource("StandardMaterial3D_3uxx3")
+
+[node name="Label3D2" type="Label3D" parent="pointer40" unique_id=777902857]
+transform = Transform3D(-4.371139e-09, 0.1, 0, -0.1, -4.371139e-09, 0, 0, 0, 0.1, 0.115, 0, 0)
+double_sided = false
+texture_filter = 0
+text = "40.0°C"
+font = ExtResource("2_c8yte")
+font_size = 64
+outline_size = 13
+
+[node name="pointer38" type="MeshInstance3D" parent="." unique_id=1621950177]
+transform = Transform3D(-0.70710677, -0.70710677, 0, 0.70710677, -0.70710677, 0, 0, 0, 1, 0, 0, 0.00034504756)
+mesh = SubResource("PlaneMesh_n2g7i")
+surface_material_override/0 = SubResource("StandardMaterial3D_c8yte")
+
+[node name="Label3D" type="Label3D" parent="pointer38" unique_id=291770332]
+transform = Transform3D(-4.371139e-09, 0.1, 0, -0.1, -4.371139e-09, 0, 0, 0, 0.1, 0.115, 0, 0)
+double_sided = false
+texture_filter = 0
+text = "38.0°C"
+font = ExtResource("2_c8yte")
+font_size = 64
+outline_size = 13
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1862881293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.40138343)
