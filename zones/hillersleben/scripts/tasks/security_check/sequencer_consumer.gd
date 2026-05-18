@@ -8,7 +8,10 @@ const SECAREA := preload("uid://vojndhlaetth")
 
 func _ready():
 	sequencer.next_in_line.connect(_on_next_task)
+
+func start():
 	_on_next_task(sequencer.get_current_task())
+	$"../TasksStarter".activate()	
 
 func _on_next_task(task_id : int) -> void:
 	match task_id:

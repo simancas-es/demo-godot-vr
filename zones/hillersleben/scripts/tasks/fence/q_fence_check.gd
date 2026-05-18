@@ -17,17 +17,17 @@ signal wire_repaired
 const SEQUENCER := preload("uid://coekj8jimafya")
 
 func _ready() -> void:
-	
-	starter.activate()
-	
 	area_hole.body_entered.connect(_on_body_entered)
 	wire_pickup.successfully_taken.connect(_on_wire_pick)
 	wire_use.validated_item_interaction.connect(_on_wire_interaction)
-	
-	sequencer.next_in_line.connect(next_task)
-	next_task(sequencer.get_current_task())
+
 	pass
 
+func start() -> void:
+	sequencer.next_in_line.connect(next_task)
+	next_task(sequencer.get_current_task())
+	starter.activate()
+	
 func _on_body_entered(...args) -> void:
 	body_entered.emit()
 	pass

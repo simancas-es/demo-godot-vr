@@ -8,6 +8,8 @@ var manager : SYSTEMTASKS_UIDCLASSREF.SystemTasksManager = null
 
 @export var task_sequence : Array[SYSTEMTASKSSETTINGS.UNIT_ID]
 
+var active : bool = false #activates the sequencer. Default unactive
+
 func _enter_tree() -> void:
 	if is_autoloaded_taskmanager:
 		if not Engine.has_singleton(SYSTEMTASKSSETTINGS.AUTOLOAD_TASKMANAGER):
@@ -19,11 +21,12 @@ func _ready() -> void:
 	if manager:
 		manager.updated.connect(sequencing)
 	sequencing()
-
+	
 func sequencing(...args) -> void:
 	if manager == null:
 		return
-
+	if !active : return
+	
 	for i in task_sequence.size():
 		var task_id = task_sequence[i]
 		if manager.check_task_status(task_id) != SYSTEMTASKS_UIDCLASSREF.SystemTasksUnit.STATUS.COMPLETED:
