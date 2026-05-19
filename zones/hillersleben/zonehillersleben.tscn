@@ -5,13 +5,14 @@
 [ext_resource type="PackedScene" uid="uid://c16huirsom8ef" path="res://zones/hillersleben/scripts/task_locators/security_checks/Area3DVisual.tscn" id="2_5r3qd"]
 [ext_resource type="Script" uid="uid://cgnsbk378t0aq" path="res://systems/system-tasks/system_tasks_locator.gd" id="2_rm34v"]
 [ext_resource type="PackedScene" uid="uid://doyyrvn116gfv" path="res://models/labels/flow_simulation_volume_label.tscn" id="3_5rld8"]
+[ext_resource type="Script" uid="uid://dssv5xnqi1601" path="res://zones/hillersleben/global_task_controller.gd" id="3_nbul2"]
 [ext_resource type="PackedScene" uid="uid://8k1q807gv3b8" path="res://models/van/van.tscn" id="3_xi370"]
 [ext_resource type="PackedScene" uid="uid://pbnqh5y64xbq" path="res://zones/hillersleben/scripts/hl_flow_model/overview.tscn" id="3_ybcmd"]
 [ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="4_0nlau"]
 [ext_resource type="PackedScene" uid="uid://cs507u3nvuu12" path="res://models/labels/flow_simulation_throughput_label.tscn" id="4_8upog"]
 [ext_resource type="PackedScene" uid="uid://dx8l2qbku8m3t" path="res://zones/hillersleben/scripts/water_visuals/WaterLevelFollower.tscn" id="4_gfnr6"]
 [ext_resource type="PackedScene" uid="uid://d3qp4a3ahe2gf" path="res://models/demo_basin/task_blackboard/demo_task_blackboard.tscn" id="5_0p6js"]
-[ext_resource type="Script" uid="uid://cnjsiwmuuv5mq" path="res://zones/hillersleben/scripts/tasks/security_check/sequencer_consumer.gd" id="5_5gmky"]
+[ext_resource type="Script" uid="uid://cnjsiwmuuv5mq" path="res://zones/hillersleben/scripts/tasks/security_check/sequencer_consumer_security.gd" id="5_5gmky"]
 [ext_resource type="Script" uid="uid://r06d35mysxpf" path="res://zones/hillersleben/scripts/tasks/vorstellung/sequencer_consumer_vorstellung.gd" id="5_aci7m"]
 [ext_resource type="PackedScene" uid="uid://ca7qwvf2uy7tl" path="res://zones/hillersleben/scripts/tasks/task_sequencer.tscn" id="5_cqg2i"]
 [ext_resource type="PackedScene" uid="uid://babkrq4dic747" path="res://zones/hillersleben/scripts/tasks/task_enter_checkpoint.tscn" id="5_hryna"]
@@ -38,6 +39,7 @@
 [ext_resource type="Script" uid="uid://b5sdbpkp587p8" path="res://zones/hillersleben/scripts/mg_klappbare_tür.gd" id="16_k6604"]
 [ext_resource type="Script" uid="uid://codiadaennr2i" path="res://zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd" id="21_y6wga"]
 [ext_resource type="PackedScene" uid="uid://cb6nythpsl3b7" path="res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn" id="21_y253s"]
+[ext_resource type="Script" uid="uid://dowywdoia8in2" path="res://zones/hillersleben/scripts/tasks/bhkw/task_controller.gd" id="22_k4tj3"]
 [ext_resource type="PackedScene" uid="uid://bbcgtxp630e0v" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction.tscn" id="22_omxot"]
 [ext_resource type="Script" uid="uid://c35twvphwf3u4" path="res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd" id="23_cqg2i"]
 [ext_resource type="Script" uid="uid://bjn6ld6vbr26b" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.gd" id="24_7gw78"]
@@ -417,6 +419,9 @@ transform = Transform3D(-0.99986374, 1.4901163e-08, 0.01651007, 4.171066e-08, 1.
 
 [node name="Reference_point_floor" type="Node3D" parent="." unique_id=1002333968]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, -2.842171e-14, 0, 2.842171e-14, 0.99999994, -30.67491, 48.741016, -2.301975)
+
+[node name="GlobalTaskController" type="Node" parent="Reference_point_floor" unique_id=448644572]
+script = ExtResource("3_nbul2")
 
 [node name="Q_VORSTELLUNG" type="Node3D" parent="Reference_point_floor" unique_id=1046243882]
 unique_name_in_owner = true
@@ -1069,6 +1074,9 @@ mesh = SubResource("BoxMesh_7sq4a")
 [node name="Q_BHKW" type="Node3D" parent="Reference_point_floor" unique_id=684035375]
 transform = Transform3D(1, 0, 0, 0, 0.9999998, 3.3881318e-21, 0, -3.3881318e-21, 0.9999998, 0, 1.5086021, 0)
 script = ExtResource("21_y6wga")
+
+[node name="TaskController" type="Node" parent="Reference_point_floor/Q_BHKW" unique_id=1310050122]
+script = ExtResource("22_k4tj3")
 
 [node name="TemperatureGauge" parent="Reference_point_floor/Q_BHKW" unique_id=714340932 instance=ExtResource("21_y253s")]
 transform = Transform3D(-0.8660254, -1.4210858e-14, -0.50000006, 1.4210856e-14, 0.99999994, -5.303564e-14, 0.5, -5.3035636e-14, -0.8660253, 0, 0, 0)

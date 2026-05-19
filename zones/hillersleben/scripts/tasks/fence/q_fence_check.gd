@@ -1,4 +1,5 @@
-extends Node3D
+extends CONSUMER
+const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 
 @onready var area_hole : AREA_TASK = $AREA3D_HOLE
 @onready var wire_pickup : InventoryPickup = $WIRE_PICKUP
@@ -12,11 +13,10 @@ signal wire_picked_up
 signal wire_repaired
 
 @onready var starter : SYSTEMTASKS_UIDCLASSREF.SystemTasksStarter = $TasksStarter
-@onready var sequencer : SEQUENCER = $TaskSequencer
 
-const SEQUENCER := preload("uid://coekj8jimafya")
 
 func _ready() -> void:
+	sequencer = $TaskSequencer
 	area_hole.body_entered.connect(_on_body_entered)
 	wire_pickup.successfully_taken.connect(_on_wire_pick)
 	wire_use.validated_item_interaction.connect(_on_wire_interaction)
@@ -24,8 +24,7 @@ func _ready() -> void:
 	pass
 
 func start() -> void:
-	sequencer.next_in_line.connect(next_task)
-	next_task(sequencer.get_current_task())
+	super()
 	starter.activate()
 	
 func _on_body_entered(...args) -> void:
@@ -42,7 +41,7 @@ func _on_wire_interaction(...args) -> void:
 	$FENCE_BROKEN/PATCH.visible = true
 	pass
 
-func next_task(task_id : SYSTEMTASKSSETTINGS.UNIT_ID) -> void:
+func _on_next_task(task_id : SYSTEMTASKSSETTINGS.UNIT_ID) -> void:
 	match task_id:
 		SYSTEMTASKSSETTINGS.UNIT_ID.Q_HL_FINDHOLE:
 			if area_hole: area_hole.activate()

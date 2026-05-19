@@ -1,16 +1,14 @@
-extends Node
+extends CONSUMER
+const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 
-const SEQUENCER := preload("uid://coekj8jimafya")
-@onready var sequencer : SEQUENCER = $TaskSequencerSecurityCheckpoints
 @onready var sec_checks : Node3D = %SECURITY_CHECKS
-
 const SECAREA := preload("uid://vojndhlaetth")
 
 func _ready():
-	sequencer.next_in_line.connect(_on_next_task)
+	sequencer = $TaskSequencerSecurityCheckpoints
 
 func start():
-	_on_next_task(sequencer.get_current_task())
+	super()
 	$"../TasksStarter".activate()	
 
 func _on_next_task(task_id : int) -> void:

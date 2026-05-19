@@ -1,18 +1,12 @@
-extends Node
-#TODO: This thing is a HACK, whole sequencer approach must be refactored
+extends CONSUMER
+const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 
-const SEQUENCER := preload("uid://coekj8jimafya")
-@onready var sequencer : SEQUENCER = $TaskSequencerVorstellung
 @onready var checks : Node3D = %Q_VORSTELLUNG
-
 const CHECKPOINT := preload("uid://cf00e7qn1t0c7")
 
 func _ready():
-	sequencer.active = true
-	sequencer.next_in_line.connect(_on_next_task)
-	sequencer.sequencing()
-	_on_next_task(sequencer.get_current_task())
-
+	sequencer = $TaskSequencerVorstellung
+	
 func _on_next_task(task_id : int) -> void:
 	match task_id:
 		SYSTEMTASKSSETTINGS.UNIT_ID.Q_HL_SEE_RECHEN:
