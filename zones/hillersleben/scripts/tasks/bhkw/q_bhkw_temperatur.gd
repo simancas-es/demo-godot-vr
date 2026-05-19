@@ -15,17 +15,21 @@ const status_ok : String = "STATUS: OK"
 const status_warning : String = "STATUS: WARNING!"
 const status_critical : String = "STATUS: CRITICAL!"
 
+signal updated
+
 func _ready() -> void:
 	valve_vorlauf.valve_changed.connect(_on_new_fraction)
 	_on_new_fraction(valve_vorlauf.state.valve_fraction)
-	set_valve_to_temp(39.7)
-	temperature_gauge.set_temperature(39.7)
+	set_temp(39.0)
 	
 func _on_new_fraction(fraction : float) -> void:
 	var new_temp = frac_to_temp(fraction)
 	temperature_gauge.set_temperature(new_temp)
 	_update_status()
 
+func set_temp(temp : float) -> void:
+	temperature_gauge.set_temperature(temp)
+	set_valve_to_temp(temp)
 
 func _update_status() -> void:
 	#update text
@@ -48,6 +52,7 @@ func _update_status() -> void:
 		info_status.text = tr(status_ok)
 		info_light.change_color(Color(0, 1.0, 0, 1.0))
 		
+	updated.emit()
 	
 		
 ## Relates Temperature depending on valve fraction opening

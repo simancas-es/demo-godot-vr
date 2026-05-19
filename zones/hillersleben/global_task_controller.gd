@@ -33,7 +33,8 @@ const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 @onready var consumer_vorstellung : CONSUMER = $"../Q_VORSTELLUNG/Sequencer_consumer_vorstellung"
 @onready var consumer_security : CONSUMER = $"../SECURITY_CHECKS/Sequencer_consumer"
 @onready var consumer_fence : CONSUMER = $"../Q_FENCE_CHECK"
-#@onready var consumer_bhkwtemp : CONSUMER = $"../Q_VORSTELLUNG/Sequencer_consumer_vorstellung"
+@onready var consumer_bhkwtemp_high : CONSUMER = $"../Q_BHKW/Sequence_consumerHigh"
+@onready var consumer_bhkwtemp_low : CONSUMER = $"../Q_BHKW/Sequence_consumerLow"
 
 
 ##Pairs
@@ -41,8 +42,7 @@ const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 	consumer_vorstellung : req_vorstellung,
 	consumer_security : req_security,
 	consumer_fence : req_fence,
-	#consumer_bhkwtemp : req,temperature
-	
+	consumer_bhkwtemp_high : req_temperature
 }
 
 ## Periodiclly checks and updates the consumers.
