@@ -26,6 +26,7 @@ const req_vorstellung : Array[TASKID] = []
 const req_security : Array[TASKID] = [TASKID.Q_HL_SEE_GASSPEICHER]
 const req_fence : Array[TASKID] = [TASKID.Q_HL_SECURITYCHECK_ALL]
 const req_temperature : Array[TASKID] = [TASKID.Q_HL_FIXFENCE]
+const req_dekanter : Array[TASKID] = [TASKID.Q_HL_BHKW_HITEMP]
 
 const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 
@@ -35,6 +36,7 @@ const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 @onready var consumer_fence : CONSUMER = $"../Q_FENCE_CHECK"
 @onready var consumer_bhkwtemp_high : CONSUMER = $"../Q_BHKW/Sequence_consumerHigh"
 @onready var consumer_bhkwtemp_low : CONSUMER = $"../Q_BHKW/Sequence_consumerLow"
+@onready var consumer_dekanter : CONSUMER = $"../Q_MG/DekanterConsumer"
 
 
 ##Pairs
@@ -42,7 +44,8 @@ const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 	consumer_vorstellung : req_vorstellung,
 	consumer_security : req_security,
 	consumer_fence : req_fence,
-	consumer_bhkwtemp_high : req_temperature
+	consumer_bhkwtemp_high : req_temperature,
+	consumer_dekanter : req_dekanter
 }
 
 ## Periodiclly checks and updates the consumers.

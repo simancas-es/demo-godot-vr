@@ -45,6 +45,7 @@
 [ext_resource type="Script" uid="uid://c35twvphwf3u4" path="res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd" id="23_cqg2i"]
 [ext_resource type="Script" uid="uid://bjn6ld6vbr26b" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.gd" id="24_7gw78"]
 [ext_resource type="Script" uid="uid://b7larpf5g2b1k" path="res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_low.gd" id="24_akmhy"]
+[ext_resource type="Script" uid="uid://cs1hlyd1cd34n" path="res://zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd" id="29_vj654"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5gmky"]
 size = Vector3(20, 3, 0.05)
@@ -1138,6 +1139,12 @@ pulse_strength = 1.5
 base_energy = 0.5
 
 [node name="Q_MG" type="Node3D" parent="Reference_point_floor" unique_id=740448081]
+
+[node name="DekanterConsumer" type="Node" parent="Reference_point_floor/Q_MG" unique_id=2058936037]
+script = ExtResource("29_vj654")
+
+[node name="TaskSequencer" parent="Reference_point_floor/Q_MG/DekanterConsumer" unique_id=484877787 instance=ExtResource("5_cqg2i")]
+task_sequence = Array[int]([30, 29])
 
 [node name="Q_BB" type="Node3D" parent="Reference_point_floor" unique_id=1138944795]
 
