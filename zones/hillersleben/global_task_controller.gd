@@ -61,6 +61,7 @@ func _on_timer_timeout():
 
 func update() -> void:
 	for key : CONSUMER in pairs.keys():
+		if key.started : continue
 		var all_completed = true
 		var manager : SYSTEMTASKS_UIDCLASSREF.SystemTasksManager = key.sequencer.manager
 		if manager == null:

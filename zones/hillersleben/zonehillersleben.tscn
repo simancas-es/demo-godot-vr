@@ -41,8 +41,10 @@
 [ext_resource type="PackedScene" uid="uid://cb6nythpsl3b7" path="res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn" id="21_y253s"]
 [ext_resource type="Script" uid="uid://dowywdoia8in2" path="res://zones/hillersleben/scripts/tasks/bhkw/task_controller.gd" id="22_k4tj3"]
 [ext_resource type="PackedScene" uid="uid://bbcgtxp630e0v" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction.tscn" id="22_omxot"]
+[ext_resource type="Script" uid="uid://d0pgb0rqo2fad" path="res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_high.gd" id="23_8c1e7"]
 [ext_resource type="Script" uid="uid://c35twvphwf3u4" path="res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd" id="23_cqg2i"]
 [ext_resource type="Script" uid="uid://bjn6ld6vbr26b" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.gd" id="24_7gw78"]
+[ext_resource type="Script" uid="uid://b7larpf5g2b1k" path="res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_low.gd" id="24_akmhy"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5gmky"]
 size = Vector3(20, 3, 0.05)
@@ -549,7 +551,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_cqg2i")
 
 [node name="WIRE_PICKUP" type="Area3D" parent="Reference_point_floor/Q_FENCE_CHECK" unique_id=981538204]
 transform = Transform3D(1, 0, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 31.729061, 0.9888115, 28.402336)
-visible = false
 script = ExtResource("9_cqg2i")
 item_id = 3
 qty = 1
@@ -561,6 +562,7 @@ shape = SubResource("BoxShape3D_hryna")
 debug_color = Color(0, 0.55332184, 0.9167895, 1)
 
 [node name="Area3D" parent="Reference_point_floor/Q_FENCE_CHECK/WIRE_PICKUP" unique_id=1705315567 instance=ExtResource("2_5r3qd")]
+visible = false
 
 [node name="MeshInstance3D" parent="Reference_point_floor/Q_FENCE_CHECK/WIRE_PICKUP/Area3D" index="1" unique_id=916711492]
 mesh = SubResource("CylinderMesh_cqg2i")
@@ -570,7 +572,6 @@ transform = Transform3D(0.6240554, -0.76587635, -0.15488128, 0.7811496, 0.606680
 mesh = SubResource("PrismMesh_5gmky")
 
 [node name="WIRE_USE" type="Area3D" parent="Reference_point_floor/Q_FENCE_CHECK" unique_id=152704827]
-visible = false
 script = ExtResource("6_60g3o")
 reaction_id = 3
 quantity = 1
@@ -584,6 +585,7 @@ debug_color = Color(0, 0.6666667, 0.007843138, 1)
 
 [node name="Area3D" parent="Reference_point_floor/Q_FENCE_CHECK/WIRE_USE" unique_id=1934108768 instance=ExtResource("2_5r3qd")]
 transform = Transform3D(0.9080774, 0, 0.41880235, 0, 0.9999995, 0, -0.4188022, 0, 0.908077, 0, 0, 0)
+visible = false
 
 [node name="MeshInstance3D" parent="Reference_point_floor/Q_FENCE_CHECK/WIRE_USE/Area3D" index="1" unique_id=916711492]
 mesh = SubResource("CylinderMesh_cqg2i")
@@ -1074,6 +1076,18 @@ mesh = SubResource("BoxMesh_7sq4a")
 [node name="Q_BHKW" type="Node3D" parent="Reference_point_floor" unique_id=684035375]
 transform = Transform3D(1, 0, 0, 0, 0.9999998, 3.3881318e-21, 0, -3.3881318e-21, 0.9999998, 0, 1.5086021, 0)
 script = ExtResource("21_y6wga")
+
+[node name="Sequence_consumerHigh" type="Node" parent="Reference_point_floor/Q_BHKW" unique_id=533075510]
+script = ExtResource("23_8c1e7")
+
+[node name="TaskSequencer" parent="Reference_point_floor/Q_BHKW/Sequence_consumerHigh" unique_id=277777525 instance=ExtResource("5_cqg2i")]
+task_sequence = Array[int]([27])
+
+[node name="Sequence_consumerLow" type="Node" parent="Reference_point_floor/Q_BHKW" unique_id=341275157]
+script = ExtResource("24_akmhy")
+
+[node name="TaskSequencer" parent="Reference_point_floor/Q_BHKW/Sequence_consumerLow" unique_id=1011521477 instance=ExtResource("5_cqg2i")]
+task_sequence = Array[int]([28])
 
 [node name="TaskController" type="Node" parent="Reference_point_floor/Q_BHKW" unique_id=1310050122]
 script = ExtResource("22_k4tj3")

@@ -46,9 +46,13 @@ func _on_next_task(task_id : SYSTEMTASKSSETTINGS.UNIT_ID) -> void:
 		SYSTEMTASKSSETTINGS.UNIT_ID.Q_HL_FINDHOLE:
 			if area_hole: area_hole.activate()
 		SYSTEMTASKSSETTINGS.UNIT_ID.Q_HL_FINDWIRE:
-			if wire_pickup: wire_pickup.get_node("Area3D").activate()
+			if wire_pickup:
+				var area = wire_pickup.get_node("Area3D")
+				if area: area.activate()
 		SYSTEMTASKSSETTINGS.UNIT_ID.Q_HL_REPAIRWIRE:
-			if wire_use: wire_use.get_node("Area3D").activate()
+			if wire_use:
+				var area = wire_use.get_node("Area3D")
+				if area: area.activate()
 	
 	pass
 	
