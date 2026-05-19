@@ -36,7 +36,7 @@ const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 @onready var consumer_fence : CONSUMER = $"../Q_FENCE_CHECK"
 @onready var consumer_bhkwtemp_high : CONSUMER = $"../Q_BHKW/Sequence_consumerHigh"
 @onready var consumer_bhkwtemp_low : CONSUMER = $"../Q_BHKW/Sequence_consumerLow"
-@onready var consumer_dekanter : CONSUMER = $"../Q_MG/DekanterConsumer"
+@onready var consumer_dekanter : CONSUMER = $"../Q_MG/Dekanter/DekanterConsumer"
 
 
 ##Pairs
@@ -64,6 +64,9 @@ func _on_timer_timeout():
 
 func update() -> void:
 	for key : CONSUMER in pairs.keys():
+		if key == null:
+			push_error("Key is null!")
+			continue
 		if key.started : continue
 		var all_completed = true
 		var manager : SYSTEMTASKS_UIDCLASSREF.SystemTasksManager = key.sequencer.manager

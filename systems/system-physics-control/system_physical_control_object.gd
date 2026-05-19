@@ -27,9 +27,10 @@ enum ERROR {
 	SUCCESS
 }
 
-
+var _original_gravity_scale : float
 
 func _ready() -> void:
+	_original_gravity_scale = gravity_scale
 	freeze_mode = RigidBody3D.FREEZE_MODE_KINEMATIC
 	set_collision_layer_value(SYSTEMPHYSICALCONTROLUTILS.log2_int(SYSTEMPHYSICALCONTROLSETTINGS.COLLISION_LAYER) + 1, true)
 	set_collision_mask_value(SYSTEMPHYSICALCONTROLUTILS.log2_int(SYSTEMPHYSICALCONTROLSETTINGS.COLLISION_LAYER) + 1, true)
@@ -82,7 +83,7 @@ func release() -> ERROR:
 	is_grabbed = false
 	grabbed_from_local = Vector3.ZERO
 	stopped_being_grabbed.emit()
-	gravity_scale = 1.0
+	gravity_scale = _original_gravity_scale
 	match type:
 		FREEDOM.OBJECT:
 			linear_damp = 0.0

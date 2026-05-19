@@ -612,7 +612,7 @@
 		"any": [
 		  {
 			"type": "SystemTasksConditionSignal",
-			"signal_name": "done",
+			"signal_name": "foerderband_entleert",
 			"locator_id": "HL_DEKFOERDERBAND_ENTLEEREN"
 		  }
 		]
@@ -635,7 +635,7 @@
 		"any": [
 		  {
 			"type": "SystemTasksConditionSignal",
-			"signal_name": "done",
+			"signal_name": "spill_removed",
 			"locator_id": "HL_DEKFOERDERBAND_SPILL"
 		  }
 		]

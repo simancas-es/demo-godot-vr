@@ -46,6 +46,8 @@
 [ext_resource type="Script" uid="uid://bjn6ld6vbr26b" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.gd" id="24_7gw78"]
 [ext_resource type="Script" uid="uid://b7larpf5g2b1k" path="res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_low.gd" id="24_akmhy"]
 [ext_resource type="Script" uid="uid://cs1hlyd1cd34n" path="res://zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd" id="29_vj654"]
+[ext_resource type="Script" uid="uid://6yf4je4071a8" path="res://systems/system-physics-control/system_physical_control_object.gd" id="30_qfb7l"]
+[ext_resource type="Shader" uid="uid://dglcjlrd22v0d" path="res://zones/hillersleben/scripts/tasks/dekanter/spill_shader.gdshader" id="31_ht8a3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5gmky"]
 size = Vector3(20, 3, 0.05)
@@ -224,6 +226,42 @@ albedo_color = Color(0.0038444328, 0.0029891224, 0.0063207317, 1)
 emission_enabled = true
 emission = Color(1, 0.6836525, 0.8722928, 1)
 emission_energy_multiplier = 0.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vj654"]
+height = 3.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_qfb7l"]
+size = Vector3(1, 1.49, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ht8a3"]
+size = Vector3(1.825, 0.3, 0.555)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l5fi6"]
+size = Vector3(1.825, 0.3, 0.555)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lm2sk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ht8a3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l5fi6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lm2sk"]
+size = Vector3(0.18359375, 0.48828125, 0.110839844)
+
+[sub_resource type="BoxMesh" id="BoxMesh_74kmu"]
+size = Vector3(0.15, 0.455, 0.075)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qfb7l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l5fi6"]
+render_priority = 0
+shader = ExtResource("31_ht8a3")
+shader_parameter/noise_scale = 0.68500002927762
+shader_parameter/edge_threshold = 0.4800000228
+shader_parameter/edge_softness = 0.12000000570000001
+shader_parameter/blob_speed = 0.20400000969
+shader_parameter/displacement_strength = 0.02800000133
+shader_parameter/blob_color = Color(0.5443324, 0.67698365, 0.8645252, 1)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ir53q"]
 
@@ -1075,7 +1113,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9999995, 1.1858461e-20, 0, -1.1858461e-20,
 mesh = SubResource("BoxMesh_7sq4a")
 
 [node name="Q_BHKW" type="Node3D" parent="Reference_point_floor" unique_id=684035375]
-transform = Transform3D(1, 0, 0, 0, 0.9999998, 3.3881318e-21, 0, -3.3881318e-21, 0.9999998, 0, 1.5086021, 0)
+transform = Transform3D(-0.0690948, -2.019484e-28, -0.9976099, 3.3800353e-21, 0.9999998, -2.341022e-22, 0.9976101, -3.3881318e-21, -0.069094785, 39.24265, 1.3802032, 10.670365)
 script = ExtResource("21_y6wga")
 
 [node name="Sequence_consumerHigh" type="Node" parent="Reference_point_floor/Q_BHKW" unique_id=533075510]
@@ -1094,10 +1132,10 @@ task_sequence = Array[int]([28])
 script = ExtResource("22_k4tj3")
 
 [node name="TemperatureGauge" parent="Reference_point_floor/Q_BHKW" unique_id=714340932 instance=ExtResource("21_y253s")]
-transform = Transform3D(-0.8660254, -1.4210858e-14, -0.50000006, 1.4210856e-14, 0.99999994, -5.303564e-14, 0.5, -5.3035636e-14, -0.8660253, 0, 0, 0)
+transform = Transform3D(-0.8660254, -1.4210858e-14, -0.50000006, 1.4210856e-14, 0.99999994, -5.303564e-14, 0.5, -5.3035636e-14, -0.8660253, 0.021344809, 2.264071e-15, 0.036970288)
 
 [node name="ValveStructure" parent="Reference_point_floor/Q_BHKW" unique_id=845928422 instance=ExtResource("22_omxot")]
-transform = Transform3D(-0.86602545, -0.49999967, 1.3411045e-07, -8.1566554e-08, 0, -0.9999997, 0.4999999, -0.86602503, 1.1920929e-07, 0.34304047, -0.13412854, -0.19805406)
+transform = Transform3D(-0.86602545, -0.49999967, 1.3411045e-07, -8.1566554e-08, 0, -0.9999997, 0.4999999, -0.86602503, 1.1920929e-07, 0.34392995, -0.13412854, -0.06845702)
 rotation_velocity_degs = 45.0
 deg_rotation_per_interaction = 15.0
 
@@ -1140,11 +1178,79 @@ base_energy = 0.5
 
 [node name="Q_MG" type="Node3D" parent="Reference_point_floor" unique_id=740448081]
 
-[node name="DekanterConsumer" type="Node" parent="Reference_point_floor/Q_MG" unique_id=2058936037]
+[node name="Dekanter" type="Node3D" parent="Reference_point_floor/Q_MG" unique_id=1611811712]
+transform = Transform3D(0.921694, 0, -0.3879178, 0, 1, 0, 0.3879178, 0, 0.921694, -36, 0, -33)
+
+[node name="DekanterConsumer" type="Node" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=2058936037]
 script = ExtResource("29_vj654")
 
-[node name="TaskSequencer" parent="Reference_point_floor/Q_MG/DekanterConsumer" unique_id=484877787 instance=ExtResource("5_cqg2i")]
+[node name="TaskSequencer" parent="Reference_point_floor/Q_MG/Dekanter/DekanterConsumer" unique_id=484877787 instance=ExtResource("5_cqg2i")]
 task_sequence = Array[int]([30, 29])
+
+[node name="dekanter_cylinder" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=1562296621]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1.519455, 6.6417485e-08)
+mesh = SubResource("CylinderMesh_vj654")
+
+[node name="dekanter_beinen" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=616243186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6450882, 0)
+mesh = SubResource("BoxMesh_qfb7l")
+
+[node name="foerdeband" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=282823040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4137154, 0.7180214, 0.9022783)
+mesh = SubResource("BoxMesh_ht8a3")
+
+[node name="schneckeaus" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=1426155946]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.0322723, 0.4104843, 1.5492959)
+mesh = SubResource("BoxMesh_l5fi6")
+
+[node name="ibc1" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=250021788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18375397, 0.3755188, -3.2874303)
+mesh = SubResource("BoxMesh_lm2sk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc1" unique_id=1860911863]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc1/StaticBody3D" unique_id=951476881]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 1.6940659e-21, 0, -1.6940659e-21, 0.9999999, 0, 0, 0)
+shape = SubResource("BoxShape3D_ht8a3")
+
+[node name="snap1" type="Node3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc1" unique_id=1023513547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27938277, 0.5025941, 8.999725e-22)
+
+[node name="ibc2" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=706891800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21630669, 0.3755188, -4.765661)
+mesh = SubResource("BoxMesh_lm2sk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc2" unique_id=512240603]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc2/StaticBody3D" unique_id=226112874]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 1.6940659e-21, 0, -1.6940659e-21, 0.9999999, 0, 0, 0)
+shape = SubResource("BoxShape3D_l5fi6")
+
+[node name="snap2" type="Node3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc2" unique_id=1017452615]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.25021806, 0.5025941, -0.013132691)
+
+[node name="intake" type="RigidBody3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=958178673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3632507, -3.2191179)
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+gravity_scale = 0.1
+sleeping = true
+script = ExtResource("30_qfb7l")
+type = 0
+metadata/_custom_type_script = "uid://6yf4je4071a8"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_MG/Dekanter/intake" unique_id=1422277546]
+transform = Transform3D(1, -1.6940659e-21, 0, 1.3129011e-19, 0.99999076, 2.6258021e-19, -2.9802322e-08, -1.6940659e-21, 1, -3.9400013e-22, 0.23257448, -3.9400013e-22)
+shape = SubResource("BoxShape3D_lm2sk")
+debug_color = Color(0, 4.2681017, 4.9151754, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter/intake/CollisionShape3D" unique_id=1963307054]
+mesh = SubResource("BoxMesh_74kmu")
+
+[node name="spill" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=1821309272]
+transform = Transform3D(0.8945056, 0, -0.44705668, 0, 1, 0, 0.44705668, 0, 0.8945056, -1.0584469, -0.119319916, 0.5559007)
+mesh = SubResource("PlaneMesh_qfb7l")
+surface_material_override/0 = SubResource("ShaderMaterial_l5fi6")
 
 [node name="Q_BB" type="Node3D" parent="Reference_point_floor" unique_id=1138944795]
 
