@@ -19,6 +19,21 @@ const BUTTON := preload("uid://bskfg6cqrrb1w")
 @onready var dek_button : BUTTON = $"../dek-button"
 @onready var fb_button : BUTTON = $"../fb-button"
 
+const TIMER := preload("uid://fbjo68twdj4d")
+@onready var clock : TIMER = $"../clock"
+
+@onready var info_dec : Label3D = $"../info_display/dec"
+@onready var info_fb : Label3D = $"../info_display/fb"
+@onready var info_info : Label3D = $"../info_display/info"
+const decanter := "DECANTER"
+const fb := "CONVEYOR BELT"
+const status_on := "ON"
+const status_off := "OFF"
+const info_status_0 := "STATUS: OK"
+const info_status_1 := "Emptying conveyor belt..."
+const info_status_2 := "Conveyor belt empty"
+const info_status_polymer := "NOT ENOUGH POLYMER!"
+
 class STATE:
 	var dekanter_on : bool = true
 	var foerderband_on : bool = true
@@ -101,17 +116,49 @@ func start_dekanter(on : bool = true) -> void:
 	if on:
 		info_light.activate()
 		info_light.change_color(Color.GREEN)
+		info_dec.text = "%s: %s" % [tr(decanter), tr(status_on) ]
 	elif not on:
 		info_light.change_color(Color.ORANGE)
-	
+		info_dec.text = "%s: %s" % [tr(decanter), tr(status_off) ]
+
 	update_current_snap()
 	
 func start_foerderband(on : bool = true) -> void:
 	state.foerderband_on = on
+	if on:
+		info_fb.text = "%s: %s" % [tr(fb), tr(status_on) ]
+
+	if not on:
+		if state.time_s > 30.0: #If more than 30 minutes (seconds), considered emptied.
+			foerderband_entleert.emit()
+		info_fb.text = "%s: %s" % [tr(fb), tr(status_off) ]
+		
+		
 	
 
 func _process(delta: float) -> void:
 	if not state.dekanter_on and state.foerderband_on:
+		info_info.text = tr(info_status_1)
+		if state.time_s > 30.0:
+			info_info.text = tr(info_status_2)
+			return
 		state.time_s += delta
-	elif state.dekanter_on : state.time_s = 0.0
-	pass
+
+		# Clock update
+		clock.set_immediate_minutes(state.time_s)
+		# Discrete sector
+		var sector = clock.get_sector(state.time_s)
+		if sector != clock._last_sector:
+			clock._last_sector = sector
+			clock.update_sectors(state.time_s)
+			clock.cleanup_sectors(state.time_s)
+
+	elif state.dekanter_on:
+		state.time_s = 0.0		
+		clock.set_minutes(0.0, 0.5)
+		clock._last_sector = -1
+		
+		if not state.foerderband_on:
+			info_info.text = tr("TURN CONVEYOR ON")	
+		else:
+			info_info.text = tr(info_status_0)

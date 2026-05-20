@@ -45,7 +45,7 @@ const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 	consumer_security : req_security,
 	consumer_fence : req_fence,
 	consumer_bhkwtemp_high : req_temperature,
-	consumer_dekanter : []#req_dekanter
+	consumer_dekanter : req_dekanter
 }
 
 ## Periodiclly checks and updates the consumers.

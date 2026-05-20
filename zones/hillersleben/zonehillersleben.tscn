@@ -49,6 +49,8 @@
 [ext_resource type="Shader" uid="uid://dglcjlrd22v0d" path="res://zones/hillersleben/scripts/tasks/dekanter/spill_shader.gdshader" id="31_ht8a3"]
 [ext_resource type="PackedScene" uid="uid://1uanemwpfr1s" path="res://zones/hillersleben/scripts/button/button.tscn" id="32_l5fi6"]
 [ext_resource type="PackedScene" uid="uid://bl7fxuvvgwxu6" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.tscn" id="32_lm2sk"]
+[ext_resource type="Script" uid="uid://fbjo68twdj4d" path="res://zones/hillersleben/scripts/clock-timer/clock_timer.gd" id="33_74kmu"]
+[ext_resource type="PackedScene" uid="uid://cpxsvtfvegtfx" path="res://assets/world_objects/hillersleben/clock/clock.gltf" id="33_lm2sk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5gmky"]
 size = Vector3(20, 3, 0.05)
@@ -209,7 +211,7 @@ size = Vector3(0.299866, 10.133537, 0.72558594)
 size = Vector3(1, 1.8, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_y6wga"]
-size = Vector2(0.5, 0.19)
+size = Vector2(0.875, 0.28)
 orientation = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7gw78"]
@@ -222,8 +224,14 @@ height = 3.0
 [sub_resource type="BoxMesh" id="BoxMesh_qfb7l"]
 size = Vector3(1, 1.49, 3)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_74kmu"]
+size = Vector3(1, 1.6973877, 2.9875488)
+
 [sub_resource type="BoxMesh" id="BoxMesh_ht8a3"]
 size = Vector3(1.825, 0.3, 0.555)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mqa8n"]
+size = Vector3(1.8251953, 0.6661377, 0.854126)
 
 [sub_resource type="BoxMesh" id="BoxMesh_l5fi6"]
 size = Vector3(1.825, 0.3, 0.555)
@@ -251,6 +259,13 @@ shader_parameter/edge_softness = 0.1200000057
 shader_parameter/blob_speed = 0.20400000969
 shader_parameter/displacement_strength = 0.02800000133
 shader_parameter/blob_color = Color(0.5443324, 0.67698365, 0.8645252, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_74kmu"]
+size = Vector2(0.485, 0.02)
+center_offset = Vector3(0.195, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqa8n"]
+albedo_color = Color(0.8809239, 0, 0.25079548, 1)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ir53q"]
 
@@ -1162,7 +1177,7 @@ transform = Transform3D(-3.0597977e-08, -0.27999997, -0.48497427, 0.56, -2.44783
 [node name="Q_MG" type="Node3D" parent="Reference_point_floor" unique_id=740448081]
 
 [node name="Dekanter" type="Node3D" parent="Reference_point_floor/Q_MG" unique_id=1611811712]
-transform = Transform3D(0.921694, 0, -0.3879178, 0, 1, 0, 0.3879178, 0, 0.921694, -36, 0, -33)
+transform = Transform3D(0.921694, 0, -0.3879178, 0, 1, 0, 0.3879178, 0, 0.921694, 28.257402, 1.2433044e-12, 10.744881)
 
 [node name="DekanterConsumer" type="Node" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=2058936037]
 script = ExtResource("29_vj654")
@@ -1178,19 +1193,38 @@ mesh = SubResource("CylinderMesh_vj654")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6450882, 0)
 mesh = SubResource("BoxMesh_qfb7l")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_MG/Dekanter/dekanter_beinen" unique_id=936884960]
+collision_layer = 8421376
+collision_mask = 32768
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_MG/Dekanter/dekanter_beinen/StaticBody3D" unique_id=1907400773]
+transform = Transform3D(1, -1.6940659e-21, 0, 1.6940659e-19, 0.9999881, 3.3881318e-19, -2.9802322e-08, -1.6940659e-21, 1, -1.9073486e-06, 0.12359619, 0.0011005402)
+shape = SubResource("BoxShape3D_74kmu")
+
 [node name="foerdeband" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=282823040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4137154, 0.7180214, 0.9022783)
 mesh = SubResource("BoxMesh_ht8a3")
 
-[node name="schneckeaus" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=1426155946]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.0322723, 0.4104843, 1.5492959)
+[node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_MG/Dekanter/foerdeband" unique_id=1981119259]
+collision_layer = 8421376
+collision_mask = 32768
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_MG/Dekanter/foerdeband/StaticBody3D" unique_id=1377567377]
+transform = Transform3D(1, -1.6940659e-21, 0, 1.9989978e-19, 0.99998593, 3.9979955e-19, -2.9802322e-08, -1.6940659e-21, 1, 0.017089605, -0.16693115, 0.14142227)
+shape = SubResource("BoxShape3D_mqa8n")
+
+[node name="schneckeaus" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter/foerdeband" unique_id=1426155946]
+transform = Transform3D(-2.9802322e-08, 0, -1, 1.6940659e-21, 0.99999994, -8.4703295e-22, 1, 0, 0, -0.6185572, -0.30753708, 0.6470175)
 mesh = SubResource("BoxMesh_l5fi6")
+skeleton = NodePath("../..")
 
 [node name="ibc1" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=250021788]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18375397, 0.3755188, -3.2874303)
 mesh = SubResource("BoxMesh_lm2sk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc1" unique_id=1860911863]
+collision_layer = 8421376
+collision_mask = 32768
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc1/StaticBody3D" unique_id=951476881]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 1.6940659e-21, 0, -1.6940659e-21, 0.9999999, 0, 0, 0)
@@ -1204,6 +1238,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21630669, 0.3755188, -4.765
 mesh = SubResource("BoxMesh_lm2sk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc2" unique_id=512240603]
+collision_layer = 8421376
+collision_mask = 32768
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc2/StaticBody3D" unique_id=226112874]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 1.6940659e-21, 0, -1.6940659e-21, 0.9999999, 0, 0, 0)
@@ -1214,6 +1250,8 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.25021806
 
 [node name="intake" type="RigidBody3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=958178673]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3632507, -3.2191179)
+collision_layer = 0
+collision_mask = 0
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 gravity_scale = 0.1
@@ -1243,6 +1281,48 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5
 
 [node name="fb-button" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=80926400 instance=ExtResource("32_l5fi6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7579788, 0.8301201, 0.60181487)
+
+[node name="info_display" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=844315233]
+transform = Transform3D(-0.004816994, 0, -0.9999885, 0, 1.0000001, 0, 0.9999884, 0, -0.0048169997, -0.5201404, 1.2111437, 0.035615966)
+mesh = SubResource("PlaneMesh_y6wga")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_7gw78")
+
+[node name="dec" type="Label3D" parent="Reference_point_floor/Q_MG/Dekanter/info_display" unique_id=37330146]
+auto_translate_mode = 2
+transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, -0.42164278, 0.074960954, 0.013570416)
+text = "DECANTER: ON PLACEHOLDER"
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 2
+
+[node name="fb" type="Label3D" parent="Reference_point_floor/Q_MG/Dekanter/info_display" unique_id=1710784487]
+auto_translate_mode = 2
+transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, -0.42164278, 0.02137971, 0.013570416)
+text = "FOERDERBAND: ON PLACEHOLDER"
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 2
+
+[node name="info" type="Label3D" parent="Reference_point_floor/Q_MG/Dekanter/info_display" unique_id=1766512183]
+auto_translate_mode = 2
+transform = Transform3D(0.27, 0, 0, 0, 0.27, 0, 0, 0, 0.27, -0.42164278, -0.03462387, 0.013570416)
+text = "EXTRA INFORMATION PLACEHOLDER"
+outline_size = 0
+horizontal_alignment = 0
+vertical_alignment = 2
+
+[node name="clock" type="Node3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=1872426776]
+transform = Transform3D(-4.371139e-08, 0, -0.9999999, 1, 1.490116e-08, -4.3711385e-08, 1.4901163e-08, -0.9999999, 0, -1.4666755, 1.6204448, 1.530017)
+script = ExtResource("33_74kmu")
+
+[node name="clock" parent="Reference_point_floor/Q_MG/Dekanter/clock" unique_id=1936884261 instance=ExtResource("33_lm2sk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6736174e-19, -0.00286716, -1.1641532e-10)
+
+[node name="hand" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter/clock" unique_id=583283674]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.617445e-24, 0.007259369, 1.323489e-23)
+mesh = SubResource("PlaneMesh_74kmu")
+surface_material_override/0 = SubResource("StandardMaterial3D_mqa8n")
 
 [node name="Q_BB" type="Node3D" parent="Reference_point_floor" unique_id=1138944795]
 
