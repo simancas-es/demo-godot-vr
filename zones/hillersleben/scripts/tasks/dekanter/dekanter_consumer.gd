@@ -12,7 +12,21 @@ extends "res://zones/hillersleben/scripts/tasks/sequence_consumer.gd"
 @onready var snap2 : Node3D = $"../ibc2/snap2"
 @onready var intake : SystemPhysicalControlObject = $"../intake"
 var _current_snap = 1
+const LIGHT := preload("uid://bjn6ld6vbr26b")
+@onready var info_light : LIGHT = $"../info_light"
 
+const BUTTON := preload("uid://bskfg6cqrrb1w")
+@onready var dek_button : BUTTON = $"../dek-button"
+@onready var fb_button : BUTTON = $"../fb-button"
+
+class STATE:
+	var dekanter_on : bool = true
+	var foerderband_on : bool = true
+	var time_s : float = 0 #time since foerderband is on and dekanter is off
+var state := STATE.new()
+
+
+## TASK- LOGIC
 signal foerderband_entleert
 signal spill_removed
 var locator_spill = SYSTEMTASKS_UIDCLASSREF.SystemTasksLocator.new(SYSTEMTASKSSETTINGS.LOCATOR_ID.HL_DEKFOERDERBAND_SPILL)
@@ -24,12 +38,23 @@ func _ready() -> void:
 	spill.scale = Vector3.ZERO	
 	intake.stopped_being_grabbed.connect(_on_intake_let_go)
 	
+	dek_button.on.connect(start_dekanter)
+	dek_button.off.connect(start_dekanter.bind(false))
+	
+	fb_button.on.connect(start_foerderband)
+	fb_button.off.connect(start_foerderband.bind(false))
+	
+	
 	add_child(locator_spill)
 	add_child(locator_foerderband)
+	
+	start_dekanter()
+	start_foerderband()
 
 
 func start() -> void:
 	super()
+	start_dekanter()
 	start_spill()
 	
 func _on_next_task(task_id : int) -> void:
@@ -41,6 +66,8 @@ func _on_next_task(task_id : int) -> void:
 			
 	pass
 
+
+#LOGIC
 
 func start_spill() -> void:
 	var tween = create_tween()
@@ -60,10 +87,31 @@ func update_current_snap() -> void:
 	if (dis1 > dis2) and (dis2 < 0.5):	_current_snap = 2
 	
 	#Assuming ibc2 always full:
-	if _current_snap == 1 : start_spill()
+	if _current_snap == 1 and state.dekanter_on: start_spill()
 	if _current_snap == 2 : remove_spill()
 
 func _on_intake_let_go(...args) -> void:
 	intake.sleeping = true
 	update_current_snap()
+	pass
+	
+	
+func start_dekanter(on : bool = true) -> void:
+	state.dekanter_on = on
+	if on:
+		info_light.activate()
+		info_light.change_color(Color.GREEN)
+	elif not on:
+		info_light.change_color(Color.ORANGE)
+	
+	update_current_snap()
+	
+func start_foerderband(on : bool = true) -> void:
+	state.foerderband_on = on
+	
+
+func _process(delta: float) -> void:
+	if not state.dekanter_on and state.foerderband_on:
+		state.time_s += delta
+	elif state.dekanter_on : state.time_s = 0.0
 	pass

@@ -43,11 +43,12 @@
 [ext_resource type="PackedScene" uid="uid://bbcgtxp630e0v" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction.tscn" id="22_omxot"]
 [ext_resource type="Script" uid="uid://d0pgb0rqo2fad" path="res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_high.gd" id="23_8c1e7"]
 [ext_resource type="Script" uid="uid://c35twvphwf3u4" path="res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd" id="23_cqg2i"]
-[ext_resource type="Script" uid="uid://bjn6ld6vbr26b" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.gd" id="24_7gw78"]
 [ext_resource type="Script" uid="uid://b7larpf5g2b1k" path="res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_low.gd" id="24_akmhy"]
 [ext_resource type="Script" uid="uid://cs1hlyd1cd34n" path="res://zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd" id="29_vj654"]
 [ext_resource type="Script" uid="uid://6yf4je4071a8" path="res://systems/system-physics-control/system_physical_control_object.gd" id="30_qfb7l"]
 [ext_resource type="Shader" uid="uid://dglcjlrd22v0d" path="res://zones/hillersleben/scripts/tasks/dekanter/spill_shader.gdshader" id="31_ht8a3"]
+[ext_resource type="PackedScene" uid="uid://1uanemwpfr1s" path="res://zones/hillersleben/scripts/button/button.tscn" id="32_l5fi6"]
+[ext_resource type="PackedScene" uid="uid://bl7fxuvvgwxu6" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.tscn" id="32_lm2sk"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5gmky"]
 size = Vector3(20, 3, 0.05)
@@ -215,18 +216,6 @@ orientation = 2
 albedo_color = Color(0, 0.54509807, 0.77254903, 1)
 metallic_specular = 0.0
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_y6wga"]
-top_radius = 0.025
-bottom_radius = 0.04
-height = 0.02
-radial_segments = 12
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y6wga"]
-albedo_color = Color(0.0038444328, 0.0029891224, 0.0063207317, 1)
-emission_enabled = true
-emission = Color(1, 0.6836525, 0.8722928, 1)
-emission_energy_multiplier = 0.0
-
 [sub_resource type="CylinderMesh" id="CylinderMesh_vj654"]
 height = 3.0
 
@@ -258,7 +247,7 @@ render_priority = 0
 shader = ExtResource("31_ht8a3")
 shader_parameter/noise_scale = 0.68500002927762
 shader_parameter/edge_threshold = 0.4800000228
-shader_parameter/edge_softness = 0.12000000570000001
+shader_parameter/edge_softness = 0.1200000057
 shader_parameter/blob_speed = 0.20400000969
 shader_parameter/displacement_strength = 0.02800000133
 shader_parameter/blob_color = Color(0.5443324, 0.67698365, 0.8645252, 1)
@@ -1167,14 +1156,8 @@ text = "Status: PLACEHOLDER"
 outline_size = 0
 vertical_alignment = 2
 
-[node name="info_light" type="MeshInstance3D" parent="Reference_point_floor/Q_BHKW" unique_id=1589829020]
-transform = Transform3D(-3.0597974e-08, -0.27999997, -0.48497427, 0.56, -2.4478377e-08, -2.1198897e-08, -1.0599449e-08, -0.48497427, 0.27999997, -0.1555582, 0.22036366, 0.17062935)
-mesh = SubResource("CylinderMesh_y6wga")
-surface_material_override/0 = SubResource("StandardMaterial3D_y6wga")
-script = ExtResource("24_7gw78")
-pulse_speed = 4.0
-pulse_strength = 1.5
-base_energy = 0.5
+[node name="info_light" parent="Reference_point_floor/Q_BHKW" unique_id=63685343 instance=ExtResource("32_lm2sk")]
+transform = Transform3D(-3.0597977e-08, -0.27999997, -0.48497427, 0.56, -2.4478377e-08, -2.11989e-08, -1.05994475e-08, -0.48497427, 0.27999997, -0.1555582, 0.22036366, 0.17062935)
 
 [node name="Q_MG" type="Node3D" parent="Reference_point_floor" unique_id=740448081]
 
@@ -1251,6 +1234,15 @@ mesh = SubResource("BoxMesh_74kmu")
 transform = Transform3D(0.8945056, 0, -0.44705668, 0, 1, 0, 0.44705668, 0, 0.8945056, -1.0584469, -0.119319916, 0.5559007)
 mesh = SubResource("PlaneMesh_qfb7l")
 surface_material_override/0 = SubResource("ShaderMaterial_l5fi6")
+
+[node name="info_light" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=204498289 instance=ExtResource("32_lm2sk")]
+transform = Transform3D(-3.0597974e-08, -0.55539864, -0.07164093, 0.56, -3.1702548e-08, 6.597957e-09, -1.0599451e-08, -0.07164093, 0.55539864, -0.5175766, 1.2668153, -1.2320062)
+
+[node name="dek-button" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=402882587 instance=ExtResource("32_l5fi6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.525471, 1.1175117, -1.2140105)
+
+[node name="fb-button" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=80926400 instance=ExtResource("32_l5fi6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7579788, 0.8301201, 0.60181487)
 
 [node name="Q_BB" type="Node3D" parent="Reference_point_floor" unique_id=1138944795]
 
