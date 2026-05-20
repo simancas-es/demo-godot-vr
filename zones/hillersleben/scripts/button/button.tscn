@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://1uanemwpfr1s"]
+
+[ext_resource type="Script" uid="uid://bskfg6cqrrb1w" path="res://zones/hillersleben/scripts/button/button.gd" id="1_6wvf3"]
+[ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="2_67wqe"]
+[ext_resource type="Script" uid="uid://dkh8s37wqe5oi" path="res://zones/hillersleben/scripts/button/fpv_animation.gd" id="3_6wvf3"]
+[ext_resource type="PackedScene" uid="uid://dbv1hvxufc1al" path="res://XR/scenes/interactables/objects/push_button.tscn" id="4_5fjai"]
+[ext_resource type="Script" uid="uid://buwpuqagfex1c" path="res://zones/hillersleben/scripts/button/xr_animation.gd" id="5_67wqe"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qbqkw"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qaewh"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="Button" type="Node3D" unique_id=402882587]
+script = ExtResource("1_6wvf3")
+
+[node name="MachineToggleable" type="Area3D" parent="." unique_id=71685088]
+transform = Transform3D(0.55999994, 0, 0, 0, 0.5599999, 0, 0, 0, 0.56, 0, 0, 0)
+script = ExtResource("2_67wqe")
+initial_state = 1
+time_rest_s = 0.5
+string_on = "Press [E] to turn off."
+string_off = "Press [E] to turn on."
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MachineToggleable" unique_id=1782461491]
+shape = SubResource("BoxShape3D_qbqkw")
+
+[node name="MeshInstance3D-Button" type="MeshInstance3D" parent="." unique_id=496994615]
+transform = Transform3D(0.55999994, 0, 0, 0, 0.56000006, 0, 0, 0, 0.56000006, 0, 0, 0)
+mesh = SubResource("BoxMesh_qaewh")
+skeleton = NodePath("")
+script = ExtResource("3_6wvf3")
+
+[node name="PushButton" parent="." unique_id=193149387 instance=ExtResource("4_5fjai")]
+transform = Transform3D(0.55999994, 0, 0, 0, -2.447838e-08, 0.56000006, 0, -0.56000006, -2.447838e-08, 0, 0, 0)
+toggle_displacement = true
+
+[node name="XRControl" type="Node" parent="PushButton" unique_id=1890264427]
+script = ExtResource("5_67wqe")
