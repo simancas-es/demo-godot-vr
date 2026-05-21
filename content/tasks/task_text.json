@@ -424,9 +424,9 @@
 	  "es": "Amonio elevado en tanque de aireación"
 	},
 	"text": {
-	  "en": "Adjust target ammonium level on the controller.",
-	  "de": "Ammoniumeinstellung am Kontroller korrigieren.",
-	  "es": "Ajusta el nivel objetivo de amonio en controlador."
+	  "en": "Adjust target ammonium level on the controller to less than 2.0 mg/l.",
+	  "de": "Ammoniumeinstellung am Kontroller korrigieren auf unter 2.0 mg/l.",
+	  "es": "Ajusta el nivel objetivo de amonio en controlador a menos de 2.0 mg/l."
 	}
   },
   {

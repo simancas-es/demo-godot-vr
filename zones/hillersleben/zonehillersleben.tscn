@@ -51,6 +51,11 @@
 [ext_resource type="PackedScene" uid="uid://bl7fxuvvgwxu6" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.tscn" id="32_lm2sk"]
 [ext_resource type="Script" uid="uid://fbjo68twdj4d" path="res://zones/hillersleben/scripts/clock-timer/clock_timer.gd" id="33_74kmu"]
 [ext_resource type="PackedScene" uid="uid://cpxsvtfvegtfx" path="res://assets/world_objects/hillersleben/clock/clock.gltf" id="33_lm2sk"]
+[ext_resource type="Script" uid="uid://dlr2ysaf72y02" path="res://zones/hillersleben/scripts/tasks/bb/bb_consumer.gd" id="35_mqa8n"]
+[ext_resource type="FontFile" uid="uid://v0hjg7a27smq" path="res://assets/fonts/FrutigerLTPro/FrutigerLTPro/FrutigerLTPro-Roman.otf" id="36_tb4lx"]
+[ext_resource type="Script" uid="uid://dbb00gqpvldte" path="res://zones/hillersleben/scripts/tasks/bb/pid_nh_4_coordinator.gd" id="37_qbqkw"]
+[ext_resource type="PackedScene" uid="uid://p4lu7gvj1nf5" path="res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn" id="37_tb4lx"]
+[ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="38_qbqkw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5gmky"]
 size = Vector3(20, 3, 0.05)
@@ -266,6 +271,44 @@ center_offset = Vector3(0.195, 0, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqa8n"]
 albedo_color = Color(0.8809239, 0, 0.25079548, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qbqkw"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qaewh"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijh67"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fvi1l"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vijfd"]
+size = Vector3(0.27825928, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iibwe"]
+size = Vector3(0.27825928, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k02vd"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h3ac7"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cp6hp"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tb4lx"]
+size = Vector2(0.085, 0.07)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tb4lx"]
+viewport_path = NodePath("Reference_point_floor/Q_BB/PID_NH4/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbqkw"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_tb4lx")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ir53q"]
 
@@ -1325,8 +1368,173 @@ mesh = SubResource("PlaneMesh_74kmu")
 surface_material_override/0 = SubResource("StandardMaterial3D_mqa8n")
 
 [node name="Q_BB" type="Node3D" parent="Reference_point_floor" unique_id=1138944795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.908604, 2.009819, 25.88039)
+
+[node name="bb_consumer" type="Node" parent="Reference_point_floor/Q_BB" unique_id=1145679050]
+script = ExtResource("35_mqa8n")
+blender_nh4_label_np = NodePath("../../../Visuals/Referenz/B1-Steuerung-1/Text_012")
+
+[node name="TaskSequencer" parent="Reference_point_floor/Q_BB/bb_consumer" unique_id=2094104197 instance=ExtResource("5_cqg2i")]
+task_sequence = Array[int]([31])
+
+[node name="nh4_dynamic" type="Label3D" parent="Reference_point_floor/Q_BB" unique_id=355448995]
+transform = Transform3D(-0.038971145, 0, -0.022500003, 0, 0.045, 0, 0.022500003, 0, -0.038971145, -11.624777, 2.142334, 5.6772356)
+modulate = Color(0.09803922, 0.10980392, 0.2509804, 1)
+text = "27.0"
+font = ExtResource("36_tb4lx")
+font_size = 42
+outline_size = 0
+horizontal_alignment = 2
+
+[node name="PID_NH4" type="Node3D" parent="Reference_point_floor/Q_BB" unique_id=1240056637]
+transform = Transform3D(-0.038971145, 0, -0.022500005, 5.293956e-23, 0.044999998, -1.0587912e-22, 0.0225, 0, -0.03897114, -11.624779, 2.142334, 5.6772346)
+script = ExtResource("37_qbqkw")
+
+[node name="inter_s" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=988453575]
+transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.7069092, -1.3388672, 0)
+script = ExtResource("38_qbqkw")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_s" unique_id=881456011]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_qbqkw")
+
+[node name="inter_up" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=543721322]
+transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.58288574, -1.6932373, 0)
+script = ExtResource("38_qbqkw")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_up" unique_id=1713869468]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_qaewh")
+
+[node name="inter_down" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=1022526634]
+transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.58288574, -2.3757324, 0)
+script = ExtResource("38_qbqkw")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_down" unique_id=554879529]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_ijh67")
+
+[node name="inter_right" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=1036927200]
+transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 1.0405273, -2.0257568, 0)
+script = ExtResource("38_qbqkw")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_right" unique_id=1167297486]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_fvi1l")
+
+[node name="inter_left" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=939411288]
+transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.16381836, -2.0280762, 6.1035156e-05)
+script = ExtResource("38_qbqkw")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_left" unique_id=1789503089]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -6.149459e-19, 0, 0, 1, 0.083862305, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_vijfd")
+
+[node name="inter_ok" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=775763548]
+transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.504919, -2.0176494, 8.92682e-05)
+script = ExtResource("38_qbqkw")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_ok" unique_id=18288762]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -6.149459e-19, 0, 0, 1, 0.083862305, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_iibwe")
+
+[node name="inter_esc" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=46596541]
+transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, -0.27563477, -2.0177002, 0)
+script = ExtResource("38_qbqkw")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_esc" unique_id=1900702438]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_k02vd")
+
+[node name="inter_c" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=8492643]
+transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.13110352, -1.3388672, 0)
+script = ExtResource("38_qbqkw")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_c" unique_id=722924456]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_h3ac7")
+
+[node name="inter_m" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=1487898082]
+transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, -0.46228027, -1.3388672, 0)
+script = ExtResource("38_qbqkw")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_m" unique_id=827908298]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_cp6hp")
+
+[node name="SubViewport" type="SubViewport" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=357907367]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(400, 400)
+render_target_update_mode = 4
+
+[node name="PID-NH4" parent="Reference_point_floor/Q_BB/PID_NH4/SubViewport" unique_id=507059483 instance=ExtResource("37_tb4lx")]
+offset_right = 0.0
+offset_bottom = 0.0
+settings_target_current_values = Array[float]([1.5])
+
+[node name="pid_menu" type="MeshInstance3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=516171818]
+transform = Transform3D(22.22222, -2.861023e-06, -3.5983703e-07, -4.9670524e-07, 4.967053e-06, -22.22222, 2.861023e-06, 22.222218, 5.145343e-06, 0.1586914, -0.13793945, 0.06933594)
+mesh = SubResource("PlaneMesh_tb4lx")
+skeleton = NodePath("../../nh4_dynamic")
+surface_material_override/0 = SubResource("StandardMaterial3D_qbqkw")
 
 [node name="Q_NKB" type="Node3D" parent="Reference_point_floor" unique_id=593365126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.87595, 9.640527e-13, 33.919586)
 
 [node name="Config" type="Node3D" parent="." unique_id=701552541]
 
@@ -2206,6 +2414,9 @@ shape = SubResource("ConcavePolygonShape3D_ht8a3")
 metadata/_edit_lock_ = true
 
 [node name="Referenz" parent="Visuals" unique_id=17836815 instance=ExtResource("15_h3jyd")]
+
+[node name="Plane_928" parent="Visuals/Referenz/B1-Steuerung-1" parent_id_path=PackedInt32Array(17836815, 963221293) index="81" unique_id=1581619734]
+transform = Transform3D(-1.19209275e-07, 0.99998313, 0.005784124, -0.99999994, -1.1920929e-07, 6.635673e-08, 6.6822395e-08, -0.005784124, 0.99998313, 0.2104969, 1.2419701, -0.12565613)
 
 [node name="nkb-1-pivot" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke" parent_id_path=PackedInt32Array(17836815, 1018371033) index="0" unique_id=1318774200]
 transform = Transform3D(0.8571007, 0, -8.471827, 0, 0.053560268, 0, 8.471827, 0, 0.8571007, -0.00024414063, 0.12705994, 3.0517578e-05)

@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://cxgw7d400ibe4"]
+
+[ext_resource type="FontFile" uid="uid://v0hjg7a27smq" path="res://assets/fonts/FrutigerLTPro/FrutigerLTPro/FrutigerLTPro-Roman.otf" id="1_3k32a"]
+
+[resource]
+default_font = ExtResource("1_3k32a")

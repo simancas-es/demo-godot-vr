@@ -658,7 +658,7 @@
 		"any": [
 		  {
 			"type": "SystemTasksConditionSignal",
-			"signal_name": "done",
+			"signal_name": "target_concentration_fixed",
 			"locator_id": "HL_NH4_HIGH_BELUEFTET"
 		  }
 		]
