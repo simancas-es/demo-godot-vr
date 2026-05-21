@@ -12,6 +12,8 @@ var _next_state
 
 @export var time_rest_s : float = 1.0 #seconds between activations
 var _can_activate := true
+@onready var _base_monitoring = monitoring
+@onready var _base_monitorable = monitorable 
 
 @export var momentary_button : bool = false #Turns on, then automatically turns off.
 
@@ -19,6 +21,8 @@ var _can_activate := true
 @export var string_on : String = "Press [E] to turn off"
 @export var string_off : String = "Press [E] to turn on"
 @export var string_not_initialized : String = "Press [E] to initialize."
+
+
 
 func _ready() -> void:
 	activated.connect(toggle_activation)
@@ -33,7 +37,8 @@ func is_on() -> bool:
 	return false
 	
 func toggle(on : bool) -> void:
-	if not _can_activate: return
+	if not _can_activate:
+		return
 	if not on:
 		current_state = STATE.OFF
 		turned_off.emit()
@@ -46,11 +51,21 @@ func toggle(on : bool) -> void:
 		_next_state = STATE.OFF
 		if momentary_button:
 			current_state = STATE.OFF
+			hint_text[ENUMS.ACTION.INTERACT] = string_off
 			_next_state = STATE.ON
 	#rest
 	_can_activate = false
+	monitoring = false
+	monitorable = false
+	var _cur_hint =  hint_text[ENUMS.ACTION.INTERACT] #HACK. TODO Refactor into a disable property.
+	hint_text[ENUMS.ACTION.INTERACT] = ""
 	await get_tree().create_timer(time_rest_s).timeout
 	_can_activate = true
+	hint_text[ENUMS.ACTION.INTERACT] = _cur_hint
+
+	monitoring = _base_monitoring
+	monitorable = _base_monitorable
+
 			
 func toggle_activation(..._args) -> void:
 	match _next_state:

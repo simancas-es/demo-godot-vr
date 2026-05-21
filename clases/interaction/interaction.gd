@@ -31,6 +31,8 @@ signal dropped_looked_at
 signal entered_area
 signal exited_area
 
+signal updated_hint #TODO Turn this into a function for the camera
+
 ##Override as needed as long as it has the same signature
 func available_hint_for_item(playerdata : PlayerData, action : ENUMS.ACTION) -> bool:
 	var context: InteractionHintContextScript = InteractionHintContextScript.from_playerdata(playerdata)
