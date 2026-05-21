@@ -27,7 +27,7 @@ const req_security : Array[TASKID] = [TASKID.Q_HL_SEE_GASSPEICHER]
 const req_fence : Array[TASKID] = [TASKID.Q_HL_SECURITYCHECK_ALL]
 const req_temperature : Array[TASKID] = [TASKID.Q_HL_FIXFENCE]
 const req_dekanter : Array[TASKID] = [TASKID.Q_HL_BHKW_HITEMP]
-const req_nh4 : Array[TASKID] = []#[TASKID.Q_HL_DEKFOERDERBAND_SPILL, TASKID.Q_HL_DEKFOERDERBAND_ENTLEEREN]
+const req_nh4 : Array[TASKID] = [TASKID.Q_HL_DEKFOERDERBAND_SPILL, TASKID.Q_HL_DEKFOERDERBAND_ENTLEEREN]
 
 const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 
