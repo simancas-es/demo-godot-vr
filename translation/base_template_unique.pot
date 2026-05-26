@@ -1,5 +1,6 @@
 # LANGUAGE translation for VirtualTour for the following files:
 #
+# 
 # res://assets/inventory_objects/demo_aerator/aerator_head.json
 # res://assets/world_objects/hillersleben/doors/bg_elektro_tür.tscn
 # res://assets/world_objects/hillersleben/doors/bg_garage_tür.tscn
@@ -36,6 +37,8 @@
 # res://clases/fpv/fsm/physics.gd
 # res://clases/fpv/fsm/room.gd
 # res://clases/fpv/fsm/still.gd
+# res://clases/fpv/test/test_fpv_hint_context.gd
+# res://clases/fpv/test/test_fpv_hint_context.tscn
 # res://clases/fpv/test/test_fpv_ladder.gd
 # res://clases/fpv/test/test_fpv_ladder.tscn
 # res://clases/fpv/area_check.gd
@@ -43,6 +46,10 @@
 # res://clases/fpv/fpv.tscn
 # res://clases/fpv/fpv_camera.gd
 # res://clases/fpv/fpv_raycast.gd
+# res://clases/fpv/fpv_view_mode_controller.gd
+# res://clases/fpv/interaction_hint.gd
+# res://clases/fpv/interaction_hint_context.gd
+# res://clases/fpv/interaction_hint_resolver.gd
 # res://clases/fpv/interaction_logic.gd
 # res://clases/fpv/system_physical_control_grabber.gd
 # res://clases/helpers/task_text/menu/debug_task_list.gd
@@ -59,6 +66,7 @@
 # res://clases/helpers/systemtasks_tasksmanager_persistence.gd
 # res://clases/interaction/door_base.gd
 # res://clases/interaction/interaction.gd
+# res://clases/interaction/interaction_context.gd
 # res://clases/interaction/interaction_with_inventory_slot.gd
 # res://clases/interaction/inventory_object_pickupable.gd
 # res://clases/interaction/machinetoggleable.gd
@@ -75,12 +83,20 @@
 # res://clases/room360/room360.gd
 # res://clases/room360/roomloader.gd
 # res://clases/room360/roomloader.tscn
+# res://clases/zones/test/test_zone_minimap_overlay_flow.gd
+# res://clases/zones/test/test_zone_minimap_overlay_flow.tscn
+# res://clases/zones/test/test_zone_minimap_projection.gd
+# res://clases/zones/test/test_zone_minimap_projection.tscn
 # res://clases/zones/basezone.gd
 # res://clases/zones/zoneinformation.gd
 # res://clases/zones/zoneinformationtemplate.json
+# res://clases/zones/zone_fpv_runtime.gd
+# res://clases/zones/zone_minimap.gd
+# res://clases/zones/zone_minimap.tscn
 # res://clases/controlledobject.gd
 # res://clases/falconview.gd
 # res://clases/player_data.gd
+# res://content/inv_objects/beaker_filled/beaker_filled.json
 # res://content/inv_objects/wire/wire.json
 # res://content/inv_objects/default_model.tscn
 # res://content/tasks/task_database_demo.json
@@ -151,6 +167,10 @@
 # res://menus/infopopup/infopopup.tscn
 # res://menus/infopopup/midtext.gd
 # res://menus/map/mappanel.tscn
+# res://menus/minimap/minimap_control.gd
+# res://menus/minimap/minimap_control.tscn
+# res://menus/minimap/minimap_menu.gd
+# res://menus/minimap/minimap_menu.tscn
 # res://menus/msgtop/msgtop.gd
 # res://menus/msgtop/msgtop.tscn
 # res://menus/settings/menusettings.tscn
@@ -189,6 +209,7 @@
 # res://models/demo_pipes/basic_pipe_valve.tscn
 # res://models/demo_pipes/test_basic_pipe_valve.gd
 # res://models/demo_pipes/test_basic_pipe_valve.tscn
+# res://models/doors/door_functions/door_functions.gd
 # res://models/doors/basedoor2m.tscn
 # res://models/drone_falcon/drone_falcon.gd
 # res://models/interaction/simple_button.tscn
@@ -198,6 +219,8 @@
 # res://models/labels/flow_simulation_volume_label.tscn
 # res://models/labels/function_map_reference.gd
 # res://models/labels/map.tscn
+# res://models/labels/minimap.gd
+# res://models/labels/minimap.tscn
 # res://models/ladders/double_ladder/double_ladder.tscn
 # res://models/ladders/double_ladder/double_ladder_ed.tscn
 # res://models/ladders/simple_ladder/ladder.gd
@@ -205,6 +228,7 @@
 # res://models/platform_rusty/platform_rusty.tscn
 # res://models/van/van.gd
 # res://models/van/van.tscn
+# 
 # res://systems/system-differential-diffusion/system_differential_diffusion_controller.gd
 # res://systems/system-differential-diffusion/system_differential_diffusion_settings.gd
 # res://systems/system-differential-diffusion/system_differential_diffusion_volume.gd
@@ -246,6 +270,11 @@
 # res://systems/system-inventory/inventory_settings.gd
 # res://systems/system-inventory/inventory_uid_classref.gd
 # res://systems/system-inventory/inventory_ui_settings.gd
+# res://systems/system-minimap/test/test_minimap_controller.gd
+# res://systems/system-minimap/test/test_minimap_controller.tscn
+# res://systems/system-minimap/minimap_controller.gd
+# res://systems/system-minimap/minimap_marker_state.gd
+# res://systems/system-minimap/minimap_tracker.gd
 # res://systems/system-physics-control/default_markers/test_grab_icon_activated.tscn
 # res://systems/system-physics-control/default_markers/test_grab_icon_available.tscn
 # res://systems/system-physics-control/system_physical_control_grabber.gd
@@ -391,6 +420,8 @@
 # res://XR/scenes/xrplayer/function_pickup_disables_collision.tscn
 # res://XR/scenes/xrplayer/xrplayer.gd
 # res://XR/scenes/xrplayer/xrplayer.tscn
+# res://XR/scenes/xrplayer/xr_menuoptions.gd
+# res://XR/scenes/xrplayer/xr_settings.tscn
 # res://XR/scenes/xr_van.gd
 # res://XR/scenes/xr_van.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
@@ -430,6 +461,11 @@
 # res://zones/hillersleben/scripts/bg-containers/bg_garage_controller.gd
 # res://zones/hillersleben/scripts/bg-containers/bg_garage_state.gd
 # res://zones/hillersleben/scripts/bg-containers/bg_garage_system.gd
+# res://zones/hillersleben/scripts/button/button.gd
+# res://zones/hillersleben/scripts/button/button.tscn
+# res://zones/hillersleben/scripts/button/fpv_animation.gd
+# res://zones/hillersleben/scripts/button/xr_animation.gd
+# res://zones/hillersleben/scripts/clock-timer/clock_timer.gd
 # res://zones/hillersleben/scripts/hl_flow_model/band_control/bandcontrol.gd
 # res://zones/hillersleben/scripts/hl_flow_model/band_control/test.gd
 # res://zones/hillersleben/scripts/hl_flow_model/band_control/test.tscn
@@ -459,14 +495,34 @@
 # res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn
 # res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_inflow.tscn
 # res://zones/hillersleben/scripts/hl_flow_model_controls/xr_pump_control_button.gd
+# res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.gd
+# res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
+# res://zones/hillersleben/scripts/tasks/bb/bb_consumer.gd
+# res://zones/hillersleben/scripts/tasks/bb/pid_nh4_rowpanel.gd
+# res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.gd
+# res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+# res://zones/hillersleben/scripts/tasks/bb/pid_nh_4_coordinator.gd
+# res://zones/hillersleben/scripts/tasks/bhkw/info_light.gd
+# res://zones/hillersleben/scripts/tasks/bhkw/info_light.tscn
+# res://zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd
+# res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_high.gd
+# res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_low.gd
+# res://zones/hillersleben/scripts/tasks/bhkw/task_controller.gd
+# res://zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd
 # res://zones/hillersleben/scripts/tasks/fence/q_fence_check.gd
-# res://zones/hillersleben/scripts/tasks/security_check/sequencer_consumer.gd
+# res://zones/hillersleben/scripts/tasks/security_check/sequencer_consumer_security.gd
+# res://zones/hillersleben/scripts/tasks/vorstellung/sequencer_consumer_vorstellung.gd
+# res://zones/hillersleben/scripts/tasks/sequence_consumer.gd
+# res://zones/hillersleben/scripts/tasks/task_enter_checkpoint.gd
+# res://zones/hillersleben/scripts/tasks/task_enter_checkpoint.tscn
 # res://zones/hillersleben/scripts/tasks/task_sequencer.tscn
 # res://zones/hillersleben/scripts/task_locators/security_checks/Area3DVisual.tscn
 # res://zones/hillersleben/scripts/task_locators/security_checks/area_3d_visual.gd
 # res://zones/hillersleben/scripts/task_locators/task_sequencer.gd
 # res://zones/hillersleben/scripts/utils/steal_meshinstance.gd
 # res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn
+# res://zones/hillersleben/scripts/valve_interaction/valve_interaction.gd
+# res://zones/hillersleben/scripts/valve_interaction/valve_interaction.tscn
 # res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd
 # res://zones/hillersleben/scripts/water_visuals/logik_wasserrad.gd
 # res://zones/hillersleben/scripts/water_visuals/logik_waterlevel_path.gd
@@ -474,6 +530,8 @@
 # res://zones/hillersleben/scripts/logik_container_movement.gd
 # res://zones/hillersleben/scripts/logik_doors_container.gd
 # res://zones/hillersleben/scripts/mg_klappbare_tür.gd
+# res://zones/hillersleben/global_task_controller.gd
+# res://zones/hillersleben/info_light.tscn
 # res://zones/hillersleben/zonehillersleben.tscn
 # res://zones/hochschule/zonehochschule.gd
 # res://zones/hochschule/zonehochschule.tscn
@@ -489,28 +547,35 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
 
+#: clases/fpv/test/test_fpv_hint_context.gd:93
+#: clases/fpv/test/test_fpv_hint_context.gd:129
+#: clases/interaction/door_base.gd:144
+msgid "Unlock [{key}]"
+msgstr ""
+
+#: clases/fpv/test/test_fpv_hint_context.gd:96
+#: clases/interaction/door_base.gd:150
+msgid "Open [{key}]"
+msgstr ""
+
+#: clases/fpv/test/test_fpv_hint_context.gd:97
+#: clases/interaction/door_base.gd:148
+msgid "Lock [{key}]"
+msgstr ""
+
+#: clases/fpv/test/test_fpv_hint_context.gd:101
+#: clases/interaction/door_base.gd:154
+msgid "Close [{key}]"
+msgstr ""
+
 #: clases/interaction/door_base.gd:56
+#: models/doors/door_functions/door_functions.gd:47
 msgid "Couldn't unlock..."
 msgstr ""
 
 #: clases/interaction/door_base.gd:64
+#: models/doors/door_functions/door_functions.gd:55
 msgid "Couldn't lock..."
-msgstr ""
-
-#: clases/interaction/door_base.gd:132
-msgid "Unlock [{key}]"
-msgstr ""
-
-#: clases/interaction/door_base.gd:136
-msgid "Lock [{key}]"
-msgstr ""
-
-#: clases/interaction/door_base.gd:138
-msgid "Open [{key}]"
-msgstr ""
-
-#: clases/interaction/door_base.gd:142
-msgid "Close [{key}]"
 msgstr ""
 
 #: clases/room360/datapolygonlocation.gd:63
@@ -591,11 +656,11 @@ msgstr ""
 msgid "Resolution"
 msgstr ""
 
-#: menus/settings/menusettings.tscn
+#: menus/settings/menusettings.tscn XR/scenes/xrplayer/xr_settings.tscn
 msgid "Language"
 msgstr ""
 
-#: menus/settings/menusettings.tscn
+#: menus/settings/menusettings.tscn XR/scenes/xrplayer/xr_settings.tscn
 msgid "Topic"
 msgstr ""
 
@@ -933,6 +998,85 @@ msgstr ""
 msgid "FÜLLEN MIT 100 m3/s"
 msgstr ""
 
+#: zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
+msgid "40.0°C"
+msgstr ""
+
+#: zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
+msgid "38.0°C"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "Target Settings"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "0.0"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "NH4"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "mg/l"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "^"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "v"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:39
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:45
+msgid "STATUS: CRITICAL!"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:42
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:48
+msgid "STATUS: WARNING!"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:52
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:164
+msgid "STATUS: OK"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
+msgid "DECANTER"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
+msgid "ON"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+msgid "OFF"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+msgid "CONVEYOR BELT"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:141
+msgid "Emptying conveyor belt..."
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:143
+msgid "Conveyor belt empty"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
+msgid "TURN CONVEYOR ON"
+msgstr ""
+
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"
 msgstr ""
@@ -1074,6 +1218,14 @@ msgid "Pump Secondary Clarifier II -> Floating Sludge PW"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "Sludge Temperature:"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "27.0"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Thickener I"
 msgstr ""
 
@@ -1194,4 +1346,61 @@ msgid "Wire repaired."
 msgstr ""
 
 msgid "Fence successfully repaired."
+msgstr ""
+
+msgid "Completed: See Intake."
+msgstr ""
+
+msgid "Completed: See Sand and Grease trap."
+msgstr ""
+
+msgid "Completed: See Primary Clarifier."
+msgstr ""
+
+msgid "Completed: See Active Sludge Basin."
+msgstr ""
+
+msgid "Completed: See Secondary Clarifier."
+msgstr ""
+
+msgid "Completed: See Hydroelectric Water Wheel Generator."
+msgstr ""
+
+msgid "Completed: See Thickeners."
+msgstr ""
+
+msgid "Completed: See Dewatering Machines."
+msgstr ""
+
+msgid "Completed: Walk above the reactors."
+msgstr ""
+
+msgid "Completed: See Biogas Monitoring ROom."
+msgstr ""
+
+msgid "Completed: See Combined Heat and Power Unit."
+msgstr ""
+
+msgid "Completed: See Gas storage."
+msgstr ""
+
+msgid "Completed: Sludge back down to mesophilic range."
+msgstr ""
+
+msgid "Completed: Sludge back into mesophilic range."
+msgstr ""
+
+msgid "Completed: Transport band emptied. It wont freeze now."
+msgstr ""
+
+msgid "Completed: Sludge properly dewatered."
+msgstr ""
+
+msgid "Completed: NH4 setpoint corrected."
+msgstr ""
+
+msgid "Completed: Removed ice from screw collector."
+msgstr ""
+
+msgid "Completed: Hose protected from ice."
 msgstr ""

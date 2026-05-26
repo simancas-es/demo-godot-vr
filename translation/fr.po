@@ -153,29 +153,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+#: clases/fpv/test/test_fpv_hint_context.gd:93
+#: clases/fpv/test/test_fpv_hint_context.gd:129
+#: clases/interaction/door_base.gd:144
+msgid "Unlock [{key}]"
+msgstr "Déverrouiller [{key}]"
+
+#: clases/fpv/test/test_fpv_hint_context.gd:96
+#: clases/interaction/door_base.gd:150
+msgid "Open [{key}]"
+msgstr "Ouvrir [{key}]"
+
+#: clases/fpv/test/test_fpv_hint_context.gd:97
+#: clases/interaction/door_base.gd:148
+msgid "Lock [{key}]"
+msgstr "Verrouiller [{key}]"
+
+#: clases/fpv/test/test_fpv_hint_context.gd:101
+#: clases/interaction/door_base.gd:154
+msgid "Close [{key}]"
+msgstr "Fermer [{key}]"
+
 #: clases/interaction/door_base.gd:56
+#: models/doors/door_functions/door_functions.gd:47
 msgid "Couldn't unlock..."
 msgstr "Impossible de déverrouiller..."
 
 #: clases/interaction/door_base.gd:64
+#: models/doors/door_functions/door_functions.gd:55
 msgid "Couldn't lock..."
 msgstr "Impossible de verrouiller..."
-
-#: clases/interaction/door_base.gd:132
-msgid "Unlock [{key}]"
-msgstr "Déverrouiller [{key}]"
-
-#: clases/interaction/door_base.gd:136
-msgid "Lock [{key}]"
-msgstr "Verrouiller [{key}]"
-
-#: clases/interaction/door_base.gd:138
-msgid "Open [{key}]"
-msgstr "Ouvrir [{key}]"
-
-#: clases/interaction/door_base.gd:142
-msgid "Close [{key}]"
-msgstr "Fermer [{key}]"
 
 #: clases/room360/datapolygonlocation.gd:63
 msgid "Read [{key}]"
@@ -270,11 +277,11 @@ msgstr "Mode fenêtre"
 msgid "Resolution"
 msgstr "Résolution"
 
-#: menus/settings/menusettings.tscn
+#: menus/settings/menusettings.tscn XR/scenes/xrplayer/xr_settings.tscn
 msgid "Language"
 msgstr "Langue"
 
-#: menus/settings/menusettings.tscn
+#: menus/settings/menusettings.tscn XR/scenes/xrplayer/xr_settings.tscn
 msgid "Topic"
 msgstr "Thème"
 
@@ -615,6 +622,85 @@ msgstr "VIDER À 100 m3/s"
 msgid "FÜLLEN MIT 100 m3/s"
 msgstr "REMPLIR À 100 m3/s"
 
+#: zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
+msgid "40.0°C"
+msgstr ""
+
+#: zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
+msgid "38.0°C"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "Target Settings"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "0.0"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "NH4"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "mg/l"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "^"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "v"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:39
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:45
+msgid "STATUS: CRITICAL!"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:42
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:48
+msgid "STATUS: WARNING!"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:52
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:164
+msgid "STATUS: OK"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
+msgid "DECANTER"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
+msgid "ON"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+msgid "OFF"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+msgid "CONVEYOR BELT"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:141
+msgid "Emptying conveyor belt..."
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:143
+msgid "Conveyor belt empty"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
+msgid "TURN CONVEYOR ON"
+msgstr ""
+
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"
 msgstr "Affluents d'entrée"
@@ -756,6 +842,14 @@ msgid "Pump Secondary Clarifier II -> Floating Sludge PW"
 msgstr "Pompe Clarificateur secondaire II -> Boue flottante PW"
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "Sludge Temperature:"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "27.0"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Thickener I"
 msgstr "Épaississeur I"
 
@@ -877,4 +971,64 @@ msgid "Wire repaired."
 msgstr ""
 
 msgid "Fence successfully repaired."
+msgstr ""
+
+msgid "Completed: See Intake."
+msgstr ""
+
+#, fuzzy
+msgid "Completed: See Sand and Grease trap."
+msgstr "Dégrilleur sable et graisse"
+
+#, fuzzy
+msgid "Completed: See Primary Clarifier."
+msgstr "Pompe Boue activée RPS1 -> Clarificateur primaire"
+
+msgid "Completed: See Active Sludge Basin."
+msgstr ""
+
+#, fuzzy
+msgid "Completed: See Secondary Clarifier."
+msgstr "Clarificateur secondaire I"
+
+msgid "Completed: See Hydroelectric Water Wheel Generator."
+msgstr ""
+
+msgid "Completed: See Thickeners."
+msgstr ""
+
+msgid "Completed: See Dewatering Machines."
+msgstr ""
+
+msgid "Completed: Walk above the reactors."
+msgstr ""
+
+msgid "Completed: See Biogas Monitoring ROom."
+msgstr ""
+
+msgid "Completed: See Combined Heat and Power Unit."
+msgstr ""
+
+msgid "Completed: See Gas storage."
+msgstr ""
+
+msgid "Completed: Sludge back down to mesophilic range."
+msgstr ""
+
+msgid "Completed: Sludge back into mesophilic range."
+msgstr ""
+
+msgid "Completed: Transport band emptied. It wont freeze now."
+msgstr ""
+
+msgid "Completed: Sludge properly dewatered."
+msgstr ""
+
+msgid "Completed: NH4 setpoint corrected."
+msgstr ""
+
+msgid "Completed: Removed ice from screw collector."
+msgstr ""
+
+msgid "Completed: Hose protected from ice."
 msgstr ""

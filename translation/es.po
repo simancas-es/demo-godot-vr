@@ -153,29 +153,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: clases/fpv/test/test_fpv_hint_context.gd:93
+#: clases/fpv/test/test_fpv_hint_context.gd:129
+#: clases/interaction/door_base.gd:144
+msgid "Unlock [{key}]"
+msgstr "Desbloquear [{key}]"
+
+#: clases/fpv/test/test_fpv_hint_context.gd:96
+#: clases/interaction/door_base.gd:150
+msgid "Open [{key}]"
+msgstr "Abrir [{key}]"
+
+#: clases/fpv/test/test_fpv_hint_context.gd:97
+#: clases/interaction/door_base.gd:148
+msgid "Lock [{key}]"
+msgstr "Cerrar con llave [{key}]"
+
+#: clases/fpv/test/test_fpv_hint_context.gd:101
+#: clases/interaction/door_base.gd:154
+msgid "Close [{key}]"
+msgstr "Cerrar [{key}]"
+
 #: clases/interaction/door_base.gd:56
+#: models/doors/door_functions/door_functions.gd:47
 msgid "Couldn't unlock..."
 msgstr "No se pudo desbloquear..."
 
 #: clases/interaction/door_base.gd:64
+#: models/doors/door_functions/door_functions.gd:55
 msgid "Couldn't lock..."
 msgstr "No se pudo cerrar con llave..."
-
-#: clases/interaction/door_base.gd:132
-msgid "Unlock [{key}]"
-msgstr "Desbloquear [{key}]"
-
-#: clases/interaction/door_base.gd:136
-msgid "Lock [{key}]"
-msgstr "Cerrar con llave [{key}]"
-
-#: clases/interaction/door_base.gd:138
-msgid "Open [{key}]"
-msgstr "Abrir [{key}]"
-
-#: clases/interaction/door_base.gd:142
-msgid "Close [{key}]"
-msgstr "Cerrar [{key}]"
 
 #: clases/room360/datapolygonlocation.gd:63
 msgid "Read [{key}]"
@@ -270,11 +277,11 @@ msgstr "Modo de ventana"
 msgid "Resolution"
 msgstr "Resolución"
 
-#: menus/settings/menusettings.tscn
+#: menus/settings/menusettings.tscn XR/scenes/xrplayer/xr_settings.tscn
 msgid "Language"
 msgstr "Idioma"
 
-#: menus/settings/menusettings.tscn
+#: menus/settings/menusettings.tscn XR/scenes/xrplayer/xr_settings.tscn
 msgid "Topic"
 msgstr "Tema"
 
@@ -615,9 +622,88 @@ msgstr "VACIAR A 100 m3/s"
 msgid "FÜLLEN MIT 100 m3/s"
 msgstr "LLENAR A 100 m3/s"
 
+#: zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
+msgid "40.0°C"
+msgstr ""
+
+#: zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
+msgid "38.0°C"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "Target Settings"
+msgstr "Fijar Setpoint"
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "0.0"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "NH4"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "mg/l"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "^"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "v"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:39
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:45
+msgid "STATUS: CRITICAL!"
+msgstr "ESTADO: CRÍTICO!"
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:42
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:48
+msgid "STATUS: WARNING!"
+msgstr "ESTADO: PELIGRO!"
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:52
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:164
+msgid "STATUS: OK"
+msgstr "ESTADO: OK"
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
+msgid "DECANTER"
+msgstr "DECANTADOR"
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
+msgid "ON"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+msgid "OFF"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+msgid "CONVEYOR BELT"
+msgstr "CINTA TRANSP."
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:141
+msgid "Emptying conveyor belt..."
+msgstr "Vaciando cinta transp. ..."
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:143
+msgid "Conveyor belt empty"
+msgstr "Cinta transp. vacía"
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
+msgid "TURN CONVEYOR ON"
+msgstr "ACTIVA LA CINTA TRANSP.!"
+
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"
-msgstr "Afluencias de entrada"
+msgstr "Caudales de entrada"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Sandtrap -> Primary clarifier"
@@ -756,6 +842,14 @@ msgid "Pump Secondary Clarifier II -> Floating Sludge PW"
 msgstr "Bomba Clarificador secundario II -> Lodo flotante PW"
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "Sludge Temperature:"
+msgstr "Temperatura de lodo:"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "27.0"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Thickener I"
 msgstr "Espesador I"
 
@@ -879,6 +973,63 @@ msgstr "Valla arreglada con alambre"
 
 msgid "Fence successfully repaired."
 msgstr "La valla ha sido reparada"
+
+msgid "Completed: See Intake."
+msgstr "Completado: Ver Entrada de caudales"
+
+msgid "Completed: See Sand and Grease trap."
+msgstr "Completado: Ver Desarenador y desengrasador"
+
+msgid "Completed: See Primary Clarifier."
+msgstr "Completado: Ver Clarificador primario."
+
+msgid "Completed: See Active Sludge Basin."
+msgstr "Completado: Ver Tanque de lodos activos."
+
+msgid "Completed: See Secondary Clarifier."
+msgstr "Completado: Ver Decantador primario"
+
+msgid "Completed: See Hydroelectric Water Wheel Generator."
+msgstr "Completado: Ver Turbina de generación hidroelectrica."
+
+msgid "Completed: See Thickeners."
+msgstr "Completado: Ver Espesadores"
+
+msgid "Completed: See Dewatering Machines."
+msgstr "Completado: Ver Máquinas de deshidratación."
+
+msgid "Completed: Walk above the reactors."
+msgstr "Completado: Andar sobre los reactores."
+
+msgid "Completed: See Biogas Monitoring ROom."
+msgstr "Completado: Ver sala de monitoreo de Biogas."
+
+msgid "Completed: See Combined Heat and Power Unit."
+msgstr "Completado: Ver Unidad de cogeneración."
+
+msgid "Completed: See Gas storage."
+msgstr "Completado: Ver Almacenamiento de Gas"
+
+msgid "Completed: Sludge back down to mesophilic range."
+msgstr "Completado: Lodo devuelto a rango mesofílico."
+
+msgid "Completed: Sludge back into mesophilic range."
+msgstr "Completado: Lodo devuelto a rango mesofílico."
+
+msgid "Completed: Transport band emptied. It wont freeze now."
+msgstr "Completado: Cinta transportadora vacía. No se formarán hielos ahora."
+
+msgid "Completed: Sludge properly dewatered."
+msgstr "Completado: Lodos deshidratados correctamente."
+
+msgid "Completed: NH4 setpoint corrected."
+msgstr "Completados: Setpoint de NH4 corregido."
+
+msgid "Completed: Removed ice from screw collector."
+msgstr "Completado: Hielo retirado del colector."
+
+msgid "Completed: Hose protected from ice."
+msgstr "Completado: Mangueras protegidas del hielo."
 
 #~ msgid "JSON Files"
 #~ msgstr "Archivos JSON"

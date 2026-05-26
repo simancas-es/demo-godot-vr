@@ -153,29 +153,36 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: clases/fpv/test/test_fpv_hint_context.gd:93
+#: clases/fpv/test/test_fpv_hint_context.gd:129
+#: clases/interaction/door_base.gd:144
+msgid "Unlock [{key}]"
+msgstr "Entsperren [{key}]"
+
+#: clases/fpv/test/test_fpv_hint_context.gd:96
+#: clases/interaction/door_base.gd:150
+msgid "Open [{key}]"
+msgstr "Öffnen [{key}]"
+
+#: clases/fpv/test/test_fpv_hint_context.gd:97
+#: clases/interaction/door_base.gd:148
+msgid "Lock [{key}]"
+msgstr "Verriegeln [{key}]"
+
+#: clases/fpv/test/test_fpv_hint_context.gd:101
+#: clases/interaction/door_base.gd:154
+msgid "Close [{key}]"
+msgstr "Schließen [{key}]"
+
 #: clases/interaction/door_base.gd:56
+#: models/doors/door_functions/door_functions.gd:47
 msgid "Couldn't unlock..."
 msgstr "Konnte nicht entsperren..."
 
 #: clases/interaction/door_base.gd:64
+#: models/doors/door_functions/door_functions.gd:55
 msgid "Couldn't lock..."
 msgstr "Konnte nicht verriegeln..."
-
-#: clases/interaction/door_base.gd:132
-msgid "Unlock [{key}]"
-msgstr "Entsperren [{key}]"
-
-#: clases/interaction/door_base.gd:136
-msgid "Lock [{key}]"
-msgstr "Verriegeln [{key}]"
-
-#: clases/interaction/door_base.gd:138
-msgid "Open [{key}]"
-msgstr "Öffnen [{key}]"
-
-#: clases/interaction/door_base.gd:142
-msgid "Close [{key}]"
-msgstr "Schließen [{key}]"
 
 #: clases/room360/datapolygonlocation.gd:63
 msgid "Read [{key}]"
@@ -270,11 +277,11 @@ msgstr "Fenstermodus"
 msgid "Resolution"
 msgstr "Aufösung"
 
-#: menus/settings/menusettings.tscn
+#: menus/settings/menusettings.tscn XR/scenes/xrplayer/xr_settings.tscn
 msgid "Language"
 msgstr "Sprache"
 
-#: menus/settings/menusettings.tscn
+#: menus/settings/menusettings.tscn XR/scenes/xrplayer/xr_settings.tscn
 msgid "Topic"
 msgstr "Thema"
 
@@ -615,9 +622,88 @@ msgstr "ENTLEEREN MIT 100 m3/s"
 msgid "FÜLLEN MIT 100 m3/s"
 msgstr "FÜLLEN MIT 100 m3/s"
 
+#: zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
+msgid "40.0°C"
+msgstr ""
+
+#: zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
+msgid "38.0°C"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "Sollwert-Einstellungen"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "0.0"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "NH4"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "mg/l"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "^"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "v"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:39
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:45
+msgid "STATUS: CRITICAL!"
+msgstr "STATUS: KRITISCH!"
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:42
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:48
+msgid "STATUS: WARNING!"
+msgstr "STATUS: WARNUNG!"
+
+#: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:52
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:164
+msgid "STATUS: OK"
+msgstr "STATUS: OK"
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
+msgid "DECANTER"
+msgstr "DEKANTER"
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
+msgid "ON"
+msgstr "EIN"
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+msgid "OFF"
+msgstr "AUS"
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+msgid "CONVEYOR BELT"
+msgstr "FÖRDERBAND"
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:141
+msgid "Emptying conveyor belt..."
+msgstr "Förderband wird geleert..."
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:143
+msgid "Conveyor belt empty"
+msgstr "Förderband geleert."
+
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
+msgid "TURN CONVEYOR ON"
+msgstr "FÖRDERBAND EINSCHALTEN!"
+
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"
-msgstr "Zulauf Einlässe"
+msgstr "Zulaufdurchflüsse"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Pump Sandtrap -> Primary clarifier"
@@ -756,6 +842,14 @@ msgid "Pump Secondary Clarifier II -> Floating Sludge PW"
 msgstr "Pumpe Nachklärbecken II -> Schwimmschlamm PW"
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "Sludge Temperature:"
+msgstr "Schlammtemperatur"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "27.0"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Thickener I"
 msgstr "Eindicker I"
 
@@ -777,7 +871,7 @@ msgstr "Primärklärer"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Sand and Grease Trap"
-msgstr "Sand- und Fettsammelbecken"
+msgstr "Sand- und Fettfangbecken"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Equalization basin"
@@ -877,6 +971,65 @@ msgstr "Zaundraht repariert"
 
 msgid "Fence successfully repaired."
 msgstr "Zaun wurde erfolgreich repariert."
+
+msgid "Completed: See Intake."
+msgstr "Abgeschlossen: Zulauf gesehen."
+
+
+msgid "Completed: See Sand and Grease trap."
+msgstr "Abgeschlossen: Sand- und Fettfangbecken gesehen."
+
+msgid "Completed: See Primary Clarifier."
+msgstr "Abgeschlossen: Vorklärbecken gesehen."
+
+msgid "Completed: See Active Sludge Basin."
+msgstr "Abgeschlossen: Belebungsbecken gesehen."
+
+
+msgid "Completed: See Secondary Clarifier."
+msgstr "Abgeschlossen: Nachklärbecken gesehen."
+
+msgid "Completed: See Hydroelectric Water Wheel Generator."
+msgstr "Abgeschlossen: Wasserradwasserkraftgenerator gesehen."
+
+msgid "Completed: See Thickeners."
+msgstr "Abgeschlossen: Eindicker gesehen."
+
+msgid "Completed: See Dewatering Machines."
+msgstr "Abgeschlossen: Entwässerungsmaschinen gesehen."
+
+msgid "Completed: Walk above the reactors."
+msgstr "Abgeschlossen: Oben der Faultürmen"
+
+msgid "Completed: See Biogas Monitoring ROom."
+msgstr "Abgeschlossen: Gasmessungsraum gesehen."
+
+msgid "Completed: See Combined Heat and Power Unit."
+msgstr "Abgeschlossen: Blockheizkraftwerk gesehen."
+
+msgid "Completed: See Gas storage."
+msgstr "Abgeschlossen: Gasspeicher gesehen."
+
+msgid "Completed: Sludge back down to mesophilic range."
+msgstr "Abgeschlossen: Schlamm in den mesophilen Bereich abgesenkt."
+
+msgid "Completed: Sludge back into mesophilic range."
+msgstr "Abgeschlossen: Schlamm in den mesophilen Bereich angehoben."
+
+msgid "Completed: Transport band emptied. It wont freeze now."
+msgstr "Abgeschlossen: Förderband geleert. Keine Eisstöpfungen mehr."
+
+msgid "Completed: Sludge properly dewatered."
+msgstr "Abgeschlossen: Schlamm korrekt entwässert"
+
+msgid "Completed: NH4 setpoint corrected."
+msgstr "Abgeschlossen: NH4 Sollwert korrigiert."
+
+msgid "Completed: Removed ice from screw collector."
+msgstr "Abgeschlossen: Eisstöpfung entfernt."
+
+msgid "Completed: Hose protected from ice."
+msgstr "Abgeschlossen: Schlauch vom Eisstöpfungen geschont."
 
 #~ msgid "JSON Files"
 #~ msgstr "JSON Dateien"
