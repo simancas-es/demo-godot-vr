@@ -11,9 +11,12 @@ extends Node
 
 @export var delete_interactiondoors : bool = true #Deletes the doors used by the base model to allow for XR
 
-
+var _player_xrorigin : XROrigin3D
+var _origin_position : Vector3
 
 func _ready() -> void:
+	_player_xrorigin = get_parent().find_child( "XRPlayer", true)
+	_origin_position = _player_xrorigin.global_position
 	var player : XRToolsPlayerBody = XRTools.find_xr_child(get_parent(), "*", "XRToolsPlayerBody")
 	adapt_collision_mask(player)		
 	
@@ -26,6 +29,8 @@ func _ready() -> void:
 	do_delete_vans()
 	do_delete_inventorypickups()
 	do_delete_doors()
+	
+	Signals.reset_position.connect(on_reset_position)
 
 func do_delete_vans() -> void:
 	if delete_vans:
@@ -43,6 +48,8 @@ func adapt_collision_mask(obj : CollisionObject3D) -> void:
 	
 	pass
 
+func on_reset_position() -> void:
+	_player_xrorigin.position = _origin_position
 
 func do_delete_doors():
 	if not delete_interactiondoors: return

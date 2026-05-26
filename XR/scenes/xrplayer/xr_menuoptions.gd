@@ -1,8 +1,9 @@
 @tool
 extends CanvasLayer
 
-@onready var options_language : OptionButton = $Panel/VBoxContainer/HBoxLanguage/OptionButtonLanguages
-@onready var options_topic : OptionButton = $Panel/VBoxContainer/HBoxTopic/OptionButtonTopics
+@onready var options_language : OptionButton = %HBoxLanguage/OptionButtonLanguages
+@onready var options_topic : OptionButton = %HBoxTopic/OptionButtonTopics
+@onready var button_reset : Button = %Button_reset # Resets position, unstuck
 
 func enter() -> void:
 	visible = true
@@ -33,7 +34,7 @@ func _ready() -> void:
 	#Connect selections
 	options_language.item_selected.connect(on_language_selected)
 	options_topic.item_selected.connect(on_topic_selected)
-	
+	button_reset.pressed.connect(on_reset)
 	#button_back.button_up.connect(on_button_back_up)
 
 func ready_preselect():
@@ -70,6 +71,12 @@ func on_topic_selected(idx : int) -> void:
 	ConfigManager.change_topic(idx)
 	pass
 
+#Resets position
+func on_reset() -> void:
+	Signals.reset_position.emit()
+	pass
+	
+	
 func on_button_back_up():
 	exit()
 

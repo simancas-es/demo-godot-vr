@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://5vbcw3gki6h"]
 
 [ext_resource type="Script" uid="uid://d3uaa583f7dxw" path="res://XR/scenes/xrplayer/xr_menuoptions.gd" id="1_kyi6n"]
+[ext_resource type="PackedScene" uid="uid://cx1wgq0gx0mxe" path="res://clases/helpers/task_text/menu/debug_task_list.tscn" id="2_aif5k"]
 
-[node name="MenuSettings" type="CanvasLayer" unique_id=1687416141]
+[node name="MenuSettings" type="CanvasLayer" unique_id=501481435]
 script = ExtResource("1_kyi6n")
 
 [node name="Panel" type="Panel" parent="." unique_id=1867141879]
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -14,49 +15,87 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1693461486]
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1802425434]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
 anchor_top = 0.1
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchor_right = 0.9
+anchor_bottom = 0.9
 
-[node name="HBoxLanguage" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=978865554]
-custom_minimum_size = Vector2(400, 0)
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1693461486]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=591457127]
+layout_mode = 2
+
+[node name="HBoxLanguage" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=978865554]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="LabelLanguage" type="Label" parent="Panel/VBoxContainer/HBoxLanguage" unique_id=2064564828]
+[node name="LabelLanguage" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/HBoxLanguage" unique_id=2064564828]
 layout_mode = 2
 text = "Language"
 
-[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/HBoxLanguage" unique_id=1341831746]
+[node name="VSeparator" type="VSeparator" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/HBoxLanguage" unique_id=1341831746]
 layout_mode = 2
 
-[node name="OptionButtonLanguages" type="OptionButton" parent="Panel/VBoxContainer/HBoxLanguage" unique_id=1021429247]
+[node name="OptionButtonLanguages" type="OptionButton" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/HBoxLanguage" unique_id=1021429247]
+layout_mode = 2
+item_count = 4
+popup/item_0/text = "en"
+popup/item_0/id = 0
+popup/item_1/text = "de"
+popup/item_1/id = 1
+popup/item_2/text = "es"
+popup/item_2/id = 2
+popup/item_3/text = "fr"
+popup/item_3/id = 3
+
+[node name="VSeparator2" type="VSeparator" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/HBoxLanguage" unique_id=1762047935]
 layout_mode = 2
 
-[node name="HBoxTopic" type="HBoxContainer" parent="Panel/VBoxContainer" unique_id=920311308]
+[node name="Button_reset" type="Button" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=736647664]
+unique_name_in_owner = true
+layout_mode = 2
+text = "RESET POS."
+
+[node name="HBoxTopic" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=920311308]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 0
 mouse_filter = 2
 
-[node name="LabelTopic" type="Label" parent="Panel/VBoxContainer/HBoxTopic" unique_id=953524069]
+[node name="LabelTopic" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxTopic" unique_id=953524069]
 layout_mode = 2
 text = "Topic"
 
-[node name="VSeparator" type="VSeparator" parent="Panel/VBoxContainer/HBoxTopic" unique_id=1127250056]
+[node name="VSeparator" type="VSeparator" parent="Panel/MarginContainer/VBoxContainer/HBoxTopic" unique_id=1127250056]
 layout_mode = 2
 
-[node name="OptionButtonTopics" type="OptionButton" parent="Panel/VBoxContainer/HBoxTopic" unique_id=466813110]
+[node name="OptionButtonTopics" type="OptionButton" parent="Panel/MarginContainer/VBoxContainer/HBoxTopic" unique_id=466813110]
 layout_mode = 2
+item_count = 3
+popup/item_0/text = "Wastewater"
+popup/item_0/id = 0
+popup/item_1/text = "Drinking Water"
+popup/item_1/id = 1
+popup/item_2/text = "Eletrotechnics"
+popup/item_2/id = 2
 
-[node name="HSeparator" type="HSeparator" parent="Panel/VBoxContainer" unique_id=1474589399]
-visible = false
+[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer" unique_id=1474589399]
 layout_mode = 2
 size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/VBoxContainer" unique_id=2084723646]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="DebugTaskShow" parent="Panel/MarginContainer/VBoxContainer/Control" unique_id=481957551 instance=ExtResource("2_aif5k")]
+layout_mode = 1
+anchors_preset = 15
+font_size = 12
+filter_only = Array[int]([1, 2])

@@ -303,12 +303,10 @@ hand_to_disable = NodePath("../XRToolsCollisionHand2")
 function_pickup = NodePath("../XRToolsCollisionHand/FunctionPickup")
 
 [node name="Viewport2Din3D_SETTINGS" parent="LeftHand" unique_id=221935934 instance=ExtResource("18_5bwuw")]
-transform = Transform3D(0, -0.8641694, -0.50320095, -0.7071067, -0.35581672, 0.61106014, -0.7071067, 0.35581678, -0.61106014, -0.034223005, 0.2068469, 0.12684953)
+transform = Transform3D(0, -0.8641694, -0.50320095, -0.7071068, -0.35581672, 0.6110602, -0.7071068, 0.35581678, -0.6110602, -0.03422302, 0.20684695, 0.12684953)
 screen_size = Vector2(0.2, 0.1)
 collision_layer = 5242880
 scene = ExtResource("19_qlkli")
-viewport_size = Vector2(400, 200)
-scene_properties_keys = PackedStringArray("xr_menuoptions.gd")
 
 [node name="RightHand" type="XRController3D" parent="." unique_id=130451996]
 transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0.5, 1, -0.5)
