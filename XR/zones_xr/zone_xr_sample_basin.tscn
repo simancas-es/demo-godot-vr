@@ -232,6 +232,9 @@ tree_root = SubResource("AnimationNodeBlendTree_4dwdd")
 [node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand2/LeftHand2" parent_id_path=PackedInt32Array(1548611922, 102583930) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_iu3np")
 
+[node name="Viewport2Din3D_SETTINGS" parent="XRPlayer/LeftHand" parent_id_path=PackedInt32Array(1548611922, 93356751) index="8" unique_id=221935934]
+scene_properties_keys = PackedStringArray("xr_menuoptions.gd")
+
 [node name="BoneAttachment3D" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand/Hand_Nails_low_R/Armature" index="0" unique_id=371647788]
 transform = Transform3D(0.54082954, -0.8408129, 0.023173578, 0.08262676, 0.08052423, 0.99332196, -0.83706397, -0.5353031, 0.11302352, -0.03990221, 0.040282845, -0.15009618)
 
