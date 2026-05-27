@@ -87,7 +87,7 @@ func _process(_delta: float) -> void:
 
 
 # Move the hinge to the specified position
-func move_hinge(pos: float) -> void:
+func move_hinge(pos: float, signal_change : bool = true) -> void:
 	# Do the hinge move
 	pos = _do_move_hinge(pos)
 	if pos == _hinge_position_rad:
@@ -98,7 +98,7 @@ func move_hinge(pos: float) -> void:
 	hinge_position = rad_to_deg(pos)
 
 	# Emit the moved signal
-	emit_signal("hinge_moved", hinge_position)
+	if signal_change: emit_signal("hinge_moved", hinge_position)
 
 
 # Handle release of hinge

@@ -37,14 +37,18 @@ func _ready() -> void:
 	rightinter.activated.connect(spin_to_right.bind())
 	#initialize_from_state()
 
-func initialize_from_state() -> void:
+func initialize_from_state(is_instant : bool = false, signal_change : bool = true) -> void:
 	if state == null:
 		push_error("ValveController initialized without state")
 		return
-
+	
 	var init_turn_deg = (state.valve_fraction - 0.5) * rotations_to_max * 360
-	await valve.rotate_wheel(init_turn_deg, rotation_velocity_degs)
-
+	if not is_instant:
+		await valve.rotate_wheel_target(init_turn_deg, rotation_velocity_degs)
+	else:
+		await valve.rotate_wheel_target(init_turn_deg, -1)
+	if signal_change: valve_changed.emit(state.valve_fraction)
+		
 func apply_rotation_delta(delta_radians: float, is_instant : bool = false) -> void:
 	if current_state == STATE.SPINNING:
 		return
@@ -71,7 +75,42 @@ func apply_rotation_delta(delta_radians: float, is_instant : bool = false) -> vo
 	state.valve_fraction = new_fraction
 	valve_changed.emit(state.valve_fraction)
 	current_state = STATE.AVAILABLE
+
+func apply_rotation_absolute(target_radians: float, is_instant: bool = false) -> void:
+	if current_state == STATE.SPINNING:
+		return
 	
+	# Convert input to degrees
+	var target_degrees = rad_to_deg(target_radians)
+	
+	# Convert to fraction of full range
+	var target_fraction = target_degrees / (rotations_to_max * 360.0)
+	
+	# Clamp target fraction
+	var new_fraction = clamp(
+		target_fraction,
+		_min,
+		_max
+	)
+	
+	# Convert clamped fraction back to absolute degrees
+	var final_degrees = new_fraction * rotations_to_max * 360.0
+	
+	var deg_per_s: float
+	if is_instant:
+		deg_per_s = rotation_velocity_degs
+	else:
+		deg_per_s = -1.0
+	
+	current_state = STATE.SPINNING
+	
+	await valve.rotate_wheel_target(final_degrees, deg_per_s)
+	
+	state.valve_fraction = new_fraction
+	valve_changed.emit(state.valve_fraction)
+	
+	current_state = STATE.AVAILABLE
+
 ##Drain
 func spin_to_left(...args) -> bool:
 	apply_rotation_delta(deg_to_rad(deg_rotation_per_interaction), rotation_velocity_degs)
@@ -90,10 +129,5 @@ func spin_to_target_deg(target_deg: float, is_instant : bool = false) -> void:
 	target_deg = clamp(target_deg, 0.0, total_deg)
 	
 	# Current angle derived from fraction
-	var current_deg = state.valve_fraction * total_deg
-	
-	# Compute delta
-	var delta_deg = target_deg - current_deg
-	
-	# Convert to radians and apply
-	apply_rotation_delta(deg_to_rad(delta_deg), is_instant)
+	#var current_deg = state.valve_fraction * total_deg
+	apply_rotation_absolute(deg_to_rad(target_deg), is_instant)

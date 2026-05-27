@@ -4,7 +4,7 @@ const VALVE := preload("uid://cp2pufctmk3wr")
 const TEMPGAUGE := preload("uid://ywpyc23dbiat")
 const LIGHT := preload("uid://bjn6ld6vbr26b")
 
-@onready var valve_vorlauf : VALVE = $ValveStructure
+@onready var valve_vorlauf : VALVE = $"Valve-BHKW-Temp"
 @onready var temperature_gauge : TEMPGAUGE = $TemperatureGauge
 @onready var info_temp: Label3D = $info_display/sludge_temp
 @onready var info_status : Label3D = $info_display/sludge_status

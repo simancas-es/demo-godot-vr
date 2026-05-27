@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d2td5hwh2oluy"]
+[gd_scene format=3 uid="uid://d2td5hwh2oluy"]
 
 [ext_resource type="Script" uid="uid://c5jhnc2gbdltr" path="res://XR/scenes/interactables/objects/wheel_general.gd" id="1_chq72"]
 [ext_resource type="Script" uid="uid://c8gx2wc7hsxf5" path="res://addons/godot-xr-tools/interactables/interactable_hinge.gd" id="2_0gsu0"]
@@ -26,138 +26,139 @@ size = Vector3(0.02, 0.08, 0.1)
 height = 0.04
 radius = 0.22
 
-[node name="WheelGeneral" type="Node3D"]
+[node name="WheelGeneral" type="Node3D" unique_id=1005242695]
 script = ExtResource("1_chq72")
 
-[node name="HingeOrigin" type="Node3D" parent="."]
+[node name="HingeOrigin" type="Node3D" parent="." unique_id=1683269107]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
-[node name="InteractableHinge" type="Node3D" parent="HingeOrigin"]
+[node name="InteractableHinge" type="Node3D" parent="HingeOrigin" unique_id=690224599]
 unique_name_in_owner = true
 script = ExtResource("2_0gsu0")
 hinge_limit_min = -360.0
 hinge_limit_max = 360.0
 
-[node name="WheelBody" type="StaticBody3D" parent="HingeOrigin/InteractableHinge"]
+[node name="WheelBody" type="StaticBody3D" parent="HingeOrigin/InteractableHinge" unique_id=1384271205]
 collision_layer = 25165824
 collision_mask = 25165824
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/WheelBody"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/WheelBody" unique_id=718910274]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("1")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="HingeOrigin/InteractableHinge/WheelBody"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HingeOrigin/InteractableHinge/WheelBody" unique_id=642648937]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+visible = false
 mesh = SubResource("2")
 surface_material_override/0 = ExtResource("3_a6aon")
 
-[node name="Handle1" type="Node3D" parent="HingeOrigin/InteractableHinge"]
+[node name="Handle1" type="Node3D" parent="HingeOrigin/InteractableHinge" unique_id=82737823]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
-[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle1"]
+[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle1" unique_id=1938954455]
 collision_layer = 262144
 collision_mask = 0
 freeze = true
 script = ExtResource("4_leww8")
 picked_up_layer = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle1/InteractableHandle"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle1/InteractableHandle" unique_id=1727769368]
 shape = SubResource("3")
 
-[node name="Handle2" type="Node3D" parent="HingeOrigin/InteractableHinge"]
+[node name="Handle2" type="Node3D" parent="HingeOrigin/InteractableHinge" unique_id=553674826]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0.141, -0.141)
 
-[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle2"]
+[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle2" unique_id=404583244]
 collision_layer = 262144
 collision_mask = 0
 freeze = true
 script = ExtResource("4_leww8")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle2/InteractableHandle"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle2/InteractableHandle" unique_id=932296744]
 shape = SubResource("3")
 
-[node name="Handle3" type="Node3D" parent="HingeOrigin/InteractableHinge"]
+[node name="Handle3" type="Node3D" parent="HingeOrigin/InteractableHinge" unique_id=361978763]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, -0.2)
 
-[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle3"]
+[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle3" unique_id=1469372832]
 collision_layer = 262144
 collision_mask = 0
 freeze = true
 script = ExtResource("4_leww8")
 picked_up_layer = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle3/InteractableHandle"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle3/InteractableHandle" unique_id=1765768284]
 shape = SubResource("3")
 
-[node name="Handle4" type="Node3D" parent="HingeOrigin/InteractableHinge"]
+[node name="Handle4" type="Node3D" parent="HingeOrigin/InteractableHinge" unique_id=1058844358]
 transform = Transform3D(1, 0, 0, 0, -0.707107, 0.707107, 0, -0.707107, -0.707107, 0, -0.141, -0.141)
 
-[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle4"]
+[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle4" unique_id=1516984319]
 collision_layer = 262144
 collision_mask = 0
 freeze = true
 script = ExtResource("4_leww8")
 picked_up_layer = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle4/InteractableHandle"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle4/InteractableHandle" unique_id=1847937194]
 shape = SubResource("3")
 
-[node name="Handle5" type="Node3D" parent="HingeOrigin/InteractableHinge"]
+[node name="Handle5" type="Node3D" parent="HingeOrigin/InteractableHinge" unique_id=933903522]
 transform = Transform3D(1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, -0.2, 0)
 
-[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle5"]
+[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle5" unique_id=1941492677]
 collision_layer = 262144
 collision_mask = 0
 freeze = true
 script = ExtResource("4_leww8")
 picked_up_layer = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle5/InteractableHandle"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle5/InteractableHandle" unique_id=698251263]
 shape = SubResource("3")
 
-[node name="Handle6" type="Node3D" parent="HingeOrigin/InteractableHinge"]
+[node name="Handle6" type="Node3D" parent="HingeOrigin/InteractableHinge" unique_id=1663938374]
 transform = Transform3D(1, 0, 0, 0, -0.707107, -0.707107, 0, 0.707107, -0.707107, 0, -0.141, 0.141)
 
-[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle6"]
+[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle6" unique_id=1729929857]
 collision_layer = 262144
 collision_mask = 0
 freeze = true
 script = ExtResource("4_leww8")
 picked_up_layer = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle6/InteractableHandle"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle6/InteractableHandle" unique_id=326336568]
 shape = SubResource("3")
 
-[node name="Handle7" type="Node3D" parent="HingeOrigin/InteractableHinge"]
+[node name="Handle7" type="Node3D" parent="HingeOrigin/InteractableHinge" unique_id=189213416]
 transform = Transform3D(1, 0, 0, 0, 1.19249e-08, -1, 0, 1, 1.19249e-08, 0, 0, 0.2)
 
-[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle7"]
+[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle7" unique_id=1065791491]
 collision_layer = 262144
 collision_mask = 0
 freeze = true
 script = ExtResource("4_leww8")
 picked_up_layer = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle7/InteractableHandle"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle7/InteractableHandle" unique_id=1468320410]
 shape = SubResource("3")
 
-[node name="Handle8" type="Node3D" parent="HingeOrigin/InteractableHinge"]
+[node name="Handle8" type="Node3D" parent="HingeOrigin/InteractableHinge" unique_id=1588996025]
 transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0.141, 0.141)
 
-[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle8"]
+[node name="InteractableHandle" type="RigidBody3D" parent="HingeOrigin/InteractableHinge/Handle8" unique_id=1331529944]
 collision_layer = 262144
 collision_mask = 0
 freeze = true
 script = ExtResource("4_leww8")
 picked_up_layer = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle8/InteractableHandle"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/InteractableHinge/Handle8/InteractableHandle" unique_id=878599948]
 shape = SubResource("3")
 
-[node name="HandPoseArea" parent="HingeOrigin" instance=ExtResource("5_3iekf")]
+[node name="HandPoseArea" parent="HingeOrigin" unique_id=2029851685 instance=ExtResource("5_3iekf")]
 left_pose = ExtResource("6_inu7h")
 right_pose = ExtResource("7_ywjec")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/HandPoseArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingeOrigin/HandPoseArea" unique_id=1323773920]
 transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("CylinderShape3D_3cy60")

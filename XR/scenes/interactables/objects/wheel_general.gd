@@ -41,3 +41,6 @@ func _ready() -> void:
 		
 		
 		wheel.hinge_moved.connect(hinge_moved.emit)
+		
+func get_hinge_rotation() -> Vector3:
+	return wheel.rotation
