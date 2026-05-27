@@ -1160,7 +1160,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9999995, 1.1858461e-20, 0, -1.1858461e-20,
 mesh = SubResource("BoxMesh_7sq4a")
 
 [node name="Q_BHKW" type="Node3D" parent="Reference_point_floor" unique_id=684035375]
-transform = Transform3D(0.88769484, 0, -0.46043208, 1.5600055e-21, 0.9999998, 3.0076277e-21, 0.46043217, -3.3881318e-21, 0.8876947, -38.42716, 1.3802032, -39.410263)
+transform = Transform3D(-0.088546574, -2.019484e-28, -0.9960719, 3.3748244e-21, 0.9999998, -3.0000716e-22, 0.996072, -3.3881318e-21, -0.088546544, 39.464146, 1.5982208, 11.151125)
 script = ExtResource("21_y6wga")
 
 [node name="Sequence_consumerHigh" type="Node" parent="Reference_point_floor/Q_BHKW" unique_id=533075510]

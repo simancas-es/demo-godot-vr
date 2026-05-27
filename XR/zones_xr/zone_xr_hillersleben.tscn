@@ -851,7 +851,7 @@ visible = true
 hand_pose = SubResource("Resource_tegc5")
 
 [node name="WheelGeneral" parent="." unique_id=1005242695 instance=ExtResource("29_tegc5")]
-transform = Transform3D(0.8898633, 0, 0.015594793, 0, 0.8899999, 0, -0.015594793, 0, 0.8898633, -68.50163, 50.135265, -41.752316)
+transform = Transform3D(0.3568514, 0, -0.8153263, 0, 0.8899999, 0, 0.8153263, 0, 0.3568514, 9.036374, 50.339867, 9.397736)
 hinge_limit_min = -360.0
 hinge_limit_max = 360.0
 
@@ -864,6 +864,7 @@ debug = true
 [node name="debug-wheel" type="Label3D" parent="WheelGeneral" unique_id=1368489889]
 auto_translate_mode = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9909592, 0.37534714, 3.5350685)
+visible = false
 billboard = 1
 text = "W_rot: xxx, V_rot: xxx"
 
