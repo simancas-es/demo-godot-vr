@@ -10,7 +10,7 @@ extends "res://zones/hillersleben/scripts/tasks/sequence_consumer.gd"
 @onready var spill : MeshInstance3D = $"../spill"
 @onready var snap1 : Node3D = $"../ibc1/snap1"
 @onready var snap2 : Node3D = $"../ibc2/snap2"
-@onready var intake : SystemPhysicalControlObject = $"../intake"
+@onready var intake : SystemPhysicalControlObject = $"../dek_polymer_hose_intake"
 var _current_snap = 1
 const LIGHT := preload("uid://bjn6ld6vbr26b")
 @onready var info_light : LIGHT = $"../info_light"

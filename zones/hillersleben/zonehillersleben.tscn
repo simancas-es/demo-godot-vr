@@ -1160,7 +1160,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9999995, 1.1858461e-20, 0, -1.1858461e-20,
 mesh = SubResource("BoxMesh_7sq4a")
 
 [node name="Q_BHKW" type="Node3D" parent="Reference_point_floor" unique_id=684035375]
-transform = Transform3D(-0.0690948, -2.019484e-28, -0.9976099, 3.3800353e-21, 0.9999998, -2.341022e-22, 0.9976101, -3.3881318e-21, -0.069094785, 39.24265, 1.3802032, 10.670365)
+transform = Transform3D(0.88769484, 0, -0.46043208, 1.5600055e-21, 0.9999998, 3.0076277e-21, 0.46043217, -3.3881318e-21, 0.8876947, -38.42716, 1.3802032, -39.410263)
 script = ExtResource("21_y6wga")
 
 [node name="Sequence_consumerHigh" type="Node" parent="Reference_point_floor/Q_BHKW" unique_id=533075510]
@@ -1181,8 +1181,8 @@ script = ExtResource("22_k4tj3")
 [node name="TemperatureGauge" parent="Reference_point_floor/Q_BHKW" unique_id=714340932 instance=ExtResource("21_y253s")]
 transform = Transform3D(-0.8660254, -1.4210858e-14, -0.50000006, 1.4210856e-14, 0.99999994, -5.303564e-14, 0.5, -5.3035636e-14, -0.8660253, 0.021344809, 2.264071e-15, 0.036970288)
 
-[node name="ValveStructure" parent="Reference_point_floor/Q_BHKW" unique_id=845928422 instance=ExtResource("22_omxot")]
-transform = Transform3D(-0.86602545, -0.49999967, 1.3411045e-07, -8.1566554e-08, 0, -0.9999997, 0.4999999, -0.86602503, 1.1920929e-07, 0.34392995, -0.13412854, -0.06845702)
+[node name="Valve-BHKW-Temp" parent="Reference_point_floor/Q_BHKW" unique_id=845928422 instance=ExtResource("22_omxot")]
+transform = Transform3D(-0.8788254, -0.47714317, 1.3411048e-07, -8.600787e-08, 1.5394228e-09, -0.9999997, 0.47714335, -0.878825, 1.1920929e-07, 0.5641277, -1.654061e-08, -0.22311257)
 rotation_velocity_degs = 45.0
 deg_rotation_per_interaction = 15.0
 
@@ -1291,7 +1291,7 @@ shape = SubResource("BoxShape3D_l5fi6")
 [node name="snap2" type="Node3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc2" unique_id=1017452615]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -0.25021806, 0.5025941, -0.013132691)
 
-[node name="intake" type="RigidBody3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=958178673]
+[node name="dek_polymer_hose_intake" type="RigidBody3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=958178673]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3632507, -3.2191179)
 collision_layer = 0
 collision_mask = 0
@@ -1303,12 +1303,12 @@ script = ExtResource("30_qfb7l")
 type = 0
 metadata/_custom_type_script = "uid://6yf4je4071a8"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_MG/Dekanter/intake" unique_id=1422277546]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_MG/Dekanter/dek_polymer_hose_intake" unique_id=1422277546]
 transform = Transform3D(1, -1.6940659e-21, 0, 1.3129011e-19, 0.99999076, 2.6258021e-19, -2.9802322e-08, -1.6940659e-21, 1, -3.9400013e-22, 0.23257448, -3.9400013e-22)
 shape = SubResource("BoxShape3D_lm2sk")
 debug_color = Color(0, 4.2681017, 4.9151754, 1)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter/intake/CollisionShape3D" unique_id=1963307054]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter/dek_polymer_hose_intake/CollisionShape3D" unique_id=1963307054]
 mesh = SubResource("BoxMesh_74kmu")
 
 [node name="spill" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=1821309272]
