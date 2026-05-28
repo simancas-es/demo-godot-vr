@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bnf5qtwuyhbwg"]
+
+[ext_resource type="FontFile" uid="uid://v0hjg7a27smq" path="res://assets/fonts/FrutigerLTPro/FrutigerLTPro/FrutigerLTPro-Roman.otf" id="1_yu267"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_1v164"]
+inner_radius = 0.045
+outer_radius = 0.16
+rings = 6
+ring_segments = 6
+
+[node name="MeshInstance3D" type="MeshInstance3D" unique_id=98773624]
+mesh = SubResource("TorusMesh_1v164")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=826386047]
+transform = Transform3D(0.046873387, 0.17896336, 2.4252642e-09, 0, -7.450581e-09, 0.18500002, 0.17896336, -0.046873387, -7.450581e-09, -0.07371521, 0.049800873, 0.008979797)
+modulate = Color(0, 0, 0, 1)
+text = "WIRE"
+font = ExtResource("1_yu267")
+font_size = 31
+outline_size = 0
+width = 20.0

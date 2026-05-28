@@ -15,6 +15,7 @@ extends Node3D
 @export var show_model : Node3D = null #Model for showing (hides the other one)
 var snapped_object : Node3D = null #Object that snapped to this one.
 
+#TODO distance variable for children
 
 const ItemPickable := preload("uid://carmglf74kwfm")
 

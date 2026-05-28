@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cp56rklbq8lqf"]
+[gd_scene format=3 uid="uid://cp56rklbq8lqf"]
 
 [ext_resource type="Script" uid="uid://bjh03qtuyod2f" path="res://XR/scenes/interactables/snap_interaction.gd" id="1_erdry"]
 [ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="2_gd413"]
 
-[node name="snap_interaction" type="Node3D"]
+[node name="snap_interaction" type="Node3D" unique_id=908078677]
 script = ExtResource("1_erdry")
 
-[node name="SnapZone" parent="." instance=ExtResource("2_gd413")]
+[node name="SnapZone" parent="." unique_id=514569126 instance=ExtResource("2_gd413")]
