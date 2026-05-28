@@ -13,6 +13,9 @@ func _ready() -> void:
 	
 	parent.button_pressed.connect(_on_on)
 	parent.button_released.connect(_on_off)
+	
+	check_xr()
+	
 
 func check_xr() -> void:
 	if root is GameRoot:
