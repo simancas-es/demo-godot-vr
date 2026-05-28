@@ -18,11 +18,11 @@ func _ready() -> void:
 	button.toggle(init_state)
 	pass
 
-func _on_off() -> void:
+func _on_off(..._args) -> void:
 	off.emit()
 	pass
 	
-func _on_on() -> void:
+func _on_on(..._args) -> void:
 	on.emit()
 	pass
 	

@@ -18,13 +18,13 @@ func _ready() -> void:
 		push_error("Missing object %s" % unique_name_physics)
 		return
 	_object.sleeping = true
+	#_object.axis_lock_angular_x = false
+	#_object.axis_lock_angular_z = false	
 	_object.process_mode = Node.PROCESS_MODE_DISABLED
-	_object.axis_lock_angular_x = false
-	_object.axis_lock_angular_z = false
 	_parent.dropped.connect(_object.stopped_being_grabbed.emit)
 pass
 	
 
 func _process(delta: float) -> void:
 	if not _object: return
-	_object.global_position = _parent.global_position
+	_object.global_transform = _parent.global_transform
