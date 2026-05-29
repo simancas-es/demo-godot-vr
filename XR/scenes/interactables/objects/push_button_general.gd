@@ -3,6 +3,10 @@ class_name XRToolsInteractablePushbuttonGeneral
 
 @onready var iab : XRToolsInteractableAreaButton = %InteractableAreaButton
 @onready var rumbler : XRToolsRumbler = %Rumbler
+@export var disable_hand_pose : bool = false:
+	set(value):
+		disable_hand_pose = value
+		if $HandPoseArea: $HandPoseArea.monitorable = not disable_hand_pose
 
 ## Button pressed event
 signal button_pressed(button)
@@ -22,6 +26,8 @@ func _ready() -> void:
 	iab.displacement_toggle = toggle_displacement
 	iab.button_pressed.connect(button_pressed.emit)
 	iab.button_released.connect(button_released.emit)
+	
+	$HandPoseArea.monitorable = not disable_hand_pose
 	
 	if not rumbles:
 		if not rumbler: return

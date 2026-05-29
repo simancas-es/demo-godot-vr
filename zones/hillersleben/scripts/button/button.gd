@@ -4,6 +4,10 @@ extends Node3D
 @onready var xr_button : XRToolsInteractablePushbuttonGeneral = $PushButton
 
 @export var init_state : bool = true
+@export var disable_hand_pose : bool = false:
+	set(value):
+		disable_hand_pose = value
+		if xr_button: xr_button.disable_hand_pose = disable_hand_pose
 
 signal on
 signal off
@@ -14,6 +18,7 @@ func _ready() -> void:
 	
 	xr_button.button_pressed.connect(_on_on)
 	xr_button.button_released.connect(_on_off)	
+	xr_button.disable_hand_pose = disable_hand_pose
 	
 	button.toggle(init_state)
 	pass
