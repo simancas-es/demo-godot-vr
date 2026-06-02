@@ -57,6 +57,7 @@
 [ext_resource type="Script" uid="uid://dbb00gqpvldte" path="res://zones/hillersleben/scripts/tasks/bb/pid_nh_4_coordinator.gd" id="37_qbqkw"]
 [ext_resource type="PackedScene" uid="uid://p4lu7gvj1nf5" path="res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn" id="37_tb4lx"]
 [ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="38_qbqkw"]
+[ext_resource type="Script" uid="uid://dfvukihleeewm" path="res://zones/hillersleben/scripts/ff/ff_controls.gd" id="41_h3ac7"]
 [ext_resource type="PackedScene" uid="uid://bigq13hqcsjxl" path="res://assets/zones/hillersleben/models/boden/boden.gltf" id="49_ijh67"]
 [ext_resource type="PackedScene" uid="uid://o1ua0ngy160m" path="res://assets/zones/hillersleben/models/vorklärbecken/2026-05-19-Vorklärbecken.gltf" id="59_fvi1l"]
 [ext_resource type="PackedScene" uid="uid://cmxkw641lnusn" path="res://assets/zones/hillersleben/models/sandfang/2026-05-26-Sand-Fettfang.gltf" id="60_vijfd"]

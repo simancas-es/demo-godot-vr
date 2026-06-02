@@ -29,7 +29,8 @@ signal hinge_moved(angle : float)
 @export var default_on_release : bool = false:
 	set(value): default_on_release=value;   if is_instance_valid(wheel):wheel.default_on_release = value
 	
-func _ready() -> void:
+
+func _ready() -> void:	
 	if is_instance_valid(wheel):
 		wheel._set_hinge_limit_min(hinge_limit_min)
 		wheel._set_hinge_limit_max(hinge_limit_max)

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dd8k0uiaqv3e1"]
+
+[ext_resource type="Script" uid="uid://cp2pufctmk3wr" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction.gd" id="1_f7y3m"]
+[ext_resource type="PackedScene" uid="uid://g84geloayuv6" path="res://models/demo_pipes/basic_pipe_valve.tscn" id="2_e0vs4"]
+[ext_resource type="Script" uid="uid://cftbbgc4nyt3s" path="res://zones/hillersleben/scripts/valve_interaction/debug_label.gd" id="3_20rr2"]
+[ext_resource type="Script" uid="uid://cpxvn4y6ne5kl" path="res://clases/interaction/interaction.gd" id="3_epwm7"]
+[ext_resource type="PackedScene" uid="uid://d2td5hwh2oluy" path="res://XR/scenes/interactables/objects/wheel_general.tscn" id="4_e0vs4"]
+[ext_resource type="Script" uid="uid://c6bkf0lxq88lh" path="res://zones/hillersleben/scripts/valve_interaction/xr_matcher.gd" id="5_epwm7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eru1o"]
+size = Vector3(0.163574, 0.067627, 0.351013)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ja30v"]
+size = Vector3(0.182495, 0.0629883, 0.369873)
+
+[node name="ValveXRExtended" type="Node3D" unique_id=845928422 node_paths=PackedStringArray("valve", "leftinter", "rightinter")]
+script = ExtResource("1_f7y3m")
+valve = NodePath("FillingValve")
+leftinter = NodePath("ValveLeftDirection")
+rightinter = NodePath("ValveRightDirection")
+
+[node name="XRMatcher" type="Node" parent="." unique_id=890946255]
+script = ExtResource("5_epwm7")
+
+[node name="DebugLabel" type="Label3D" parent="." unique_id=721630451]
+transform = Transform3D(0.115, 0, 0, 0, 0.115, 0, 0, 0, 0.115, 0, 0.18392003, 0)
+visible = false
+billboard = 1
+text = "Debug"
+script = ExtResource("3_20rr2")
+
+[node name="FillingValve" parent="." unique_id=471463535 instance=ExtResource("2_e0vs4")]
+transform = Transform3D(1, 0, 0, 0, 1.0000004, 0, 0, 0, 1.0000005, 0.18739398, -0.17114088, 0)
+
+[node name="link_short" parent="FillingValve" index="0" unique_id=187892485]
+visible = false
+
+[node name="ValveExtrude" parent="FillingValve" index="1" unique_id=1096544956]
+visible = false
+
+[node name="ValveRightDirection" type="Area3D" parent="." unique_id=1888747362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14992875, 0.042371564, 0)
+collision_mask = 0
+monitoring = false
+script = ExtResource("3_epwm7")
+metadata/_custom_type_script = "uid://cpxvn4y6ne5kl"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ValveRightDirection" unique_id=1494574274]
+transform = Transform3D(1, -1.1813e-13, -8.34466e-07, 0, 1, -1.41563e-07, 8.34466e-07, 1.41563e-07, 1, -0.0402816, 0.0428462, -0.0047358)
+shape = SubResource("BoxShape3D_eru1o")
+
+[node name="ValveLeftDirection" type="Area3D" parent="." unique_id=1808180924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12514737, 0.07580459, 0)
+collision_mask = 0
+monitoring = false
+script = ExtResource("3_epwm7")
+metadata/_custom_type_script = "uid://cpxvn4y6ne5kl"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ValveLeftDirection" unique_id=864503302]
+transform = Transform3D(1, 1.39e-13, 0, -1.39e-13, 1, 0, 0, 0, 1, 0.027128, 0.0119636, -0.00476075)
+shape = SubResource("BoxShape3D_ja30v")
+
+[node name="WheelGeneral" parent="." unique_id=1005242695 instance=ExtResource("4_e0vs4")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.092948034, -4.062888e-09)
+
+[editable path="FillingValve"]
+[editable path="WheelGeneral"]
