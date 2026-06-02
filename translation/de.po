@@ -236,15 +236,15 @@ msgstr ""
 "Esc - Menu, H - Reset Position\n"
 "V - Aufgaben on/off"
 
-#: globals/topics.gd:27
+#: globals/topics.gd:27 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Wastewater"
 msgstr "Abwasser"
 
-#: globals/topics.gd:28
+#: globals/topics.gd:28 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Drinking Water"
 msgstr "Trinkwasser"
 
-#: globals/topics.gd:29
+#: globals/topics.gd:29 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Eletrotechnics"
 msgstr "Elektrik"
 
@@ -315,6 +315,10 @@ msgstr "Der Belüfter ist kaputt!"
 msgid "You drowned! Don't just jump into a basin..."
 msgstr "Du bist ertrunken! Spring nicht einfach in ein Becken..."
 
+#: models/inventory_objects/wire/wire.tscn
+msgid "WIRE"
+msgstr "DRAHT"
+
 #: models/labels/flow_simulation_throughput_label.gd:33
 #: models/labels/flow_simulation_throughput_label.gd:35
 msgid "Current Throughput: "
@@ -359,6 +363,10 @@ msgstr "Klick [{key}] um zu fahren!"
 #: models/van/van.gd:48
 msgid "You clicked on the van"
 msgstr "Du hast den Van angeklickt"
+
+#: models/not_available_block.tscn
+msgid "Not available yet!"
+msgstr "Noch nicht verfügbar!"
 
 #: systems/system-differential-diffusion/test_grid_update_color.gd:9
 msgid " -1.0"
@@ -462,7 +470,7 @@ msgstr ""
 #: XR/scenes/interactables/control_pad/control_pad_display.tscn
 #, fuzzy
 msgid "Position:"
-msgstr "Dosierstation"
+msgstr "Position:"
 
 #: XR/scenes/interactables/control_pad/control_pad_display.tscn
 msgid "0, 0, 0"
@@ -561,6 +569,26 @@ msgid ""
 "Mask: ..."
 msgstr ""
 
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "en"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "de"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "es"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "fr"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "RESET POS."
+msgstr ""
+
 #: XR/scenes/xr_van.tscn
 msgid "DESTINATIONDESTINATIONDEST"
 msgstr ""
@@ -569,6 +597,10 @@ msgstr ""
 #: XR/zones_xr/zone_xr_tech_demos.tscn
 msgid "To the Hochschule"
 msgstr "Zu der Hochschule"
+
+#: XR/zones_xr/zone_xr_hillersleben.tscn
+msgid "Fix the damaged wire!"
+msgstr "Reparier den Zaundraht!"
 
 #: XR/zones_xr/zone_xr_hochschule.tscn
 msgid "To the demo basin!!"
@@ -631,7 +663,7 @@ msgid "38.0°C"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "Sollwert-Einstellungen"
+msgid "Target Settings"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
@@ -700,6 +732,10 @@ msgstr "Förderband geleert."
 #: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
 msgid "TURN CONVEYOR ON"
 msgstr "FÖRDERBAND EINSCHALTEN!"
+
+#: zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended.tscn
+msgid "Debug"
+msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"
@@ -975,7 +1011,6 @@ msgstr "Zaun wurde erfolgreich repariert."
 msgid "Completed: See Intake."
 msgstr "Abgeschlossen: Zulauf gesehen."
 
-
 msgid "Completed: See Sand and Grease trap."
 msgstr "Abgeschlossen: Sand- und Fettfangbecken gesehen."
 
@@ -984,7 +1019,6 @@ msgstr "Abgeschlossen: Vorklärbecken gesehen."
 
 msgid "Completed: See Active Sludge Basin."
 msgstr "Abgeschlossen: Belebungsbecken gesehen."
-
 
 msgid "Completed: See Secondary Clarifier."
 msgstr "Abgeschlossen: Nachklärbecken gesehen."

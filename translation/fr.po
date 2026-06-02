@@ -236,15 +236,15 @@ msgstr ""
 "Échap - Menu, H - Réinit\n"
 "V - Tâches on/off"
 
-#: globals/topics.gd:27
+#: globals/topics.gd:27 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Wastewater"
 msgstr "Eaux usées"
 
-#: globals/topics.gd:28
+#: globals/topics.gd:28 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Drinking Water"
 msgstr "Eau potable"
 
-#: globals/topics.gd:29
+#: globals/topics.gd:29 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Eletrotechnics"
 msgstr "Électrotechnique"
 
@@ -315,6 +315,10 @@ msgstr "L'aérateur est cassé !"
 msgid "You drowned! Don't just jump into a basin..."
 msgstr "Vous vous êtes noyé ! Ne sautez pas dans un bassin..."
 
+#: models/inventory_objects/wire/wire.tscn
+msgid "WIRE"
+msgstr "FIL"
+
 #: models/labels/flow_simulation_throughput_label.gd:33
 #: models/labels/flow_simulation_throughput_label.gd:35
 msgid "Current Throughput: "
@@ -359,6 +363,10 @@ msgstr "Appuyez sur [{key}] pour voyager !"
 #: models/van/van.gd:48
 msgid "You clicked on the van"
 msgstr "Vous avez cliqué sur la camionnette"
+
+#: models/not_available_block.tscn
+msgid "Not available yet!"
+msgstr "Pas encore disponible!"
 
 #: systems/system-differential-diffusion/test_grid_update_color.gd:9
 msgid " -1.0"
@@ -561,6 +569,26 @@ msgid ""
 "Mask: ..."
 msgstr ""
 
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "en"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "de"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "es"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "fr"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "RESET POS."
+msgstr ""
+
 #: XR/scenes/xr_van.tscn
 msgid "DESTINATIONDESTINATIONDEST"
 msgstr ""
@@ -569,6 +597,10 @@ msgstr ""
 #: XR/zones_xr/zone_xr_tech_demos.tscn
 msgid "To the Hochschule"
 msgstr "À la Hochschule"
+
+#: XR/zones_xr/zone_xr_hillersleben.tscn
+msgid "Fix the damaged wire!"
+msgstr "Réparez le fil endommagé"
 
 #: XR/zones_xr/zone_xr_hochschule.tscn
 msgid "To the demo basin!!"
@@ -699,6 +731,10 @@ msgstr ""
 
 #: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
 msgid "TURN CONVEYOR ON"
+msgstr ""
+
+#: zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended.tscn
+msgid "Debug"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
@@ -962,73 +998,69 @@ msgstr ""
 "Tous les points de contrôle de sécurité inspectés. Routine matinale terminée."
 
 msgid "Fence damage located."
-msgstr ""
+msgstr "Dommage de clôture localisé."
 
 msgid "Wire acquired."
-msgstr ""
+msgstr "Fil obtenu."
 
 msgid "Wire repaired."
-msgstr ""
+msgstr "Fil réparé."
 
 msgid "Fence successfully repaired."
-msgstr ""
+msgstr "Clôture réparée avec succès."
 
 msgid "Completed: See Intake."
-msgstr ""
+msgstr "Terminé : Voir la prise d’eau."
 
-#, fuzzy
+
 msgid "Completed: See Sand and Grease trap."
 msgstr "Dégrilleur sable et graisse"
 
-#, fuzzy
 msgid "Completed: See Primary Clarifier."
-msgstr "Pompe Boue activée RPS1 -> Clarificateur primaire"
+msgstr "Terminé: Voir le Clarificateur primaire"
 
 msgid "Completed: See Active Sludge Basin."
-msgstr ""
-
-#, fuzzy
-msgid "Completed: See Secondary Clarifier."
-msgstr "Clarificateur secondaire I"
+msgstr "Terminé: Voir le Bassin de boues actives"
 
 msgid "Completed: See Hydroelectric Water Wheel Generator."
-msgstr ""
+msgstr "Terminé : Voir le générateur hydroélectrique à roue à eau"
 
 msgid "Completed: See Thickeners."
-msgstr ""
+msgstr "Terminé : Voir les épaississeurs"
 
 msgid "Completed: See Dewatering Machines."
-msgstr ""
+msgstr "Terminé : Voir les machines de déshydratation"
 
 msgid "Completed: Walk above the reactors."
-msgstr ""
+msgstr "Terminé : Marcher au-dessus des réacteurs"
 
 msgid "Completed: See Biogas Monitoring ROom."
-msgstr ""
+msgstr "Terminé : Voir la salle de surveillance du biogaz"
 
 msgid "Completed: See Combined Heat and Power Unit."
-msgstr ""
+msgstr "Terminé : Voir l’unité de cogénération"
 
 msgid "Completed: See Gas storage."
-msgstr ""
+msgstr "Terminé : Voir le stockage de gaz"
 
 msgid "Completed: Sludge back down to mesophilic range."
-msgstr ""
+msgstr "Terminé : Boues revenues à la plage mésophile"
 
 msgid "Completed: Sludge back into mesophilic range."
-msgstr ""
+msgstr "Terminé : Boues revenues dans la plage mésophile"
 
 msgid "Completed: Transport band emptied. It wont freeze now."
-msgstr ""
+msgstr "Terminé : La bande transporteuse est vidée. Elle ne gèlera plus maintenant"
 
 msgid "Completed: Sludge properly dewatered."
-msgstr ""
+msgstr "Terminé : Boues correctement déshydratées"
 
 msgid "Completed: NH4 setpoint corrected."
-msgstr ""
+msgstr "Terminé : Point de consigne NH4 corrigé"
 
 msgid "Completed: Removed ice from screw collector."
-msgstr ""
+msgstr "Terminé : Glace retirée du collecteur à vis"
 
 msgid "Completed: Hose protected from ice."
-msgstr ""
+msgstr "Terminé : Tuyau protégé contre le gel"
+

@@ -236,20 +236,19 @@ msgstr ""
 "Esc - Menu, H - Reset Position\n"
 "V - Tareas on/off"
 
-#: globals/topics.gd:27
+#: globals/topics.gd:27 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Wastewater"
 msgstr "Aguas residuales"
 
-#: globals/topics.gd:28
+#: globals/topics.gd:28 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Drinking Water"
 msgstr "Agua potable"
 
-#: globals/topics.gd:29
+#: globals/topics.gd:29 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Eletrotechnics"
 msgstr "Electrotécnica"
 
 #: menus/environmentselector/environmentselector.tscn
-#, fuzzy
 msgid "LOAD\n"
 msgstr "CARGAR"
 
@@ -315,6 +314,10 @@ msgstr "¡El difusor está roto!"
 msgid "You drowned! Don't just jump into a basin..."
 msgstr "Te ahogaste! No saltes a un tanque lleno..."
 
+#: models/inventory_objects/wire/wire.tscn
+msgid "WIRE"
+msgstr "ALAMBRE"
+
 #: models/labels/flow_simulation_throughput_label.gd:33
 #: models/labels/flow_simulation_throughput_label.gd:35
 msgid "Current Throughput: "
@@ -359,6 +362,10 @@ msgstr "Pulsa [{key}] para viajar!"
 #: models/van/van.gd:48
 msgid "You clicked on the van"
 msgstr "Has pulsado en la furgoneta"
+
+#: models/not_available_block.tscn
+msgid "Not available yet!"
+msgstr "No disponible aún!"
 
 #: systems/system-differential-diffusion/test_grid_update_color.gd:9
 msgid " -1.0"
@@ -457,12 +464,11 @@ msgstr ""
 
 #: XR/scenes/interactables/control_pad/control_pad_display.tscn
 msgid "Body"
-msgstr ""
+msgstr "Body"
 
 #: XR/scenes/interactables/control_pad/control_pad_display.tscn
-#, fuzzy
 msgid "Position:"
-msgstr "Est. bombeo de floculantes"
+msgstr "Position:"
 
 #: XR/scenes/interactables/control_pad/control_pad_display.tscn
 msgid "0, 0, 0"
@@ -561,6 +567,26 @@ msgid ""
 "Mask: ..."
 msgstr ""
 
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "en"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "de"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "es"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "fr"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "RESET POS."
+msgstr ""
+
 #: XR/scenes/xr_van.tscn
 msgid "DESTINATIONDESTINATIONDEST"
 msgstr ""
@@ -569,6 +595,10 @@ msgstr ""
 #: XR/zones_xr/zone_xr_tech_demos.tscn
 msgid "To the Hochschule"
 msgstr "A la Hochschule"
+
+#: XR/zones_xr/zone_xr_hillersleben.tscn
+msgid "Fix the damaged wire!"
+msgstr "Arregla el alambre dañado de la valla!"
 
 #: XR/zones_xr/zone_xr_hochschule.tscn
 msgid "To the demo basin!!"
@@ -700,6 +730,10 @@ msgstr "Cinta transp. vacía"
 #: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
 msgid "TURN CONVEYOR ON"
 msgstr "ACTIVA LA CINTA TRANSP.!"
+
+#: zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended.tscn
+msgid "Debug"
+msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"

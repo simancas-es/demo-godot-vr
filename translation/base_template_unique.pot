@@ -213,6 +213,7 @@
 # res://models/doors/basedoor2m.tscn
 # res://models/drone_falcon/drone_falcon.gd
 # res://models/interaction/simple_button.tscn
+# res://models/inventory_objects/wire/wire.tscn
 # res://models/labels/flow_simulation_throughput_label.gd
 # res://models/labels/flow_simulation_throughput_label.tscn
 # res://models/labels/flow_simulation_volume_label.gd
@@ -226,8 +227,10 @@
 # res://models/ladders/simple_ladder/ladder.gd
 # res://models/ladders/simple_ladder/simple_ladder.tscn
 # res://models/platform_rusty/platform_rusty.tscn
+# res://models/pulsating_box/pulsating_box.tscn
 # res://models/van/van.gd
 # res://models/van/van.tscn
+# res://models/not_available_block.tscn
 # 
 # res://systems/system-differential-diffusion/system_differential_diffusion_controller.gd
 # res://systems/system-differential-diffusion/system_differential_diffusion_settings.gd
@@ -424,6 +427,7 @@
 # res://XR/scenes/xrplayer/xr_settings.tscn
 # res://XR/scenes/xr_van.gd
 # res://XR/scenes/xr_van.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/bhkw/logik_valve_control.gd
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
@@ -438,11 +442,14 @@
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/leiter/xr_leiter_becken.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/wire/wire_snap_task.gd
 # res://XR/zones_xr/zone_xr_hillersleben/xr_logik_bgebaeude_container_u_gdoor.gd
+# res://XR/zones_xr/zone_xr_hillersleben/xr_q_nh_4.gd
 # res://XR/zones_xr/zone_xr_sample_basin/logic_xr_blowers.gd
 # res://XR/zones_xr/zone_xr_sample_basin/logic_xr_diffuser_interaction.gd
 # res://XR/zones_xr/zone_xr_sample_basin/logic_xr_door.gd
 # res://XR/zones_xr/zone_xr_sample_basin/logic_xr_wheel.gd
+# res://XR/zones_xr/logik_grab_object_sub.gd
 # res://XR/zones_xr/xr_adapter.gd
 # res://XR/zones_xr/xr_adapter.tscn
 # res://XR/zones_xr/zone_xr_door_demos.tscn
@@ -466,6 +473,7 @@
 # res://zones/hillersleben/scripts/button/fpv_animation.gd
 # res://zones/hillersleben/scripts/button/xr_animation.gd
 # res://zones/hillersleben/scripts/clock-timer/clock_timer.gd
+# res://zones/hillersleben/scripts/ff/ff_controls.gd
 # res://zones/hillersleben/scripts/hl_flow_model/band_control/bandcontrol.gd
 # res://zones/hillersleben/scripts/hl_flow_model/band_control/test.gd
 # res://zones/hillersleben/scripts/hl_flow_model/band_control/test.tscn
@@ -521,8 +529,11 @@
 # res://zones/hillersleben/scripts/task_locators/task_sequencer.gd
 # res://zones/hillersleben/scripts/utils/steal_meshinstance.gd
 # res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn
+# res://zones/hillersleben/scripts/valve_interaction/debug_label.gd
 # res://zones/hillersleben/scripts/valve_interaction/valve_interaction.gd
 # res://zones/hillersleben/scripts/valve_interaction/valve_interaction.tscn
+# res://zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended.tscn
+# res://zones/hillersleben/scripts/valve_interaction/xr_matcher.gd
 # res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd
 # res://zones/hillersleben/scripts/water_visuals/logik_wasserrad.gd
 # res://zones/hillersleben/scripts/water_visuals/logik_waterlevel_path.gd
@@ -618,15 +629,15 @@ msgid ""
 "V - Aufgaben / Tasks on/off"
 msgstr ""
 
-#: globals/topics.gd:27
+#: globals/topics.gd:27 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Wastewater"
 msgstr ""
 
-#: globals/topics.gd:28
+#: globals/topics.gd:28 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Drinking Water"
 msgstr ""
 
-#: globals/topics.gd:29
+#: globals/topics.gd:29 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Eletrotechnics"
 msgstr ""
 
@@ -694,6 +705,10 @@ msgstr ""
 msgid "You drowned! Don't just jump into a basin..."
 msgstr ""
 
+#: models/inventory_objects/wire/wire.tscn
+msgid "WIRE"
+msgstr ""
+
 #: models/labels/flow_simulation_throughput_label.gd:33
 #: models/labels/flow_simulation_throughput_label.gd:35
 msgid "Current Throughput: "
@@ -737,6 +752,10 @@ msgstr ""
 
 #: models/van/van.gd:48
 msgid "You clicked on the van"
+msgstr ""
+
+#: models/not_available_block.tscn
+msgid "Not available yet!"
 msgstr ""
 
 #: systems/system-differential-diffusion/test_grid_update_color.gd:9
@@ -937,6 +956,26 @@ msgid ""
 "Mask: ..."
 msgstr ""
 
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "en"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "de"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "es"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "fr"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "RESET POS."
+msgstr ""
+
 #: XR/scenes/xr_van.tscn
 msgid "DESTINATIONDESTINATIONDEST"
 msgstr ""
@@ -944,6 +983,10 @@ msgstr ""
 #: XR/zones_xr/zone_xr_door_demos.tscn XR/zones_xr/zone_xr_hillersleben.tscn
 #: XR/zones_xr/zone_xr_tech_demos.tscn
 msgid "To the Hochschule"
+msgstr ""
+
+#: XR/zones_xr/zone_xr_hillersleben.tscn
+msgid "Fix the damaged wire!"
 msgstr ""
 
 #: XR/zones_xr/zone_xr_hochschule.tscn
@@ -1075,6 +1118,10 @@ msgstr ""
 
 #: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
 msgid "TURN CONVEYOR ON"
+msgstr ""
+
+#: zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended.tscn
+msgid "Debug"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn

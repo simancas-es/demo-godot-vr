@@ -236,15 +236,15 @@ msgstr ""
 "Esc - Menu, H - Reset Position\n"
 "V - Tasks on/off"
 
-#: globals/topics.gd:27
+#: globals/topics.gd:27 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Wastewater"
 msgstr "Wastewater"
 
-#: globals/topics.gd:28
+#: globals/topics.gd:28 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Drinking Water"
 msgstr "Drinking Water"
 
-#: globals/topics.gd:29
+#: globals/topics.gd:29 XR/scenes/xrplayer/xr_settings.tscn
 msgid "Eletrotechnics"
 msgstr "Eletrotechnics"
 
@@ -315,6 +315,10 @@ msgstr "Diffusor is broken!"
 msgid "You drowned! Don't just jump into a basin..."
 msgstr ""
 
+#: models/inventory_objects/wire/wire.tscn
+msgid "WIRE"
+msgstr ""
+
 #: models/labels/flow_simulation_throughput_label.gd:33
 #: models/labels/flow_simulation_throughput_label.gd:35
 msgid "Current Throughput: "
@@ -358,6 +362,10 @@ msgstr ""
 
 #: models/van/van.gd:48
 msgid "You clicked on the van"
+msgstr ""
+
+#: models/not_available_block.tscn
+msgid "Not available yet!"
 msgstr ""
 
 #: systems/system-differential-diffusion/test_grid_update_color.gd:9
@@ -558,6 +566,26 @@ msgid ""
 "Mask: ..."
 msgstr ""
 
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "en"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "de"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "es"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "fr"
+msgstr ""
+
+#: XR/scenes/xrplayer/xr_settings.tscn
+msgid "RESET POS."
+msgstr ""
+
 #: XR/scenes/xr_van.tscn
 msgid "DESTINATIONDESTINATIONDEST"
 msgstr ""
@@ -565,6 +593,10 @@ msgstr ""
 #: XR/zones_xr/zone_xr_door_demos.tscn XR/zones_xr/zone_xr_hillersleben.tscn
 #: XR/zones_xr/zone_xr_tech_demos.tscn
 msgid "To the Hochschule"
+msgstr ""
+
+#: XR/zones_xr/zone_xr_hillersleben.tscn
+msgid "Fix the damaged wire!"
 msgstr ""
 
 #: XR/zones_xr/zone_xr_hochschule.tscn
@@ -696,6 +728,10 @@ msgstr ""
 
 #: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
 msgid "TURN CONVEYOR ON"
+msgstr ""
+
+#: zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended.tscn
+msgid "Debug"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
