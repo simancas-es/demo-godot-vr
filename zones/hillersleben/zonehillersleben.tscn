@@ -58,6 +58,8 @@
 [ext_resource type="PackedScene" uid="uid://p4lu7gvj1nf5" path="res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn" id="37_tb4lx"]
 [ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="38_qbqkw"]
 [ext_resource type="PackedScene" uid="uid://bigq13hqcsjxl" path="res://assets/zones/hillersleben/models/boden/boden.gltf" id="49_ijh67"]
+[ext_resource type="PackedScene" uid="uid://o1ua0ngy160m" path="res://assets/zones/hillersleben/models/vorklärbecken/2026-05-19-Vorklärbecken.gltf" id="59_fvi1l"]
+[ext_resource type="PackedScene" uid="uid://cmxkw641lnusn" path="res://assets/zones/hillersleben/models/sandfang/2026-05-26-Sand-Fettfang.gltf" id="60_vijfd"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5gmky"]
 size = Vector3(20, 3, 0.05)
@@ -105,7 +107,7 @@ point_count = 2
 
 [sub_resource type="Curve3D" id="Curve3D_yuvhm"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.5, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3.1204834, -4.5263557e-21),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -117,7 +119,7 @@ size = Vector2(16.345, 7.025)
 albedo_color = Color(0.37254903, 0.34117648, 0.36078432, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_w4u61"]
-size = Vector2(2.065, 3.715)
+size = Vector2(1.55, 3.715)
 
 [sub_resource type="Curve3D" id="Curve3D_w4u61"]
 _data = {
@@ -307,6 +309,13 @@ viewport_path = NodePath("Reference_point_floor/Q_BB/PID_NH4/SubViewport")
 resource_local_to_scene = true
 transparency = 1
 albedo_texture = SubResource("ViewportTexture_tb4lx")
+
+[sub_resource type="Curve3D" id="Curve3D_cp6hp"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ir53q"]
 
@@ -773,21 +782,19 @@ meshplane = NodePath("../PSB-WSpiegel")
 flow_model = NodePath("../../../FlowSimulation")
 
 [node name="FF-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" unique_id=403446442 node_paths=PackedStringArray("flow_model") instance=ExtResource("4_gfnr6")]
-transform = Transform3D(1, 0, 0, 0, 0.9999997, 8.4703295e-21, 0, -8.4703295e-21, 0.9999997, -14.48247, 0.025829345, 28.407158)
+transform = Transform3D(1, 0, 0, 0, 0.9999997, 0, 0, 0, 0.9999997, -14.529427, 0.1677705, 28.308283)
 curve = SubResource("Curve3D_yuvhm")
 flow_model = NodePath("../../../FlowSimulation")
 container_id = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS/FF-WaterLevelFollower/PathFollow3D" index="0" unique_id=253717488]
-transform = Transform3D(0.39297915, 0, -0.9195474, 0.9195474, -4.3711392e-08, 0.39297915, -4.0194696e-08, -1, -1.7177666e-08, 0, 0, -3.5332031)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS/FF-WaterLevelFollower" unique_id=253717488]
+transform = Transform3D(0.9195474, -3.5527137e-15, 0.39297917, 3.0417199e-15, 1, 1.2661042e-15, -0.39297917, 0, 0.9195474, 0, 3.1194954, 0)
 mesh = SubResource("PlaneMesh_60g3o")
-skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_gfnr6")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS/FF-WaterLevelFollower/PathFollow3D" index="1" unique_id=959250126]
-transform = Transform3D(0.39297915, 0, -0.9195474, 0.9195474, -4.3711392e-08, 0.39297915, -4.0194696e-08, -1, -1.7177666e-08, -3.6840916, -8.62055, -3.5332026)
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS/FF-WaterLevelFollower" unique_id=959250126]
+transform = Transform3D(0.9195474, -3.5527137e-15, 0.39297917, 3.0417199e-15, 1, 1.2661042e-15, -0.39297917, 0, 0.9195474, -8.199738, 3.1194954, 3.5042534)
 mesh = SubResource("PlaneMesh_w4u61")
-skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_gfnr6")
 
 [node name="BB2-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" unique_id=690110924 node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
@@ -1515,6 +1522,24 @@ mesh = SubResource("PlaneMesh_tb4lx")
 skeleton = NodePath("../../nh4_dynamic")
 surface_material_override/0 = SubResource("StandardMaterial3D_qbqkw")
 
+[node name="Q_FF" type="Node3D" parent="Reference_point_floor" unique_id=25270059]
+transform = Transform3D(0.922255, 0, 0.38658217, 0, 0.99999994, 0, -0.3865822, 0, 0.9222549, -23.67971, 3.2452357, 32.352695)
+
+[node name="FF_Controls" type="Node" parent="Reference_point_floor/Q_FF" unique_id=1000592655 node_paths=PackedStringArray("raumer")]
+script = ExtResource("41_h3ac7")
+raumer = NodePath("../../../Visuals/2026-05-26-Sand-Fettfang/Bruecke")
+
+[node name="Path3D" type="Path3D" parent="Reference_point_floor/Q_FF" unique_id=182196484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12185, 4.2351647e-21, -8.940697e-08)
+curve = SubResource("Curve3D_cp6hp")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Reference_point_floor/Q_FF/Path3D" unique_id=864942917]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0, 0)
+progress = 20.0
+rotation_mode = 0
+loop = false
+tilt_enabled = false
+
 [node name="Q_NKB" type="Node3D" parent="Reference_point_floor" unique_id=593365126]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.87595, 9.640527e-13, 33.919586)
 
@@ -1546,14 +1571,10 @@ overview_scene = ExtResource("3_ybcmd")
 script = ExtResource("8_du4yn")
 wasserrad_drehen = NodePath("../../Visuals/Referenz/wasserrad")
 
-[node name="Logik-NKB_Visual" type="Node" parent="FlowSimulation" unique_id=17142679 node_paths=PackedStringArray("nkb1_pivot", "nkb2_pivot", "nkb1_schrauben1", "nkb1_schrauben2", "nkb2_schrauben1", "nkb2_schrauben2")]
+[node name="Logik-NKB_Visual" type="Node" parent="FlowSimulation" unique_id=17142679 node_paths=PackedStringArray("nkb1_pivot")]
+process_mode = 4
 script = ExtResource("23_cqg2i")
 nkb1_pivot = NodePath("../../Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot")
-nkb2_pivot = NodePath("../../Visuals/Referenz/nachklaerung-becken-2/Brücke_001/nkb-2-pivot")
-nkb1_schrauben1 = NodePath("../../Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot/nkb-1-schraube1")
-nkb1_schrauben2 = NodePath("../../Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot/nkb-1-schraube2")
-nkb2_schrauben1 = NodePath("../../Visuals/Referenz/nachklaerung-becken-2/Brücke_001/nkb-2-pivot/nkb-2-schraube1")
-nkb2_schrauben2 = NodePath("../../Visuals/Referenz/nachklaerung-becken-2/Brücke_001/nkb-2-pivot/nkb-2-schraube2")
 
 [node name="FlowSimulationLabels" type="Node3D" parent="." unique_id=256407371]
 
@@ -2393,76 +2414,34 @@ shape = SubResource("ConcavePolygonShape3D_ht8a3")
 [node name="Visuals" type="Node3D" parent="." unique_id=1671551082]
 metadata/_edit_lock_ = true
 
-[node name="Referenz" parent="Visuals" unique_id=17836815 instance=ExtResource("15_h3jyd")]
+[node name="Referenz" parent="Visuals" unique_id=631548835 instance=ExtResource("15_h3jyd")]
 
-[node name="boden_geometrie" parent="Visuals/Referenz" index="9" unique_id=861240497]
-visible = false
-
-[node name="Plane_928" parent="Visuals/Referenz/B1-Steuerung-1" parent_id_path=PackedInt32Array(17836815, 963221293) index="81" unique_id=1581619734]
+[node name="Plane_928" parent="Visuals/Referenz/B1-Steuerung-1" parent_id_path=PackedInt32Array(631548835, 1656078146) index="81" unique_id=870704108]
 transform = Transform3D(-1.19209275e-07, 0.99998313, 0.005784124, -0.99999994, -1.1920929e-07, 6.635673e-08, 6.6822395e-08, -0.005784124, 0.99998313, 0.2104969, 1.2419701, -0.12565613)
 
-[node name="nkb-1-pivot" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke" parent_id_path=PackedInt32Array(17836815, 1018371033) index="0" unique_id=1318774200]
+[node name="bio-p-becken" parent="Visuals/Referenz" index="77" unique_id=1252631919]
+visible = false
+
+[node name="nkb-1-pivot" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke" parent_id_path=PackedInt32Array(631548835, 2103058733) index="637" unique_id=73170561]
 transform = Transform3D(0.8571007, 0, -8.471827, 0, 0.053560268, 0, 8.471827, 0, 0.8571007, -0.00024414063, 0.12705994, 3.0517578e-05)
 
-[node name="Cube_1236" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="26" unique_id=1722593776]
+[node name="fettfang" parent="Visuals/Referenz" index="144" unique_id=1933047936]
 visible = false
 
-[node name="Cube_1238" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="28" unique_id=807253703]
-visible = false
-
-[node name="Cube_1239" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="29" unique_id=373063868]
-visible = false
-
-[node name="Cube_1241" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="31" unique_id=1044444828]
-visible = false
-
-[node name="Cube_1242" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="32" unique_id=1268381584]
-visible = false
-
-[node name="Cube_1244" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="34" unique_id=1802124587]
-visible = false
-
-[node name="Cube_1245" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="35" unique_id=1572228148]
-visible = false
-
-[node name="Cube_1247" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="37" unique_id=345637506]
-visible = false
-
-[node name="Cube_1248" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="38" unique_id=1672279644]
-visible = false
-
-[node name="Cube_1250" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="40" unique_id=788783753]
-visible = false
-
-[node name="Cube_7546" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="229" unique_id=806079619]
-visible = false
-
-[node name="Cube_7551" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="234" unique_id=1330721295]
-visible = false
-
-[node name="Cylinder_13907" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="475" unique_id=919455686]
-visible = false
-
-[node name="Cylinder_13937" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="505" unique_id=934163393]
-visible = false
-
-[node name="Cylinder_13938" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="506" unique_id=1468445800]
-visible = false
-
-[node name="Cylinder_13939" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="507" unique_id=1398243549]
-visible = false
-
-[node name="Cylinder_13940" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="508" unique_id=1636840468]
-visible = false
-
-[node name="nkb-1-schraube1" parent="Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot" index="637" unique_id=127105939]
-transform = Transform3D(3.12579e-06, -5.215819, 4.62568e-08, 4.9175043, 3.3368615e-06, 0.0074797897, 0.13392098, -7.875675e-07, -0.27465355, 8.477692, -29.466675, 1.513977)
-
-[node name="wasserrad" parent="Visuals/Referenz" index="132" unique_id=334305977]
+[node name="wasserrad" parent="Visuals/Referenz" index="150" unique_id=1825663590]
 transform = Transform3D(0.2220347, -0.97503877, 4.2620297e-08, 0, -4.371139e-08, -1, 0.97503877, 0.2220347, -9.7054444e-09, -89.51488, 49.242992, 73.64935)
 
-[node name="base_ortophoto" parent="Visuals/Referenz" index="160" unique_id=751154811]
-visible = false
+[node name="2026-05-19-Vorklärbecken" parent="Visuals" unique_id=823701110 instance=ExtResource("59_fvi1l")]
+transform = Transform3D(0.63771975, 0, 0.7702685, 0, 1, 0, -0.7702685, 0, 0.63771975, -59.66952, 50.357533, 15.207044)
+
+[node name="Räumschild" parent="Visuals/2026-05-19-Vorklärbecken" index="3" unique_id=1979268116]
+transform = Transform3D(0.808031, 0, 0.58913994, 0, 1, 0, -0.58913994, 0, 0.808031, 0, 0, 0)
+
+[node name="2026-05-26-Sand-Fettfang" parent="Visuals" unique_id=808481619 instance=ExtResource("60_vijfd")]
+transform = Transform3D(0.91907346, 0, 0.39408627, 0, 1, 0, -0.39408627, 0, 0.91907346, -45.94071, 49.63414, 26.300257)
+
+[node name="Bruecke" parent="Visuals/2026-05-26-Sand-Fettfang" index="8" unique_id=2496273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7135564, 0, 2.9802322e-08)
 
 [editable path="Reference_point_floor/Q_FENCE_CHECK/WIRE_PICKUP/Area3D"]
 [editable path="Reference_point_floor/Q_FENCE_CHECK/WIRE_USE/Area3D"]
@@ -2473,3 +2452,5 @@ visible = false
 [editable path="Maschinengebäude/door_gebläse_1"]
 [editable path="Maschinengebäude/door_gebläse_2"]
 [editable path="Visuals/Referenz"]
+[editable path="Visuals/2026-05-19-Vorklärbecken"]
+[editable path="Visuals/2026-05-26-Sand-Fettfang"]
