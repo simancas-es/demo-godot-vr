@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cvpmdoxt0gsjs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vijfd"]
+size = Vector3(1.5, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h3ac7"]
+albedo_color = Color(0, 0.56078434, 0.827451, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3q35u"]
+
+[node name="NotAvailableBlock" type="MeshInstance3D" unique_id=962931221]
+transform = Transform3D(-0.9028556, 0, -0.42994398, 0, 1, 0, 0.42994398, 0, -0.9028556, 0, 0, 0)
+mesh = SubResource("BoxMesh_vijfd")
+surface_material_override/0 = SubResource("StandardMaterial3D_h3ac7")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=951300376]
+transform = Transform3D(0.455, 0, 0, 0, 0.455, 0, 0, 0, 0.455, 0, 0.07144165, 0.5082531)
+text = "Not available yet!"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=598059435]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=573256775]
+shape = SubResource("BoxShape3D_3q35u")
