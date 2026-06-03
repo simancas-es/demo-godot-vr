@@ -68,7 +68,7 @@ func get_hint_for_context(context: InteractionHintContextScript, action: ENUMS.A
 	if action in hint_text:
 		return tr(hint_text[action])
 	elif action in ENUMS.ACTION_TEXT:
-		return ENUMS.ACTION_TEXT[action]
+		return tr(ENUMS.ACTION_TEXT[action])
 	return ""
 
 ##Override as needed
