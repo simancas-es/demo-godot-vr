@@ -900,6 +900,27 @@ msgid "Sludge Temperature:"
 msgstr "Temperatura de lodo:"
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "Decanter centrifuge"
+msgstr "Decantadora centrífuga"
+
+#: zones/hillersleben/zonehillersleben.tscn
+#, fuzzy
+msgid "Conveyor belt >>>>"
+msgstr "Cinta transportadora >>>>"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Empty polymer ibc"
+msgstr "IBC Polímero vacío"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Full polymer ibc"
+msgstr "IBC Polímero lleno"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Hose-intake"
+msgstr "Toma de manguera"
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "27.0"
 msgstr ""
 

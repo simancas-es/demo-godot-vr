@@ -899,7 +899,27 @@ msgstr "Pompe Clarificateur secondaire II -> Boue flottante PW"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Sludge Temperature:"
-msgstr ""
+msgstr "Température des boues :"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Decanter centrifuge"
+msgstr "Centrifugeuse décanteuse"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Conveyor belt >>>>"
+msgstr "Convoyeur à bande >>>>"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Empty polymer ibc"
+msgstr "GRV de polymère vide"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Full polymer ibc"
+msgstr "GRV de polymère plein"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Hose-intake"
+msgstr "Entrée-Tuyau"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "27.0"

@@ -19,7 +19,7 @@ const _text_inprogress = "In Progress"
 const _text_completed = "Completed"
 const _text_failed = "Failed"
 const _text_unknown = "Unknown"
-var _translated = [_text_uninitiated, _text_inprogress, _text_completed, _text_failed, _text_unknown]# HACK. Easy translations export
+var _translated = [tr(_text_uninitiated), tr(_text_inprogress), tr(_text_completed), tr(_text_failed), tr(_text_unknown)]# HACK. Easy translations export
 
 const STATUSTEXT : Dictionary = {
 	TasksUnit.STATUS.UNINITIATED : _text_uninitiated,

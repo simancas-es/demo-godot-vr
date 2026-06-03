@@ -899,6 +899,26 @@ msgid "Sludge Temperature:"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "Decanter centrifuge"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Conveyor belt >>>>"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Empty polymer ibc"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Full polymer ibc"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Hose-intake"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "27.0"
 msgstr ""
 
