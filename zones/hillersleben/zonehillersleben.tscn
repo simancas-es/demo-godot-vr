@@ -47,6 +47,7 @@
 [ext_resource type="Script" uid="uid://b7larpf5g2b1k" path="res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_low.gd" id="24_akmhy"]
 [ext_resource type="Script" uid="uid://cs1hlyd1cd34n" path="res://zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd" id="29_vj654"]
 [ext_resource type="Script" uid="uid://6yf4je4071a8" path="res://systems/system-physics-control/system_physical_control_object.gd" id="30_qfb7l"]
+[ext_resource type="PackedScene" uid="uid://bmubjmrsjgvil" path="res://assets/world_objects/hillersleben/ibc_aquaplan_eurofloc.tscn" id="31_cp6hp"]
 [ext_resource type="Shader" uid="uid://dglcjlrd22v0d" path="res://zones/hillersleben/scripts/tasks/dekanter/spill_shader.gdshader" id="31_ht8a3"]
 [ext_resource type="PackedScene" uid="uid://1uanemwpfr1s" path="res://zones/hillersleben/scripts/button/button.tscn" id="32_l5fi6"]
 [ext_resource type="PackedScene" uid="uid://bl7fxuvvgwxu6" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.tscn" id="32_lm2sk"]
@@ -248,11 +249,11 @@ size = Vector3(1.8251953, 0.6661377, 0.854126)
 [sub_resource type="BoxMesh" id="BoxMesh_l5fi6"]
 size = Vector3(1.825, 0.3, 0.555)
 
-[sub_resource type="BoxMesh" id="BoxMesh_lm2sk"]
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_ht8a3"]
+size = Vector3(1, 1.2719116, 1.2429199)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l5fi6"]
+size = Vector3(1, 1.2797852, 1.2416992)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lm2sk"]
 size = Vector3(0.18359375, 0.48828125, 0.110839844)
@@ -1230,6 +1231,10 @@ task_sequence = Array[int]([30, 29])
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1.519455, 6.6417485e-08)
 mesh = SubResource("CylinderMesh_vj654")
 
+[node name="DebugLabel" type="Label3D" parent="Reference_point_floor/Q_MG/Dekanter/dekanter_cylinder" unique_id=1971452234]
+transform = Transform3D(-1.1146301e-08, 0.06599885, -0.24631102, 0.2549976, 2.884902e-09, -1.07665965e-08, 0, -0.24631108, -0.06599884, -0.5082815, -0.8925321, -5.9972125e-09)
+text = "Decanter centrifuge"
+
 [node name="dekanter_beinen" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=616243186]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6450882, 0)
 mesh = SubResource("BoxMesh_qfb7l")
@@ -1246,6 +1251,10 @@ shape = SubResource("BoxShape3D_74kmu")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4137154, 0.7180214, 0.9022783)
 mesh = SubResource("BoxMesh_ht8a3")
 
+[node name="DebugLabel" type="Label3D" parent="Reference_point_floor/Q_MG/Dekanter/foerdeband" unique_id=999735479]
+transform = Transform3D(-0.2549976, 3.7252903e-09, -7.450581e-09, -7.450581e-09, -9.313224e-09, 0.25499994, -9.7340624e-09, 0.25499994, 7.1595605e-09, 0.20974351, 0.16582829, -0.0077643506)
+text = "Conveyor belt >>>>"
+
 [node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_MG/Dekanter/foerdeband" unique_id=1981119259]
 collision_layer = 8421376
 collision_mask = 32768
@@ -1259,31 +1268,43 @@ transform = Transform3D(-2.9802322e-08, 0, -1, 1.6940659e-21, 0.99999994, -8.470
 mesh = SubResource("BoxMesh_l5fi6")
 skeleton = NodePath("../..")
 
-[node name="ibc1" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=250021788]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18375397, 0.3755188, -3.2874303)
-mesh = SubResource("BoxMesh_lm2sk")
+[node name="ibc1" type="Node3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=1089506980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18375397, 0.55421066, -3.2874303)
+
+[node name="IBC-aquaplan-eurofloc" parent="Reference_point_floor/Q_MG/Dekanter/ibc1" unique_id=1624864858 instance=ExtResource("31_cp6hp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="DebugLabel" type="Label3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc1" unique_id=1573829849]
+transform = Transform3D(-7.450581e-09, 0.255, 4.29721e-18, 2.2204503e-16, -1.2180588e-16, 0.25499997, 0.2549976, 7.450581e-09, -4.4408836e-16, -0.427449, 0.6481285, 0.03192091)
+text = "Empty polymer ibc"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc1" unique_id=1860911863]
 collision_layer = 8421376
 collision_mask = 32768
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc1/StaticBody3D" unique_id=951476881]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, 1.6940659e-21, 0, -1.6940659e-21, 0.9999999, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 1.6263033e-19, 0.99998844, 3.2695472e-19, -2.9802322e-08, -1.6940659e-21, 0.9999999, -1.1920929e-07, 0.0055236816, 0.00793457)
 shape = SubResource("BoxShape3D_ht8a3")
 
 [node name="snap1" type="Node3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc1" unique_id=1023513547]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27938277, 0.5025941, 8.999725e-22)
 
-[node name="ibc2" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=706891800]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21630669, 0.3755188, -4.765661)
-mesh = SubResource("BoxMesh_lm2sk")
+[node name="ibc2" type="Node3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=1721806009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21630669, 0.55421066, -4.765661)
+
+[node name="IBC-aquaplan-eurofloc" parent="Reference_point_floor/Q_MG/Dekanter/ibc2" unique_id=604836686 instance=ExtResource("31_cp6hp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="DebugLabel" type="Label3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc2" unique_id=1868305323]
+transform = Transform3D(-1.11463e-08, 0.255, 4.29686e-18, 2.220446e-16, -1.218062e-16, 0.255, 0.2549976, 1.1146404e-08, -4.440892e-16, -0.4183755, 0.6720429, -1.0688252e-08)
+text = "Full polymer ibc"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc2" unique_id=512240603]
 collision_layer = 8421376
 collision_mask = 32768
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc2/StaticBody3D" unique_id=226112874]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, 1.6940659e-21, 0, -1.6940659e-21, 0.9999999, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 1.4230154e-19, 0.99998987, 2.8629714e-19, -2.9802322e-08, -1.6940659e-21, 0.9999999, 4.7683716e-07, 0.008544922, -0.011475563)
 shape = SubResource("BoxShape3D_l5fi6")
 
 [node name="snap2" type="Node3D" parent="Reference_point_floor/Q_MG/Dekanter/ibc2" unique_id=1017452615]
@@ -1308,6 +1329,10 @@ debug_color = Color(0, 4.2681017, 4.9151754, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter/dek_polymer_hose_intake/CollisionShape3D" unique_id=1963307054]
 mesh = SubResource("BoxMesh_74kmu")
+
+[node name="DebugLabel" type="Label3D" parent="Reference_point_floor/Q_MG/Dekanter/dek_polymer_hose_intake/CollisionShape3D/MeshInstance3D" unique_id=565812946]
+transform = Transform3D(-1.9251964e-08, 0.255, -3.8503927e-08, 0.255, 1.9251964e-08, -9.744498e-16, 1.9325163e-15, -3.8503927e-08, -0.255, -0.0037786178, 0.0064583463, -0.038390785)
+text = "Hose-intake"
 
 [node name="spill" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=1821309272]
 transform = Transform3D(0.8945056, 0, -0.44705668, 0, 1, 0, 0.44705668, 0, 0.8945056, -1.0584469, -0.119319916, 0.5559007)
@@ -2537,7 +2562,10 @@ metadata/_edit_lock_ = true
 
 [node name="Referenz" parent="Visuals" unique_id=631548835 instance=ExtResource("15_h3jyd")]
 
-[node name="Pflastersteine-geometrie" parent="Visuals/Referenz" index="79" unique_id=1790618934]
+[node name="IBC-aquaplan-eurofloc" parent="Visuals/Referenz" index="2" unique_id=780147188]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.9093065, 49.246128, 13.135238)
+
+[node name="Cube_7852" parent="Visuals/Referenz" index="25" unique_id=258109867]
 visible = false
 
 [node name="2026-05-19-Vorklärbecken" parent="Visuals" unique_id=823701110 instance=ExtResource("59_fvi1l")]
