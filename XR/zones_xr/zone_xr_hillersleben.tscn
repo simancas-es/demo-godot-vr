@@ -655,17 +655,26 @@ hand_pose = SubResource("Resource_emqla")
 [node name="XRLeiterBB1" parent="LEITER" unique_id=743817656 instance=ExtResource("15_gn0sx")]
 transform = Transform3D(0.99909204, 0, 0.042608008, 0, 1, 0, -0.042608008, 0, 0.99909204, -81.74822, 50.464046, 28.478073)
 
+[node name="XRLeiterBB1b" parent="LEITER" unique_id=1405921737 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(0.33089337, 0, 0.9436683, 0, 1, 0, -0.9436683, 0, 0.33089337, -94.37672, 50.36066, 39.53961)
+
 [node name="XRLeiterBB2" parent="LEITER" unique_id=955825396 instance=ExtResource("15_gn0sx")]
-transform = Transform3D(-0.9056136, 0, -0.4241048, 0, 1, 0, 0.4241048, 0, -0.9056136, -86.06625, 50.41319, 23.678867)
+transform = Transform3D(-0.9056136, 0, -0.4241048, 0, 1, 0, 0.4241048, 0, -0.9056136, -86.06625, 50.319233, 23.678867)
+
+[node name="XRLeiterBB2b" parent="LEITER" unique_id=944995223 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(0.15486567, 0, 0.987936, 0, 1, 0, -0.987936, 0, 0.15486567, -108.234436, 50.340908, 8.8985615)
+
+[node name="XRLeiterBB2c" parent="LEITER" unique_id=298162915 instance=ExtResource("15_gn0sx")]
+transform = Transform3D(0.9914408, 0, -0.13056089, 0, 1, 0, 0.13056089, 0, 0.9914408, -92.10123, 50.340908, -4.0282683)
 
 [node name="XRLeiterMSB" parent="LEITER" unique_id=704863928 instance=ExtResource("15_gn0sx")]
-transform = Transform3D(0.3299547, 0, 0.94399804, 0, 1, 0, -0.94399804, 0, 0.3299547, -56.65081, 50.537685, 48.42724)
+transform = Transform3D(0.3299547, 0, 0.94399804, 0, 1, 0, -0.94399804, 0, 0.3299547, -56.65081, 50.434746, 48.42724)
 
 [node name="XRLeiterMSB2" parent="LEITER" unique_id=78824637 instance=ExtResource("15_gn0sx")]
-transform = Transform3D(0.9546061, 0, -0.2978751, 0, 1, 0, 0.2978751, 0, 0.9546061, -40.600655, 50.537685, 38.231937)
+transform = Transform3D(0.9546061, 0, -0.2978751, 0, 1, 0, 0.2978751, 0, 0.9546061, -40.600655, 50.440838, 38.231937)
 
 [node name="XRLeiterMSB3" parent="LEITER" unique_id=1701981815 instance=ExtResource("15_gn0sx")]
-transform = Transform3D(-0.6818715, 0, -0.7314736, 0, 1, 0, 0.7314736, 0, -0.6818715, -32.795387, 50.537685, 59.815918)
+transform = Transform3D(-0.6818715, 0, -0.7314736, 0, 1, 0, 0.7314736, 0, -0.6818715, -32.795387, 50.43027, 59.815918)
 
 [node name="XRLeiterVED1" parent="LEITER" unique_id=1593601472 instance=ExtResource("15_gn0sx")]
 transform = Transform3D(0.93620193, 0, -0.35146624, 0, 1, 0, 0.35146624, 0, 0.93620193, -16.162851, 50.00436, -3.6614227)
