@@ -193,7 +193,7 @@ metadata/_custom_type_script = "uid://c8vnltn217quj"
 [node name="Hand_Nails_low_L" parent="LeftHand/XRToolsCollisionHand/LeftHand" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, -0.01, 0.03535534, 0.03535534)
 
-[node name="Skeleton3D" parent="LeftHand/XRToolsCollisionHand/LeftHand/Hand_Nails_low_L/Armature" index="0" unique_id=1684994592]
+[node name="Skeleton3D" parent="LeftHand/XRToolsCollisionHand/LeftHand/Hand_Nails_low_L/Armature" index="0" unique_id=714056998]
 bones/1/rotation = Quaternion(0.323537, -2.5658142e-05, -0.027220426, 0.9458239)
 bones/2/rotation = Quaternion(-0.09044407, -0.04151748, -0.16629349, 0.98104167)
 bones/3/rotation = Quaternion(-0.04661986, 0.02097099, 0.010327632, 0.9986392)
@@ -223,6 +223,7 @@ bone_name = &"Index_Tip_L"
 bone_index = 9
 
 [node name="MovementDirect" parent="LeftHand/XRToolsCollisionHand" unique_id=1719805949 instance=ExtResource("4_dl2y0")]
+max_speed = 6.0
 strafe = true
 
 [node name="MovementCrouch" parent="LeftHand/XRToolsCollisionHand" unique_id=1439445426 instance=ExtResource("7_nulhf")]
@@ -269,7 +270,7 @@ visible = false
 [node name="Hand_Nails_low_L" parent="LeftHand/XRToolsCollisionHand2/LeftHand2" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, -0.01, 0.03535534, 0.03535534)
 
-[node name="Skeleton3D" parent="LeftHand/XRToolsCollisionHand2/LeftHand2/Hand_Nails_low_L/Armature" index="0" unique_id=1684994592]
+[node name="Skeleton3D" parent="LeftHand/XRToolsCollisionHand2/LeftHand2/Hand_Nails_low_L/Armature" index="0" unique_id=714056998]
 bones/1/rotation = Quaternion(0.323537, -2.5658142e-05, -0.027220426, 0.9458239)
 bones/2/rotation = Quaternion(-0.09044407, -0.04151748, -0.16629349, 0.98104167)
 bones/3/rotation = Quaternion(-0.04661986, 0.02097099, 0.010327632, 0.9986392)
@@ -347,7 +348,7 @@ external_skeleton = NodePath("../Skeleton3D")
 [node name="Poke" parent="RightHand/XRToolsCollisionHand/RightHand/Hand_Nails_low_R/Armature/BoneAttachment3D" unique_id=1371797182 instance=ExtResource("21_hvpic")]
 mask = 4194304
 
-[node name="Skeleton3D" parent="RightHand/XRToolsCollisionHand/RightHand/Hand_Nails_low_R/Armature" index="1" unique_id=1064615705]
+[node name="Skeleton3D" parent="RightHand/XRToolsCollisionHand/RightHand/Hand_Nails_low_R/Armature" index="1" unique_id=974727780]
 bones/1/rotation = Quaternion(0.323537, 2.5658142e-05, 0.027220426, 0.9458239)
 bones/2/rotation = Quaternion(-0.09044407, 0.04151748, 0.16629349, 0.98104167)
 bones/3/rotation = Quaternion(-0.04661986, -0.020970985, -0.010327632, 0.9986392)
@@ -435,7 +436,7 @@ visible = false
 [node name="Hand_Nails_low_R" parent="RightHand/XRToolsCollisionHand2/RightHand2" index="0"]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0.01, 0.03535534, 0.03535534)
 
-[node name="Skeleton3D" parent="RightHand/XRToolsCollisionHand2/RightHand2/Hand_Nails_low_R/Armature" index="0" unique_id=1064615705]
+[node name="Skeleton3D" parent="RightHand/XRToolsCollisionHand2/RightHand2/Hand_Nails_low_R/Armature" index="0" unique_id=974727780]
 bones/1/rotation = Quaternion(0.323537, 2.5658142e-05, 0.027220426, 0.9458239)
 bones/2/rotation = Quaternion(-0.09044407, 0.04151748, 0.16629349, 0.98104167)
 bones/3/rotation = Quaternion(-0.04661986, -0.020970985, -0.010327632, 0.9986392)

@@ -206,7 +206,7 @@ delete_vans = true
 delete_inventorypickups = true
 
 [node name="XRPlayer" parent="." unique_id=922481156 instance=ExtResource("3_3tkdv")]
-transform = Transform3D(-0.9768592, 0, -0.21388295, 0, 1, 0, 0.21388295, 0, -0.9768592, 10.013388, 48.737495, 7.5814896)
+transform = Transform3D(-0.9768592, 0, -0.21388295, 0, 1, 0, 0.21388295, 0, -0.9768592, -69.213715, 49.313667, -47.83035)
 
 [node name="AnimationTree" parent="XRPlayer/LeftHand/XRToolsCollisionHand/LeftHand" parent_id_path=PackedInt32Array(922481156, 1009909507) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_bf5gv")
@@ -215,7 +215,7 @@ tree_root = SubResource("AnimationNodeBlendTree_bf5gv")
 tree_root = SubResource("AnimationNodeBlendTree_iny6i")
 
 [node name="BoneAttachment3D" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand/Hand_Nails_low_R/Armature" index="0" unique_id=371647788]
-transform = Transform3D(0.5408295, -0.8408129, 0.023173584, 0.08262676, 0.08052423, 0.99332196, -0.83706397, -0.53530306, 0.11302353, -0.03990221, 0.040283203, -0.15009499)
+transform = Transform3D(0.5408295, -0.8408129, 0.023173584, 0.08262676, 0.08052423, 0.99332196, -0.83706397, -0.53530306, 0.11302353, -0.039909363, 0.040283203, -0.1500969)
 
 [node name="AnimationTree" parent="XRPlayer/RightHand/XRToolsCollisionHand/RightHand" parent_id_path=PackedInt32Array(922481156, 1329846119) index="1"]
 tree_root = SubResource("AnimationNodeBlendTree_kxr2a")
