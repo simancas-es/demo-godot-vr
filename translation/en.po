@@ -665,11 +665,11 @@ msgstr ""
 
 #: zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn
 msgid "ENTLEEREN MIT 100 m3/s"
-msgstr ""
+msgstr "EMPTY 100 m3/s"
 
 #: zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_inflow.tscn
 msgid "FÜLLEN MIT 100 m3/s"
-msgstr ""
+msgstr "FILL 100 m3/s"
 
 #: zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
 msgid "40.0°C"
