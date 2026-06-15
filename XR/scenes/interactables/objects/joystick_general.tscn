@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d08qjtdjuhi3f"]
+[gd_scene format=3 uid="uid://d08qjtdjuhi3f"]
 
 [ext_resource type="Script" uid="uid://dqtgee11ctfel" path="res://XR/scenes/interactables/objects/joystick_general.gd" id="1_3mfid"]
 [ext_resource type="Script" uid="uid://c0j857ar3agno" path="res://addons/godot-xr-tools/interactables/interactable_joystick.gd" id="1_ajy58"]
@@ -54,71 +54,71 @@ closed_pose = ExtResource("6_vjh6r")
 margin = 0.12
 radius = 0.06
 
-[node name="JoystickGeneral" type="Node3D"]
+[node name="JoystickGeneral" type="Node3D" unique_id=825938197]
 script = ExtResource("1_3mfid")
 
-[node name="Frame" type="StaticBody3D" parent="."]
+[node name="Frame" type="StaticBody3D" parent="." unique_id=1714188288]
 collision_layer = 8388608
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Frame"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Frame" unique_id=2008657584]
 shape = SubResource("1")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Frame"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Frame" unique_id=649635838]
 mesh = SubResource("2")
 surface_material_override/0 = SubResource("StandardMaterial3D_2bfin")
 
-[node name="JoystickOrigin" type="Node3D" parent="."]
+[node name="JoystickOrigin" type="Node3D" parent="." unique_id=175403610]
 transform = Transform3D(1, -1.06581e-14, 0, 1.06581e-14, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="InteractableJoystick" type="Node3D" parent="JoystickOrigin"]
+[node name="InteractableJoystick" type="Node3D" parent="JoystickOrigin" unique_id=1431690383]
 unique_name_in_owner = true
 script = ExtResource("1_ajy58")
 
-[node name="JoystickBody" type="StaticBody3D" parent="JoystickOrigin/InteractableJoystick"]
+[node name="JoystickBody" type="StaticBody3D" parent="JoystickOrigin/InteractableJoystick" unique_id=589779521]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
 collision_layer = 262144
 collision_mask = 0
 
-[node name="BarCollision" type="CollisionShape3D" parent="JoystickOrigin/InteractableJoystick/JoystickBody"]
+[node name="BarCollision" type="CollisionShape3D" parent="JoystickOrigin/InteractableJoystick/JoystickBody" unique_id=2072573186]
 shape = SubResource("3")
 
-[node name="HandleCollision" type="CollisionShape3D" parent="JoystickOrigin/InteractableJoystick/JoystickBody"]
+[node name="HandleCollision" type="CollisionShape3D" parent="JoystickOrigin/InteractableJoystick/JoystickBody" unique_id=1755385178]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
 shape = SubResource("4")
 
-[node name="BarMesh" type="MeshInstance3D" parent="JoystickOrigin/InteractableJoystick/JoystickBody"]
+[node name="BarMesh" type="MeshInstance3D" parent="JoystickOrigin/InteractableJoystick/JoystickBody" unique_id=1655754148]
 mesh = SubResource("5")
 surface_material_override/0 = SubResource("StandardMaterial3D_e6ahm")
 
-[node name="HandleMesh" type="MeshInstance3D" parent="JoystickOrigin/InteractableJoystick/JoystickBody"]
+[node name="HandleMesh" type="MeshInstance3D" parent="JoystickOrigin/InteractableJoystick/JoystickBody" unique_id=792160261]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
 mesh = SubResource("6")
 surface_material_override/0 = SubResource("StandardMaterial3D_mlw1h")
 
-[node name="GrabPointHandLeft" parent="JoystickOrigin/InteractableJoystick/JoystickBody/HandleMesh" instance=ExtResource("2_3mfid")]
+[node name="GrabPointHandLeft" parent="JoystickOrigin/InteractableJoystick/JoystickBody/HandleMesh" unique_id=1125904866 instance=ExtResource("2_3mfid")]
 transform = Transform3D(-4.37114e-08, 1, -7.53641e-15, -0.707107, -3.09086e-08, -0.707107, -0.707107, -3.09086e-08, 0.707107, 0.05, 0.0759278, -0.0419973)
 hand_pose = SubResource("Resource_b7ph4")
 
-[node name="GrabPointHandRight" parent="JoystickOrigin/InteractableJoystick/JoystickBody/HandleMesh" instance=ExtResource("5_klyev")]
+[node name="GrabPointHandRight" parent="JoystickOrigin/InteractableJoystick/JoystickBody/HandleMesh" unique_id=1908467377 instance=ExtResource("5_klyev")]
 transform = Transform3D(-4.37114e-08, -1, -1.02355e-14, 0.642788, -2.80971e-08, -0.766044, 0.766044, -3.34849e-08, 0.642788, -0.05, 0.0759278, -0.0419973)
 hand_pose = SubResource("Resource_2v03l")
 
-[node name="HandleOrigin" type="Node3D" parent="JoystickOrigin/InteractableJoystick"]
+[node name="HandleOrigin" type="Node3D" parent="JoystickOrigin/InteractableJoystick" unique_id=962480762]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
 
-[node name="InteractableHandle" type="RigidBody3D" parent="JoystickOrigin/InteractableJoystick/HandleOrigin"]
+[node name="InteractableHandle" type="RigidBody3D" parent="JoystickOrigin/InteractableJoystick/HandleOrigin" unique_id=246350601]
 collision_layer = 262144
 collision_mask = 0
 freeze = true
 script = ExtResource("7_pyyqw")
 picked_up_layer = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="JoystickOrigin/InteractableJoystick/HandleOrigin/InteractableHandle"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="JoystickOrigin/InteractableJoystick/HandleOrigin/InteractableHandle" unique_id=1916116556]
 shape = SubResource("7")
 
-[node name="GrabPointRedirectLeft" parent="JoystickOrigin/InteractableJoystick/HandleOrigin/InteractableHandle" node_paths=PackedStringArray("target") instance=ExtResource("8_e1d61")]
+[node name="GrabPointRedirectLeft" parent="JoystickOrigin/InteractableJoystick/HandleOrigin/InteractableHandle" unique_id=1369872811 node_paths=PackedStringArray("target") instance=ExtResource("8_e1d61")]
 target = NodePath("../../../JoystickBody/HandleMesh/GrabPointHandLeft")
 
-[node name="GrabPointRedirectRight" parent="JoystickOrigin/InteractableJoystick/HandleOrigin/InteractableHandle" node_paths=PackedStringArray("target") instance=ExtResource("8_e1d61")]
+[node name="GrabPointRedirectRight" parent="JoystickOrigin/InteractableJoystick/HandleOrigin/InteractableHandle" unique_id=465609435 node_paths=PackedStringArray("target") instance=ExtResource("8_e1d61")]
 target = NodePath("../../../JoystickBody/HandleMesh/GrabPointHandRight")
