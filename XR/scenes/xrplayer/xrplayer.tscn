@@ -223,7 +223,7 @@ bone_name = &"Index_Tip_L"
 bone_index = 9
 
 [node name="MovementDirect" parent="LeftHand/XRToolsCollisionHand" unique_id=1719805949 instance=ExtResource("4_dl2y0")]
-max_speed = 6.0
+max_speed = 9.0
 strafe = true
 
 [node name="MovementCrouch" parent="LeftHand/XRToolsCollisionHand" unique_id=1439445426 instance=ExtResource("7_nulhf")]
@@ -387,6 +387,7 @@ jump_button_action = "ax_button"
 [node name="MovementTurn" parent="RightHand/XRToolsCollisionHand" unique_id=1246550553 instance=ExtResource("9_wx6dj")]
 visible = false
 turn_mode = 2
+smooth_turn_speed = 1.5
 
 [node name="FunctionPickup" parent="RightHand/XRToolsCollisionHand" unique_id=1680402950 instance=ExtResource("5_nulhf")]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0)
