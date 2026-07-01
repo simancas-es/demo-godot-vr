@@ -1,13 +1,7 @@
 [gd_scene format=3 uid="uid://doyyrvn116gfv"]
 
 [ext_resource type="Script" uid="uid://cm1yufh6w84ja" path="res://models/labels/flow_simulation_volume_label.gd" id="1_2mxxf"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_2mxxf"]
-size = Vector2(2, 0.905)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ne2x3"]
-albedo_color = Color(0, 0.54509807, 0.77254903, 1)
-metallic_specular = 0.0
+[ext_resource type="PackedScene" uid="uid://c16en4t1sh6fs" path="res://models/labels/plakate-blau.tscn" id="2_ne2x3"]
 
 [node name="FlowSimulationVolumeLabel" type="Node3D" unique_id=1539785093]
 script = ExtResource("1_2mxxf")
@@ -33,7 +27,5 @@ outline_size = 0
 horizontal_alignment = 0
 vertical_alignment = 0
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=490898971]
+[node name="MeshInstance3D" parent="." unique_id=1765983509 instance=ExtResource("2_ne2x3")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.951, -0.183, -0.01)
-mesh = SubResource("PlaneMesh_2mxxf")
-surface_material_override/0 = SubResource("StandardMaterial3D_ne2x3")
