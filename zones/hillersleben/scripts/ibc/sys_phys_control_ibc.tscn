@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cvgiq7af4igox"]
+
+[ext_resource type="Script" uid="uid://6yf4je4071a8" path="res://systems/system-physics-control/system_physical_control_object.gd" id="1_1t0mu"]
+[ext_resource type="PackedScene" uid="uid://bmubjmrsjgvil" path="res://assets/world_objects/hillersleben/ibc_aquaplan_eurofloc.tscn" id="2_2648t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iok6g"]
+size = Vector3(1.0705261, 1.1511841, 1.1660156)
+
+[node name="SysPhysControlIBC" type="RigidBody3D" unique_id=421414036]
+transform = Transform3D(0.921694, -1.1025288e-14, 0.38791785, 0, 0.9999999, 2.842171e-14, -0.3879178, -2.6196122e-14, 0.92169404, 0, 0, 0)
+collision_layer = 16384
+collision_mask = 0
+mass = 10.0
+script = ExtResource("1_1t0mu")
+type = 0
+lock_if_not_grabbed = true
+metadata/_custom_type_script = "uid://6yf4je4071a8"
+
+[node name="IBC-aquaplan-eurofloc2" parent="." unique_id=1624864858 instance=ExtResource("2_2648t")]
+transform = Transform3D(0.92, 0, 0, 0, 0.92, -1.5585404e-21, 0, 1.5585404e-21, 0.92, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=526294308]
+transform = Transform3D(1, 8.470342e-22, -2.9802308e-08, -8.4703254e-22, 1, 5.5903263e-20, 2.9802308e-08, -5.5903263e-20, 1, 0.0022735593, 0.0016786801, -0.0029296824)
+shape = SubResource("BoxShape3D_iok6g")

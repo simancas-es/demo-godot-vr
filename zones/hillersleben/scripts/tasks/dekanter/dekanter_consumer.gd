@@ -8,10 +8,9 @@ extends "res://zones/hillersleben/scripts/tasks/sequence_consumer.gd"
 
 ##HACK. Dekanter logic
 @onready var spill : MeshInstance3D = $"../spill"
-@onready var snap1 : Node3D = $"../ibc1/snap1"
-@onready var snap2 : Node3D = $"../ibc2/snap2"
+const IBC := preload("uid://bxfjyykqns3ff")
 @onready var intake : SystemPhysicalControlObject = $"../dek_polymer_hose_intake"
-var _current_snap = 1
+
 const LIGHT := preload("uid://bjn6ld6vbr26b")
 @onready var info_light : LIGHT = $"../info_light"
 
@@ -47,11 +46,17 @@ signal spill_removed
 var locator_spill = SYSTEMTASKS_UIDCLASSREF.SystemTasksLocator.new(SYSTEMTASKSSETTINGS.LOCATOR_ID.HL_DEKFOERDERBAND_SPILL)
 var locator_foerderband = SYSTEMTASKS_UIDCLASSREF.SystemTasksLocator.new(SYSTEMTASKSSETTINGS.LOCATOR_ID.HL_DEKFOERDERBAND_ENTLEEREN)
 	
+var _ibcs : Array[IBC] = []
 
 func _ready() -> void:
 	sequencer = $TaskSequencer
 	spill.scale = Vector3.ZERO	
 	intake.stopped_being_grabbed.connect(_on_intake_let_go)
+	
+	#Find all IBC in 
+	load_ibc()
+	for ibc in _ibcs:
+		ibc.stopped_being_grabbed.connect(_on_intake_let_go)
 	
 	dek_button.on.connect(start_dekanter)
 	dek_button.off.connect(start_dekanter.bind(false))
@@ -66,7 +71,13 @@ func _ready() -> void:
 	start_dekanter()
 	start_foerderband()
 
-
+func load_ibc() -> void:
+	var nodes_in_group = get_tree().get_nodes_in_group("IBC")
+	for n in nodes_in_group:
+		if is_instance_of(n, IBC):
+			if not n in _ibcs:
+				_ibcs.append(n)
+				
 func start() -> void:
 	super()
 	start_dekanter()
@@ -95,16 +106,24 @@ func remove_spill() -> void:
 	spill_removed.emit()
 
 func update_current_snap() -> void:
-	var dis1 = (intake.global_position - snap1.global_position ).length()
-	var dis2 = (intake.global_position - snap2.global_position ).length()
+	#Check distance of intake.global position to the rest of the ibc, get the lowest one
+	var closest_ibc : IBC = null
+	var closest_dist : float = 9999999.9
+	for ibc in _ibcs:
+		var snap = ibc.find_child("snap")
+		var dist = (intake.global_position - ibc.global_position ).length()
+		if closest_ibc == null or dist < closest_dist:
+			closest_ibc = ibc
+			closest_dist = dist
 	
-	if (dis1 < dis2) and (dis1 < 0.5):	_current_snap = 1
-	if (dis1 > dis2) and (dis2 < 0.5):	_current_snap = 2
-	
-	#Assuming ibc2 always full:
-	if _current_snap == 1 and state.dekanter_on: start_spill()
-	if _current_snap == 2 : remove_spill()
-
+	if closest_dist<1.0: #TODO: hose could have a snap point
+		if closest_ibc.voll_ibc:
+			remove_spill()
+		elif state.dekanter_on:
+			start_spill()
+	elif state.dekanter_on:
+		start_spill()
+		
 func _on_intake_let_go(...args) -> void:
 	intake.sleeping = true
 	update_current_snap()
