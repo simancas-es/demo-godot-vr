@@ -1,7 +1,7 @@
 extends Label3D
 
 @onready var wheel : XRToolsInteractableWheelGeneral = $"../WheelGeneral"
-const VALVECONTROLLER = preload("uid://cp2pufctmk3wr")
+const VALVECONTROLLER = preload("uid://l02y45ybnafb")
 @onready var _valve_controller : VALVECONTROLLER = $".."  #parent
 
 @export var debugging : bool = false:

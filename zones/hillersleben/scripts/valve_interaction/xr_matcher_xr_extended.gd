@@ -5,7 +5,7 @@ extends Node
 @onready var wheel : XRToolsInteractableWheelGeneral = $"../WheelGeneral"
 @export var base_root : Node3D 
 
-const VALVECONTROLLER = preload("uid://cp2pufctmk3wr")
+const VALVECONTROLLER = preload("uid://l02y45ybnafb")
 @onready var _valve_controller : VALVECONTROLLER = $".."  #parent
 
 var _root : GameRoot

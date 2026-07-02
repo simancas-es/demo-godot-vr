@@ -46,12 +46,14 @@
 [ext_resource type="Script" uid="uid://c35twvphwf3u4" path="res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd" id="23_cqg2i"]
 [ext_resource type="Script" uid="uid://b7larpf5g2b1k" path="res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_low.gd" id="24_akmhy"]
 [ext_resource type="Script" uid="uid://cs1hlyd1cd34n" path="res://zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd" id="29_vj654"]
+[ext_resource type="PackedScene" uid="uid://51m38vn7lfp7" path="res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge_bhkw.tscn" id="30_m5fu3"]
 [ext_resource type="Script" uid="uid://6yf4je4071a8" path="res://systems/system-physics-control/system_physical_control_object.gd" id="30_qfb7l"]
 [ext_resource type="Script" uid="uid://bxfjyykqns3ff" path="res://zones/hillersleben/scripts/tasks/dekanter/sys_phys_control_ibc.gd" id="31_2l23r"]
 [ext_resource type="Shader" uid="uid://dglcjlrd22v0d" path="res://zones/hillersleben/scripts/tasks/dekanter/spill_shader.gdshader" id="31_ht8a3"]
 [ext_resource type="PackedScene" uid="uid://cvgiq7af4igox" path="res://zones/hillersleben/scripts/ibc/sys_phys_control_ibc.tscn" id="32_2l23r"]
 [ext_resource type="PackedScene" uid="uid://1uanemwpfr1s" path="res://zones/hillersleben/scripts/button/button.tscn" id="32_l5fi6"]
 [ext_resource type="PackedScene" uid="uid://bl7fxuvvgwxu6" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.tscn" id="32_lm2sk"]
+[ext_resource type="Script" uid="uid://bk05xln08wwry" path="res://zones/hillersleben/scripts/valve_interaction/connector_valve_gauge.gd" id="32_rmdoo"]
 [ext_resource type="Script" uid="uid://fbjo68twdj4d" path="res://zones/hillersleben/scripts/clock-timer/clock_timer.gd" id="33_74kmu"]
 [ext_resource type="PackedScene" uid="uid://cpxsvtfvegtfx" path="res://assets/world_objects/hillersleben/clock/clock.gltf" id="33_lm2sk"]
 [ext_resource type="Script" uid="uid://dlr2ysaf72y02" path="res://zones/hillersleben/scripts/tasks/bb/bb_consumer.gd" id="35_mqa8n"]
@@ -60,6 +62,7 @@
 [ext_resource type="PackedScene" uid="uid://p4lu7gvj1nf5" path="res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn" id="37_tb4lx"]
 [ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="38_qbqkw"]
 [ext_resource type="Script" uid="uid://dfvukihleeewm" path="res://zones/hillersleben/scripts/ff/ff_controls.gd" id="41_h3ac7"]
+[ext_resource type="PackedScene" uid="uid://7ack1wecsniw" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended_bhkw.tscn" id="44_noa04"]
 [ext_resource type="PackedScene" uid="uid://cvpmdoxt0gsjs" path="res://models/not_available_block.tscn" id="58_h3ac7"]
 [ext_resource type="PackedScene" uid="uid://o1ua0ngy160m" path="res://assets/zones/hillersleben/models/vorklärbecken/2026-05-19-Vorklärbecken.gltf" id="59_fvi1l"]
 [ext_resource type="PackedScene" uid="uid://igss4jfoxe80" path="res://assets/zones/hillersleben/models/mg-dekanter/2026-06-16-Pumpenraum.gltf" id="60_3q35u"]
@@ -1260,7 +1263,7 @@ rotation_velocity_degs = 45.0
 deg_rotation_per_interaction = 15.0
 
 [node name="info_display" type="MeshInstance3D" parent="Reference_point_floor/Q_BHKW" unique_id=472249912]
-transform = Transform3D(-0.8660254, 0, -0.5000001, 0, 1.0000001, 0, 0.50000006, 0, -0.8660255, 0.04069519, 0.21274573, 0.07779694)
+transform = Transform3D(-0.8660254, 0, -0.5000001, 0, 1.0000001, 0, 0.50000006, 0, -0.8660255, 0.02862008, 0.29021078, 0.05688224)
 mesh = SubResource("PlaneMesh_y6wga")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_7gw78")
@@ -1289,6 +1292,19 @@ vertical_alignment = 2
 
 [node name="info_light" parent="Reference_point_floor/Q_BHKW" unique_id=63685343 instance=ExtResource("32_lm2sk")]
 transform = Transform3D(-3.0597977e-08, -0.27999997, -0.48497427, 0.56, -2.4478377e-08, -2.11989e-08, -1.05994475e-08, -0.48497427, 0.27999997, -0.1555582, 0.22036366, 0.17062935)
+
+[node name="TemperatureGauge2" parent="Reference_point_floor/Q_BHKW" unique_id=934795687 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.89227885, -2.8310065e-14, -0.45148498, -2.6396698e-14, 1.0000002, -1.05360124e-14, 0.45148498, 2.5166397e-15, -0.8922788, -0.8538318, 0.16748047, 0.37846822)
+
+[node name="ValveXRExtended" parent="Reference_point_floor/Q_BHKW" unique_id=1600273016 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.89267236, -0.45067278, 0.0054826858, 5.0821977e-21, -0.012164696, -0.99992615, 0.45070624, -0.89260644, 0.010859102, -0.8031626, -0.083099365, 0.37092876)
+
+[node name="ConnectorValveGauge" type="Node" parent="Reference_point_floor/Q_BHKW/ValveXRExtended" unique_id=1601026736 node_paths=PackedStringArray("valve", "temperature_gauge")]
+script = ExtResource("32_rmdoo")
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge2")
+temp_max_c = 120.0
+temp_min_c = 0.0
 
 [node name="Q_MG" type="Node3D" parent="Reference_point_floor" unique_id=740448081]
 

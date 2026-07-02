@@ -9,8 +9,8 @@ extends Node3D
 class VALVESTATE: #HACK. Should be a global state that contains all valves.
 	var valve_fraction: float = 0.5 # 0..1
 	
-	
-@export var valve : ENTITY_CATALOG.ValveRotating# = $FillingValve
+const VALVE := preload("uid://bkphjwjbu4qdu")
+@onready var valve : VALVE = $FillingValveController
 @export var leftinter : Interaction# = $ValveLeftDirection
 @export var rightinter : Interaction# = $ValveRightDirection
 @export var rotation_velocity_degs = 180.0 #Degrees per second for left and right interactions

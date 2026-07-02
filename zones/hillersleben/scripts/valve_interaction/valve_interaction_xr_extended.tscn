@@ -1,11 +1,75 @@
 [gd_scene format=3 uid="uid://dd8k0uiaqv3e1"]
 
-[ext_resource type="Script" uid="uid://cp2pufctmk3wr" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction.gd" id="1_f7y3m"]
+[ext_resource type="Script" uid="uid://l02y45ybnafb" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended.gd" id="1_epwm7"]
 [ext_resource type="PackedScene" uid="uid://g84geloayuv6" path="res://models/demo_pipes/basic_pipe_valve.tscn" id="2_e0vs4"]
 [ext_resource type="Script" uid="uid://cftbbgc4nyt3s" path="res://zones/hillersleben/scripts/valve_interaction/debug_label.gd" id="3_20rr2"]
 [ext_resource type="Script" uid="uid://cpxvn4y6ne5kl" path="res://clases/interaction/interaction.gd" id="3_epwm7"]
 [ext_resource type="PackedScene" uid="uid://d2td5hwh2oluy" path="res://XR/scenes/interactables/objects/wheel_general.tscn" id="4_e0vs4"]
-[ext_resource type="Script" uid="uid://c6bkf0lxq88lh" path="res://zones/hillersleben/scripts/valve_interaction/xr_matcher.gd" id="5_epwm7"]
+
+[sub_resource type="GDScript" id="GDScript_epwm7"]
+script/source = "extends Node
+
+#Generalized copy of the bhkw control valve.
+
+@onready var wheel : XRToolsInteractableWheelGeneral = $\"../WheelGeneral\"
+@export var base_root : Node3D 
+
+const VALVECONTROLLER = preload(\"uid://l02y45ybnafb\")
+@onready var _valve_controller : VALVECONTROLLER = $\"..\"  #parent
+
+var _root : GameRoot
+
+func _ready() -> void:	
+	wheel.hinge_limit_min = rad_to_deg(_valve_controller.rotations_to_max/2 * (-TAU) )
+	wheel.hinge_limit_max = rad_to_deg(_valve_controller.rotations_to_max/2 * (+TAU) )
+	
+	_root = get_tree().current_scene
+	_root.updated.connect(apply_xr_check)
+	
+	wheel.ready.connect(initialize)
+	wheel.hinge_moved.connect(on_wheel_moved)
+
+func initialize() -> void:
+	if _valve_controller == null:
+		push_error(\"Missing valve!\")
+		return
+	
+	_match_wheel_to_valve()
+	_valve_controller.valve_changed.connect(on_valve_changed)
+	
+	pass
+	
+func apply_xr_check() -> void:
+	if _root is GameRoot:
+		if not _root.is_xr():
+			wheel.queue_free();
+			self.queue_free()
+			return
+	pass
+	
+#If valve moves for some reason, wheel has to react
+func on_valve_changed(new_fraction : float) -> void:
+	if wheel.wheel.is_processing():
+		return #HACK
+	_match_wheel_to_valve()
+	pass
+	
+func on_wheel_moved(angle : float) -> void:
+	if not _valve_controller: return
+	var fraction = inverse_lerp(wheel.hinge_limit_min, wheel.hinge_limit_max, angle) 
+	_valve_controller.state.valve_fraction = fraction
+	_valve_controller.initialize_from_state(true, true)
+	pass
+
+func _match_wheel_to_valve() -> void:
+	#match wheel to valve
+	if not _valve_controller: return
+	var _fr = _valve_controller.state.valve_fraction
+	var angle = lerp(wheel.hinge_limit_min, wheel.hinge_limit_max, _fr)
+	wheel.wheel.hinge_position = angle
+	pass
+	
+"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eru1o"]
 size = Vector3(0.163574, 0.067627, 0.351013)
@@ -13,14 +77,13 @@ size = Vector3(0.163574, 0.067627, 0.351013)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ja30v"]
 size = Vector3(0.182495, 0.0629883, 0.369873)
 
-[node name="ValveXRExtended" type="Node3D" unique_id=845928422 node_paths=PackedStringArray("valve", "leftinter", "rightinter")]
-script = ExtResource("1_f7y3m")
-valve = NodePath("FillingValve")
+[node name="ValveXRExtended" type="Node3D" unique_id=845928422 node_paths=PackedStringArray("leftinter", "rightinter")]
+script = ExtResource("1_epwm7")
 leftinter = NodePath("ValveLeftDirection")
 rightinter = NodePath("ValveRightDirection")
 
 [node name="XRMatcher" type="Node" parent="." unique_id=890946255]
-script = ExtResource("5_epwm7")
+script = SubResource("GDScript_epwm7")
 
 [node name="DebugLabel" type="Label3D" parent="." unique_id=721630451]
 transform = Transform3D(0.115, 0, 0, 0, 0.115, 0, 0, 0, 0.115, 0, 0.18392003, 0)
@@ -32,10 +95,10 @@ script = ExtResource("3_20rr2")
 [node name="FillingValve" parent="." unique_id=471463535 instance=ExtResource("2_e0vs4")]
 transform = Transform3D(1, 0, 0, 0, 1.0000004, 0, 0, 0, 1.0000005, 0.18739398, -0.17114088, 0)
 
-[node name="link_short" parent="FillingValve" index="0" unique_id=187892485]
+[node name="link_short" parent="FillingValve" index="0" unique_id=162196747]
 visible = false
 
-[node name="ValveExtrude" parent="FillingValve" index="1" unique_id=1096544956]
+[node name="ValveExtrude" parent="FillingValve" index="1" unique_id=2071967436]
 visible = false
 
 [node name="ValveRightDirection" type="Area3D" parent="." unique_id=1888747362]

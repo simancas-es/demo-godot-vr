@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ba5rup54o3dxh"]
+
+[ext_resource type="PackedScene" uid="uid://dkwi0hwjvloju" path="res://assets/zones/hillersleben/models/bhkw/2026-06-04-BHKW-Raum.gltf" id="1_vpl75"]
+
+[node name="2026-06-04-BHKW-Raum" unique_id=1164224894 instance=ExtResource("1_vpl75")]
