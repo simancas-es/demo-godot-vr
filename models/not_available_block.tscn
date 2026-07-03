@@ -18,6 +18,8 @@ transform = Transform3D(0.455, 0, 0, 0, 0.455, 0, 0, 0, 0.455, 0, 0.07144165, 0.
 text = "Not available yet!"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=598059435]
+collision_layer = 16384
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=573256775]
 shape = SubResource("BoxShape3D_3q35u")
