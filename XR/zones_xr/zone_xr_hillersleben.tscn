@@ -883,7 +883,7 @@ billboard = 1
 text = "W_rot: xxx, V_rot: xxx"
 
 [node name="xr_dek_polymer_hose_intake" parent="." unique_id=934432335 instance=ExtResource("31_48yfo")]
-transform = Transform3D(0.92756915, 0, -0.37365162, 0, 1, 0, 0.37365162, 0, 0.92756915, -1.1774442, 50.102005, 5.478178)
+transform = Transform3D(0.8869221, 0, 0.46191895, 0, 1, 0, -0.46191895, 0, 0.8869221, -1.9336076, 49.779465, 14.122163)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="xr_dek_polymer_hose_intake" unique_id=1771845357]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010193825, 0.2419548, -0.005490303)
