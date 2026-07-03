@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cs8hsp8imn4ch"]
+
+[ext_resource type="Script" uid="uid://bk05xln08wwry" path="res://zones/hillersleben/scripts/valve_interaction/connector_valve_gauge.gd" id="1_8krtp"]
+
+[node name="ConnectorValveGauge" type="Node" unique_id=1680582393 node_paths=PackedStringArray("valve", "temperature_gauge")]
+script = ExtResource("1_8krtp")
+valve = NodePath("")
+temperature_gauge = NodePath("")
+temp_max_c = 120.0
+temp_min_c = 0.0

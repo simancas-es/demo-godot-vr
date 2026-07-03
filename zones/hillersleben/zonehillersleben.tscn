@@ -53,7 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://cvgiq7af4igox" path="res://zones/hillersleben/scripts/ibc/sys_phys_control_ibc.tscn" id="32_2l23r"]
 [ext_resource type="PackedScene" uid="uid://1uanemwpfr1s" path="res://zones/hillersleben/scripts/button/button.tscn" id="32_l5fi6"]
 [ext_resource type="PackedScene" uid="uid://bl7fxuvvgwxu6" path="res://zones/hillersleben/scripts/tasks/bhkw/info_light.tscn" id="32_lm2sk"]
-[ext_resource type="Script" uid="uid://bk05xln08wwry" path="res://zones/hillersleben/scripts/valve_interaction/connector_valve_gauge.gd" id="32_rmdoo"]
+[ext_resource type="PackedScene" uid="uid://cs8hsp8imn4ch" path="res://zones/hillersleben/scripts/valve_interaction/connector_valve_gauge.tscn" id="32_m5fu3"]
 [ext_resource type="Script" uid="uid://fbjo68twdj4d" path="res://zones/hillersleben/scripts/clock-timer/clock_timer.gd" id="33_74kmu"]
 [ext_resource type="PackedScene" uid="uid://cpxsvtfvegtfx" path="res://assets/world_objects/hillersleben/clock/clock.gltf" id="33_lm2sk"]
 [ext_resource type="Script" uid="uid://dlr2ysaf72y02" path="res://zones/hillersleben/scripts/tasks/bb/bb_consumer.gd" id="35_mqa8n"]
@@ -1299,12 +1299,143 @@ transform = Transform3D(-0.89227885, -2.8310065e-14, -0.45148498, -2.6396698e-14
 [node name="ValveXRExtended" parent="Reference_point_floor/Q_BHKW" unique_id=1600273016 instance=ExtResource("44_noa04")]
 transform = Transform3D(-0.89267236, -0.45067278, 0.0054826858, 5.0821977e-21, -0.012164696, -0.99992615, 0.45070624, -0.89260644, 0.010859102, -0.8031626, -0.083099365, 0.37092876)
 
-[node name="ConnectorValveGauge" type="Node" parent="Reference_point_floor/Q_BHKW/ValveXRExtended" unique_id=1601026736 node_paths=PackedStringArray("valve", "temperature_gauge")]
-script = ExtResource("32_rmdoo")
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended" unique_id=1680582393 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
 valve = NodePath("..")
 temperature_gauge = NodePath("../../TemperatureGauge2")
-temp_max_c = 120.0
-temp_min_c = 0.0
+
+[node name="ValveXRExtended_VLBG" parent="Reference_point_floor/Q_BHKW" unique_id=2076502756 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 1.9995989, -0.9000206, 4.367304)
+
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended_VLBG" unique_id=909203920 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge_VLBG")
+
+[node name="TemperatureGauge_VLBG" parent="Reference_point_floor/Q_BHKW" unique_id=1322975024 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.4888497, -2.4142157e-14, 0.8723681, -1.164393e-14, 1.0000005, 2.947978e-14, -0.8723681, 9.279584e-15, -0.4888497, 1.951045, -0.18350601, 4.3952856)
+
+[node name="ValveXRExtended_VLBG2" parent="Reference_point_floor/Q_BHKW" unique_id=220313973 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 1.9995985, -0.4211769, 4.367303)
+
+[node name="ValveXRExtended_RLBG" parent="Reference_point_floor/Q_BHKW" unique_id=1455169216 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 2.174659, -0.9000206, 4.669883)
+
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended_RLBG" unique_id=1134808512 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge_RLBG")
+
+[node name="TemperatureGauge_RLBG" parent="Reference_point_floor/Q_BHKW" unique_id=281741329 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.48884964, -2.8310069e-14, 0.8723681, -1.1643924e-14, 1.0000002, 2.5927064e-14, -0.87236816, 2.5166463e-15, -0.48884964, 2.1212044, -0.18350601, 4.69894)
+
+[node name="ValveXRExtended_VLBHKW" parent="Reference_point_floor/Q_BHKW" unique_id=1293132460 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 2.3484561, -0.9000206, 4.9702787)
+
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended_VLBHKW" unique_id=142563302 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge_VLBHKW")
+
+[node name="TemperatureGauge_VLBHKW" parent="Reference_point_floor/Q_BHKW" unique_id=1196298886 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.48884964, -2.8310069e-14, 0.8723681, -1.1643924e-14, 1.0000002, 2.5927064e-14, -0.87236816, 2.5166463e-15, -0.48884964, 2.2944431, -0.18350601, 5.008091)
+
+[node name="ValveXRExtended_RLBHKW" parent="Reference_point_floor/Q_BHKW" unique_id=2048544029 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 2.526231, -0.9000206, 5.2775497)
+
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended_RLBHKW" unique_id=897679736 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge_RLBHKW")
+
+[node name="TemperatureGauge_RLBHKW" parent="Reference_point_floor/Q_BHKW" unique_id=499801006 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.48884964, -2.8310069e-14, 0.8723681, -1.1643924e-14, 1.0000002, 2.5927064e-14, -0.87236816, 2.5166463e-15, -0.48884964, 2.4639463, -0.18350601, 5.3105755)
+
+[node name="ValveXRExtended_KURZSCHLBRUECKE1" parent="Reference_point_floor/Q_BHKW" unique_id=1909598196 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 2.6999705, -0.9000206, 5.577846)
+
+[node name="ValveXRExtended_KURZSCHLBRUECKE2" parent="Reference_point_floor/Q_BHKW" unique_id=415972630 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 2.8768616, -0.9000206, 5.8835893)
+
+[node name="ValveXRExtended_RLFT1" parent="Reference_point_floor/Q_BHKW" unique_id=1095241403 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 3.2250524, -0.9000206, 6.485411)
+
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended_RLFT1" unique_id=1225535047 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge_RLFT1")
+
+[node name="TemperatureGauge_RLFT1" parent="Reference_point_floor/Q_BHKW" unique_id=82823999 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.50911653, -2.8310069e-14, 0.8606976, -1.224705e-14, 1.0000002, 2.5647678e-14, -0.8606978, 2.5166463e-15, -0.50911653, 3.1608896, -0.18350601, 6.524556)
+
+[node name="ValveXRExtended_RLFT2" parent="Reference_point_floor/Q_BHKW" unique_id=688757553 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 3.5813985, -0.9000206, 7.101329)
+
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended_RLFT2" unique_id=2005322270 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge_RLFT2")
+
+[node name="TemperatureGauge_RLFT2" parent="Reference_point_floor/Q_BHKW" unique_id=1361422749 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.50911653, -2.8310069e-14, 0.8606976, -1.224705e-14, 1.0000002, 2.5647678e-14, -0.8606978, 2.5166463e-15, -0.50911653, 3.5126657, -0.18350601, 7.1377707)
+
+[node name="ValveXRExtended_VLFT1_bot" parent="Reference_point_floor/Q_BHKW" unique_id=500508672 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 3.048561, -1.1209451, 6.1803594)
+
+[node name="ValveXRExtended_VLFT1" parent="Reference_point_floor/Q_BHKW" unique_id=2060358753 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 3.048561, -0.48869312, 6.1803594)
+
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended_VLFT1" unique_id=879061906 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge_VLFT1")
+
+[node name="TemperatureGauge_VLFT1" parent="Reference_point_floor/Q_BHKW" unique_id=983890971 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.50911653, -2.8310069e-14, 0.8606976, -1.224705e-14, 1.0000002, 2.5647678e-14, -0.8606978, 2.5166463e-15, -0.50911653, 2.9809542, -0.18350601, 6.223649)
+
+[node name="ValveXRExtended_VLFT2" parent="Reference_point_floor/Q_BHKW" unique_id=789524813 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 3.4006891, -0.48869312, 6.7889867)
+
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended_VLFT2" unique_id=1747371533 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge_VLFT2")
+
+[node name="TemperatureGauge_VLFT2" parent="Reference_point_floor/Q_BHKW" unique_id=1256087270 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.50911653, -2.8310069e-14, 0.8606976, -1.224705e-14, 1.0000002, 2.5647678e-14, -0.8606978, 2.5166463e-15, -0.50911653, 3.329215, -0.18350601, 6.827635)
+
+[node name="ValveXRExtended_VLFT2_bot" parent="Reference_point_floor/Q_BHKW" unique_id=966991950 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 3.4006767, -1.120945, 6.788964)
+
+[node name="ValveXRExtended_RLKP" parent="Reference_point_floor/Q_BHKW" unique_id=471383268 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 4.107731, -0.55945575, 8.011056)
+
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended_RLKP" unique_id=519073889 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge_RLKP")
+
+[node name="TemperatureGauge_RLKP" parent="Reference_point_floor/Q_BHKW" unique_id=2104186158 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.50911653, -2.8310069e-14, 0.8606976, -1.224705e-14, 1.0000002, 2.5647678e-14, -0.8606978, 2.5166463e-15, -0.50911653, 4.1711044, -0.006149292, 8.271545)
+
+[node name="ValveXRExtended_RLKP_bot" parent="Reference_point_floor/Q_BHKW" unique_id=157349920 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 4.107318, -1.1209451, 8.010343)
+
+[node name="ValveXRExtended_KURZSCHLBRUECKE3" parent="Reference_point_floor/Q_BHKW" unique_id=159388088 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 3.9311805, -1.1209451, 7.705902)
+
+[node name="ValveXRExtended_KURZSCHLBRUECKE4" parent="Reference_point_floor/Q_BHKW" unique_id=1647894273 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 3.7562077, -1.1209451, 7.4034743)
+
+[node name="ValveXRExtended_TK1" parent="Reference_point_floor/Q_BHKW" unique_id=414426039 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 1.6638203, 0.9754982, 4.5946646)
+
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended_TK1" unique_id=282131206 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge_TK1")
+
+[node name="TemperatureGauge_TK1" parent="Reference_point_floor/Q_BHKW" unique_id=1075828669 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.48884964, -2.8310069e-14, 0.8723681, -1.1643924e-14, 1.0000002, 2.5927064e-14, -0.87236816, 2.5166463e-15, -0.48884964, 1.5899677, 1.1892204, 4.638324)
+
+[node name="ValveXRExtended_TK2" parent="Reference_point_floor/Q_BHKW" unique_id=54569009 instance=ExtResource("44_noa04")]
+transform = Transform3D(-0.5007858, 0.86557144, -4.703179e-08, 6.103927e-09, -1.9145155e-08, -1.0000001, -0.8655715, -0.5007859, -4.4703484e-08, 1.7961817, 0.9754982, 4.823441)
+
+[node name="ConnectorValveGauge" parent="Reference_point_floor/Q_BHKW/ValveXRExtended_TK2" unique_id=725379274 node_paths=PackedStringArray("valve", "temperature_gauge") instance=ExtResource("32_m5fu3")]
+valve = NodePath("..")
+temperature_gauge = NodePath("../../TemperatureGauge_TK2")
+
+[node name="TemperatureGauge_TK2" parent="Reference_point_floor/Q_BHKW" unique_id=39930660 instance=ExtResource("30_m5fu3")]
+transform = Transform3D(-0.48884964, -2.4456731e-14, 0.87236804, -1.119984e-14, 1.0000002, 2.770342e-14, -0.8723681, 5.7408242e-15, -0.48884964, 1.7188311, 1.1892204, 4.8682876)
 
 [node name="Q_MG" type="Node3D" parent="Reference_point_floor" unique_id=740448081]
 
@@ -2882,17 +3013,8 @@ transform = Transform3D(0.63771975, 0, 0.7702685, 0, 1, 0, -0.7702685, 0, 0.6377
 [node name="2026-05-26-Sand-Fettfang" parent="Visuals" unique_id=808481619 instance=ExtResource("60_vijfd")]
 transform = Transform3D(0.91907346, 0, 0.39408627, 0, 1, 0, -0.39408627, 0, 0.91907346, -45.94071, 49.63414, 26.300257)
 
-[node name="2026-06-04-BHKW-Raum" parent="Visuals" unique_id=1164224894 instance=ExtResource("63_iibwe")]
+[node name="2026-06-04-BHKW-Raum" parent="Visuals" unique_id=826799386 instance=ExtResource("63_iibwe")]
 transform = Transform3D(-0.42261824, 0, 0.90630776, 0, 1, 0, -0.90630776, 0, -0.42261824, 4.7103367, 50.70486, 12.175876)
-
-[node name="Cylinder_471" parent="Visuals/2026-06-04-BHKW-Raum" index="17" unique_id=594400653]
-visible = false
-
-[node name="mg_tür_bhkw-main" parent="Visuals/2026-06-04-BHKW-Raum" index="19" unique_id=264209317]
-visible = false
-
-[node name="mg_tür_bhkw-klein" parent="Visuals/2026-06-04-BHKW-Raum" index="20" unique_id=1547683143]
-visible = false
 
 [editable path="Reference_point_floor/Q_FENCE_CHECK/WIRE_PICKUP/Area3D"]
 [editable path="Reference_point_floor/Q_FENCE_CHECK/WIRE_USE/Area3D"]

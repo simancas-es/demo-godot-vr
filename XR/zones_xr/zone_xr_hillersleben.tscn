@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://d2td5hwh2oluy" path="res://XR/scenes/interactables/objects/wheel_general.tscn" id="29_tegc5"]
 [ext_resource type="Script" uid="uid://ddw2hxd34041g" path="res://XR/zones_xr/zone_xr_hillersleben/bhkw/logik_valve_control.gd" id="30_rpwcs"]
 [ext_resource type="PackedScene" uid="uid://h2pe4ytcrmfo" path="res://XR/scenes/interactables/objects/item_pickable.tscn" id="31_48yfo"]
-[ext_resource type="Script" uid="uid://c62chblu0onwd" path="res://XR/zones_xr/logik_grab_object_sub.gd" id="32_pwsyg"]
+[ext_resource type="PackedScene" uid="uid://c88qlbc2od01n" path="res://XR/scenes/helpers/ConnectorXRPickableSystemPhysicalControlObject.tscn" id="32_a2s05"]
 [ext_resource type="PackedScene" uid="uid://bnf5qtwuyhbwg" path="res://models/inventory_objects/wire/wire.tscn" id="33_0uh4r"]
 [ext_resource type="PackedScene" uid="uid://cp56rklbq8lqf" path="res://XR/scenes/interactables/snap_interaction.tscn" id="34_kaumj"]
 [ext_resource type="PackedScene" uid="uid://cfe0r3qdqxq3x" path="res://models/pulsating_box/pulsating_box.tscn" id="35_1v164"]
@@ -188,6 +188,9 @@ closed_pose = ExtResource("27_pwsyg")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pwsyg"]
 size = Vector3(0.17663574, 0.4724121, 0.08178711)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a2s05"]
+size = Vector3(1.1643066, 1.161377, 1.1070557)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kaumj"]
 size = Vector3(0.3, 0.23814698, 0.3)
@@ -889,10 +892,14 @@ transform = Transform3D(0.8869221, 0, 0.46191895, 0, 1, 0, -0.46191895, 0, 0.886
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010193825, 0.2419548, -0.005490303)
 shape = SubResource("BoxShape3D_pwsyg")
 
-[node name="LogikGrabObjectSub" type="Node" parent="xr_dek_polymer_hose_intake" unique_id=25869149 node_paths=PackedStringArray("baseroot")]
-script = ExtResource("32_pwsyg")
-baseroot = NodePath("../../Zonehillersleben")
-unique_name_physics = "dek_polymer_hose_intake"
+[node name="LogikGrabObjectSub" parent="xr_dek_polymer_hose_intake" unique_id=1807612470 instance=ExtResource("32_a2s05")]
+
+[node name="xr_dek_ibc1" parent="." unique_id=535465585 instance=ExtResource("31_48yfo")]
+transform = Transform3D(0.89987785, 0, 0.43614227, 0, 1, 0, -0.43614227, 0, 0.89987785, -2.0765126, 49.246456, 14.12667)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="xr_dek_ibc1" unique_id=898537498]
+transform = Transform3D(0.9999997, 0, -1.4901161e-07, 0, 1, 0, 1.4901161e-07, 0, 0.9999997, 0.08215141, -0.09289551, -0.001033783)
+shape = SubResource("BoxShape3D_a2s05")
 
 [node name="XR_WIRE" parent="." unique_id=1519224303 instance=ExtResource("31_48yfo")]
 transform = Transform3D(0.29759142, -0.9062844, 0.30014616, 0.9546933, 0.28250176, -0.09355981, 0, 0.31439015, 0.94929385, -28.079533, 50.308094, -8.528649)

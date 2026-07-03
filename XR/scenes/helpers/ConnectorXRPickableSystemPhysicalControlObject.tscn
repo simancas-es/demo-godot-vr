@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c88qlbc2od01n"]
+
+[ext_resource type="Script" uid="uid://c62chblu0onwd" path="res://XR/zones_xr/logik_grab_object_sub.gd" id="1_e4l42"]
+
+[node name="LogikGrabObjectSub" type="Node" unique_id=1807612470 node_paths=PackedStringArray("baseroot")]
+script = ExtResource("1_e4l42")
+baseroot = NodePath("")
+unique_name_physics = "dek_polymer_hose_intake"
