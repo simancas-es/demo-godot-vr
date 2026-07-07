@@ -333,6 +333,15 @@ _data = {
 }
 point_count = 3
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5gq0c"]
+size = Vector3(1.3091431, 0.08496094, 7.86145)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v133v"]
+size = Vector3(0.08862305, 1.3091431, 8.416992)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d06k5"]
+size = Vector3(1, 0.7595215, 0.4000244)
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ir53q"]
 
 [sub_resource type="Sky" id="Sky_5sa2k"]
@@ -1832,6 +1841,38 @@ rotation_mode = 0
 loop = false
 tilt_enabled = false
 
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="Reference_point_floor/Q_FF/Path3D/PathFollow3D" unique_id=707915183]
+transform = Transform3D(-0.9995004, 1.098733e-14, 0.03160271, 1.0153464e-14, 1.0000001, -2.6546197e-14, -0.03160265, -2.6212073e-14, -0.9995005, 1.8819008, -0.8904648, -4.700924)
+remote_path = NodePath("../../Fettfang")
+
+[node name="Fettfang" type="AnimatableBody3D" parent="Reference_point_floor/Q_FF/Path3D" unique_id=1837600850]
+transform = Transform3D(-0.99950033, 1.0987329e-14, 0.03160271, 1.01534636e-14, 1.0000001, -2.6546196e-14, -0.03160268, -2.6212072e-14, -0.99950045, 1.8819008, -0.8904648, -4.700924)
+collision_layer = 32768
+collision_mask = 268959744
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_FF/Path3D/Fettfang" unique_id=1208027471]
+transform = Transform3D(0.9993975, 0, 0.034707606, 0, 1, 0, -0.034707606, 0, 0.9993975, -0.12607574, 1.8886223, -4.0685654)
+shape = SubResource("BoxShape3D_5gq0c")
+
+[node name="Ladder" parent="Reference_point_floor/Q_FF/Path3D/Fettfang" unique_id=2028809728 instance=ExtResource("4_0nlau")]
+transform = Transform3D(-1, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, -1, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_FF/Path3D/Fettfang" unique_id=1862848865]
+collision_layer = 16384
+collision_mask = 0
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/StaticBody3D" unique_id=1204858495]
+transform = Transform3D(0.9990237, 0, 0.044177353, -2.019484e-28, 1, 4.038968e-28, -0.044177353, 0, 0.9990237, -0.86349106, 2.5806808, -4.680708)
+shape = SubResource("BoxShape3D_v133v")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/StaticBody3D" unique_id=620730830]
+transform = Transform3D(0.9990237, 0, 0.044177383, 0, 1, 0, -0.044177383, 0, 0.9990237, 0.5627899, 2.5806808, -4.3542614)
+shape = SubResource("BoxShape3D_v133v")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/StaticBody3D" unique_id=1528584573]
+transform = Transform3D(0.9990237, 0, 0.044177383, 0, 1, 0, -0.044177383, 0, 0.9990237, -0.321167, 2.889885, -7.961754)
+shape = SubResource("BoxShape3D_d06k5")
+
 [node name="Q_NKB" type="Node3D" parent="Reference_point_floor" unique_id=593365126]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.87595, 9.640527e-13, 33.919586)
 
@@ -3036,18 +3077,6 @@ font = ExtResource("63_noa04")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035243988, 0, -0.009279251)
 metadata/_edit_lock_ = true
 
-[node name="IBC-aquaplan-eurofloc" parent="Visuals/Referenz" index="2" unique_id=1101004624]
-visible = false
-
-[node name="Pflastersteine-geometrie" parent="Visuals/Referenz" index="80" unique_id=999329912]
-visible = false
-
-[node name="Cube_155" parent="Visuals/Referenz/foerderband" parent_id_path=PackedInt32Array(631548835, 663009283) index="25" unique_id=1950602718]
-transform = Transform3D(0.9452154, 0.028252207, 0.32522306, -0.08022289, 0.9858003, 0.14751993, -0.31643724, -0.1655283, 0.93406, -0.19055605, 2.6930656, 4.8166656)
-
-[node name="Cube_156" parent="Visuals/Referenz/foerderband" parent_id_path=PackedInt32Array(631548835, 663009283) index="26" unique_id=1118166713]
-transform = Transform3D(-0.9443891, -0.327614, -0.028252196, 0.080595896, -0.14731616, -0.9858004, 0.31880003, -0.93325615, 0.16552816, -0.096626505, 2.8929217, 5.0216)
-
 [node name="2026-05-19-Vorklärbecken" parent="Visuals" unique_id=823701110 instance=ExtResource("59_fvi1l")]
 transform = Transform3D(0.63771975, 0, 0.7702685, 0, 1, 0, -0.7702685, 0, 0.63771975, -59.66952, 50.357533, 15.207044)
 
@@ -3064,4 +3093,3 @@ transform = Transform3D(-0.42261824, 0, 0.90630776, 0, 1, 0, -0.90630776, 0, -0.
 [editable path="LadderGasspeicher1"]
 [editable path="Maschinengebäude/door_gebläse_1"]
 [editable path="Maschinengebäude/door_gebläse_2"]
-[editable path="Visuals/Referenz"]

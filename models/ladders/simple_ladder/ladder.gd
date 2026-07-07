@@ -19,3 +19,6 @@ class_name Ladder
 func _ready() -> void:
 	monitoring = false
 	collision_layer = ENUMS.COLLISION_LAYER.LADDERS
+
+
+	

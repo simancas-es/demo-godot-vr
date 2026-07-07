@@ -19,7 +19,7 @@
 [ext_resource type="Script" uid="uid://b82vk7yxsrrnf" path="res://fsm/state_base.gd" id="14_is72l"]
 [ext_resource type="Script" uid="uid://bb27t6hsjidrs" path="res://clases/fpv/fsm/mov_death.gd" id="17_2ykp4"]
 [ext_resource type="Script" uid="uid://cgnsbk378t0aq" path="res://systems/system-tasks/system_tasks_locator.gd" id="19_is72l"]
-[ext_resource type="Script" path="res://systems/system-minimap/minimap_tracker.gd" id="20_minimap"]
+[ext_resource type="Script" uid="uid://bnufa2qwfj73m" path="res://systems/system-minimap/minimap_tracker.gd" id="20_minimap"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8q5hm"]
 radius = 0.374904
@@ -51,12 +51,12 @@ floor_constant_speed = true
 floor_max_angle = 1.309
 floor_snap_length = 0.15
 platform_on_leave = 2
-platform_floor_layers = 4294377472
+platform_floor_layers = 4294410240
 platform_wall_layers = 16384
 safe_margin = 0.01
 script = ExtResource("1_q2fis")
 
-[node name="MinimapTracker" type="Node" parent="."]
+[node name="MinimapTracker" type="Node" parent="." unique_id=1090627502]
 script = ExtResource("20_minimap")
 tracker_id = &"fpv_player"
 display_name = "Player"

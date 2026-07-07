@@ -124,12 +124,11 @@ func process_physics(delta: float) -> StateBase:
 	
 
 	
-	#This allows doors not to push it. see explanation below.
+	#This allows doors not to push it. see explanation below. TODO: Fix this with layers
 	#Required to also set the collision_layer to the collision_layer of the door.
-	if not fpv.velocity.is_zero_approx(): 
-		#Correction
-		fpv.move_and_slide()
-		#fpv.move_and_collide(fpv.velocity * delta) #Doesnt wor
+	#if not fpv.velocity.is_zero_approx(): 
+		#fpv.move_and_slide()
+	fpv.move_and_slide()
 		
 	#fpv.max_slides = 0 #Doesn't work
 	#move and slide: When the body touches a moving platform, the platform's velocity is automatically
@@ -160,7 +159,6 @@ func process_physics(delta: float) -> StateBase:
 		else:
 			bobbing_track_s += delta * fpv.velocity.length() ##Cycles
 			camera.position += calc_bobbing(bobbing_track_s)
-	
 	return null
 
 const BOBBING_FREQ = 1.0
