@@ -63,6 +63,7 @@
 [ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="38_qbqkw"]
 [ext_resource type="Script" uid="uid://dfvukihleeewm" path="res://zones/hillersleben/scripts/ff/ff_controls.gd" id="41_h3ac7"]
 [ext_resource type="PackedScene" uid="uid://7ack1wecsniw" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended_bhkw.tscn" id="44_noa04"]
+[ext_resource type="PackedScene" uid="uid://crxgwph4b8oyu" path="res://zones/hillersleben/scripts/nkb/nkb_unit.tscn" id="47_rmdoo"]
 [ext_resource type="PackedScene" uid="uid://cvpmdoxt0gsjs" path="res://models/not_available_block.tscn" id="58_h3ac7"]
 [ext_resource type="PackedScene" uid="uid://o1ua0ngy160m" path="res://assets/zones/hillersleben/models/vorklärbecken/2026-05-19-Vorklärbecken.gltf" id="59_fvi1l"]
 [ext_resource type="PackedScene" uid="uid://igss4jfoxe80" path="res://assets/zones/hillersleben/models/mg-dekanter/2026-06-16-Pumpenraum.gltf" id="60_3q35u"]
@@ -1671,7 +1672,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.908604, 2.009819, 25.8803
 
 [node name="bb_consumer" type="Node" parent="Reference_point_floor/Q_BB" unique_id=1145679050]
 script = ExtResource("35_mqa8n")
-blender_nh4_label_np = NodePath("../../../Visuals/Referenz/B1-Steuerung-1/Text_012")
 
 [node name="TaskSequencer" parent="Reference_point_floor/Q_BB/bb_consumer" unique_id=2094104197 instance=ExtResource("5_cqg2i")]
 task_sequence = Array[int]([31])
@@ -1913,6 +1913,12 @@ shape = SubResource("BoxShape3D_d06k5")
 [node name="Q_NKB" type="Node3D" parent="Reference_point_floor" unique_id=593365126]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.87595, 9.640527e-13, 33.919586)
 
+[node name="NKB_Unit" parent="Reference_point_floor/Q_NKB" unique_id=1239777647 instance=ExtResource("47_rmdoo")]
+transform = Transform3D(0.26388988, 8.077936e-28, 0.9645523, -1.3072137e-20, 0.99999946, 3.5763743e-21, -0.9645528, -1.3552527e-20, 0.26388973, -3.0832138, 1.9253883, 22.452095)
+
+[node name="NKB_Unit2" parent="Reference_point_floor/Q_NKB" unique_id=909151878 instance=ExtResource("47_rmdoo")]
+transform = Transform3D(0.99992645, 0, -0.012129724, 1.643868e-22, 0.99999946, 1.3551532e-20, 0.012129739, -1.3552527e-20, 0.9999259, -15.57612, 1.9253883, -6.4741807)
+
 [node name="Config" type="Node3D" parent="." unique_id=701552541]
 
 [node name="North" type="Node3D" parent="Config" unique_id=14118345]
@@ -1941,10 +1947,9 @@ overview_scene = ExtResource("3_ybcmd")
 script = ExtResource("8_du4yn")
 wasserrad_drehen = NodePath("../../Visuals/Referenz/wasserrad")
 
-[node name="Logik-NKB_Visual" type="Node" parent="FlowSimulation" unique_id=17142679 node_paths=PackedStringArray("nkb1_pivot")]
+[node name="Logik-NKB_Visual" type="Node" parent="FlowSimulation" unique_id=17142679]
 process_mode = 4
 script = ExtResource("23_cqg2i")
-nkb1_pivot = NodePath("../../Visuals/Referenz/nachklaerung-becken-1/Brücke/nkb-1-pivot")
 
 [node name="FlowSimulationLabels" type="Node3D" parent="." unique_id=256407371]
 
@@ -2565,6 +2570,7 @@ collision_mask = 0
 
 [node name="nb2-wall-collision" type="CSGTorus3D" parent="SimpleGeometry" unique_id=920050395]
 transform = Transform3D(0.9214838, 0, 0.3753566, 0, 2.425, 0, -0.3753566, 0, 0.9214838, -57.478844, 5.371544, 0.721529)
+visible = false
 use_collision = true
 collision_layer = 49152
 collision_mask = 0
@@ -2585,6 +2591,7 @@ debug_color = Color(0.85882354, 0, 0.8784314, 1)
 
 [node name="nb1-wall-collision2" type="CSGTorus3D" parent="SimpleGeometry" unique_id=54373545]
 transform = Transform3D(0.9214838, 0, 0.3753566, 0, 2.425, 0, -0.3753566, 0, 0.9214838, -45.251434, 5.371544, 29.699791)
+visible = false
 use_collision = true
 collision_layer = 49152
 collision_mask = 0
@@ -3110,9 +3117,8 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0
 text = "DECANTERROOMABCDE"
 font = ExtResource("63_noa04")
 
-[node name="Referenz" parent="Visuals" unique_id=631548835 instance=ExtResource("15_h3jyd")]
+[node name="Referenz" parent="Visuals" unique_id=167365912 instance=ExtResource("15_h3jyd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035243988, 0, -0.009279251)
-metadata/_edit_lock_ = true
 
 [node name="2026-05-19-Vorklärbecken" parent="Visuals" unique_id=823701110 instance=ExtResource("59_fvi1l")]
 transform = Transform3D(0.63771975, 0, 0.7702685, 0, 1, 0, -0.7702685, 0, 0.63771975, -59.66952, 50.357533, 15.207044)

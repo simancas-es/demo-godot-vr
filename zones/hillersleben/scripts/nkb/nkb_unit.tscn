@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://crxgwph4b8oyu"]
+
+[ext_resource type="PackedScene" uid="uid://2t7sghccskpd" path="res://assets/zones/hillersleben/models/nachklaerbecken/nkb_bruecke.gltf" id="1_8yi7g"]
+[ext_resource type="Script" uid="uid://cebddgdpbxlsi" path="res://zones/hillersleben/scripts/nkb/nkb_unit.gd" id="1_gk5e2"]
+
+[node name="NKB_Unit" type="Node3D" unique_id=1239777647 node_paths=PackedStringArray("pivot", "schraube1", "schraube2")]
+transform = Transform3D(1, 0, 0, 0, 0.99999946, 1.3552527e-20, 0, -1.3552527e-20, 0.99999946, 0, 0, 0)
+script = ExtResource("1_gk5e2")
+pivot = NodePath("nkb_bruecke/Brücke")
+schraube1 = NodePath("nkb_bruecke/Brücke/Cylinder_13850/nkb-1-schraube1")
+schraube2 = NodePath("nkb_bruecke/Brücke/Cylinder_13851/nkb-1-schraube2")
+
+[node name="nkb_bruecke" parent="." unique_id=984126065 instance=ExtResource("1_8yi7g")]
+
+[node name="Brücke" parent="nkb_bruecke" index="0" unique_id=2025658023]
+transform = Transform3D(0.9977409, 0, 0.06717945, 0, 1, 0, -0.06717945, 0, 0.9977409, 0, 0, 0)
+
+[editable path="nkb_bruecke"]

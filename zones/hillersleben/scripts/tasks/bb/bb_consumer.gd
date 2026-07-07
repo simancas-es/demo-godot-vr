@@ -27,15 +27,16 @@ func _on_next_task(task_id : int) -> void:
 
 
 ## LOGIC FOR TASKS
-@export var blender_nh4_label_np : NodePath # $"Visuals/Referenz/B1-Steuerung-1/Text_012"
-@onready var blender_nh4_label : MeshInstance3D = get_node(blender_nh4_label_np)
+#@export var blender_nh4_label_np : NodePath # $"Visuals/Referenz/B1-Steuerung-1/Text_012"
+#@onready var blender_nh4_label : MeshInstance3D = get_node(blender_nh4_label_np)
 @onready var nh4_label : Label3D = $"../nh4_dynamic"
 const COORDINATOR := preload("uid://dbb00gqpvldte")
 @onready var nh4_controller : COORDINATOR = $"../PID_NH4"
 
 	
 func init_task_logic() -> void:
-	blender_nh4_label.visible = false
+	#blender_nh4_label.visible = false
+	pass
 
 var timer := 0.0
 func _process(delta: float) -> void:
