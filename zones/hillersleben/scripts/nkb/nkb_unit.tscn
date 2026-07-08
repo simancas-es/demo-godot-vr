@@ -2,6 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://2t7sghccskpd" path="res://assets/zones/hillersleben/models/nachklaerbecken/nkb_bruecke.gltf" id="1_8yi7g"]
 [ext_resource type="Script" uid="uid://cebddgdpbxlsi" path="res://zones/hillersleben/scripts/nkb/nkb_unit.gd" id="1_gk5e2"]
+[ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="3_nw262"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gk5e2"]
+size = Vector3(15.073364, 0.2368164, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nw262"]
+size = Vector3(15.089111, 1.244873, 0.07714844)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_nw262"]
+height = 3.454834
+radius = 1.7963867
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_25xj1"]
+height = 2.2278137
+radius = 1.1025391
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_vijfd"]
 
 [node name="NKB_Unit" type="Node3D" unique_id=1239777647 node_paths=PackedStringArray("pivot", "schraube1", "schraube2")]
 transform = Transform3D(1, 0, 0, 0, 0.99999946, 1.3552527e-20, 0, -1.3552527e-20, 0.99999946, 0, 0, 0)
@@ -14,5 +31,72 @@ schraube2 = NodePath("nkb_bruecke/Brücke/Cylinder_13851/nkb-1-schraube2")
 
 [node name="Brücke" parent="nkb_bruecke" index="0" unique_id=2025658023]
 transform = Transform3D(0.9977409, 0, 0.06717945, 0, 1, 0, -0.06717945, 0, 0.9977409, 0, 0, 0)
+
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="nkb_bruecke/Brücke" index="684" unique_id=1574572700]
+transform = Transform3D(0.9977409, -1.009742e-28, -0.06717945, 0, 1, 1.6155871e-27, 0.06717945, 0, 0.9977409, 0, 0, 0)
+remote_path = NodePath("../../../AnimatableBody3D")
+update_position = false
+update_scale = false
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1582474527]
+transform = Transform3D(0.99999994, -1.0074606e-28, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0)
+collision_layer = 32768
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D" unique_id=1999149820]
+transform = Transform3D(0.9981751, 2.195346e-27, 0.060386367, 8.5323196e-27, 1, -1.7739261e-25, -0.060386367, 1.7758411e-25, 0.9981751, 7.2095985, 0.9493014, -0.4807678)
+shape = SubResource("BoxShape3D_gk5e2")
+
+[node name="AnimatableBody3D" type="StaticBody3D" parent="AnimatableBody3D" unique_id=720244347]
+collision_layer = 16384
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D/AnimatableBody3D" unique_id=547851337]
+transform = Transform3D(0.99796057, 1.5696015e-26, 0.063833356, 7.270144e-27, 1, -3.5955077e-25, -0.063833356, 3.5928157e-25, 0.99796057, 7.2940044, 1.6618885, -1.1229144)
+shape = SubResource("BoxShape3D_nw262")
+
+[node name="AnimatableBody3D2" type="StaticBody3D" parent="AnimatableBody3D" unique_id=15721555]
+collision_layer = 16384
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D/AnimatableBody3D2" unique_id=839918259]
+transform = Transform3D(0.99796057, 1.5696015e-26, 0.063833356, 7.270144e-27, 1, -3.5955077e-25, -0.063833356, 3.5928157e-25, 0.99796057, 7.373432, 1.6618885, 0.11884332)
+shape = SubResource("BoxShape3D_nw262")
+
+[node name="Ladder" parent="AnimatableBody3D" unique_id=2028809728 instance=ExtResource("3_nw262")]
+transform = Transform3D(0.102914, 0.015849613, -0.9945638, -1.862645e-09, 0.99987346, 0.015934205, 0.99469036, -0.0016398559, 0.102900974, 15.394993, -0.8512643, -1.0308279)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=473374529]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+collision_layer = 49152
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=496215283]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0218506, 0)
+shape = SubResource("CylinderShape3D_nw262")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=2122663540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.8141937, 1.6155871e-26)
+shape = SubResource("CylinderShape3D_25xj1")
+
+[node name="nb2-wall-collision" type="CSGTorus3D" parent="." unique_id=459222415]
+transform = Transform3D(0.9214838, 0, 0.3753566, 0, 2.425, 0, -0.3753566, 0, 0.9214838, 0.0071475506, -0.5481533, 0.015972987)
+use_collision = true
+collision_layer = 49152
+collision_mask = 0
+inner_radius = 14.098821
+outer_radius = 15.013127
+sides = 32
+smooth_faces = false
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="nb2-wall-collision" unique_id=131398317]
+transform = Transform3D(1, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 1.681366, 1.9073486e-06, -0.49332237)
+collision_layer = 40960
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="nb2-wall-collision/StaticBody3D2" unique_id=517065331]
+transform = Transform3D(1.455, 0, 0, 0, 1.4550003, 0, 0, 0, 1.455, -1.6773206, -1.2764534, 0.6135352)
+shape = SubResource("WorldBoundaryShape3D_vijfd")
+debug_color = Color(0.85882354, 0, 0.8784314, 1)
 
 [editable path="nkb_bruecke"]
