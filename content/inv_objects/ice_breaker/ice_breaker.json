@@ -1,0 +1,18 @@
+{
+	"de": {
+		"description": "Entfernt Eis",
+		"name": "Eispickel"
+	},
+	"en": {
+		"description": "A stick to break ice",
+		"name": "Ice Breaker"
+	},
+	"es": {
+		"description": "Rompe el hielo",
+		"name": "Piolet"
+	},
+	"fr": {
+		"description": "Brise la glace",
+		"name": "Piolet"
+	}
+}

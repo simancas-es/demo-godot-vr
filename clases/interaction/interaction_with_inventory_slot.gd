@@ -8,7 +8,7 @@ class_name InteractionWithInventorySlotSelected
 @export var remove_item_on_interaction : bool = true ##Remove qty from selected inventory id
 
 @export var disable_time_s : float = 1.0 ##Disable before being able to use again
-@export var one_time : bool = false ##Disable forever after validation
+@export var one_time : bool = false ##Queues free. Disables forever after validation
 
 
 signal validated_item_interaction

@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://cuwst8kcvigrx" path="res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn" id="10_ybcmd"]
 [ext_resource type="PackedScene" uid="uid://bnf5qtwuyhbwg" path="res://models/inventory_objects/wire/wire.tscn" id="13_qaewh"]
 [ext_resource type="PackedScene" uid="uid://dl3g3hke6ex3m" path="res://assets/zones/hillersleben/models/Referenz/Referenz.gltf" id="15_h3jyd"]
+[ext_resource type="PackedScene" uid="uid://dsagt8yf2i40v" path="res://assets/inventory_objects/ice_breaker/eispickel.tscn" id="15_jyt5c"]
 [ext_resource type="Script" uid="uid://b5sdbpkp587p8" path="res://zones/hillersleben/scripts/mg_klappbare_tür.gd" id="16_k6604"]
 [ext_resource type="Script" uid="uid://codiadaennr2i" path="res://zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd" id="21_y6wga"]
 [ext_resource type="PackedScene" uid="uid://cb6nythpsl3b7" path="res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn" id="21_y253s"]
@@ -105,6 +106,9 @@ size = Vector3(0.4033203, 0.44091797, 0.529541)
 [sub_resource type="CylinderMesh" id="CylinderMesh_cqg2i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l8ama"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_53515"]
+size = Vector3(0.37948608, 2.5551758, 0.42041016)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_du4yn"]
 
@@ -772,6 +776,21 @@ visible = false
 
 [node name="MeshInstance3D" parent="Reference_point_floor/Q_FENCE_CHECK/WIRE_USE/Area3D" index="1" unique_id=916711492]
 mesh = SubResource("CylinderMesh_cqg2i")
+
+[node name="EISBRECHER_PICKUP" type="Area3D" parent="Reference_point_floor" unique_id=787233946]
+transform = Transform3D(0.99325997, -0.11590799, 3.7252903e-09, 0.110941686, 0.9507015, -0.2895831, 0.033565, 0.28763124, 0.9571526, -68.98113, 3.018261, 38.737717)
+script = ExtResource("9_cqg2i")
+item_id = 5
+qty = 1
+actions = Array[int]([2])
+metadata/_custom_type_script = "uid://kyd2m2onq8wi"
+
+[node name="eispickel2" parent="Reference_point_floor/EISBRECHER_PICKUP" unique_id=62900308 instance=ExtResource("15_jyt5c")]
+transform = Transform3D(0.25035453, 0.03349522, 0.9675748, 0.008506328, 0.99928665, -0.036794066, -0.9681169, 0.017442107, 0.24989104, -0.012130737, 0.016571045, -0.0079422)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/EISBRECHER_PICKUP" unique_id=1801005023]
+transform = Transform3D(1, -1.02444886e-07, -1.1175773e-08, 1.02444886e-07, 1, -2.6821994e-07, 1.1175801e-08, 2.6821994e-07, 1, -0.022232056, 0.1486969, -0.05055046)
+shape = SubResource("BoxShape3D_53515")
 
 [node name="SECURITY_CHECKS" type="Node3D" parent="Reference_point_floor" unique_id=1959220266]
 unique_name_in_owner = true

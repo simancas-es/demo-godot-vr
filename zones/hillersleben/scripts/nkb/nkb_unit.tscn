@@ -3,12 +3,27 @@
 [ext_resource type="PackedScene" uid="uid://2t7sghccskpd" path="res://assets/zones/hillersleben/models/nachklaerbecken/nkb_bruecke.gltf" id="1_8yi7g"]
 [ext_resource type="Script" uid="uid://cebddgdpbxlsi" path="res://zones/hillersleben/scripts/nkb/nkb_unit.gd" id="1_gk5e2"]
 [ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="3_nw262"]
+[ext_resource type="PackedScene" uid="uid://dxbn4bjol0i46" path="res://zones/hillersleben/scripts/nkb/ice_wedge.tscn" id="4_25xj1"]
+[ext_resource type="Script" uid="uid://cmmkdjodihp4u" path="res://zones/hillersleben/scripts/nkb/ice_breaker.gd" id="4_qn3oq"]
+[ext_resource type="Script" uid="uid://cxeqgg2dlr831" path="res://zones/hillersleben/scripts/nkb/ice_schrauben.gd" id="4_tattc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gk5e2"]
 size = Vector3(15.073364, 0.2368164, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nw262"]
 size = Vector3(15.089111, 1.244873, 0.07714844)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_nw262"]
+top_radius = 0.3
+bottom_radius = 0.3
+height = 10.333
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25xj1"]
+transparency = 1
+albedo_color = Color(0, 0.83137256, 1, 0.5411765)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_25xj1"]
+radius = 0.8389219
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_nw262"]
 height = 3.454834
@@ -39,7 +54,7 @@ update_position = false
 update_scale = false
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1582474527]
-transform = Transform3D(0.99999994, -1.0074606e-28, 0, 0, 0.99999964, 0, 0, 0, 0.99999964, 0, 0, 0)
+transform = Transform3D(0.99999994, -1.0074593e-28, 0, 0, 0.9999984, 0, 0, 0, 0.9999984, 0, 0, 0)
 collision_layer = 32768
 collision_mask = 0
 
@@ -66,21 +81,38 @@ shape = SubResource("BoxShape3D_nw262")
 [node name="Ladder" parent="AnimatableBody3D" unique_id=2028809728 instance=ExtResource("3_nw262")]
 transform = Transform3D(0.102914, 0.015849613, -0.9945638, -1.862645e-09, 0.99987346, 0.015934205, 0.99469036, -0.0016398559, 0.102900974, 15.394993, -0.8512643, -1.0308279)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=473374529]
+[node name="ice_schrauben" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=540472497]
+transform = Transform3D(-4.3711392e-08, 0.9990942, 0.042555727, -1.000001, -4.3671832e-08, -1.8601717e-09, 0, -0.042555768, 0.9990951, 7.3640223, -0.24088663, 0.4220594)
+mesh = SubResource("CylinderMesh_nw262")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_25xj1")
+script = ExtResource("4_tattc")
+
+[node name="ice_breaker" type="Area3D" parent="AnimatableBody3D" unique_id=2016178268]
+monitorable = false
+script = ExtResource("4_qn3oq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D/ice_breaker" unique_id=765684054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.61332, -0.23263419, 0.2127411)
+shape = SubResource("SphereShape3D_25xj1")
+debug_color = Color(0.5764706, 0.38431373, 1, 1)
+
+[node name="center" type="StaticBody3D" parent="." unique_id=473374529]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
 collision_layer = 49152
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=496215283]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="center" unique_id=496215283]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0218506, 0)
 shape = SubResource("CylinderShape3D_nw262")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=2122663540]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="center" unique_id=2122663540]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.8141937, 1.6155871e-26)
 shape = SubResource("CylinderShape3D_25xj1")
 
 [node name="nb2-wall-collision" type="CSGTorus3D" parent="." unique_id=459222415]
 transform = Transform3D(0.9214838, 0, 0.3753566, 0, 2.425, 0, -0.3753566, 0, 0.9214838, 0.0071475506, -0.5481533, 0.015972987)
+visible = false
 use_collision = true
 collision_layer = 49152
 collision_mask = 0
@@ -99,4 +131,59 @@ transform = Transform3D(1.455, 0, 0, 0, 1.4550003, 0, 0, 0, 1.455, -1.6773206, -
 shape = SubResource("WorldBoundaryShape3D_vijfd")
 debug_color = Color(0.85882354, 0, 0.8784314, 1)
 
+[node name="ice_surface" type="Node3D" parent="." unique_id=480952194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34068865, -3.5340969e-28)
+
+[node name="ice_wedge" parent="ice_surface" unique_id=1924794732 instance=ExtResource("4_25xj1")]
+transform = Transform3D(0.9997528, 0, -0.022233661, 0, 1, 0, 0.022233661, 0, 0.9997528, -4.2175714e-28, -0.8001244, 7.986138e-28)
+
+[node name="ice_wedge2" parent="ice_surface" unique_id=2026682997 instance=ExtResource("4_25xj1")]
+transform = Transform3D(0.91737294, 0, -0.3980287, 0, 1, 0, 0.3980287, 0, 0.91737294, -6.9204903e-28, -0.8001244, 5.8028544e-28)
+
+[node name="ice_wedge3" parent="ice_surface" unique_id=878054109 instance=ExtResource("4_25xj1")]
+transform = Transform3D(0.6977779, 0, -0.71631414, 0, 1, 0, 0.71631414, 0, 0.6977779, -8.604642e-28, -0.8001244, 2.7434354e-28)
+
+[node name="ice_wedge4" parent="ice_surface" unique_id=1716368541 instance=ExtResource("4_25xj1")]
+transform = Transform3D(0.36870873, 0, -0.92954504, 0, 1, 0, 0.92954504, 0, 0.36870873, -8.998008e-28, -0.8001244, -7.7599714e-29)
+
+[node name="ice_wedge5" parent="ice_surface" unique_id=287589475 instance=ExtResource("4_25xj1")]
+transform = Transform3D(0.012251958, 0, -0.9999249, 0, 1, 0, 0.9999249, 0, 0.012251958, -8.126814e-28, -0.8001244, -3.9396938e-28)
+
+[node name="ice_wedge6" parent="ice_surface" unique_id=641062264 instance=ExtResource("4_25xj1")]
+transform = Transform3D(-0.357064, 0, -0.93407995, 0, 1, 0, 0.93407995, 0, -0.357064, -6.1032677e-28, -0.8001244, -6.6570587e-28)
+
+[node name="ice_wedge7" parent="ice_surface" unique_id=313487028 instance=ExtResource("4_25xj1")]
+transform = Transform3D(-0.6792619, 0, -0.7338959, 0, 1, 0, 0.7338959, 0, -0.6792619, -3.1848468e-28, -0.8001244, -8.451216e-28)
+
+[node name="ice_wedge8" parent="ice_surface" unique_id=1330187338 instance=ExtResource("4_25xj1")]
+transform = Transform3D(-0.9049607, 0, -0.4254951, 0, 1, 0, 0.4254951, 0, -0.9049607, 2.1798518e-29, -0.8001244, -9.028775e-28)
+
+[node name="ice_wedge9" parent="ice_surface" unique_id=807125289 instance=ExtResource("4_25xj1")]
+transform = Transform3D(-0.99871045, 0, -0.050767377, 0, 1, 0, 0.050767377, 0, -0.99871045, 3.6236637e-28, -0.8001244, -8.272566e-28)
+
+[node name="ice_wedge10" parent="ice_surface" unique_id=1106282497 instance=ExtResource("4_25xj1")]
+transform = Transform3D(-0.9463226, 0, 0.32322365, 0, 1, 0, -0.32322365, 0, -0.9463226, 6.433146e-28, -0.8001244, -6.338843e-28)
+
+[node name="ice_wedge11" parent="ice_surface" unique_id=1469723786 instance=ExtResource("4_25xj1")]
+transform = Transform3D(-0.75385016, 0, 0.6570462, 0, 1, 0, -0.6570462, 0, -0.75385016, 8.352354e-28, -0.8001244, -3.4357647e-28)
+
+[node name="ice_wedge12" parent="ice_surface" unique_id=1082281681 instance=ExtResource("4_25xj1")]
+transform = Transform3D(-0.45090878, 0, 0.8925699, 0, 1, 0, -0.8925699, 0, -0.45090878, 9.031329e-28, -0.8001244, -3.7351004e-30)
+
+[node name="ice_wedge13" parent="ice_surface" unique_id=834404648 instance=ExtResource("4_25xj1")]
+transform = Transform3D(-0.091327935, 0, 0.9958208, 0, 1, 0, -0.9958208, 0, -0.091327935, 8.413047e-28, -0.8001244, 3.284347e-28)
+
+[node name="ice_wedge14" parent="ice_surface" unique_id=153214456 instance=ExtResource("4_25xj1")]
+transform = Transform3D(0.28702602, 0, 0.95792276, 0, 1, 0, -0.95792276, 0, 0.28702602, 6.5787494e-28, -0.8001244, 6.187597e-28)
+
+[node name="ice_wedge15" parent="ice_surface" unique_id=1028909545 instance=ExtResource("4_25xj1")]
+transform = Transform3D(0.61665106, 0, 0.78723645, 0, 1, 0, -0.78723645, 0, 0.61665106, 3.8686116e-28, -0.8001244, 8.16089e-28)
+
+[node name="ice_wedge16" parent="ice_surface" unique_id=29534049 instance=ExtResource("4_25xj1")]
+transform = Transform3D(0.7287415, 0, 0.6847887, 0, 1, 0, -0.6847887, 0, 0.7287415, 2.5883155e-28, -0.8001244, 8.652567e-28)
+
+[node name="ice_wedge17" parent="ice_surface" unique_id=1469597946 instance=ExtResource("4_25xj1")]
+transform = Transform3D(0.9318115, 0, 0.36294228, 0, 1, 0, -0.36294228, 0, 0.9318115, -8.3173235e-29, -0.8001244, 8.993026e-28)
+
 [editable path="nkb_bruecke"]
+[editable path="ice_surface/ice_wedge17"]
