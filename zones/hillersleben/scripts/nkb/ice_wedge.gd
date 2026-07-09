@@ -13,14 +13,14 @@ func _ready() -> void:
 func restore() -> void:
 	current_state = STATE.NORMAL
 	ice_wedge_mesh.visible = false
-	interaction.monitorable = true
+	interaction.disabled = false
 	
 	
 func try_break() -> void:
 	if current_state == STATE.NORMAL:
 		#break
 		ice_wedge_mesh.visible = false
-		interaction.monitorable = false
+		interaction.disabled = true
 		pass
 	current_state == STATE.BROKEN
 	pass
