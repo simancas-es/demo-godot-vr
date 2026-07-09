@@ -54,7 +54,7 @@ update_position = false
 update_scale = false
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1582474527]
-transform = Transform3D(0.99999994, -1.0074593e-28, 0, 0, 0.9999984, 0, 0, 0, 0.9999984, 0, 0, 0)
+transform = Transform3D(0.99999994, -1.007459e-28, 0, 0, 0.9999981, 0, 0, 0, 0.9999981, 0, 0, 0)
 collision_layer = 32768
 collision_mask = 0
 
@@ -89,6 +89,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_25xj1")
 script = ExtResource("4_tattc")
 
 [node name="ice_breaker" type="Area3D" parent="AnimatableBody3D" unique_id=2016178268]
+unique_name_in_owner = true
 monitorable = false
 script = ExtResource("4_qn3oq")
 
@@ -186,4 +187,3 @@ transform = Transform3D(0.7287415, 0, 0.6847887, 0, 1, 0, -0.6847887, 0, 0.72874
 transform = Transform3D(0.9318115, 0, 0.36294228, 0, 1, 0, -0.36294228, 0, 0.9318115, -8.3173235e-29, -0.8001244, 8.993026e-28)
 
 [editable path="nkb_bruecke"]
-[editable path="ice_surface/ice_wedge17"]

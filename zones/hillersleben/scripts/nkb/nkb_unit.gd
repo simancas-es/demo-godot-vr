@@ -12,10 +12,20 @@ var speed_nkb_schrauben_deg_s = 20
 
 signal ice_broken
 
+const ICEBREAKER := preload("uid://cmmkdjodihp4u")
+@onready var ice_breaker : ICEBREAKER = %ice_breaker
+
 func _ready() -> void:
 	active_schraube = true
+	ice_breaker.found_ice.connect(stop)
+	ice_breaker.no_ice.connect(resume)
 	pass
 	
+func stop() -> void:
+	active_schraube = false
+
+func resume() -> void:
+	active_schraube = true
 	
 func _try_rotate(item : Node3D, speed_deg : float, delta) -> void:
 	if item == null : return

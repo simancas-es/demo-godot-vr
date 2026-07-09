@@ -22,5 +22,5 @@ func try_break() -> void:
 		ice_wedge_mesh.visible = false
 		interaction.disabled = true
 		pass
-	current_state == STATE.BROKEN
+	current_state = STATE.BROKEN
 	pass
