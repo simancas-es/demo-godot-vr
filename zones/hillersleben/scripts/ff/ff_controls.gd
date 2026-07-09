@@ -3,7 +3,7 @@ extends Node
 @export var raumer : MeshInstance3D
 @onready var pathf : PathFollow3D = $"../Path3D/PathFollow3D" 
 
-@export var full_cycle_s : float = 60.0
+@export var full_cycle_s : float = 600.0
 
 func _ready() -> void:
 	raumer.reparent(pathf)

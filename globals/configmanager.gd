@@ -1,7 +1,7 @@
 extends Node
 #PC Testing
 #TODO: Error Handling of config. Reset
-var config = ConfigFile.new()
+var config := ConfigFile.new()
 const SETTINGS_FILEPATH = "user://settings.ini"
 
 enum WINDOW_MODE {

@@ -892,7 +892,8 @@ transform = Transform3D(0.8869221, 0, 0.46191895, 0, 1, 0, -0.46191895, 0, 0.886
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010193825, 0.2419548, -0.005490303)
 shape = SubResource("BoxShape3D_pwsyg")
 
-[node name="LogikGrabObjectSub" parent="xr_dek_polymer_hose_intake" unique_id=1807612470 instance=ExtResource("32_a2s05")]
+[node name="LogikGrabObjectSub" parent="xr_dek_polymer_hose_intake" unique_id=1807612470 node_paths=PackedStringArray("baseroot") instance=ExtResource("32_a2s05")]
+baseroot = NodePath("../../Zonehillersleben")
 
 [node name="xr_dek_ibc1" parent="." unique_id=535465585 instance=ExtResource("31_48yfo")]
 transform = Transform3D(0.89987785, 0, 0.43614227, 0, 1, 0, -0.43614227, 0, 0.89987785, -2.0765126, 49.246456, 14.12667)

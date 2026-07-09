@@ -65,6 +65,9 @@
 [ext_resource type="Script" uid="uid://dfvukihleeewm" path="res://zones/hillersleben/scripts/ff/ff_controls.gd" id="41_h3ac7"]
 [ext_resource type="PackedScene" uid="uid://7ack1wecsniw" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended_bhkw.tscn" id="44_noa04"]
 [ext_resource type="PackedScene" uid="uid://crxgwph4b8oyu" path="res://zones/hillersleben/scripts/nkb/nkb_unit.tscn" id="47_rmdoo"]
+[ext_resource type="PackedScene" uid="uid://cjyilbm4ucc7s" path="res://addons/godot-xr-tools/objects/climbable.tscn" id="48_apw4m"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="49_5sfkf"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="50_2s6xu"]
 [ext_resource type="PackedScene" uid="uid://cvpmdoxt0gsjs" path="res://models/not_available_block.tscn" id="58_h3ac7"]
 [ext_resource type="PackedScene" uid="uid://o1ua0ngy160m" path="res://assets/zones/hillersleben/models/vorklärbecken/2026-05-19-Vorklärbecken.gltf" id="59_fvi1l"]
 [ext_resource type="PackedScene" uid="uid://igss4jfoxe80" path="res://assets/zones/hillersleben/models/mg-dekanter/2026-06-16-Pumpenraum.gltf" id="60_3q35u"]
@@ -346,6 +349,9 @@ size = Vector3(0.08862305, 1.3091431, 8.416992)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d06k5"]
 size = Vector3(1, 0.7595215, 0.4000244)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3gbeg"]
+size = Vector3(1.3595581, 2.541092, 0.46533203)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hdc1q"]
 size = Vector3(0.08862305, 1.3091431, 15.516541)
@@ -1884,6 +1890,7 @@ shape = SubResource("BoxShape3D_5gq0c")
 
 [node name="Ladder" parent="Reference_point_floor/Q_FF/Path3D/Fettfang" unique_id=2028809728 instance=ExtResource("4_0nlau")]
 transform = Transform3D(-1, 0, 8.940697e-08, 0, 1, 0, -8.940697e-08, 0, -1, 0, 0, 0)
+visible = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_FF/Path3D/Fettfang" unique_id=1862848865]
 collision_layer = 16384
@@ -1901,11 +1908,108 @@ shape = SubResource("BoxShape3D_v133v")
 transform = Transform3D(0.9990237, 0, 0.044177383, 0, 1, 0, -0.044177383, 0, 0.9990237, -0.321167, 2.889885, -7.961754)
 shape = SubResource("BoxShape3D_d06k5")
 
+[node name="Climbable" parent="Reference_point_floor/Q_FF/Path3D/Fettfang" unique_id=1197599831 instance=ExtResource("48_apw4m")]
+transform = Transform3D(-1, 0, 1.1920929e-07, 2.019484e-28, 1, -4.038968e-28, -1.1920929e-07, 0, -1, 0, 0, 0)
+
+[node name="GrabPointHandLeft" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/Climbable" unique_id=698435114 instance=ExtResource("49_5sfkf")]
+transform = Transform3D(-0.9728165, 0, -0.23157823, -9.3370726e-21, 1, 2.4578392e-20, 0.23157829, 0, -0.97281665, 0.2528839, 1.3117943, 0.11636925)
+visible = true
+
+[node name="GrabPointHandRight" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/Climbable" unique_id=510838420 instance=ExtResource("50_2s6xu")]
+transform = Transform3D(-0.99464726, 0, 0.10333046, -5.253486e-21, 1, 2.680951e-20, -0.10333043, 0, -0.9946474, -0.29283142, 1.3625565, 0.1139946)
+visible = true
+
+[node name="GrabPointHandLeft2" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/Climbable" unique_id=1504684683 instance=ExtResource("49_5sfkf")]
+transform = Transform3D(-0.9728165, 0, -0.23157823, -9.3370726e-21, 1, 2.4578392e-20, 0.23157829, 0, -0.97281665, 0.2528839, 1.85429, 0.11636925)
+visible = true
+
+[node name="GrabPointHandRight2" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/Climbable" unique_id=1733209000 instance=ExtResource("50_2s6xu")]
+transform = Transform3D(-0.99464726, 0, 0.10333046, -5.253486e-21, 1, 2.680951e-20, -0.10333043, 0, -0.9946474, -0.29283142, 1.8713188, 0.1139946)
+visible = true
+
+[node name="GrabPointHandLeft3" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/Climbable" unique_id=1475150399 instance=ExtResource("49_5sfkf")]
+transform = Transform3D(-0.9728165, 0, -0.23157823, -9.3370726e-21, 1, 2.4578392e-20, 0.23157829, 0, -0.97281665, 0.33087158, 2.331791, 0.18016243)
+visible = true
+
+[node name="GrabPointHandRight3" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/Climbable" unique_id=1040281865 instance=ExtResource("50_2s6xu")]
+transform = Transform3D(-0.99464726, 0, 0.10333046, -5.253486e-21, 1, 2.680951e-20, -0.10333043, 0, -0.9946474, -0.37612915, 2.3488197, 0.2165947)
+visible = true
+
+[node name="GrabPointHandLeft4" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/Climbable" unique_id=1632955646 instance=ExtResource("49_5sfkf")]
+transform = Transform3D(-0.9728165, 0, -0.23157823, -9.3370726e-21, 1, 2.4578392e-20, 0.23157829, 0, -0.97281665, 0.46165085, 2.8127365, 0.30454254)
+visible = true
+
+[node name="GrabPointHandRight4" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/Climbable" unique_id=912925901 instance=ExtResource("50_2s6xu")]
+transform = Transform3D(-0.99464726, 0, 0.10333046, -5.253486e-21, 1, 2.680951e-20, -0.10333043, 0, -0.9946474, -0.49708557, 2.8297653, 0.3543129)
+visible = true
+
+[node name="GrabPointHandLeft5" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/Climbable" unique_id=1592545211 instance=ExtResource("49_5sfkf")]
+transform = Transform3D(-0.9728165, 0, -0.23157823, -9.3370726e-21, 1, 2.4578392e-20, 0.23157829, 0, -0.97281665, 0.57466125, 3.195835, 0.45805168)
+visible = true
+
+[node name="GrabPointHandRight5" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/Climbable" unique_id=357126044 instance=ExtResource("50_2s6xu")]
+transform = Transform3D(-0.99464726, 0, 0.10333046, -5.253486e-21, 1, 2.680951e-20, -0.10333043, 0, -0.9946474, -0.5922165, 3.212864, 0.53609467)
+visible = true
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Reference_point_floor/Q_FF/Path3D/Fettfang/Climbable" unique_id=710998458]
+transform = Transform3D(0.99999994, 1.6296363e-21, 2.0861626e-07, 3.3881316e-21, 1, -5.0821997e-21, -1.1920929e-07, -6.631705e-21, 0.99999976, -3.8146973e-06, 1.7864914, 0.19848633)
+shape = SubResource("BoxShape3D_3gbeg")
+debug_color = Color(0, 8.588706, 9.88248, 1)
+
 [node name="Q_VKB" type="Node3D" parent="Reference_point_floor" unique_id=319145845]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -78.87595, 0, 33.919582)
 
+[node name="Climbable2" parent="Reference_point_floor/Q_VKB" unique_id=1336528850 instance=ExtResource("48_apw4m")]
+transform = Transform3D(-0.6302558, 0, -0.77638745, 2.2066269e-14, 1.0000001, -1.7912971e-14, 0.7763874, -2.8421723e-14, -0.630256, 57.2296, 2.3547707, -9.976492)
+
+[node name="GrabPointHandLeft" parent="Reference_point_floor/Q_VKB/Climbable2" unique_id=254213034 instance=ExtResource("49_5sfkf")]
+transform = Transform3D(-0.9728165, 0, -0.23157823, -9.3370726e-21, 1, 2.4578392e-20, 0.23157829, 0, -0.97281665, 0.2528839, 1.3117943, 0.11636925)
+visible = true
+
+[node name="GrabPointHandRight" parent="Reference_point_floor/Q_VKB/Climbable2" unique_id=2113834250 instance=ExtResource("50_2s6xu")]
+transform = Transform3D(-0.99464726, 0, 0.10333046, -5.253486e-21, 1, 2.680951e-20, -0.10333043, 0, -0.9946474, -0.78918314, 1.3625565, 0.10700475)
+visible = true
+
+[node name="GrabPointHandLeft2" parent="Reference_point_floor/Q_VKB/Climbable2" unique_id=231746216 instance=ExtResource("49_5sfkf")]
+transform = Transform3D(-0.9728165, 0, -0.23157823, -9.3370726e-21, 1, 2.4578392e-20, 0.23157829, 0, -0.97281665, 0.2528839, 1.85429, 0.11636925)
+visible = true
+
+[node name="GrabPointHandRight2" parent="Reference_point_floor/Q_VKB/Climbable2" unique_id=332017259 instance=ExtResource("50_2s6xu")]
+transform = Transform3D(-0.99464726, 0, 0.10333046, -5.253486e-21, 1, 2.680951e-20, -0.10333043, 0, -0.9946474, -0.78918314, 1.8713188, 0.10700475)
+visible = true
+
+[node name="GrabPointHandLeft3" parent="Reference_point_floor/Q_VKB/Climbable2" unique_id=551370403 instance=ExtResource("49_5sfkf")]
+transform = Transform3D(-0.9728165, 0, -0.23157823, -9.3370726e-21, 1, 2.4578392e-20, 0.23157829, 0, -0.97281665, 0.25454566, 2.331791, 0.11984448)
+visible = true
+
+[node name="GrabPointHandRight3" parent="Reference_point_floor/Q_VKB/Climbable2" unique_id=2000737957 instance=ExtResource("50_2s6xu")]
+transform = Transform3D(-0.99464726, 0, 0.10333046, -5.253486e-21, 1, 2.680951e-20, -0.10333043, 0, -0.9946474, -0.78828746, 2.3488197, 0.09672337)
+visible = true
+
+[node name="GrabPointHandLeft4" parent="Reference_point_floor/Q_VKB/Climbable2" unique_id=1070455350 instance=ExtResource("49_5sfkf")]
+transform = Transform3D(-0.9728165, 0, -0.23157823, -9.3370726e-21, 1, 2.4578392e-20, 0.23157829, 0, -0.97281665, 0.26319468, 2.8127365, 0.12224789)
+visible = true
+
+[node name="GrabPointHandRight4" parent="Reference_point_floor/Q_VKB/Climbable2" unique_id=1822606679 instance=ExtResource("50_2s6xu")]
+transform = Transform3D(-0.99464726, 0, 0.10333046, -5.253486e-21, 1, 2.680951e-20, -0.10333043, 0, -0.9946474, -0.7908293, 2.8297653, 0.11005184)
+visible = true
+
+[node name="GrabPointHandLeft5" parent="Reference_point_floor/Q_VKB/Climbable2" unique_id=177866902 instance=ExtResource("49_5sfkf")]
+transform = Transform3D(-0.9728166, 0.21599202, -0.08352195, 0, 0.36066428, 0.932696, 0.23157829, 0.90734154, -0.35086024, 0.25113636, 2.8990853, 0.29639453)
+visible = true
+
+[node name="GrabPointHandRight5" parent="Reference_point_floor/Q_VKB/Climbable2" unique_id=411835445 instance=ExtResource("50_2s6xu")]
+transform = Transform3D(-0.9946473, -0.09969898, 0.027153045, -7.450581e-09, 0.26277864, 0.96485656, -0.10333043, 0.95969135, -0.26137212, -0.78212667, 2.856885, 0.38151005)
+visible = true
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Reference_point_floor/Q_VKB/Climbable2" unique_id=640099822]
+transform = Transform3D(1, 1.6296363e-21, 3.2782555e-07, 3.388127e-21, 1, -5.0821953e-21, -2.682209e-07, -6.6317057e-21, 0.99999994, -0.3488655, 1.7864914, 0.19848633)
+shape = SubResource("BoxShape3D_3gbeg")
+debug_color = Color(0, 8.588706, 9.88248, 1)
+
 [node name="Ladder" parent="Reference_point_floor/Q_VKB" unique_id=1900799973 instance=ExtResource("4_0nlau")]
 transform = Transform3D(-0.64256036, 0, -0.766235, 2.1777712e-14, 1.0000001, -1.8262688e-14, 0.766235, -2.8421723e-14, -0.6425605, 57.09131, 2.1336174, -10.439453)
+visible = false
 allowed_from_behind = false
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_VKB" unique_id=571374660]
@@ -2505,6 +2609,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.258194, 45.288044, 24.399
 
 [node name="ved1" type="CSGTorus3D" parent="SimpleGeometry/ED" unique_id=648372389]
 transform = Transform3D(0.16972786, 0, 0.985491, 0, 25, 0, -0.985491, 0, 0.16972786, 49.678913, 3.929821, -23.477474)
+visible = false
 use_collision = true
 collision_layer = 40960
 collision_mask = 0
@@ -2515,6 +2620,7 @@ smooth_faces = false
 
 [node name="ved2" type="CSGTorus3D" parent="SimpleGeometry/ED" unique_id=658905476]
 transform = Transform3D(0.16972786, 0, 0.985491, 0, 25, 0, -0.985491, 0, 0.16972786, 61.557983, 3.929821, -28.568504)
+visible = false
 use_collision = true
 collision_layer = 40960
 collision_mask = 0
@@ -2525,6 +2631,7 @@ smooth_faces = false
 
 [node name="ved3" type="CSGTorus3D" parent="SimpleGeometry/ED" unique_id=1151073448]
 transform = Transform3D(0.16972786, 0, 0.985491, 0, 25, 0, -0.985491, 0, 0.16972786, 62.946445, 3.929821, -41.064667)
+visible = false
 use_collision = true
 collision_layer = 40960
 collision_mask = 0
@@ -2535,6 +2642,7 @@ smooth_faces = false
 
 [node name="ned1" type="CSGTorus3D" parent="SimpleGeometry/ED" unique_id=810496488]
 transform = Transform3D(0.16972786, 0, 0.985491, 0, 25, 0, -0.985491, 0, 0.16972786, 51.39796, 3.929821, -35.510815)
+visible = false
 use_collision = true
 collision_layer = 40960
 collision_mask = 0
@@ -2581,6 +2689,7 @@ debug_color = Color(0.85882354, 0, 0.8784314, 1)
 
 [node name="bb1" type="CSGTorus3D" parent="SimpleGeometry/bb1" unique_id=1123674904]
 transform = Transform3D(1, 0, 0, 0, 3.14, 0, 0, 0, 1, -12.699265, 5.7036133, 18.825638)
+visible = false
 use_collision = true
 collision_layer = 40960
 collision_mask = 0
@@ -2602,6 +2711,7 @@ debug_color = Color(0.85882354, 0, 0.8784314, 1)
 
 [node name="bb2" type="CSGTorus3D" parent="SimpleGeometry/bb2" unique_id=1528947530]
 transform = Transform3D(1, 0, 0, 0, 3.14, 0, 0, 0, 1, -26.210747, 5.671093, -13.655523)
+visible = false
 use_collision = true
 collision_layer = 40960
 collision_mask = 0
@@ -2759,6 +2869,7 @@ debug_color = Color(0.85882354, 0, 0.8784314, 1)
 
 [node name="bb3" type="CSGTorus3D" parent="SimpleGeometry/msb" unique_id=1814241088]
 transform = Transform3D(-0.16972776, 0, -0.9854909, 0, 3.1399999, 0, 0.9854909, 0, -0.16972776, 0.034549713, -0.24294662, -0.031906128)
+visible = false
 use_collision = true
 collision_layer = 40960
 collision_mask = 0
