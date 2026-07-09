@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dxbn4bjol0i46" path="res://zones/hillersleben/scripts/nkb/ice_wedge.tscn" id="4_25xj1"]
 [ext_resource type="Script" uid="uid://cmmkdjodihp4u" path="res://zones/hillersleben/scripts/nkb/ice_breaker.gd" id="4_qn3oq"]
 [ext_resource type="Script" uid="uid://cxeqgg2dlr831" path="res://zones/hillersleben/scripts/nkb/ice_schrauben.gd" id="4_tattc"]
+[ext_resource type="Script" uid="uid://c6qt6kqkt2eng" path="res://clases/interaction/interaction_with_inventory_slot.gd" id="5_ph3et"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gk5e2"]
 size = Vector3(15.073364, 0.2368164, 1)
@@ -21,6 +22,10 @@ height = 10.333
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25xj1"]
 transparency = 1
 albedo_color = Color(0, 0.83137256, 1, 0.5411765)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_61dg2"]
+height = 10.762939
+radius = 0.33642578
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_25xj1"]
 radius = 0.8389219
@@ -54,7 +59,7 @@ update_position = false
 update_scale = false
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1582474527]
-transform = Transform3D(0.99999994, -1.007459e-28, 0, 0, 0.9999981, 0, 0, 0, 0.9999981, 0, 0, 0)
+transform = Transform3D(0.99999994, -1.00745895e-28, 0, 0, 0.99999803, 0, 0, 0, 0.99999803, 0, 0, 0)
 collision_layer = 32768
 collision_mask = 0
 
@@ -80,6 +85,18 @@ shape = SubResource("BoxShape3D_nw262")
 
 [node name="Ladder" parent="AnimatableBody3D" unique_id=2028809728 instance=ExtResource("3_nw262")]
 transform = Transform3D(0.102914, 0.015849613, -0.9945638, -1.862645e-09, 0.99987346, 0.015934205, 0.99469036, -0.0016398559, 0.102900974, 15.394993, -0.8512643, -1.0308279)
+allowed_from_behind = false
+allowed_backwards = false
+
+[node name="Ladder2" parent="AnimatableBody3D" unique_id=957998509 instance=ExtResource("3_nw262")]
+transform = Transform3D(0.9926207, 0.015849613, 0.120221294, -0.015931802, 0.9998736, -0.00027753902, -0.120210394, -0.0016398573, 0.99274695, 4.9055095, 0.20390725, -1.2820339)
+allowed_from_behind = false
+allowed_backwards = false
+
+[node name="Ladder3" parent="AnimatableBody3D" unique_id=1731694122 instance=ExtResource("3_nw262")]
+transform = Transform3D(0.9926207, 0.015849613, 0.120221294, -0.015931802, 0.9998736, -0.00027753902, -0.120210394, -0.0016398573, 0.99274695, 4.875235, -1.7059308, -1.2789017)
+allowed_from_behind = false
+allowed_backwards = false
 
 [node name="ice_schrauben" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=540472497]
 transform = Transform3D(-4.3711392e-08, 0.9990942, 0.042555727, -1.000001, -4.3671832e-08, -1.8601717e-09, 0, -0.042555768, 0.9990951, 7.3640223, -0.24088663, 0.4220594)
@@ -87,6 +104,14 @@ mesh = SubResource("CylinderMesh_nw262")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_25xj1")
 script = ExtResource("4_tattc")
+
+[node name="InteractionWithInventorySlotSelected" type="Area3D" parent="AnimatableBody3D/ice_schrauben" unique_id=879857581]
+script = ExtResource("5_ph3et")
+metadata/_custom_type_script = "uid://c6qt6kqkt2eng"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D/ice_schrauben/InteractionWithInventorySlotSelected" unique_id=458698086]
+transform = Transform3D(1, -1.602855e-15, -4.610976e-14, 1.6028872e-15, 1, 7.0033155e-07, 4.610976e-14, -7.0033155e-07, 1, 8.940697e-08, 0.0054736137, 5.9604645e-07)
+shape = SubResource("CylinderShape3D_61dg2")
 
 [node name="ice_breaker" type="Area3D" parent="AnimatableBody3D" unique_id=2016178268]
 unique_name_in_owner = true
