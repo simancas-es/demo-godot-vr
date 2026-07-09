@@ -58,6 +58,9 @@ surface_material_override/0 = SubResource("StandardMaterial3D_8ffd1")
 script = ExtResource("2_l1lif")
 reaction_id = 5
 remove_item_on_interaction = false
+special_hint_text = Dictionary[int, String]({
+5: "Remove ice [E]"
+})
 metadata/_custom_type_script = "uid://c6qt6kqkt2eng"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionWithInventorySlotSelected" unique_id=1989171668]
