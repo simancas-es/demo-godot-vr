@@ -2498,34 +2498,6 @@ transform = Transform3D(0.44355628, 0, -0.8962465, 0, 1, 0, 0.8962465, 0, 0.4435
 [node name="NotAvailableBlock12" parent="Blocked" unique_id=1711586093 instance=ExtResource("58_h3ac7")]
 transform = Transform3D(0.44355628, 0, -0.8962465, 0, 1, 0, 0.8962465, 0, 0.44355628, 9.716362, 2.0232391, 14.463917)
 
-[node name="BlockBHKW" type="Node3D" parent="Blocked" unique_id=1603846890]
-transform = Transform3D(-0.4306531, 0, 0.90251756, 0, 1, 0, -0.90251756, 0, -0.4306531, 33.590263, 0, 4.059888)
-visible = false
-
-[node name="NotAvailableBlock13" parent="Blocked/BlockBHKW" unique_id=1137487852 instance=ExtResource("58_h3ac7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-skeleton = NodePath("../..")
-
-[node name="NotAvailableBlock14" parent="Blocked/BlockBHKW" unique_id=739744280 instance=ExtResource("58_h3ac7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03143215, 1.0215645, -0.01867199)
-skeleton = NodePath("../..")
-
-[node name="NotAvailableBlock15" parent="Blocked/BlockBHKW" unique_id=2105247468 instance=ExtResource("58_h3ac7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03143215, 2.0232391, -0.01867199)
-skeleton = NodePath("../..")
-
-[node name="NotAvailableBlock16" parent="Blocked/BlockBHKW" unique_id=1442127676 instance=ExtResource("58_h3ac7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5345049, 0, 0.005097389)
-skeleton = NodePath("../..")
-
-[node name="NotAvailableBlock17" parent="Blocked/BlockBHKW" unique_id=1756009022 instance=ExtResource("58_h3ac7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5659342, 1.0215645, -0.013577461)
-skeleton = NodePath("../..")
-
-[node name="NotAvailableBlock18" parent="Blocked/BlockBHKW" unique_id=1066756404 instance=ExtResource("58_h3ac7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5659342, 2.0232391, -0.013577461)
-skeleton = NodePath("../..")
-
 [node name="SimpleGeometry" type="Node3D" parent="." unique_id=507916510]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.258194, 45.288044, 24.39973)
 
