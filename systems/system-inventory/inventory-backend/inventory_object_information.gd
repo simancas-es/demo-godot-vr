@@ -6,7 +6,7 @@ extends Resource
 @export var STACK_MAX : int = 1 ##Maximum number of items in stack
 @export var SEPARABLE : bool = false ##Whether it can be separated into stacks
 @export var DISAPPEARS_AT_0 : bool = false #Whether it disappears if count is 0
-
+@export var INTERACT_DISTANCE : float = 1.5 #Usable at X or less raycast meters 
 #TODO combinations
 @export var texture : Texture2D = null ##TODO Tool to just take picture from 3D
 @export var world_model : PackedScene = null ##Model used when generating or previewing the world pickup.

@@ -20,6 +20,7 @@
 [ext_resource type="Script" uid="uid://bb27t6hsjidrs" path="res://clases/fpv/fsm/mov_death.gd" id="17_2ykp4"]
 [ext_resource type="Script" uid="uid://cgnsbk378t0aq" path="res://systems/system-tasks/system_tasks_locator.gd" id="19_is72l"]
 [ext_resource type="Script" uid="uid://bnufa2qwfj73m" path="res://systems/system-minimap/minimap_tracker.gd" id="20_minimap"]
+[ext_resource type="Script" uid="uid://dy2m1pvy8p77b" path="res://clases/fpv/inventory_logic.gd" id="21_6mu4w"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8q5hm"]
 radius = 0.374904
@@ -252,3 +253,6 @@ script = ExtResource("14_is72l")
 script = ExtResource("19_is72l")
 locator_id = 1
 locator_group = 1
+
+[node name="InventoryLogic" type="Node" parent="." unique_id=2030684221]
+script = ExtResource("21_6mu4w")
