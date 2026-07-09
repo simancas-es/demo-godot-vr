@@ -30,6 +30,7 @@ func get_current_interactable_items() -> Array[Interaction]:
 func add_interactable(value : Interaction, array : Array[Interaction]) -> bool:
 	if not is_instance_valid(value) : return false
 	if not (value is Interaction) : return false
+	if value.disabled : return false
 	
 	var idx : int = array.find(value)
 	if idx != -1:

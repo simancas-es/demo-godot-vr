@@ -32,6 +32,7 @@ func on_activated(context: InteractionContext) -> void:
 			var error = pd.inventory.remove_at_selected(quantity)
 		if one_time:
 			queue_free()
+			disabled = true
 			monitorable = false
 			collision_layer = 0
 		else:

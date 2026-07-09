@@ -20,7 +20,7 @@ enum MODE{ ACTIVATE, LOOK, NOTLOOK}
 
 
 #Collision determined in collision mask
-
+var disabled : bool = false
 
 signal activated(context: InteractionContext) #Do something
 signal taken(context: InteractionContext)
