@@ -44,7 +44,6 @@
 [ext_resource type="Script" uid="uid://dowywdoia8in2" path="res://zones/hillersleben/scripts/tasks/bhkw/task_controller.gd" id="22_k4tj3"]
 [ext_resource type="PackedScene" uid="uid://bbcgtxp630e0v" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction.tscn" id="22_omxot"]
 [ext_resource type="Script" uid="uid://d0pgb0rqo2fad" path="res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_high.gd" id="23_8c1e7"]
-[ext_resource type="Script" uid="uid://c35twvphwf3u4" path="res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd" id="23_cqg2i"]
 [ext_resource type="Script" uid="uid://b7larpf5g2b1k" path="res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_low.gd" id="24_akmhy"]
 [ext_resource type="Script" uid="uid://cs1hlyd1cd34n" path="res://zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd" id="29_vj654"]
 [ext_resource type="PackedScene" uid="uid://51m38vn7lfp7" path="res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge_bhkw.tscn" id="30_m5fu3"]
@@ -69,6 +68,7 @@
 [ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="49_5sfkf"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="50_2s6xu"]
 [ext_resource type="Script" uid="uid://kxc3xnclvbil" path="res://zones/hillersleben/scripts/nkb/nkb_consumer.gd" id="52_5sfkf"]
+[ext_resource type="Script" uid="uid://0x6ihdxffl75" path="res://zones/hillersleben/scripts/hl_flow_model/init_setup.gd" id="57_5sfkf"]
 [ext_resource type="PackedScene" uid="uid://cvpmdoxt0gsjs" path="res://models/not_available_block.tscn" id="58_h3ac7"]
 [ext_resource type="PackedScene" uid="uid://o1ua0ngy160m" path="res://assets/zones/hillersleben/models/vorklärbecken/2026-05-19-Vorklärbecken.gltf" id="59_fvi1l"]
 [ext_resource type="PackedScene" uid="uid://igss4jfoxe80" path="res://assets/zones/hillersleben/models/mg-dekanter/2026-06-16-Pumpenraum.gltf" id="60_3q35u"]
@@ -148,14 +148,14 @@ size = Vector2(1.55, 3.715)
 
 [sub_resource type="Curve3D" id="Curve3D_w4u61"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.5, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.2, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
 
 [sub_resource type="Curve3D" id="Curve3D_edwb7"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.5, 0),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6.2, 0),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -2075,9 +2075,8 @@ overview_scene = ExtResource("3_ybcmd")
 script = ExtResource("8_du4yn")
 wasserrad_drehen = NodePath("../../Visuals/Referenz/wasserrad")
 
-[node name="Logik-NKB_Visual" type="Node" parent="FlowSimulation" unique_id=17142679]
-process_mode = 4
-script = ExtResource("23_cqg2i")
+[node name="init_setup" type="Node" parent="FlowSimulation" unique_id=856366288]
+script = ExtResource("57_5sfkf")
 
 [node name="FlowSimulationLabels" type="Node3D" parent="." unique_id=256407371]
 
