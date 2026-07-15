@@ -68,6 +68,7 @@
 [ext_resource type="PackedScene" uid="uid://cjyilbm4ucc7s" path="res://addons/godot-xr-tools/objects/climbable.tscn" id="48_apw4m"]
 [ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="49_5sfkf"]
 [ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="50_2s6xu"]
+[ext_resource type="Script" uid="uid://kxc3xnclvbil" path="res://zones/hillersleben/scripts/nkb/nkb_consumer.gd" id="52_5sfkf"]
 [ext_resource type="PackedScene" uid="uid://cvpmdoxt0gsjs" path="res://models/not_available_block.tscn" id="58_h3ac7"]
 [ext_resource type="PackedScene" uid="uid://o1ua0ngy160m" path="res://assets/zones/hillersleben/models/vorklärbecken/2026-05-19-Vorklärbecken.gltf" id="59_fvi1l"]
 [ext_resource type="PackedScene" uid="uid://igss4jfoxe80" path="res://assets/zones/hillersleben/models/mg-dekanter/2026-06-16-Pumpenraum.gltf" id="60_3q35u"]
@@ -2035,6 +2036,10 @@ shape = SubResource("BoxShape3D_d06k5")
 
 [node name="Q_NKB" type="Node3D" parent="Reference_point_floor" unique_id=593365126]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.87595, 9.640527e-13, 33.919586)
+script = ExtResource("52_5sfkf")
+
+[node name="TaskSequencer" parent="Reference_point_floor/Q_NKB" unique_id=1628535823 instance=ExtResource("5_cqg2i")]
+task_sequence = Array[int]([32])
 
 [node name="NKB_Unit" parent="Reference_point_floor/Q_NKB" unique_id=1239777647 instance=ExtResource("47_rmdoo")]
 transform = Transform3D(0.26388988, 8.077936e-28, 0.9645523, -1.3072137e-20, 0.99999946, 3.5763743e-21, -0.9645528, -1.3552527e-20, 0.26388973, -3.0832138, 1.9253883, 22.452095)

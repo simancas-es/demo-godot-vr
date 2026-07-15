@@ -4,7 +4,10 @@
 [ext_resource type="Script" uid="uid://c6qt6kqkt2eng" path="res://clases/interaction/interaction_with_inventory_slot.gd" id="2_l1lif"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qn3oq"]
-size = Vector3(3.2313232, 1.3477783, 3.6679688)
+size = Vector3(5, 1.3477783, 3.6679688)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_thmq3"]
+size = Vector3(5, 1.3477783, 1.8515625)
 
 [sub_resource type="PrismMesh" id="PrismMesh_tattc"]
 size = Vector3(5.6, 13.91, 1)
@@ -44,8 +47,13 @@ monitoring = false
 script = ExtResource("1_tb6cx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1230544795]
-transform = Transform3D(0.67386407, 0, -0.73885226, -4.0389678e-26, 0.99998885, -1.3086256e-25, 0.73884845, 1.4863402e-25, 0.6738543, 7.271082, -0.19813596, 7.4117703)
+transform = Transform3D(0.67386407, 0, -0.73885226, -4.0389678e-26, 0.99998885, -1.3086256e-25, 0.73884845, 1.4863402e-25, 0.6738543, 7.867006, -0.19813596, 8.065163)
 shape = SubResource("BoxShape3D_qn3oq")
+debug_color = Color(0.9882353, 0, 0.3254902, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=197217774]
+transform = Transform3D(0.67386407, 0, -0.73885226, -4.0389678e-26, 0.99998885, -1.3086256e-25, 0.73884845, 1.4863402e-25, 0.6738543, 4.355769, -0.19813596, 4.320214)
+shape = SubResource("BoxShape3D_thmq3")
 debug_color = Color(0.9882353, 0, 0.3254902, 1)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1672888789]

@@ -432,14 +432,14 @@
   {
 	"unit_id": "Q_HL_NKB_SCHNECKE_EIS",
 	"title": {
-	  "en": "Ice in Scum Screw at Secondary Clarifier",
-	  "de": "Eis in Förderschnecke im Nachklärbecken",
-	  "es": "Hielo en sinfín de flotantes en clarificador secundario"
+	  "en": "Ice in Secondary Clarifiers!",
+	  "de": "Eis in Nachklärbecken",
+	  "es": "Hielo en clarificadores secundarios"
 	},
 	"text": {
-	  "en": "Remove ice buildup in secondary clarifier scum screw.",
-	  "de": "Eisbildung in der Förderschnecke des Nachklärbeckens entfernen.",
-	  "es": "Elimina la acumulación de hielo en el sinfín del clarificador secundario."
+	  "en": "Remove ice buildup in secondary clarifiers. Use the red ice lance.",
+	  "de": "Eisbildung des Nachklärbeckens entfernen. Benutz die rote Eislanze",
+	  "es": "Elimina la acumulación de hielo en los clarificadores secundarios. Usa la lanza roja."
 	}
   },
   {

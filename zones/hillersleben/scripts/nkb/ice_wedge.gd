@@ -7,6 +7,8 @@ extends Area3D
 enum STATE {NORMAL, BROKEN}
 var current_state : STATE = STATE.NORMAL
 
+signal updated
+
 func _ready() -> void:
 	interaction.validated_item_interaction.connect(try_break)
 
@@ -14,7 +16,7 @@ func restore() -> void:
 	current_state = STATE.NORMAL
 	ice_wedge_mesh.visible = false
 	interaction.disabled = false
-	
+	updated.emit()	
 	
 func try_break() -> void:
 	if current_state == STATE.NORMAL:
@@ -23,4 +25,5 @@ func try_break() -> void:
 		interaction.disabled = true
 		pass
 	current_state = STATE.BROKEN
+	updated.emit()
 	pass

@@ -26,14 +26,14 @@ size = Vector3(0.75097656, 6.043335, 0.6896057)
 [sub_resource type="CylinderMesh" id="CylinderMesh_nw262"]
 top_radius = 0.3
 bottom_radius = 0.3
-height = 10.333
+height = 11.718
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_25xj1"]
 transparency = 1
 albedo_color = Color(0, 0.83137256, 1, 0.5411765)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_61dg2"]
-height = 10.762939
+height = 11.969788
 radius = 0.33642578
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_25xj1"]
@@ -68,7 +68,7 @@ update_position = false
 update_scale = false
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1582474527]
-transform = Transform3D(0.99999994, -1.0074582e-28, 0, 0, 0.9999973, 0, 0, 0, 0.9999973, 0, 0, 0)
+transform = Transform3D(0.99999994, -1.0074576e-28, 0, 0, 0.9999967, 0, 0, 0, 0.9999967, 0, 0, 0)
 collision_layer = 32768
 collision_mask = 0
 
@@ -453,7 +453,7 @@ allowed_from_behind = false
 allowed_backwards = false
 
 [node name="ice_schrauben" type="MeshInstance3D" parent="AnimatableBody3D" unique_id=540472497]
-transform = Transform3D(-4.3711392e-08, 0.9990942, 0.042555727, -1.000001, -4.3671832e-08, -1.8601717e-09, 0, -0.042555768, 0.9990951, 7.3640223, -0.24088663, 0.4220594)
+transform = Transform3D(-4.3711392e-08, 0.99909425, 0.042555727, -1.000001, -4.3671832e-08, -1.8601718e-09, 1.6155871e-27, -0.042555768, 0.99909514, 7.8317723, -0.24088664, 0.42205942)
 mesh = SubResource("CylinderMesh_nw262")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_25xj1")
@@ -470,7 +470,7 @@ special_hint_text = Dictionary[int, String]({
 metadata/_custom_type_script = "uid://c6qt6kqkt2eng"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D/ice_schrauben/InteractionWithInventorySlotSelected" unique_id=458698086]
-transform = Transform3D(1, -1.602855e-15, -4.610976e-14, 1.6028872e-15, 1, 7.0033155e-07, 4.610976e-14, -7.0033155e-07, 1, 8.940697e-08, 0.0054736137, 5.9604645e-07)
+transform = Transform3D(1, 1.9186544e-13, -5.3623372e-14, -2.8348797e-13, 1.0000032, 9.834766e-07, 5.463322e-14, -1.0170043e-06, 1.0000032, 8.940697e-08, 0.14997435, 6.556511e-07)
 shape = SubResource("CylinderShape3D_61dg2")
 
 [node name="ice_breaker" type="Area3D" parent="AnimatableBody3D" unique_id=2016178268]

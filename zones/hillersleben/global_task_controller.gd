@@ -12,10 +12,6 @@ extends Node
 ## The way tasks are calculated should be restructured, so that there is an event-bus of sorts that records
 ## Which actions need to be taken.
 
-## First the Vorstellung of the Wastewater treatment plant
-## security checkpoints
-## fence repair
-## warning temperature too high in sludge, less vorlaufwasser
 
 
 
@@ -23,14 +19,16 @@ const TASKID = SYSTEMTASKSSETTINGS.UNIT_ID
 
 #Requirements before we allow other task sequences to start.
 const req_vorstellung : Array[TASKID] = []
-const req_security : Array[TASKID] = [TASKID.Q_HL_SEE_GASSPEICHER]
+#const req_security : Array[TASKID] = [TASKID.Q_HL_SEE_GASSPEICHER] #Dropped because its almost a duplicate
 const req_fence : Array[TASKID] = [TASKID.Q_HL_SECURITYCHECK_ALL]
 const req_temperature : Array[TASKID] = [TASKID.Q_HL_FIXFENCE]
 const req_dekanter : Array[TASKID] = [TASKID.Q_HL_BHKW_HITEMP]
 const req_nh4 : Array[TASKID] = [TASKID.Q_HL_DEKFOERDERBAND_SPILL, TASKID.Q_HL_DEKFOERDERBAND_ENTLEEREN]
+const req_nkb : Array[TASKID] = []#[TASKID.Q_HL_SEE_GASSPEICHER]
 
 const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 
+## CONSUMERS - TASKS
 #HACK. TODO: make baseclass or ability
 @onready var consumer_vorstellung : CONSUMER = $"../Q_VORSTELLUNG/Sequencer_consumer_vorstellung"
 @onready var consumer_security : CONSUMER = $"../SECURITY_CHECKS/Sequencer_consumer"
@@ -39,15 +37,17 @@ const CONSUMER := preload("uid://cjrqcfgi4v8xn")
 @onready var consumer_bhkwtemp_low : CONSUMER = $"../Q_BHKW/Sequence_consumerLow"
 @onready var consumer_dekanter : CONSUMER = $"../Q_MG/Dekanter/DekanterConsumer"
 @onready var consumer_nh4 : CONSUMER = $"../Q_BB/bb_consumer"
+@onready var consumer_nkb : CONSUMER = $"../Q_NKB"
 
 ##Pairs
 @onready var pairs : Dictionary[CONSUMER, Array] = {
 	consumer_vorstellung : req_vorstellung,
-	consumer_security : req_security,
+	#consumer_security : req_security, #Dropped because its almost a duplicate
 	consumer_fence : req_fence,
 	consumer_bhkwtemp_high : req_temperature,
 	consumer_dekanter : req_dekanter,
-	consumer_nh4 : req_nh4
+	consumer_nh4 : req_nh4,
+	consumer_nkb: req_nkb
 	
 }
 
