@@ -22,7 +22,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="VirtualTour"
-config/version="0.3.4"
+config/version="0.3.5"
 run/main_scene="uid://1gnljh2uer8"
 config/features=PackedStringArray("4.6", "Mobile")
 boot_splash/bg_color=Color(0.13015828, 0.1481483, 0.21301624, 1)

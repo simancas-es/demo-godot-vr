@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bmi6kmxotoqyh"]
+
+[ext_resource type="PackedScene" uid="uid://dd0ttumjtbkc0" path="res://assets/inventory_objects/beaker_sampler/2026-07-15-Stichprobe.gltf" id="1_y671g"]
+
+[node name="BeakerSampler" type="Node3D" unique_id=1591487086]
+
+[node name="2026-07-15-Stichprobe" parent="." unique_id=2022437868 instance=ExtResource("1_y671g")]
