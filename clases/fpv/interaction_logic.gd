@@ -34,7 +34,8 @@ func add_interactable(value : Interaction, array : Array[Interaction]) -> bool:
 	
 	var idx : int = array.find(value)
 	if idx != -1:
-		array.remove_at(idx) # remove old position
+		#array.remove_at(idx) # remove old position
+		return false #HACK
 	array.push_front(value)
 	#
 	#if not value.property_list_changed.is_connected(sanitize_interactable.bind(array)):
@@ -52,10 +53,17 @@ func remove_interactable(value : Interaction, array : Array[Interaction]) -> boo
 		updated_interactables.emit()
 		return true
 	return false
+	
+func sanitize_arrays() -> void:
+	sanitize_interactable(_eye_interact)
+	sanitize_interactable(_area_interact)
+	
 ##Removes non monitorables
 func sanitize_interactable(array : Array[Interaction]) -> void:
+	var context = _create_context()
 	for it in array:
-		if not it.monitorable: remove_interactable(it, array)
+		if not it.monitorable or not it.is_available_with(context):
+			remove_interactable(it, array)
 	updated_interactables.emit()
 			
 func clear_interactables(array : Array[Interaction]) -> bool:
@@ -77,17 +85,27 @@ func _ready() -> void:
 	area_check.area_entered.connect(_update_area_collision)
 	area_check.area_exited.connect(_update_area_collision)
 	raycast_center.changed_collide.connect(_update_eye_collision)
+	raycast_center.changed_collides.connect(_on_rc_changed_collides)
 
 	area_check.killed_by.connect(player_killed_by.emit) #HACK
 
+func _on_rc_changed_collides(nodes : Array[Node]) -> void:
+	for n in nodes:
+		_update_eye_collision(n)
+	pass
+	
 func _update_eye_collision(node : Interaction) -> void:
 	#Update last selected
 	if node == null : #BUG
 		clear_interactables(_eye_interact) #TODO OPTIMIZE
 		updated_interactables.emit()
-	elif add_interactable(node, _eye_interact):
-		node.looked_at.emit(_create_context())
-		updated_interactables.emit()
+
+	else:
+		var context = _create_context()
+		if node.is_available_with(context):
+			if add_interactable(node, _eye_interact):
+				node.looked_at.emit(context)
+				updated_interactables.emit()
 
 func _update_area_collision(node : Interaction) -> void:
 	if area_check.overlaps_area(node): 
@@ -113,23 +131,21 @@ func interact() -> void:
 		var context := _create_context()
 		if  ENUMS.ACTION.INTERACT in item.actions:
 			item.activated.emit(context)
-			updated_interactables.emit()
-			return
-		if ENUMS.ACTION.TAKE in item.actions:
+		elif ENUMS.ACTION.TAKE in item.actions:
 			item.taken.emit(context) ##TODO take and activate actions
-			updated_interactables.emit()
-			return
-		if ENUMS.ACTION.REMOVE in item.actions:
+		elif ENUMS.ACTION.REMOVE in item.actions:
 			item.removed.emit(context)
-			updated_interactables.emit()
-			return
+		
+		updated_interactables.emit()
+		sanitize_arrays()
+		return
 		 
 	for item in _area_interact:
 		if is_instance_valid(item) and ENUMS.ACTION.INTERACT in item.actions:
 			item.activated.emit(_create_context())
-			updated_interactables.emit()
-			return
-
+	updated_interactables.emit()
+	sanitize_arrays()
+	return
 
 ##Listen to changes in the locale
 func _notification(what):

@@ -28,3 +28,5 @@ func _on_new_selected() -> void:
 		interaction_logic.raycast_center.target_position = Vector3(0, 0, -1.5) #TODO: better defaults
 			
 	pass
+	
+	interaction_logic.sanitize_arrays() #HACK

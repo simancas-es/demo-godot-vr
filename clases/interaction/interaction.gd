@@ -74,3 +74,8 @@ func get_hint_for_context(context: InteractionHintContextScript, action: ENUMS.A
 ##Override as needed
 func get_hint_name() -> String:
 	return tr(name)
+	
+func is_available_with(context : InteractionContext) -> bool:
+	if disabled: return false
+	
+	return true

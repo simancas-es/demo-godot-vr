@@ -5,32 +5,51 @@ class_name FPVENVRAYCAST
 
 #signal not_looking_at_anything
 signal changed_collide(node : Node)
+signal changed_collides(nodes : Array[Node])
  
-#Emit a signal whenever it changes. Allows only one collider?
-var _previous_collide : get = _get_previous_collide, set = _set_previous_collide
-
-func _get_previous_collide() -> Interaction:
-	if !is_instance_valid(_previous_collide): return null
-	return _previous_collide
-func _set_previous_collide(value) -> void:
-	if (value == null) and (_previous_collide == null): return
-	if value != _previous_collide: changed_collide.emit(value)
-	_previous_collide = value	
-
+var _previous_collides: Array[Node] = [] :
+	set(value):
+		_previous_collides = value
+	get():
+		return _previous_collides
 
 func check_collide(rc : RayCast3D):
-	if rc.is_colliding():
-		var collision = rc.get_collider()
-		if !is_instance_valid(self._previous_collide):
-			self._previous_collide = null
-		if collision != self._previous_collide:
-			if collision is Interaction: #TODO better
-				var collision_ : Interaction = collision
-				self._previous_collide = collision_
-	else:
-		#not_looking_at_anything.emit()
-		self._previous_collide = null
-	pass
+	if not rc.is_colliding():
+		changed_collide.emit(null) #HACK
+		return
 	
-func _process(_delta: float) -> void:
-	check_collide(self)
+	#HACK
+	var hits = get_all_interactions(rc)
+	if hits != _previous_collides:
+		changed_collides.emit(hits)
+		_previous_collides = hits
+	else:
+		changed_collides.emit(hits) #HACK
+		pass
+	pass
+
+func get_all_interactions(rc : RayCast3D) -> Array[Node]:
+	var space_state = get_world_3d().direct_space_state
+	var results: Array[Node] = []
+	var exclude: Array[RID] = []
+
+	var from = rc.global_position
+	var to = rc.to_global(rc.target_position)
+
+	while true:
+		var query := PhysicsRayQueryParameters3D.create(from, to)
+		query.exclude = exclude
+		query.collision_mask = rc.collision_mask
+		query.collide_with_areas = true
+		
+		var result = space_state.intersect_ray(query)
+		if result.is_empty():
+			break
+
+		var collider = result["collider"]		
+		if collider is Interaction:
+			results.append(collider)
+			
+		exclude.append(collider)
+
+	return results

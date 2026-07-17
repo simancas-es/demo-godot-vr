@@ -46,3 +46,10 @@ func on_activated(context: InteractionContext) -> void:
 	else:
 		failed_item_interaction.emit()
 	pass
+
+func is_available_with(context : InteractionContext) -> bool:
+	if not super.is_available_with(context) : return false
+	if context.get_inventory().get_selected_id() == reaction_id:
+		return true
+	else:
+		return false

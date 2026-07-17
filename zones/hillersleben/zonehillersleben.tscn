@@ -2063,6 +2063,7 @@ shape = SubResource("BoxShape3D_d06k5")
 
 [node name="Beaker_sampler" type="Area3D" parent="Reference_point_floor/Q_VKB" unique_id=1078723861]
 transform = Transform3D(-0.9051246, -0.36144546, 0.22384478, -0.3508747, 0.93239266, 0.08677421, -0.24007553, -5.409067e-14, -0.9707537, 58.903652, 2.6001244, -13.019396)
+collision_mask = 0
 script = ExtResource("9_cqg2i")
 item_id = 6
 qty = 1

@@ -34,5 +34,6 @@ func _on_lock_fpv(set_lock : bool) -> void:
 		
 func process_frame(_delta : float) -> StateBase:
 	fpv.rotate_body_and_camera_to_lookdir(gc.consume_look_delta())
+	raycast_center.check_collide(raycast_center) #HACK
 	return null
 	
