@@ -12,6 +12,7 @@ class_name InteractionWithInventorySlotSelected
 
 
 signal validated_item_interaction
+signal validated_item_interaction_with(context : InteractionContext)
 signal failed_item_interaction
 
 func _ready() -> void:
@@ -27,6 +28,7 @@ func on_activated(context: InteractionContext) -> void:
 	var qty = info.qty
 	if id == reaction_id and qty >= quantity:
 		validated_item_interaction.emit()
+		validated_item_interaction_with.emit(context)
 		var original_collision_layer = collision_layer
 		if remove_item_on_interaction:
 			var error = pd.inventory.remove_at_selected(quantity)
