@@ -66,6 +66,7 @@ enabled=PackedStringArray("res://addons/file_dialog_in_editor/plugin.cfg", "res:
 DIALOG_LOCK=""
 SYSTEMSPATIALCONCENTRATION=""
 IBC=""
+water_bb=""
 
 [input]
 
