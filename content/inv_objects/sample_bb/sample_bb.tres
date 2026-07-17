@@ -1,0 +1,15 @@
+[gd_resource type="Resource" format=3 uid="uid://y4y3p6ogdfot"]
+
+[ext_resource type="PackedScene" uid="uid://ce7y0vnrlcohn" path="res://content/inv_objects/beaker_filled/sample_bb.tscn" id="1_7ol2j"]
+[ext_resource type="Script" uid="uid://dwue6j575oyyx" path="res://systems/system-inventory/inventory-backend/inventory_object_information.gd" id="2_iuy3a"]
+[ext_resource type="Texture2D" uid="uid://n4yktmnnqc75" path="res://assets/inventory_objects/beaker_sampler/sample_2.png" id="3_7ol2j"]
+
+[resource]
+script = ExtResource("2_iuy3a")
+ID = 8
+STACK_MAX = 62
+DISAPPEARS_AT_0 = true
+texture = ExtResource("3_7ol2j")
+world_model = ExtResource("1_7ol2j")
+inspect_model = ExtResource("1_7ol2j")
+inspect_translations_path = "res://content/inv_objects/sample_bb/sample_bb.json"

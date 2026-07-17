@@ -1,0 +1,18 @@
+{
+	"de": {
+		"description": "Probenahme aus Belebungsbecken",
+		"name": "Probenahme aus Belebungsbecken"
+	},
+	"en": {
+		"description": "Sample taken from the aeration basin",
+		"name": "Aeration Basin Sample"
+	},
+	"es": {
+		"description": "Muestra del tanque de aireación",
+		"name": "Muestra del tanque de aireación"
+	},
+	"fr": {
+		"description": "Échantillon prélevé dans le bassin d’aération",
+		"name": "Échantillon du bassin d’aération"
+	}
+}

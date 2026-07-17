@@ -1,0 +1,18 @@
+{
+	"de": {
+		"description": "Probenahme aus Vorklärbecken",
+		"name": "Probenahme aus Vorklärbecken"
+	},
+	"en": {
+		"description": "Sample taken from the primary clarifier",
+		"name": "Primary Clarifier Sample"
+	},
+	"es": {
+		"description": "Muestra del clarificador primario",
+		"name": "Muestra del clarificador primario"
+	},
+	"fr": {
+		"description": "Échantillon prélevé dans le décanteur primaire",
+		"name": "Échantillon du décanteur primaire"
+	}
+}

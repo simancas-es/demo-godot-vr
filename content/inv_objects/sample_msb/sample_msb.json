@@ -1,0 +1,18 @@
+{
+	"de": {
+		"description": "Probenahme aus Ausgleichsbecken",
+		"name": "Probenahme aus Ausgleichsbecken"
+	},
+	"en": {
+		"description": "Sample taken from the equalization basin",
+		"name": "Equalization Basin Sample"
+	},
+	"es": {
+		"description": "Muestra del tanque de igualación",
+		"name": "Muestra del tanque de igualación"
+	},
+	"fr": {
+		"description": "Échantillon prélevé dans le bassin d'egalisation",
+		"name": "Échantillon du bassin d'egalisation"
+	}
+}

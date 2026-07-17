@@ -1,0 +1,18 @@
+{
+	"de": {
+		"description": "Probenahme aus Nachklärbecken",
+		"name": "Probenahme aus Nachklärbecken"
+	},
+	"en": {
+		"description": "Sample taken from the secondary clarifier",
+		"name": "Secondary Clarifier Sample"
+	},
+	"es": {
+		"description": "Muestra del clarificador secundario",
+		"name": "Muestra del clarificador secundario"
+	},
+	"fr": {
+		"description": "Échantillon prélevé dans le décanteur secondaire",
+		"name": "Échantillon du décanteur secondaire"
+	}
+}

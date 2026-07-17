@@ -1,14 +1,16 @@
 [gd_resource type="Resource" format=3 uid="uid://culvxs2kno3rm"]
 
-[ext_resource type="PackedScene" uid="uid://cr074117h1x7y" path="res://content/inv_objects/default_model.tscn" id="1_4a0tu"]
+[ext_resource type="PackedScene" uid="uid://bmi6kmxotoqyh" path="res://content/inv_objects/beaker_sampler/beaker_sampler.tscn" id="1_4a0tu"]
 [ext_resource type="Script" uid="uid://dwue6j575oyyx" path="res://systems/system-inventory/inventory-backend/inventory_object_information.gd" id="2_nsovg"]
-[ext_resource type="Texture2D" uid="uid://deflmw2upxouw" path="res://content/inv_objects/default_icon.png" id="3_prppa"]
+[ext_resource type="Texture2D" uid="uid://b7kc1p8v6nba8" path="res://assets/inventory_objects/beaker_sampler/default_icon.png" id="3_nsovg"]
 
 [resource]
 script = ExtResource("2_nsovg")
 ID = 6
 DISAPPEARS_AT_0 = true
-texture = ExtResource("3_prppa")
+INTERACT_DISTANCE = 3.0
+texture = ExtResource("3_nsovg")
 world_model = ExtResource("1_4a0tu")
 inspect_model = ExtResource("1_4a0tu")
 inspect_translations_path = "res://content/inv_objects/beaker_sampler/beaker_sampler.json"
+qty_string = 1

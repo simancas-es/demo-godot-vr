@@ -1,18 +1,18 @@
 {
-	"en": {
-		"name": "Beaker Sampler",
-		"description": "TODO: Describe Beaker Sampler."
-	},
 	"de": {
-		"name": "Beaker Sampler",
-		"description": "TODO: Describe Beaker Sampler."
+		"description": "Ein Becher an einer Stange. Benutz es um Probenahme aus den verschiedenen Becken zu nehmen.",
+		"name": "Probenahmestange"
+	},
+	"en": {
+		"description": "Beaker attached to a pole. Use it to take samples from the different basins.",
+		"name": "Sampling Beaker"
 	},
 	"es": {
-		"name": "Beaker Sampler",
-		"description": "TODO: Describe Beaker Sampler."
+		"description": "Un vaso de precipitados en un palo. Úsalo para tomar muestras de los diferentes tanques.",
+		"name": "Pértiga de muestreo"
 	},
 	"fr": {
-		"name": "Beaker Sampler",
-		"description": "TODO: Describe Beaker Sampler."
+		"description": "Perche d’échantillonnage...",
+		"name": "Perche d’échantillonnage"
 	}
 }
