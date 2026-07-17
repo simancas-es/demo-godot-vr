@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func on_validate(context : InteractionContext) -> void:
 	#Check inventory space
-	var inv = context.get_inventory()
+	var inv := context.get_inventory()
 	var result = inv.add_item(which_sample, qty) #TODO check for multiple additions.
 	if result != inv.ERROR.SUCCESS:
 		pass

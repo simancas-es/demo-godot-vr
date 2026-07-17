@@ -63,7 +63,7 @@ func add_item(object_id : INVENTORYSETTINGS.ID, qty : int) -> ERROR:
 		if i_obj == null : continue
 		if i_obj.id == object_id:
 			var i_qty = array_test[i].qty
-			var add_to_existing_slot = min(qty - i_qty, max_stack - i_qty)
+			var add_to_existing_slot = min(qty, max_stack - i_qty)
 			array_test[i].qty += add_to_existing_slot
 			qty -= add_to_existing_slot
 			if add_to_existing_slot > 0 : idx_modified[i] = true

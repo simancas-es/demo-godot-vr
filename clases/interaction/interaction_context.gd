@@ -1,6 +1,8 @@
 extends RefCounted
 class_name InteractionContext
 
+const Inventory := INVENTORY_UIDCLASSREF.Inventory
+
 enum SOURCE_KIND { UNKNOWN, FPV, COMPATIBILITY, TEST }
 
 var playerdata: PlayerData = null
@@ -31,7 +33,7 @@ static func compatibility(p_source: Object = null, p_label: StringName = &"compa
 func has_playerdata() -> bool:
 	return playerdata != null
 
-func get_inventory():
+func get_inventory() -> Inventory:
 	if playerdata == null:
 		return null
 	return playerdata.get_inventory()
