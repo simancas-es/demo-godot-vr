@@ -1,0 +1,202 @@
+[gd_scene format=4 uid="uid://p45xmeq4wfc2"]
+
+[ext_resource type="Script" uid="uid://chcrq4anji11l" path="res://XR/scenes/doors/hinged_door_api.gd" id="1_goonm"]
+[ext_resource type="Script" uid="uid://jc0js3dq6nue" path="res://XR/scenes/doors/hinged_door_body.gd" id="2_a0yf1"]
+[ext_resource type="Texture2D" uid="uid://b45hcm677wa3j" path="res://assets/zones/hillersleben/models/Referenz/Betriebsgebaeude-Tuer-2.jpg" id="3_a0yf1"]
+[ext_resource type="Texture2D" uid="uid://c8s05kuirbsse" path="res://assets/zones/hillersleben/models/Referenz/Roughness-05.png" id="4_h78xd"]
+[ext_resource type="PackedScene" uid="uid://ddym7kilhtyq2" path="res://XR/scenes/doors/fixed_hand_right.tscn" id="4_j6c7g"]
+[ext_resource type="PackedScene" uid="uid://bok2ywfo8jipb" path="res://XR/scenes/doors/fixed_hand_left.tscn" id="5_okgfu"]
+[ext_resource type="Script" uid="uid://bijfwo0eovvp7" path="res://XR/scenes/doors/door_handle_grab.gd" id="6_gx2vk"]
+[ext_resource type="Script" uid="uid://ddqprfdnejyt4" path="res://XR/scenes/doors/debug_label.gd" id="7_o7v35"]
+[ext_resource type="Script" uid="uid://c3c4tr2cpwvtn" path="res://XR/scenes/doors/door_sounds.gd" id="8_v0mbi"]
+[ext_resource type="AudioStream" uid="uid://dhl4q7uuxofen" path="res://assets/audio/freesound.org/12738__leady__door-handle-turn.mp3" id="9_qykbn"]
+[ext_resource type="AudioStream" uid="uid://dwfqxn4ysxa7c" path="res://assets/audio/freesound.org/431118__inspectorj__door-front-closing-a.mp3" id="10_ksre7"]
+
+[sub_resource type="BoxShape3D" id="1"]
+size = Vector3(1.0031738, 2.0717773, 0.019854736)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5t20n"]
+resource_name = "Tuer-Betriebsgebaeude-2"
+cull_mode = 2
+albedo_texture = ExtResource("3_a0yf1")
+metallic_texture = ExtResource("4_h78xd")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("4_h78xd")
+roughness_texture_channel = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ama47"]
+_surfaces = [{
+"aabb": AABB(-2.5361125, -0.0023389442, -0.594301, 2.5361125, 0.28052327, 0.59430194),
+"format": 34359742465,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAAEAAEACAAAAAIABAAJAAEACQACAAEAAAAKAAQABAAKAAkACAALAAAAAAALAAoAAgADAAgACQADAAIAAwALAAgACgAFAAkAAwAJAAUACwAHAAoACgAHAAUAAwAGAAsACwAGAAcABgADAAUABgAFAAcA"),
+"lods": [0.00030958408, PackedByteArray("AAABAAIAAQADAAIAAwAAAAIAAAAEAAEAAwABAAUABAAFAAEAAwAGAAAAAAAGAAQABgADAAUABAAHAAUABgAFAAcABgAHAAQA")],
+"name": "Tuer-Betriebsgebaeude-2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("q08iwPlIGbtvH341AAAAAPRIGbscJBi/q08iwPlIGbvkKRa/q08iwC1ujj5URha/AAAAAPRIGbtvH341QHXdry1ujj69pRe/q08iwC1ujj5vH341QHXdry1ujj5vH341q08iwE13GTtuKha/AAAAAFN3GTsEIhi/AAAAAFN3GTtvH341q08iwE13GTtvH341")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a0yf1"]
+resource_name = "Referenz_Plane_518"
+_surfaces = [{
+"aabb": AABB(-2.5361125, -0.0023389442, -0.594301, 2.5361125, 0.28052327, 0.59430194),
+"attribute_data": PackedByteArray("OOd/PwAA3bj1Xf0+dAOAP+1cAD8AAN24Oud/P3QDgD/3L8Y5dAOAP7DlAD90A4A/BVEBP3QDgD/3L8Y5dAOAP1s7xjkAAN24WzvGOQAA3bj3L8Y5dAOAP/cvxjl0A4A/OOd/PwAA3bifNP4+dAOAPzrnfz90A4A/xUQAPwAA3bh0dv8+AADduFs7xjkAAN24JUb/PgAA3bhbO8Y5AADduMVEAD8AAN249V39PnQDgD+fNP4+dAOAPyVG/z4AAN249y/GOXQDgD8+TwE/dAOAP/cvxjl0A4A/WzvGOQAA3bhbO8Y5AADduA9H/z4AAN24Pk8BP3QDgD8PR/8+AADduA=="),
+"format": 34359742487,
+"index_count": 60,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAGAAFABkAGAAHAAUABAAYABkABAAZAAYACAAaAAoACAAbABoAGwALABoAGwAJAAsADAANAA4ADAAPAA0AEAAcAB0AEAATABwAHQAcABEAHQARABIAFAAeABYAHgAUABcAFwAUAB8AHgAXABUA"),
+"lods": [0.00030958408, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACQALAAoADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFQAUABcA")],
+"material": SubResource("StandardMaterial3D_5t20n"),
+"name": "Tuer-Betriebsgebaeude-2",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 32,
+"vertex_data": PackedByteArray("q08iwPlIGbtvH341AAAAAPRIGbscJBi/q08iwPlIGbvkKRa/AAAAAPRIGbtvH341AAAAAPRIGbtvH341QHXdry1ujj69pRe/AAAAAPRIGbscJBi/QHXdry1ujj5vH341q08iwPlIGbtvH341q08iwC1ujj5vH341AAAAAPRIGbtvH341QHXdry1ujj5vH341q08iwC1ujj5vH341QHXdry1ujj69pRe/QHXdry1ujj5vH341q08iwC1ujj5URha/q08iwC1ujj5URha/q08iwPlIGbtvH341q08iwPlIGbvkKRa/q08iwC1ujj5vH341q08iwC1ujj5URha/AAAAAPRIGbscJBi/QHXdry1ujj69pRe/q08iwPlIGbvkKRa/AAAAAFN3GTtvH341AAAAAFN3GTsEIhi/AAAAAFN3GTtvH341q08iwE13GTtvH341q08iwE13GTtvH341q08iwE13GTtuKha/AAAAAFN3GTsEIhi/q08iwE13GTtuKha//38AAP9//7//fwAA/3//v/9/AAD/f/+//38AAP9//7////9/////v////3////+/////f////7////9/////v/9//3////8//3//f////z//f/9/////P/9//3////8//3////9//z//f////3//P/9/////f/8//3////9//z8AAP9/////vwAA/3////+/AAD/f////78AAP9/////v1gAqv//fywAWACq//9/LABYAKr/WIAAgFgAqv//fywA////f////7////9/////v/9//3////8//3//f////z8AAP9/////vwAA/3////+/WACq//9/LABYAKr/////vw==")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_ama47")
+
+[sub_resource type="BoxMesh" id="2"]
+size = Vector3(1, 2.4, 0.1)
+
+[sub_resource type="BoxMesh" id="3"]
+size = Vector3(0.02, 0.02, 0.2)
+
+[sub_resource type="BoxMesh" id="4"]
+size = Vector3(0.1, 0.02, 0.02)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ogaye"]
+size = Vector3(0.1, 0.1, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ogaye"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="HingedDoor" type="Node3D" unique_id=426147015]
+script = ExtResource("1_goonm")
+door_minimum_angle = -100.0
+
+[node name="HingedDoorBody" type="RigidBody3D" parent="." unique_id=1557434283 node_paths=PackedStringArray("DoorHandleGrab", "DoorHandleOrigin", "Hinge", "DoorHandleModel")]
+collision_layer = 536870912
+collision_mask = 0
+mass = 50.0
+gravity_scale = 0.0
+can_sleep = false
+script = ExtResource("2_a0yf1")
+DoorHandleGrab = NodePath("DoorHandleOrigin/DoorHandleGrab")
+DoorHandleOrigin = NodePath("DoorHandleOrigin")
+Hinge = NodePath("../HingeJoint3D")
+DoorHandleModel = NodePath("DoorHandleOrigin/DoorHandleModel")
+handle_turn_threshold_deg = 60.0
+
+[node name="DoorBodyShape" type="CollisionShape3D" parent="HingedDoorBody" unique_id=1795742897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5015869, 1.0718262, -0.002236939)
+shape = SubResource("1")
+debug_color = Color(0, 0.6392157, 0.34901962, 1)
+
+[node name="Node3D" type="Node3D" parent="HingedDoorBody" unique_id=1909131935]
+transform = Transform3D(-0.0003489693, 0, -0.8349999, 0, 0.896, 0, 0.99999994, 0, -0.00029138935, 0, 0, 0)
+
+[node name="bg_tür-02_001" type="MeshInstance3D" parent="HingedDoorBody/Node3D" unique_id=726354043]
+transform = Transform3D(-5.1981672e-08, 0.14456847, 0, -1.1892021, -6.3192886e-09, 0, 0, 0, 2.3899755, -0.015632134, -0.022714764, 0.092613295)
+mesh = SubResource("ArrayMesh_a0yf1")
+skeleton = NodePath("")
+
+[node name="DoorBodyMesh" type="MeshInstance3D" parent="HingedDoorBody" unique_id=238895656]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.2, 0)
+visible = false
+mesh = SubResource("2")
+
+[node name="DoorHandleOrigin" type="Node3D" parent="HingedDoorBody" unique_id=455074435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0589409, 1.2032626, 0)
+
+[node name="DoorHandleModel" type="Node3D" parent="HingedDoorBody/DoorHandleOrigin" unique_id=1526435321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00131702, 0.100484, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel" unique_id=901920605]
+mesh = SubResource("3")
+
+[node name="Handle1" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel" unique_id=862148822]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04, 0, 0.09)
+mesh = SubResource("4")
+
+[node name="FHRight" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle1" unique_id=685342924 instance=ExtResource("4_j6c7g")]
+transform = Transform3D(-0.156165, -0.959524, 0.234362, 0.987013, -0.160639, 3.67691e-09, 0.0376477, 0.231318, 0.972149, -0.0118994, 0.0196892, 0.0657559)
+visible = false
+
+[node name="FHLeft" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle1" unique_id=737423997 instance=ExtResource("5_okgfu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0209175, 0.031698)
+visible = false
+
+[node name="Handle2" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel" unique_id=844693423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04, 0, -0.09)
+mesh = SubResource("4")
+
+[node name="FHLeft" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle2" unique_id=1359372112 instance=ExtResource("5_okgfu")]
+transform = Transform3D(-0.9632, 0, 0.268785, 0, 1, 0, -0.268785, 0, -0.9632, -0.0286745, 0.0209175, -0.0362553)
+visible = false
+
+[node name="FHRight" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleModel/Handle2" unique_id=853260287 instance=ExtResource("4_j6c7g")]
+transform = Transform3D(0.244126, 0.968114, 0.0561875, 0.969646, -0.244512, 0, 0.0137385, 0.0544821, -0.99842, -0.00411975, 0.0214645, -0.0854271)
+visible = false
+
+[node name="DoorHandleGrab" type="RigidBody3D" parent="HingedDoorBody/DoorHandleOrigin" unique_id=1691376998 node_paths=PackedStringArray("pick_01", "pick_02", "pick_01_hand_right", "pick_01_hand_left", "pick_02_hand_right", "pick_02_hand_left")]
+collision_layer = 1073741824
+collision_mask = 0
+mass = 0.001
+gravity_scale = 0.0
+sleeping = true
+lock_rotation = true
+freeze = true
+script = ExtResource("6_gx2vk")
+snap_distance = 0.6
+pick_01 = NodePath("../DoorHandleModel/Handle1")
+pick_02 = NodePath("../DoorHandleModel/Handle2")
+pick_01_hand_right = NodePath("../DoorHandleModel/Handle1/FHRight")
+pick_01_hand_left = NodePath("../DoorHandleModel/Handle1/FHLeft")
+pick_02_hand_right = NodePath("../DoorHandleModel/Handle2/FHRight")
+pick_02_hand_left = NodePath("../DoorHandleModel/Handle2/FHLeft")
+picked_up_layer = 2147483648
+picked_by_exclude = "beltsnap"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleGrab" unique_id=1702534473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0438764, 0.0958737, -0.0109467)
+shape = SubResource("BoxShape3D_ogaye")
+debug_color = Color(1, 0.25882354, 0.4, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HingedDoorBody/DoorHandleOrigin/DoorHandleGrab" unique_id=1308461766]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0977987, 0.0287403)
+visible = false
+mesh = SubResource("BoxMesh_ogaye")
+
+[node name="Label3D" type="Label3D" parent="HingedDoorBody" unique_id=1333459031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02832377, 1.1575801, 5.9604645e-08)
+no_depth_test = true
+text = "Current angle: xx.x
+Target angle: xx.x"
+font_size = 20
+horizontal_alignment = 0
+script = ExtResource("7_o7v35")
+debug = true
+
+[node name="DoorSounds" type="Node3D" parent="." unique_id=829489163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("8_v0mbi")
+
+[node name="DoorOpened" type="AudioStreamPlayer3D" parent="DoorSounds" unique_id=1145053447]
+stream = ExtResource("9_qykbn")
+
+[node name="DoorClosed" type="AudioStreamPlayer3D" parent="DoorSounds" unique_id=383810967]
+stream = ExtResource("10_ksre7")
+
+[node name="HingeJoint3D" type="HingeJoint3D" parent="." unique_id=962161884]
+transform = Transform3D(-4.3711385e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 0, 0, 0, 0)
+node_a = NodePath("../HingedDoorBody")
+node_b = NodePath("../StaticBody3D")
+angular_limit/enable = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1388901241]
+
+[connection signal="door_closed" from="." to="DoorSounds" method="_on_door_closed"]
+[connection signal="door_opened" from="." to="DoorSounds" method="_on_door_opened"]

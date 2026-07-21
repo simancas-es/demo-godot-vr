@@ -23,6 +23,8 @@
 [ext_resource type="PackedScene" uid="uid://c30j781b35eik" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn" id="19_gyhl1"]
 [ext_resource type="PackedScene" uid="uid://cx4lh6xxcfd3t" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn" id="20_8e2ce"]
 [ext_resource type="PackedScene" uid="uid://d1dk6he6swidm" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn" id="21_5m8dp"]
+[ext_resource type="PackedScene" uid="uid://p45xmeq4wfc2" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_recht.tscn" id="21_xmg2b"]
+[ext_resource type="PackedScene" uid="uid://dgg13ld62e8bl" path="res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_link.tscn" id="22_fx8ep"]
 [ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="23_gn0sx"]
 [ext_resource type="Animation" uid="uid://dqa0h82y3qn1t" path="res://addons/godot-xr-tools/hands/animations/left/Grip 1.res" id="24_tegc5"]
 [ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="25_rpwcs"]
@@ -108,8 +110,7 @@ radius = 13.903809
 script = ExtResource("1_g30re")
 metadata/_custom_type_script = "uid://177gygw2xqqu"
 
-[node name="Zonehillersleben" parent="." unique_id=987701965 instance=ExtResource("4_ylnmi")]
-metadata/_edit_lock_ = true
+[node name="Zonehillersleben" parent="." unique_id=1567970775 instance=ExtResource("4_ylnmi")]
 
 [node name="XR_ADAPTER" type="Node" parent="." unique_id=1209909459 node_paths=PackedStringArray("basezone")]
 script = ExtResource("2_qeqsy")
@@ -234,6 +235,12 @@ door_locked = true
 
 [node name="mg_tür_bhkw_main" parent="Türen" unique_id=1022413571 instance=ExtResource("21_5m8dp")]
 transform = Transform3D(0.41653466, 0, -0.9091199, 0, 1, 0, 0.9091199, 0, 0.41653466, 9.132837, 48.5761, 10.2134)
+
+[node name="bg_rechen_tür_recht" parent="Türen" unique_id=426147015 instance=ExtResource("21_xmg2b")]
+transform = Transform3D(-0.425574, 0, 0.9049236, 0, 1, 0, -0.9049236, 0, -0.425574, -40.37392, 51.652336, 19.616776)
+
+[node name="bg_rechen_tür_link" parent="Türen" unique_id=423100149 instance=ExtResource("22_fx8ep")]
+transform = Transform3D(0.4104801, 0, -0.9118695, 0, 1, 0, 0.9118695, 0, 0.4104801, -41.330498, 51.645153, 17.565792)
 
 [node name="LEITER" type="Node3D" parent="." unique_id=545633224]
 
