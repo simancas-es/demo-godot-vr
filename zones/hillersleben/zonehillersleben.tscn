@@ -2944,7 +2944,7 @@ collision_mask = 25214977
 y_degrees_opened = -120.0
 
 [node name="DoorCollisionShape3D" parent="Maschinengebäude/door_gebläse_1" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 1.3953857, -0.8106613)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.626632, 49.90561, 22.557213)
 
 [node name="DoorCollisionShape3D2" parent="Maschinengebäude/door_gebläse_1/StaticBody3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 1.3417969, -0.76065636)
@@ -3714,13 +3714,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.035243988, 0, -0.009279251)
 transform = Transform3D(0.63771975, 0, 0.7702685, 0, 1, 0, -0.7702685, 0, 0.63771975, -60.024357, 50.357533, 14.85221)
 
 [node name="psb1" type="CSGTorus3D" parent="Visuals/2026-05-19-Vorklärbecken" unique_id=724074036]
-transform = Transform3D(0.5650389, 0, -0.82506424, 0, 25, 0, 0.82506424, 0, 0.5650389, -0.013751984, -2.443554, -0.0049743652)
+transform = Transform3D(0.5650389, 0, -0.82506424, 0, 17.4, 0, 0.82506424, 0, 0.5650389, -0.013751984, -2.443554, -0.0049743652)
 visible = false
 use_collision = true
 collision_layer = 49152
 collision_mask = 0
-inner_radius = 9.024092
-outer_radius = 9.41161
+inner_radius = 9.03201
+outer_radius = 9.587348
 sides = 32
 smooth_faces = false
 
