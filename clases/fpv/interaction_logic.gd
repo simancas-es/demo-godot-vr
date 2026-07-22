@@ -107,7 +107,8 @@ func _update_eye_collision(node : Interaction) -> void:
 				node.looked_at.emit(context)
 				updated_interactables.emit()
 
-func _update_area_collision(node : Interaction) -> void:
+func _update_area_collision(node : Area3D) -> void:
+	if not is_instance_of(node, Interaction): return
 	if area_check.overlaps_area(node): 
 		if add_interactable(node, _area_interact):
 			node.entered_area.emit()

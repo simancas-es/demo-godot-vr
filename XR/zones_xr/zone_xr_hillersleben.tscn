@@ -140,7 +140,7 @@ target_scene = "uid://cakq3l4d46c36"
 labeltext_text = "To the Hochschule"
 
 [node name="XrVan3" parent="." unique_id=1499496112 instance=ExtResource("5_g30re")]
-transform = Transform3D(0.1146077, 0, 0.99341094, 0.25572333, 0.9662998, -0.029502252, -0.95993274, 0.25741953, 0.11074539, -105.48405, 49.293438, 71.963135)
+transform = Transform3D(0.113630354, 0.068243355, 0.9911766, 0.37946934, 0.91902196, -0.10677852, -0.9182001, 0.38825443, 0.078532524, -105.46447, 48.686558, 71.81265)
 target_scene = "uid://cakq3l4d46c36"
 labeltext_text = "To the Hochschule"
 
@@ -825,15 +825,6 @@ shape = SubResource("BoxShape3D_kaumj")
 transform = Transform3D(-0.90123, -0.2882631, 0.32355678, -0.27130803, 0.95755124, 0.09740417, -0.33790022, 0, -0.94118196, -51.335526, 51.894936, 18.740929)
 script = ExtResource("34_bf5gv")
 item_id = 6
-enabled = null
-press_to_hold = null
-picked_up_layer = null
-release_mode = null
-ranged_grab_method = null
-second_hand_grab = null
-ranged_grab_speed = null
-picked_by_exclude = null
-picked_by_require = null
 
 [node name="BeakerSampler" parent="Probenahmestange" unique_id=1591487086 instance=ExtResource("34_ffxoy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7252903e-09, -0.62094057, -1.6763806e-08)
