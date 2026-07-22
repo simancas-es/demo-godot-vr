@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://d2td5hwh2oluy" path="res://XR/scenes/interactables/objects/wheel_general.tscn" id="6_6ogwx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eru1o"]
-size = Vector3(0.12622058, 0.067627, 0.24511719)
+size = Vector3(0.2250976, 0.067627, 0.43737793)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ja30v"]
-size = Vector3(0.13909906, 0.0629883, 0.23632813)
+size = Vector3(0.22837828, 0.0629883, 0.4984131)
 
 [node name="ValveXRExtended" type="Node3D" unique_id=845928422 node_paths=PackedStringArray("leftinter", "rightinter")]
 script = ExtResource("1_mcxtr")
