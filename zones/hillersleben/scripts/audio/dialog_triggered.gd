@@ -10,8 +10,10 @@ const CUTOUT_DIALOG := preload("uid://go8lcfvxa3df")
 	set(value):
 		cutout_texture = value
 		_apply_texture()
-		
-	
+@export_multiline var description: String = "Welcome to the WWTP Hillersleben!"	:
+	set(value):
+		description = value
+		_apply_text()
 	
 const DIALOGUI := preload("uid://cf711ixjimsdh")
 @onready var blase_mesh : MeshInstance3D = $pivot/Sprite3D_Blase/MeshInstance3D
@@ -22,6 +24,7 @@ signal triggered
 
 func _ready() -> void:
 	_apply_texture()
+	_apply_text()
 	self.add_to_group("CUTOUT_DIALOG")
 	var cutouts = get_tree().get_nodes_in_group("CUTOUT_DIALOG")
 	for c in cutouts: #HACK self update so that only one is active at a time
@@ -39,12 +42,20 @@ func _ready() -> void:
 	
 ## Interaction with bubble control.
 func _on_detected_interaction(position, event) -> void:
+	if position == null:
+		var exit_event = InputEventMouseMotion.new()
+		exit_event.position = Vector2(-1, -1)
+		svp.push_input(exit_event)
+		return
+
 	var local = blase_mesh.to_local(position)
 	var plane_size = blase_mesh.mesh.size
+
 	var uv = Vector2(
-					(local.x / plane_size.x) + 0.5,
-					0.5 - (local.y / plane_size.y)
-				)
+		(local.x / plane_size.x) + 0.5,
+		0.5 - (local.y / plane_size.y)
+	)
+
 	var vp_pos = uv * Vector2(svp.size)
 
 	var ev = event.duplicate()
@@ -72,17 +83,22 @@ func set_sprite_height(sprite: Sprite3D, target_height_px: float = 200.0):
 	var scale_factor = target_height_px / tex_height	
 	sprite.scale = Vector3(scale_factor, scale_factor, scale_factor)
 	sprite.offset.x = -sprite.texture.get_width()/2
-	
+
+func _apply_text() -> void:
+	control.set_text(description)
+	pass	
+
 func down() -> void:
 	audioplayer.stop()
 	anim_player.play(&"cutout_down")
+	area_blase.monitorable = false
 	pass
 	
 func up() -> void:
 	if not audioplayer.playing:
 		audioplayer.play()
 		anim_player.play(&"cutout_up")
-	
+	area_blase.monitorable = true
 	pass
 
 func _on_repeat() -> void:

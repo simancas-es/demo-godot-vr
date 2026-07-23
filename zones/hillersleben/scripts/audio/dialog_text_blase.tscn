@@ -38,9 +38,6 @@ text = "Willkommen auf der Kläranlage Hillersleben!
 Schön, das du da bist. Ein Kollege ist ausgefallen und auf derAnlage wartet jede Menge Arbeit.
 Hier wird jeden Tag Abwasser gereinigt, Maschinen laufen rund um die Uhr und das Team muss zusammenhalten.
 Also schnapps dir deine Sachen und leg los.
-
-
-
 Ohne dich läuft hier heute nichts!"
 label_settings = SubResource("LabelSettings_jojr7")
 autowrap_mode = 2

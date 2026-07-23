@@ -20,12 +20,17 @@ func _find_raycast():
 	if rays.size() > 0:
 		raycast = rays[0] #HACK Assume only 1
 
+
+var _was_hovering := false
 func _input(event):
 	if not (event is InputEventMouseMotion or event is InputEventMouseButton):
 		return
-	
-	if not raycast:		return	
-	if not raycast.is_colliding():		return	
-	if raycast.get_collider() != self:		return	
-	
-	detected_rc.emit(raycast.get_collision_point(), event)
+
+	var hovering = raycast and raycast.is_colliding() and raycast.get_collider() == self
+
+	if hovering:
+		detected_rc.emit(raycast.get_collision_point(), event)
+	elif _was_hovering:
+		detected_rc.emit(null, event)
+
+	_was_hovering = hovering

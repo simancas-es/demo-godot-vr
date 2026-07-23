@@ -927,6 +927,7 @@ shape = SubResource("SphereShape3D_ngwpx")
 transform = Transform3D(-0.99986374, 1.4901163e-08, 0.01651007, 4.171066e-08, 1.0000001, 5.964481e-08, -0.01651001, 2.9802326e-08, -0.9998637, -69.87659, 47.83499, -41.272053)
 script = ExtResource("3_24q48")
 cutout_texture = ExtResource("4_ngwpx")
+description = "Willkommen auf der Kläranlage Hillersleben!"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="dialog_cutout" unique_id=1824374838]
 stream = ExtResource("4_5qc3o")
