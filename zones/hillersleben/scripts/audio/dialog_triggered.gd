@@ -1,20 +1,27 @@
 @tool
 extends Node3D
 
-const CUTOUT_DIALOG := preload("uid://go8lcfvxa3df")
-@onready var audioplayer : AudioStreamPlayer3D = $AudioStreamPlayer3D
-@onready var cutout : Sprite3D = $pivot/Sprite3D
-@onready var anim_player = $AnimationPlayer
 
 @export var cutout_texture : Texture2D:
 	set(value):
 		cutout_texture = value
 		_apply_texture()
-@export_multiline var description: String = "Welcome to the WWTP Hillersleben!"	:
+@export_multiline var description: String:
 	set(value):
 		description = value
 		_apply_text()
+@export var audiostream : AudioStream:
+	set(value):
+		audiostream = value
+		_apply_audio()
 	
+@export var ok_disables : bool = true
+	
+const CUTOUT_DIALOG := preload("uid://go8lcfvxa3df")
+@onready var audioplayer : AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var cutout : Sprite3D = $pivot/Sprite3D
+@onready var anim_player = $AnimationPlayer
+
 const DIALOGUI := preload("uid://cf711ixjimsdh")
 @onready var blase_mesh : MeshInstance3D = $pivot/Sprite3D_Blase/MeshInstance3D
 @onready var area_blase : Area3D = $pivot/Sprite3D_Blase/AreaClicks
@@ -22,12 +29,18 @@ const DIALOGUI := preload("uid://cf711ixjimsdh")
 @onready var control : DIALOGUI = $pivot/Sprite3D_Blase/SubViewport/Control
 signal triggered
 
+var disabled : bool = false
+enum STATE {DOWN, UP}
+var state = STATE.DOWN 
+
 func _ready() -> void:
 	_apply_texture()
 	_apply_text()
+	_apply_audio()
 	self.add_to_group("CUTOUT_DIALOG")
 	var cutouts = get_tree().get_nodes_in_group("CUTOUT_DIALOG")
 	for c in cutouts: #HACK self update so that only one is active at a time
+		if c == self: continue
 		if not c.is_connected("triggered", down):
 			c.triggered.connect(down)
 		if not self.is_connected("triggered", c.down):
@@ -36,7 +49,7 @@ func _ready() -> void:
 	#Interaction
 	area_blase.detected_rc.connect(_on_detected_interaction)
 	
-	control.ok.connect(down)
+	control.ok.connect(_on_ok)
 	control.repeat.connect(_on_repeat)
 	pass
 	
@@ -69,7 +82,9 @@ func _apply_texture():
 		return
 	if cutout:
 		cutout.texture = cutout_texture
-		cutout.set_instance_shader_parameter("albedo_texture", cutout_texture)
+		var mat : ShaderMaterial = cutout.material_override
+		mat.set_shader_parameter("albedo_texture", cutout_texture)
+		
 		set_sprite_height(cutout, 200)
 		
 func set_sprite_height(sprite: Sprite3D, target_height_px: float = 200.0):
@@ -85,22 +100,41 @@ func set_sprite_height(sprite: Sprite3D, target_height_px: float = 200.0):
 	sprite.offset.x = -sprite.texture.get_width()/2
 
 func _apply_text() -> void:
+	if not is_inside_tree():
+		return
 	control.set_text(description)
-	pass	
+	pass
+
+func _apply_audio() -> void:
+	if not is_inside_tree():
+		return
+	audioplayer.stream = audiostream	
+	
 
 func down() -> void:
+	if state == STATE.DOWN : return
 	audioplayer.stop()
 	anim_player.play(&"cutout_down")
 	area_blase.monitorable = false
+	state = STATE.DOWN
+
 	pass
 	
 func up() -> void:
+	if state == STATE.UP : return
+	if disabled : return
 	if not audioplayer.playing:
 		audioplayer.play()
 		anim_player.play(&"cutout_up")
 	area_blase.monitorable = true
+	triggered.emit()
+	state = STATE.UP
 	pass
 
+func _on_ok() -> void:
+	if ok_disables: disabled = true
+	down()
+	
 func _on_repeat() -> void:
 	audioplayer.play()
 	
