@@ -128,7 +128,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "PLACEHOLDER_FPV_DEBUG"
 
-[node name="RayCast3D" type="RayCast3D" parent="CameraBasePosition/Camera3D" unique_id=700200823]
+[node name="RayCast3D" type="RayCast3D" parent="CameraBasePosition/Camera3D" unique_id=700200823 groups=["FPVRAYCAST"]]
 unique_name_in_owner = true
 visible = false
 target_position = Vector3(0, 0, -1.5)

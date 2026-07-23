@@ -11,10 +11,13 @@ const CUTOUT_DIALOG := preload("uid://go8lcfvxa3df")
 		cutout_texture = value
 		_apply_texture()
 		
-		
+	
+	
+const DIALOGUI := preload("uid://cf711ixjimsdh")
 @onready var blase_mesh : MeshInstance3D = $pivot/Sprite3D_Blase/MeshInstance3D
 @onready var area_blase : Area3D = $pivot/Sprite3D_Blase/AreaClicks
-@onready var svp : SubViewport = $pivot/Sprite3D_Blase/SubViewport		
+@onready var svp : SubViewport = $pivot/Sprite3D_Blase/SubViewport	
+@onready var control : DIALOGUI = $pivot/Sprite3D_Blase/SubViewport/Control
 signal triggered
 
 func _ready() -> void:
@@ -29,16 +32,25 @@ func _ready() -> void:
 	
 	#Interaction
 	area_blase.detected_rc.connect(_on_detected_interaction)
+	
+	control.ok.connect(down)
+	control.repeat.connect(_on_repeat)
 	pass
+	
 ## Interaction with bubble control.
 func _on_detected_interaction(position, event) -> void:
-	var uv = blase_mesh.geometry_instance_get_uv(position)
-	var vp_pos = uv * svp.size
+	var local = blase_mesh.to_local(position)
+	var plane_size = blase_mesh.mesh.size
+	var uv = Vector2(
+					(local.x / plane_size.x) + 0.5,
+					0.5 - (local.y / plane_size.y)
+				)
+	var vp_pos = uv * Vector2(svp.size)
+
 	var ev = event.duplicate()
 	ev.position = vp_pos
 
 	svp.push_input(ev)
-	pass
 	
 	
 func _apply_texture():
@@ -72,4 +84,7 @@ func up() -> void:
 		anim_player.play(&"cutout_up")
 	
 	pass
+
+func _on_repeat() -> void:
+	audioplayer.play()
 	

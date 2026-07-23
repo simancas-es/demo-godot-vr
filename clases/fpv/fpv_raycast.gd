@@ -13,6 +13,9 @@ var _previous_collides: Array[Node] = [] :
 	get():
 		return _previous_collides
 
+func _init() -> void:
+	add_to_group("FPVRAYCAST")
+
 func check_collide(rc : RayCast3D):
 	if not rc.is_colliding():
 		changed_collide.emit(null) #HACK
