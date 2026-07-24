@@ -162,7 +162,6 @@ size = Vector3(0.04, 1.5, 0.1)
 transform = Transform3D(-0.99986374, 1.4901163e-08, 0.01651007, 4.171066e-08, 1.0000001, 5.964481e-08, -0.01651001, 2.9802326e-08, -0.9998637, 0, 0, 0)
 script = ExtResource("1_6mndj")
 cutout_texture = ExtResource("2_d8xln")
-description = "Willkommen auf der Kläranlage Hillersleben!"
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=303196347]
 max_db = 4.0

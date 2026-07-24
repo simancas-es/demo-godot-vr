@@ -6,9 +6,9 @@ extends Node3D
 	set(value):
 		cutout_texture = value
 		_apply_texture()
-@export_multiline var description: String:
+@export_multiline var description_text: String:
 	set(value):
-		description = value
+		description_text = value
 		_apply_text()
 @export var audiostream : AudioStream:
 	set(value):
@@ -102,13 +102,13 @@ func set_sprite_height(sprite: Sprite3D, target_height_px: float = 200.0):
 func _apply_text() -> void:
 	if not is_inside_tree():
 		return
-	control.set_text(description)
+	control.set_text(tr(description_text))
 	pass
 
 func _apply_audio() -> void:
 	if not is_inside_tree():
 		return
-	audioplayer.stream = audiostream	
+	audioplayer.stream = audiostream
 	
 
 func down() -> void:
@@ -138,3 +138,9 @@ func _on_ok() -> void:
 func _on_repeat() -> void:
 	audioplayer.play()
 	
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_TRANSLATION_CHANGED:
+		if not is_node_ready():	return
+		_apply_audio()
+		_apply_text() 
