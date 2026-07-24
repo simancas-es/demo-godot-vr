@@ -451,6 +451,8 @@ msgstr ""
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_link.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_recht.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn
@@ -647,6 +649,25 @@ msgstr "Vertical SPL"
 msgid "VISTA"
 msgstr "VISTA"
 
+#: zones/hillersleben/scripts/audio/dialog_text_blase.tscn
+msgid ""
+"Willkommen auf der Kläranlage Hillersleben!\n"
+"Schön, das du da bist. Ein Kollege ist ausgefallen und auf derAnlage wartet "
+"jede Menge Arbeit.\n"
+"Hier wird jeden Tag Abwasser gereinigt, Maschinen laufen rund um die Uhr und "
+"das Team muss zusammenhalten.\n"
+"Also schnapps dir deine Sachen und leg los.\n"
+"Ohne dich läuft hier heute nichts!"
+msgstr ""
+
+#: zones/hillersleben/scripts/audio/dialog_text_blase.tscn
+msgid "Ok\n"
+msgstr ""
+
+#: zones/hillersleben/scripts/audio/dialog_text_blase.tscn
+msgid "Repeat\n"
+msgstr ""
+
 #: zones/hillersleben/scripts/hl_flow_model/overview.tscn
 msgid "Overview"
 msgstr ""
@@ -714,45 +735,76 @@ msgid "STATUS: WARNING!"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:52
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:164
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:183
 msgid "STATUS: OK"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:138
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:141
 msgid "DECANTER"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:138
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:148
 msgid "ON"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:141
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:153
 msgid "OFF"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:148
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:153
 msgid "CONVEYOR BELT"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:141
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:160
 msgid "Emptying conveyor belt..."
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:143
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
 msgid "Conveyor belt empty"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:181
 msgid "TURN CONVEYOR ON"
 msgstr ""
 
 #: zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended.tscn
+#: zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended_bhkw.tscn
 msgid "Debug"
 msgstr ""
+
+#: zones/hillersleben/vorklärbecken.tscn
+msgid ""
+"!!!\n"
+"STOP"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_CUTOUT_WILKOMMEN"
+msgstr "Welcome to the Hillersleben wastewater treatment plant!\n"
+"Glad you’re here. One of the crew is out today, and there’s a ton of work waiting.\n"
+"Every day, wastewater gets treated here, machines run 24/7, and the team has to stick together.\n"
+"So grab your gear and jump in. Nothing’s getting done today without you!"
+
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_CUTOUT_RAUMSCHNECKE"
+msgstr "Oh noooo!!!\n"
+"The floating sludge screw in the secondary clarifier stopped overnight.\n"
+"Now there’s a thick layer of ice on the water surface.\n"
+"Can you lend us a hand? The ice is blocking the screw, so we need to break it up with tools and restart the scraper bridge."
+
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_CUTOUT_DEKANTER"
+msgstr "What a mess!\n"
+"Normally, nicely dewatered sludge drops onto the conveyor belt here. But now it’s mostly sludge water spilling out and running all over the concrete pad.\n"
+"Looks like the decanter is the culprit.\n"
+"Can you take a look and figure out what went wrong?"
+
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"
@@ -899,14 +951,6 @@ msgid "Sludge Temperature:"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
-msgid "Decanter centrifuge"
-msgstr ""
-
-#: zones/hillersleben/zonehillersleben.tscn
-msgid "Conveyor belt >>>>"
-msgstr ""
-
-#: zones/hillersleben/zonehillersleben.tscn
 msgid "Empty polymer ibc"
 msgstr ""
 
@@ -915,11 +959,27 @@ msgid "Full polymer ibc"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "Decanter centrifuge"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Conveyor belt >>>>"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Hose-intake"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "27.0"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "DROP SAMPLES HERE"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "INTAKE ROOM"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
@@ -1004,6 +1064,10 @@ msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Return sludge pump IV"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "DECANTERROOMABCDE"
 msgstr ""
 
 msgid "VirtualTour"

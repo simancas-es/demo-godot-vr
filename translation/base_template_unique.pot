@@ -2,6 +2,7 @@
 #
 # 
 # res://assets/inventory_objects/demo_aerator/aerator_head.json
+# res://assets/inventory_objects/ice_breaker/eispickel.tscn
 # res://assets/world_objects/hillersleben/doors/bg_elektro_tür.tscn
 # res://assets/world_objects/hillersleben/doors/bg_garage_tür.tscn
 # res://assets/world_objects/hillersleben/doors/bg_personel_tür_1.tscn
@@ -52,6 +53,7 @@
 # res://clases/fpv/interaction_hint_context.gd
 # res://clases/fpv/interaction_hint_resolver.gd
 # res://clases/fpv/interaction_logic.gd
+# res://clases/fpv/inventory_logic.gd
 # res://clases/fpv/system_physical_control_grabber.gd
 # res://clases/helpers/task_text/menu/debug_task_list.gd
 # res://clases/helpers/task_text/menu/debug_task_list.tscn
@@ -98,6 +100,17 @@
 # res://clases/falconview.gd
 # res://clases/player_data.gd
 # res://content/inv_objects/beaker_filled/beaker_filled.json
+# res://content/inv_objects/beaker_filled/sample_bb.tscn
+# res://content/inv_objects/beaker_filled/sample_msb.tscn
+# res://content/inv_objects/beaker_filled/sample_nkb.tscn
+# res://content/inv_objects/beaker_filled/sample_vkb.tscn
+# res://content/inv_objects/beaker_sampler/beaker_sampler.json
+# res://content/inv_objects/beaker_sampler/beaker_sampler.tscn
+# res://content/inv_objects/ice_breaker/ice_breaker.json
+# res://content/inv_objects/sample_bb/sample_bb.json
+# res://content/inv_objects/sample_msb/sample_msb.json
+# res://content/inv_objects/sample_nkb/sample_nkb.json
+# res://content/inv_objects/sample_vkb/sample_vkb.json
 # res://content/inv_objects/wire/wire.json
 # res://content/inv_objects/default_model.tscn
 # res://content/tasks/task_database_demo.json
@@ -223,6 +236,7 @@
 # res://models/labels/map.tscn
 # res://models/labels/minimap.gd
 # res://models/labels/minimap.tscn
+# res://models/labels/plakate-blau.tscn
 # res://models/ladders/double_ladder/double_ladder.tscn
 # res://models/ladders/double_ladder/double_ladder_ed.tscn
 # res://models/ladders/simple_ladder/ladder.gd
@@ -352,6 +366,7 @@
 # res://XR/scenes/helpers/axis/axis.tscn
 # res://XR/scenes/helpers/axis/vector.gd
 # res://XR/scenes/helpers/axis/vector.tscn
+# res://XR/scenes/helpers/ConnectorXRPickableSystemPhysicalControlObject.tscn
 # res://XR/scenes/interactables/control_pad/control_pad.gd
 # res://XR/scenes/interactables/control_pad/control_pad.tscn
 # res://XR/scenes/interactables/control_pad/control_pad_display.gd
@@ -433,6 +448,8 @@
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür2.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_link.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_recht.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn
@@ -442,7 +459,10 @@
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/eis_lanze/eislanze_tip.gd
 # res://XR/zones_xr/zone_xr_hillersleben/leiter/xr_leiter_becken.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/sampler/area_3d_beaker.gd
+# res://XR/zones_xr/zone_xr_hillersleben/sampler/xr_beaker_sampler.gd
 # res://XR/zones_xr/zone_xr_hillersleben/wire/wire_snap_task.gd
 # res://XR/zones_xr/zone_xr_hillersleben/xr_logik_bgebaeude_container_u_gdoor.gd
 # res://XR/zones_xr/zone_xr_hillersleben/xr_q_nh_4.gd
@@ -466,6 +486,12 @@
 # res://zones/demo_vista/zoneobservatorio.gd
 # res://zones/demo_vista/zoneobservatorio.tscn
 # res://zones/gerwisch/zonegerwisch.tscn
+# res://zones/hillersleben/scripts/audio/dialog_activate.tscn
+# res://zones/hillersleben/scripts/audio/dialog_cutout.tscn
+# res://zones/hillersleben/scripts/audio/dialog_text_blase.gd
+# res://zones/hillersleben/scripts/audio/dialog_text_blase.tscn
+# res://zones/hillersleben/scripts/audio/dialog_triggered.gd
+# res://zones/hillersleben/scripts/audio/interaction_blase.gd
 # res://zones/hillersleben/scripts/bg-containers/bg_garage_controller.gd
 # res://zones/hillersleben/scripts/bg-containers/bg_garage_state.gd
 # res://zones/hillersleben/scripts/bg-containers/bg_garage_system.gd
@@ -492,6 +518,7 @@
 # res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_containers.gd
 # res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_edges.gd
 # res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_simulation.gd
+# res://zones/hillersleben/scripts/hl_flow_model/init_setup.gd
 # res://zones/hillersleben/scripts/hl_flow_model/main.gd
 # res://zones/hillersleben/scripts/hl_flow_model/main.tscn
 # res://zones/hillersleben/scripts/hl_flow_model/overview.gd
@@ -504,8 +531,19 @@
 # res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn
 # res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_inflow.tscn
 # res://zones/hillersleben/scripts/hl_flow_model_controls/xr_pump_control_button.gd
+# res://zones/hillersleben/scripts/ibc/sys_phys_control_ibc.tscn
+# res://zones/hillersleben/scripts/nkb/ice_breaker.gd
+# res://zones/hillersleben/scripts/nkb/ice_schrauben.gd
+# res://zones/hillersleben/scripts/nkb/ice_wedge.gd
+# res://zones/hillersleben/scripts/nkb/ice_wedge.tscn
+# res://zones/hillersleben/scripts/nkb/nkb_consumer.gd
+# res://zones/hillersleben/scripts/nkb/nkb_unit.gd
+# res://zones/hillersleben/scripts/nkb/nkb_unit.tscn
+# res://zones/hillersleben/scripts/samples/interact_take_sample.gd
 # res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.gd
 # res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
+# res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge_bhkw.gd
+# res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge_bhkw.tscn
 # res://zones/hillersleben/scripts/tasks/bb/bb_consumer.gd
 # res://zones/hillersleben/scripts/tasks/bb/pid_nh4_rowpanel.gd
 # res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.gd
@@ -518,6 +556,7 @@
 # res://zones/hillersleben/scripts/tasks/bhkw/sequence_consumer_low.gd
 # res://zones/hillersleben/scripts/tasks/bhkw/task_controller.gd
 # res://zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd
+# res://zones/hillersleben/scripts/tasks/dekanter/sys_phys_control_ibc.gd
 # res://zones/hillersleben/scripts/tasks/fence/q_fence_check.gd
 # res://zones/hillersleben/scripts/tasks/security_check/sequencer_consumer_security.gd
 # res://zones/hillersleben/scripts/tasks/vorstellung/sequencer_consumer_vorstellung.gd
@@ -530,20 +569,28 @@
 # res://zones/hillersleben/scripts/task_locators/task_sequencer.gd
 # res://zones/hillersleben/scripts/utils/steal_meshinstance.gd
 # res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn
+# res://zones/hillersleben/scripts/valve_interaction/connector_valve_gauge.gd
+# res://zones/hillersleben/scripts/valve_interaction/connector_valve_gauge.tscn
 # res://zones/hillersleben/scripts/valve_interaction/debug_label.gd
+# res://zones/hillersleben/scripts/valve_interaction/filling_valve_rotation_controller.gd
 # res://zones/hillersleben/scripts/valve_interaction/valve_interaction.gd
 # res://zones/hillersleben/scripts/valve_interaction/valve_interaction.tscn
+# res://zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended.gd
 # res://zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended.tscn
-# res://zones/hillersleben/scripts/valve_interaction/xr_matcher.gd
-# res://zones/hillersleben/scripts/water_visuals/logik_nkb_visual.gd
+# res://zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended_bhkw.tscn
+# res://zones/hillersleben/scripts/valve_interaction/xr_matcher_xr_extended.gd
+# res://zones/hillersleben/scripts/vkb/vorklärbecken.gd
 # res://zones/hillersleben/scripts/water_visuals/logik_wasserrad.gd
 # res://zones/hillersleben/scripts/water_visuals/logik_waterlevel_path.gd
 # res://zones/hillersleben/scripts/water_visuals/WaterLevelFollower.tscn
 # res://zones/hillersleben/scripts/logik_container_movement.gd
 # res://zones/hillersleben/scripts/logik_doors_container.gd
 # res://zones/hillersleben/scripts/mg_klappbare_tür.gd
+# res://zones/hillersleben/2026_06_04_bhkw_raum.tscn
+# res://zones/hillersleben/dialog_activate.gd
 # res://zones/hillersleben/global_task_controller.gd
 # res://zones/hillersleben/info_light.tscn
+# res://zones/hillersleben/vorklärbecken.tscn
 # res://zones/hillersleben/zonehillersleben.tscn
 # res://zones/hochschule/zonehochschule.gd
 # res://zones/hochschule/zonehochschule.tscn
@@ -842,6 +889,8 @@ msgstr ""
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_link.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_recht.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn
 #: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn
@@ -1038,6 +1087,25 @@ msgstr ""
 msgid "VISTA"
 msgstr ""
 
+#: zones/hillersleben/scripts/audio/dialog_text_blase.tscn
+msgid ""
+"Willkommen auf der Kläranlage Hillersleben!\n"
+"Schön, das du da bist. Ein Kollege ist ausgefallen und auf derAnlage wartet "
+"jede Menge Arbeit.\n"
+"Hier wird jeden Tag Abwasser gereinigt, Maschinen laufen rund um die Uhr und "
+"das Team muss zusammenhalten.\n"
+"Also schnapps dir deine Sachen und leg los.\n"
+"Ohne dich läuft hier heute nichts!"
+msgstr ""
+
+#: zones/hillersleben/scripts/audio/dialog_text_blase.tscn
+msgid "Ok\n"
+msgstr ""
+
+#: zones/hillersleben/scripts/audio/dialog_text_blase.tscn
+msgid "Repeat\n"
+msgstr ""
+
 #: zones/hillersleben/scripts/hl_flow_model/overview.tscn
 msgid "Overview"
 msgstr ""
@@ -1105,44 +1173,63 @@ msgid "STATUS: WARNING!"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:52
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:164
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:183
 msgid "STATUS: OK"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:138
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:141
 msgid "DECANTER"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:119
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:138
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:148
 msgid "ON"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:122
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:141
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:153
 msgid "OFF"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:129
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:134
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:148
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:153
 msgid "CONVEYOR BELT"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:141
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:160
 msgid "Emptying conveyor belt..."
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:143
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
 msgid "Conveyor belt empty"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:162
+#: zones/hillersleben/scripts/tasks/dekanter/dekanter_consumer.gd:181
 msgid "TURN CONVEYOR ON"
 msgstr ""
 
 #: zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended.tscn
+#: zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended_bhkw.tscn
 msgid "Debug"
+msgstr ""
+
+#: zones/hillersleben/vorklärbecken.tscn
+msgid ""
+"!!!\n"
+"STOP"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_CUTOUT_WILKOMMEN"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_CUTOUT_RAUMSCHNECKE"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_CUTOUT_DEKANTER"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
@@ -1290,14 +1377,6 @@ msgid "Sludge Temperature:"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
-msgid "Decanter centrifuge"
-msgstr ""
-
-#: zones/hillersleben/zonehillersleben.tscn
-msgid "Conveyor belt >>>>"
-msgstr ""
-
-#: zones/hillersleben/zonehillersleben.tscn
 msgid "Empty polymer ibc"
 msgstr ""
 
@@ -1306,11 +1385,27 @@ msgid "Full polymer ibc"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "Decanter centrifuge"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "Conveyor belt >>>>"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "Hose-intake"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "27.0"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "DROP SAMPLES HERE"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "INTAKE ROOM"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
@@ -1395,6 +1490,10 @@ msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Return sludge pump IV"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "DECANTERROOMABCDE"
 msgstr ""
 
 msgid "VirtualTour"
