@@ -2,9 +2,8 @@
 
 [ext_resource type="Script" uid="uid://b0iop2lssb5t8" path="res://zones/hillersleben/dialog_activate.gd" id="1_jpxw5"]
 
-[node name="dialog_activate" type="Area3D" unique_id=2070095866 node_paths=PackedStringArray("dialog")]
+[node name="dialog_activate" type="Area3D" unique_id=2070095866]
 transform = Transform3D(1, 8.3266727e-16, 0, -3.330669e-16, 1, 0, 0, 0, 1, 0, 0, 0)
 collision_layer = 0
-collision_mask = 524288
+collision_mask = 268959744
 script = ExtResource("1_jpxw5")
-dialog = NodePath("")

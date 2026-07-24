@@ -472,6 +472,7 @@ collision_mask = 796950528
 wall_min_slide_angle = 1.4835298
 floor_max_angle = 1.3089969
 safe_margin = 0.05
+player_height_max = 1.8
 push_rigid_bodies = false
 
 [node name="BeltSnapZone01" parent="PlayerBody" unique_id=277655760 groups=["beltsnap"] instance=ExtResource("13_5bwuw")]

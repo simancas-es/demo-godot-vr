@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://go8lcfvxa3df" path="res://zones/hillersleben/scripts/audio/dialog_triggered.gd" id="1_6mndj"]
 [ext_resource type="Texture2D" uid="uid://ci1l56amnqtp2" path="res://assets/world_objects/hillersleben/cutouts/2026-06-23-Dialoge-Klaeranlagenmeister-01-klein.png" id="2_d8xln"]
+[ext_resource type="Script" uid="uid://csymyuqxb6ffb" path="res://zones/hillersleben/scripts/audio/xr_adapter.gd" id="3_8a1c2"]
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="4_6mndj"]
 [ext_resource type="Shader" uid="uid://ddveahftnwbpj" path="res://zones/hillersleben/scripts/audio/cutout_wood.gdshader" id="4_8uthx"]
 [ext_resource type="Texture2D" uid="uid://bhft5x1elc7uo" path="res://assets/world_objects/hillersleben/cutouts/2026-06-23-Dialoge-Sprechblase-klein.png" id="5_bvnsc"]
 [ext_resource type="PackedScene" uid="uid://bavo1505gjk1c" path="res://zones/hillersleben/scripts/audio/dialog_text_blase.tscn" id="6_lgfno"]
@@ -159,9 +161,12 @@ albedo_texture = ExtResource("8_pr7kv")
 size = Vector3(0.04, 1.5, 0.1)
 
 [node name="dialog_cutout" type="Node3D" unique_id=1182325109]
-transform = Transform3D(-0.99986374, 1.4901163e-08, 0.01651007, 4.171066e-08, 1.0000001, 5.964481e-08, -0.01651001, 2.9802326e-08, -0.9998637, 0, 0, 0)
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1.0000001, 0, 8.742278e-08, 0, -0.99999994, 0, 0, 0)
 script = ExtResource("1_6mndj")
 cutout_texture = ExtResource("2_d8xln")
+
+[node name="xr_adapter" type="Node" parent="." unique_id=1202304333]
+script = ExtResource("3_8a1c2")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=303196347]
 max_db = 4.0
@@ -183,6 +188,15 @@ double_sided = false
 alpha_cut = 1
 texture = ExtResource("2_d8xln")
 
+[node name="Viewport2Din3D" parent="pivot" unique_id=73329319 instance=ExtResource("4_6mndj")]
+transform = Transform3D(1.0000002, 0, 0, 0, 0.99999994, 0, 0, 0, 1.0000001, 1.4745369, 1.5520741, 0.012895166)
+screen_size = Vector2(0.815, 0.755)
+collision_layer = 5242880
+scene = ExtResource("6_lgfno")
+viewport_size = Vector2(512, 512)
+unshaded = true
+scene_properties_keys = PackedStringArray("dialog_text_blase.gd")
+
 [node name="Sprite3D_Blase" type="Sprite3D" parent="pivot" unique_id=2054235960]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 1.2352943, 1.553, 3.469447e-15)
 alpha_cut = 1
@@ -196,17 +210,17 @@ anisotropic_filtering_level = 1
 [node name="Control" parent="pivot/Sprite3D_Blase/SubViewport" unique_id=1728088313 instance=ExtResource("6_lgfno")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="pivot/Sprite3D_Blase" unique_id=88411756]
-transform = Transform3D(0.99999994, 2.3283064e-10, -5.5879354e-09, 5.820766e-11, 0.99999976, -1.4901161e-08, 1.8626451e-09, -7.450581e-09, 1, 0.9569702, -0.0037155151, 0.027252197)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999976, 0, 0, 0, 1, 0.9569702, -0.0037155151, 0.027252197)
 mesh = SubResource("PlaneMesh_wh342")
 surface_material_override/0 = SubResource("StandardMaterial3D_q6dv7")
 
-[node name="AreaClicks" type="Area3D" parent="pivot/Sprite3D_Blase" unique_id=1279471948]
-transform = Transform3D(0.99999994, 2.3283064e-10, -3.7252903e-09, 5.820766e-11, 0.99999976, -1.4901161e-08, 1.8626451e-09, -7.450581e-09, 0.99999994, 0.9569702, -0.003704071, 0.015224457)
+[node name="AreaClicks" type="Area3D" parent="pivot/Sprite3D_Blase/MeshInstance3D" unique_id=1279471948]
+transform = Transform3D(0.99999994, 0, 4.2351647e-22, 0, 0.99999994, 0, 0, -3.5527137e-15, 0.9999999, 0, 1.1444092e-05, -0.012027741)
 collision_mask = 0
 monitorable = false
 script = ExtResource("7_w6jfc")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="pivot/Sprite3D_Blase/AreaClicks" unique_id=1937352975]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pivot/Sprite3D_Blase/MeshInstance3D/AreaClicks" unique_id=1937352975]
 transform = Transform3D(1, 0, 4.440892e-16, 0, 1, 0, -3.330669e-15, -7.1054274e-15, 1, 0, -1.5258789e-05, -1.5258789e-05)
 shape = SubResource("ConcavePolygonShape3D_pqgw2")
 debug_color = Color(0, 0, 13.469126, 1)

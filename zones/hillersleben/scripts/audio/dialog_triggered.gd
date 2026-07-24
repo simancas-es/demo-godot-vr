@@ -24,7 +24,7 @@ const CUTOUT_DIALOG := preload("uid://go8lcfvxa3df")
 
 const DIALOGUI := preload("uid://cf711ixjimsdh")
 @onready var blase_mesh : MeshInstance3D = $pivot/Sprite3D_Blase/MeshInstance3D
-@onready var area_blase : Area3D = $pivot/Sprite3D_Blase/AreaClicks
+@onready var area_blase : Area3D = $pivot/Sprite3D_Blase/MeshInstance3D/AreaClicks
 @onready var svp : SubViewport = $pivot/Sprite3D_Blase/SubViewport	
 @onready var control : DIALOGUI = $pivot/Sprite3D_Blase/SubViewport/Control
 signal triggered
@@ -49,8 +49,16 @@ func _ready() -> void:
 	#Interaction
 	area_blase.detected_rc.connect(_on_detected_interaction)
 	
-	control.ok.connect(_on_ok)
-	control.repeat.connect(_on_repeat)
+	set_control(control)
+	pass
+
+func set_control(controlx : DIALOGUI) -> void:
+	if controlx == null:
+		push_warning("Missing control...")
+		return
+	control = controlx
+	controlx.ok.connect(_on_ok)
+	controlx.repeat.connect(_on_repeat)
 	pass
 	
 ## Interaction with bubble control.
@@ -115,7 +123,7 @@ func down() -> void:
 	if state == STATE.DOWN : return
 	audioplayer.stop()
 	anim_player.play(&"cutout_down")
-	area_blase.monitorable = false
+	if (area_blase != null) and (not area_blase.is_queued_for_deletion()): area_blase.set_deferred("monitorable", false)
 	state = STATE.DOWN
 
 	pass
@@ -126,7 +134,7 @@ func up() -> void:
 	if not audioplayer.playing:
 		audioplayer.play()
 		anim_player.play(&"cutout_up")
-	area_blase.monitorable = true
+	if (area_blase != null) and (not area_blase.is_queued_for_deletion()):  area_blase.set_deferred("monitorable", true)
 	triggered.emit()
 	state = STATE.UP
 	pass
@@ -144,3 +152,4 @@ func _notification(what: int) -> void:
 		if not is_node_ready():	return
 		_apply_audio()
 		_apply_text() 
+		if audioplayer.playing: audioplayer.stop(); audioplayer.play()
