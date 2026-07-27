@@ -138,52 +138,52 @@ visibility_range_end = 30.0
 visibility_range_end = 30.0
 
 [node name="Cube_1235" parent="nkb_bruecke/Brücke" index="23" unique_id=1678291329]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_1236" parent="nkb_bruecke/Brücke" index="24" unique_id=337434690]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_1237" parent="nkb_bruecke/Brücke" index="25" unique_id=240611877]
 visibility_range_end = 30.0
 
 [node name="Cube_1238" parent="nkb_bruecke/Brücke" index="26" unique_id=1577470655]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_1239" parent="nkb_bruecke/Brücke" index="27" unique_id=1222917585]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_1240" parent="nkb_bruecke/Brücke" index="28" unique_id=466691940]
 visibility_range_end = 30.0
 
 [node name="Cube_1241" parent="nkb_bruecke/Brücke" index="29" unique_id=1162022345]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_1242" parent="nkb_bruecke/Brücke" index="30" unique_id=1238038189]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_1243" parent="nkb_bruecke/Brücke" index="31" unique_id=369534831]
 visibility_range_end = 30.0
 
 [node name="Cube_1244" parent="nkb_bruecke/Brücke" index="32" unique_id=743106187]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_1245" parent="nkb_bruecke/Brücke" index="33" unique_id=1471763038]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_1246" parent="nkb_bruecke/Brücke" index="34" unique_id=621435696]
 visibility_range_end = 30.0
 
 [node name="Cube_1247" parent="nkb_bruecke/Brücke" index="35" unique_id=1518591519]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_1248" parent="nkb_bruecke/Brücke" index="36" unique_id=1249462791]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_1249" parent="nkb_bruecke/Brücke" index="37" unique_id=1796460190]
 visibility_range_end = 30.0
 
 [node name="Cube_1250" parent="nkb_bruecke/Brücke" index="38" unique_id=2095918567]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_1267" parent="nkb_bruecke/Brücke" index="41" unique_id=1930923145]
 visibility_range_end = 30.0
@@ -534,79 +534,79 @@ visibility_range_end = 30.0
 visibility_range_end = 30.0
 
 [node name="Cube_7484" parent="nkb_bruecke/Brücke" index="165" unique_id=693861170]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7485" parent="nkb_bruecke/Brücke" index="166" unique_id=1921623881]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7486" parent="nkb_bruecke/Brücke" index="167" unique_id=2119006449]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7487" parent="nkb_bruecke/Brücke" index="168" unique_id=149598864]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7488" parent="nkb_bruecke/Brücke" index="169" unique_id=1294620910]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7489" parent="nkb_bruecke/Brücke" index="170" unique_id=1464670227]
 visibility_range_end = 30.0
 
 [node name="Cube_7490" parent="nkb_bruecke/Brücke" index="171" unique_id=1009830078]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7491" parent="nkb_bruecke/Brücke" index="172" unique_id=574594516]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7492" parent="nkb_bruecke/Brücke" index="173" unique_id=1766168866]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7493" parent="nkb_bruecke/Brücke" index="174" unique_id=47298015]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7494" parent="nkb_bruecke/Brücke" index="175" unique_id=548780216]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7495" parent="nkb_bruecke/Brücke" index="176" unique_id=1792321348]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7496" parent="nkb_bruecke/Brücke" index="177" unique_id=1819645102]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7497" parent="nkb_bruecke/Brücke" index="178" unique_id=1776879044]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7498" parent="nkb_bruecke/Brücke" index="179" unique_id=569479441]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7499" parent="nkb_bruecke/Brücke" index="180" unique_id=449665883]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7500" parent="nkb_bruecke/Brücke" index="181" unique_id=142116338]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7501" parent="nkb_bruecke/Brücke" index="182" unique_id=127947154]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7502" parent="nkb_bruecke/Brücke" index="183" unique_id=1889339993]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7503" parent="nkb_bruecke/Brücke" index="184" unique_id=536707877]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7504" parent="nkb_bruecke/Brücke" index="185" unique_id=382850019]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7505" parent="nkb_bruecke/Brücke" index="186" unique_id=352928072]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7506" parent="nkb_bruecke/Brücke" index="187" unique_id=1273189939]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7507" parent="nkb_bruecke/Brücke" index="188" unique_id=621623439]
 visibility_range_end = 30.0
 
 [node name="Cube_7508" parent="nkb_bruecke/Brücke" index="189" unique_id=15926386]
-visibility_range_end = 30.0
+visibility_range_end = 25.0
 
 [node name="Cube_7509" parent="nkb_bruecke/Brücke" index="190" unique_id=822523650]
 visibility_range_end = 30.0
@@ -2049,7 +2049,7 @@ visibility_range_end = 30.0
 visibility_range_end = 30.0
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1582474527]
-transform = Transform3D(0.99999994, -1.0074574e-28, 0, 0, 0.9999965, 0, 0, 0, 0.9999965, 0, 0, 0)
+transform = Transform3D(0.99999994, -1.0074573e-28, 0, 0, 0.9999964, 0, 0, 0, 0.9999964, 0, 0, 0)
 collision_layer = 32768
 collision_mask = 0
 

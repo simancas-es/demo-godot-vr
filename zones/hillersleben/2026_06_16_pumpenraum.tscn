@@ -1,0 +1,4031 @@
+[gd_scene format=3 uid="uid://cl6wkskshbauj"]
+
+[ext_resource type="PackedScene" uid="uid://igss4jfoxe80" path="res://assets/zones/hillersleben/models/mg-dekanter/2026-06-16-Pumpenraum.gltf" id="1_ba3ck"]
+
+[node name="2026-06-16-Pumpenraum" unique_id=804344587 instance=ExtResource("1_ba3ck")]
+
+[node name="BézierCurve" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="0" unique_id=371436256]
+visibility_range_end = 15.0
+
+[node name="Circle" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="1" unique_id=2147363521]
+visibility_range_end = 15.0
+
+[node name="Cube_008" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="8" unique_id=383474756]
+visibility_range_end = 15.0
+
+[node name="Cube_009" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="9" unique_id=581050302]
+visibility_range_end = 15.0
+
+[node name="Cube_012" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="12" unique_id=324557778]
+visibility_range_end = 15.0
+
+[node name="Cube_013" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="13" unique_id=945772396]
+visibility_range_end = 15.0
+
+[node name="Cube_014" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="14" unique_id=118413048]
+visibility_range_end = 15.0
+
+[node name="Cube_015" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="15" unique_id=225869992]
+visibility_range_end = 15.0
+
+[node name="Cube_016" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="16" unique_id=1530832944]
+visibility_range_end = 15.0
+
+[node name="Cube_017" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="17" unique_id=1801339774]
+visibility_range_end = 15.0
+
+[node name="Cube_018" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="18" unique_id=601504143]
+visibility_range_end = 15.0
+
+[node name="Cube_019" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="19" unique_id=2126148605]
+visibility_range_end = 15.0
+
+[node name="Cube_020" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="20" unique_id=1591900889]
+visibility_range_end = 15.0
+
+[node name="Cube_021" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="21" unique_id=1877359520]
+visibility_range_end = 15.0
+
+[node name="Cube_022" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="22" unique_id=1032021261]
+visibility_range_end = 15.0
+
+[node name="Cube_023" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="23" unique_id=1736280706]
+visibility_range_end = 15.0
+
+[node name="Cube_024" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="24" unique_id=1475091501]
+visibility_range_end = 15.0
+
+[node name="Cube_025" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="25" unique_id=822091640]
+visibility_range_end = 15.0
+
+[node name="Cube_026" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="26" unique_id=1420053646]
+visibility_range_end = 15.0
+
+[node name="Cube_027" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="27" unique_id=825089324]
+visibility_range_end = 15.0
+
+[node name="Cube_030" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="30" unique_id=1643795699]
+visibility_range_end = 15.0
+
+[node name="Cube_031" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="31" unique_id=485235529]
+visibility_range_end = 15.0
+
+[node name="Cube_032" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="32" unique_id=1000686996]
+visibility_range_end = 15.0
+
+[node name="Cube_033" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="33" unique_id=1109583515]
+visibility_range_end = 15.0
+
+[node name="Cube_034" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="34" unique_id=1096487580]
+visibility_range_end = 15.0
+
+[node name="Cube_035" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="35" unique_id=975287789]
+visibility_range_end = 15.0
+
+[node name="Cube_036" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="36" unique_id=1658038039]
+visibility_range_end = 15.0
+
+[node name="Cube_037" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="37" unique_id=1459176450]
+visibility_range_end = 15.0
+
+[node name="Cube_038" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="38" unique_id=646596152]
+visibility_range_end = 15.0
+
+[node name="Cube_039" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="39" unique_id=608842538]
+visibility_range_end = 15.0
+
+[node name="Cube_040" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="40" unique_id=653291287]
+visibility_range_end = 15.0
+
+[node name="Cube_041" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="41" unique_id=1049967782]
+visibility_range_end = 15.0
+
+[node name="Cube_042" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="42" unique_id=249144685]
+visibility_range_end = 15.0
+
+[node name="Cube_043" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="43" unique_id=1301125051]
+visibility_range_end = 15.0
+
+[node name="Cube_045" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="45" unique_id=1593494521]
+visibility_range_end = 15.0
+
+[node name="Cube_046" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="46" unique_id=1212461787]
+visibility_range_end = 15.0
+
+[node name="Cylinder" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="47" unique_id=577355420]
+visibility_range_end = 15.0
+
+[node name="Cylinder_001" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="48" unique_id=1750667410]
+visibility_range_end = 15.0
+
+[node name="Cylinder_002" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="49" unique_id=638234501]
+visibility_range_end = 15.0
+
+[node name="Cylinder_003" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="50" unique_id=816160147]
+visibility_range_end = 15.0
+
+[node name="Cylinder_004" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="51" unique_id=557125363]
+visibility_range_end = 15.0
+
+[node name="Cylinder_005" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="52" unique_id=1574933326]
+visibility_range_end = 15.0
+
+[node name="Cylinder_006" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="53" unique_id=1119556003]
+visibility_range_end = 15.0
+
+[node name="Cylinder_007" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="54" unique_id=437460195]
+visibility_range_end = 15.0
+
+[node name="Cylinder_008" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="55" unique_id=624652584]
+visibility_range_end = 15.0
+
+[node name="Cylinder_010" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="57" unique_id=2039362570]
+visibility_range_end = 15.0
+
+[node name="Cylinder_011" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="58" unique_id=290009071]
+visibility_range_end = 15.0
+
+[node name="Cylinder_012" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="59" unique_id=669226860]
+visibility_range_end = 15.0
+
+[node name="Cylinder_013" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="60" unique_id=242480835]
+visibility_range_end = 15.0
+
+[node name="Cylinder_014" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="61" unique_id=1598620426]
+visibility_range_end = 15.0
+
+[node name="Cylinder_015" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="62" unique_id=461315258]
+visibility_range_end = 15.0
+
+[node name="Cylinder_016" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="63" unique_id=1770424110]
+visibility_range_end = 15.0
+
+[node name="Cylinder_017" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="64" unique_id=742119043]
+visibility_range_end = 15.0
+
+[node name="Cylinder_018" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="65" unique_id=441502642]
+visibility_range_end = 15.0
+
+[node name="Cylinder_019" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="66" unique_id=1050103399]
+visibility_range_end = 15.0
+
+[node name="Cylinder_020" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="67" unique_id=1216366120]
+visibility_range_end = 15.0
+
+[node name="Cylinder_021" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="68" unique_id=1155192166]
+visibility_range_end = 15.0
+
+[node name="Cylinder_022" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="69" unique_id=1606621001]
+visibility_range_end = 15.0
+
+[node name="Cylinder_023" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="70" unique_id=743728815]
+visibility_range_end = 15.0
+
+[node name="Cylinder_024" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="71" unique_id=46731131]
+visibility_range_end = 15.0
+
+[node name="Cylinder_025" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="72" unique_id=495567766]
+visibility_range_end = 15.0
+
+[node name="Cylinder_026" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="73" unique_id=724832341]
+visibility_range_end = 15.0
+
+[node name="Cylinder_027" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="74" unique_id=825402287]
+visibility_range_end = 15.0
+
+[node name="Cylinder_028" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="75" unique_id=217937749]
+visibility_range_end = 15.0
+
+[node name="Cylinder_029" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="76" unique_id=30601355]
+visibility_range_end = 15.0
+
+[node name="Cylinder_030" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="77" unique_id=1023445916]
+visibility_range_end = 15.0
+
+[node name="Cylinder_031" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="78" unique_id=700107965]
+visibility_range_end = 15.0
+
+[node name="Cylinder_032" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="79" unique_id=188166260]
+visibility_range_end = 15.0
+
+[node name="Cylinder_033" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="80" unique_id=226157409]
+visibility_range_end = 15.0
+
+[node name="Cylinder_034" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="81" unique_id=1730467231]
+visibility_range_end = 15.0
+
+[node name="Cylinder_035" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="82" unique_id=1948920064]
+visibility_range_end = 15.0
+
+[node name="Cylinder_036" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="83" unique_id=765640120]
+visibility_range_end = 15.0
+
+[node name="Cylinder_037" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="84" unique_id=1401659575]
+visibility_range_end = 15.0
+
+[node name="Cylinder_038" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="85" unique_id=1083116054]
+visibility_range_end = 15.0
+
+[node name="Cylinder_039" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="86" unique_id=395363034]
+visibility_range_end = 15.0
+
+[node name="Cylinder_040" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="87" unique_id=1100194782]
+visibility_range_end = 15.0
+
+[node name="Cylinder_041" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="88" unique_id=2023726732]
+visibility_range_end = 15.0
+
+[node name="Cylinder_042" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="89" unique_id=757477856]
+visibility_range_end = 15.0
+
+[node name="Cylinder_043" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="90" unique_id=210383907]
+visibility_range_end = 15.0
+
+[node name="Cylinder_044" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="91" unique_id=989717915]
+visibility_range_end = 15.0
+
+[node name="Cylinder_045" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="92" unique_id=1814892572]
+visibility_range_end = 15.0
+
+[node name="Cylinder_046" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="93" unique_id=1404312238]
+visibility_range_end = 15.0
+
+[node name="Cylinder_047" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="94" unique_id=609615411]
+visibility_range_end = 15.0
+
+[node name="Cylinder_048" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="95" unique_id=2125137704]
+visibility_range_end = 15.0
+
+[node name="Cylinder_049" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="96" unique_id=1800395221]
+visibility_range_end = 15.0
+
+[node name="Cylinder_050" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="97" unique_id=62705121]
+visibility_range_end = 15.0
+
+[node name="Cylinder_051" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="98" unique_id=872998298]
+visibility_range_end = 15.0
+
+[node name="Cylinder_052" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="99" unique_id=1118829374]
+visibility_range_end = 15.0
+
+[node name="Cylinder_053" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="100" unique_id=1843237520]
+visibility_range_end = 15.0
+
+[node name="Cylinder_054" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="101" unique_id=2133839925]
+visibility_range_end = 15.0
+
+[node name="Cylinder_055" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="102" unique_id=346918452]
+visibility_range_end = 15.0
+
+[node name="Cylinder_056" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="103" unique_id=2055570320]
+visibility_range_end = 15.0
+
+[node name="Cylinder_057" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="104" unique_id=1321135738]
+visibility_range_end = 15.0
+
+[node name="Cylinder_058" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="105" unique_id=273306760]
+visibility_range_end = 15.0
+
+[node name="Cylinder_059" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="106" unique_id=1185456822]
+visibility_range_end = 15.0
+
+[node name="Cylinder_060" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="107" unique_id=2122919927]
+visibility_range_end = 15.0
+
+[node name="Cylinder_061" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="108" unique_id=72118384]
+visibility_range_end = 15.0
+
+[node name="Cylinder_062" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="109" unique_id=501346689]
+visibility_range_end = 15.0
+
+[node name="Cylinder_063" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="110" unique_id=192625807]
+visibility_range_end = 15.0
+
+[node name="Cylinder_064" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="111" unique_id=926286181]
+visibility_range_end = 15.0
+
+[node name="Cylinder_065" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="112" unique_id=559656639]
+visibility_range_end = 15.0
+
+[node name="Cylinder_066" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="113" unique_id=1339294890]
+visibility_range_end = 15.0
+
+[node name="Cylinder_067" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="114" unique_id=1951759848]
+visibility_range_end = 15.0
+
+[node name="Cylinder_068" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="115" unique_id=1807804454]
+visibility_range_end = 15.0
+
+[node name="Cylinder_069" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="116" unique_id=731645596]
+visibility_range_end = 15.0
+
+[node name="Cylinder_070" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="117" unique_id=1316332243]
+visibility_range_end = 15.0
+
+[node name="Cylinder_071" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="118" unique_id=1612269064]
+visibility_range_end = 15.0
+
+[node name="Cylinder_072" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="119" unique_id=1271544785]
+visibility_range_end = 15.0
+
+[node name="Cylinder_073" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="120" unique_id=1049334391]
+visibility_range_end = 15.0
+
+[node name="Cylinder_074" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="121" unique_id=1921541965]
+visibility_range_end = 15.0
+
+[node name="Cylinder_075" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="122" unique_id=1976388388]
+visibility_range_end = 15.0
+
+[node name="Cylinder_076" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="123" unique_id=52661796]
+visibility_range_end = 15.0
+
+[node name="Cylinder_077" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="124" unique_id=197719303]
+visibility_range_end = 15.0
+
+[node name="Cylinder_078" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="125" unique_id=608618427]
+visibility_range_end = 15.0
+
+[node name="Cylinder_081" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="128" unique_id=1361247487]
+visibility_range_end = 15.0
+
+[node name="Cylinder_082" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="129" unique_id=210331546]
+visibility_range_end = 15.0
+
+[node name="Cylinder_083" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="130" unique_id=1525688977]
+visibility_range_end = 15.0
+
+[node name="Cylinder_084" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="131" unique_id=1029623944]
+visibility_range_end = 15.0
+
+[node name="Cylinder_085" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="132" unique_id=586951985]
+visibility_range_end = 15.0
+
+[node name="Cylinder_086" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="133" unique_id=1211546683]
+visibility_range_end = 15.0
+
+[node name="Cylinder_087" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="134" unique_id=829176972]
+visibility_range_end = 15.0
+
+[node name="Cylinder_088" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="135" unique_id=2021476306]
+visibility_range_end = 15.0
+
+[node name="Cylinder_089" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="136" unique_id=526781611]
+visibility_range_end = 15.0
+
+[node name="Cylinder_090" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="137" unique_id=392139552]
+visibility_range_end = 15.0
+
+[node name="Cylinder_091" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="138" unique_id=171843562]
+visibility_range_end = 15.0
+
+[node name="Cylinder_092" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="139" unique_id=1001495671]
+visibility_range_end = 15.0
+
+[node name="Cylinder_093" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="140" unique_id=1077516020]
+visibility_range_end = 15.0
+
+[node name="Cylinder_094" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="141" unique_id=1875329003]
+visibility_range_end = 15.0
+
+[node name="Cylinder_095" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="142" unique_id=2014762518]
+visibility_range_end = 15.0
+
+[node name="Cylinder_096" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="143" unique_id=267338654]
+visibility_range_end = 15.0
+
+[node name="Cylinder_097" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="144" unique_id=1965427863]
+visibility_range_end = 15.0
+
+[node name="Cylinder_098" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="145" unique_id=2016717198]
+visibility_range_end = 15.0
+
+[node name="Cylinder_099" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="146" unique_id=1473278345]
+visibility_range_end = 15.0
+
+[node name="Cylinder_100" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="147" unique_id=969669343]
+visibility_range_end = 15.0
+
+[node name="Cylinder_101" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="148" unique_id=1247718095]
+visibility_range_end = 15.0
+
+[node name="Cylinder_102" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="149" unique_id=2011434224]
+visibility_range_end = 15.0
+
+[node name="Cylinder_103" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="150" unique_id=671655815]
+visibility_range_end = 15.0
+
+[node name="Cylinder_104" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="151" unique_id=1673892550]
+visibility_range_end = 15.0
+
+[node name="Cylinder_105" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="152" unique_id=987845666]
+visibility_range_end = 15.0
+
+[node name="Cylinder_106" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="153" unique_id=1017301512]
+visibility_range_end = 15.0
+
+[node name="Cylinder_107" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="154" unique_id=529587802]
+visibility_range_end = 15.0
+
+[node name="Cylinder_108" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="155" unique_id=1485824477]
+visibility_range_end = 15.0
+
+[node name="Cylinder_109" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="156" unique_id=465652207]
+visibility_range_end = 15.0
+
+[node name="Cylinder_110" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="157" unique_id=1509128222]
+visibility_range_end = 15.0
+
+[node name="Cylinder_111" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="158" unique_id=908626134]
+visibility_range_end = 15.0
+
+[node name="Cylinder_112" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="159" unique_id=977976795]
+visibility_range_end = 15.0
+
+[node name="Cylinder_113" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="160" unique_id=1206427232]
+visibility_range_end = 15.0
+
+[node name="Cylinder_114" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="161" unique_id=272261565]
+visibility_range_end = 15.0
+
+[node name="Cylinder_115" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="162" unique_id=1202856808]
+visibility_range_end = 15.0
+
+[node name="Cylinder_116" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="163" unique_id=812608400]
+visibility_range_end = 15.0
+
+[node name="Cylinder_117" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="164" unique_id=963213289]
+visibility_range_end = 15.0
+
+[node name="Cylinder_118" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="165" unique_id=532143748]
+visibility_range_end = 15.0
+
+[node name="Cylinder_120" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="167" unique_id=25018759]
+visibility_range_end = 15.0
+
+[node name="Cylinder_121" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="168" unique_id=1292089899]
+visibility_range_end = 15.0
+
+[node name="Cylinder_122" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="169" unique_id=1254713789]
+visibility_range_end = 15.0
+
+[node name="Cylinder_123" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="170" unique_id=39513230]
+visibility_range_end = 15.0
+
+[node name="Cylinder_124" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="171" unique_id=161914955]
+visibility_range_end = 15.0
+
+[node name="Cylinder_1387" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="172" unique_id=735467700]
+visibility_range_end = 15.0
+
+[node name="Cylinder_144" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="173" unique_id=1083781508]
+visibility_range_end = 15.0
+
+[node name="Cylinder_145" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="174" unique_id=1968338394]
+visibility_range_end = 15.0
+
+[node name="Cylinder_280" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="175" unique_id=2013761488]
+visibility_range_end = 15.0
+
+[node name="msb_lufthebel3" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="176" unique_id=1973328275]
+visibility_range_end = 15.0
+
+[node name="Plane" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="177" unique_id=2133755800]
+visibility_range_end = 15.0
+
+[node name="Plane_001" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="178" unique_id=330452999]
+visibility_range_end = 15.0
+
+[node name="Plane_002" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="179" unique_id=1098662837]
+visibility_range_end = 15.0
+
+[node name="Plane_003" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="180" unique_id=1478275309]
+visibility_range_end = 15.0
+
+[node name="Plane_004" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="181" unique_id=474323348]
+visibility_range_end = 15.0
+
+[node name="Plane_005" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="182" unique_id=1334803513]
+visibility_range_end = 15.0
+
+[node name="Plane_006" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="183" unique_id=41881273]
+visibility_range_end = 15.0
+
+[node name="Plane_007" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="184" unique_id=1574126519]
+visibility_range_end = 15.0
+
+[node name="Plane_008" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="185" unique_id=365705194]
+visibility_range_end = 15.0
+
+[node name="Plane_009" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="186" unique_id=1303220186]
+visibility_range_end = 15.0
+
+[node name="Plane_010" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="187" unique_id=1667460747]
+visibility_range_end = 15.0
+
+[node name="Plane_011" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="188" unique_id=887087535]
+visibility_range_end = 15.0
+
+[node name="Plane_012" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="189" unique_id=1930414741]
+visibility_range_end = 15.0
+
+[node name="Plane_013" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="190" unique_id=1266319040]
+visibility_range_end = 15.0
+
+[node name="Plane_014" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="191" unique_id=506220915]
+visibility_range_end = 15.0
+
+[node name="Plane_015" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="192" unique_id=1203655794]
+visibility_range_end = 15.0
+
+[node name="Plane_016" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="193" unique_id=769216179]
+visibility_range_end = 15.0
+
+[node name="Plane_017" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="194" unique_id=1615581199]
+visibility_range_end = 15.0
+
+[node name="Plane_018" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="195" unique_id=752482218]
+visibility_range_end = 15.0
+
+[node name="Plane_019" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="196" unique_id=1594140618]
+visibility_range_end = 15.0
+
+[node name="Plane_020" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="197" unique_id=528643847]
+visibility_range_end = 15.0
+
+[node name="Plane_021" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="198" unique_id=1983751943]
+visibility_range_end = 15.0
+
+[node name="Plane_022" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="199" unique_id=163642342]
+visibility_range_end = 15.0
+
+[node name="Plane_023" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="200" unique_id=1452366088]
+visibility_range_end = 15.0
+
+[node name="Plane_024" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="201" unique_id=1782379205]
+visibility_range_end = 15.0
+
+[node name="Plane_025" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="202" unique_id=428843896]
+visibility_range_end = 15.0
+
+[node name="Plane_026" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="203" unique_id=672659680]
+visibility_range_end = 15.0
+
+[node name="Plane_027" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="204" unique_id=972590]
+visibility_range_end = 15.0
+
+[node name="Plane_028" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="205" unique_id=1500910136]
+visibility_range_end = 15.0
+
+[node name="Plane_029" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="206" unique_id=2070446681]
+visibility_range_end = 15.0
+
+[node name="Plane_030" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="207" unique_id=447216801]
+visibility_range_end = 15.0
+
+[node name="Plane_031" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="208" unique_id=515091810]
+visibility_range_end = 15.0
+
+[node name="Plane_032" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="209" unique_id=1902310399]
+visibility_range_end = 15.0
+
+[node name="Plane_033" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="210" unique_id=249351434]
+visibility_range_end = 15.0
+
+[node name="Plane_034" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="211" unique_id=102841594]
+visibility_range_end = 15.0
+
+[node name="Plane_035" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="212" unique_id=1260347414]
+visibility_range_end = 15.0
+
+[node name="Plane_036" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="213" unique_id=1292401654]
+visibility_range_end = 15.0
+
+[node name="Plane_037" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="214" unique_id=1440418230]
+visibility_range_end = 15.0
+
+[node name="Plane_038" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="215" unique_id=1730514976]
+visibility_range_end = 15.0
+
+[node name="Plane_039" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="216" unique_id=1771040379]
+visibility_range_end = 15.0
+
+[node name="Plane_040" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="217" unique_id=699975481]
+visibility_range_end = 15.0
+
+[node name="Plane_041" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="218" unique_id=20941508]
+visibility_range_end = 15.0
+
+[node name="Plane_042" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="219" unique_id=564260158]
+visibility_range_end = 15.0
+
+[node name="Plane_043" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="220" unique_id=258241658]
+visibility_range_end = 15.0
+
+[node name="Plane_044" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="221" unique_id=1257713116]
+visibility_range_end = 15.0
+
+[node name="Plane_045" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="222" unique_id=243364299]
+visibility_range_end = 15.0
+
+[node name="Plane_046" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="223" unique_id=452781122]
+visibility_range_end = 15.0
+
+[node name="Plane_047" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="224" unique_id=781602167]
+visibility_range_end = 15.0
+
+[node name="Plane_048" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="225" unique_id=446196504]
+visibility_range_end = 15.0
+
+[node name="Plane_049" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="226" unique_id=1720932195]
+visibility_range_end = 15.0
+
+[node name="Plane_050" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="227" unique_id=483357793]
+visibility_range_end = 15.0
+
+[node name="Plane_051" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="228" unique_id=227219566]
+visibility_range_end = 15.0
+
+[node name="Plane_052" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="229" unique_id=948895522]
+visibility_range_end = 15.0
+
+[node name="Plane_053" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="230" unique_id=955698897]
+visibility_range_end = 15.0
+
+[node name="Plane_054" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="231" unique_id=1625020224]
+visibility_range_end = 15.0
+
+[node name="Plane_055" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="232" unique_id=1851295811]
+visibility_range_end = 15.0
+
+[node name="Plane_056" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="233" unique_id=660456419]
+visibility_range_end = 15.0
+
+[node name="Plane_057" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="234" unique_id=340381755]
+visibility_range_end = 15.0
+
+[node name="Plane_058" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="235" unique_id=1901143776]
+visibility_range_end = 15.0
+
+[node name="Plane_059" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="236" unique_id=276858817]
+visibility_range_end = 15.0
+
+[node name="Plane_060" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="237" unique_id=1004708212]
+visibility_range_end = 15.0
+
+[node name="Plane_061" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="238" unique_id=863995116]
+visibility_range_end = 15.0
+
+[node name="Plane_062" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="239" unique_id=1180677416]
+visibility_range_end = 15.0
+
+[node name="Plane_063" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="240" unique_id=1975624970]
+visibility_range_end = 15.0
+
+[node name="Plane_064" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="241" unique_id=1467727336]
+visibility_range_end = 15.0
+
+[node name="Plane_065" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="242" unique_id=780651133]
+visibility_range_end = 15.0
+
+[node name="Plane_066" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="243" unique_id=495838779]
+visibility_range_end = 15.0
+
+[node name="Plane_067" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="244" unique_id=636047014]
+visibility_range_end = 15.0
+
+[node name="Plane_068" parent="Dekanter" parent_id_path=PackedInt32Array(498400138) index="245" unique_id=1814197312]
+visibility_range_end = 15.0
+
+[node name="Cube_050" parent="ausgleichsbehälter-brauchwasser" parent_id_path=PackedInt32Array(1566281257) index="3" unique_id=105606173]
+visibility_range_end = 15.0
+
+[node name="Cube_051" parent="ausgleichsbehälter-brauchwasser" parent_id_path=PackedInt32Array(1566281257) index="4" unique_id=1315669180]
+visibility_range_end = 15.0
+
+[node name="Cube_052" parent="ausgleichsbehälter-brauchwasser" parent_id_path=PackedInt32Array(1566281257) index="5" unique_id=1268978123]
+visibility_range_end = 15.0
+
+[node name="Cube_054" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="0" unique_id=2104685588]
+visibility_range_end = 15.0
+
+[node name="Cube_055" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="1" unique_id=1501412922]
+visibility_range_end = 15.0
+
+[node name="Cube_056" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="2" unique_id=927157421]
+visibility_range_end = 15.0
+
+[node name="Cube_057" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="3" unique_id=689974375]
+visibility_range_end = 15.0
+
+[node name="Cube_129" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="4" unique_id=229590421]
+visibility_range_end = 15.0
+
+[node name="Cube_130" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="5" unique_id=2010437557]
+visibility_range_end = 15.0
+
+[node name="Cube_131" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="6" unique_id=1344149282]
+visibility_range_end = 15.0
+
+[node name="Cube_132" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="7" unique_id=48894081]
+visibility_range_end = 15.0
+
+[node name="Cube_133" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="8" unique_id=197552324]
+visibility_range_end = 15.0
+
+[node name="Cube_134" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="9" unique_id=1281319196]
+visibility_range_end = 15.0
+
+[node name="Cube_135" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="10" unique_id=354084449]
+visibility_range_end = 15.0
+
+[node name="Cube_136" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="11" unique_id=2134622848]
+visibility_range_end = 15.0
+
+[node name="Cylinder_126" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="12" unique_id=1864086047]
+visibility_range_end = 15.0
+
+[node name="Cylinder_127" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="13" unique_id=1306308194]
+visibility_range_end = 15.0
+
+[node name="Cylinder_128" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="14" unique_id=333891653]
+visibility_range_end = 15.0
+
+[node name="Cylinder_129" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="15" unique_id=1082856593]
+visibility_range_end = 15.0
+
+[node name="Cylinder_130" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="16" unique_id=1181301711]
+visibility_range_end = 15.0
+
+[node name="Cylinder_131" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="17" unique_id=1202430707]
+visibility_range_end = 15.0
+
+[node name="Cylinder_132" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="18" unique_id=912425271]
+visibility_range_end = 15.0
+
+[node name="Cylinder_133" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="19" unique_id=462159897]
+visibility_range_end = 15.0
+
+[node name="Cylinder_134" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="20" unique_id=623491289]
+visibility_range_end = 15.0
+
+[node name="Cylinder_135" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="21" unique_id=1988781770]
+visibility_range_end = 15.0
+
+[node name="Cylinder_136" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="22" unique_id=1654227594]
+visibility_range_end = 15.0
+
+[node name="Cylinder_137" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="23" unique_id=193704962]
+visibility_range_end = 15.0
+
+[node name="Cylinder_138" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="24" unique_id=851623438]
+visibility_range_end = 15.0
+
+[node name="Cylinder_139" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="25" unique_id=2075435163]
+visibility_range_end = 15.0
+
+[node name="Cylinder_140" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="26" unique_id=1892865811]
+visibility_range_end = 15.0
+
+[node name="Cylinder_141" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="27" unique_id=1888979160]
+visibility_range_end = 15.0
+
+[node name="Cylinder_142" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="28" unique_id=413463350]
+visibility_range_end = 15.0
+
+[node name="Cylinder_143" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="29" unique_id=943620620]
+visibility_range_end = 15.0
+
+[node name="Cylinder_318" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="30" unique_id=1553086372]
+visibility_range_end = 15.0
+
+[node name="Cylinder_319" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="31" unique_id=1740709494]
+visibility_range_end = 15.0
+
+[node name="Cylinder_320" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="32" unique_id=1412974918]
+visibility_range_end = 15.0
+
+[node name="Cylinder_321" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="33" unique_id=581060503]
+visibility_range_end = 15.0
+
+[node name="Cylinder_322" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="34" unique_id=556911609]
+visibility_range_end = 15.0
+
+[node name="Cylinder_323" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="35" unique_id=1987334481]
+visibility_range_end = 15.0
+
+[node name="Cylinder_324" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="36" unique_id=1430456624]
+visibility_range_end = 15.0
+
+[node name="Cylinder_325" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="37" unique_id=1212903041]
+visibility_range_end = 15.0
+
+[node name="Cylinder_326" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="38" unique_id=59899236]
+visibility_range_end = 15.0
+
+[node name="Cylinder_327" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="39" unique_id=1402928407]
+visibility_range_end = 15.0
+
+[node name="Cylinder_328" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="40" unique_id=1290868863]
+visibility_range_end = 15.0
+
+[node name="Cylinder_329" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="41" unique_id=935779159]
+visibility_range_end = 15.0
+
+[node name="Cylinder_330" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="42" unique_id=694191100]
+visibility_range_end = 15.0
+
+[node name="Cylinder_331" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="43" unique_id=2102564148]
+visibility_range_end = 15.0
+
+[node name="Cylinder_332" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="44" unique_id=637409511]
+visibility_range_end = 15.0
+
+[node name="Cylinder_333" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="45" unique_id=1243946768]
+visibility_range_end = 15.0
+
+[node name="Plane_069" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="46" unique_id=1566083436]
+visibility_range_end = 15.0
+
+[node name="Plane_070" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="47" unique_id=1155787573]
+visibility_range_end = 15.0
+
+[node name="Plane_071" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="48" unique_id=167064608]
+visibility_range_end = 15.0
+
+[node name="Plane_072" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="49" unique_id=336052594]
+visibility_range_end = 15.0
+
+[node name="Plane_073" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="50" unique_id=540499628]
+visibility_range_end = 15.0
+
+[node name="Plane_074" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="51" unique_id=1245598233]
+visibility_range_end = 15.0
+
+[node name="Plane_075" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="52" unique_id=927664007]
+visibility_range_end = 15.0
+
+[node name="Plane_076" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="53" unique_id=426494992]
+visibility_range_end = 15.0
+
+[node name="Plane_077" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="54" unique_id=1904169842]
+visibility_range_end = 15.0
+
+[node name="Plane_078" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="55" unique_id=1270538737]
+visibility_range_end = 15.0
+
+[node name="Plane_079" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="56" unique_id=1151556309]
+visibility_range_end = 15.0
+
+[node name="Plane_080" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="57" unique_id=411241198]
+visibility_range_end = 15.0
+
+[node name="Plane_081" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="58" unique_id=1752356000]
+visibility_range_end = 15.0
+
+[node name="Plane_082" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="59" unique_id=251247158]
+visibility_range_end = 15.0
+
+[node name="Plane_083" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="60" unique_id=1048341504]
+visibility_range_end = 15.0
+
+[node name="Plane_084" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="61" unique_id=317378103]
+visibility_range_end = 15.0
+
+[node name="Plane_085" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="62" unique_id=540616669]
+visibility_range_end = 15.0
+
+[node name="Plane_149" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="63" unique_id=1992588957]
+visibility_range_end = 15.0
+
+[node name="Plane_150" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="64" unique_id=120842732]
+visibility_range_end = 15.0
+
+[node name="Plane_151" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="65" unique_id=1916181837]
+visibility_range_end = 15.0
+
+[node name="Plane_152" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="66" unique_id=1764935092]
+visibility_range_end = 15.0
+
+[node name="Plane_153" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="67" unique_id=970768931]
+visibility_range_end = 15.0
+
+[node name="Plane_154" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="68" unique_id=92680554]
+visibility_range_end = 15.0
+
+[node name="Plane_155" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="69" unique_id=1895013372]
+visibility_range_end = 15.0
+
+[node name="Plane_156" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="70" unique_id=1980095062]
+visibility_range_end = 15.0
+
+[node name="Plane_157" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="71" unique_id=250921202]
+visibility_range_end = 15.0
+
+[node name="Plane_158" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="72" unique_id=1839744044]
+visibility_range_end = 15.0
+
+[node name="Plane_159" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="73" unique_id=909201932]
+visibility_range_end = 15.0
+
+[node name="Plane_160" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="74" unique_id=526078773]
+visibility_range_end = 15.0
+
+[node name="Plane_161" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="75" unique_id=1780142451]
+visibility_range_end = 15.0
+
+[node name="Plane_162" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="76" unique_id=1791523268]
+visibility_range_end = 15.0
+
+[node name="Plane_163" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="77" unique_id=1895669064]
+visibility_range_end = 15.0
+
+[node name="Plane_164" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="78" unique_id=252727393]
+visibility_range_end = 15.0
+
+[node name="Plane_165" parent="Polymeranmischstation" parent_id_path=PackedInt32Array(1703947190) index="79" unique_id=1686795999]
+visibility_range_end = 15.0
+
+[node name="Cube_059" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="1" unique_id=1685530071]
+visibility_range_end = 15.0
+
+[node name="Cube_060" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="2" unique_id=1462134404]
+visibility_range_end = 15.0
+
+[node name="Cube_061" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="3" unique_id=164409565]
+visibility_range_end = 15.0
+
+[node name="Cube_062" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="4" unique_id=362065357]
+visibility_range_end = 15.0
+
+[node name="Cube_065" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="7" unique_id=1430767343]
+visibility_range_end = 15.0
+
+[node name="Cube_066" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="8" unique_id=641419942]
+visibility_range_end = 15.0
+
+[node name="Cube_068" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="10" unique_id=1209116363]
+visibility_range_end = 15.0
+
+[node name="Cube_069" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="11" unique_id=1397331266]
+visibility_range_end = 15.0
+
+[node name="Cube_072" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="14" unique_id=1359668093]
+visibility_range_end = 15.0
+
+[node name="Cube_073" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="15" unique_id=723450098]
+visibility_range_end = 15.0
+
+[node name="Cube_074" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="16" unique_id=1920617793]
+visibility_range_end = 15.0
+
+[node name="Cube_075" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="17" unique_id=830972765]
+visibility_range_end = 15.0
+
+[node name="Cube_076" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="18" unique_id=1178745136]
+visibility_range_end = 15.0
+
+[node name="Cube_077" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="19" unique_id=1484897786]
+visibility_range_end = 15.0
+
+[node name="Cube_078" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="20" unique_id=24749075]
+visibility_range_end = 15.0
+
+[node name="Cube_079" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="21" unique_id=1706644434]
+visibility_range_end = 15.0
+
+[node name="Cube_080" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="22" unique_id=846128722]
+visibility_range_end = 15.0
+
+[node name="Cube_081" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="23" unique_id=1749615707]
+visibility_range_end = 15.0
+
+[node name="Cube_082" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="24" unique_id=1141651050]
+visibility_range_end = 15.0
+
+[node name="Cube_083" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="25" unique_id=1591744220]
+visibility_range_end = 15.0
+
+[node name="Cube_084" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="26" unique_id=266087046]
+visibility_range_end = 15.0
+
+[node name="Cube_085" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="27" unique_id=709160568]
+visibility_range_end = 15.0
+
+[node name="Cube_086" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="28" unique_id=1364096910]
+visibility_range_end = 15.0
+
+[node name="Cube_087" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="29" unique_id=230391269]
+visibility_range_end = 15.0
+
+[node name="Cube_088" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="30" unique_id=368044614]
+visibility_range_end = 15.0
+
+[node name="Cube_089" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="31" unique_id=577369053]
+visibility_range_end = 15.0
+
+[node name="Cube_092" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="32" unique_id=1167630990]
+visibility_range_end = 15.0
+
+[node name="Cube_093" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="33" unique_id=528538803]
+visibility_range_end = 15.0
+
+[node name="Cube_094" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="34" unique_id=594543904]
+visibility_range_end = 15.0
+
+[node name="Cube_095" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="35" unique_id=1723937623]
+visibility_range_end = 15.0
+
+[node name="Cylinder_146" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="36" unique_id=149484506]
+visibility_range_end = 15.0
+
+[node name="Cylinder_147" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="37" unique_id=565136654]
+visibility_range_end = 15.0
+
+[node name="Cylinder_148" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="38" unique_id=2142130897]
+visibility_range_end = 15.0
+
+[node name="Cylinder_149" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="39" unique_id=1158226538]
+visibility_range_end = 15.0
+
+[node name="Cylinder_150" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="40" unique_id=1376394790]
+visibility_range_end = 15.0
+
+[node name="Cylinder_151" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="41" unique_id=1078912575]
+visibility_range_end = 15.0
+
+[node name="Cylinder_152" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="42" unique_id=1085737756]
+visibility_range_end = 15.0
+
+[node name="Cylinder_153" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="43" unique_id=401994907]
+visibility_range_end = 15.0
+
+[node name="Cylinder_154" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="44" unique_id=731822890]
+visibility_range_end = 15.0
+
+[node name="Cylinder_155" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="45" unique_id=349145986]
+visibility_range_end = 15.0
+
+[node name="Cylinder_157" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="46" unique_id=727435157]
+visibility_range_end = 15.0
+
+[node name="Cylinder_159" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="48" unique_id=158694885]
+visibility_range_end = 15.0
+
+[node name="Cylinder_160" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="49" unique_id=1068960180]
+visibility_range_end = 15.0
+
+[node name="Cylinder_161" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="50" unique_id=653879938]
+visibility_range_end = 15.0
+
+[node name="Cylinder_162" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="51" unique_id=1922799799]
+visibility_range_end = 15.0
+
+[node name="Cylinder_163" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="52" unique_id=229462274]
+visibility_range_end = 15.0
+
+[node name="Cylinder_164" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="53" unique_id=242903078]
+visibility_range_end = 15.0
+
+[node name="Cylinder_165" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="54" unique_id=235933338]
+visibility_range_end = 15.0
+
+[node name="Cylinder_166" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="55" unique_id=1505319180]
+visibility_range_end = 15.0
+
+[node name="Cylinder_167" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="56" unique_id=50013663]
+visibility_range_end = 15.0
+
+[node name="Cylinder_168" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="57" unique_id=1249617013]
+visibility_range_end = 15.0
+
+[node name="Cylinder_169" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="58" unique_id=1642157652]
+visibility_range_end = 15.0
+
+[node name="Cylinder_170" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="59" unique_id=959430100]
+visibility_range_end = 15.0
+
+[node name="Cylinder_171" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="60" unique_id=1191808083]
+visibility_range_end = 15.0
+
+[node name="Cylinder_172" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="61" unique_id=466247947]
+visibility_range_end = 15.0
+
+[node name="Cylinder_173" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="62" unique_id=534985226]
+visibility_range_end = 15.0
+
+[node name="Cylinder_191" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="63" unique_id=2122693927]
+visibility_range_end = 15.0
+
+[node name="Cylinder_192" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="64" unique_id=1540156474]
+visibility_range_end = 15.0
+
+[node name="Cylinder_193" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="65" unique_id=1975498652]
+visibility_range_end = 15.0
+
+[node name="Cylinder_194" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="66" unique_id=878662882]
+visibility_range_end = 15.0
+
+[node name="Cylinder_195" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="67" unique_id=831885325]
+visibility_range_end = 15.0
+
+[node name="Plane_086" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="68" unique_id=1300108859]
+visibility_range_end = 15.0
+
+[node name="Plane_087" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="69" unique_id=641952265]
+visibility_range_end = 15.0
+
+[node name="Plane_088" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="70" unique_id=184041151]
+visibility_range_end = 15.0
+
+[node name="Plane_089" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="71" unique_id=1054428831]
+visibility_range_end = 15.0
+
+[node name="Plane_090" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="72" unique_id=1449799866]
+visibility_range_end = 15.0
+
+[node name="Plane_091" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="73" unique_id=1556863101]
+visibility_range_end = 15.0
+
+[node name="Plane_092" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="74" unique_id=1698153918]
+visibility_range_end = 15.0
+
+[node name="Plane_093" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="75" unique_id=23768303]
+visibility_range_end = 15.0
+
+[node name="Plane_094" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="76" unique_id=1672257147]
+visibility_range_end = 15.0
+
+[node name="Plane_095" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="77" unique_id=1679680543]
+visibility_range_end = 15.0
+
+[node name="Plane_096" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="78" unique_id=345475742]
+visibility_range_end = 15.0
+
+[node name="Plane_097" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="79" unique_id=1251975950]
+visibility_range_end = 15.0
+
+[node name="Plane_098" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="80" unique_id=700313361]
+visibility_range_end = 15.0
+
+[node name="Plane_099" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="81" unique_id=1171328789]
+visibility_range_end = 15.0
+
+[node name="Plane_100" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="82" unique_id=1909371539]
+visibility_range_end = 15.0
+
+[node name="Plane_101" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="83" unique_id=1962309478]
+visibility_range_end = 15.0
+
+[node name="Plane_102" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="84" unique_id=1058835511]
+visibility_range_end = 15.0
+
+[node name="Plane_103" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="85" unique_id=1209217146]
+visibility_range_end = 15.0
+
+[node name="Plane_104" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="86" unique_id=1153043797]
+visibility_range_end = 15.0
+
+[node name="Plane_105" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="87" unique_id=107453168]
+visibility_range_end = 15.0
+
+[node name="Plane_106" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="88" unique_id=1757770264]
+visibility_range_end = 15.0
+
+[node name="Plane_107" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="89" unique_id=1802587787]
+visibility_range_end = 15.0
+
+[node name="Plane_108" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="90" unique_id=987862892]
+visibility_range_end = 15.0
+
+[node name="Plane_109" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="91" unique_id=1406063137]
+visibility_range_end = 15.0
+
+[node name="Plane_110" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="92" unique_id=1291154031]
+visibility_range_end = 15.0
+
+[node name="Plane_111" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="93" unique_id=543987318]
+visibility_range_end = 15.0
+
+[node name="Plane_112" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="94" unique_id=912850681]
+visibility_range_end = 15.0
+
+[node name="Plane_113" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="95" unique_id=144051624]
+visibility_range_end = 15.0
+
+[node name="Plane_114" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="96" unique_id=1403560207]
+visibility_range_end = 15.0
+
+[node name="Plane_115" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="97" unique_id=1292632559]
+visibility_range_end = 15.0
+
+[node name="Plane_116" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="98" unique_id=324509638]
+visibility_range_end = 15.0
+
+[node name="Plane_117" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="99" unique_id=1488482909]
+visibility_range_end = 15.0
+
+[node name="Plane_118" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="100" unique_id=1064800949]
+visibility_range_end = 15.0
+
+[node name="Plane_119" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="101" unique_id=1830186453]
+visibility_range_end = 15.0
+
+[node name="Plane_122" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="102" unique_id=2141744468]
+visibility_range_end = 15.0
+
+[node name="Plane_123" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="103" unique_id=890126119]
+visibility_range_end = 15.0
+
+[node name="Plane_124" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="104" unique_id=2087455793]
+visibility_range_end = 15.0
+
+[node name="Plane_125" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="105" unique_id=1389406641]
+visibility_range_end = 15.0
+
+[node name="Plane_126" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="106" unique_id=759265151]
+visibility_range_end = 15.0
+
+[node name="Plane_127" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="107" unique_id=1143310383]
+visibility_range_end = 15.0
+
+[node name="Plane_128" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="108" unique_id=1846040505]
+visibility_range_end = 15.0
+
+[node name="Plane_129" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="109" unique_id=1226830506]
+visibility_range_end = 15.0
+
+[node name="Plane_130" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="110" unique_id=2040408406]
+visibility_range_end = 15.0
+
+[node name="Plane_131" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="111" unique_id=2134709935]
+visibility_range_end = 15.0
+
+[node name="Plane_132" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="112" unique_id=953730609]
+visibility_range_end = 15.0
+
+[node name="Plane_133" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="113" unique_id=2110725045]
+visibility_range_end = 15.0
+
+[node name="Plane_134" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="114" unique_id=541262359]
+visibility_range_end = 15.0
+
+[node name="Plane_135" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="115" unique_id=2052734796]
+visibility_range_end = 15.0
+
+[node name="Plane_136" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="116" unique_id=243114482]
+visibility_range_end = 15.0
+
+[node name="Plane_137" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="117" unique_id=1209546831]
+visibility_range_end = 15.0
+
+[node name="Plane_138" parent="Scheibeneindicker" parent_id_path=PackedInt32Array(430897833) index="118" unique_id=424251117]
+visibility_range_end = 15.0
+
+[node name="Spülanschluss-Scheibeneindicker" parent="." index="5" unique_id=1483173813]
+visibility_range_end = 15.0
+
+[node name="Cylinder_176" parent="Spülanschluss-Scheibeneindicker" index="0" unique_id=1606309931]
+visibility_range_end = 15.0
+
+[node name="Cylinder_177" parent="Spülanschluss-Scheibeneindicker" index="1" unique_id=338821457]
+visibility_range_end = 15.0
+
+[node name="msb_lufthebel3_001" parent="Spülanschluss-Scheibeneindicker" index="2" unique_id=11840028]
+visibility_range_end = 15.0
+
+[node name="Handschieber-7" parent="." index="6" unique_id=1209990277]
+visibility_range_end = 15.0
+
+[node name="Cube_090" parent="Handschieber-7" index="0" unique_id=461175723]
+visibility_range_end = 15.0
+
+[node name="Cube_091" parent="Handschieber-7" index="1" unique_id=1940153556]
+visibility_range_end = 15.0
+
+[node name="Cylinder_178" parent="Handschieber-7" index="2" unique_id=1048562542]
+visibility_range_end = 15.0
+
+[node name="Cylinder_179" parent="Handschieber-7" index="3" unique_id=172897842]
+visibility_range_end = 15.0
+
+[node name="Cylinder_181" parent="Handschieber-7" index="4" unique_id=1799542178]
+visibility_range_end = 15.0
+
+[node name="Cylinder_182" parent="Handschieber-7" index="5" unique_id=560080555]
+visibility_range_end = 15.0
+
+[node name="Cylinder_183" parent="Handschieber-7" index="6" unique_id=942510560]
+visibility_range_end = 15.0
+
+[node name="Cylinder_184" parent="Handschieber-7" index="7" unique_id=914737619]
+visibility_range_end = 15.0
+
+[node name="Cylinder_185" parent="Handschieber-7" index="8" unique_id=898380861]
+visibility_range_end = 15.0
+
+[node name="Cylinder_186" parent="Handschieber-7" index="9" unique_id=1692989689]
+visibility_range_end = 15.0
+
+[node name="Cylinder_187" parent="Handschieber-7" index="10" unique_id=361102362]
+visibility_range_end = 15.0
+
+[node name="Cylinder_188" parent="Handschieber-7" index="11" unique_id=1773307728]
+visibility_range_end = 15.0
+
+[node name="Cylinder_189" parent="Handschieber-7" index="12" unique_id=320971039]
+visibility_range_end = 15.0
+
+[node name="Plane_120" parent="Handschieber-7" index="13" unique_id=1878495608]
+visibility_range_end = 15.0
+
+[node name="Plane_121" parent="Handschieber-7" index="14" unique_id=786975117]
+visibility_range_end = 15.0
+
+[node name="MID-3" parent="." index="7" unique_id=1248236866]
+visibility_range_end = 15.0
+
+[node name="Circle_001" parent="MID-3" index="0" unique_id=505281848]
+visibility_range_end = 15.0
+
+[node name="Cylinder_198" parent="MID-3" index="1" unique_id=255494582]
+visibility_range_end = 15.0
+
+[node name="Cylinder_199" parent="MID-3" index="2" unique_id=1804692005]
+visibility_range_end = 15.0
+
+[node name="Cylinder_200" parent="MID-3" index="3" unique_id=2008855120]
+visibility_range_end = 15.0
+
+[node name="Cylinder_201" parent="MID-3" index="4" unique_id=1201449206]
+visibility_range_end = 15.0
+
+[node name="Cylinder_203" parent="MID-3" index="5" unique_id=2096035583]
+visibility_range_end = 15.0
+
+[node name="Cylinder_204" parent="MID-3" index="6" unique_id=1930506342]
+visibility_range_end = 15.0
+
+[node name="Cylinder_205" parent="MID-3" index="7" unique_id=1797315349]
+visibility_range_end = 15.0
+
+[node name="Cylinder_206" parent="MID-3" index="8" unique_id=1920281594]
+visibility_range_end = 15.0
+
+[node name="Cylinder_207" parent="MID-3" index="9" unique_id=865679077]
+visibility_range_end = 15.0
+
+[node name="Cylinder_208" parent="MID-3" index="10" unique_id=73435918]
+visibility_range_end = 15.0
+
+[node name="Cylinder_209" parent="MID-3" index="11" unique_id=1388225249]
+visibility_range_end = 15.0
+
+[node name="Cylinder_210" parent="MID-3" index="12" unique_id=495343854]
+visibility_range_end = 15.0
+
+[node name="Cylinder_211" parent="MID-3" index="13" unique_id=609948407]
+visibility_range_end = 15.0
+
+[node name="Cylinder_212" parent="MID-3" index="14" unique_id=1199752446]
+visibility_range_end = 15.0
+
+[node name="Cylinder_213" parent="MID-3" index="15" unique_id=2036231291]
+visibility_range_end = 15.0
+
+[node name="Cylinder_214" parent="MID-3" index="16" unique_id=1190600262]
+visibility_range_end = 15.0
+
+[node name="Cylinder_215" parent="MID-3" index="17" unique_id=1892996292]
+visibility_range_end = 15.0
+
+[node name="Cylinder_216" parent="MID-3" index="18" unique_id=1312022063]
+visibility_range_end = 15.0
+
+[node name="Cylinder_217" parent="MID-3" index="19" unique_id=2065345187]
+visibility_range_end = 15.0
+
+[node name="Cylinder_218" parent="MID-3" index="20" unique_id=2042952394]
+visibility_range_end = 15.0
+
+[node name="Cylinder_219" parent="MID-3" index="21" unique_id=706525634]
+visibility_range_end = 15.0
+
+[node name="Cylinder_220" parent="MID-3" index="22" unique_id=80108671]
+visibility_range_end = 15.0
+
+[node name="Cylinder_221" parent="MID-3" index="23" unique_id=207057147]
+visibility_range_end = 15.0
+
+[node name="Cylinder_222" parent="MID-3" index="24" unique_id=1782551614]
+visibility_range_end = 15.0
+
+[node name="Plane_139" parent="MID-3" index="25" unique_id=1604874910]
+visibility_range_end = 15.0
+
+[node name="Handschieber-6" parent="." index="8" unique_id=288359465]
+visibility_range_end = 15.0
+
+[node name="Cube_096" parent="Handschieber-6" index="0" unique_id=1044018872]
+visibility_range_end = 15.0
+
+[node name="Cube_097" parent="Handschieber-6" index="1" unique_id=208409674]
+visibility_range_end = 15.0
+
+[node name="Cylinder_223" parent="Handschieber-6" index="2" unique_id=637623137]
+visibility_range_end = 15.0
+
+[node name="Cylinder_224" parent="Handschieber-6" index="3" unique_id=154198070]
+visibility_range_end = 15.0
+
+[node name="Cylinder_225" parent="Handschieber-6" index="4" unique_id=2033589882]
+visibility_range_end = 15.0
+
+[node name="Cylinder_226" parent="Handschieber-6" index="5" unique_id=1462686468]
+visibility_range_end = 15.0
+
+[node name="Cylinder_227" parent="Handschieber-6" index="6" unique_id=49058711]
+visibility_range_end = 15.0
+
+[node name="Cylinder_228" parent="Handschieber-6" index="7" unique_id=1718410520]
+visibility_range_end = 15.0
+
+[node name="Cylinder_229" parent="Handschieber-6" index="8" unique_id=1824928481]
+visibility_range_end = 15.0
+
+[node name="Cylinder_230" parent="Handschieber-6" index="9" unique_id=569860592]
+visibility_range_end = 15.0
+
+[node name="Cylinder_231" parent="Handschieber-6" index="10" unique_id=606858421]
+visibility_range_end = 15.0
+
+[node name="Cylinder_233" parent="Handschieber-6" index="11" unique_id=221832569]
+visibility_range_end = 15.0
+
+[node name="Cylinder_234" parent="Handschieber-6" index="12" unique_id=25606951]
+visibility_range_end = 15.0
+
+[node name="Plane_140" parent="Handschieber-6" index="13" unique_id=1235447515]
+visibility_range_end = 15.0
+
+[node name="Plane_141" parent="Handschieber-6" index="14" unique_id=3844047]
+visibility_range_end = 15.0
+
+[node name="Handschieber-8" parent="." index="9" unique_id=1157372382]
+visibility_range_end = 15.0
+
+[node name="Cube_098" parent="Handschieber-8" index="0" unique_id=1179394308]
+visibility_range_end = 15.0
+
+[node name="Cube_099" parent="Handschieber-8" index="1" unique_id=454054050]
+visibility_range_end = 15.0
+
+[node name="Cylinder_235" parent="Handschieber-8" index="2" unique_id=638184946]
+visibility_range_end = 15.0
+
+[node name="Cylinder_236" parent="Handschieber-8" index="3" unique_id=314392876]
+visibility_range_end = 15.0
+
+[node name="Cylinder_237" parent="Handschieber-8" index="4" unique_id=1907874034]
+visibility_range_end = 15.0
+
+[node name="Cylinder_238" parent="Handschieber-8" index="5" unique_id=67751556]
+visibility_range_end = 15.0
+
+[node name="Cylinder_239" parent="Handschieber-8" index="6" unique_id=484433094]
+visibility_range_end = 15.0
+
+[node name="Cylinder_240" parent="Handschieber-8" index="7" unique_id=215104758]
+visibility_range_end = 15.0
+
+[node name="Cylinder_241" parent="Handschieber-8" index="8" unique_id=2012323099]
+visibility_range_end = 15.0
+
+[node name="Cylinder_242" parent="Handschieber-8" index="9" unique_id=1420125347]
+visibility_range_end = 15.0
+
+[node name="Cylinder_243" parent="Handschieber-8" index="10" unique_id=335522156]
+visibility_range_end = 15.0
+
+[node name="Cylinder_245" parent="Handschieber-8" index="11" unique_id=1727965656]
+visibility_range_end = 15.0
+
+[node name="Cylinder_246" parent="Handschieber-8" index="12" unique_id=2037719119]
+visibility_range_end = 15.0
+
+[node name="Plane_142" parent="Handschieber-8" index="13" unique_id=1762480336]
+visibility_range_end = 15.0
+
+[node name="Plane_143" parent="Handschieber-8" index="14" unique_id=1685422063]
+visibility_range_end = 15.0
+
+[node name="Steuerung-Scheibeneindicker" parent="." index="10" unique_id=1820822748]
+visibility_range_end = 15.0
+
+[node name="Cube_101" parent="Steuerung-Scheibeneindicker" index="0" unique_id=891232608]
+visibility_range_end = 15.0
+
+[node name="Cube_102" parent="Steuerung-Scheibeneindicker" index="1" unique_id=607411493]
+visibility_range_end = 15.0
+
+[node name="Cube_126" parent="Steuerung-Scheibeneindicker" index="2" unique_id=896400168]
+visibility_range_end = 15.0
+
+[node name="Cylinder_247" parent="Steuerung-Scheibeneindicker" index="3" unique_id=2135541828]
+visibility_range_end = 15.0
+
+[node name="Knopf-3" parent="Steuerung-Scheibeneindicker" index="4" unique_id=1739884702]
+visibility_range_end = 15.0
+
+[node name="Not-Aus-3" parent="Steuerung-Scheibeneindicker" index="5" unique_id=635181770]
+visibility_range_end = 15.0
+
+[node name="MID-1" parent="." index="11" unique_id=515189387]
+visibility_range_end = 15.0
+
+[node name="Circle_002" parent="MID-1" index="0" unique_id=323017279]
+visibility_range_end = 15.0
+
+[node name="Cylinder_248" parent="MID-1" index="1" unique_id=715861591]
+visibility_range_end = 15.0
+
+[node name="Cylinder_249" parent="MID-1" index="2" unique_id=660200900]
+visibility_range_end = 15.0
+
+[node name="Cylinder_250" parent="MID-1" index="3" unique_id=589597073]
+visibility_range_end = 15.0
+
+[node name="Cylinder_251" parent="MID-1" index="4" unique_id=1673159722]
+visibility_range_end = 15.0
+
+[node name="Cylinder_252" parent="MID-1" index="5" unique_id=572615990]
+visibility_range_end = 15.0
+
+[node name="Cylinder_253" parent="MID-1" index="6" unique_id=732938100]
+visibility_range_end = 15.0
+
+[node name="Cylinder_254" parent="MID-1" index="7" unique_id=660759786]
+visibility_range_end = 15.0
+
+[node name="Cylinder_255" parent="MID-1" index="8" unique_id=927980133]
+visibility_range_end = 15.0
+
+[node name="Cylinder_256" parent="MID-1" index="9" unique_id=1449346862]
+visibility_range_end = 15.0
+
+[node name="Cylinder_257" parent="MID-1" index="10" unique_id=1542452487]
+visibility_range_end = 15.0
+
+[node name="Cylinder_258" parent="MID-1" index="11" unique_id=1166345887]
+visibility_range_end = 15.0
+
+[node name="Cylinder_259" parent="MID-1" index="12" unique_id=1300816373]
+visibility_range_end = 15.0
+
+[node name="Cylinder_260" parent="MID-1" index="13" unique_id=2028236675]
+visibility_range_end = 15.0
+
+[node name="Cylinder_261" parent="MID-1" index="14" unique_id=1891625036]
+visibility_range_end = 15.0
+
+[node name="Cylinder_262" parent="MID-1" index="15" unique_id=615024184]
+visibility_range_end = 15.0
+
+[node name="Cylinder_263" parent="MID-1" index="16" unique_id=844084397]
+visibility_range_end = 15.0
+
+[node name="Cylinder_264" parent="MID-1" index="17" unique_id=1041279356]
+visibility_range_end = 15.0
+
+[node name="Cylinder_265" parent="MID-1" index="18" unique_id=1000096982]
+visibility_range_end = 15.0
+
+[node name="Cylinder_266" parent="MID-1" index="19" unique_id=340784693]
+visibility_range_end = 15.0
+
+[node name="Cylinder_267" parent="MID-1" index="20" unique_id=1319105515]
+visibility_range_end = 15.0
+
+[node name="Cylinder_269" parent="MID-1" index="21" unique_id=442891043]
+visibility_range_end = 15.0
+
+[node name="Cylinder_270" parent="MID-1" index="22" unique_id=1135591600]
+visibility_range_end = 15.0
+
+[node name="Cylinder_271" parent="MID-1" index="23" unique_id=240058782]
+visibility_range_end = 15.0
+
+[node name="Cylinder_272" parent="MID-1" index="24" unique_id=1717171107]
+visibility_range_end = 15.0
+
+[node name="Plane_144" parent="MID-1" index="25" unique_id=563351664]
+visibility_range_end = 15.0
+
+[node name="Rohre" parent="." index="12" unique_id=1276634972]
+visibility_range_end = 15.0
+
+[node name="Cube_203" parent="Rohre" index="0" unique_id=1969355445]
+visibility_range_end = 25.0
+
+[node name="Cube_246" parent="Rohre" index="1" unique_id=1949056037]
+visibility_range_end = 25.0
+
+[node name="Cube_247" parent="Rohre" index="2" unique_id=1513799504]
+visibility_range_end = 25.0
+
+[node name="Cube_248" parent="Rohre" index="3" unique_id=1035275639]
+visibility_range_end = 25.0
+
+[node name="Cube_249" parent="Rohre" index="4" unique_id=2102656202]
+visibility_range_end = 25.0
+
+[node name="Cylinder_174" parent="Rohre" index="5" unique_id=1403190856]
+visibility_range_end = 15.0
+
+[node name="Cylinder_190" parent="Rohre" index="6" unique_id=1349526853]
+visibility_range_end = 15.0
+
+[node name="Cylinder_197" parent="Rohre" index="8" unique_id=27600194]
+visibility_range_end = 15.0
+
+[node name="Cylinder_273" parent="Rohre" index="9" unique_id=641020140]
+visibility_range_end = 15.0
+
+[node name="Cylinder_289" parent="Rohre" index="16" unique_id=909468044]
+visibility_range_end = 15.0
+
+[node name="Cylinder_290" parent="Rohre" index="17" unique_id=1984140219]
+visibility_range_end = 15.0
+
+[node name="Cylinder_291" parent="Rohre" index="18" unique_id=2000108764]
+visibility_range_end = 15.0
+
+[node name="Cylinder_293" parent="Rohre" index="19" unique_id=2012989841]
+visibility_range_end = 15.0
+
+[node name="Cylinder_301" parent="Rohre" index="20" unique_id=1847153229]
+visibility_range_end = 15.0
+
+[node name="Cylinder_302" parent="Rohre" index="21" unique_id=211102954]
+visibility_range_end = 15.0
+
+[node name="Cylinder_316" parent="Rohre" index="23" unique_id=972510662]
+visibility_range_end = 15.0
+
+[node name="Cylinder_317" parent="Rohre" index="24" unique_id=1082944670]
+visibility_range_end = 15.0
+
+[node name="Cylinder_335" parent="Rohre" index="26" unique_id=1957025543]
+visibility_range_end = 15.0
+
+[node name="Cylinder_375" parent="Rohre" index="27" unique_id=193669368]
+visibility_range_end = 25.0
+
+[node name="Cylinder_378" parent="Rohre" index="30" unique_id=1047084083]
+visibility_range_end = 25.0
+
+[node name="Cylinder_382" parent="Rohre" index="34" unique_id=2139636436]
+visibility_range_end = 25.0
+
+[node name="Cylinder_512" parent="Rohre" index="36" unique_id=95150035]
+visibility_range_end = 25.0
+
+[node name="Cylinder_513" parent="Rohre" index="37" unique_id=510205726]
+visibility_range_end = 25.0
+
+[node name="Cylinder_514" parent="Rohre" index="38" unique_id=141553938]
+visibility_range_end = 25.0
+
+[node name="Cylinder_515" parent="Rohre" index="39" unique_id=1801816642]
+visibility_range_end = 25.0
+
+[node name="Cylinder_663" parent="Rohre" index="40" unique_id=1260472332]
+visibility_range_end = 25.0
+
+[node name="Cylinder_664" parent="Rohre" index="41" unique_id=1741722109]
+visibility_range_end = 25.0
+
+[node name="Cylinder_665" parent="Rohre" index="42" unique_id=543108659]
+visibility_range_end = 25.0
+
+[node name="Cylinder_666" parent="Rohre" index="43" unique_id=975321630]
+visibility_range_end = 25.0
+
+[node name="Cylinder_672" parent="Rohre" index="44" unique_id=1827404863]
+visibility_range_end = 25.0
+
+[node name="Cylinder_673" parent="Rohre" index="45" unique_id=413480228]
+visibility_range_end = 25.0
+
+[node name="Cylinder_680" parent="Rohre" index="46" unique_id=788802572]
+visibility_range_end = 25.0
+
+[node name="Cylinder_681" parent="Rohre" index="47" unique_id=1523171517]
+visibility_range_end = 25.0
+
+[node name="Cylinder_682" parent="Rohre" index="48" unique_id=1259211821]
+visibility_range_end = 25.0
+
+[node name="Cylinder_683" parent="Rohre" index="49" unique_id=539277755]
+visibility_range_end = 25.0
+
+[node name="Cylinder_762" parent="Rohre" index="53" unique_id=1216763818]
+visibility_range_end = 15.0
+
+[node name="Motorschieber-1" parent="." index="13" unique_id=1561297275]
+visibility_range_end = 15.0
+
+[node name="Cube_105" parent="Motorschieber-1" index="0" unique_id=540307803]
+visibility_range_end = 15.0
+
+[node name="Cube_107" parent="Motorschieber-1" index="1" unique_id=901841093]
+visibility_range_end = 15.0
+
+[node name="Cube_108" parent="Motorschieber-1" index="2" unique_id=1306232012]
+visibility_range_end = 15.0
+
+[node name="Cylinder_282" parent="Motorschieber-1" index="3" unique_id=1075209008]
+visibility_range_end = 15.0
+
+[node name="Cylinder_283" parent="Motorschieber-1" index="4" unique_id=1425616977]
+visibility_range_end = 15.0
+
+[node name="Cylinder_285" parent="Motorschieber-1" index="5" unique_id=1951280727]
+visibility_range_end = 15.0
+
+[node name="Cylinder_286" parent="Motorschieber-1" index="6" unique_id=1282275050]
+visibility_range_end = 15.0
+
+[node name="Cylinder_287" parent="Motorschieber-1" index="7" unique_id=1491495511]
+visibility_range_end = 15.0
+
+[node name="Cylinder_288" parent="Motorschieber-1" index="8" unique_id=1622429058]
+visibility_range_end = 15.0
+
+[node name="Cylinder_292" parent="Motorschieber-1" index="9" unique_id=125155281]
+visibility_range_end = 15.0
+
+[node name="Cylinder_294" parent="Motorschieber-1" index="10" unique_id=1152192509]
+visibility_range_end = 15.0
+
+[node name="Cylinder_295" parent="Motorschieber-1" index="11" unique_id=89467254]
+visibility_range_end = 15.0
+
+[node name="Cylinder_296" parent="Motorschieber-1" index="12" unique_id=565202827]
+visibility_range_end = 15.0
+
+[node name="Cylinder_297" parent="Motorschieber-1" index="13" unique_id=779719122]
+visibility_range_end = 15.0
+
+[node name="Cylinder_298" parent="Motorschieber-1" index="14" unique_id=2001478016]
+visibility_range_end = 15.0
+
+[node name="Cylinder_299" parent="Motorschieber-1" index="15" unique_id=277972800]
+visibility_range_end = 15.0
+
+[node name="Cylinder_300" parent="Motorschieber-1" index="16" unique_id=1491005934]
+visibility_range_end = 15.0
+
+[node name="Plane_145" parent="Motorschieber-1" index="17" unique_id=1550958818]
+visibility_range_end = 15.0
+
+[node name="Plane_146" parent="Motorschieber-1" index="18" unique_id=1124454076]
+visibility_range_end = 15.0
+
+[node name="Steuerungskasten-1" parent="." index="14" unique_id=952722894]
+visibility_range_end = 15.0
+
+[node name="Cube_104" parent="Steuerungskasten-1" index="0" unique_id=1685910034]
+visibility_range_end = 15.0
+
+[node name="Cube_106" parent="Steuerungskasten-1" index="1" unique_id=111400929]
+visibility_range_end = 15.0
+
+[node name="Cube_109" parent="Steuerungskasten-1" index="2" unique_id=1957461185]
+visibility_range_end = 15.0
+
+[node name="Cube_110" parent="Steuerungskasten-1" index="3" unique_id=465951831]
+visibility_range_end = 15.0
+
+[node name="Cube_111" parent="Steuerungskasten-1" index="4" unique_id=1223706383]
+visibility_range_end = 15.0
+
+[node name="Cube_112" parent="Steuerungskasten-1" index="5" unique_id=1430850393]
+visibility_range_end = 15.0
+
+[node name="Cube_113" parent="Steuerungskasten-1" index="6" unique_id=1085171071]
+visibility_range_end = 15.0
+
+[node name="Cube_114" parent="Steuerungskasten-1" index="7" unique_id=1931551458]
+visibility_range_end = 15.0
+
+[node name="Cube_115" parent="Steuerungskasten-1" index="8" unique_id=1827490951]
+visibility_range_end = 15.0
+
+[node name="Steuerung-2" parent="." index="15" unique_id=103635867]
+visibility_range_end = 15.0
+
+[node name="Cube_116" parent="Steuerung-2" index="0" unique_id=2097155582]
+visibility_range_end = 15.0
+
+[node name="Cube_117" parent="Steuerung-2" index="1" unique_id=1953211768]
+visibility_range_end = 15.0
+
+[node name="Cube_118" parent="Steuerung-2" index="2" unique_id=531329204]
+visibility_range_end = 15.0
+
+[node name="Cube_119" parent="Steuerung-2" index="3" unique_id=1016288531]
+visibility_range_end = 15.0
+
+[node name="Cube_120" parent="Steuerung-2" index="4" unique_id=673685997]
+visibility_range_end = 15.0
+
+[node name="Cube_121" parent="Steuerung-2" index="5" unique_id=914017690]
+visibility_range_end = 15.0
+
+[node name="Cube_122" parent="Steuerung-2" index="6" unique_id=2065761314]
+visibility_range_end = 15.0
+
+[node name="Cube_123" parent="Steuerung-2" index="7" unique_id=658520410]
+visibility_range_end = 15.0
+
+[node name="Cube_124" parent="Steuerung-2" index="8" unique_id=759334983]
+visibility_range_end = 15.0
+
+[node name="Deckenkran-Schiene" parent="." index="17" unique_id=1091133204]
+visibility_range_end = 15.0
+
+[node name="Deckenkran-Schiene-2" parent="." index="18" unique_id=675966864]
+visibility_range_end = 15.0
+
+[node name="MID-2" parent="." index="19" unique_id=1191683072]
+visibility_range_end = 15.0
+
+[node name="Cube_139" parent="MID-2" index="0" unique_id=1829131811]
+visibility_range_end = 15.0
+
+[node name="Cube_140" parent="MID-2" index="1" unique_id=28983982]
+visibility_range_end = 15.0
+
+[node name="Cube_141" parent="MID-2" index="2" unique_id=626255718]
+visibility_range_end = 15.0
+
+[node name="Cube_142" parent="MID-2" index="3" unique_id=1251654946]
+visibility_range_end = 15.0
+
+[node name="Cylinder_336" parent="MID-2" index="4" unique_id=504445867]
+visibility_range_end = 15.0
+
+[node name="Cylinder_337" parent="MID-2" index="5" unique_id=1553445641]
+visibility_range_end = 15.0
+
+[node name="Cylinder_338" parent="MID-2" index="6" unique_id=808212229]
+visibility_range_end = 15.0
+
+[node name="Cylinder_339" parent="MID-2" index="7" unique_id=1150623749]
+visibility_range_end = 15.0
+
+[node name="Cylinder_341" parent="MID-2" index="8" unique_id=1345882603]
+visibility_range_end = 15.0
+
+[node name="Cylinder_342" parent="MID-2" index="9" unique_id=809805614]
+visibility_range_end = 15.0
+
+[node name="Cylinder_343" parent="MID-2" index="10" unique_id=562947870]
+visibility_range_end = 15.0
+
+[node name="Cylinder_344" parent="MID-2" index="11" unique_id=1049530996]
+visibility_range_end = 15.0
+
+[node name="Cylinder_345" parent="MID-2" index="12" unique_id=442508250]
+visibility_range_end = 15.0
+
+[node name="Cylinder_346" parent="MID-2" index="13" unique_id=7450258]
+visibility_range_end = 15.0
+
+[node name="Cylinder_347" parent="MID-2" index="14" unique_id=1619790249]
+visibility_range_end = 15.0
+
+[node name="Cylinder_348" parent="MID-2" index="15" unique_id=1183355780]
+visibility_range_end = 15.0
+
+[node name="Cylinder_349" parent="MID-2" index="16" unique_id=525971963]
+visibility_range_end = 15.0
+
+[node name="Cylinder_350" parent="MID-2" index="17" unique_id=97699671]
+visibility_range_end = 15.0
+
+[node name="Cylinder_351" parent="MID-2" index="18" unique_id=1485187120]
+visibility_range_end = 15.0
+
+[node name="Cylinder_352" parent="MID-2" index="19" unique_id=445956765]
+visibility_range_end = 15.0
+
+[node name="Cylinder_353" parent="MID-2" index="20" unique_id=317745672]
+visibility_range_end = 15.0
+
+[node name="Cylinder_354" parent="MID-2" index="21" unique_id=1472489404]
+visibility_range_end = 15.0
+
+[node name="Cylinder_355" parent="MID-2" index="22" unique_id=2005247708]
+visibility_range_end = 15.0
+
+[node name="Cylinder_356" parent="MID-2" index="23" unique_id=595591972]
+visibility_range_end = 15.0
+
+[node name="Cylinder_357" parent="MID-2" index="24" unique_id=342129864]
+visibility_range_end = 15.0
+
+[node name="Cylinder_358" parent="MID-2" index="25" unique_id=777718941]
+visibility_range_end = 15.0
+
+[node name="Cylinder_359" parent="MID-2" index="26" unique_id=181033267]
+visibility_range_end = 15.0
+
+[node name="Cylinder_360" parent="MID-2" index="27" unique_id=327776891]
+visibility_range_end = 15.0
+
+[node name="Plane_166" parent="MID-2" index="28" unique_id=389380654]
+visibility_range_end = 15.0
+
+[node name="Deckenkran-1" parent="." index="20" unique_id=1414056179]
+visibility_range_end = 15.0
+
+[node name="BézierCurve_002" parent="Deckenkran-1" index="0" unique_id=272467420]
+visibility_range_end = 15.0
+
+[node name="Cube_143" parent="Deckenkran-1" index="1" unique_id=595809510]
+visibility_range_end = 15.0
+
+[node name="Cube_144" parent="Deckenkran-1" index="2" unique_id=1815805945]
+visibility_range_end = 15.0
+
+[node name="Cube_145" parent="Deckenkran-1" index="3" unique_id=619990596]
+visibility_range_end = 15.0
+
+[node name="Cube_146" parent="Deckenkran-1" index="4" unique_id=2018207732]
+visibility_range_end = 15.0
+
+[node name="Cube_147" parent="Deckenkran-1" index="5" unique_id=679825218]
+visibility_range_end = 15.0
+
+[node name="Cylinder_361" parent="Deckenkran-1" index="6" unique_id=1388619487]
+visibility_range_end = 15.0
+
+[node name="Cylinder_362" parent="Deckenkran-1" index="7" unique_id=1106071952]
+visibility_range_end = 15.0
+
+[node name="Cylinder_364" parent="Deckenkran-1" index="8" unique_id=1223893934]
+visibility_range_end = 15.0
+
+[node name="Cylinder_365" parent="Deckenkran-1" index="9" unique_id=919096647]
+visibility_range_end = 15.0
+
+[node name="Cylinder_366" parent="Deckenkran-1" index="10" unique_id=488593083]
+visibility_range_end = 15.0
+
+[node name="Cylinder_367" parent="Deckenkran-1" index="11" unique_id=1439145428]
+visibility_range_end = 15.0
+
+[node name="Deckenkran-2" parent="." index="21" unique_id=804724725]
+visibility_range_end = 15.0
+
+[node name="BézierCurve_003" parent="Deckenkran-2" index="0" unique_id=731139800]
+visibility_range_end = 15.0
+
+[node name="Cube_148" parent="Deckenkran-2" index="1" unique_id=1363058065]
+visibility_range_end = 15.0
+
+[node name="Cube_149" parent="Deckenkran-2" index="2" unique_id=1697584472]
+visibility_range_end = 15.0
+
+[node name="Cube_150" parent="Deckenkran-2" index="3" unique_id=1367891149]
+visibility_range_end = 15.0
+
+[node name="Cube_151" parent="Deckenkran-2" index="4" unique_id=786403628]
+visibility_range_end = 15.0
+
+[node name="Cube_152" parent="Deckenkran-2" index="5" unique_id=1960934607]
+visibility_range_end = 15.0
+
+[node name="Cylinder_368" parent="Deckenkran-2" index="6" unique_id=1249736828]
+visibility_range_end = 15.0
+
+[node name="Cylinder_369" parent="Deckenkran-2" index="7" unique_id=1223003806]
+visibility_range_end = 15.0
+
+[node name="Cylinder_370" parent="Deckenkran-2" index="8" unique_id=429143474]
+visibility_range_end = 15.0
+
+[node name="Cylinder_371" parent="Deckenkran-2" index="9" unique_id=1848566148]
+visibility_range_end = 15.0
+
+[node name="Cylinder_373" parent="Deckenkran-2" index="10" unique_id=56235501]
+visibility_range_end = 15.0
+
+[node name="Cylinder_374" parent="Deckenkran-2" index="11" unique_id=1439413007]
+visibility_range_end = 15.0
+
+[node name="Dosieraufbereitungsanlage-Flockungshilfsmittel" parent="." index="22" unique_id=1027118596]
+visibility_range_end = 25.0
+
+[node name="Cube_154" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="0" unique_id=1059803397]
+visibility_range_end = 25.0
+
+[node name="Cube_155" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="1" unique_id=1165757869]
+visibility_range_end = 25.0
+
+[node name="Cube_156" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="2" unique_id=1292781624]
+visibility_range_end = 25.0
+
+[node name="Cube_157" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="3" unique_id=114039645]
+visibility_range_end = 25.0
+
+[node name="Cube_158" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="4" unique_id=196838308]
+visibility_range_end = 25.0
+
+[node name="Cube_159" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="5" unique_id=451315205]
+visibility_range_end = 25.0
+
+[node name="Cube_160" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="6" unique_id=1720580421]
+visibility_range_end = 25.0
+
+[node name="Cube_161" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="7" unique_id=408793625]
+visibility_range_end = 25.0
+
+[node name="Cube_162" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="8" unique_id=922946085]
+visibility_range_end = 25.0
+
+[node name="Cube_163" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="9" unique_id=2068224108]
+visibility_range_end = 25.0
+
+[node name="Cube_164" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="10" unique_id=1052665343]
+visibility_range_end = 25.0
+
+[node name="Cube_167" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="11" unique_id=55299713]
+visibility_range_end = 25.0
+
+[node name="Cube_168" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="12" unique_id=822714053]
+visibility_range_end = 25.0
+
+[node name="Cube_169" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="13" unique_id=465031607]
+visibility_range_end = 25.0
+
+[node name="Cube_170" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="14" unique_id=1733189747]
+visibility_range_end = 25.0
+
+[node name="Cube_171" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="15" unique_id=1757927350]
+visibility_range_end = 25.0
+
+[node name="Cube_172" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="16" unique_id=1202953640]
+visibility_range_end = 25.0
+
+[node name="Cube_173" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="17" unique_id=440108438]
+visibility_range_end = 25.0
+
+[node name="Cube_174" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="18" unique_id=1431713080]
+visibility_range_end = 25.0
+
+[node name="Cube_175" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="19" unique_id=1795410304]
+visibility_range_end = 25.0
+
+[node name="Cube_176" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="20" unique_id=1900328420]
+visibility_range_end = 25.0
+
+[node name="Cube_177" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="21" unique_id=2026355612]
+visibility_range_end = 25.0
+
+[node name="Cube_178" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="22" unique_id=377661379]
+visibility_range_end = 25.0
+
+[node name="Cube_179" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="23" unique_id=1291497396]
+visibility_range_end = 25.0
+
+[node name="Cube_180" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="24" unique_id=2076402226]
+visibility_range_end = 25.0
+
+[node name="Cube_181" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="25" unique_id=560445812]
+visibility_range_end = 25.0
+
+[node name="Cube_182" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="26" unique_id=289654911]
+visibility_range_end = 25.0
+
+[node name="Cube_183" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="27" unique_id=1469254322]
+visibility_range_end = 25.0
+
+[node name="Cylinder_383" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="28" unique_id=510560227]
+visibility_range_end = 25.0
+
+[node name="Cylinder_384" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="29" unique_id=1894732496]
+visibility_range_end = 25.0
+
+[node name="Cylinder_385" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="30" unique_id=1585304605]
+visibility_range_end = 25.0
+
+[node name="Cylinder_386" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="31" unique_id=847490823]
+visibility_range_end = 25.0
+
+[node name="Cylinder_387" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="32" unique_id=1170881045]
+visibility_range_end = 25.0
+
+[node name="Cylinder_388" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="33" unique_id=1984327983]
+visibility_range_end = 25.0
+
+[node name="Cylinder_389" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="34" unique_id=1140681518]
+visibility_range_end = 25.0
+
+[node name="Cylinder_390" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="35" unique_id=1090940072]
+visibility_range_end = 25.0
+
+[node name="Cylinder_391" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="36" unique_id=1315033682]
+visibility_range_end = 25.0
+
+[node name="Cylinder_392" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="37" unique_id=935475646]
+visibility_range_end = 25.0
+
+[node name="Cylinder_393" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="38" unique_id=915501152]
+visibility_range_end = 25.0
+
+[node name="Cylinder_406" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="39" unique_id=451107700]
+visibility_range_end = 25.0
+
+[node name="Cylinder_408" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="40" unique_id=402845342]
+visibility_range_end = 25.0
+
+[node name="Cylinder_409" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="41" unique_id=1285950232]
+visibility_range_end = 25.0
+
+[node name="Cylinder_410" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="42" unique_id=1182143440]
+visibility_range_end = 25.0
+
+[node name="Cylinder_411" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="43" unique_id=1150244525]
+visibility_range_end = 25.0
+
+[node name="Cylinder_412" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="44" unique_id=1563194485]
+visibility_range_end = 25.0
+
+[node name="Cylinder_413" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="45" unique_id=268904273]
+visibility_range_end = 25.0
+
+[node name="Cylinder_414" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="46" unique_id=1408073070]
+visibility_range_end = 25.0
+
+[node name="Cylinder_415" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="47" unique_id=501928577]
+visibility_range_end = 25.0
+
+[node name="Cylinder_416" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="48" unique_id=1280725352]
+visibility_range_end = 25.0
+
+[node name="Cylinder_417" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="49" unique_id=1140701638]
+visibility_range_end = 25.0
+
+[node name="Cylinder_418" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="50" unique_id=718035827]
+visibility_range_end = 25.0
+
+[node name="Cylinder_419" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="51" unique_id=1436826814]
+visibility_range_end = 25.0
+
+[node name="Cylinder_420" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="52" unique_id=167252175]
+visibility_range_end = 25.0
+
+[node name="Cylinder_421" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="53" unique_id=429427458]
+visibility_range_end = 25.0
+
+[node name="Cylinder_422" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="54" unique_id=753872428]
+visibility_range_end = 25.0
+
+[node name="Cylinder_423" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="55" unique_id=252352707]
+visibility_range_end = 25.0
+
+[node name="Cylinder_424" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="56" unique_id=1667215148]
+visibility_range_end = 25.0
+
+[node name="Cylinder_425" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="57" unique_id=396390445]
+visibility_range_end = 25.0
+
+[node name="Cylinder_426" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="58" unique_id=1121868259]
+visibility_range_end = 25.0
+
+[node name="Cylinder_427" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="59" unique_id=456956783]
+visibility_range_end = 25.0
+
+[node name="Cylinder_428" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="60" unique_id=860418739]
+visibility_range_end = 25.0
+
+[node name="Cylinder_429" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="61" unique_id=1313638225]
+visibility_range_end = 25.0
+
+[node name="Cylinder_430" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="62" unique_id=749518539]
+visibility_range_end = 25.0
+
+[node name="Cylinder_431" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="63" unique_id=65074405]
+visibility_range_end = 25.0
+
+[node name="Cylinder_432" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="64" unique_id=1756648937]
+visibility_range_end = 25.0
+
+[node name="Cylinder_433" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="65" unique_id=184523014]
+visibility_range_end = 25.0
+
+[node name="Cylinder_434" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="66" unique_id=938332611]
+visibility_range_end = 25.0
+
+[node name="Cylinder_435" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="67" unique_id=2066326453]
+visibility_range_end = 25.0
+
+[node name="Cylinder_436" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="68" unique_id=1834759400]
+visibility_range_end = 25.0
+
+[node name="Cylinder_437" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="69" unique_id=332146400]
+visibility_range_end = 25.0
+
+[node name="Cylinder_438" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="70" unique_id=2958139]
+visibility_range_end = 25.0
+
+[node name="Cylinder_439" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="71" unique_id=210784797]
+visibility_range_end = 25.0
+
+[node name="Cylinder_440" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="72" unique_id=1822812280]
+visibility_range_end = 25.0
+
+[node name="Cylinder_441" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="73" unique_id=546102239]
+visibility_range_end = 25.0
+
+[node name="Cylinder_442" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="74" unique_id=56068386]
+visibility_range_end = 25.0
+
+[node name="Cylinder_443" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="75" unique_id=474259700]
+visibility_range_end = 25.0
+
+[node name="Cylinder_444" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="76" unique_id=789932327]
+visibility_range_end = 25.0
+
+[node name="Cylinder_445" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="77" unique_id=521299291]
+visibility_range_end = 25.0
+
+[node name="Cylinder_446" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="78" unique_id=1290907487]
+visibility_range_end = 25.0
+
+[node name="Cylinder_447" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="79" unique_id=1834969404]
+visibility_range_end = 25.0
+
+[node name="Cylinder_448" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="80" unique_id=881439314]
+visibility_range_end = 25.0
+
+[node name="Cylinder_449" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="81" unique_id=1151617623]
+visibility_range_end = 25.0
+
+[node name="Cylinder_450" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="82" unique_id=1634055886]
+visibility_range_end = 25.0
+
+[node name="Cylinder_451" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="83" unique_id=1224680581]
+visibility_range_end = 25.0
+
+[node name="Cylinder_452" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="84" unique_id=877195514]
+visibility_range_end = 25.0
+
+[node name="Cylinder_453" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="85" unique_id=462626457]
+visibility_range_end = 25.0
+
+[node name="Cylinder_454" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="86" unique_id=1515140073]
+visibility_range_end = 25.0
+
+[node name="Cylinder_455" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="87" unique_id=188702285]
+visibility_range_end = 25.0
+
+[node name="Cylinder_456" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="88" unique_id=963002977]
+visibility_range_end = 25.0
+
+[node name="Cylinder_457" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="89" unique_id=589334914]
+visibility_range_end = 25.0
+
+[node name="msb_lufthebel3_002" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="90" unique_id=425189188]
+visibility_range_end = 25.0
+
+[node name="msb_lufthebel3_003" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="91" unique_id=2067918125]
+visibility_range_end = 25.0
+
+[node name="msb_lufthebel3_004" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="92" unique_id=1983194816]
+visibility_range_end = 25.0
+
+[node name="Plane_167" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="93" unique_id=551948029]
+visibility_range_end = 25.0
+
+[node name="Plane_168" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="94" unique_id=1112767462]
+visibility_range_end = 25.0
+
+[node name="Plane_169" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="95" unique_id=1437605205]
+visibility_range_end = 25.0
+
+[node name="Plane_170" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="96" unique_id=636820795]
+visibility_range_end = 25.0
+
+[node name="Plane_171" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="97" unique_id=771051026]
+visibility_range_end = 25.0
+
+[node name="Plane_172" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="98" unique_id=1037578691]
+visibility_range_end = 25.0
+
+[node name="Plane_173" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="99" unique_id=312355490]
+visibility_range_end = 25.0
+
+[node name="Plane_174" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="100" unique_id=1287701627]
+visibility_range_end = 25.0
+
+[node name="Plane_175" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="101" unique_id=298907103]
+visibility_range_end = 25.0
+
+[node name="Plane_176" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="102" unique_id=167678521]
+visibility_range_end = 25.0
+
+[node name="Plane_177" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="103" unique_id=282266887]
+visibility_range_end = 25.0
+
+[node name="Plane_178" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="104" unique_id=525809487]
+visibility_range_end = 25.0
+
+[node name="Plane_179" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="105" unique_id=1128432463]
+visibility_range_end = 25.0
+
+[node name="Plane_180" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="106" unique_id=566025356]
+visibility_range_end = 25.0
+
+[node name="Plane_181" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="107" unique_id=1343463154]
+visibility_range_end = 25.0
+
+[node name="Plane_182" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="108" unique_id=349872357]
+visibility_range_end = 25.0
+
+[node name="Plane_183" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="109" unique_id=246106606]
+visibility_range_end = 25.0
+
+[node name="Plane_184" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="110" unique_id=1841318112]
+visibility_range_end = 25.0
+
+[node name="Plane_185" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="111" unique_id=1033885389]
+visibility_range_end = 25.0
+
+[node name="Plane_186" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="112" unique_id=917183780]
+visibility_range_end = 25.0
+
+[node name="Plane_187" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="113" unique_id=1966274277]
+visibility_range_end = 25.0
+
+[node name="Plane_188" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="114" unique_id=462689773]
+visibility_range_end = 25.0
+
+[node name="Plane_189" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="115" unique_id=1987224548]
+visibility_range_end = 25.0
+
+[node name="Plane_190" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="116" unique_id=1619978660]
+visibility_range_end = 25.0
+
+[node name="Plane_191" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="117" unique_id=1088640764]
+visibility_range_end = 25.0
+
+[node name="Plane_192" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="118" unique_id=72602793]
+visibility_range_end = 25.0
+
+[node name="Plane_193" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="119" unique_id=1415637064]
+visibility_range_end = 25.0
+
+[node name="Plane_194" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="120" unique_id=282994072]
+visibility_range_end = 25.0
+
+[node name="Plane_195" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="121" unique_id=518763848]
+visibility_range_end = 25.0
+
+[node name="Plane_196" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="122" unique_id=92512657]
+visibility_range_end = 25.0
+
+[node name="Plane_197" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="123" unique_id=1323651316]
+visibility_range_end = 25.0
+
+[node name="Plane_198" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="124" unique_id=563102157]
+visibility_range_end = 25.0
+
+[node name="Plane_199" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="125" unique_id=1683795084]
+visibility_range_end = 25.0
+
+[node name="Plane_200" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="126" unique_id=1458619119]
+visibility_range_end = 25.0
+
+[node name="Plane_203" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="127" unique_id=468035113]
+visibility_range_end = 25.0
+
+[node name="Plane_204" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="128" unique_id=639666365]
+visibility_range_end = 25.0
+
+[node name="Plane_205" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="129" unique_id=1993677368]
+visibility_range_end = 25.0
+
+[node name="Plane_206" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="130" unique_id=779514321]
+visibility_range_end = 25.0
+
+[node name="Plane_207" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="131" unique_id=1912690699]
+visibility_range_end = 25.0
+
+[node name="Plane_208" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="132" unique_id=1793281781]
+visibility_range_end = 25.0
+
+[node name="Plane_209" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="133" unique_id=605435560]
+visibility_range_end = 25.0
+
+[node name="Plane_210" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="134" unique_id=2109752296]
+visibility_range_end = 25.0
+
+[node name="Plane_211" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="135" unique_id=1484989384]
+visibility_range_end = 25.0
+
+[node name="Plane_212" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="136" unique_id=105635080]
+visibility_range_end = 25.0
+
+[node name="Plane_213" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="137" unique_id=576185190]
+visibility_range_end = 25.0
+
+[node name="Plane_214" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="138" unique_id=1391471206]
+visibility_range_end = 25.0
+
+[node name="Plane_215" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="139" unique_id=270922542]
+visibility_range_end = 25.0
+
+[node name="Plane_216" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="140" unique_id=124645045]
+visibility_range_end = 25.0
+
+[node name="Plane_217" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="141" unique_id=656126590]
+visibility_range_end = 25.0
+
+[node name="Plane_218" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="142" unique_id=276620526]
+visibility_range_end = 25.0
+
+[node name="Plane_219" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="143" unique_id=361445757]
+visibility_range_end = 25.0
+
+[node name="Plane_220" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="144" unique_id=926356097]
+visibility_range_end = 25.0
+
+[node name="Plane_221" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="145" unique_id=1625683253]
+visibility_range_end = 25.0
+
+[node name="Zeiger" parent="Dosieraufbereitungsanlage-Flockungshilfsmittel" index="146" unique_id=1324982212]
+visibility_range_end = 25.0
+
+[node name="Handschieber-5" parent="." index="23" unique_id=1901011536]
+visibility_range_end = 25.0
+
+[node name="Cube_165" parent="Handschieber-5" index="0" unique_id=1177807361]
+visibility_range_end = 25.0
+
+[node name="Cube_166" parent="Handschieber-5" index="1" unique_id=2108483962]
+visibility_range_end = 25.0
+
+[node name="Cylinder_394" parent="Handschieber-5" index="2" unique_id=316020542]
+visibility_range_end = 25.0
+
+[node name="Cylinder_395" parent="Handschieber-5" index="3" unique_id=580509649]
+visibility_range_end = 25.0
+
+[node name="Cylinder_397" parent="Handschieber-5" index="4" unique_id=1988800696]
+visibility_range_end = 25.0
+
+[node name="Cylinder_398" parent="Handschieber-5" index="5" unique_id=1615738633]
+visibility_range_end = 25.0
+
+[node name="Cylinder_399" parent="Handschieber-5" index="6" unique_id=2121732951]
+visibility_range_end = 25.0
+
+[node name="Cylinder_400" parent="Handschieber-5" index="7" unique_id=350009447]
+visibility_range_end = 25.0
+
+[node name="Cylinder_401" parent="Handschieber-5" index="8" unique_id=1714144703]
+visibility_range_end = 25.0
+
+[node name="Cylinder_402" parent="Handschieber-5" index="9" unique_id=1978069273]
+visibility_range_end = 25.0
+
+[node name="Cylinder_403" parent="Handschieber-5" index="10" unique_id=1015520590]
+visibility_range_end = 25.0
+
+[node name="Cylinder_404" parent="Handschieber-5" index="11" unique_id=699938572]
+visibility_range_end = 25.0
+
+[node name="Cylinder_405" parent="Handschieber-5" index="12" unique_id=1847906823]
+visibility_range_end = 25.0
+
+[node name="Plane_201" parent="Handschieber-5" index="13" unique_id=2132480900]
+visibility_range_end = 25.0
+
+[node name="Plane_202" parent="Handschieber-5" index="14" unique_id=1467912299]
+visibility_range_end = 25.0
+
+[node name="Umwälzpumpe-Faulung-1" parent="." index="24" unique_id=1739535943]
+visibility_range_end = 25.0
+
+[node name="bar-2" parent="Umwälzpumpe-Faulung-1" index="0" unique_id=1301228535]
+visibility_range_end = 25.0
+
+[node name="Cube_184" parent="Umwälzpumpe-Faulung-1" index="1" unique_id=1521369797]
+visibility_range_end = 25.0
+
+[node name="Cube_185" parent="Umwälzpumpe-Faulung-1" index="2" unique_id=1771044347]
+visibility_range_end = 25.0
+
+[node name="Cube_187" parent="Umwälzpumpe-Faulung-1" index="3" unique_id=97036848]
+visibility_range_end = 25.0
+
+[node name="Cube_188" parent="Umwälzpumpe-Faulung-1" index="4" unique_id=1945758700]
+visibility_range_end = 25.0
+
+[node name="Cube_189" parent="Umwälzpumpe-Faulung-1" index="5" unique_id=1782079223]
+visibility_range_end = 25.0
+
+[node name="Cube_190" parent="Umwälzpumpe-Faulung-1" index="6" unique_id=2142578575]
+visibility_range_end = 25.0
+
+[node name="Cube_191" parent="Umwälzpumpe-Faulung-1" index="7" unique_id=1232592947]
+visibility_range_end = 25.0
+
+[node name="Cube_192" parent="Umwälzpumpe-Faulung-1" index="8" unique_id=126277743]
+visibility_range_end = 25.0
+
+[node name="Cube_193" parent="Umwälzpumpe-Faulung-1" index="9" unique_id=1367026084]
+visibility_range_end = 25.0
+
+[node name="Cube_194" parent="Umwälzpumpe-Faulung-1" index="10" unique_id=318816519]
+visibility_range_end = 25.0
+
+[node name="Cube_195" parent="Umwälzpumpe-Faulung-1" index="11" unique_id=1451590685]
+visibility_range_end = 25.0
+
+[node name="Cube_196" parent="Umwälzpumpe-Faulung-1" index="12" unique_id=2102156354]
+visibility_range_end = 25.0
+
+[node name="Cube_197" parent="Umwälzpumpe-Faulung-1" index="13" unique_id=1676497825]
+visibility_range_end = 25.0
+
+[node name="Cube_198" parent="Umwälzpumpe-Faulung-1" index="14" unique_id=1434819495]
+visibility_range_end = 25.0
+
+[node name="Cube_199" parent="Umwälzpumpe-Faulung-1" index="15" unique_id=247556628]
+visibility_range_end = 25.0
+
+[node name="Cube_200" parent="Umwälzpumpe-Faulung-1" index="16" unique_id=963587682]
+visibility_range_end = 25.0
+
+[node name="Cube_201" parent="Umwälzpumpe-Faulung-1" index="17" unique_id=53008671]
+visibility_range_end = 25.0
+
+[node name="Cube_202" parent="Umwälzpumpe-Faulung-1" index="18" unique_id=1036204220]
+visibility_range_end = 25.0
+
+[node name="Cylinder_458" parent="Umwälzpumpe-Faulung-1" index="19" unique_id=1010022685]
+visibility_range_end = 25.0
+
+[node name="Cylinder_459" parent="Umwälzpumpe-Faulung-1" index="20" unique_id=1459693869]
+visibility_range_end = 25.0
+
+[node name="Cylinder_460" parent="Umwälzpumpe-Faulung-1" index="21" unique_id=1363560000]
+visibility_range_end = 25.0
+
+[node name="Cylinder_461" parent="Umwälzpumpe-Faulung-1" index="22" unique_id=2020680169]
+visibility_range_end = 25.0
+
+[node name="Cylinder_462" parent="Umwälzpumpe-Faulung-1" index="23" unique_id=2139336684]
+visibility_range_end = 25.0
+
+[node name="Cylinder_463" parent="Umwälzpumpe-Faulung-1" index="24" unique_id=1639981916]
+visibility_range_end = 25.0
+
+[node name="Cylinder_464" parent="Umwälzpumpe-Faulung-1" index="25" unique_id=478007560]
+visibility_range_end = 25.0
+
+[node name="Cylinder_465" parent="Umwälzpumpe-Faulung-1" index="26" unique_id=2144991902]
+visibility_range_end = 25.0
+
+[node name="Cylinder_466" parent="Umwälzpumpe-Faulung-1" index="27" unique_id=502021941]
+visibility_range_end = 25.0
+
+[node name="Cylinder_467" parent="Umwälzpumpe-Faulung-1" index="28" unique_id=88231769]
+visibility_range_end = 25.0
+
+[node name="Cylinder_468" parent="Umwälzpumpe-Faulung-1" index="29" unique_id=1137511567]
+visibility_range_end = 25.0
+
+[node name="Cylinder_469" parent="Umwälzpumpe-Faulung-1" index="30" unique_id=1221990346]
+visibility_range_end = 25.0
+
+[node name="Cylinder_470" parent="Umwälzpumpe-Faulung-1" index="31" unique_id=545285275]
+visibility_range_end = 25.0
+
+[node name="Cylinder_471" parent="Umwälzpumpe-Faulung-1" index="32" unique_id=612108412]
+visibility_range_end = 25.0
+
+[node name="Cylinder_472" parent="Umwälzpumpe-Faulung-1" index="33" unique_id=316674084]
+visibility_range_end = 25.0
+
+[node name="Cylinder_473" parent="Umwälzpumpe-Faulung-1" index="34" unique_id=1369821580]
+visibility_range_end = 25.0
+
+[node name="Cylinder_474" parent="Umwälzpumpe-Faulung-1" index="35" unique_id=367451491]
+visibility_range_end = 25.0
+
+[node name="Cylinder_475" parent="Umwälzpumpe-Faulung-1" index="36" unique_id=2132992064]
+visibility_range_end = 25.0
+
+[node name="Cylinder_476" parent="Umwälzpumpe-Faulung-1" index="37" unique_id=1149152015]
+visibility_range_end = 25.0
+
+[node name="Cylinder_477" parent="Umwälzpumpe-Faulung-1" index="38" unique_id=103731347]
+visibility_range_end = 25.0
+
+[node name="Cylinder_478" parent="Umwälzpumpe-Faulung-1" index="39" unique_id=111280019]
+visibility_range_end = 25.0
+
+[node name="Cylinder_479" parent="Umwälzpumpe-Faulung-1" index="40" unique_id=1331568833]
+visibility_range_end = 25.0
+
+[node name="Cylinder_480" parent="Umwälzpumpe-Faulung-1" index="41" unique_id=331061909]
+visibility_range_end = 25.0
+
+[node name="Cylinder_481" parent="Umwälzpumpe-Faulung-1" index="42" unique_id=1761941724]
+visibility_range_end = 25.0
+
+[node name="Cylinder_482" parent="Umwälzpumpe-Faulung-1" index="43" unique_id=406708013]
+visibility_range_end = 25.0
+
+[node name="Cylinder_483" parent="Umwälzpumpe-Faulung-1" index="44" unique_id=1123292976]
+visibility_range_end = 25.0
+
+[node name="Cylinder_484" parent="Umwälzpumpe-Faulung-1" index="45" unique_id=70286614]
+visibility_range_end = 25.0
+
+[node name="Cylinder_485" parent="Umwälzpumpe-Faulung-1" index="46" unique_id=1663495289]
+visibility_range_end = 25.0
+
+[node name="Cylinder_486" parent="Umwälzpumpe-Faulung-1" index="47" unique_id=1782567061]
+visibility_range_end = 25.0
+
+[node name="Cylinder_487" parent="Umwälzpumpe-Faulung-1" index="48" unique_id=447954749]
+visibility_range_end = 25.0
+
+[node name="Cylinder_488" parent="Umwälzpumpe-Faulung-1" index="49" unique_id=1423975109]
+visibility_range_end = 25.0
+
+[node name="Cylinder_489" parent="Umwälzpumpe-Faulung-1" index="50" unique_id=241648903]
+visibility_range_end = 25.0
+
+[node name="Cylinder_490" parent="Umwälzpumpe-Faulung-1" index="51" unique_id=637397619]
+visibility_range_end = 25.0
+
+[node name="Cylinder_491" parent="Umwälzpumpe-Faulung-1" index="52" unique_id=793906741]
+visibility_range_end = 25.0
+
+[node name="Cylinder_492" parent="Umwälzpumpe-Faulung-1" index="53" unique_id=1003967212]
+visibility_range_end = 25.0
+
+[node name="Cylinder_493" parent="Umwälzpumpe-Faulung-1" index="54" unique_id=436039751]
+visibility_range_end = 25.0
+
+[node name="Cylinder_494" parent="Umwälzpumpe-Faulung-1" index="55" unique_id=1432272319]
+visibility_range_end = 25.0
+
+[node name="Cylinder_495" parent="Umwälzpumpe-Faulung-1" index="56" unique_id=547378008]
+visibility_range_end = 25.0
+
+[node name="Cylinder_496" parent="Umwälzpumpe-Faulung-1" index="57" unique_id=1691967261]
+visibility_range_end = 25.0
+
+[node name="Cylinder_497" parent="Umwälzpumpe-Faulung-1" index="58" unique_id=1731084065]
+visibility_range_end = 25.0
+
+[node name="Cylinder_498" parent="Umwälzpumpe-Faulung-1" index="59" unique_id=691134004]
+visibility_range_end = 25.0
+
+[node name="Cylinder_499" parent="Umwälzpumpe-Faulung-1" index="60" unique_id=1034246580]
+visibility_range_end = 25.0
+
+[node name="Cylinder_500" parent="Umwälzpumpe-Faulung-1" index="61" unique_id=1907817410]
+visibility_range_end = 25.0
+
+[node name="Cylinder_501" parent="Umwälzpumpe-Faulung-1" index="62" unique_id=304264098]
+visibility_range_end = 25.0
+
+[node name="Cylinder_502" parent="Umwälzpumpe-Faulung-1" index="63" unique_id=121911257]
+visibility_range_end = 25.0
+
+[node name="Cylinder_503" parent="Umwälzpumpe-Faulung-1" index="64" unique_id=1614901908]
+visibility_range_end = 25.0
+
+[node name="Cylinder_504" parent="Umwälzpumpe-Faulung-1" index="65" unique_id=851358516]
+visibility_range_end = 25.0
+
+[node name="Cylinder_505" parent="Umwälzpumpe-Faulung-1" index="66" unique_id=1045500715]
+visibility_range_end = 25.0
+
+[node name="Cylinder_506" parent="Umwälzpumpe-Faulung-1" index="67" unique_id=2124638269]
+visibility_range_end = 25.0
+
+[node name="Cylinder_507" parent="Umwälzpumpe-Faulung-1" index="68" unique_id=837194509]
+visibility_range_end = 25.0
+
+[node name="Cylinder_508" parent="Umwälzpumpe-Faulung-1" index="69" unique_id=1473544293]
+visibility_range_end = 25.0
+
+[node name="Cylinder_509" parent="Umwälzpumpe-Faulung-1" index="70" unique_id=544000849]
+visibility_range_end = 25.0
+
+[node name="Cylinder_510" parent="Umwälzpumpe-Faulung-1" index="71" unique_id=1591375760]
+visibility_range_end = 25.0
+
+[node name="Cylinder_511" parent="Umwälzpumpe-Faulung-1" index="72" unique_id=1871750835]
+visibility_range_end = 25.0
+
+[node name="Cylinder_516" parent="Umwälzpumpe-Faulung-1" index="73" unique_id=1772751881]
+visibility_range_end = 25.0
+
+[node name="Cylinder_517" parent="Umwälzpumpe-Faulung-1" index="74" unique_id=1110436572]
+visibility_range_end = 25.0
+
+[node name="Cylinder_518" parent="Umwälzpumpe-Faulung-1" index="75" unique_id=1633791216]
+visibility_range_end = 25.0
+
+[node name="Cylinder_519" parent="Umwälzpumpe-Faulung-1" index="76" unique_id=489526929]
+visibility_range_end = 25.0
+
+[node name="Cylinder_520" parent="Umwälzpumpe-Faulung-1" index="77" unique_id=462279657]
+visibility_range_end = 25.0
+
+[node name="msb_lufthebel3_005" parent="Umwälzpumpe-Faulung-1" index="78" unique_id=1285224362]
+visibility_range_end = 25.0
+
+[node name="Plane_222" parent="Umwälzpumpe-Faulung-1" index="79" unique_id=1871886500]
+visibility_range_end = 25.0
+
+[node name="Plane_223" parent="Umwälzpumpe-Faulung-1" index="80" unique_id=1049118980]
+visibility_range_end = 25.0
+
+[node name="Plane_224" parent="Umwälzpumpe-Faulung-1" index="81" unique_id=1361165643]
+visibility_range_end = 25.0
+
+[node name="Plane_225" parent="Umwälzpumpe-Faulung-1" index="82" unique_id=895157920]
+visibility_range_end = 25.0
+
+[node name="Plane_226" parent="Umwälzpumpe-Faulung-1" index="83" unique_id=1589167819]
+visibility_range_end = 25.0
+
+[node name="Plane_227" parent="Umwälzpumpe-Faulung-1" index="84" unique_id=1306272179]
+visibility_range_end = 25.0
+
+[node name="Plane_228" parent="Umwälzpumpe-Faulung-1" index="85" unique_id=425717483]
+visibility_range_end = 25.0
+
+[node name="Plane_229" parent="Umwälzpumpe-Faulung-1" index="86" unique_id=633073591]
+visibility_range_end = 25.0
+
+[node name="Plane_230" parent="Umwälzpumpe-Faulung-1" index="87" unique_id=2049933088]
+visibility_range_end = 25.0
+
+[node name="Plane_231" parent="Umwälzpumpe-Faulung-1" index="88" unique_id=1922592314]
+visibility_range_end = 25.0
+
+[node name="Plane_232" parent="Umwälzpumpe-Faulung-1" index="89" unique_id=1671349769]
+visibility_range_end = 25.0
+
+[node name="Plane_233" parent="Umwälzpumpe-Faulung-1" index="90" unique_id=731327612]
+visibility_range_end = 25.0
+
+[node name="Plane_234" parent="Umwälzpumpe-Faulung-1" index="91" unique_id=1685616382]
+visibility_range_end = 25.0
+
+[node name="Plane_235" parent="Umwälzpumpe-Faulung-1" index="92" unique_id=443242128]
+visibility_range_end = 25.0
+
+[node name="Plane_236" parent="Umwälzpumpe-Faulung-1" index="93" unique_id=1232301630]
+visibility_range_end = 25.0
+
+[node name="Plane_237" parent="Umwälzpumpe-Faulung-1" index="94" unique_id=1423867902]
+visibility_range_end = 25.0
+
+[node name="Plane_238" parent="Umwälzpumpe-Faulung-1" index="95" unique_id=78275861]
+visibility_range_end = 25.0
+
+[node name="Plane_239" parent="Umwälzpumpe-Faulung-1" index="96" unique_id=1797234049]
+visibility_range_end = 25.0
+
+[node name="Plane_240" parent="Umwälzpumpe-Faulung-1" index="97" unique_id=1292387817]
+visibility_range_end = 25.0
+
+[node name="Plane_241" parent="Umwälzpumpe-Faulung-1" index="98" unique_id=897164455]
+visibility_range_end = 25.0
+
+[node name="Plane_242" parent="Umwälzpumpe-Faulung-1" index="99" unique_id=282974805]
+visibility_range_end = 25.0
+
+[node name="Plane_243" parent="Umwälzpumpe-Faulung-1" index="100" unique_id=1044805514]
+visibility_range_end = 25.0
+
+[node name="Plane_244" parent="Umwälzpumpe-Faulung-1" index="101" unique_id=317481005]
+visibility_range_end = 25.0
+
+[node name="Plane_245" parent="Umwälzpumpe-Faulung-1" index="102" unique_id=113592577]
+visibility_range_end = 25.0
+
+[node name="Plane_246" parent="Umwälzpumpe-Faulung-1" index="103" unique_id=371061188]
+visibility_range_end = 25.0
+
+[node name="Plane_247" parent="Umwälzpumpe-Faulung-1" index="104" unique_id=1940106419]
+visibility_range_end = 25.0
+
+[node name="Plane_248" parent="Umwälzpumpe-Faulung-1" index="105" unique_id=89104188]
+visibility_range_end = 25.0
+
+[node name="Plane_249" parent="Umwälzpumpe-Faulung-1" index="106" unique_id=1814650458]
+visibility_range_end = 25.0
+
+[node name="Plane_250" parent="Umwälzpumpe-Faulung-1" index="107" unique_id=1473631431]
+visibility_range_end = 25.0
+
+[node name="Plane_251" parent="Umwälzpumpe-Faulung-1" index="108" unique_id=362960724]
+visibility_range_end = 25.0
+
+[node name="Plane_252" parent="Umwälzpumpe-Faulung-1" index="109" unique_id=1112292966]
+visibility_range_end = 25.0
+
+[node name="Plane_253" parent="Umwälzpumpe-Faulung-1" index="110" unique_id=273633983]
+visibility_range_end = 25.0
+
+[node name="Plane_254" parent="Umwälzpumpe-Faulung-1" index="111" unique_id=1425310155]
+visibility_range_end = 25.0
+
+[node name="Plane_255" parent="Umwälzpumpe-Faulung-1" index="112" unique_id=929762492]
+visibility_range_end = 25.0
+
+[node name="Plane_256" parent="Umwälzpumpe-Faulung-1" index="113" unique_id=1047052882]
+visibility_range_end = 25.0
+
+[node name="Plane_257" parent="Umwälzpumpe-Faulung-1" index="114" unique_id=1700328036]
+visibility_range_end = 25.0
+
+[node name="Plane_258" parent="Umwälzpumpe-Faulung-1" index="115" unique_id=1125213901]
+visibility_range_end = 25.0
+
+[node name="Plane_259" parent="Umwälzpumpe-Faulung-1" index="116" unique_id=851406247]
+visibility_range_end = 25.0
+
+[node name="Plane_260" parent="Umwälzpumpe-Faulung-1" index="117" unique_id=241361688]
+visibility_range_end = 25.0
+
+[node name="Zeiger_016" parent="Umwälzpumpe-Faulung-1" index="118" unique_id=1556004900]
+visibility_range_end = 25.0
+
+[node name="Umwälzpumpe-Reserve" parent="." index="25" unique_id=1768400242]
+visibility_range_end = 25.0
+
+[node name="bar-2_001" parent="Umwälzpumpe-Reserve" index="0" unique_id=931881391]
+visibility_range_end = 25.0
+
+[node name="Cube_204" parent="Umwälzpumpe-Reserve" index="1" unique_id=2073263296]
+visibility_range_end = 25.0
+
+[node name="Cube_205" parent="Umwälzpumpe-Reserve" index="2" unique_id=1660270299]
+visibility_range_end = 25.0
+
+[node name="Cube_206" parent="Umwälzpumpe-Reserve" index="3" unique_id=1205756781]
+visibility_range_end = 25.0
+
+[node name="Cube_207" parent="Umwälzpumpe-Reserve" index="4" unique_id=1485473483]
+visibility_range_end = 25.0
+
+[node name="Cube_208" parent="Umwälzpumpe-Reserve" index="5" unique_id=1508079294]
+visibility_range_end = 25.0
+
+[node name="Cube_209" parent="Umwälzpumpe-Reserve" index="6" unique_id=1400737869]
+visibility_range_end = 25.0
+
+[node name="Cube_210" parent="Umwälzpumpe-Reserve" index="7" unique_id=837492951]
+visibility_range_end = 25.0
+
+[node name="Cube_211" parent="Umwälzpumpe-Reserve" index="8" unique_id=103884732]
+visibility_range_end = 25.0
+
+[node name="Cube_212" parent="Umwälzpumpe-Reserve" index="9" unique_id=497760575]
+visibility_range_end = 25.0
+
+[node name="Cube_213" parent="Umwälzpumpe-Reserve" index="10" unique_id=230171803]
+visibility_range_end = 25.0
+
+[node name="Cube_214" parent="Umwälzpumpe-Reserve" index="11" unique_id=1125557643]
+visibility_range_end = 25.0
+
+[node name="Cube_215" parent="Umwälzpumpe-Reserve" index="12" unique_id=1075976056]
+visibility_range_end = 25.0
+
+[node name="Cube_216" parent="Umwälzpumpe-Reserve" index="13" unique_id=2112605111]
+visibility_range_end = 25.0
+
+[node name="Cube_217" parent="Umwälzpumpe-Reserve" index="14" unique_id=1226537137]
+visibility_range_end = 25.0
+
+[node name="Cube_218" parent="Umwälzpumpe-Reserve" index="15" unique_id=996347000]
+visibility_range_end = 25.0
+
+[node name="Cube_219" parent="Umwälzpumpe-Reserve" index="16" unique_id=539878439]
+visibility_range_end = 25.0
+
+[node name="Cube_221" parent="Umwälzpumpe-Reserve" index="17" unique_id=997686215]
+visibility_range_end = 25.0
+
+[node name="Cube_222" parent="Umwälzpumpe-Reserve" index="18" unique_id=1972128319]
+visibility_range_end = 25.0
+
+[node name="Cylinder_521" parent="Umwälzpumpe-Reserve" index="19" unique_id=1270268917]
+visibility_range_end = 25.0
+
+[node name="Cylinder_522" parent="Umwälzpumpe-Reserve" index="20" unique_id=1236095200]
+visibility_range_end = 25.0
+
+[node name="Cylinder_523" parent="Umwälzpumpe-Reserve" index="21" unique_id=2030002745]
+visibility_range_end = 25.0
+
+[node name="Cylinder_524" parent="Umwälzpumpe-Reserve" index="22" unique_id=2101084734]
+visibility_range_end = 25.0
+
+[node name="Cylinder_525" parent="Umwälzpumpe-Reserve" index="23" unique_id=2141791852]
+visibility_range_end = 25.0
+
+[node name="Cylinder_526" parent="Umwälzpumpe-Reserve" index="24" unique_id=712026117]
+visibility_range_end = 25.0
+
+[node name="Cylinder_527" parent="Umwälzpumpe-Reserve" index="25" unique_id=1096817758]
+visibility_range_end = 25.0
+
+[node name="Cylinder_528" parent="Umwälzpumpe-Reserve" index="26" unique_id=353848636]
+visibility_range_end = 25.0
+
+[node name="Cylinder_529" parent="Umwälzpumpe-Reserve" index="27" unique_id=1653900607]
+visibility_range_end = 25.0
+
+[node name="Cylinder_530" parent="Umwälzpumpe-Reserve" index="28" unique_id=853204215]
+visibility_range_end = 25.0
+
+[node name="Cylinder_531" parent="Umwälzpumpe-Reserve" index="29" unique_id=1839302998]
+visibility_range_end = 25.0
+
+[node name="Cylinder_532" parent="Umwälzpumpe-Reserve" index="30" unique_id=1232586275]
+visibility_range_end = 25.0
+
+[node name="Cylinder_533" parent="Umwälzpumpe-Reserve" index="31" unique_id=1073662616]
+visibility_range_end = 25.0
+
+[node name="Cylinder_534" parent="Umwälzpumpe-Reserve" index="32" unique_id=1940291362]
+visibility_range_end = 25.0
+
+[node name="Cylinder_535" parent="Umwälzpumpe-Reserve" index="33" unique_id=1611141346]
+visibility_range_end = 25.0
+
+[node name="Cylinder_536" parent="Umwälzpumpe-Reserve" index="34" unique_id=1914279875]
+visibility_range_end = 25.0
+
+[node name="Cylinder_537" parent="Umwälzpumpe-Reserve" index="35" unique_id=1082074323]
+visibility_range_end = 25.0
+
+[node name="Cylinder_538" parent="Umwälzpumpe-Reserve" index="36" unique_id=808562417]
+visibility_range_end = 25.0
+
+[node name="Cylinder_539" parent="Umwälzpumpe-Reserve" index="37" unique_id=399885475]
+visibility_range_end = 25.0
+
+[node name="Cylinder_540" parent="Umwälzpumpe-Reserve" index="38" unique_id=2072091588]
+visibility_range_end = 25.0
+
+[node name="Cylinder_541" parent="Umwälzpumpe-Reserve" index="39" unique_id=452545366]
+visibility_range_end = 25.0
+
+[node name="Cylinder_542" parent="Umwälzpumpe-Reserve" index="40" unique_id=1584226590]
+visibility_range_end = 25.0
+
+[node name="Cylinder_543" parent="Umwälzpumpe-Reserve" index="41" unique_id=2018484313]
+visibility_range_end = 25.0
+
+[node name="Cylinder_544" parent="Umwälzpumpe-Reserve" index="42" unique_id=1982166899]
+visibility_range_end = 25.0
+
+[node name="Cylinder_545" parent="Umwälzpumpe-Reserve" index="43" unique_id=582602738]
+visibility_range_end = 25.0
+
+[node name="Cylinder_546" parent="Umwälzpumpe-Reserve" index="44" unique_id=152053290]
+visibility_range_end = 25.0
+
+[node name="Cylinder_547" parent="Umwälzpumpe-Reserve" index="45" unique_id=2102602720]
+visibility_range_end = 25.0
+
+[node name="Cylinder_548" parent="Umwälzpumpe-Reserve" index="46" unique_id=471598024]
+visibility_range_end = 25.0
+
+[node name="Cylinder_549" parent="Umwälzpumpe-Reserve" index="47" unique_id=196057814]
+visibility_range_end = 25.0
+
+[node name="Cylinder_550" parent="Umwälzpumpe-Reserve" index="48" unique_id=190233743]
+visibility_range_end = 25.0
+
+[node name="Cylinder_551" parent="Umwälzpumpe-Reserve" index="49" unique_id=1551418690]
+visibility_range_end = 25.0
+
+[node name="Cylinder_552" parent="Umwälzpumpe-Reserve" index="50" unique_id=210958104]
+visibility_range_end = 25.0
+
+[node name="Cylinder_553" parent="Umwälzpumpe-Reserve" index="51" unique_id=1353361449]
+visibility_range_end = 25.0
+
+[node name="Cylinder_554" parent="Umwälzpumpe-Reserve" index="52" unique_id=170209579]
+visibility_range_end = 25.0
+
+[node name="Cylinder_555" parent="Umwälzpumpe-Reserve" index="53" unique_id=371642886]
+visibility_range_end = 25.0
+
+[node name="Cylinder_556" parent="Umwälzpumpe-Reserve" index="54" unique_id=1672152495]
+visibility_range_end = 25.0
+
+[node name="Cylinder_557" parent="Umwälzpumpe-Reserve" index="55" unique_id=2024187885]
+visibility_range_end = 25.0
+
+[node name="Cylinder_558" parent="Umwälzpumpe-Reserve" index="56" unique_id=320191140]
+visibility_range_end = 25.0
+
+[node name="Cylinder_559" parent="Umwälzpumpe-Reserve" index="57" unique_id=1835567222]
+visibility_range_end = 25.0
+
+[node name="Cylinder_560" parent="Umwälzpumpe-Reserve" index="58" unique_id=1685673976]
+visibility_range_end = 25.0
+
+[node name="Cylinder_561" parent="Umwälzpumpe-Reserve" index="59" unique_id=1948086890]
+visibility_range_end = 25.0
+
+[node name="Cylinder_562" parent="Umwälzpumpe-Reserve" index="60" unique_id=1968308134]
+visibility_range_end = 25.0
+
+[node name="Cylinder_563" parent="Umwälzpumpe-Reserve" index="61" unique_id=670009687]
+visibility_range_end = 25.0
+
+[node name="Cylinder_564" parent="Umwälzpumpe-Reserve" index="62" unique_id=2086255312]
+visibility_range_end = 25.0
+
+[node name="Cylinder_565" parent="Umwälzpumpe-Reserve" index="63" unique_id=1133051828]
+visibility_range_end = 25.0
+
+[node name="Cylinder_566" parent="Umwälzpumpe-Reserve" index="64" unique_id=924979839]
+visibility_range_end = 25.0
+
+[node name="Cylinder_567" parent="Umwälzpumpe-Reserve" index="65" unique_id=588500970]
+visibility_range_end = 25.0
+
+[node name="Cylinder_568" parent="Umwälzpumpe-Reserve" index="66" unique_id=1068920994]
+visibility_range_end = 25.0
+
+[node name="Cylinder_569" parent="Umwälzpumpe-Reserve" index="67" unique_id=2024655571]
+visibility_range_end = 25.0
+
+[node name="Cylinder_570" parent="Umwälzpumpe-Reserve" index="68" unique_id=919820658]
+visibility_range_end = 25.0
+
+[node name="Cylinder_571" parent="Umwälzpumpe-Reserve" index="69" unique_id=1572915961]
+visibility_range_end = 25.0
+
+[node name="Cylinder_572" parent="Umwälzpumpe-Reserve" index="70" unique_id=2073157215]
+visibility_range_end = 25.0
+
+[node name="Cylinder_573" parent="Umwälzpumpe-Reserve" index="71" unique_id=1539201416]
+visibility_range_end = 25.0
+
+[node name="Cylinder_574" parent="Umwälzpumpe-Reserve" index="72" unique_id=692844339]
+visibility_range_end = 25.0
+
+[node name="Cylinder_575" parent="Umwälzpumpe-Reserve" index="73" unique_id=980072249]
+visibility_range_end = 25.0
+
+[node name="Cylinder_576" parent="Umwälzpumpe-Reserve" index="74" unique_id=1053644214]
+visibility_range_end = 25.0
+
+[node name="Cylinder_577" parent="Umwälzpumpe-Reserve" index="75" unique_id=1128584922]
+visibility_range_end = 25.0
+
+[node name="Cylinder_578" parent="Umwälzpumpe-Reserve" index="76" unique_id=1151615568]
+visibility_range_end = 25.0
+
+[node name="Cylinder_579" parent="Umwälzpumpe-Reserve" index="77" unique_id=510605712]
+visibility_range_end = 25.0
+
+[node name="msb_lufthebel3_006" parent="Umwälzpumpe-Reserve" index="78" unique_id=1967334447]
+visibility_range_end = 25.0
+
+[node name="Plane_261" parent="Umwälzpumpe-Reserve" index="79" unique_id=121965826]
+visibility_range_end = 25.0
+
+[node name="Plane_262" parent="Umwälzpumpe-Reserve" index="80" unique_id=2080595862]
+visibility_range_end = 25.0
+
+[node name="Plane_263" parent="Umwälzpumpe-Reserve" index="81" unique_id=1903587127]
+visibility_range_end = 25.0
+
+[node name="Plane_264" parent="Umwälzpumpe-Reserve" index="82" unique_id=976626532]
+visibility_range_end = 25.0
+
+[node name="Plane_265" parent="Umwälzpumpe-Reserve" index="83" unique_id=1180791464]
+visibility_range_end = 25.0
+
+[node name="Plane_266" parent="Umwälzpumpe-Reserve" index="84" unique_id=1124967785]
+visibility_range_end = 25.0
+
+[node name="Plane_267" parent="Umwälzpumpe-Reserve" index="85" unique_id=1035695704]
+visibility_range_end = 25.0
+
+[node name="Plane_268" parent="Umwälzpumpe-Reserve" index="86" unique_id=1044932367]
+visibility_range_end = 25.0
+
+[node name="Plane_269" parent="Umwälzpumpe-Reserve" index="87" unique_id=1817756836]
+visibility_range_end = 25.0
+
+[node name="Plane_270" parent="Umwälzpumpe-Reserve" index="88" unique_id=480044184]
+visibility_range_end = 25.0
+
+[node name="Plane_271" parent="Umwälzpumpe-Reserve" index="89" unique_id=320925850]
+visibility_range_end = 25.0
+
+[node name="Plane_272" parent="Umwälzpumpe-Reserve" index="90" unique_id=2035098392]
+visibility_range_end = 25.0
+
+[node name="Plane_273" parent="Umwälzpumpe-Reserve" index="91" unique_id=1546973274]
+visibility_range_end = 25.0
+
+[node name="Plane_274" parent="Umwälzpumpe-Reserve" index="92" unique_id=383004762]
+visibility_range_end = 25.0
+
+[node name="Plane_275" parent="Umwälzpumpe-Reserve" index="93" unique_id=1234026675]
+visibility_range_end = 25.0
+
+[node name="Plane_276" parent="Umwälzpumpe-Reserve" index="94" unique_id=1359086159]
+visibility_range_end = 25.0
+
+[node name="Plane_277" parent="Umwälzpumpe-Reserve" index="95" unique_id=692781242]
+visibility_range_end = 25.0
+
+[node name="Plane_278" parent="Umwälzpumpe-Reserve" index="96" unique_id=788500994]
+visibility_range_end = 25.0
+
+[node name="Plane_279" parent="Umwälzpumpe-Reserve" index="97" unique_id=160384149]
+visibility_range_end = 25.0
+
+[node name="Plane_280" parent="Umwälzpumpe-Reserve" index="98" unique_id=1756425774]
+visibility_range_end = 25.0
+
+[node name="Plane_281" parent="Umwälzpumpe-Reserve" index="99" unique_id=1537436580]
+visibility_range_end = 25.0
+
+[node name="Plane_282" parent="Umwälzpumpe-Reserve" index="100" unique_id=785450581]
+visibility_range_end = 25.0
+
+[node name="Plane_283" parent="Umwälzpumpe-Reserve" index="101" unique_id=4875619]
+visibility_range_end = 25.0
+
+[node name="Plane_284" parent="Umwälzpumpe-Reserve" index="102" unique_id=2064350311]
+visibility_range_end = 25.0
+
+[node name="Plane_285" parent="Umwälzpumpe-Reserve" index="103" unique_id=689950686]
+visibility_range_end = 25.0
+
+[node name="Plane_286" parent="Umwälzpumpe-Reserve" index="104" unique_id=496268831]
+visibility_range_end = 25.0
+
+[node name="Plane_287" parent="Umwälzpumpe-Reserve" index="105" unique_id=2115878149]
+visibility_range_end = 25.0
+
+[node name="Plane_288" parent="Umwälzpumpe-Reserve" index="106" unique_id=202504990]
+visibility_range_end = 25.0
+
+[node name="Plane_289" parent="Umwälzpumpe-Reserve" index="107" unique_id=636975131]
+visibility_range_end = 25.0
+
+[node name="Plane_290" parent="Umwälzpumpe-Reserve" index="108" unique_id=705233043]
+visibility_range_end = 25.0
+
+[node name="Plane_291" parent="Umwälzpumpe-Reserve" index="109" unique_id=177039906]
+visibility_range_end = 25.0
+
+[node name="Plane_292" parent="Umwälzpumpe-Reserve" index="110" unique_id=1898809941]
+visibility_range_end = 25.0
+
+[node name="Plane_293" parent="Umwälzpumpe-Reserve" index="111" unique_id=37840311]
+visibility_range_end = 25.0
+
+[node name="Plane_294" parent="Umwälzpumpe-Reserve" index="112" unique_id=136549244]
+visibility_range_end = 25.0
+
+[node name="Plane_295" parent="Umwälzpumpe-Reserve" index="113" unique_id=255862997]
+visibility_range_end = 25.0
+
+[node name="Plane_296" parent="Umwälzpumpe-Reserve" index="114" unique_id=1344479362]
+visibility_range_end = 25.0
+
+[node name="Plane_297" parent="Umwälzpumpe-Reserve" index="115" unique_id=21999200]
+visibility_range_end = 25.0
+
+[node name="Plane_298" parent="Umwälzpumpe-Reserve" index="116" unique_id=1840482007]
+visibility_range_end = 25.0
+
+[node name="Plane_299" parent="Umwälzpumpe-Reserve" index="117" unique_id=1212741613]
+visibility_range_end = 25.0
+
+[node name="Zeiger_001" parent="Umwälzpumpe-Reserve" index="118" unique_id=723132819]
+visibility_range_end = 25.0
+
+[node name="Umwälzpumpe-Faulung-2" parent="." index="26" unique_id=1846874383]
+visibility_range_end = 25.0
+
+[node name="bar-2_002" parent="Umwälzpumpe-Faulung-2" index="0" unique_id=2049214331]
+visibility_range_end = 25.0
+
+[node name="Cube_223" parent="Umwälzpumpe-Faulung-2" index="1" unique_id=291963645]
+visibility_range_end = 25.0
+
+[node name="Cube_224" parent="Umwälzpumpe-Faulung-2" index="2" unique_id=1870706732]
+visibility_range_end = 25.0
+
+[node name="Cube_226" parent="Umwälzpumpe-Faulung-2" index="3" unique_id=1128969971]
+visibility_range_end = 25.0
+
+[node name="Cube_227" parent="Umwälzpumpe-Faulung-2" index="4" unique_id=968868569]
+visibility_range_end = 25.0
+
+[node name="Cube_228" parent="Umwälzpumpe-Faulung-2" index="5" unique_id=1234676156]
+visibility_range_end = 25.0
+
+[node name="Cube_229" parent="Umwälzpumpe-Faulung-2" index="6" unique_id=2018275424]
+visibility_range_end = 25.0
+
+[node name="Cube_230" parent="Umwälzpumpe-Faulung-2" index="7" unique_id=1563515951]
+visibility_range_end = 25.0
+
+[node name="Cube_231" parent="Umwälzpumpe-Faulung-2" index="8" unique_id=2100338419]
+visibility_range_end = 25.0
+
+[node name="Cube_232" parent="Umwälzpumpe-Faulung-2" index="9" unique_id=170625813]
+visibility_range_end = 25.0
+
+[node name="Cube_233" parent="Umwälzpumpe-Faulung-2" index="10" unique_id=1014297564]
+visibility_range_end = 25.0
+
+[node name="Cube_234" parent="Umwälzpumpe-Faulung-2" index="11" unique_id=401754925]
+visibility_range_end = 25.0
+
+[node name="Cube_235" parent="Umwälzpumpe-Faulung-2" index="12" unique_id=1509317645]
+visibility_range_end = 25.0
+
+[node name="Cube_236" parent="Umwälzpumpe-Faulung-2" index="13" unique_id=1211391302]
+visibility_range_end = 25.0
+
+[node name="Cube_237" parent="Umwälzpumpe-Faulung-2" index="14" unique_id=1417732731]
+visibility_range_end = 25.0
+
+[node name="Cube_238" parent="Umwälzpumpe-Faulung-2" index="15" unique_id=1866292637]
+visibility_range_end = 25.0
+
+[node name="Cube_239" parent="Umwälzpumpe-Faulung-2" index="16" unique_id=329595821]
+visibility_range_end = 25.0
+
+[node name="Cube_240" parent="Umwälzpumpe-Faulung-2" index="17" unique_id=1282521394]
+visibility_range_end = 25.0
+
+[node name="Cube_241" parent="Umwälzpumpe-Faulung-2" index="18" unique_id=103008952]
+visibility_range_end = 25.0
+
+[node name="Cylinder_580" parent="Umwälzpumpe-Faulung-2" index="19" unique_id=1340191643]
+visibility_range_end = 25.0
+
+[node name="Cylinder_581" parent="Umwälzpumpe-Faulung-2" index="20" unique_id=1566914469]
+visibility_range_end = 25.0
+
+[node name="Cylinder_582" parent="Umwälzpumpe-Faulung-2" index="21" unique_id=379450562]
+visibility_range_end = 25.0
+
+[node name="Cylinder_583" parent="Umwälzpumpe-Faulung-2" index="22" unique_id=860482253]
+visibility_range_end = 25.0
+
+[node name="Cylinder_584" parent="Umwälzpumpe-Faulung-2" index="23" unique_id=1186938060]
+visibility_range_end = 25.0
+
+[node name="Cylinder_585" parent="Umwälzpumpe-Faulung-2" index="24" unique_id=377901769]
+visibility_range_end = 25.0
+
+[node name="Cylinder_586" parent="Umwälzpumpe-Faulung-2" index="25" unique_id=1705054500]
+visibility_range_end = 25.0
+
+[node name="Cylinder_587" parent="Umwälzpumpe-Faulung-2" index="26" unique_id=2139128063]
+visibility_range_end = 25.0
+
+[node name="Cylinder_588" parent="Umwälzpumpe-Faulung-2" index="27" unique_id=1611952935]
+visibility_range_end = 25.0
+
+[node name="Cylinder_589" parent="Umwälzpumpe-Faulung-2" index="28" unique_id=1912312231]
+visibility_range_end = 25.0
+
+[node name="Cylinder_590" parent="Umwälzpumpe-Faulung-2" index="29" unique_id=531841564]
+visibility_range_end = 25.0
+
+[node name="Cylinder_591" parent="Umwälzpumpe-Faulung-2" index="30" unique_id=1938699539]
+visibility_range_end = 25.0
+
+[node name="Cylinder_592" parent="Umwälzpumpe-Faulung-2" index="31" unique_id=2038077129]
+visibility_range_end = 25.0
+
+[node name="Cylinder_593" parent="Umwälzpumpe-Faulung-2" index="32" unique_id=861579810]
+visibility_range_end = 25.0
+
+[node name="Cylinder_594" parent="Umwälzpumpe-Faulung-2" index="33" unique_id=1470365864]
+visibility_range_end = 25.0
+
+[node name="Cylinder_595" parent="Umwälzpumpe-Faulung-2" index="34" unique_id=1757768174]
+visibility_range_end = 25.0
+
+[node name="Cylinder_596" parent="Umwälzpumpe-Faulung-2" index="35" unique_id=478424682]
+visibility_range_end = 25.0
+
+[node name="Cylinder_597" parent="Umwälzpumpe-Faulung-2" index="36" unique_id=973203603]
+visibility_range_end = 25.0
+
+[node name="Cylinder_598" parent="Umwälzpumpe-Faulung-2" index="37" unique_id=1471394191]
+visibility_range_end = 25.0
+
+[node name="Cylinder_599" parent="Umwälzpumpe-Faulung-2" index="38" unique_id=1060810782]
+visibility_range_end = 25.0
+
+[node name="Cylinder_600" parent="Umwälzpumpe-Faulung-2" index="39" unique_id=661002490]
+visibility_range_end = 25.0
+
+[node name="Cylinder_601" parent="Umwälzpumpe-Faulung-2" index="40" unique_id=88895273]
+visibility_range_end = 25.0
+
+[node name="Cylinder_602" parent="Umwälzpumpe-Faulung-2" index="41" unique_id=1725824823]
+visibility_range_end = 25.0
+
+[node name="Cylinder_603" parent="Umwälzpumpe-Faulung-2" index="42" unique_id=1852360977]
+visibility_range_end = 25.0
+
+[node name="Cylinder_604" parent="Umwälzpumpe-Faulung-2" index="43" unique_id=1392512159]
+visibility_range_end = 25.0
+
+[node name="Cylinder_605" parent="Umwälzpumpe-Faulung-2" index="44" unique_id=659307858]
+visibility_range_end = 25.0
+
+[node name="Cylinder_606" parent="Umwälzpumpe-Faulung-2" index="45" unique_id=1004802192]
+visibility_range_end = 25.0
+
+[node name="Cylinder_607" parent="Umwälzpumpe-Faulung-2" index="46" unique_id=1085342891]
+visibility_range_end = 25.0
+
+[node name="Cylinder_608" parent="Umwälzpumpe-Faulung-2" index="47" unique_id=1324031479]
+visibility_range_end = 25.0
+
+[node name="Cylinder_609" parent="Umwälzpumpe-Faulung-2" index="48" unique_id=1091502223]
+visibility_range_end = 25.0
+
+[node name="Cylinder_610" parent="Umwälzpumpe-Faulung-2" index="49" unique_id=634000960]
+visibility_range_end = 25.0
+
+[node name="Cylinder_611" parent="Umwälzpumpe-Faulung-2" index="50" unique_id=576142875]
+visibility_range_end = 25.0
+
+[node name="Cylinder_612" parent="Umwälzpumpe-Faulung-2" index="51" unique_id=572736294]
+visibility_range_end = 25.0
+
+[node name="Cylinder_613" parent="Umwälzpumpe-Faulung-2" index="52" unique_id=686406689]
+visibility_range_end = 25.0
+
+[node name="Cylinder_614" parent="Umwälzpumpe-Faulung-2" index="53" unique_id=399963331]
+visibility_range_end = 25.0
+
+[node name="Cylinder_615" parent="Umwälzpumpe-Faulung-2" index="54" unique_id=1701325272]
+visibility_range_end = 25.0
+
+[node name="Cylinder_616" parent="Umwälzpumpe-Faulung-2" index="55" unique_id=643442638]
+visibility_range_end = 25.0
+
+[node name="Cylinder_617" parent="Umwälzpumpe-Faulung-2" index="56" unique_id=1773827358]
+visibility_range_end = 25.0
+
+[node name="Cylinder_618" parent="Umwälzpumpe-Faulung-2" index="57" unique_id=387534751]
+visibility_range_end = 25.0
+
+[node name="Cylinder_619" parent="Umwälzpumpe-Faulung-2" index="58" unique_id=2127609220]
+visibility_range_end = 25.0
+
+[node name="Cylinder_620" parent="Umwälzpumpe-Faulung-2" index="59" unique_id=2127928867]
+visibility_range_end = 25.0
+
+[node name="Cylinder_621" parent="Umwälzpumpe-Faulung-2" index="60" unique_id=919896393]
+visibility_range_end = 25.0
+
+[node name="Cylinder_622" parent="Umwälzpumpe-Faulung-2" index="61" unique_id=80273007]
+visibility_range_end = 25.0
+
+[node name="Cylinder_623" parent="Umwälzpumpe-Faulung-2" index="62" unique_id=2136260835]
+visibility_range_end = 25.0
+
+[node name="Cylinder_624" parent="Umwälzpumpe-Faulung-2" index="63" unique_id=840217667]
+visibility_range_end = 25.0
+
+[node name="Cylinder_625" parent="Umwälzpumpe-Faulung-2" index="64" unique_id=803255499]
+visibility_range_end = 25.0
+
+[node name="Cylinder_626" parent="Umwälzpumpe-Faulung-2" index="65" unique_id=1186478668]
+visibility_range_end = 25.0
+
+[node name="Cylinder_627" parent="Umwälzpumpe-Faulung-2" index="66" unique_id=585806722]
+visibility_range_end = 25.0
+
+[node name="Cylinder_628" parent="Umwälzpumpe-Faulung-2" index="67" unique_id=326538093]
+visibility_range_end = 25.0
+
+[node name="Cylinder_629" parent="Umwälzpumpe-Faulung-2" index="68" unique_id=315003925]
+visibility_range_end = 25.0
+
+[node name="Cylinder_630" parent="Umwälzpumpe-Faulung-2" index="69" unique_id=448042025]
+visibility_range_end = 25.0
+
+[node name="Cylinder_631" parent="Umwälzpumpe-Faulung-2" index="70" unique_id=663452723]
+visibility_range_end = 25.0
+
+[node name="Cylinder_632" parent="Umwälzpumpe-Faulung-2" index="71" unique_id=1251169454]
+visibility_range_end = 25.0
+
+[node name="Cylinder_633" parent="Umwälzpumpe-Faulung-2" index="72" unique_id=739929361]
+visibility_range_end = 25.0
+
+[node name="Cylinder_634" parent="Umwälzpumpe-Faulung-2" index="73" unique_id=691801852]
+visibility_range_end = 25.0
+
+[node name="Cylinder_635" parent="Umwälzpumpe-Faulung-2" index="74" unique_id=169919522]
+visibility_range_end = 25.0
+
+[node name="Cylinder_636" parent="Umwälzpumpe-Faulung-2" index="75" unique_id=1609369640]
+visibility_range_end = 25.0
+
+[node name="Cylinder_637" parent="Umwälzpumpe-Faulung-2" index="76" unique_id=608319261]
+visibility_range_end = 25.0
+
+[node name="Cylinder_638" parent="Umwälzpumpe-Faulung-2" index="77" unique_id=557814327]
+visibility_range_end = 25.0
+
+[node name="msb_lufthebel3_007" parent="Umwälzpumpe-Faulung-2" index="78" unique_id=12603556]
+visibility_range_end = 25.0
+
+[node name="Plane_300" parent="Umwälzpumpe-Faulung-2" index="79" unique_id=398843647]
+visibility_range_end = 25.0
+
+[node name="Plane_301" parent="Umwälzpumpe-Faulung-2" index="80" unique_id=1532743877]
+visibility_range_end = 25.0
+
+[node name="Plane_302" parent="Umwälzpumpe-Faulung-2" index="81" unique_id=1087443394]
+visibility_range_end = 25.0
+
+[node name="Plane_303" parent="Umwälzpumpe-Faulung-2" index="82" unique_id=117608530]
+visibility_range_end = 25.0
+
+[node name="Plane_304" parent="Umwälzpumpe-Faulung-2" index="83" unique_id=847004214]
+visibility_range_end = 25.0
+
+[node name="Plane_305" parent="Umwälzpumpe-Faulung-2" index="84" unique_id=1987421030]
+visibility_range_end = 25.0
+
+[node name="Plane_306" parent="Umwälzpumpe-Faulung-2" index="85" unique_id=1587066931]
+visibility_range_end = 25.0
+
+[node name="Plane_307" parent="Umwälzpumpe-Faulung-2" index="86" unique_id=62639876]
+visibility_range_end = 25.0
+
+[node name="Plane_308" parent="Umwälzpumpe-Faulung-2" index="87" unique_id=354364480]
+visibility_range_end = 25.0
+
+[node name="Plane_309" parent="Umwälzpumpe-Faulung-2" index="88" unique_id=1172457962]
+visibility_range_end = 25.0
+
+[node name="Plane_310" parent="Umwälzpumpe-Faulung-2" index="89" unique_id=956465503]
+visibility_range_end = 25.0
+
+[node name="Plane_311" parent="Umwälzpumpe-Faulung-2" index="90" unique_id=1671628710]
+visibility_range_end = 25.0
+
+[node name="Plane_312" parent="Umwälzpumpe-Faulung-2" index="91" unique_id=574284840]
+visibility_range_end = 25.0
+
+[node name="Plane_313" parent="Umwälzpumpe-Faulung-2" index="92" unique_id=1261103542]
+visibility_range_end = 25.0
+
+[node name="Plane_314" parent="Umwälzpumpe-Faulung-2" index="93" unique_id=1833692932]
+visibility_range_end = 25.0
+
+[node name="Plane_315" parent="Umwälzpumpe-Faulung-2" index="94" unique_id=1793400216]
+visibility_range_end = 25.0
+
+[node name="Plane_316" parent="Umwälzpumpe-Faulung-2" index="95" unique_id=259913060]
+visibility_range_end = 25.0
+
+[node name="Plane_317" parent="Umwälzpumpe-Faulung-2" index="96" unique_id=471335626]
+visibility_range_end = 25.0
+
+[node name="Plane_318" parent="Umwälzpumpe-Faulung-2" index="97" unique_id=829997505]
+visibility_range_end = 25.0
+
+[node name="Plane_319" parent="Umwälzpumpe-Faulung-2" index="98" unique_id=559985809]
+visibility_range_end = 25.0
+
+[node name="Plane_320" parent="Umwälzpumpe-Faulung-2" index="99" unique_id=299916858]
+visibility_range_end = 25.0
+
+[node name="Plane_321" parent="Umwälzpumpe-Faulung-2" index="100" unique_id=990013950]
+visibility_range_end = 25.0
+
+[node name="Plane_322" parent="Umwälzpumpe-Faulung-2" index="101" unique_id=1665515295]
+visibility_range_end = 25.0
+
+[node name="Plane_323" parent="Umwälzpumpe-Faulung-2" index="102" unique_id=1429565907]
+visibility_range_end = 25.0
+
+[node name="Plane_324" parent="Umwälzpumpe-Faulung-2" index="103" unique_id=659080504]
+visibility_range_end = 25.0
+
+[node name="Plane_325" parent="Umwälzpumpe-Faulung-2" index="104" unique_id=1884018212]
+visibility_range_end = 25.0
+
+[node name="Plane_326" parent="Umwälzpumpe-Faulung-2" index="105" unique_id=1370233352]
+visibility_range_end = 25.0
+
+[node name="Plane_327" parent="Umwälzpumpe-Faulung-2" index="106" unique_id=1436179892]
+visibility_range_end = 25.0
+
+[node name="Plane_328" parent="Umwälzpumpe-Faulung-2" index="107" unique_id=911604625]
+visibility_range_end = 25.0
+
+[node name="Plane_329" parent="Umwälzpumpe-Faulung-2" index="108" unique_id=1986246491]
+visibility_range_end = 25.0
+
+[node name="Plane_330" parent="Umwälzpumpe-Faulung-2" index="109" unique_id=621438249]
+visibility_range_end = 25.0
+
+[node name="Plane_331" parent="Umwälzpumpe-Faulung-2" index="110" unique_id=1140735368]
+visibility_range_end = 25.0
+
+[node name="Plane_332" parent="Umwälzpumpe-Faulung-2" index="111" unique_id=1656747522]
+visibility_range_end = 25.0
+
+[node name="Plane_333" parent="Umwälzpumpe-Faulung-2" index="112" unique_id=499211572]
+visibility_range_end = 25.0
+
+[node name="Plane_334" parent="Umwälzpumpe-Faulung-2" index="113" unique_id=266752041]
+visibility_range_end = 25.0
+
+[node name="Plane_335" parent="Umwälzpumpe-Faulung-2" index="114" unique_id=1489867014]
+visibility_range_end = 25.0
+
+[node name="Plane_336" parent="Umwälzpumpe-Faulung-2" index="115" unique_id=621915429]
+visibility_range_end = 25.0
+
+[node name="Plane_337" parent="Umwälzpumpe-Faulung-2" index="116" unique_id=1308119881]
+visibility_range_end = 25.0
+
+[node name="Plane_338" parent="Umwälzpumpe-Faulung-2" index="117" unique_id=1748382952]
+visibility_range_end = 25.0
+
+[node name="Zeiger_002" parent="Umwälzpumpe-Faulung-2" index="118" unique_id=604022820]
+visibility_range_end = 25.0
+
+[node name="Handschieber-2" parent="." index="27" unique_id=423241138]
+visibility_range_end = 25.0
+
+[node name="Cube_242" parent="Handschieber-2" index="0" unique_id=1654073021]
+visibility_range_end = 25.0
+
+[node name="Cube_243" parent="Handschieber-2" index="1" unique_id=9524642]
+visibility_range_end = 25.0
+
+[node name="Cylinder_639" parent="Handschieber-2" index="2" unique_id=342447126]
+visibility_range_end = 25.0
+
+[node name="Cylinder_640" parent="Handschieber-2" index="3" unique_id=1109972171]
+visibility_range_end = 25.0
+
+[node name="Cylinder_642" parent="Handschieber-2" index="4" unique_id=171664271]
+visibility_range_end = 25.0
+
+[node name="Cylinder_643" parent="Handschieber-2" index="5" unique_id=1352749666]
+visibility_range_end = 25.0
+
+[node name="Cylinder_644" parent="Handschieber-2" index="6" unique_id=1950185735]
+visibility_range_end = 25.0
+
+[node name="Cylinder_645" parent="Handschieber-2" index="7" unique_id=1383005253]
+visibility_range_end = 25.0
+
+[node name="Cylinder_646" parent="Handschieber-2" index="8" unique_id=320155533]
+visibility_range_end = 25.0
+
+[node name="Cylinder_647" parent="Handschieber-2" index="9" unique_id=363667129]
+visibility_range_end = 25.0
+
+[node name="Cylinder_648" parent="Handschieber-2" index="10" unique_id=543148611]
+visibility_range_end = 25.0
+
+[node name="Cylinder_649" parent="Handschieber-2" index="11" unique_id=498401185]
+visibility_range_end = 25.0
+
+[node name="Cylinder_650" parent="Handschieber-2" index="12" unique_id=329599662]
+visibility_range_end = 25.0
+
+[node name="Plane_339" parent="Handschieber-2" index="13" unique_id=1529588275]
+visibility_range_end = 25.0
+
+[node name="Plane_340" parent="Handschieber-2" index="14" unique_id=1791515914]
+visibility_range_end = 25.0
+
+[node name="Handschieber-1" parent="." index="28" unique_id=1010150589]
+visibility_range_end = 25.0
+
+[node name="Cube_244" parent="Handschieber-1" index="0" unique_id=1884681336]
+visibility_range_end = 25.0
+
+[node name="Cube_245" parent="Handschieber-1" index="1" unique_id=1297006487]
+visibility_range_end = 25.0
+
+[node name="Cylinder_651" parent="Handschieber-1" index="2" unique_id=1260320248]
+visibility_range_end = 25.0
+
+[node name="Cylinder_652" parent="Handschieber-1" index="3" unique_id=305347926]
+visibility_range_end = 25.0
+
+[node name="Cylinder_653" parent="Handschieber-1" index="4" unique_id=1572192901]
+visibility_range_end = 25.0
+
+[node name="Cylinder_654" parent="Handschieber-1" index="5" unique_id=417832779]
+visibility_range_end = 25.0
+
+[node name="Cylinder_655" parent="Handschieber-1" index="6" unique_id=1368997321]
+visibility_range_end = 25.0
+
+[node name="Cylinder_656" parent="Handschieber-1" index="7" unique_id=526731286]
+visibility_range_end = 25.0
+
+[node name="Cylinder_657" parent="Handschieber-1" index="8" unique_id=1990393007]
+visibility_range_end = 25.0
+
+[node name="Cylinder_658" parent="Handschieber-1" index="9" unique_id=782666354]
+visibility_range_end = 25.0
+
+[node name="Cylinder_659" parent="Handschieber-1" index="10" unique_id=1930522420]
+visibility_range_end = 25.0
+
+[node name="Cylinder_661" parent="Handschieber-1" index="11" unique_id=61743691]
+visibility_range_end = 25.0
+
+[node name="Cylinder_662" parent="Handschieber-1" index="12" unique_id=884625731]
+visibility_range_end = 25.0
+
+[node name="Plane_341" parent="Handschieber-1" index="13" unique_id=1143038887]
+visibility_range_end = 25.0
+
+[node name="Plane_342" parent="Handschieber-1" index="14" unique_id=367097463]
+visibility_range_end = 25.0
+
+[node name="PH-Sonde" parent="." index="29" unique_id=484073347]
+visibility_range_end = 25.0
+
+[node name="Cylinder_667" parent="PH-Sonde" index="0" unique_id=1856171910]
+visibility_range_end = 25.0
+
+[node name="Cylinder_668" parent="PH-Sonde" index="1" unique_id=810414612]
+visibility_range_end = 25.0
+
+[node name="Cylinder_669" parent="PH-Sonde" index="2" unique_id=1455035321]
+visibility_range_end = 25.0
+
+[node name="Cylinder_670" parent="PH-Sonde" index="3" unique_id=1050595593]
+visibility_range_end = 25.0
+
+[node name="msb_lufthebel3_008" parent="." index="30" unique_id=697052187]
+visibility_range_end = 25.0
+
+[node name="PH-Sonde-2" parent="." index="31" unique_id=1714298825]
+visibility_range_end = 25.0
+
+[node name="Cylinder_674" parent="PH-Sonde-2" index="0" unique_id=2081337010]
+visibility_range_end = 25.0
+
+[node name="Cylinder_676" parent="PH-Sonde-2" index="1" unique_id=1787297577]
+visibility_range_end = 25.0
+
+[node name="Cylinder_677" parent="PH-Sonde-2" index="2" unique_id=2135044849]
+visibility_range_end = 25.0
+
+[node name="Cylinder_678" parent="PH-Sonde-2" index="3" unique_id=1528411491]
+visibility_range_end = 25.0
+
+[node name="Cylinder_679" parent="PH-Sonde-2" index="4" unique_id=2065674811]
+visibility_range_end = 25.0
+
+[node name="Handschieber-11" parent="." index="32" unique_id=1185691279]
+visibility_range_end = 25.0
+
+[node name="Cube_250" parent="Handschieber-11" index="0" unique_id=1768133518]
+visibility_range_end = 25.0
+
+[node name="Cube_251" parent="Handschieber-11" index="1" unique_id=1195976746]
+visibility_range_end = 25.0
+
+[node name="Cylinder_686" parent="Handschieber-11" index="2" unique_id=1037189127]
+visibility_range_end = 25.0
+
+[node name="Cylinder_687" parent="Handschieber-11" index="3" unique_id=1585307141]
+visibility_range_end = 25.0
+
+[node name="Cylinder_689" parent="Handschieber-11" index="4" unique_id=556795179]
+visibility_range_end = 25.0
+
+[node name="Cylinder_690" parent="Handschieber-11" index="5" unique_id=903868674]
+visibility_range_end = 25.0
+
+[node name="Cylinder_691" parent="Handschieber-11" index="6" unique_id=1357724202]
+visibility_range_end = 25.0
+
+[node name="Cylinder_692" parent="Handschieber-11" index="7" unique_id=540681012]
+visibility_range_end = 25.0
+
+[node name="Cylinder_693" parent="Handschieber-11" index="8" unique_id=5596671]
+visibility_range_end = 25.0
+
+[node name="Cylinder_694" parent="Handschieber-11" index="9" unique_id=1181269158]
+visibility_range_end = 25.0
+
+[node name="Cylinder_695" parent="Handschieber-11" index="10" unique_id=1809434491]
+visibility_range_end = 25.0
+
+[node name="Cylinder_696" parent="Handschieber-11" index="11" unique_id=46381183]
+visibility_range_end = 25.0
+
+[node name="Cylinder_697" parent="Handschieber-11" index="12" unique_id=1535151616]
+visibility_range_end = 25.0
+
+[node name="Plane_343" parent="Handschieber-11" index="13" unique_id=934751487]
+visibility_range_end = 25.0
+
+[node name="Plane_344" parent="Handschieber-11" index="14" unique_id=426436794]
+visibility_range_end = 25.0
+
+[node name="Handschieber-10" parent="." index="33" unique_id=2027001059]
+visibility_range_end = 25.0
+
+[node name="Cube_252" parent="Handschieber-10" index="0" unique_id=372867660]
+visibility_range_end = 25.0
+
+[node name="Cube_253" parent="Handschieber-10" index="1" unique_id=744856190]
+visibility_range_end = 25.0
+
+[node name="Cylinder_698" parent="Handschieber-10" index="2" unique_id=261163077]
+visibility_range_end = 25.0
+
+[node name="Cylinder_699" parent="Handschieber-10" index="3" unique_id=1248118116]
+visibility_range_end = 25.0
+
+[node name="Cylinder_700" parent="Handschieber-10" index="4" unique_id=1523748128]
+visibility_range_end = 25.0
+
+[node name="Cylinder_701" parent="Handschieber-10" index="5" unique_id=2072572703]
+visibility_range_end = 25.0
+
+[node name="Cylinder_702" parent="Handschieber-10" index="6" unique_id=330589303]
+visibility_range_end = 25.0
+
+[node name="Cylinder_703" parent="Handschieber-10" index="7" unique_id=1431641712]
+visibility_range_end = 25.0
+
+[node name="Cylinder_704" parent="Handschieber-10" index="8" unique_id=1639007261]
+visibility_range_end = 25.0
+
+[node name="Cylinder_705" parent="Handschieber-10" index="9" unique_id=1293814632]
+visibility_range_end = 25.0
+
+[node name="Cylinder_706" parent="Handschieber-10" index="10" unique_id=1356255351]
+visibility_range_end = 25.0
+
+[node name="Cylinder_708" parent="Handschieber-10" index="11" unique_id=1681472450]
+visibility_range_end = 25.0
+
+[node name="Cylinder_709" parent="Handschieber-10" index="12" unique_id=2012847352]
+visibility_range_end = 25.0
+
+[node name="Plane_345" parent="Handschieber-10" index="13" unique_id=165271921]
+visibility_range_end = 25.0
+
+[node name="Plane_346" parent="Handschieber-10" index="14" unique_id=1136924439]
+visibility_range_end = 25.0
+
+[node name="Handschieber-9" parent="." index="34" unique_id=1181114145]
+visibility_range_end = 25.0
+
+[node name="Cube_254" parent="Handschieber-9" index="0" unique_id=1590283035]
+visibility_range_end = 25.0
+
+[node name="Cube_255" parent="Handschieber-9" index="1" unique_id=378893364]
+visibility_range_end = 25.0
+
+[node name="Cylinder_710" parent="Handschieber-9" index="2" unique_id=2072783193]
+visibility_range_end = 15.0
+
+[node name="Cylinder_711" parent="Handschieber-9" index="3" unique_id=426247750]
+visibility_range_end = 25.0
+
+[node name="Cylinder_713" parent="Handschieber-9" index="4" unique_id=1912575916]
+visibility_range_end = 15.0
+
+[node name="Cylinder_714" parent="Handschieber-9" index="5" unique_id=547145483]
+visibility_range_end = 15.0
+
+[node name="Cylinder_715" parent="Handschieber-9" index="6" unique_id=395571606]
+visibility_range_end = 25.0
+
+[node name="Cylinder_716" parent="Handschieber-9" index="7" unique_id=742338803]
+visibility_range_end = 25.0
+
+[node name="Cylinder_717" parent="Handschieber-9" index="8" unique_id=36496409]
+visibility_range_end = 25.0
+
+[node name="Cylinder_718" parent="Handschieber-9" index="9" unique_id=1442652883]
+visibility_range_end = 25.0
+
+[node name="Cylinder_719" parent="Handschieber-9" index="10" unique_id=2122231227]
+visibility_range_end = 25.0
+
+[node name="Cylinder_720" parent="Handschieber-9" index="11" unique_id=1766616853]
+visibility_range_end = 15.0
+
+[node name="Cylinder_721" parent="Handschieber-9" index="12" unique_id=374176375]
+visibility_range_end = 25.0
+
+[node name="Plane_347" parent="Handschieber-9" index="13" unique_id=1486738524]
+visibility_range_end = 15.0
+
+[node name="Plane_348" parent="Handschieber-9" index="14" unique_id=1512846167]
+visibility_range_end = 15.0
+
+[node name="Motorschieber-2" parent="." index="35" unique_id=2059448644]
+visibility_range_end = 15.0
+
+[node name="Cube_256" parent="Motorschieber-2" index="0" unique_id=1273810018]
+visibility_range_end = 15.0
+
+[node name="Cube_257" parent="Motorschieber-2" index="1" unique_id=1759232570]
+visibility_range_end = 15.0
+
+[node name="Cube_258" parent="Motorschieber-2" index="2" unique_id=1719532365]
+visibility_range_end = 15.0
+
+[node name="Cylinder_722" parent="Motorschieber-2" index="3" unique_id=1632491622]
+visibility_range_end = 15.0
+
+[node name="Cylinder_723" parent="Motorschieber-2" index="4" unique_id=1503499741]
+visibility_range_end = 15.0
+
+[node name="Cylinder_724" parent="Motorschieber-2" index="5" unique_id=1692710242]
+visibility_range_end = 15.0
+
+[node name="Cylinder_725" parent="Motorschieber-2" index="6" unique_id=19002788]
+visibility_range_end = 15.0
+
+[node name="Cylinder_726" parent="Motorschieber-2" index="7" unique_id=15254035]
+visibility_range_end = 15.0
+
+[node name="Cylinder_727" parent="Motorschieber-2" index="8" unique_id=12651558]
+visibility_range_end = 15.0
+
+[node name="Cylinder_728" parent="Motorschieber-2" index="9" unique_id=354634773]
+visibility_range_end = 15.0
+
+[node name="Cylinder_729" parent="Motorschieber-2" index="10" unique_id=466449834]
+visibility_range_end = 15.0
+
+[node name="Cylinder_730" parent="Motorschieber-2" index="11" unique_id=76459350]
+visibility_range_end = 15.0
+
+[node name="Cylinder_731" parent="Motorschieber-2" index="12" unique_id=1931043711]
+visibility_range_end = 15.0
+
+[node name="Cylinder_732" parent="Motorschieber-2" index="13" unique_id=1760171396]
+visibility_range_end = 15.0
+
+[node name="Cylinder_733" parent="Motorschieber-2" index="14" unique_id=2063181152]
+visibility_range_end = 15.0
+
+[node name="Cylinder_735" parent="Motorschieber-2" index="15" unique_id=671768763]
+visibility_range_end = 15.0
+
+[node name="Cylinder_736" parent="Motorschieber-2" index="16" unique_id=1738729162]
+visibility_range_end = 15.0
+
+[node name="Plane_349" parent="Motorschieber-2" index="17" unique_id=211364195]
+visibility_range_end = 15.0
+
+[node name="Plane_350" parent="Motorschieber-2" index="18" unique_id=492079494]
+visibility_range_end = 15.0
+
+[node name="Handschieber-3" parent="." index="36" unique_id=1908453170]
+visibility_range_end = 25.0
+
+[node name="Cube_259" parent="Handschieber-3" index="0" unique_id=2047073510]
+visibility_range_end = 25.0
+
+[node name="Cube_260" parent="Handschieber-3" index="1" unique_id=1687776420]
+visibility_range_end = 25.0
+
+[node name="Cylinder_737" parent="Handschieber-3" index="2" unique_id=519018985]
+visibility_range_end = 25.0
+
+[node name="Cylinder_738" parent="Handschieber-3" index="3" unique_id=593700998]
+visibility_range_end = 25.0
+
+[node name="Cylinder_739" parent="Handschieber-3" index="4" unique_id=235853712]
+visibility_range_end = 25.0
+
+[node name="Cylinder_740" parent="Handschieber-3" index="5" unique_id=209825424]
+visibility_range_end = 25.0
+
+[node name="Cylinder_741" parent="Handschieber-3" index="6" unique_id=647292062]
+visibility_range_end = 25.0
+
+[node name="Cylinder_742" parent="Handschieber-3" index="7" unique_id=1788994492]
+visibility_range_end = 25.0
+
+[node name="Cylinder_743" parent="Handschieber-3" index="8" unique_id=1441835462]
+visibility_range_end = 25.0
+
+[node name="Cylinder_744" parent="Handschieber-3" index="9" unique_id=1300634597]
+visibility_range_end = 25.0
+
+[node name="Cylinder_745" parent="Handschieber-3" index="10" unique_id=1194718568]
+visibility_range_end = 25.0
+
+[node name="Cylinder_747" parent="Handschieber-3" index="11" unique_id=1363993508]
+visibility_range_end = 25.0
+
+[node name="Cylinder_748" parent="Handschieber-3" index="12" unique_id=168061914]
+visibility_range_end = 25.0
+
+[node name="Plane_351" parent="Handschieber-3" index="13" unique_id=553884118]
+visibility_range_end = 25.0
+
+[node name="Plane_352" parent="Handschieber-3" index="14" unique_id=538211434]
+visibility_range_end = 25.0
+
+[node name="Handschieber-4" parent="." index="37" unique_id=2053111566]
+visibility_range_end = 25.0
+
+[node name="Cube_261" parent="Handschieber-4" index="0" unique_id=1470052189]
+visibility_range_end = 25.0
+
+[node name="Cube_262" parent="Handschieber-4" index="1" unique_id=1410278294]
+visibility_range_end = 25.0
+
+[node name="Cylinder_749" parent="Handschieber-4" index="2" unique_id=358625256]
+visibility_range_end = 25.0
+
+[node name="Cylinder_750" parent="Handschieber-4" index="3" unique_id=154927995]
+visibility_range_end = 25.0
+
+[node name="Cylinder_752" parent="Handschieber-4" index="4" unique_id=676306773]
+visibility_range_end = 25.0
+
+[node name="Cylinder_753" parent="Handschieber-4" index="5" unique_id=1628116345]
+visibility_range_end = 25.0
+
+[node name="Cylinder_754" parent="Handschieber-4" index="6" unique_id=1889932752]
+visibility_range_end = 25.0
+
+[node name="Cylinder_755" parent="Handschieber-4" index="7" unique_id=905101751]
+visibility_range_end = 25.0
+
+[node name="Cylinder_756" parent="Handschieber-4" index="8" unique_id=566812638]
+visibility_range_end = 25.0
+
+[node name="Cylinder_757" parent="Handschieber-4" index="9" unique_id=1232123376]
+visibility_range_end = 25.0
+
+[node name="Cylinder_758" parent="Handschieber-4" index="10" unique_id=631821704]
+visibility_range_end = 25.0
+
+[node name="Cylinder_759" parent="Handschieber-4" index="11" unique_id=2095474070]
+visibility_range_end = 25.0
+
+[node name="Cylinder_760" parent="Handschieber-4" index="12" unique_id=1044037345]
+visibility_range_end = 25.0
+
+[node name="Plane_353" parent="Handschieber-4" index="13" unique_id=126183428]
+visibility_range_end = 25.0
+
+[node name="Plane_354" parent="Handschieber-4" index="14" unique_id=914217407]
+visibility_range_end = 25.0

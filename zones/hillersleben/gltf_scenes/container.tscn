@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cwufo8ayavbxg"]
+
+[ext_resource type="PackedScene" uid="uid://codqtgph1akn3" path="res://assets/zones/hillersleben/models/container/container.gltf" id="1_8b2iu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fum80"]
+size = Vector3(2.2834473, 0.05609131, 5.9521484)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8b2iu"]
+size = Vector3(0.08633423, 1.1853943, 5.9521484)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5elkl"]
+size = Vector3(2.303421, 1.6586151, 0.15881348)
+
+[node name="container" unique_id=1629151967 instance=ExtResource("1_8b2iu")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="klaerschlammcontainer-1" parent_id_path=PackedInt32Array(79694094) index="0" unique_id=926817129]
+collision_layer = 49152
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="klaerschlammcontainer-1/StaticBody3D" index="0" unique_id=1152463894]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.006225586, 0.056854248, -0.0063476563)
+shape = SubResource("BoxShape3D_fum80")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="klaerschlammcontainer-1/StaticBody3D" index="1" unique_id=1133217243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1047821, 0.62150574, -0.0063476563)
+shape = SubResource("BoxShape3D_8b2iu")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="klaerschlammcontainer-1/StaticBody3D" index="2" unique_id=1495231324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1282053, 0.62150574, -0.0063476563)
+shape = SubResource("BoxShape3D_8b2iu")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="klaerschlammcontainer-1/StaticBody3D" index="3" unique_id=1067795683]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019661903, 0.85811615, 2.8903198)
+shape = SubResource("BoxShape3D_5elkl")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="klaerschlammcontainer-1/StaticBody3D" index="4" unique_id=23962675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.019661903, 0.85811615, -2.902399)
+shape = SubResource("BoxShape3D_5elkl")

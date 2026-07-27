@@ -1,0 +1,1281 @@
+[gd_scene format=3 uid="uid://bdmarwvxel1o7"]
+
+[ext_resource type="PackedScene" uid="uid://d18x5oi857yn1" path="res://assets/zones/hillersleben/models/foerderband/foerderband.gltf" id="1_skgo6"]
+
+[node name="foerderband2" unique_id=920080994 instance=ExtResource("1_skgo6")]
+
+[node name="foerderband" parent="." index="0" unique_id=1973373980]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+metadata/_edit_lock_ = true
+
+[node name="BézierCurve_004" parent="foerderband" index="0" unique_id=1254369947]
+visibility_range_end = 30.0
+
+[node name="BézierCurve_005" parent="foerderband" index="1" unique_id=924630368]
+visibility_range_end = 30.0
+
+[node name="BézierCurve_006" parent="foerderband" index="2" unique_id=399388902]
+visibility_range_end = 30.0
+
+[node name="BézierCurve_007" parent="foerderband" index="3" unique_id=622570962]
+visibility_range_end = 30.0
+
+[node name="BézierCurve_008" parent="foerderband" index="4" unique_id=2114038984]
+visibility_range_end = 30.0
+
+[node name="BézierCurve_009" parent="foerderband" index="5" unique_id=852527871]
+visibility_range_end = 30.0
+
+[node name="BézierCurve_010" parent="foerderband" index="6" unique_id=1253061362]
+visibility_range_end = 30.0
+
+[node name="Circle_003" parent="foerderband" index="7" unique_id=319575902]
+visibility_range_end = 30.0
+
+[node name="Cube_106" parent="foerderband" index="8" unique_id=233078377]
+visibility_range_end = 30.0
+
+[node name="Cube_107" parent="foerderband" index="9" unique_id=2108358406]
+visibility_range_end = 30.0
+
+[node name="Cube_140" parent="foerderband" index="10" unique_id=104696545]
+visibility_range_end = 30.0
+
+[node name="Cube_141" parent="foerderband" index="11" unique_id=1598230301]
+visibility_range_end = 30.0
+
+[node name="Cube_142" parent="foerderband" index="12" unique_id=1824115385]
+visibility_range_end = 30.0
+
+[node name="Cube_143" parent="foerderband" index="13" unique_id=1814998357]
+visibility_range_end = 30.0
+
+[node name="Cube_144" parent="foerderband" index="14" unique_id=1935336478]
+visibility_range_end = 30.0
+
+[node name="Cube_146" parent="foerderband" index="16" unique_id=1581102561]
+visibility_range_end = 30.0
+
+[node name="Cube_148" parent="foerderband" index="18" unique_id=1176860827]
+visibility_range_end = 30.0
+
+[node name="Cube_150" parent="foerderband" index="20" unique_id=1537282048]
+visibility_range_end = 30.0
+
+[node name="Cube_151" parent="foerderband" index="21" unique_id=1342150262]
+visibility_range_end = 30.0
+
+[node name="Cube_152" parent="foerderband" index="22" unique_id=14900430]
+visibility_range_end = 30.0
+
+[node name="Cube_153" parent="foerderband" index="23" unique_id=179134369]
+visibility_range_end = 30.0
+
+[node name="Cube_154" parent="foerderband" index="24" unique_id=2122682096]
+visibility_range_end = 30.0
+
+[node name="Cube_157" parent="foerderband" index="25" unique_id=636542783]
+visibility_range_end = 30.0
+
+[node name="Cube_158" parent="foerderband" index="26" unique_id=1718284057]
+visibility_range_end = 30.0
+
+[node name="Cube_159" parent="foerderband" index="27" unique_id=594578430]
+visibility_range_end = 30.0
+
+[node name="Cube_160" parent="foerderband" index="28" unique_id=2114213448]
+visibility_range_end = 30.0
+
+[node name="Cube_161" parent="foerderband" index="29" unique_id=1612371258]
+visibility_range_end = 30.0
+
+[node name="Cube_162" parent="foerderband" index="30" unique_id=458711947]
+visibility_range_end = 30.0
+
+[node name="Cube_163" parent="foerderband" index="31" unique_id=1868454848]
+visibility_range_end = 30.0
+
+[node name="Cube_164" parent="foerderband" index="32" unique_id=792732338]
+visibility_range_end = 30.0
+
+[node name="Cube_165" parent="foerderband" index="33" unique_id=1841613943]
+visibility_range_end = 30.0
+
+[node name="Cube_166" parent="foerderband" index="34" unique_id=803208687]
+visibility_range_end = 30.0
+
+[node name="Cube_167" parent="foerderband" index="35" unique_id=1140744743]
+visibility_range_end = 30.0
+
+[node name="Cube_168" parent="foerderband" index="36" unique_id=733776397]
+visibility_range_end = 30.0
+
+[node name="Cube_169" parent="foerderband" index="37" unique_id=1076223126]
+visibility_range_end = 30.0
+
+[node name="Cube_170" parent="foerderband" index="38" unique_id=816148967]
+visibility_range_end = 30.0
+
+[node name="Cube_171" parent="foerderband" index="39" unique_id=1130254477]
+visibility_range_end = 30.0
+
+[node name="Cube_172" parent="foerderband" index="40" unique_id=678404816]
+visibility_range_end = 30.0
+
+[node name="Cube_173" parent="foerderband" index="41" unique_id=990691821]
+visibility_range_end = 30.0
+
+[node name="Cube_174" parent="foerderband" index="42" unique_id=2091883262]
+visibility_range_end = 30.0
+
+[node name="Cube_175" parent="foerderband" index="43" unique_id=1470144025]
+visibility_range_end = 30.0
+
+[node name="Cube_176" parent="foerderband" index="44" unique_id=913983171]
+visibility_range_end = 30.0
+
+[node name="Cube_177" parent="foerderband" index="45" unique_id=861296853]
+visibility_range_end = 30.0
+
+[node name="Cube_178" parent="foerderband" index="46" unique_id=1345444]
+visibility_range_end = 30.0
+
+[node name="Cube_179" parent="foerderband" index="47" unique_id=607335525]
+visibility_range_end = 30.0
+
+[node name="Cube_181" parent="foerderband" index="49" unique_id=360779034]
+visibility_range_end = 30.0
+
+[node name="Cube_184" parent="foerderband" index="52" unique_id=1025603371]
+visibility_range_end = 30.0
+
+[node name="Cube_185" parent="foerderband" index="53" unique_id=1352686596]
+visibility_range_end = 30.0
+
+[node name="Cube_186" parent="foerderband" index="54" unique_id=1027076242]
+visibility_range_end = 30.0
+
+[node name="Cube_187" parent="foerderband" index="55" unique_id=955719426]
+visibility_range_end = 30.0
+
+[node name="Cube_188" parent="foerderband" index="56" unique_id=447900406]
+visibility_range_end = 30.0
+
+[node name="Cube_189" parent="foerderband" index="57" unique_id=1363268558]
+visibility_range_end = 30.0
+
+[node name="Cube_190" parent="foerderband" index="58" unique_id=203742530]
+visibility_range_end = 30.0
+
+[node name="Cube_191" parent="foerderband" index="59" unique_id=1236003763]
+visibility_range_end = 30.0
+
+[node name="Cube_193" parent="foerderband" index="61" unique_id=85441059]
+visibility_range_end = 30.0
+
+[node name="Cube_194" parent="foerderband" index="62" unique_id=2133679566]
+visibility_range_end = 30.0
+
+[node name="Cube_195" parent="foerderband" index="63" unique_id=1428158157]
+visibility_range_end = 30.0
+
+[node name="Cube_196" parent="foerderband" index="64" unique_id=593120492]
+visibility_range_end = 30.0
+
+[node name="Cube_197" parent="foerderband" index="65" unique_id=1299268732]
+visibility_range_end = 30.0
+
+[node name="Cube_198" parent="foerderband" index="66" unique_id=304025673]
+visibility_range_end = 30.0
+
+[node name="Cube_199" parent="foerderband" index="67" unique_id=1851416666]
+visibility_range_end = 30.0
+
+[node name="Cube_200" parent="foerderband" index="68" unique_id=2101494353]
+visibility_range_end = 30.0
+
+[node name="Cube_202" parent="foerderband" index="70" unique_id=2128218156]
+visibility_range_end = 30.0
+
+[node name="Cube_203" parent="foerderband" index="71" unique_id=499636866]
+transform = Transform3D(0.99995184, 0.009797617, 0.000706139, -0.0029180346, 0.36491865, -0.93103486, -0.009379606, 0.9309879, 0.36492962, 0.6910634, 1.6549844, 5.394386)
+
+[node name="Cube_204" parent="foerderband" index="72" unique_id=1019305354]
+visibility_range_end = 30.0
+
+[node name="Cube_205" parent="foerderband" index="73" unique_id=1606290389]
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.691808, 1.5015589, 5.6746573)
+
+[node name="Cube_209" parent="foerderband" index="77" unique_id=1910030567]
+visibility_range_end = 30.0
+
+[node name="Cube_210" parent="foerderband" index="78" unique_id=824827588]
+visibility_range_end = 30.0
+
+[node name="Cube_211" parent="foerderband" index="79" unique_id=283371088]
+visibility_range_end = 30.0
+
+[node name="Cube_212" parent="foerderband" index="80" unique_id=464268292]
+visibility_range_end = 30.0
+
+[node name="Cube_221" parent="foerderband" index="86" unique_id=380989057]
+visibility_range_end = 30.0
+
+[node name="Cube_256" parent="foerderband" index="121" unique_id=1107435863]
+visibility_range_end = 30.0
+
+[node name="Cube_257" parent="foerderband" index="122" unique_id=1631744318]
+visibility_range_end = 30.0
+
+[node name="Cube_271" parent="foerderband" index="136" unique_id=835805728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6918088, 1.8750422, 2.432397)
+
+[node name="Cylinder_186" parent="foerderband" index="137" unique_id=2027086752]
+visibility_range_end = 30.0
+
+[node name="Cylinder_187" parent="foerderband" index="138" unique_id=1789345193]
+visibility_range_end = 30.0
+
+[node name="Cylinder_188" parent="foerderband" index="139" unique_id=1199657906]
+visibility_range_end = 30.0
+
+[node name="Cylinder_189" parent="foerderband" index="140" unique_id=2061926263]
+visibility_range_end = 30.0
+
+[node name="Cylinder_192" parent="foerderband" index="141" unique_id=12959227]
+visibility_range_end = 30.0
+
+[node name="Cylinder_193" parent="foerderband" index="142" unique_id=2020159544]
+visibility_range_end = 30.0
+
+[node name="Cylinder_194" parent="foerderband" index="143" unique_id=332756543]
+visibility_range_end = 30.0
+
+[node name="Cylinder_195" parent="foerderband" index="144" unique_id=1732785281]
+visibility_range_end = 30.0
+
+[node name="Cylinder_196" parent="foerderband" index="145" unique_id=1171093504]
+visibility_range_end = 30.0
+
+[node name="Cylinder_197" parent="foerderband" index="146" unique_id=1321980438]
+visibility_range_end = 30.0
+
+[node name="Cylinder_198" parent="foerderband" index="147" unique_id=1484867235]
+visibility_range_end = 30.0
+
+[node name="Cylinder_199" parent="foerderband" index="148" unique_id=577888520]
+visibility_range_end = 30.0
+
+[node name="Cylinder_200" parent="foerderband" index="149" unique_id=185658206]
+visibility_range_end = 30.0
+
+[node name="Cylinder_201" parent="foerderband" index="150" unique_id=1939942337]
+visibility_range_end = 30.0
+
+[node name="Cylinder_202" parent="foerderband" index="151" unique_id=1653614504]
+visibility_range_end = 30.0
+
+[node name="Cylinder_203" parent="foerderband" index="152" unique_id=910186397]
+visibility_range_end = 30.0
+
+[node name="Cylinder_204" parent="foerderband" index="153" unique_id=1894432975]
+visibility_range_end = 30.0
+
+[node name="Cylinder_205" parent="foerderband" index="154" unique_id=1281662133]
+visibility_range_end = 30.0
+
+[node name="Cylinder_206" parent="foerderband" index="155" unique_id=91060130]
+visibility_range_end = 30.0
+
+[node name="Cylinder_207" parent="foerderband" index="156" unique_id=2125967678]
+visibility_range_end = 30.0
+
+[node name="Cylinder_208" parent="foerderband" index="157" unique_id=981175701]
+visibility_range_end = 30.0
+
+[node name="Cylinder_209" parent="foerderband" index="158" unique_id=790809570]
+visibility_range_end = 30.0
+
+[node name="Cylinder_210" parent="foerderband" index="159" unique_id=301107138]
+visibility_range_end = 30.0
+
+[node name="Cylinder_211" parent="foerderband" index="160" unique_id=1051966678]
+visibility_range_end = 30.0
+
+[node name="Cylinder_212" parent="foerderband" index="161" unique_id=498321492]
+visibility_range_end = 30.0
+
+[node name="Cylinder_213" parent="foerderband" index="162" unique_id=764396503]
+visibility_range_end = 30.0
+
+[node name="Cylinder_214" parent="foerderband" index="163" unique_id=836934210]
+visibility_range_end = 30.0
+
+[node name="Cylinder_215" parent="foerderband" index="164" unique_id=1790490480]
+visibility_range_end = 30.0
+
+[node name="Cylinder_216" parent="foerderband" index="165" unique_id=1583911585]
+visibility_range_end = 30.0
+
+[node name="Cylinder_217" parent="foerderband" index="166" unique_id=850154845]
+visibility_range_end = 30.0
+
+[node name="Cylinder_218" parent="foerderband" index="167" unique_id=628766526]
+visibility_range_end = 30.0
+
+[node name="Cylinder_219" parent="foerderband" index="168" unique_id=308554735]
+visibility_range_end = 30.0
+
+[node name="Cylinder_220" parent="foerderband" index="169" unique_id=1406553805]
+visibility_range_end = 30.0
+
+[node name="Cylinder_221" parent="foerderband" index="170" unique_id=425695822]
+visibility_range_end = 30.0
+
+[node name="Cylinder_222" parent="foerderband" index="171" unique_id=429286655]
+visibility_range_end = 30.0
+
+[node name="Cylinder_223" parent="foerderband" index="172" unique_id=1729308409]
+visibility_range_end = 30.0
+
+[node name="Cylinder_224" parent="foerderband" index="173" unique_id=1603755353]
+visibility_range_end = 30.0
+
+[node name="Cylinder_225" parent="foerderband" index="174" unique_id=200736467]
+visibility_range_end = 30.0
+
+[node name="Cylinder_226" parent="foerderband" index="175" unique_id=870918836]
+visibility_range_end = 30.0
+
+[node name="Cylinder_227" parent="foerderband" index="176" unique_id=569969413]
+visibility_range_end = 30.0
+
+[node name="Cylinder_228" parent="foerderband" index="177" unique_id=561256802]
+visibility_range_end = 30.0
+
+[node name="Cylinder_229" parent="foerderband" index="178" unique_id=539043850]
+visibility_range_end = 30.0
+
+[node name="Cylinder_230" parent="foerderband" index="179" unique_id=2122591848]
+visibility_range_end = 30.0
+
+[node name="Cylinder_231" parent="foerderband" index="180" unique_id=1752932962]
+visibility_range_end = 30.0
+
+[node name="Cylinder_232" parent="foerderband" index="181" unique_id=1699365756]
+visibility_range_end = 30.0
+
+[node name="Cylinder_233" parent="foerderband" index="182" unique_id=776897879]
+visibility_range_end = 30.0
+
+[node name="Cylinder_234" parent="foerderband" index="183" unique_id=606481758]
+visibility_range_end = 30.0
+
+[node name="Cylinder_235" parent="foerderband" index="184" unique_id=636557182]
+visibility_range_end = 30.0
+
+[node name="Cylinder_236" parent="foerderband" index="185" unique_id=1769268933]
+visibility_range_end = 30.0
+
+[node name="Cylinder_237" parent="foerderband" index="186" unique_id=588056222]
+visibility_range_end = 30.0
+
+[node name="Cylinder_238" parent="foerderband" index="187" unique_id=1331876499]
+visibility_range_end = 30.0
+
+[node name="Cylinder_239" parent="foerderband" index="188" unique_id=438403324]
+visibility_range_end = 30.0
+
+[node name="Cylinder_240" parent="foerderband" index="189" unique_id=1780087103]
+visibility_range_end = 30.0
+
+[node name="Cylinder_241" parent="foerderband" index="190" unique_id=624089460]
+visibility_range_end = 30.0
+
+[node name="Cylinder_242" parent="foerderband" index="191" unique_id=1996688302]
+visibility_range_end = 30.0
+
+[node name="Cylinder_243" parent="foerderband" index="192" unique_id=1009536364]
+visibility_range_end = 30.0
+
+[node name="Cylinder_244" parent="foerderband" index="193" unique_id=240605138]
+visibility_range_end = 30.0
+
+[node name="Cylinder_245" parent="foerderband" index="194" unique_id=1732921281]
+visibility_range_end = 30.0
+
+[node name="Cylinder_246" parent="foerderband" index="195" unique_id=2039162020]
+visibility_range_end = 30.0
+
+[node name="Cylinder_247" parent="foerderband" index="196" unique_id=522845676]
+visibility_range_end = 30.0
+
+[node name="Cylinder_248" parent="foerderband" index="197" unique_id=1438331652]
+visibility_range_end = 30.0
+
+[node name="Cylinder_249" parent="foerderband" index="198" unique_id=1345417472]
+visibility_range_end = 30.0
+
+[node name="Cylinder_250" parent="foerderband" index="199" unique_id=581279244]
+visibility_range_end = 30.0
+
+[node name="Cylinder_251" parent="foerderband" index="200" unique_id=700816441]
+visibility_range_end = 30.0
+
+[node name="Cylinder_252" parent="foerderband" index="201" unique_id=276687057]
+visibility_range_end = 30.0
+
+[node name="Cylinder_253" parent="foerderband" index="202" unique_id=258793305]
+visibility_range_end = 30.0
+
+[node name="Cylinder_254" parent="foerderband" index="203" unique_id=1327458436]
+visibility_range_end = 30.0
+
+[node name="Cylinder_255" parent="foerderband" index="204" unique_id=1136203231]
+visibility_range_end = 30.0
+
+[node name="Cylinder_256" parent="foerderband" index="205" unique_id=1535522268]
+visibility_range_end = 30.0
+
+[node name="Cylinder_257" parent="foerderband" index="206" unique_id=1123088405]
+visibility_range_end = 30.0
+
+[node name="Cylinder_258" parent="foerderband" index="207" unique_id=1189568511]
+visibility_range_end = 30.0
+
+[node name="Cylinder_259" parent="foerderband" index="208" unique_id=1598729082]
+visibility_range_end = 30.0
+
+[node name="Cylinder_260" parent="foerderband" index="209" unique_id=1694067605]
+visibility_range_end = 30.0
+
+[node name="Cylinder_261" parent="foerderband" index="210" unique_id=2048586430]
+visibility_range_end = 30.0
+
+[node name="Cylinder_262" parent="foerderband" index="211" unique_id=1122390359]
+visibility_range_end = 30.0
+
+[node name="Cylinder_263" parent="foerderband" index="212" unique_id=100374548]
+visibility_range_end = 30.0
+
+[node name="Cylinder_264" parent="foerderband" index="213" unique_id=1462978083]
+visibility_range_end = 30.0
+
+[node name="Cylinder_265" parent="foerderband" index="214" unique_id=1408078026]
+visibility_range_end = 30.0
+
+[node name="Cylinder_266" parent="foerderband" index="215" unique_id=996158098]
+visibility_range_end = 30.0
+
+[node name="Cylinder_267" parent="foerderband" index="216" unique_id=1476818826]
+visibility_range_end = 30.0
+
+[node name="Cylinder_268" parent="foerderband" index="217" unique_id=741729211]
+visibility_range_end = 30.0
+
+[node name="Cylinder_269" parent="foerderband" index="218" unique_id=1394583879]
+visibility_range_end = 30.0
+
+[node name="Cylinder_270" parent="foerderband" index="219" unique_id=235213660]
+visibility_range_end = 30.0
+
+[node name="Cylinder_271" parent="foerderband" index="220" unique_id=1811005877]
+visibility_range_end = 30.0
+
+[node name="Cylinder_272" parent="foerderband" index="221" unique_id=113349213]
+visibility_range_end = 30.0
+
+[node name="Cylinder_273" parent="foerderband" index="222" unique_id=1967313674]
+visibility_range_end = 30.0
+
+[node name="Cylinder_274" parent="foerderband" index="223" unique_id=1237539147]
+visibility_range_end = 30.0
+
+[node name="Cylinder_275" parent="foerderband" index="224" unique_id=2112477076]
+visibility_range_end = 30.0
+
+[node name="Cylinder_276" parent="foerderband" index="225" unique_id=67857734]
+visibility_range_end = 30.0
+
+[node name="Cylinder_277" parent="foerderband" index="226" unique_id=1470552672]
+visibility_range_end = 30.0
+
+[node name="Cylinder_278" parent="foerderband" index="227" unique_id=1979802091]
+visibility_range_end = 30.0
+
+[node name="Cylinder_279" parent="foerderband" index="228" unique_id=2097231230]
+visibility_range_end = 30.0
+
+[node name="Cylinder_280" parent="foerderband" index="229" unique_id=1528772209]
+visibility_range_end = 30.0
+
+[node name="Cylinder_281" parent="foerderband" index="230" unique_id=968402670]
+visibility_range_end = 30.0
+
+[node name="Cylinder_282" parent="foerderband" index="231" unique_id=246645146]
+visibility_range_end = 30.0
+
+[node name="Cylinder_283" parent="foerderband" index="232" unique_id=461567990]
+visibility_range_end = 30.0
+
+[node name="Cylinder_284" parent="foerderband" index="233" unique_id=362271482]
+visibility_range_end = 30.0
+
+[node name="Cylinder_285" parent="foerderband" index="234" unique_id=862926318]
+visibility_range_end = 30.0
+
+[node name="Cylinder_286" parent="foerderband" index="235" unique_id=1823327668]
+visibility_range_end = 30.0
+
+[node name="Cylinder_287" parent="foerderband" index="236" unique_id=1520816587]
+visibility_range_end = 30.0
+
+[node name="Cylinder_288" parent="foerderband" index="237" unique_id=477421877]
+visibility_range_end = 30.0
+
+[node name="Cylinder_289" parent="foerderband" index="238" unique_id=915728762]
+visibility_range_end = 30.0
+
+[node name="Cylinder_290" parent="foerderband" index="239" unique_id=1176141311]
+visibility_range_end = 30.0
+
+[node name="Cylinder_291" parent="foerderband" index="240" unique_id=1453948027]
+visibility_range_end = 30.0
+
+[node name="Cylinder_292" parent="foerderband" index="241" unique_id=187259309]
+visibility_range_end = 30.0
+
+[node name="Cylinder_293" parent="foerderband" index="242" unique_id=1754013534]
+visibility_range_end = 30.0
+
+[node name="Cylinder_294" parent="foerderband" index="243" unique_id=1567229235]
+visibility_range_end = 30.0
+
+[node name="Cylinder_295" parent="foerderband" index="244" unique_id=1714405089]
+visibility_range_end = 30.0
+
+[node name="Cylinder_296" parent="foerderband" index="245" unique_id=2073524993]
+visibility_range_end = 30.0
+
+[node name="Cylinder_297" parent="foerderband" index="246" unique_id=1514331483]
+visibility_range_end = 30.0
+
+[node name="Cylinder_298" parent="foerderband" index="247" unique_id=2041533303]
+visibility_range_end = 30.0
+
+[node name="Cylinder_299" parent="foerderband" index="248" unique_id=1762307795]
+visibility_range_end = 30.0
+
+[node name="Cylinder_300" parent="foerderband" index="249" unique_id=1593205764]
+visibility_range_end = 30.0
+
+[node name="Cylinder_301" parent="foerderband" index="250" unique_id=1954686169]
+visibility_range_end = 30.0
+
+[node name="Cylinder_302" parent="foerderband" index="251" unique_id=599995032]
+visibility_range_end = 30.0
+
+[node name="Cylinder_303" parent="foerderband" index="252" unique_id=129725515]
+visibility_range_end = 30.0
+
+[node name="Cylinder_304" parent="foerderband" index="253" unique_id=1688888047]
+visibility_range_end = 30.0
+
+[node name="Cylinder_305" parent="foerderband" index="254" unique_id=786410435]
+visibility_range_end = 30.0
+
+[node name="Cylinder_306" parent="foerderband" index="255" unique_id=1283135726]
+visibility_range_end = 30.0
+
+[node name="Cylinder_307" parent="foerderband" index="256" unique_id=489405232]
+visibility_range_end = 30.0
+
+[node name="Cylinder_308" parent="foerderband" index="257" unique_id=83309115]
+visibility_range_end = 30.0
+
+[node name="Cylinder_309" parent="foerderband" index="258" unique_id=1936201328]
+visibility_range_end = 30.0
+
+[node name="Cylinder_310" parent="foerderband" index="259" unique_id=1342612882]
+visibility_range_end = 30.0
+
+[node name="Cylinder_311" parent="foerderband" index="260" unique_id=1838076281]
+visibility_range_end = 30.0
+
+[node name="Cylinder_312" parent="foerderband" index="261" unique_id=1013925507]
+visibility_range_end = 30.0
+
+[node name="Cylinder_313" parent="foerderband" index="262" unique_id=947288485]
+visibility_range_end = 30.0
+
+[node name="Cylinder_314" parent="foerderband" index="263" unique_id=837186538]
+visibility_range_end = 30.0
+
+[node name="Cylinder_315" parent="foerderband" index="264" unique_id=1438962388]
+visibility_range_end = 30.0
+
+[node name="Cylinder_320" parent="foerderband" index="265" unique_id=157754629]
+visibility_range_end = 30.0
+
+[node name="Cylinder_321" parent="foerderband" index="266" unique_id=677493836]
+visibility_range_end = 30.0
+
+[node name="Cylinder_322" parent="foerderband" index="267" unique_id=1125363778]
+visibility_range_end = 30.0
+
+[node name="Cylinder_323" parent="foerderband" index="268" unique_id=414209885]
+visibility_range_end = 30.0
+
+[node name="Cylinder_324" parent="foerderband" index="269" unique_id=288450223]
+visibility_range_end = 30.0
+
+[node name="Cylinder_325" parent="foerderband" index="270" unique_id=315216220]
+visibility_range_end = 30.0
+
+[node name="Cylinder_326" parent="foerderband" index="271" unique_id=1319798389]
+visibility_range_end = 30.0
+
+[node name="Cylinder_327" parent="foerderband" index="272" unique_id=1424697708]
+visibility_range_end = 30.0
+
+[node name="Cylinder_328" parent="foerderband" index="273" unique_id=286173787]
+visibility_range_end = 30.0
+
+[node name="Cylinder_329" parent="foerderband" index="274" unique_id=1923062842]
+visibility_range_end = 30.0
+
+[node name="Cylinder_330" parent="foerderband" index="275" unique_id=1386078652]
+visibility_range_end = 30.0
+
+[node name="Cylinder_331" parent="foerderband" index="276" unique_id=768038473]
+visibility_range_end = 30.0
+
+[node name="Cylinder_332" parent="foerderband" index="277" unique_id=617384415]
+visibility_range_end = 30.0
+
+[node name="Cylinder_333" parent="foerderband" index="278" unique_id=1439606101]
+visibility_range_end = 30.0
+
+[node name="Cylinder_334" parent="foerderband" index="279" unique_id=1622863685]
+visibility_range_end = 30.0
+
+[node name="Cylinder_335" parent="foerderband" index="280" unique_id=1096307916]
+visibility_range_end = 30.0
+
+[node name="Cylinder_336" parent="foerderband" index="281" unique_id=1580660409]
+visibility_range_end = 30.0
+
+[node name="Cylinder_337" parent="foerderband" index="282" unique_id=818873443]
+visibility_range_end = 30.0
+
+[node name="Cylinder_338" parent="foerderband" index="283" unique_id=84592683]
+visibility_range_end = 30.0
+
+[node name="Cylinder_339" parent="foerderband" index="284" unique_id=1372758748]
+visibility_range_end = 30.0
+
+[node name="Cylinder_340" parent="foerderband" index="285" unique_id=927033871]
+visibility_range_end = 30.0
+
+[node name="Cylinder_341" parent="foerderband" index="286" unique_id=2020907213]
+visibility_range_end = 30.0
+
+[node name="Cylinder_342" parent="foerderband" index="287" unique_id=1524683991]
+visibility_range_end = 30.0
+
+[node name="Cylinder_343" parent="foerderband" index="288" unique_id=231763972]
+visibility_range_end = 30.0
+
+[node name="Cylinder_344" parent="foerderband" index="289" unique_id=519693439]
+visibility_range_end = 30.0
+
+[node name="Cylinder_345" parent="foerderband" index="290" unique_id=1347456180]
+visibility_range_end = 30.0
+
+[node name="Cylinder_346" parent="foerderband" index="291" unique_id=1501211527]
+visibility_range_end = 30.0
+
+[node name="Cylinder_347" parent="foerderband" index="292" unique_id=1437247864]
+visibility_range_end = 30.0
+
+[node name="Cylinder_348" parent="foerderband" index="293" unique_id=1195353830]
+visibility_range_end = 30.0
+
+[node name="Cylinder_349" parent="foerderband" index="294" unique_id=1976769693]
+visibility_range_end = 30.0
+
+[node name="Cylinder_350" parent="foerderband" index="295" unique_id=930361370]
+visibility_range_end = 30.0
+
+[node name="Cylinder_351" parent="foerderband" index="296" unique_id=1054144390]
+visibility_range_end = 30.0
+
+[node name="Cylinder_352" parent="foerderband" index="297" unique_id=1048827169]
+visibility_range_end = 30.0
+
+[node name="Cylinder_353" parent="foerderband" index="298" unique_id=248670748]
+visibility_range_end = 30.0
+
+[node name="Cylinder_354" parent="foerderband" index="299" unique_id=66825578]
+visibility_range_end = 30.0
+
+[node name="Cylinder_355" parent="foerderband" index="300" unique_id=844689050]
+visibility_range_end = 30.0
+
+[node name="Cylinder_356" parent="foerderband" index="301" unique_id=1454502526]
+visibility_range_end = 30.0
+
+[node name="Cylinder_357" parent="foerderband" index="302" unique_id=396313796]
+visibility_range_end = 30.0
+
+[node name="Cylinder_358" parent="foerderband" index="303" unique_id=1784617206]
+visibility_range_end = 30.0
+
+[node name="Cylinder_359" parent="foerderband" index="304" unique_id=353345832]
+visibility_range_end = 30.0
+
+[node name="Cylinder_360" parent="foerderband" index="305" unique_id=1811207147]
+visibility_range_end = 30.0
+
+[node name="Cylinder_361" parent="foerderband" index="306" unique_id=735403709]
+visibility_range_end = 30.0
+
+[node name="Cylinder_362" parent="foerderband" index="307" unique_id=1347517294]
+visibility_range_end = 30.0
+
+[node name="Cylinder_363" parent="foerderband" index="308" unique_id=132978260]
+visibility_range_end = 30.0
+
+[node name="Cylinder_364" parent="foerderband" index="309" unique_id=442575316]
+visibility_range_end = 30.0
+
+[node name="Cylinder_365" parent="foerderband" index="310" unique_id=639887915]
+visibility_range_end = 30.0
+
+[node name="Cylinder_366" parent="foerderband" index="311" unique_id=780359252]
+visibility_range_end = 30.0
+
+[node name="Cylinder_367" parent="foerderband" index="312" unique_id=1342594792]
+visibility_range_end = 30.0
+
+[node name="Cylinder_368" parent="foerderband" index="313" unique_id=869029248]
+visibility_range_end = 30.0
+
+[node name="Cylinder_369" parent="foerderband" index="314" unique_id=1002700496]
+visibility_range_end = 30.0
+
+[node name="Cylinder_370" parent="foerderband" index="315" unique_id=2038846690]
+visibility_range_end = 30.0
+
+[node name="Cylinder_371" parent="foerderband" index="316" unique_id=889047051]
+visibility_range_end = 30.0
+
+[node name="Cylinder_372" parent="foerderband" index="317" unique_id=1187369188]
+visibility_range_end = 30.0
+
+[node name="Cylinder_373" parent="foerderband" index="318" unique_id=171653003]
+visibility_range_end = 30.0
+
+[node name="Cylinder_374" parent="foerderband" index="319" unique_id=566190417]
+visibility_range_end = 30.0
+
+[node name="Cylinder_375" parent="foerderband" index="320" unique_id=2110652119]
+visibility_range_end = 30.0
+
+[node name="Cylinder_376" parent="foerderband" index="321" unique_id=677021628]
+visibility_range_end = 30.0
+
+[node name="Cylinder_377" parent="foerderband" index="322" unique_id=1648261238]
+visibility_range_end = 30.0
+
+[node name="Cylinder_378" parent="foerderband" index="323" unique_id=439734556]
+visibility_range_end = 30.0
+
+[node name="Cylinder_379" parent="foerderband" index="324" unique_id=776769710]
+visibility_range_end = 30.0
+
+[node name="Cylinder_380" parent="foerderband" index="325" unique_id=1640224302]
+visibility_range_end = 30.0
+
+[node name="Cylinder_381" parent="foerderband" index="326" unique_id=644654466]
+visibility_range_end = 30.0
+
+[node name="Cylinder_382" parent="foerderband" index="327" unique_id=1603454414]
+visibility_range_end = 30.0
+
+[node name="Cylinder_383" parent="foerderband" index="328" unique_id=974025242]
+visibility_range_end = 30.0
+
+[node name="Cylinder_384" parent="foerderband" index="329" unique_id=596090760]
+visibility_range_end = 30.0
+
+[node name="Cylinder_385" parent="foerderband" index="330" unique_id=1791029065]
+visibility_range_end = 30.0
+
+[node name="Cylinder_386" parent="foerderband" index="331" unique_id=278976536]
+visibility_range_end = 30.0
+
+[node name="Cylinder_387" parent="foerderband" index="332" unique_id=1215792502]
+visibility_range_end = 30.0
+
+[node name="Cylinder_388" parent="foerderband" index="333" unique_id=1642156156]
+visibility_range_end = 30.0
+
+[node name="Cylinder_389" parent="foerderband" index="334" unique_id=349502186]
+visibility_range_end = 30.0
+
+[node name="Cylinder_390" parent="foerderband" index="335" unique_id=1495596653]
+visibility_range_end = 30.0
+
+[node name="Cylinder_391" parent="foerderband" index="336" unique_id=353288267]
+visibility_range_end = 30.0
+
+[node name="Cylinder_392" parent="foerderband" index="337" unique_id=1923331208]
+visibility_range_end = 30.0
+
+[node name="Cylinder_393" parent="foerderband" index="338" unique_id=1676022360]
+visibility_range_end = 30.0
+
+[node name="Cylinder_394" parent="foerderband" index="339" unique_id=1482761693]
+visibility_range_end = 30.0
+
+[node name="Cylinder_399" parent="foerderband" index="340" unique_id=1623023585]
+visibility_range_end = 30.0
+
+[node name="Cylinder_402" parent="foerderband" index="341" unique_id=1215536813]
+visibility_range_end = 30.0
+
+[node name="Cylinder_403" parent="foerderband" index="342" unique_id=1363052024]
+visibility_range_end = 30.0
+
+[node name="Cylinder_404" parent="foerderband" index="343" unique_id=1140948194]
+visibility_range_end = 30.0
+
+[node name="Cylinder_405" parent="foerderband" index="344" unique_id=1324657626]
+visibility_range_end = 30.0
+
+[node name="Cylinder_406" parent="foerderband" index="345" unique_id=2121735665]
+visibility_range_end = 30.0
+
+[node name="Cylinder_407" parent="foerderband" index="346" unique_id=2016477890]
+visibility_range_end = 30.0
+
+[node name="Cylinder_408" parent="foerderband" index="347" unique_id=1430754521]
+visibility_range_end = 30.0
+
+[node name="Cylinder_409" parent="foerderband" index="348" unique_id=1599388157]
+visibility_range_end = 30.0
+
+[node name="Cylinder_410" parent="foerderband" index="349" unique_id=1930358732]
+visibility_range_end = 30.0
+
+[node name="Cylinder_411" parent="foerderband" index="350" unique_id=1750256356]
+visibility_range_end = 30.0
+
+[node name="Cylinder_412" parent="foerderband" index="351" unique_id=854152096]
+visibility_range_end = 30.0
+
+[node name="Cylinder_413" parent="foerderband" index="352" unique_id=2004167138]
+visibility_range_end = 30.0
+
+[node name="Cylinder_414" parent="foerderband" index="353" unique_id=1173412362]
+visibility_range_end = 30.0
+
+[node name="Cylinder_415" parent="foerderband" index="354" unique_id=1151557269]
+visibility_range_end = 30.0
+
+[node name="Cylinder_416" parent="foerderband" index="355" unique_id=1213073974]
+visibility_range_end = 30.0
+
+[node name="Cylinder_417" parent="foerderband" index="356" unique_id=14858147]
+visibility_range_end = 30.0
+
+[node name="Cylinder_418" parent="foerderband" index="357" unique_id=1806623482]
+visibility_range_end = 30.0
+
+[node name="Cylinder_419" parent="foerderband" index="358" unique_id=925852261]
+visibility_range_end = 30.0
+
+[node name="Cylinder_420" parent="foerderband" index="359" unique_id=948287519]
+visibility_range_end = 30.0
+
+[node name="Cylinder_421" parent="foerderband" index="360" unique_id=60761757]
+visibility_range_end = 30.0
+
+[node name="Cylinder_422" parent="foerderband" index="361" unique_id=135715296]
+visibility_range_end = 30.0
+
+[node name="Cylinder_423" parent="foerderband" index="362" unique_id=451695629]
+visibility_range_end = 30.0
+
+[node name="Cylinder_424" parent="foerderband" index="363" unique_id=1887632681]
+visibility_range_end = 30.0
+
+[node name="Plane_098" parent="foerderband" index="365" unique_id=1233893399]
+visibility_range_end = 30.0
+
+[node name="Plane_099" parent="foerderband" index="366" unique_id=1980682321]
+visibility_range_end = 30.0
+
+[node name="Plane_100" parent="foerderband" index="367" unique_id=1073500832]
+visibility_range_end = 30.0
+
+[node name="Plane_101" parent="foerderband" index="368" unique_id=1978291690]
+visibility_range_end = 30.0
+
+[node name="Plane_102" parent="foerderband" index="369" unique_id=296772626]
+visibility_range_end = 30.0
+
+[node name="Plane_103" parent="foerderband" index="370" unique_id=498084315]
+visibility_range_end = 30.0
+
+[node name="Plane_104" parent="foerderband" index="371" unique_id=1048101181]
+visibility_range_end = 30.0
+
+[node name="Plane_105" parent="foerderband" index="372" unique_id=1027625597]
+visibility_range_end = 30.0
+
+[node name="Plane_106" parent="foerderband" index="373" unique_id=2095177571]
+visibility_range_end = 30.0
+
+[node name="Plane_107" parent="foerderband" index="374" unique_id=1015738312]
+visibility_range_end = 30.0
+
+[node name="Plane_108" parent="foerderband" index="375" unique_id=791687656]
+visibility_range_end = 30.0
+
+[node name="Plane_109" parent="foerderband" index="376" unique_id=1083959166]
+visibility_range_end = 30.0
+
+[node name="Plane_110" parent="foerderband" index="377" unique_id=792190094]
+visibility_range_end = 30.0
+
+[node name="Plane_111" parent="foerderband" index="378" unique_id=351731556]
+visibility_range_end = 30.0
+
+[node name="Plane_112" parent="foerderband" index="379" unique_id=322134344]
+visibility_range_end = 30.0
+
+[node name="Plane_113" parent="foerderband" index="380" unique_id=839161643]
+visibility_range_end = 30.0
+
+[node name="Plane_114" parent="foerderband" index="381" unique_id=501270738]
+visibility_range_end = 30.0
+
+[node name="Plane_115" parent="foerderband" index="382" unique_id=392383766]
+visibility_range_end = 30.0
+
+[node name="Plane_116" parent="foerderband" index="383" unique_id=987217966]
+visibility_range_end = 30.0
+
+[node name="Plane_117" parent="foerderband" index="384" unique_id=1391008140]
+visibility_range_end = 30.0
+
+[node name="Plane_118" parent="foerderband" index="385" unique_id=769530391]
+visibility_range_end = 30.0
+
+[node name="Plane_119" parent="foerderband" index="386" unique_id=640353636]
+visibility_range_end = 30.0
+
+[node name="Plane_120" parent="foerderband" index="387" unique_id=1037358216]
+visibility_range_end = 30.0
+
+[node name="Plane_121" parent="foerderband" index="388" unique_id=614382897]
+visibility_range_end = 30.0
+
+[node name="Plane_122" parent="foerderband" index="389" unique_id=1391696507]
+visibility_range_end = 30.0
+
+[node name="Plane_123" parent="foerderband" index="390" unique_id=475648242]
+visibility_range_end = 30.0
+
+[node name="Plane_124" parent="foerderband" index="391" unique_id=651161320]
+visibility_range_end = 30.0
+
+[node name="Plane_125" parent="foerderband" index="392" unique_id=412957296]
+visibility_range_end = 30.0
+
+[node name="Plane_126" parent="foerderband" index="393" unique_id=1436279975]
+visibility_range_end = 30.0
+
+[node name="Plane_127" parent="foerderband" index="394" unique_id=749964569]
+visibility_range_end = 30.0
+
+[node name="Plane_128" parent="foerderband" index="395" unique_id=7810337]
+visibility_range_end = 30.0
+
+[node name="Plane_129" parent="foerderband" index="396" unique_id=1649339587]
+visibility_range_end = 30.0
+
+[node name="Plane_130" parent="foerderband" index="397" unique_id=325914085]
+visibility_range_end = 30.0
+
+[node name="Plane_131" parent="foerderband" index="398" unique_id=2098211874]
+visibility_range_end = 30.0
+
+[node name="Plane_132" parent="foerderband" index="399" unique_id=973322100]
+visibility_range_end = 30.0
+
+[node name="Plane_133" parent="foerderband" index="400" unique_id=1520751840]
+visibility_range_end = 30.0
+
+[node name="Plane_134" parent="foerderband" index="401" unique_id=1767113175]
+visibility_range_end = 30.0
+
+[node name="Plane_135" parent="foerderband" index="402" unique_id=171769743]
+visibility_range_end = 30.0
+
+[node name="Plane_136" parent="foerderband" index="403" unique_id=1689564769]
+visibility_range_end = 30.0
+
+[node name="Plane_137" parent="foerderband" index="404" unique_id=2102060175]
+visibility_range_end = 30.0
+
+[node name="Plane_138" parent="foerderband" index="405" unique_id=1269128672]
+visibility_range_end = 30.0
+
+[node name="Plane_139" parent="foerderband" index="406" unique_id=521886582]
+visibility_range_end = 30.0
+
+[node name="Plane_140" parent="foerderband" index="407" unique_id=1236189186]
+visibility_range_end = 30.0
+
+[node name="Plane_143" parent="foerderband" index="409" unique_id=944730527]
+visibility_range_end = 30.0
+
+[node name="Plane_144" parent="foerderband" index="410" unique_id=1859018991]
+visibility_range_end = 30.0
+
+[node name="Plane_145" parent="foerderband" index="411" unique_id=1084055474]
+visibility_range_end = 30.0
+
+[node name="Plane_146" parent="foerderband" index="412" unique_id=2073466663]
+visibility_range_end = 30.0
+
+[node name="Plane_147" parent="foerderband" index="413" unique_id=883324746]
+visibility_range_end = 30.0
+
+[node name="Plane_148" parent="foerderband" index="414" unique_id=559993206]
+visibility_range_end = 30.0
+
+[node name="Plane_149" parent="foerderband" index="415" unique_id=181344601]
+visibility_range_end = 30.0
+
+[node name="Plane_150" parent="foerderband" index="416" unique_id=1104642179]
+visibility_range_end = 30.0
+
+[node name="Plane_152" parent="foerderband" index="418" unique_id=1800048786]
+visibility_range_end = 30.0
+
+[node name="Plane_153" parent="foerderband" index="419" unique_id=832523475]
+visibility_range_end = 30.0
+
+[node name="Plane_154" parent="foerderband" index="420" unique_id=1131922544]
+visibility_range_end = 30.0
+
+[node name="Plane_155" parent="foerderband" index="421" unique_id=1177929016]
+visibility_range_end = 30.0
+
+[node name="Plane_156" parent="foerderband" index="422" unique_id=893279671]
+visibility_range_end = 30.0
+
+[node name="Plane_157" parent="foerderband" index="423" unique_id=1832124659]
+visibility_range_end = 30.0
+
+[node name="Plane_158" parent="foerderband" index="424" unique_id=170032945]
+visibility_range_end = 30.0
+
+[node name="Plane_159" parent="foerderband" index="425" unique_id=1259367638]
+visibility_range_end = 30.0
+
+[node name="Plane_160" parent="foerderband" index="426" unique_id=95908231]
+visibility_range_end = 30.0
+
+[node name="Plane_161" parent="foerderband" index="427" unique_id=1266871200]
+visibility_range_end = 30.0
+
+[node name="Plane_162" parent="foerderband" index="428" unique_id=1016328101]
+visibility_range_end = 30.0
+
+[node name="Plane_163" parent="foerderband" index="429" unique_id=1263852987]
+visibility_range_end = 30.0
+
+[node name="Plane_165" parent="foerderband" index="431" unique_id=1416154501]
+visibility_range_end = 30.0
+
+[node name="Plane_166" parent="foerderband" index="432" unique_id=1980387578]
+visibility_range_end = 30.0
+
+[node name="Plane_167" parent="foerderband" index="433" unique_id=155082800]
+visibility_range_end = 30.0
+
+[node name="Plane_168" parent="foerderband" index="434" unique_id=1293875888]
+visibility_range_end = 30.0
+
+[node name="Plane_169" parent="foerderband" index="435" unique_id=507135648]
+visibility_range_end = 30.0
+
+[node name="Plane_170" parent="foerderband" index="436" unique_id=1188947330]
+visibility_range_end = 30.0
+
+[node name="Plane_171" parent="foerderband" index="437" unique_id=1140033985]
+visibility_range_end = 30.0
+
+[node name="Plane_172" parent="foerderband" index="438" unique_id=1218507790]
+visibility_range_end = 30.0
+
+[node name="Plane_175" parent="foerderband" index="441" unique_id=1145367004]
+visibility_range_end = 30.0
+
+[node name="Plane_176" parent="foerderband" index="442" unique_id=1051575935]
+visibility_range_end = 30.0
+
+[node name="Plane_177" parent="foerderband" index="443" unique_id=677911539]
+visibility_range_end = 30.0
+
+[node name="Plane_178" parent="foerderband" index="444" unique_id=1473688857]
+visibility_range_end = 30.0
+
+[node name="Plane_179" parent="foerderband" index="445" unique_id=259982526]
+visibility_range_end = 30.0
+
+[node name="Plane_180" parent="foerderband" index="446" unique_id=207198098]
+visibility_range_end = 30.0
+
+[node name="Plane_181" parent="foerderband" index="447" unique_id=975956270]
+visibility_range_end = 30.0
+
+[node name="Plane_182" parent="foerderband" index="448" unique_id=747369706]
+visibility_range_end = 30.0
+
+[node name="Plane_183" parent="foerderband" index="449" unique_id=1376288077]
+visibility_range_end = 30.0
+
+[node name="Plane_184" parent="foerderband" index="450" unique_id=1269893173]
+visibility_range_end = 30.0
+
+[node name="Plane_185" parent="foerderband" index="451" unique_id=1660175824]
+visibility_range_end = 30.0
+
+[node name="Plane_186" parent="foerderband" index="452" unique_id=937388294]
+visibility_range_end = 30.0
+
+[node name="Plane_187" parent="foerderband" index="453" unique_id=854063300]
+visibility_range_end = 30.0
+
+[node name="Plane_188" parent="foerderband" index="454" unique_id=1424614869]
+visibility_range_end = 30.0
+
+[node name="Plane_189" parent="foerderband" index="455" unique_id=1751508797]
+visibility_range_end = 30.0
+
+[node name="Plane_190" parent="foerderband" index="456" unique_id=690895435]
+visibility_range_end = 30.0
+
+[node name="Plane_191" parent="foerderband" index="457" unique_id=1051047957]
+visibility_range_end = 30.0
+
+[node name="Plane_192" parent="foerderband" index="458" unique_id=1903528774]
+visibility_range_end = 30.0
+
+[node name="Plane_193" parent="foerderband" index="459" unique_id=942889342]
+visibility_range_end = 30.0
+
+[node name="Plane_194" parent="foerderband" index="460" unique_id=1248630997]
+visibility_range_end = 30.0
+
+[node name="Plane_195" parent="foerderband" index="461" unique_id=1925971639]
+visibility_range_end = 30.0
+
+[node name="Plane_196" parent="foerderband" index="462" unique_id=1085898214]
+visibility_range_end = 30.0
+
+[node name="Plane_197" parent="foerderband" index="463" unique_id=658758151]
+visibility_range_end = 30.0
+
+[node name="Plane_198" parent="foerderband" index="464" unique_id=781697368]
+visibility_range_end = 30.0
+
+[node name="Plane_199" parent="foerderband" index="465" unique_id=301921762]
+visibility_range_end = 30.0
+
+[node name="Plane_202" parent="foerderband" index="466" unique_id=198214210]
+visibility_range_end = 30.0
+
+[node name="Plane_203" parent="foerderband" index="467" unique_id=1448992526]
+visibility_range_end = 30.0
+
+[node name="Plane_204" parent="foerderband" index="468" unique_id=1246206659]
+visibility_range_end = 30.0
+
+[node name="Plane_205" parent="foerderband" index="469" unique_id=1654532885]
+visibility_range_end = 30.0
+
+[node name="Plane_206" parent="foerderband" index="470" unique_id=1339868252]
+visibility_range_end = 30.0
+
+[node name="Plane_207" parent="foerderband" index="471" unique_id=1323045261]
+visibility_range_end = 30.0
+
+[node name="Plane_208" parent="foerderband" index="472" unique_id=550623887]
+visibility_range_end = 30.0
+
+[node name="Plane_209" parent="foerderband" index="473" unique_id=1613591762]
+visibility_range_end = 30.0
+
+[node name="Plane_210" parent="foerderband" index="474" unique_id=1319018684]
+visibility_range_end = 30.0
+
+[node name="Plane_212" parent="foerderband" index="475" unique_id=1103014115]
+visibility_range_end = 30.0
+
+[node name="Plane_213" parent="foerderband" index="476" unique_id=547923770]
+visibility_range_end = 30.0
+
+[node name="Plane_214" parent="foerderband" index="477" unique_id=70469187]
+visibility_range_end = 30.0
+
+[node name="Plane_217" parent="foerderband" index="478" unique_id=1778896210]
+visibility_range_end = 30.0
+
+[node name="Plane_218" parent="foerderband" index="479" unique_id=877790199]
+visibility_range_end = 30.0
+
+[node name="Plane_219" parent="foerderband" index="480" unique_id=2140513038]
+visibility_range_end = 30.0
+
+[node name="Plane_220" parent="foerderband" index="481" unique_id=68132740]
+visibility_range_end = 30.0
+
+[node name="Plane_221" parent="foerderband" index="482" unique_id=1517648687]
+visibility_range_end = 30.0
+
+[node name="Plane_222" parent="foerderband" index="483" unique_id=1577846338]
+visibility_range_end = 30.0
+
+[node name="Plane_223" parent="foerderband" index="484" unique_id=546654005]
+visibility_range_end = 30.0
+
+[node name="Plane_224" parent="foerderband" index="485" unique_id=2133421377]
+visibility_range_end = 30.0
+
+[node name="Plane_225" parent="foerderband" index="486" unique_id=725838308]
+visibility_range_end = 30.0
+
+[node name="Plane_226" parent="foerderband" index="487" unique_id=1790792049]
+visibility_range_end = 30.0
+
+[node name="Plane_227" parent="foerderband" index="488" unique_id=1931249112]
+visibility_range_end = 30.0
+
+[node name="Plane_228" parent="foerderband" index="489" unique_id=80341211]
+visibility_range_end = 30.0
+
+[node name="Plane_229" parent="foerderband" index="490" unique_id=42551523]
+visibility_range_end = 30.0
+
+[node name="Plane_230" parent="foerderband" index="491" unique_id=1887659715]
+visibility_range_end = 30.0
+
+[node name="Torus_001" parent="foerderband" index="492" unique_id=1685244277]
+visibility_range_end = 30.0
