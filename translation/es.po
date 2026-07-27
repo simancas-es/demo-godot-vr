@@ -785,7 +785,7 @@ msgstr "STOP"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_WILKOMMEN"
-msgstr "¡Bienvenido a la estadion depuradora de aguas residuales de Hillersleben!\n"
+msgstr "¡Bienvenido a la estación depuradora de aguas residuales de Hillersleben!\n"
 "Qué bueno que estés aquí. Hoy falta un compañero y hay muchísimo trabajo esperando.\n"
 "Aquí se tratan aguas residuales todos los días, las máquinas funcionan las 24 horas y el equipo tiene que trabajar unido.\n"
 "Así que agarra tus cosas y ponte manos a la obra!\n"
