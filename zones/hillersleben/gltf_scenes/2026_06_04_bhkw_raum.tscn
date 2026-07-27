@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dv3l8gl87wkac"]
+
+[ext_resource type="PackedScene" uid="uid://dkwi0hwjvloju" path="res://assets/zones/hillersleben/models/bhkw/2026-06-04-BHKW-Raum.gltf" id="1_6ed2b"]
+
+[node name="2026-06-04-BHKW-Raum" unique_id=826799386 instance=ExtResource("1_6ed2b")]
+
+[node name="Cylinder_413" parent="Plattenwärmetauscher" parent_id_path=PackedInt32Array(1863207186) index="22" unique_id=994276436]
+visibility_range_end = 10.0

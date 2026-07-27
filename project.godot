@@ -321,6 +321,7 @@ textures/vram_compression/import_s3tc_bptc=true
 textures/vram_compression/import_etc2_astc=true
 scaling_3d/mode=1
 scaling_3d/fsr_sharpness=0.2
+occlusion_culling/use_occlusion_culling=true
 
 [xr]
 

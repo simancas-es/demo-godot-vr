@@ -1,0 +1,1541 @@
+[gd_scene format=3 uid="uid://k4sbprycrebs"]
+
+[ext_resource type="PackedScene" uid="uid://cmxkw641lnusn" path="res://assets/zones/hillersleben/models/sandfang/2026-05-26-Sand-Fettfang.gltf" id="1_mwhmw"]
+
+[sub_resource type="QuadOccluder3D" id="QuadOccluder3D_mwhmw"]
+size = Vector2(7.087018, 1.1315975)
+
+[node name="2026-05-26-Sand-Fettfang" unique_id=1795047574 instance=ExtResource("1_mwhmw")]
+
+[node name="Belueftung" parent="." index="6" unique_id=501956993]
+visibility_range_end = 10.0
+
+[node name="Schiene" parent="." index="7" unique_id=1597081665]
+visibility_range_end = 10.0
+
+[node name="Plane" parent="Schiene" index="0" unique_id=743878056]
+visibility_range_end = 10.0
+
+[node name="Plane_001" parent="Schiene" index="1" unique_id=1128305763]
+visibility_range_end = 10.0
+
+[node name="Plane_002" parent="Schiene" index="2" unique_id=851760845]
+visibility_range_end = 10.0
+
+[node name="Plane_003" parent="Schiene" index="3" unique_id=1964483921]
+visibility_range_end = 10.0
+
+[node name="Plane_004" parent="Schiene" index="4" unique_id=1173695553]
+visibility_range_end = 10.0
+
+[node name="Bolt_001" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="0" unique_id=165932944]
+visibility_range_end = 10.0
+
+[node name="Bolt_002" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="1" unique_id=1493017909]
+visibility_range_end = 10.0
+
+[node name="Bolt_003" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="2" unique_id=551121861]
+visibility_range_end = 10.0
+
+[node name="Bolt_004" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="3" unique_id=1239942646]
+visibility_range_end = 10.0
+
+[node name="Bolt_181" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="4" unique_id=773712372]
+visibility_range_end = 10.0
+
+[node name="BézierCurve_001" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="5" unique_id=616858060]
+visibility_range_end = 10.0
+
+[node name="BézierCurve_123" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="6" unique_id=2028987295]
+visibility_range_end = 10.0
+
+[node name="BézierCurve_124" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="7" unique_id=596373970]
+visibility_range_end = 10.0
+
+[node name="BézierCurve_127" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="8" unique_id=486296348]
+visibility_range_end = 10.0
+
+[node name="Cube_022" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="9" unique_id=515480473]
+visibility_range_end = 10.0
+
+[node name="Cube_023" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="10" unique_id=353748056]
+visibility_range_end = 10.0
+
+[node name="Cube_027" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="14" unique_id=188899275]
+visibility_range_end = 10.0
+
+[node name="Cube_029" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="16" unique_id=783876156]
+visibility_range_end = 10.0
+
+[node name="Cube_031" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="18" unique_id=1287637041]
+visibility_range_end = 10.0
+
+[node name="Cube_033" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="20" unique_id=683029930]
+visibility_range_end = 10.0
+
+[node name="Cube_035" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="22" unique_id=1207817098]
+visibility_range_end = 10.0
+
+[node name="Cube_037" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="24" unique_id=1189386612]
+visibility_range_end = 10.0
+
+[node name="Cube_038" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="25" unique_id=235912247]
+visibility_range_end = 10.0
+
+[node name="Cube_039" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="26" unique_id=954290072]
+visibility_range_end = 10.0
+
+[node name="Cube_040" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="27" unique_id=395145474]
+visibility_range_end = 10.0
+
+[node name="Cube_041" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="28" unique_id=1073923482]
+visibility_range_end = 10.0
+
+[node name="Cube_042" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="29" unique_id=419124600]
+visibility_range_end = 10.0
+
+[node name="Cube_043" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="30" unique_id=1983011741]
+visibility_range_end = 10.0
+
+[node name="Cube_044" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="31" unique_id=280670412]
+visibility_range_end = 10.0
+
+[node name="Cube_045" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="32" unique_id=917728153]
+visibility_range_end = 10.0
+
+[node name="Cube_046" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="33" unique_id=1594036141]
+visibility_range_end = 10.0
+
+[node name="Cube_047" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="34" unique_id=1905122422]
+visibility_range_end = 10.0
+
+[node name="Cube_048" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="35" unique_id=1872057128]
+visibility_range_end = 10.0
+
+[node name="Cube_049" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="36" unique_id=1776238111]
+visibility_range_end = 10.0
+
+[node name="Cube_050" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="37" unique_id=1395549678]
+visibility_range_end = 10.0
+
+[node name="Cube_051" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="38" unique_id=150768200]
+visibility_range_end = 10.0
+
+[node name="Cube_052" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="39" unique_id=1559675140]
+visibility_range_end = 10.0
+
+[node name="Cube_054" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="41" unique_id=529475693]
+visibility_range_end = 10.0
+
+[node name="Cube_055" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="42" unique_id=1285680980]
+visibility_range_end = 10.0
+
+[node name="Cube_056" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="43" unique_id=495662517]
+visibility_range_end = 10.0
+
+[node name="Cube_057" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="44" unique_id=797949049]
+visibility_range_end = 10.0
+
+[node name="Cube_058" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="45" unique_id=821382720]
+visibility_range_end = 10.0
+
+[node name="Cube_059" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="46" unique_id=670447644]
+visibility_range_end = 10.0
+
+[node name="Cube_060" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="47" unique_id=239557017]
+visibility_range_end = 10.0
+
+[node name="Cube_061" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="48" unique_id=1182351326]
+visibility_range_end = 10.0
+
+[node name="Cube_063" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="50" unique_id=841301867]
+visibility_range_end = 10.0
+
+[node name="Cube_064" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="51" unique_id=445880804]
+visibility_range_end = 10.0
+
+[node name="Cube_065" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="52" unique_id=1555847890]
+visibility_range_end = 10.0
+
+[node name="Cube_066" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="53" unique_id=1009886937]
+visibility_range_end = 10.0
+
+[node name="Cube_067" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="54" unique_id=1623458417]
+visibility_range_end = 10.0
+
+[node name="Cube_068" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="55" unique_id=1905894996]
+visibility_range_end = 10.0
+
+[node name="Cube_069" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="56" unique_id=2145572620]
+visibility_range_end = 10.0
+
+[node name="Cube_070" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="57" unique_id=302566274]
+visibility_range_end = 10.0
+
+[node name="Cube_071" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="58" unique_id=377728022]
+visibility_range_end = 10.0
+
+[node name="Cube_072" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="59" unique_id=40985405]
+visibility_range_end = 10.0
+
+[node name="Cube_073" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="60" unique_id=1500371479]
+visibility_range_end = 10.0
+
+[node name="Cube_074" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="61" unique_id=1642290307]
+visibility_range_end = 10.0
+
+[node name="Cube_075" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="62" unique_id=1242736627]
+visibility_range_end = 10.0
+
+[node name="Cube_077" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="64" unique_id=158372673]
+visibility_range_end = 10.0
+
+[node name="Cube_078" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="65" unique_id=1699910113]
+visibility_range_end = 10.0
+
+[node name="Cube_079" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="66" unique_id=640475007]
+visibility_range_end = 10.0
+
+[node name="Cube_080" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="67" unique_id=148834191]
+visibility_range_end = 10.0
+
+[node name="Cube_081" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="68" unique_id=896937577]
+visibility_range_end = 10.0
+
+[node name="Cube_082" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="69" unique_id=1769964829]
+visibility_range_end = 10.0
+
+[node name="Cube_083" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="70" unique_id=269517841]
+visibility_range_end = 10.0
+
+[node name="Cube_084" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="71" unique_id=1548696309]
+visibility_range_end = 10.0
+
+[node name="Cube_085" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="72" unique_id=271201514]
+visibility_range_end = 10.0
+
+[node name="Cube_086" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="73" unique_id=714464201]
+visibility_range_end = 10.0
+
+[node name="Cube_087" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="74" unique_id=911330764]
+visibility_range_end = 10.0
+
+[node name="Cube_088" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="75" unique_id=336482255]
+visibility_range_end = 10.0
+
+[node name="Cube_089" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="76" unique_id=2037567913]
+visibility_range_end = 10.0
+
+[node name="Cube_090" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="77" unique_id=1541617880]
+visibility_range_end = 10.0
+
+[node name="Cube_091" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="78" unique_id=1351345087]
+visibility_range_end = 10.0
+
+[node name="Cube_092" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="79" unique_id=303058524]
+visibility_range_end = 10.0
+
+[node name="Cube_093" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="80" unique_id=1335590983]
+visibility_range_end = 10.0
+
+[node name="Cube_094" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="81" unique_id=747418123]
+visibility_range_end = 10.0
+
+[node name="Cube_095" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="82" unique_id=1676559683]
+visibility_range_end = 10.0
+
+[node name="Cube_096" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="83" unique_id=952142952]
+visibility_range_end = 10.0
+
+[node name="Cube_097" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="84" unique_id=359194188]
+visibility_range_end = 10.0
+
+[node name="Cube_098" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="85" unique_id=523090282]
+visibility_range_end = 10.0
+
+[node name="Cube_099" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="86" unique_id=2017931527]
+visibility_range_end = 10.0
+
+[node name="Cube_100" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="87" unique_id=438149151]
+visibility_range_end = 10.0
+
+[node name="Cube_101" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="88" unique_id=304644627]
+visibility_range_end = 10.0
+
+[node name="Cube_102" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="89" unique_id=1901316742]
+visibility_range_end = 10.0
+
+[node name="Cube_103" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="90" unique_id=1538269184]
+visibility_range_end = 10.0
+
+[node name="Cube_106" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="91" unique_id=1676899776]
+visibility_range_end = 10.0
+
+[node name="Cube_107" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="92" unique_id=496750801]
+visibility_range_end = 10.0
+
+[node name="Cube_108" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="93" unique_id=1036331799]
+visibility_range_end = 10.0
+
+[node name="Cube_109" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="94" unique_id=1197971344]
+visibility_range_end = 10.0
+
+[node name="Cube_110" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="95" unique_id=196332300]
+visibility_range_end = 10.0
+
+[node name="Cube_111" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="96" unique_id=2071067367]
+visibility_range_end = 10.0
+
+[node name="Cube_112" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="97" unique_id=799374872]
+visibility_range_end = 10.0
+
+[node name="Cube_113" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="98" unique_id=2099272579]
+visibility_range_end = 10.0
+
+[node name="Cube_114" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="99" unique_id=1505032870]
+visibility_range_end = 10.0
+
+[node name="Cube_115" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="100" unique_id=1040461680]
+visibility_range_end = 10.0
+
+[node name="Cube_116" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="101" unique_id=1951733672]
+visibility_range_end = 10.0
+
+[node name="Cube_117" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="102" unique_id=515841644]
+visibility_range_end = 10.0
+
+[node name="Cube_118" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="103" unique_id=633400773]
+visibility_range_end = 10.0
+
+[node name="Cube_119" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="104" unique_id=115443601]
+visibility_range_end = 10.0
+
+[node name="Cube_120" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="105" unique_id=42121699]
+visibility_range_end = 10.0
+
+[node name="Cube_121" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="106" unique_id=415770592]
+visibility_range_end = 10.0
+
+[node name="Cube_122" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="107" unique_id=7947037]
+visibility_range_end = 10.0
+
+[node name="Cube_1228" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="108" unique_id=2068559939]
+visibility_range_end = 10.0
+
+[node name="Cube_123" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="109" unique_id=285749703]
+visibility_range_end = 10.0
+
+[node name="Cube_1235" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="110" unique_id=1896722983]
+visibility_range_end = 10.0
+
+[node name="Cube_124" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="111" unique_id=1813203599]
+visibility_range_end = 10.0
+
+[node name="Cube_125" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="112" unique_id=1368817475]
+visibility_range_end = 10.0
+
+[node name="Cube_126" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="113" unique_id=1695022212]
+visibility_range_end = 10.0
+
+[node name="Cube_127" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="114" unique_id=1440580907]
+visibility_range_end = 10.0
+
+[node name="Cube_128" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="115" unique_id=1996524239]
+visibility_range_end = 10.0
+
+[node name="Cube_1285" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="116" unique_id=1643770086]
+visibility_range_end = 10.0
+
+[node name="Cube_1286" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="117" unique_id=732080279]
+visibility_range_end = 10.0
+
+[node name="Cube_1289" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="118" unique_id=1972057931]
+visibility_range_end = 10.0
+
+[node name="Cube_129" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="119" unique_id=849927346]
+visibility_range_end = 10.0
+
+[node name="Cube_1290" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="120" unique_id=2016408585]
+visibility_range_end = 10.0
+
+[node name="Cube_130" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="121" unique_id=1914046381]
+visibility_range_end = 10.0
+
+[node name="Cube_131" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="122" unique_id=1592682884]
+visibility_range_end = 10.0
+
+[node name="Cube_132" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="123" unique_id=2064187407]
+visibility_range_end = 10.0
+
+[node name="Cube_133" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="124" unique_id=1812408083]
+visibility_range_end = 10.0
+
+[node name="Cube_134" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="125" unique_id=1879831872]
+visibility_range_end = 10.0
+
+[node name="Cube_135" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="126" unique_id=1878534080]
+visibility_range_end = 10.0
+
+[node name="Cube_136" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="127" unique_id=1466906908]
+visibility_range_end = 10.0
+
+[node name="Cube_137" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="128" unique_id=511767016]
+visibility_range_end = 10.0
+
+[node name="Cube_138" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="129" unique_id=430976637]
+visibility_range_end = 10.0
+
+[node name="Cube_139" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="130" unique_id=1149259987]
+visibility_range_end = 10.0
+
+[node name="Cube_140" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="131" unique_id=142303854]
+visibility_range_end = 10.0
+
+[node name="Cube_141" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="132" unique_id=2120830526]
+visibility_range_end = 10.0
+
+[node name="Cube_142" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="133" unique_id=1600040981]
+visibility_range_end = 10.0
+
+[node name="Cube_143" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="134" unique_id=1595256024]
+visibility_range_end = 10.0
+
+[node name="Cube_144" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="135" unique_id=555223873]
+visibility_range_end = 10.0
+
+[node name="Cube_145" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="136" unique_id=898423889]
+visibility_range_end = 10.0
+
+[node name="Cube_7423" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="137" unique_id=2011283373]
+visibility_range_end = 10.0
+
+[node name="Cube_7433" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="138" unique_id=1143600771]
+visibility_range_end = 10.0
+
+[node name="Cube_7451" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="139" unique_id=1787532176]
+visibility_range_end = 10.0
+
+[node name="Cube_7452" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="140" unique_id=861254105]
+visibility_range_end = 10.0
+
+[node name="Cube_7453" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="141" unique_id=281529176]
+visibility_range_end = 10.0
+
+[node name="Cube_7454" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="142" unique_id=1304288804]
+visibility_range_end = 10.0
+
+[node name="Cube_7455" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="143" unique_id=577929711]
+visibility_range_end = 10.0
+
+[node name="Cube_7456" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="144" unique_id=2037771948]
+visibility_range_end = 10.0
+
+[node name="Cube_7457" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="145" unique_id=351877386]
+visibility_range_end = 10.0
+
+[node name="Cube_7458" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="146" unique_id=1781783128]
+visibility_range_end = 10.0
+
+[node name="Cube_7459" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="147" unique_id=1365368311]
+visibility_range_end = 10.0
+
+[node name="Cube_7460" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="148" unique_id=1560028084]
+visibility_range_end = 10.0
+
+[node name="Cube_7470" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="149" unique_id=1146548563]
+visibility_range_end = 10.0
+
+[node name="Cube_7471" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="150" unique_id=244063644]
+visibility_range_end = 10.0
+
+[node name="Cube_7472" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="151" unique_id=1837495032]
+visibility_range_end = 10.0
+
+[node name="Cube_7473" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="152" unique_id=964681622]
+visibility_range_end = 10.0
+
+[node name="Cube_7477" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="153" unique_id=1959042215]
+visibility_range_end = 10.0
+
+[node name="Cube_7478" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="154" unique_id=51236541]
+visibility_range_end = 10.0
+
+[node name="Cube_7484" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="155" unique_id=1453816670]
+visibility_range_end = 10.0
+
+[node name="Cube_7485" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="156" unique_id=1316772713]
+visibility_range_end = 10.0
+
+[node name="Cube_7490" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="157" unique_id=1195538480]
+visibility_range_end = 10.0
+
+[node name="Cube_7491" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="158" unique_id=425809874]
+visibility_range_end = 10.0
+
+[node name="Cube_7492" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="159" unique_id=587350579]
+visibility_range_end = 10.0
+
+[node name="Cube_7493" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="160" unique_id=57719739]
+visibility_range_end = 10.0
+
+[node name="Cube_7494" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="161" unique_id=2109420031]
+visibility_range_end = 10.0
+
+[node name="Cube_7496" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="162" unique_id=959805633]
+visibility_range_end = 10.0
+
+[node name="Cube_7497" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="163" unique_id=1893715484]
+visibility_range_end = 10.0
+
+[node name="Cube_7499" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="164" unique_id=699877281]
+visibility_range_end = 10.0
+
+[node name="Cube_7518" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="165" unique_id=1082410477]
+visibility_range_end = 10.0
+
+[node name="Cube_7519" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="166" unique_id=711990091]
+visibility_range_end = 10.0
+
+[node name="Cube_7521" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="168" unique_id=1646663422]
+visibility_range_end = 10.0
+
+[node name="Cube_7523" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="169" unique_id=1406027639]
+visibility_range_end = 10.0
+
+[node name="Cube_7524" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="170" unique_id=89295598]
+visibility_range_end = 10.0
+
+[node name="Cube_7525" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="171" unique_id=2015934109]
+visibility_range_end = 10.0
+
+[node name="Cube_7532" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="172" unique_id=147917892]
+visibility_range_end = 10.0
+
+[node name="Cube_7533" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="173" unique_id=11540816]
+visibility_range_end = 10.0
+
+[node name="Cube_7535" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="175" unique_id=1996612021]
+visibility_range_end = 10.0
+
+[node name="Cube_7537" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="177" unique_id=62644726]
+visibility_range_end = 10.0
+
+[node name="Cube_7539" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="179" unique_id=1183829086]
+visibility_range_end = 10.0
+
+[node name="Cube_7544" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="181" unique_id=1229770885]
+visibility_range_end = 10.0
+
+[node name="Cube_7545" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="182" unique_id=1251955770]
+visibility_range_end = 10.0
+
+[node name="Cube_7547" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="184" unique_id=1941845141]
+visibility_range_end = 10.0
+
+[node name="Cube_7552" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="188" unique_id=1750094145]
+visibility_range_end = 10.0
+
+[node name="Cube_7556" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="190" unique_id=38682280]
+visibility_range_end = 10.0
+
+[node name="Cube_7557" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="191" unique_id=1536305878]
+visibility_range_end = 10.0
+
+[node name="Cube_7558" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="192" unique_id=1812179765]
+visibility_range_end = 10.0
+
+[node name="Cube_7559" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="193" unique_id=953603878]
+visibility_range_end = 10.0
+
+[node name="Cube_7574" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="195" unique_id=412865322]
+visibility_range_end = 10.0
+
+[node name="Cube_7586" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="196" unique_id=1568544407]
+visibility_range_end = 10.0
+
+[node name="Cube_7620" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="197" unique_id=44567624]
+visibility_range_end = 10.0
+
+[node name="Cylinder_082" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="198" unique_id=1213421001]
+visibility_range_end = 10.0
+
+[node name="Cylinder_083" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="199" unique_id=1509978049]
+visibility_range_end = 10.0
+
+[node name="Cylinder_084" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="200" unique_id=848599332]
+visibility_range_end = 10.0
+
+[node name="Cylinder_085" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="201" unique_id=1018697973]
+visibility_range_end = 10.0
+
+[node name="Cylinder_086" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="202" unique_id=1680888600]
+visibility_range_end = 10.0
+
+[node name="Cylinder_087" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="203" unique_id=1048191903]
+visibility_range_end = 10.0
+
+[node name="Cylinder_088" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="204" unique_id=1001687596]
+visibility_range_end = 10.0
+
+[node name="Cylinder_089" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="205" unique_id=1325760891]
+visibility_range_end = 10.0
+
+[node name="Cylinder_090" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="206" unique_id=494179508]
+visibility_range_end = 10.0
+
+[node name="Cylinder_091" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="207" unique_id=431127808]
+visibility_range_end = 10.0
+
+[node name="Cylinder_092" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="208" unique_id=489753974]
+visibility_range_end = 10.0
+
+[node name="Cylinder_093" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="209" unique_id=2089217383]
+visibility_range_end = 10.0
+
+[node name="Cylinder_094" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="210" unique_id=1854416207]
+visibility_range_end = 10.0
+
+[node name="Cylinder_095" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="211" unique_id=841151589]
+visibility_range_end = 10.0
+
+[node name="Cylinder_096" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="212" unique_id=1669650994]
+visibility_range_end = 10.0
+
+[node name="Cylinder_097" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="213" unique_id=1956225710]
+visibility_range_end = 10.0
+
+[node name="Cylinder_098" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="214" unique_id=1129297608]
+visibility_range_end = 10.0
+
+[node name="Cylinder_099" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="215" unique_id=1530886441]
+visibility_range_end = 10.0
+
+[node name="Cylinder_100" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="216" unique_id=833332933]
+visibility_range_end = 10.0
+
+[node name="Cylinder_101" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="217" unique_id=1139994448]
+visibility_range_end = 10.0
+
+[node name="Cylinder_102" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="218" unique_id=577605580]
+visibility_range_end = 10.0
+
+[node name="Cylinder_103" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="219" unique_id=1836393389]
+visibility_range_end = 10.0
+
+[node name="Cylinder_104" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="220" unique_id=609449921]
+visibility_range_end = 10.0
+
+[node name="Cylinder_105" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="221" unique_id=10935455]
+visibility_range_end = 10.0
+
+[node name="Cylinder_106" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="222" unique_id=443444600]
+visibility_range_end = 10.0
+
+[node name="Cylinder_107" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="223" unique_id=751238888]
+visibility_range_end = 10.0
+
+[node name="Cylinder_108" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="224" unique_id=612784911]
+visibility_range_end = 10.0
+
+[node name="Cylinder_109" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="225" unique_id=1742712476]
+visibility_range_end = 10.0
+
+[node name="Cylinder_110" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="226" unique_id=2011656968]
+visibility_range_end = 10.0
+
+[node name="Cylinder_111" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="227" unique_id=634977662]
+visibility_range_end = 10.0
+
+[node name="Cylinder_112" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="228" unique_id=1546919819]
+visibility_range_end = 10.0
+
+[node name="Cylinder_113" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="229" unique_id=1903863496]
+visibility_range_end = 10.0
+
+[node name="Cylinder_114" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="230" unique_id=1153006716]
+visibility_range_end = 10.0
+
+[node name="Cylinder_115" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="231" unique_id=2105607424]
+visibility_range_end = 10.0
+
+[node name="Cylinder_116" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="232" unique_id=180235523]
+visibility_range_end = 10.0
+
+[node name="Cylinder_117" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="233" unique_id=1103084212]
+visibility_range_end = 10.0
+
+[node name="Cylinder_118" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="234" unique_id=27936094]
+visibility_range_end = 10.0
+
+[node name="Cylinder_119" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="235" unique_id=2085116566]
+visibility_range_end = 10.0
+
+[node name="Cylinder_120" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="236" unique_id=175137761]
+visibility_range_end = 10.0
+
+[node name="Cylinder_121" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="237" unique_id=1202084143]
+visibility_range_end = 10.0
+
+[node name="Cylinder_122" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="238" unique_id=1670540816]
+visibility_range_end = 10.0
+
+[node name="Cylinder_123" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="239" unique_id=1833401333]
+visibility_range_end = 10.0
+
+[node name="Cylinder_124" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="240" unique_id=623108895]
+visibility_range_end = 10.0
+
+[node name="Cylinder_125" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="241" unique_id=1819338279]
+visibility_range_end = 10.0
+
+[node name="Cylinder_126" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="242" unique_id=900700191]
+visibility_range_end = 10.0
+
+[node name="Cylinder_127" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="243" unique_id=1510572916]
+visibility_range_end = 10.0
+
+[node name="Cylinder_128" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="244" unique_id=65604233]
+visibility_range_end = 10.0
+
+[node name="Cylinder_129" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="245" unique_id=1035667986]
+visibility_range_end = 10.0
+
+[node name="Cylinder_130" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="246" unique_id=1045222123]
+visibility_range_end = 10.0
+
+[node name="Cylinder_131" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="247" unique_id=470232658]
+visibility_range_end = 10.0
+
+[node name="Cylinder_132" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="248" unique_id=450426691]
+visibility_range_end = 10.0
+
+[node name="Cylinder_133" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="249" unique_id=1910774481]
+visibility_range_end = 10.0
+
+[node name="Cylinder_134" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="250" unique_id=2067924610]
+visibility_range_end = 10.0
+
+[node name="Cylinder_135" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="251" unique_id=900626814]
+visibility_range_end = 10.0
+
+[node name="Cylinder_136" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="252" unique_id=1013854067]
+visibility_range_end = 10.0
+
+[node name="Cylinder_137" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="253" unique_id=945664010]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13792" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="254" unique_id=22735826]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13795" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="255" unique_id=509257363]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13796" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="256" unique_id=1877882120]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13797" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="257" unique_id=2114687408]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13798" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="258" unique_id=267696831]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13799" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="259" unique_id=1698723432]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13800" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="261" unique_id=1365491659]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13801" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="262" unique_id=2142719035]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13802" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="263" unique_id=754021372]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13803" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="264" unique_id=1458646720]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13804" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="265" unique_id=1514875132]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13807" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="266" unique_id=2145750484]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13808" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="267" unique_id=1346073815]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13809" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="268" unique_id=1335179178]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13810" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="269" unique_id=1980725083]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13811" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="270" unique_id=705589849]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13812" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="271" unique_id=172491393]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13813" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="272" unique_id=1838339083]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13814" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="273" unique_id=1735796476]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13815" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="274" unique_id=1251276116]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13816" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="275" unique_id=742151481]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13830" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="276" unique_id=1777968342]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13907" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="278" unique_id=11359021]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13908" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="279" unique_id=307021359]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13935" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="280" unique_id=202082206]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13936" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="281" unique_id=1867218877]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13947" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="284" unique_id=1821294519]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13948" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="285" unique_id=1451710110]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13949" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="286" unique_id=1140615116]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13950" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="287" unique_id=1220110952]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13951" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="288" unique_id=907172936]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13952" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="289" unique_id=60780428]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13953" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="290" unique_id=1215532788]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13955" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="291" unique_id=301627075]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13956" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="292" unique_id=837595650]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13958" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="293" unique_id=505523483]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13959" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="294" unique_id=1520451985]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13960" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="295" unique_id=587060233]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13961" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="296" unique_id=1109343244]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13962" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="297" unique_id=1971550981]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13963" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="298" unique_id=674701261]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13964" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="299" unique_id=1343295186]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13965" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="300" unique_id=2143807673]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13966" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="301" unique_id=159049647]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13967" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="302" unique_id=1138821531]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13968" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="303" unique_id=887061588]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13969" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="304" unique_id=1559469762]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13970" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="305" unique_id=830660495]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13980" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="306" unique_id=1283446954]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13991" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="307" unique_id=1913748892]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13992" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="308" unique_id=161088048]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13993" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="309" unique_id=572837590]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13994" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="310" unique_id=958751418]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13995" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="311" unique_id=1875749986]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13996" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="312" unique_id=1470839602]
+visibility_range_end = 10.0
+
+[node name="Cylinder_140" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="313" unique_id=591308532]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14014" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="314" unique_id=141391819]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14015" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="315" unique_id=255966259]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14016" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="316" unique_id=2066060893]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14017" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="317" unique_id=979677969]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14018" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="318" unique_id=147069423]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14019" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="319" unique_id=2098149889]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14023" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="320" unique_id=1651312093]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14037" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="321" unique_id=1628722194]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14038" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="322" unique_id=360030431]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14049" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="323" unique_id=1703636218]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14053" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="325" unique_id=165508117]
+visibility_range_end = 10.0
+
+[node name="Cylinder_141" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="326" unique_id=1111470747]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14121" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="327" unique_id=150319258]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14122" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="328" unique_id=748028558]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14123" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="329" unique_id=2030282655]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14124" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="330" unique_id=1442840238]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14126" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="331" unique_id=1551454815]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14127" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="332" unique_id=1667392373]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14128" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="333" unique_id=2040455595]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14129" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="334" unique_id=1460694314]
+visibility_range_end = 10.0
+
+[node name="Cylinder_14130" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="335" unique_id=1781819722]
+visibility_range_end = 10.0
+
+[node name="Cylinder_142" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="336" unique_id=1273323180]
+visibility_range_end = 10.0
+
+[node name="Cylinder_143" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="337" unique_id=1510815124]
+visibility_range_end = 10.0
+
+[node name="Cylinder_144" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="338" unique_id=905314468]
+visibility_range_end = 10.0
+
+[node name="Cylinder_145" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="339" unique_id=927139572]
+visibility_range_end = 10.0
+
+[node name="Cylinder_146" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="340" unique_id=1726048193]
+visibility_range_end = 10.0
+
+[node name="Cylinder_147" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="341" unique_id=932342151]
+visibility_range_end = 10.0
+
+[node name="Cylinder_148" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="342" unique_id=1017066244]
+visibility_range_end = 10.0
+
+[node name="Cylinder_149" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="343" unique_id=1899979855]
+visibility_range_end = 10.0
+
+[node name="Cylinder_150" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="344" unique_id=1262427683]
+visibility_range_end = 10.0
+
+[node name="Cylinder_151" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="345" unique_id=2001991348]
+visibility_range_end = 10.0
+
+[node name="Cylinder_152" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="346" unique_id=900781129]
+visibility_range_end = 10.0
+
+[node name="Cylinder_153" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="347" unique_id=440572209]
+visibility_range_end = 10.0
+
+[node name="Cylinder_154" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="348" unique_id=1384711114]
+visibility_range_end = 10.0
+
+[node name="Cylinder_155" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="349" unique_id=762857976]
+visibility_range_end = 10.0
+
+[node name="Cylinder_156" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="350" unique_id=1379287568]
+visibility_range_end = 10.0
+
+[node name="Cylinder_157" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="351" unique_id=521631755]
+visibility_range_end = 10.0
+
+[node name="Cylinder_158" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="352" unique_id=1325347795]
+visibility_range_end = 10.0
+
+[node name="Cylinder_159" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="353" unique_id=527800585]
+visibility_range_end = 10.0
+
+[node name="Cylinder_160" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="354" unique_id=652234927]
+visibility_range_end = 10.0
+
+[node name="Cylinder_161" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="355" unique_id=1943375172]
+visibility_range_end = 10.0
+
+[node name="Cylinder_162" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="356" unique_id=559145058]
+visibility_range_end = 10.0
+
+[node name="Cylinder_163" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="357" unique_id=1026151769]
+visibility_range_end = 10.0
+
+[node name="Cylinder_164" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="358" unique_id=1974463230]
+visibility_range_end = 10.0
+
+[node name="Cylinder_165" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="359" unique_id=1358260036]
+visibility_range_end = 10.0
+
+[node name="Cylinder_166" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="360" unique_id=318662680]
+visibility_range_end = 10.0
+
+[node name="Cylinder_167" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="361" unique_id=1396859721]
+visibility_range_end = 10.0
+
+[node name="Cylinder_168" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="362" unique_id=1433500126]
+visibility_range_end = 10.0
+
+[node name="Cylinder_169" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="363" unique_id=1740804881]
+visibility_range_end = 10.0
+
+[node name="Cylinder_170" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="364" unique_id=216233899]
+visibility_range_end = 10.0
+
+[node name="Cylinder_171" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="365" unique_id=142973111]
+visibility_range_end = 10.0
+
+[node name="Cylinder_172" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="366" unique_id=1353295739]
+visibility_range_end = 10.0
+
+[node name="Cylinder_173" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="367" unique_id=1181743767]
+visibility_range_end = 10.0
+
+[node name="Cylinder_174" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="368" unique_id=1617812464]
+visibility_range_end = 10.0
+
+[node name="Cylinder_175" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="369" unique_id=725097265]
+visibility_range_end = 10.0
+
+[node name="Cylinder_176" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="370" unique_id=1376797417]
+visibility_range_end = 10.0
+
+[node name="Cylinder_177" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="371" unique_id=439953707]
+visibility_range_end = 10.0
+
+[node name="Cylinder_178" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="372" unique_id=1490573281]
+visibility_range_end = 10.0
+
+[node name="Cylinder_179" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="373" unique_id=1475980445]
+visibility_range_end = 10.0
+
+[node name="Cylinder_180" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="374" unique_id=1732985601]
+visibility_range_end = 10.0
+
+[node name="Cylinder_181" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="375" unique_id=939375325]
+visibility_range_end = 10.0
+
+[node name="Cylinder_182" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="376" unique_id=71446711]
+visibility_range_end = 10.0
+
+[node name="Cylinder_183" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="377" unique_id=2024940070]
+visibility_range_end = 10.0
+
+[node name="Cylinder_184" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="378" unique_id=1670926284]
+visibility_range_end = 10.0
+
+[node name="Cylinder_185" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="379" unique_id=686074838]
+visibility_range_end = 10.0
+
+[node name="Cylinder_186" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="380" unique_id=324821020]
+visibility_range_end = 10.0
+
+[node name="Cylinder_187" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="381" unique_id=2127977622]
+visibility_range_end = 10.0
+
+[node name="Cylinder_188" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="382" unique_id=182251997]
+visibility_range_end = 10.0
+
+[node name="Cylinder_189" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="383" unique_id=469347116]
+visibility_range_end = 10.0
+
+[node name="Cylinder_190" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="384" unique_id=1671629487]
+visibility_range_end = 10.0
+
+[node name="Cylinder_191" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="385" unique_id=1179218265]
+visibility_range_end = 10.0
+
+[node name="Cylinder_192" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="386" unique_id=1091527062]
+visibility_range_end = 10.0
+
+[node name="Cylinder_193" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="387" unique_id=275265784]
+visibility_range_end = 10.0
+
+[node name="Cylinder_194" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="388" unique_id=561747069]
+visibility_range_end = 10.0
+
+[node name="Cylinder_195" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="389" unique_id=1518229436]
+visibility_range_end = 10.0
+
+[node name="Cylinder_196" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="390" unique_id=939961031]
+visibility_range_end = 10.0
+
+[node name="Cylinder_197" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="391" unique_id=57367999]
+visibility_range_end = 10.0
+
+[node name="Cylinder_198" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="392" unique_id=1675609540]
+visibility_range_end = 10.0
+
+[node name="Cylinder_199" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="393" unique_id=1677980870]
+visibility_range_end = 10.0
+
+[node name="Cylinder_200" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="394" unique_id=970197834]
+visibility_range_end = 10.0
+
+[node name="Cylinder_201" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="395" unique_id=407848015]
+visibility_range_end = 10.0
+
+[node name="Cylinder_202" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="396" unique_id=1428448818]
+visibility_range_end = 10.0
+
+[node name="Cylinder_203" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="397" unique_id=1878784839]
+visibility_range_end = 10.0
+
+[node name="Cylinder_204" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="398" unique_id=700732432]
+visibility_range_end = 10.0
+
+[node name="Cylinder_226" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="399" unique_id=1147404313]
+visibility_range_end = 10.0
+
+[node name="Cylinder_227" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="400" unique_id=1468487516]
+visibility_range_end = 10.0
+
+[node name="Cylinder_228" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="401" unique_id=995147590]
+visibility_range_end = 10.0
+
+[node name="Cylinder_229" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="402" unique_id=358138881]
+visibility_range_end = 10.0
+
+[node name="Cylinder_230" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="403" unique_id=1626697345]
+visibility_range_end = 10.0
+
+[node name="Cylinder_231" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="404" unique_id=1384161701]
+visibility_range_end = 10.0
+
+[node name="Cylinder_232" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="405" unique_id=2010486136]
+visibility_range_end = 10.0
+
+[node name="Cylinder_233" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="406" unique_id=1773754251]
+visibility_range_end = 10.0
+
+[node name="Cylinder_234" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="407" unique_id=947441069]
+visibility_range_end = 10.0
+
+[node name="Cylinder_235" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="408" unique_id=671077169]
+visibility_range_end = 10.0
+
+[node name="Cylinder_236" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="409" unique_id=1780965371]
+visibility_range_end = 10.0
+
+[node name="Cylinder_237" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="410" unique_id=472312758]
+visibility_range_end = 10.0
+
+[node name="Cylinder_238" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="411" unique_id=122140914]
+visibility_range_end = 10.0
+
+[node name="Cylinder_239" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="412" unique_id=758185837]
+visibility_range_end = 10.0
+
+[node name="Cylinder_240" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="413" unique_id=725590343]
+visibility_range_end = 10.0
+
+[node name="Cylinder_241" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="414" unique_id=1965907815]
+visibility_range_end = 10.0
+
+[node name="Cylinder_327" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="415" unique_id=423487880]
+visibility_range_end = 10.0
+
+[node name="hebel-02" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="416" unique_id=1950832900]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13805" parent="Bruecke/hebel-02" index="0" unique_id=292884203]
+visibility_range_end = 10.0
+
+[node name="hebel-1" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="417" unique_id=1011995731]
+visibility_range_end = 10.0
+
+[node name="Cylinder_13806" parent="Bruecke/hebel-1" index="0" unique_id=1861981999]
+visibility_range_end = 10.0
+
+[node name="Nut_001" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="418" unique_id=924946877]
+visibility_range_end = 10.0
+
+[node name="Nut_002" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="419" unique_id=1375815411]
+visibility_range_end = 10.0
+
+[node name="Nut_003" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="420" unique_id=1442455688]
+visibility_range_end = 10.0
+
+[node name="Nut_004" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="421" unique_id=661541244]
+visibility_range_end = 10.0
+
+[node name="Nut_005" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="422" unique_id=1333855044]
+visibility_range_end = 10.0
+
+[node name="Nut_006" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="423" unique_id=22761500]
+visibility_range_end = 10.0
+
+[node name="Plane_005" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="424" unique_id=607015271]
+visibility_range_end = 10.0
+
+[node name="Plane_006" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="425" unique_id=1088166230]
+visibility_range_end = 10.0
+
+[node name="Plane_007" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="426" unique_id=1015193859]
+visibility_range_end = 10.0
+
+[node name="Plane_008" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="427" unique_id=1411013822]
+visibility_range_end = 10.0
+
+[node name="Plane_009" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="428" unique_id=237542119]
+visibility_range_end = 10.0
+
+[node name="Plane_010" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="429" unique_id=1057008158]
+visibility_range_end = 10.0
+
+[node name="Plane_011" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="430" unique_id=312983005]
+visibility_range_end = 10.0
+
+[node name="Plane_012" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="431" unique_id=1733068123]
+visibility_range_end = 10.0
+
+[node name="Plane_013" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="432" unique_id=372912174]
+visibility_range_end = 10.0
+
+[node name="Plane_014" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="433" unique_id=253458699]
+visibility_range_end = 10.0
+
+[node name="Plane_015" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="434" unique_id=682908094]
+visibility_range_end = 10.0
+
+[node name="Plane_016" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="435" unique_id=2019540250]
+visibility_range_end = 10.0
+
+[node name="Plane_017" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="436" unique_id=1780966838]
+visibility_range_end = 10.0
+
+[node name="Plane_018" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="437" unique_id=398735598]
+visibility_range_end = 10.0
+
+[node name="Plane_019" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="438" unique_id=533162192]
+visibility_range_end = 10.0
+
+[node name="Plane_020" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="439" unique_id=334938036]
+visibility_range_end = 10.0
+
+[node name="Plane_021" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="440" unique_id=770401154]
+visibility_range_end = 10.0
+
+[node name="Plane_022" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="441" unique_id=1780683561]
+visibility_range_end = 10.0
+
+[node name="Plane_023" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="442" unique_id=957290047]
+visibility_range_end = 10.0
+
+[node name="Plane_024" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="443" unique_id=563320645]
+visibility_range_end = 10.0
+
+[node name="Plane_025" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="444" unique_id=1777282826]
+visibility_range_end = 10.0
+
+[node name="Plane_026" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="445" unique_id=1406040299]
+visibility_range_end = 10.0
+
+[node name="Plane_027" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="446" unique_id=399681958]
+visibility_range_end = 10.0
+
+[node name="Plane_028" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="447" unique_id=965022982]
+visibility_range_end = 10.0
+
+[node name="Plane_029" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="448" unique_id=1305224893]
+visibility_range_end = 10.0
+
+[node name="Plane_030" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="449" unique_id=632165164]
+visibility_range_end = 10.0
+
+[node name="Plane_031" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="450" unique_id=1360397569]
+visibility_range_end = 10.0
+
+[node name="Plane_032" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="451" unique_id=1446440406]
+visibility_range_end = 10.0
+
+[node name="Plane_033" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="452" unique_id=1872475767]
+visibility_range_end = 10.0
+
+[node name="Plane_034" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="453" unique_id=174135101]
+visibility_range_end = 10.0
+
+[node name="Plane_035" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="454" unique_id=560976189]
+visibility_range_end = 10.0
+
+[node name="Plane_036" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="455" unique_id=1914143482]
+visibility_range_end = 10.0
+
+[node name="Plane_037" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="456" unique_id=1717804647]
+visibility_range_end = 10.0
+
+[node name="Plane_038" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="457" unique_id=1577676069]
+visibility_range_end = 10.0
+
+[node name="Plane_039" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="458" unique_id=1887049179]
+visibility_range_end = 10.0
+
+[node name="Plane_040" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="459" unique_id=12321196]
+visibility_range_end = 10.0
+
+[node name="Plane_042" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="461" unique_id=924582886]
+visibility_range_end = 10.0
+
+[node name="Plane_043" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="462" unique_id=544206881]
+visibility_range_end = 10.0
+
+[node name="Plane_044" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="463" unique_id=605112389]
+visibility_range_end = 10.0
+
+[node name="Plane_045" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="464" unique_id=2003724585]
+visibility_range_end = 10.0
+
+[node name="Plane_046" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="465" unique_id=1894484075]
+visibility_range_end = 10.0
+
+[node name="Plane_047" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="466" unique_id=260145442]
+visibility_range_end = 10.0
+
+[node name="Plane_048" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="467" unique_id=151979047]
+visibility_range_end = 10.0
+
+[node name="Plane_049" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="468" unique_id=1201307856]
+visibility_range_end = 10.0
+
+[node name="Plane_050" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="469" unique_id=1801210830]
+visibility_range_end = 10.0
+
+[node name="Plane_053" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="470" unique_id=2115381116]
+visibility_range_end = 10.0
+
+[node name="Plane_054" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="471" unique_id=1500384349]
+visibility_range_end = 10.0
+
+[node name="Plane_055" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="472" unique_id=420677598]
+visibility_range_end = 10.0
+
+[node name="Plane_056" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="473" unique_id=482016006]
+visibility_range_end = 10.0
+
+[node name="Plane_057" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="474" unique_id=737977289]
+visibility_range_end = 10.0
+
+[node name="Plane_058" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="475" unique_id=1676043854]
+visibility_range_end = 10.0
+
+[node name="Plane_059" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="476" unique_id=196443926]
+visibility_range_end = 10.0
+
+[node name="Plane_060" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="477" unique_id=1785840158]
+visibility_range_end = 10.0
+
+[node name="Plane_061" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="478" unique_id=928113150]
+visibility_range_end = 10.0
+
+[node name="Plane_062" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="479" unique_id=397045780]
+visibility_range_end = 10.0
+
+[node name="Plane_063" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="480" unique_id=1345008216]
+visibility_range_end = 10.0
+
+[node name="Plane_064" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="481" unique_id=1299691910]
+visibility_range_end = 10.0
+
+[node name="Plane_065" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="482" unique_id=405656322]
+visibility_range_end = 10.0
+
+[node name="Plane_066" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="483" unique_id=729652341]
+visibility_range_end = 10.0
+
+[node name="Plane_067" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="484" unique_id=1175795355]
+visibility_range_end = 10.0
+
+[node name="Plane_068" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="485" unique_id=1766194407]
+visibility_range_end = 10.0
+
+[node name="Plane_449" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="486" unique_id=437400893]
+visibility_range_end = 10.0
+
+[node name="Plane_450" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="487" unique_id=1966588205]
+visibility_range_end = 10.0
+
+[node name="Plane_451" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="488" unique_id=1968952608]
+visibility_range_end = 10.0
+
+[node name="Plane_452" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="489" unique_id=2113163091]
+visibility_range_end = 10.0
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="490" unique_id=1639115453]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.7629383, 4.0031834, -3.9193266e-09)
+occluder = SubResource("QuadOccluder3D_mwhmw")
+
+[node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="491" unique_id=685281311]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.604228, 4.0031834, -5.4568165e-08)
+occluder = SubResource("QuadOccluder3D_mwhmw")
+
+[node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Bruecke" parent_id_path=PackedInt32Array(1372267439) index="492" unique_id=1302805578]
+transform = Transform3D(-4.3711385e-08, -1, -4.371139e-08, 0, -4.371139e-08, 1, -1, 4.371139e-08, 0, -3.2007885, 3.3989835, -2.8491678e-08)
+occluder = SubResource("QuadOccluder3D_mwhmw")
+
+[node name="gitter" parent="." index="9" unique_id=1403933685]
+visibility_range_end = 10.0
+
+[node name="PH-Messung" parent="." index="10" unique_id=1633271351]
+visibility_range_end = 10.0
+
+[node name="Bolt" parent="PH-Messung" index="0" unique_id=915679133]
+visibility_range_end = 10.0
+
+[node name="Bolt_009" parent="PH-Messung" index="1" unique_id=1167309528]
+visibility_range_end = 10.0
+
+[node name="BézierCurve" parent="PH-Messung" index="2" unique_id=1126439588]
+visibility_range_end = 10.0
+
+[node name="Cylinder_206" parent="PH-Messung" index="3" unique_id=1429902238]
+visibility_range_end = 10.0
+
+[node name="Cylinder_207" parent="PH-Messung" index="4" unique_id=1839131842]
+visibility_range_end = 10.0
+
+[node name="Cylinder_208" parent="PH-Messung" index="5" unique_id=1071481102]
+visibility_range_end = 10.0
+
+[node name="Cylinder_209" parent="PH-Messung" index="6" unique_id=1541418328]
+visibility_range_end = 10.0
+
+[node name="Cylinder_210" parent="PH-Messung" index="7" unique_id=1642210650]
+visibility_range_end = 10.0
+
+[node name="Cylinder_211" parent="PH-Messung" index="8" unique_id=1684341929]
+visibility_range_end = 10.0
+
+[node name="Cylinder_212" parent="PH-Messung" index="9" unique_id=1540157272]
+visibility_range_end = 10.0
+
+[node name="Cylinder_213" parent="PH-Messung" index="10" unique_id=2017832273]
+visibility_range_end = 10.0
+
+[node name="Cylinder_214" parent="PH-Messung" index="11" unique_id=885738876]
+visibility_range_end = 10.0
+
+[node name="Cylinder_215" parent="PH-Messung" index="12" unique_id=2116667565]
+visibility_range_end = 10.0
+
+[node name="Cylinder_216" parent="PH-Messung" index="13" unique_id=1779105355]
+visibility_range_end = 10.0
+
+[node name="Cylinder_217" parent="PH-Messung" index="14" unique_id=1416363772]
+visibility_range_end = 10.0
+
+[node name="Cylinder_218" parent="PH-Messung" index="15" unique_id=1800716971]
+visibility_range_end = 10.0
+
+[node name="Cylinder_219" parent="PH-Messung" index="16" unique_id=1456975941]
+visibility_range_end = 10.0
+
+[node name="Cylinder_220" parent="PH-Messung" index="17" unique_id=1897310556]
+visibility_range_end = 10.0
+
+[node name="Cylinder_221" parent="PH-Messung" index="18" unique_id=1463281624]
+visibility_range_end = 10.0
+
+[node name="Cylinder_222" parent="PH-Messung" index="19" unique_id=1063784401]
+visibility_range_end = 10.0
+
+[node name="Cylinder_223" parent="PH-Messung" index="20" unique_id=2023685408]
+visibility_range_end = 10.0
+
+[node name="Cylinder_224" parent="PH-Messung" index="21" unique_id=1573075222]
+visibility_range_end = 10.0
+
+[node name="Cylinder_225" parent="PH-Messung" index="22" unique_id=609655670]
+visibility_range_end = 10.0
+
+[node name="Cylinder_243" parent="PH-Messung" index="23" unique_id=1750711044]
+visibility_range_end = 10.0
+
+[node name="Cylinder_244" parent="PH-Messung" index="24" unique_id=349822541]
+visibility_range_end = 10.0
+
+[node name="Cylinder_245" parent="PH-Messung" index="25" unique_id=1444862146]
+visibility_range_end = 10.0
+
+[node name="Cylinder_246" parent="PH-Messung" index="26" unique_id=1725407502]
+visibility_range_end = 10.0
+
+[node name="Cylinder_247" parent="PH-Messung" index="27" unique_id=130709815]
+visibility_range_end = 10.0
+
+[node name="Cylinder_248" parent="PH-Messung" index="28" unique_id=1419280148]
+visibility_range_end = 10.0
+
+[node name="Cylinder_249" parent="PH-Messung" index="29" unique_id=603792126]
+visibility_range_end = 10.0
+
+[node name="Cylinder_250" parent="PH-Messung" index="30" unique_id=2120452359]
+visibility_range_end = 10.0
+
+[node name="Cylinder_251" parent="PH-Messung" index="31" unique_id=791985111]
+visibility_range_end = 10.0
+
+[node name="Cylinder_252" parent="PH-Messung" index="32" unique_id=536106364]
+visibility_range_end = 10.0
+
+[node name="Cylinder_253" parent="PH-Messung" index="33" unique_id=1740728174]
+visibility_range_end = 10.0
