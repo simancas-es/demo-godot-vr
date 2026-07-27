@@ -1,16 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7yhfipghxiyv"]
+[gd_scene format=3 uid="uid://c7yhfipghxiyv"]
 
 [ext_resource type="Script" uid="uid://ynhbjougcegl" path="res://clases/interaction/door_base.gd" id="1_uo4ep"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_504hn"]
-size = Vector3(0.107666016, 2.0078125, 1.1008301)
+size = Vector3(0.113098145, 2.0596619, 1.1147766)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_n3uyx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pgak8"]
 size = Vector3(0.107666016, 2.0078125, 1.1008301)
 
-[node name="Door2m" type="Area3D"]
+[sub_resource type="QuadOccluder3D" id="QuadOccluder3D_504hn"]
+size = Vector2(1.2356563, 2.1553118)
+
+[node name="Door2m" type="Area3D" unique_id=1574825816]
 collision_layer = 25165825
 collision_mask = 25165825
 monitoring = false
@@ -21,15 +24,19 @@ key_item = Array[int]([1])
 _lock = 1
 metadata/_custom_type_script = "uid://ynhbjougcegl"
 
-[node name="DoorCollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 0.99609375, -0.553833)
+[node name="DoorCollisionShape3D" type="CollisionShape3D" parent="." unique_id=751726256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 1.0244293, -0.5536041)
 shape = SubResource("BoxShape3D_504hn")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=751181147]
 collision_layer = 16384
 collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_n3uyx")
 
-[node name="DoorCollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="DoorCollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1185109377]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00061035156, 0.99609375, -0.553833)
 shape = SubResource("BoxShape3D_pgak8")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=2091745435]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.5231742e-08, 1.0015728, -0.577235)
+occluder = SubResource("QuadOccluder3D_504hn")

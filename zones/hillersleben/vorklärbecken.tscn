@@ -77,6 +77,30 @@ smooth_faces = false
 
 [node name="2026-05-19-Vorklärbecken" parent="." unique_id=1139570999 instance=ExtResource("1_8uxxr")]
 
+[node name="Bolt_183" parent="2026-05-19-Vorklärbecken/bruecke" parent_id_path=PackedInt32Array(1139570999, 912896537) index="0" unique_id=234860069]
+visibility_range_end = 20.0
+
+[node name="Räumschild" parent="2026-05-19-Vorklärbecken" index="3" unique_id=1736405497]
+visibility_range_end = 5.0
+
+[node name="Cube_016" parent="2026-05-19-Vorklärbecken/Räumschild" index="6" unique_id=1735492634]
+visibility_range_end = 15.0
+
+[node name="Cube_017" parent="2026-05-19-Vorklärbecken/Räumschild" index="7" unique_id=1622620923]
+visibility_range_end = 5.0
+
+[node name="Cube_018" parent="2026-05-19-Vorklärbecken/Räumschild" index="8" unique_id=1675262130]
+visibility_range_end = 15.0
+
+[node name="Cylinder_027" parent="2026-05-19-Vorklärbecken/ablauf-belebung2" parent_id_path=PackedInt32Array(1139570999, 903003335) index="3" unique_id=492345195]
+visibility_range_end = 15.0
+
+[node name="Plane_003" parent="2026-05-19-Vorklärbecken/ablauf-belebung2" parent_id_path=PackedInt32Array(1139570999, 903003335) index="8" unique_id=745411041]
+visibility_range_end = 15.0
+
+[node name="Plane_005" parent="2026-05-19-Vorklärbecken/ablauf-belebung2" parent_id_path=PackedInt32Array(1139570999, 903003335) index="10" unique_id=1228474454]
+visibility_range_end = 15.0
+
 [node name="ValveXRExtended2" parent="2026-05-19-Vorklärbecken/ablauf-belebung2" parent_id_path=PackedInt32Array(1139570999, 903003335) index="12" unique_id=845928422 instance=ExtResource("2_iattj")]
 transform = Transform3D(-0.04115331, -0.77203643, -0.6342447, -0.049981058, 0.6355784, -0.77041686, 0.9979019, -5.029514e-06, -0.06474346, -9.283862, 2.051775, -0.0010820276)
 
@@ -102,6 +126,15 @@ transform = Transform3D(1.335, 0, 0, 0, -5.8354704e-08, 2.225, 0, -1.335, -9.725
 [node name="rad-02" parent="2026-05-19-Vorklärbecken/ablauf-belebung2" parent_id_path=PackedInt32Array(1139570999, 903003335) index="13" unique_id=842182261]
 visible = false
 
+[node name="zulauf" parent="2026-05-19-Vorklärbecken" index="6" unique_id=550883236]
+visibility_range_end = 15.0
+
+[node name="Plane_008" parent="2026-05-19-Vorklärbecken/ablauf-belebung1" parent_id_path=PackedInt32Array(1139570999, 13118252) index="7" unique_id=459830109]
+visibility_range_end = 15.0
+
+[node name="Plane_010" parent="2026-05-19-Vorklärbecken/ablauf-belebung1" parent_id_path=PackedInt32Array(1139570999, 13118252) index="9" unique_id=1637781283]
+visibility_range_end = 15.0
+
 [node name="ValveXRExtended" parent="2026-05-19-Vorklärbecken/ablauf-belebung1" parent_id_path=PackedInt32Array(1139570999, 13118252) index="13" unique_id=1622915992 instance=ExtResource("2_iattj")]
 transform = Transform3D(-0.87326777, -0.3775213, -0.30802804, -0.0024386644, 0.63556707, -0.7720418, 0.48723477, -0.67344785, -0.55594075, -4.36367, 2.0518045, -8.166571)
 
@@ -126,6 +159,9 @@ transform = Transform3D(1.335, 0, 0, 0, -5.8354704e-08, 2.225, 0, -1.335, -9.725
 
 [node name="rad-01" parent="2026-05-19-Vorklärbecken/ablauf-belebung1" parent_id_path=PackedInt32Array(1139570999, 13118252) index="14" unique_id=1226352217]
 visible = false
+
+[node name="primaerschlamm" parent="2026-05-19-Vorklärbecken" index="8" unique_id=929078190]
+visibility_range_end = 30.0
 
 [node name="Warn1" type="Label3D" parent="." unique_id=1496452306]
 transform = Transform3D(-0.86602545, 0.32353467, -0.3812157, -1.8626451e-09, 0.7624312, 0.64706933, 0.50000006, 0.56037843, -0.6602848, -4.4121547, 2.1567338, -8.22933)
