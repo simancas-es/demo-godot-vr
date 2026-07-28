@@ -2467,6 +2467,7 @@ skeleton = NodePath("../..")
 
 [node name="dek_polymer_hose_intake" type="RigidBody3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=958178673]
 transform = Transform3D(1, 0, 2.9802322e-08, 4.2351647e-21, 1, -8.4703295e-21, 0, 0, 1, 1.0360489, 1.2586708, -5.526436)
+visible = false
 collision_layer = 0
 collision_mask = 0
 axis_lock_angular_x = true
