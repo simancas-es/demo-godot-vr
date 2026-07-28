@@ -4,5 +4,1746 @@
 
 [node name="2026-06-04-BHKW-Raum" unique_id=826799386 instance=ExtResource("1_6ed2b")]
 
-[node name="Cylinder_413" parent="Plattenwärmetauscher" parent_id_path=PackedInt32Array(1863207186) index="22" unique_id=994276436]
+[node name="Cube" parent="." index="0" unique_id=622171029]
+lod_bias = 0.001
+
+[node name="BHKW-2" parent="." index="1" unique_id=1570547151]
+lod_bias = 0.001
+
+[node name="Cube_002" parent="BHKW-2" index="0" unique_id=899005454]
+lod_bias = 0.001
+
+[node name="Cube_003" parent="BHKW-2" index="1" unique_id=116545787]
+lod_bias = 0.001
+
+[node name="Cube_004" parent="BHKW-2" index="2" unique_id=1350566737]
+lod_bias = 0.001
+
+[node name="Cube_005" parent="BHKW-2" index="3" unique_id=2009470302]
+lod_bias = 0.001
+
+[node name="Cube_006" parent="BHKW-2" index="4" unique_id=1701914519]
+lod_bias = 0.001
+
+[node name="Cylinder" parent="BHKW-2" index="5" unique_id=2027947666]
+lod_bias = 0.001
+
+[node name="Not-Aus-2" parent="BHKW-2" index="6" unique_id=1542691207]
+lod_bias = 0.001
+
+[node name="Bolt_001" parent="BHKW-2/Not-Aus-2" index="0" unique_id=744271039]
+lod_bias = 0.001
+
+[node name="Bolt_002" parent="BHKW-2/Not-Aus-2" index="1" unique_id=1589810310]
+lod_bias = 0.001
+
+[node name="Bolt_006" parent="BHKW-2/Not-Aus-2" index="2" unique_id=1614815760]
+lod_bias = 0.001
+
+[node name="Bolt_048" parent="BHKW-2/Not-Aus-2" index="3" unique_id=145834575]
+lod_bias = 0.001
+
+[node name="Cylinder_478" parent="BHKW-2/Not-Aus-2" index="4" unique_id=2106308870]
+lod_bias = 0.001
+
+[node name="Knopf-2" parent="BHKW-2/Not-Aus-2" index="5" unique_id=1878043589]
+lod_bias = 0.001
+
+[node name="Plane" parent="." index="2" unique_id=1262394333]
+lod_bias = 0.001
+
+[node name="BHKW-1" parent="." index="3" unique_id=1732867462]
+lod_bias = 0.001
+
+[node name="Cube_008" parent="BHKW-1" index="0" unique_id=1733913031]
+lod_bias = 0.001
+
+[node name="Cube_009" parent="BHKW-1" index="1" unique_id=1155349016]
+lod_bias = 0.001
+
+[node name="Cube_010" parent="BHKW-1" index="2" unique_id=2020188748]
+lod_bias = 0.001
+
+[node name="Cube_011" parent="BHKW-1" index="3" unique_id=2027250153]
+lod_bias = 0.001
+
+[node name="Cube_012" parent="BHKW-1" index="4" unique_id=840874059]
+lod_bias = 0.001
+
+[node name="Cylinder_003" parent="BHKW-1" index="5" unique_id=975364215]
+lod_bias = 0.001
+
+[node name="Not-Aus-1" parent="BHKW-1" index="6" unique_id=265138603]
+lod_bias = 0.001
+
+[node name="Bolt_003" parent="BHKW-1/Not-Aus-1" index="0" unique_id=217792131]
+lod_bias = 0.001
+
+[node name="Bolt_004" parent="BHKW-1/Not-Aus-1" index="1" unique_id=695916661]
+lod_bias = 0.001
+
+[node name="Bolt_005" parent="BHKW-1/Not-Aus-1" index="2" unique_id=507241663]
+lod_bias = 0.001
+
+[node name="Bolt_007" parent="BHKW-1/Not-Aus-1" index="3" unique_id=992819419]
+lod_bias = 0.001
+
+[node name="Cylinder_002" parent="BHKW-1/Not-Aus-1" index="4" unique_id=1650988529]
+lod_bias = 0.001
+
+[node name="Knopf-1" parent="BHKW-1/Not-Aus-1" index="5" unique_id=1532523181]
+lod_bias = 0.001
+
+[node name="Schaltschrank-1" parent="." index="4" unique_id=1323637229]
+lod_bias = 0.001
+
+[node name="Cube_015" parent="Schaltschrank-1" index="0" unique_id=1266459766]
+lod_bias = 0.001
+
+[node name="Cube_016" parent="Schaltschrank-1" index="1" unique_id=1095855953]
+lod_bias = 0.001
+
+[node name="Cube_017" parent="Schaltschrank-1" index="2" unique_id=1403221672]
+lod_bias = 0.001
+
+[node name="Cube_018" parent="Schaltschrank-1" index="3" unique_id=85868936]
+lod_bias = 0.001
+
+[node name="Cube_024" parent="Schaltschrank-1" index="4" unique_id=778782818]
+lod_bias = 0.001
+
+[node name="Cube_025" parent="Schaltschrank-1" index="5" unique_id=196999116]
+lod_bias = 0.001
+
+[node name="Cylinder_009" parent="Schaltschrank-1" index="6" unique_id=2135653283]
+lod_bias = 0.001
+
+[node name="Hauptschalter-BHKW-1" parent="Schaltschrank-1" index="7" unique_id=331032701]
+lod_bias = 0.001
+
+[node name="Cylinder_004" parent="Schaltschrank-1/Hauptschalter-BHKW-1" index="0" unique_id=388721876]
+lod_bias = 0.001
+
+[node name="Cylinder_005" parent="Schaltschrank-1/Hauptschalter-BHKW-1" index="1" unique_id=1399609534]
+lod_bias = 0.001
+
+[node name="Drehschalter-1" parent="Schaltschrank-1/Hauptschalter-BHKW-1" index="2" unique_id=1033995034]
+lod_bias = 0.001
+
+[node name="Cube_020" parent="Schaltschrank-1/Hauptschalter-BHKW-1/Drehschalter-1" index="0" unique_id=1296572415]
+lod_bias = 0.001
+
+[node name="Hauptschalter-BHKW-2" parent="Schaltschrank-1" index="8" unique_id=154657110]
+lod_bias = 0.001
+
+[node name="Cylinder_006" parent="Schaltschrank-1/Hauptschalter-BHKW-2" index="0" unique_id=1454195284]
+lod_bias = 0.001
+
+[node name="Cylinder_007" parent="Schaltschrank-1/Hauptschalter-BHKW-2" index="1" unique_id=1982381048]
+lod_bias = 0.001
+
+[node name="Drehschalter-2" parent="Schaltschrank-1/Hauptschalter-BHKW-2" index="2" unique_id=703819695]
+lod_bias = 0.001
+
+[node name="Cube_022" parent="Schaltschrank-1/Hauptschalter-BHKW-2/Drehschalter-2" index="0" unique_id=2113023923]
+lod_bias = 0.001
+
+[node name="Knopf-3" parent="Schaltschrank-1" index="9" unique_id=19877251]
+lod_bias = 0.001
+
+[node name="Not-Aus-3" parent="Schaltschrank-1" index="10" unique_id=1165950757]
+lod_bias = 0.001
+
+[node name="Heizungsrrohre" parent="." index="5" unique_id=1708045739]
+lod_bias = 0.001
+
+[node name="bar-BHKW-1" parent="Heizungsrrohre" index="0" unique_id=320848854]
+lod_bias = 0.001
+
+[node name="Cylinder_326" parent="Heizungsrrohre/bar-BHKW-1" index="0" unique_id=407770803]
+lod_bias = 0.001
+
+[node name="Cylinder_327" parent="Heizungsrrohre/bar-BHKW-1" index="1" unique_id=1115929052]
+lod_bias = 0.001
+
+[node name="Cylinder_329" parent="Heizungsrrohre/bar-BHKW-1" index="2" unique_id=1280586588]
+lod_bias = 0.001
+
+[node name="Cylinder_330" parent="Heizungsrrohre/bar-BHKW-1" index="3" unique_id=1418933742]
+lod_bias = 0.001
+
+[node name="Cylinder_331" parent="Heizungsrrohre/bar-BHKW-1" index="4" unique_id=2083120621]
+lod_bias = 0.001
+
+[node name="Plane_046" parent="Heizungsrrohre/bar-BHKW-1" index="5" unique_id=2101897536]
+lod_bias = 0.001
+
+[node name="Plane_047" parent="Heizungsrrohre/bar-BHKW-1" index="6" unique_id=1641540450]
+lod_bias = 0.001
+
+[node name="Zeiger_009" parent="Heizungsrrohre/bar-BHKW-1" index="7" unique_id=1912702143]
+lod_bias = 0.001
+
+[node name="bar-BHKW-2" parent="Heizungsrrohre" index="1" unique_id=1542901513]
+lod_bias = 0.001
+
+[node name="Cylinder_339" parent="Heizungsrrohre/bar-BHKW-2" index="0" unique_id=867114197]
+lod_bias = 0.001
+
+[node name="Cylinder_340" parent="Heizungsrrohre/bar-BHKW-2" index="1" unique_id=1245803381]
+lod_bias = 0.001
+
+[node name="Cylinder_342" parent="Heizungsrrohre/bar-BHKW-2" index="2" unique_id=1175314050]
+lod_bias = 0.001
+
+[node name="Cylinder_343" parent="Heizungsrrohre/bar-BHKW-2" index="3" unique_id=1141063750]
+lod_bias = 0.001
+
+[node name="Cylinder_344" parent="Heizungsrrohre/bar-BHKW-2" index="4" unique_id=961606483]
+lod_bias = 0.001
+
+[node name="Plane_056" parent="Heizungsrrohre/bar-BHKW-2" index="5" unique_id=1351279195]
+lod_bias = 0.001
+
+[node name="Plane_057" parent="Heizungsrrohre/bar-BHKW-2" index="6" unique_id=661188426]
+lod_bias = 0.001
+
+[node name="Zeiger_010" parent="Heizungsrrohre/bar-BHKW-2" index="7" unique_id=1705788278]
+lod_bias = 0.001
+
+[node name="bar-BHKW-3" parent="Heizungsrrohre" index="2" unique_id=465438753]
+lod_bias = 0.001
+
+[node name="Cylinder_332" parent="Heizungsrrohre/bar-BHKW-3" index="0" unique_id=1998685599]
+lod_bias = 0.001
+
+[node name="Cylinder_333" parent="Heizungsrrohre/bar-BHKW-3" index="1" unique_id=1092389038]
+lod_bias = 0.001
+
+[node name="Cylinder_334" parent="Heizungsrrohre/bar-BHKW-3" index="2" unique_id=1238981950]
+lod_bias = 0.001
+
+[node name="Cylinder_336" parent="Heizungsrrohre/bar-BHKW-3" index="3" unique_id=68926874]
+lod_bias = 0.001
+
+[node name="Cylinder_337" parent="Heizungsrrohre/bar-BHKW-3" index="4" unique_id=750056849]
+lod_bias = 0.001
+
+[node name="Plane_050" parent="Heizungsrrohre/bar-BHKW-3" index="5" unique_id=2022464878]
+lod_bias = 0.001
+
+[node name="Plane_051" parent="Heizungsrrohre/bar-BHKW-3" index="6" unique_id=9191218]
+lod_bias = 0.001
+
+[node name="Zeiger_011" parent="Heizungsrrohre/bar-BHKW-3" index="7" unique_id=858127335]
+lod_bias = 0.001
+
+[node name="bar-BHKW-4" parent="Heizungsrrohre" index="3" unique_id=1321388745]
+lod_bias = 0.001
+
+[node name="Cylinder_345" parent="Heizungsrrohre/bar-BHKW-4" index="0" unique_id=861798743]
+lod_bias = 0.001
+
+[node name="Cylinder_346" parent="Heizungsrrohre/bar-BHKW-4" index="1" unique_id=1617394885]
+lod_bias = 0.001
+
+[node name="Cylinder_347" parent="Heizungsrrohre/bar-BHKW-4" index="2" unique_id=1047652744]
+lod_bias = 0.001
+
+[node name="Cylinder_349" parent="Heizungsrrohre/bar-BHKW-4" index="3" unique_id=774719095]
+lod_bias = 0.001
+
+[node name="Cylinder_350" parent="Heizungsrrohre/bar-BHKW-4" index="4" unique_id=763859027]
+lod_bias = 0.001
+
+[node name="Plane_060" parent="Heizungsrrohre/bar-BHKW-4" index="5" unique_id=1991394754]
+lod_bias = 0.001
+
+[node name="Plane_061" parent="Heizungsrrohre/bar-BHKW-4" index="6" unique_id=1913622368]
+lod_bias = 0.001
+
+[node name="Zeiger_012" parent="Heizungsrrohre/bar-BHKW-4" index="7" unique_id=1181059022]
+lod_bias = 0.001
+
+[node name="bar-Heizung" parent="Heizungsrrohre" index="4" unique_id=1895626883]
+lod_bias = 0.001
+
+[node name="Cylinder_184" parent="Heizungsrrohre/bar-Heizung" index="0" unique_id=1866592976]
+lod_bias = 0.001
+
+[node name="Cylinder_185" parent="Heizungsrrohre/bar-Heizung" index="1" unique_id=190534350]
+lod_bias = 0.001
+
+[node name="Cylinder_186" parent="Heizungsrrohre/bar-Heizung" index="2" unique_id=824289129]
+lod_bias = 0.001
+
+[node name="Cylinder_187" parent="Heizungsrrohre/bar-Heizung" index="3" unique_id=1794551258]
+lod_bias = 0.001
+
+[node name="Cylinder_188" parent="Heizungsrrohre/bar-Heizung" index="4" unique_id=384390785]
+lod_bias = 0.001
+
+[node name="Cylinder_189" parent="Heizungsrrohre/bar-Heizung" index="5" unique_id=1729487354]
+lod_bias = 0.001
+
+[node name="Plane_039" parent="Heizungsrrohre/bar-Heizung" index="6" unique_id=92444574]
+lod_bias = 0.001
+
+[node name="Plane_040" parent="Heizungsrrohre/bar-Heizung" index="7" unique_id=84383027]
+lod_bias = 0.001
+
+[node name="Zeiger" parent="Heizungsrrohre/bar-Heizung" index="8" unique_id=942423993]
+lod_bias = 0.001
+
+[node name="Bolt_008" parent="Heizungsrrohre" index="5" unique_id=76320497]
+lod_bias = 0.001
+
+[node name="Bolt_009" parent="Heizungsrrohre" index="6" unique_id=389921495]
+lod_bias = 0.001
+
+[node name="Bolt_010" parent="Heizungsrrohre" index="7" unique_id=1512580897]
+lod_bias = 0.001
+
+[node name="Bolt_011" parent="Heizungsrrohre" index="8" unique_id=1952317574]
+lod_bias = 0.001
+
+[node name="Bolt_146" parent="Heizungsrrohre" index="9" unique_id=2109492011]
+lod_bias = 0.001
+
+[node name="Bolt_147" parent="Heizungsrrohre" index="10" unique_id=775183408]
+lod_bias = 0.001
+
+[node name="Bolt_148" parent="Heizungsrrohre" index="11" unique_id=810058645]
+lod_bias = 0.001
+
+[node name="Bolt_149" parent="Heizungsrrohre" index="12" unique_id=839063979]
+lod_bias = 0.001
+
+[node name="Cube_026" parent="Heizungsrrohre" index="13" unique_id=1542752252]
+lod_bias = 0.001
+
+[node name="Cube_028" parent="Heizungsrrohre" index="14" unique_id=1820423637]
+lod_bias = 0.001
+
+[node name="Cube_029" parent="Heizungsrrohre" index="15" unique_id=1708468097]
+lod_bias = 0.001
+
+[node name="Cube_030" parent="Heizungsrrohre" index="16" unique_id=1830610373]
+lod_bias = 0.001
+
+[node name="Cube_031" parent="Heizungsrrohre" index="17" unique_id=1264553016]
+lod_bias = 0.001
+
+[node name="Cube_032" parent="Heizungsrrohre" index="18" unique_id=1127167378]
+lod_bias = 0.001
+
+[node name="Cube_033" parent="Heizungsrrohre" index="19" unique_id=2052629215]
+lod_bias = 0.001
+
+[node name="Cube_034" parent="Heizungsrrohre" index="20" unique_id=346501173]
+lod_bias = 0.001
+
+[node name="Cube_035" parent="Heizungsrrohre" index="21" unique_id=151573124]
+lod_bias = 0.001
+
+[node name="Cube_036" parent="Heizungsrrohre" index="22" unique_id=1470074413]
+lod_bias = 0.001
+
+[node name="Cube_037" parent="Heizungsrrohre" index="23" unique_id=981770647]
+lod_bias = 0.001
+
+[node name="Cube_038" parent="Heizungsrrohre" index="24" unique_id=1486936801]
+lod_bias = 0.001
+
+[node name="Cube_039" parent="Heizungsrrohre" index="25" unique_id=1523336820]
+lod_bias = 0.001
+
+[node name="Cube_040" parent="Heizungsrrohre" index="26" unique_id=1576929443]
+lod_bias = 0.001
+
+[node name="Cube_041" parent="Heizungsrrohre" index="27" unique_id=336193032]
+lod_bias = 0.001
+
+[node name="Cube_042" parent="Heizungsrrohre" index="28" unique_id=1157936735]
+lod_bias = 0.001
+
+[node name="Cube_043" parent="Heizungsrrohre" index="29" unique_id=689221122]
+lod_bias = 0.001
+
+[node name="Cube_044" parent="Heizungsrrohre" index="30" unique_id=1828866012]
+lod_bias = 0.001
+
+[node name="Cube_045" parent="Heizungsrrohre" index="31" unique_id=1621755350]
+lod_bias = 0.001
+
+[node name="Cube_046" parent="Heizungsrrohre" index="32" unique_id=1967480050]
+lod_bias = 0.001
+
+[node name="Cube_107" parent="Heizungsrrohre" index="33" unique_id=751821890]
+lod_bias = 0.001
+
+[node name="Cube_108" parent="Heizungsrrohre" index="34" unique_id=755989383]
+lod_bias = 0.001
+
+[node name="Cube_109" parent="Heizungsrrohre" index="35" unique_id=1146206620]
+lod_bias = 0.001
+
+[node name="Cube_110" parent="Heizungsrrohre" index="36" unique_id=1182713570]
+lod_bias = 0.001
+
+[node name="Cube_111" parent="Heizungsrrohre" index="37" unique_id=2000779782]
+lod_bias = 0.001
+
+[node name="Cube_112" parent="Heizungsrrohre" index="38" unique_id=921436479]
+lod_bias = 0.001
+
+[node name="Cube_113" parent="Heizungsrrohre" index="39" unique_id=207938427]
+lod_bias = 0.001
+
+[node name="Cube_114" parent="Heizungsrrohre" index="40" unique_id=259387136]
+lod_bias = 0.001
+
+[node name="Cube_115" parent="Heizungsrrohre" index="41" unique_id=963102727]
+lod_bias = 0.001
+
+[node name="Cube_116" parent="Heizungsrrohre" index="42" unique_id=743608057]
+lod_bias = 0.001
+
+[node name="Cube_7264" parent="Heizungsrrohre" index="43" unique_id=1643172763]
+lod_bias = 0.001
+
+[node name="Cylinder_014" parent="Heizungsrrohre" index="44" unique_id=2018895500]
+lod_bias = 0.001
+
+[node name="Cylinder_018" parent="Heizungsrrohre" index="45" unique_id=1414353889]
+lod_bias = 0.001
+
+[node name="Cylinder_024" parent="Heizungsrrohre" index="46" unique_id=658674880]
+lod_bias = 0.001
+
+[node name="Cylinder_025" parent="Heizungsrrohre" index="47" unique_id=806418715]
+lod_bias = 0.001
+
+[node name="Cylinder_034" parent="Heizungsrrohre" index="48" unique_id=454436883]
+lod_bias = 0.001
+
+[node name="Cylinder_035" parent="Heizungsrrohre" index="49" unique_id=464693177]
+lod_bias = 0.001
+
+[node name="Cylinder_041" parent="Heizungsrrohre" index="50" unique_id=1266939436]
+lod_bias = 0.001
+
+[node name="Cylinder_045" parent="Heizungsrrohre" index="51" unique_id=440826746]
+lod_bias = 0.001
+
+[node name="Cylinder_054" parent="Heizungsrrohre" index="52" unique_id=1911492471]
+lod_bias = 0.001
+
+[node name="Cylinder_058" parent="Heizungsrrohre" index="53" unique_id=745620470]
+lod_bias = 0.001
+
+[node name="Cylinder_064" parent="Heizungsrrohre" index="54" unique_id=130137052]
+lod_bias = 0.001
+
+[node name="Cylinder_065" parent="Heizungsrrohre" index="55" unique_id=731986078]
+lod_bias = 0.001
+
+[node name="Cylinder_074" parent="Heizungsrrohre" index="56" unique_id=1940491789]
+lod_bias = 0.001
+
+[node name="Cylinder_075" parent="Heizungsrrohre" index="57" unique_id=1683626428]
+lod_bias = 0.001
+
+[node name="Cylinder_076" parent="Heizungsrrohre" index="58" unique_id=1658625956]
+lod_bias = 0.001
+
+[node name="Cylinder_077" parent="Heizungsrrohre" index="59" unique_id=1551847408]
+lod_bias = 0.001
+
+[node name="Cylinder_078" parent="Heizungsrrohre" index="60" unique_id=1006684606]
+lod_bias = 0.001
+
+[node name="Cylinder_079" parent="Heizungsrrohre" index="61" unique_id=1927866247]
+lod_bias = 0.001
+
+[node name="Cylinder_080" parent="Heizungsrrohre" index="62" unique_id=10452842]
+lod_bias = 0.001
+
+[node name="Cylinder_081" parent="Heizungsrrohre" index="63" unique_id=837858109]
+lod_bias = 0.001
+
+[node name="Cylinder_082" parent="Heizungsrrohre" index="64" unique_id=294562692]
+lod_bias = 0.001
+
+[node name="Cylinder_083" parent="Heizungsrrohre" index="65" unique_id=451917979]
+lod_bias = 0.001
+
+[node name="Cylinder_084" parent="Heizungsrrohre" index="66" unique_id=454243532]
+lod_bias = 0.001
+
+[node name="Cylinder_085" parent="Heizungsrrohre" index="67" unique_id=1605608265]
+lod_bias = 0.001
+
+[node name="Cylinder_086" parent="Heizungsrrohre" index="68" unique_id=642731151]
+lod_bias = 0.001
+
+[node name="Cylinder_087" parent="Heizungsrrohre" index="69" unique_id=23698877]
+lod_bias = 0.001
+
+[node name="Cylinder_088" parent="Heizungsrrohre" index="70" unique_id=1383283994]
+lod_bias = 0.001
+
+[node name="Cylinder_089" parent="Heizungsrrohre" index="71" unique_id=1153522740]
+lod_bias = 0.001
+
+[node name="Cylinder_090" parent="Heizungsrrohre" index="72" unique_id=1171954550]
+lod_bias = 0.001
+
+[node name="Cylinder_097" parent="Heizungsrrohre" index="73" unique_id=38025144]
+lod_bias = 0.001
+
+[node name="Cylinder_098" parent="Heizungsrrohre" index="74" unique_id=765380810]
+lod_bias = 0.001
+
+[node name="Cylinder_099" parent="Heizungsrrohre" index="75" unique_id=855174914]
+lod_bias = 0.001
+
+[node name="Cylinder_100" parent="Heizungsrrohre" index="76" unique_id=1992891571]
+lod_bias = 0.001
+
+[node name="Cylinder_102" parent="Heizungsrrohre" index="77" unique_id=1965146674]
+lod_bias = 0.001
+
+[node name="Cylinder_103" parent="Heizungsrrohre" index="78" unique_id=11835317]
+lod_bias = 0.001
+
+[node name="Cylinder_104" parent="Heizungsrrohre" index="79" unique_id=1879100359]
+lod_bias = 0.001
+
+[node name="Cylinder_113" parent="Heizungsrrohre" index="80" unique_id=429687017]
+lod_bias = 0.001
+
+[node name="Cylinder_114" parent="Heizungsrrohre" index="81" unique_id=1679159575]
+lod_bias = 0.001
+
+[node name="Cylinder_115" parent="Heizungsrrohre" index="82" unique_id=1085190172]
+lod_bias = 0.001
+
+[node name="Cylinder_116" parent="Heizungsrrohre" index="83" unique_id=1784352468]
+lod_bias = 0.001
+
+[node name="Cylinder_120" parent="Heizungsrrohre" index="84" unique_id=287688786]
+lod_bias = 0.001
+
+[node name="Cylinder_121" parent="Heizungsrrohre" index="85" unique_id=1093724111]
+lod_bias = 0.001
+
+[node name="Cylinder_122" parent="Heizungsrrohre" index="86" unique_id=1009560084]
+lod_bias = 0.001
+
+[node name="Cylinder_123" parent="Heizungsrrohre" index="87" unique_id=2053664085]
+lod_bias = 0.001
+
+[node name="Cylinder_124" parent="Heizungsrrohre" index="88" unique_id=628039206]
+lod_bias = 0.001
+
+[node name="Cylinder_125" parent="Heizungsrrohre" index="89" unique_id=70135229]
+lod_bias = 0.001
+
+[node name="Cylinder_127" parent="Heizungsrrohre" index="90" unique_id=2011857443]
+lod_bias = 0.001
+
+[node name="Cylinder_128" parent="Heizungsrrohre" index="91" unique_id=2033454825]
+lod_bias = 0.001
+
+[node name="Cylinder_129" parent="Heizungsrrohre" index="92" unique_id=889977750]
+lod_bias = 0.001
+
+[node name="Cylinder_134" parent="Heizungsrrohre" index="93" unique_id=665162176]
+lod_bias = 0.001
+
+[node name="Cylinder_135" parent="Heizungsrrohre" index="94" unique_id=1321693170]
+lod_bias = 0.001
+
+[node name="Cylinder_136" parent="Heizungsrrohre" index="95" unique_id=755024154]
+lod_bias = 0.001
+
+[node name="Cylinder_137" parent="Heizungsrrohre" index="96" unique_id=283577047]
+lod_bias = 0.001
+
+[node name="Cylinder_138" parent="Heizungsrrohre" index="97" unique_id=1268046329]
+lod_bias = 0.001
+
+[node name="Cylinder_139" parent="Heizungsrrohre" index="98" unique_id=1321072260]
+lod_bias = 0.001
+
+[node name="Cylinder_140" parent="Heizungsrrohre" index="99" unique_id=1566160092]
+lod_bias = 0.001
+
+[node name="Cylinder_141" parent="Heizungsrrohre" index="100" unique_id=746119164]
+lod_bias = 0.001
+
+[node name="Cylinder_151" parent="Heizungsrrohre" index="101" unique_id=604641937]
+lod_bias = 0.001
+
+[node name="Cylinder_152" parent="Heizungsrrohre" index="102" unique_id=329799308]
+lod_bias = 0.001
+
+[node name="Cylinder_153" parent="Heizungsrrohre" index="103" unique_id=866370395]
+lod_bias = 0.001
+
+[node name="Cylinder_158" parent="Heizungsrrohre" index="104" unique_id=886185985]
+lod_bias = 0.001
+
+[node name="Cylinder_159" parent="Heizungsrrohre" index="105" unique_id=199390443]
+lod_bias = 0.001
+
+[node name="Cylinder_160" parent="Heizungsrrohre" index="106" unique_id=1910641393]
+lod_bias = 0.001
+
+[node name="Cylinder_164" parent="Heizungsrrohre" index="107" unique_id=1367090953]
+lod_bias = 0.001
+
+[node name="Cylinder_165" parent="Heizungsrrohre" index="108" unique_id=2026495154]
+lod_bias = 0.001
+
+[node name="Cylinder_166" parent="Heizungsrrohre" index="109" unique_id=55633671]
+lod_bias = 0.001
+
+[node name="Cylinder_167" parent="Heizungsrrohre" index="110" unique_id=1799422346]
+lod_bias = 0.001
+
+[node name="Cylinder_173" parent="Heizungsrrohre" index="111" unique_id=342446223]
+lod_bias = 0.001
+
+[node name="Cylinder_176" parent="Heizungsrrohre" index="112" unique_id=268266381]
+lod_bias = 0.001
+
+[node name="Cylinder_179" parent="Heizungsrrohre" index="113" unique_id=704462456]
+lod_bias = 0.001
+
+[node name="Cylinder_180" parent="Heizungsrrohre" index="114" unique_id=262743144]
+lod_bias = 0.001
+
+[node name="Cylinder_295" parent="Heizungsrrohre" index="115" unique_id=480641681]
+lod_bias = 0.001
+
+[node name="Cylinder_296" parent="Heizungsrrohre" index="116" unique_id=88864115]
+lod_bias = 0.001
+
+[node name="Cylinder_297" parent="Heizungsrrohre" index="117" unique_id=1124183288]
+lod_bias = 0.001
+
+[node name="Cylinder_298" parent="Heizungsrrohre" index="118" unique_id=55108140]
+lod_bias = 0.001
+
+[node name="Cylinder_299" parent="Heizungsrrohre" index="119" unique_id=1468476542]
+lod_bias = 0.001
+
+[node name="Cylinder_300" parent="Heizungsrrohre" index="120" unique_id=1325345068]
+lod_bias = 0.001
+
+[node name="Cylinder_301" parent="Heizungsrrohre" index="121" unique_id=2007826471]
+lod_bias = 0.001
+
+[node name="Cylinder_302" parent="Heizungsrrohre" index="122" unique_id=1139282180]
+lod_bias = 0.001
+
+[node name="Cylinder_303" parent="Heizungsrrohre" index="123" unique_id=779291987]
+lod_bias = 0.001
+
+[node name="Cylinder_312" parent="Heizungsrrohre" index="124" unique_id=2001726910]
+lod_bias = 0.001
+
+[node name="Cylinder_313" parent="Heizungsrrohre" index="125" unique_id=1680911783]
+lod_bias = 0.001
+
+[node name="Cylinder_314" parent="Heizungsrrohre" index="126" unique_id=1059593732]
+lod_bias = 0.001
+
+[node name="Cylinder_315" parent="Heizungsrrohre" index="127" unique_id=811531151]
+lod_bias = 0.001
+
+[node name="Cylinder_316" parent="Heizungsrrohre" index="128" unique_id=1309712780]
+lod_bias = 0.001
+
+[node name="Cylinder_317" parent="Heizungsrrohre" index="129" unique_id=857171173]
+lod_bias = 0.001
+
+[node name="Cylinder_318" parent="Heizungsrrohre" index="130" unique_id=787075953]
+lod_bias = 0.001
+
+[node name="Cylinder_319" parent="Heizungsrrohre" index="131" unique_id=89092892]
+lod_bias = 0.001
+
+[node name="Cylinder_320" parent="Heizungsrrohre" index="132" unique_id=360156049]
+lod_bias = 0.001
+
+[node name="Cylinder_321" parent="Heizungsrrohre" index="133" unique_id=1521845420]
+lod_bias = 0.001
+
+[node name="Cylinder_322" parent="Heizungsrrohre" index="134" unique_id=1489176195]
+lod_bias = 0.001
+
+[node name="Cylinder_323" parent="Heizungsrrohre" index="135" unique_id=802767604]
+lod_bias = 0.001
+
+[node name="Cylinder_324" parent="Heizungsrrohre" index="136" unique_id=1417459809]
+lod_bias = 0.001
+
+[node name="Cylinder_325" parent="Heizungsrrohre" index="137" unique_id=981459809]
+lod_bias = 0.001
+
+[node name="Cylinder_351" parent="Heizungsrrohre" index="138" unique_id=579851956]
+lod_bias = 0.001
+
+[node name="Cylinder_352" parent="Heizungsrrohre" index="139" unique_id=464755793]
+lod_bias = 0.001
+
+[node name="Cylinder_353" parent="Heizungsrrohre" index="140" unique_id=436070262]
+lod_bias = 0.001
+
+[node name="Cylinder_354" parent="Heizungsrrohre" index="141" unique_id=1430786501]
+lod_bias = 0.001
+
+[node name="Cylinder_355" parent="Heizungsrrohre" index="142" unique_id=1150451766]
+lod_bias = 0.001
+
+[node name="Cylinder_356" parent="Heizungsrrohre" index="143" unique_id=1114275253]
+lod_bias = 0.001
+
+[node name="Cylinder_357" parent="Heizungsrrohre" index="144" unique_id=483742450]
+lod_bias = 0.001
+
+[node name="Cylinder_358" parent="Heizungsrrohre" index="145" unique_id=1883734098]
+lod_bias = 0.001
+
+[node name="Cylinder_456" parent="Heizungsrrohre" index="146" unique_id=136053374]
+lod_bias = 0.001
+
+[node name="Cylinder_457" parent="Heizungsrrohre" index="147" unique_id=1090502376]
+lod_bias = 0.001
+
+[node name="Cylinder_458" parent="Heizungsrrohre" index="148" unique_id=2057417452]
+lod_bias = 0.001
+
+[node name="Cylinder_459" parent="Heizungsrrohre" index="149" unique_id=1354774903]
+lod_bias = 0.001
+
+[node name="Cylinder_460" parent="Heizungsrrohre" index="150" unique_id=827936156]
+lod_bias = 0.001
+
+[node name="Cylinder_461" parent="Heizungsrrohre" index="151" unique_id=409711439]
+lod_bias = 0.001
+
+[node name="Cylinder_462" parent="Heizungsrrohre" index="152" unique_id=1123907091]
+lod_bias = 0.001
+
+[node name="Cylinder_463" parent="Heizungsrrohre" index="153" unique_id=2043064698]
+lod_bias = 0.001
+
+[node name="Cylinder_467" parent="Heizungsrrohre" index="154" unique_id=999392755]
+lod_bias = 0.001
+
+[node name="Cylinder_468" parent="Heizungsrrohre" index="155" unique_id=132219744]
+lod_bias = 0.001
+
+[node name="Cylinder_469" parent="Heizungsrrohre" index="156" unique_id=442014510]
+lod_bias = 0.001
+
+[node name="Entlueftungsventil-Heizung" parent="Heizungsrrohre" index="157" unique_id=876329413]
+lod_bias = 0.001
+
+[node name="Cylinder_190" parent="Heizungsrrohre/Entlueftungsventil-Heizung" index="0" unique_id=1961926423]
+lod_bias = 0.001
+
+[node name="Cylinder_191" parent="Heizungsrrohre/Entlueftungsventil-Heizung" index="1" unique_id=804620558]
+lod_bias = 0.001
+
+[node name="Cylinder_192" parent="Heizungsrrohre/Entlueftungsventil-Heizung" index="2" unique_id=1372266372]
+lod_bias = 0.001
+
+[node name="Cylinder_193" parent="Heizungsrrohre/Entlueftungsventil-Heizung" index="3" unique_id=881846177]
+lod_bias = 0.001
+
+[node name="Schild-Kurzschlusbrücke-3" parent="Heizungsrrohre" index="158" unique_id=874506941]
+lod_bias = 0.001
+
+[node name="Cube_141" parent="Heizungsrrohre/Schild-Kurzschlusbrücke-3" index="0" unique_id=1024968845]
+lod_bias = 0.001
+
+[node name="Schild-Kurzschlusbrücke-4" parent="Heizungsrrohre" index="159" unique_id=1487799660]
+lod_bias = 0.001
+
+[node name="Cube_138" parent="Heizungsrrohre/Schild-Kurzschlusbrücke-4" index="0" unique_id=753334029]
+lod_bias = 0.001
+
+[node name="Schild-Kurzschlussbrücke-1" parent="Heizungsrrohre" index="160" unique_id=91990926]
+lod_bias = 0.001
+
+[node name="Cube_142" parent="Heizungsrrohre/Schild-Kurzschlussbrücke-1" index="0" unique_id=1002221152]
+lod_bias = 0.001
+
+[node name="Schild-Kurzschlussbrücke-2" parent="Heizungsrrohre" index="161" unique_id=2142271113]
+lod_bias = 0.001
+
+[node name="Cube_145" parent="Heizungsrrohre/Schild-Kurzschlussbrücke-2" index="0" unique_id=1669439761]
+lod_bias = 0.001
+
+[node name="Schild-Rücklauf-Betriebsgebäude" parent="Heizungsrrohre" index="162" unique_id=1075471733]
+lod_bias = 0.001
+
+[node name="Cube_135" parent="Heizungsrrohre/Schild-Rücklauf-Betriebsgebäude" index="0" unique_id=1084381126]
+lod_bias = 0.001
+
+[node name="Schild-Rücklauf-BHKW" parent="Heizungsrrohre" index="163" unique_id=679463933]
+lod_bias = 0.001
+
+[node name="Cube_131" parent="Heizungsrrohre/Schild-Rücklauf-BHKW" index="0" unique_id=1405146733]
+lod_bias = 0.001
+
+[node name="Schild-Rücklauf-Faulturm-1" parent="Heizungsrrohre" index="164" unique_id=1706023758]
+lod_bias = 0.001
+
+[node name="Cube_150" parent="Heizungsrrohre/Schild-Rücklauf-Faulturm-1" index="0" unique_id=1633546570]
+lod_bias = 0.001
+
+[node name="Schild-Rücklauf-Faulturm-2" parent="Heizungsrrohre" index="165" unique_id=68381220]
+lod_bias = 0.001
+
+[node name="Cube_148" parent="Heizungsrrohre/Schild-Rücklauf-Faulturm-2" index="0" unique_id=2016823232]
+lod_bias = 0.001
+
+[node name="Schild-Vorlauf-Betriebsgebäude" parent="Heizungsrrohre" index="166" unique_id=416624697]
+lod_bias = 0.001
+
+[node name="Cube_136" parent="Heizungsrrohre/Schild-Vorlauf-Betriebsgebäude" index="0" unique_id=1792072773]
+lod_bias = 0.001
+
+[node name="Schild-Vorlauf-BHKW" parent="Heizungsrrohre" index="167" unique_id=535628181]
+lod_bias = 0.001
+
+[node name="Cube_132" parent="Heizungsrrohre/Schild-Vorlauf-BHKW" index="0" unique_id=1630227793]
+lod_bias = 0.001
+
+[node name="Schild-Vorlauf-Faulturm-1" parent="Heizungsrrohre" index="168" unique_id=843050276]
+lod_bias = 0.001
+
+[node name="Cube_147" parent="Heizungsrrohre/Schild-Vorlauf-Faulturm-1" index="0" unique_id=238528208]
+lod_bias = 0.001
+
+[node name="Schild-Vorlauf-Faulturm-2" parent="Heizungsrrohre" index="169" unique_id=1071281042]
+lod_bias = 0.001
+
+[node name="Cube_152" parent="Heizungsrrohre/Schild-Vorlauf-Faulturm-2" index="0" unique_id=479857104]
+lod_bias = 0.001
+
+[node name="Schild-Vorlauf-Kesselpumpe" parent="Heizungsrrohre" index="170" unique_id=1988483760]
+lod_bias = 0.001
+
+[node name="Cube_156" parent="Heizungsrrohre/Schild-Vorlauf-Kesselpumpe" index="0" unique_id=1443944140]
+lod_bias = 0.001
+
+[node name="Schilf-Rücklauf-Kesselpumpe" parent="Heizungsrrohre" index="171" unique_id=2114890554]
+lod_bias = 0.001
+
+[node name="Cube_155" parent="Heizungsrrohre/Schilf-Rücklauf-Kesselpumpe" index="0" unique_id=288042920]
+lod_bias = 0.001
+
+[node name="Überdruckventil" parent="Heizungsrrohre" index="172" unique_id=1222340460]
+lod_bias = 0.001
+
+[node name="Cylinder_194" parent="Heizungsrrohre/Überdruckventil" index="0" unique_id=1533506916]
+lod_bias = 0.001
+
+[node name="Cylinder_195" parent="Heizungsrrohre/Überdruckventil" index="1" unique_id=2116018036]
+lod_bias = 0.001
+
+[node name="Schornstein" parent="." index="6" unique_id=1943906848]
+lod_bias = 0.001
+
+[node name="Cube_057" parent="Schornstein" index="0" unique_id=851163434]
+lod_bias = 0.001
+
+[node name="Cylinder_178" parent="Schornstein" index="1" unique_id=1696791452]
+lod_bias = 0.001
+
+[node name="Raumlueftung" parent="." index="7" unique_id=21403739]
+lod_bias = 0.001
+
+[node name="Cube_047" parent="Raumlueftung" index="0" unique_id=2065370388]
+lod_bias = 0.001
+
+[node name="Cylinder_250" parent="Raumlueftung" index="1" unique_id=342734782]
+lod_bias = 0.001
+
+[node name="Cylinder_251" parent="Raumlueftung" index="2" unique_id=332582614]
+lod_bias = 0.001
+
+[node name="Cylinder_252" parent="Raumlueftung" index="3" unique_id=2044875114]
+lod_bias = 0.001
+
+[node name="Cylinder_253" parent="Raumlueftung" index="4" unique_id=837576731]
+lod_bias = 0.001
+
+[node name="Heizkessel" parent="." index="9" unique_id=1583077713]
+lod_bias = 0.001
+
+[node name="Brenner" parent="Heizkessel" index="0" unique_id=1798611410]
+lod_bias = 0.001
+
+[node name="Cylinder_175" parent="Heizkessel/Brenner" index="0" unique_id=1633200365]
+lod_bias = 0.001
+
+[node name="Plane_027" parent="Heizkessel/Brenner" index="1" unique_id=201385638]
+lod_bias = 0.001
+
+[node name="Plane_028" parent="Heizkessel/Brenner" index="2" unique_id=1455791383]
+lod_bias = 0.001
+
+[node name="Plane_029" parent="Heizkessel/Brenner" index="3" unique_id=796791692]
+lod_bias = 0.001
+
+[node name="Plane_030" parent="Heizkessel/Brenner" index="4" unique_id=1562574181]
+lod_bias = 0.001
+
+[node name="Plane_031" parent="Heizkessel/Brenner" index="5" unique_id=436131525]
+lod_bias = 0.001
+
+[node name="Plane_032" parent="Heizkessel/Brenner" index="6" unique_id=1108026206]
+lod_bias = 0.001
+
+[node name="Plane_033" parent="Heizkessel/Brenner" index="7" unique_id=2071008732]
+lod_bias = 0.001
+
+[node name="Plane_035" parent="Heizkessel/Brenner" index="8" unique_id=737600945]
+lod_bias = 0.001
+
+[node name="Plane_036" parent="Heizkessel/Brenner" index="9" unique_id=165998529]
+lod_bias = 0.001
+
+[node name="Plane_037" parent="Heizkessel/Brenner" index="10" unique_id=291933259]
+lod_bias = 0.001
+
+[node name="Brennersteuerung" parent="Heizkessel" index="1" unique_id=1941289679]
+lod_bias = 0.001
+
+[node name="Cube_059" parent="Heizkessel/Brennersteuerung" index="0" unique_id=721377416]
+lod_bias = 0.001
+
+[node name="Cube_060" parent="Heizkessel/Brennersteuerung" index="1" unique_id=1385393210]
+lod_bias = 0.001
+
+[node name="Cube_061" parent="Heizkessel/Brennersteuerung" index="2" unique_id=25775429]
+lod_bias = 0.001
+
+[node name="Cube_062" parent="Heizkessel/Brennersteuerung" index="3" unique_id=1090818884]
+lod_bias = 0.001
+
+[node name="Cube_064" parent="Heizkessel/Brennersteuerung" index="4" unique_id=850442534]
+lod_bias = 0.001
+
+[node name="Cylinder_196" parent="Heizkessel/Brennersteuerung" index="5" unique_id=1442103728]
+lod_bias = 0.001
+
+[node name="Cylinder_199" parent="Heizkessel/Brennersteuerung" index="6" unique_id=966413285]
+lod_bias = 0.001
+
+[node name="Kippschalter-An-Aus" parent="Heizkessel/Brennersteuerung" index="7" unique_id=1676487037]
+lod_bias = 0.001
+
+[node name="Plane_041" parent="Heizkessel/Brennersteuerung" index="8" unique_id=964271670]
+lod_bias = 0.001
+
+[node name="Temperaturregler-Heizung" parent="Heizkessel/Brennersteuerung" index="9" unique_id=1108435355]
+lod_bias = 0.001
+
+[node name="Cylinder_197" parent="Heizkessel/Brennersteuerung/Temperaturregler-Heizung" index="0" unique_id=1446024346]
+lod_bias = 0.001
+
+[node name="Cube_051" parent="Heizkessel" index="2" unique_id=1783857601]
+lod_bias = 0.001
+
+[node name="Plane_025" parent="Heizkessel" index="3" unique_id=86049548]
+lod_bias = 0.001
+
+[node name="Plane_034" parent="Heizkessel" index="4" unique_id=989824845]
+lod_bias = 0.001
+
+[node name="Cube_052" parent="." index="10" unique_id=1772970835]
+lod_bias = 0.001
+
+[node name="Schaltschrank-2" parent="." index="11" unique_id=1816755089]
+lod_bias = 0.001
+
+[node name="Cube_053" parent="Schaltschrank-2" index="0" unique_id=514452808]
+lod_bias = 0.001
+
+[node name="Cube_056" parent="." index="12" unique_id=491049011]
+lod_bias = 0.001
+
+[node name="Rohre-Erdgas" parent="." index="13" unique_id=956175548]
+lod_bias = 0.001
+
+[node name="Cube_065" parent="Rohre-Erdgas" index="0" unique_id=1600518015]
+lod_bias = 0.001
+
+[node name="Cube_066" parent="Rohre-Erdgas" index="1" unique_id=1441390436]
+lod_bias = 0.001
+
+[node name="Cube_067" parent="Rohre-Erdgas" index="2" unique_id=76534848]
+lod_bias = 0.001
+
+[node name="Cube_068" parent="Rohre-Erdgas" index="3" unique_id=1381281536]
+lod_bias = 0.001
+
+[node name="Cube_069" parent="Rohre-Erdgas" index="4" unique_id=1378086230]
+lod_bias = 0.001
+
+[node name="Cube_070" parent="Rohre-Erdgas" index="5" unique_id=1813242049]
+lod_bias = 0.001
+
+[node name="Cube_071" parent="Rohre-Erdgas" index="6" unique_id=1742853256]
+lod_bias = 0.001
+
+[node name="Cube_072" parent="Rohre-Erdgas" index="7" unique_id=2003836936]
+lod_bias = 0.001
+
+[node name="Cube_073" parent="Rohre-Erdgas" index="8" unique_id=171459867]
+lod_bias = 0.001
+
+[node name="Cube_074" parent="Rohre-Erdgas" index="9" unique_id=765220106]
+lod_bias = 0.001
+
+[node name="Cube_075" parent="Rohre-Erdgas" index="10" unique_id=945804881]
+lod_bias = 0.001
+
+[node name="Cube_076" parent="Rohre-Erdgas" index="11" unique_id=277114744]
+lod_bias = 0.001
+
+[node name="Cube_077" parent="Rohre-Erdgas" index="12" unique_id=2044132639]
+lod_bias = 0.001
+
+[node name="Cube_078" parent="Rohre-Erdgas" index="13" unique_id=1259547199]
+lod_bias = 0.001
+
+[node name="Cube_079" parent="Rohre-Erdgas" index="14" unique_id=284773879]
+lod_bias = 0.001
+
+[node name="Cube_080" parent="Rohre-Erdgas" index="15" unique_id=594259020]
+lod_bias = 0.001
+
+[node name="Cube_081" parent="Rohre-Erdgas" index="16" unique_id=1887210918]
+lod_bias = 0.001
+
+[node name="Cube_082" parent="Rohre-Erdgas" index="17" unique_id=289615838]
+lod_bias = 0.001
+
+[node name="Cube_083" parent="Rohre-Erdgas" index="18" unique_id=1872533948]
+lod_bias = 0.001
+
+[node name="Cube_084" parent="Rohre-Erdgas" index="19" unique_id=1883241626]
+lod_bias = 0.001
+
+[node name="Cube_085" parent="Rohre-Erdgas" index="20" unique_id=518329844]
+lod_bias = 0.001
+
+[node name="Cube_086" parent="Rohre-Erdgas" index="21" unique_id=2048466265]
+lod_bias = 0.001
+
+[node name="Cube_087" parent="Rohre-Erdgas" index="22" unique_id=1794561107]
+lod_bias = 0.001
+
+[node name="Cube_088" parent="Rohre-Erdgas" index="23" unique_id=1469451459]
+lod_bias = 0.001
+
+[node name="Cube_089" parent="Rohre-Erdgas" index="24" unique_id=682880366]
+lod_bias = 0.001
+
+[node name="Cube_090" parent="Rohre-Erdgas" index="25" unique_id=1976984748]
+lod_bias = 0.001
+
+[node name="Cube_091" parent="Rohre-Erdgas" index="26" unique_id=438163555]
+lod_bias = 0.001
+
+[node name="Cube_092" parent="Rohre-Erdgas" index="27" unique_id=2000236280]
+lod_bias = 0.001
+
+[node name="Cube_105" parent="Rohre-Erdgas" index="28" unique_id=458153028]
+lod_bias = 0.001
+
+[node name="Cube_106" parent="Rohre-Erdgas" index="29" unique_id=1121538001]
+lod_bias = 0.001
+
+[node name="Cylinder_174" parent="Rohre-Erdgas" index="30" unique_id=2755130]
+lod_bias = 0.001
+
+[node name="Cylinder_200" parent="Rohre-Erdgas" index="31" unique_id=126192500]
+lod_bias = 0.001
+
+[node name="Cylinder_208" parent="Rohre-Erdgas" index="32" unique_id=571264554]
+lod_bias = 0.001
+
+[node name="Cylinder_209" parent="Rohre-Erdgas" index="33" unique_id=2117551283]
+lod_bias = 0.001
+
+[node name="Cylinder_210" parent="Rohre-Erdgas" index="34" unique_id=812068894]
+lod_bias = 0.001
+
+[node name="Cylinder_211" parent="Rohre-Erdgas" index="35" unique_id=670453825]
+lod_bias = 0.001
+
+[node name="Cylinder_212" parent="Rohre-Erdgas" index="36" unique_id=364083806]
+lod_bias = 0.001
+
+[node name="Cylinder_213" parent="Rohre-Erdgas" index="37" unique_id=1168470522]
+lod_bias = 0.001
+
+[node name="Cylinder_214" parent="Rohre-Erdgas" index="38" unique_id=490419282]
+lod_bias = 0.001
+
+[node name="Cylinder_215" parent="Rohre-Erdgas" index="39" unique_id=1580410225]
+lod_bias = 0.001
+
+[node name="Cylinder_216" parent="Rohre-Erdgas" index="40" unique_id=287895333]
+lod_bias = 0.001
+
+[node name="Cylinder_217" parent="Rohre-Erdgas" index="41" unique_id=830437441]
+lod_bias = 0.001
+
+[node name="Cylinder_218" parent="Rohre-Erdgas" index="42" unique_id=2042054718]
+lod_bias = 0.001
+
+[node name="Cylinder_219" parent="Rohre-Erdgas" index="43" unique_id=241553375]
+lod_bias = 0.001
+
+[node name="Cylinder_220" parent="Rohre-Erdgas" index="44" unique_id=2071291571]
+lod_bias = 0.001
+
+[node name="Cylinder_221" parent="Rohre-Erdgas" index="45" unique_id=948429936]
+lod_bias = 0.001
+
+[node name="Cylinder_222" parent="Rohre-Erdgas" index="46" unique_id=512934281]
+lod_bias = 0.001
+
+[node name="Cylinder_223" parent="Rohre-Erdgas" index="47" unique_id=2077503611]
+lod_bias = 0.001
+
+[node name="Cylinder_224" parent="Rohre-Erdgas" index="48" unique_id=1719650328]
+lod_bias = 0.001
+
+[node name="Cylinder_225" parent="Rohre-Erdgas" index="49" unique_id=67257164]
+lod_bias = 0.001
+
+[node name="Cylinder_226" parent="Rohre-Erdgas" index="50" unique_id=39578609]
+lod_bias = 0.001
+
+[node name="Cylinder_227" parent="Rohre-Erdgas" index="51" unique_id=312034356]
+lod_bias = 0.001
+
+[node name="Cylinder_228" parent="Rohre-Erdgas" index="52" unique_id=566159459]
+lod_bias = 0.001
+
+[node name="Cylinder_229" parent="Rohre-Erdgas" index="53" unique_id=1963270055]
+lod_bias = 0.001
+
+[node name="Cylinder_230" parent="Rohre-Erdgas" index="54" unique_id=1880538841]
+lod_bias = 0.001
+
+[node name="Cylinder_231" parent="Rohre-Erdgas" index="55" unique_id=1560245758]
+lod_bias = 0.001
+
+[node name="Cylinder_232" parent="Rohre-Erdgas" index="56" unique_id=1233662761]
+lod_bias = 0.001
+
+[node name="Cylinder_233" parent="Rohre-Erdgas" index="57" unique_id=1117284517]
+lod_bias = 0.001
+
+[node name="Cylinder_234" parent="Rohre-Erdgas" index="58" unique_id=1914931029]
+lod_bias = 0.001
+
+[node name="Cylinder_235" parent="Rohre-Erdgas" index="59" unique_id=1366390853]
+lod_bias = 0.001
+
+[node name="Cylinder_236" parent="Rohre-Erdgas" index="60" unique_id=1723606364]
+lod_bias = 0.001
+
+[node name="Cylinder_237" parent="Rohre-Erdgas" index="61" unique_id=954803456]
+lod_bias = 0.001
+
+[node name="Cylinder_238" parent="Rohre-Erdgas" index="62" unique_id=2050407354]
+lod_bias = 0.001
+
+[node name="Cylinder_239" parent="Rohre-Erdgas" index="63" unique_id=1725697362]
+lod_bias = 0.001
+
+[node name="Cylinder_240" parent="Rohre-Erdgas" index="64" unique_id=407658649]
+lod_bias = 0.001
+
+[node name="Cylinder_241" parent="Rohre-Erdgas" index="65" unique_id=1888803514]
+lod_bias = 0.001
+
+[node name="Cylinder_242" parent="Rohre-Erdgas" index="66" unique_id=1118976652]
+lod_bias = 0.001
+
+[node name="Cylinder_243" parent="Rohre-Erdgas" index="67" unique_id=134076196]
+lod_bias = 0.001
+
+[node name="Cylinder_244" parent="Rohre-Erdgas" index="68" unique_id=1371931502]
+lod_bias = 0.001
+
+[node name="Cylinder_245" parent="Rohre-Erdgas" index="69" unique_id=633581814]
+lod_bias = 0.001
+
+[node name="Cylinder_246" parent="Rohre-Erdgas" index="70" unique_id=794553421]
+lod_bias = 0.001
+
+[node name="Cylinder_247" parent="Rohre-Erdgas" index="71" unique_id=1305687878]
+lod_bias = 0.001
+
+[node name="Cylinder_248" parent="Rohre-Erdgas" index="72" unique_id=1926965770]
+lod_bias = 0.001
+
+[node name="Cylinder_249" parent="Rohre-Erdgas" index="73" unique_id=635174722]
+lod_bias = 0.001
+
+[node name="Cylinder_281" parent="Rohre-Erdgas" index="74" unique_id=593992643]
+lod_bias = 0.001
+
+[node name="Cylinder_282" parent="Rohre-Erdgas" index="75" unique_id=2082386973]
+lod_bias = 0.001
+
+[node name="Cylinder_290" parent="Rohre-Erdgas" index="76" unique_id=1048890306]
+lod_bias = 0.001
+
+[node name="Cylinder_291" parent="Rohre-Erdgas" index="77" unique_id=1425895016]
+lod_bias = 0.001
+
+[node name="Cylinder_292" parent="Rohre-Erdgas" index="78" unique_id=689474036]
+lod_bias = 0.001
+
+[node name="Cylinder_293" parent="Rohre-Erdgas" index="79" unique_id=966200504]
+lod_bias = 0.001
+
+[node name="Cylinder_294" parent="Rohre-Erdgas" index="80" unique_id=313557080]
+lod_bias = 0.001
+
+[node name="mbar-Erdgas" parent="Rohre-Erdgas" index="81" unique_id=1746070818]
+lod_bias = 0.001
+
+[node name="Cylinder_284" parent="Rohre-Erdgas/mbar-Erdgas" index="0" unique_id=1584707461]
+lod_bias = 0.001
+
+[node name="Cylinder_285" parent="Rohre-Erdgas/mbar-Erdgas" index="1" unique_id=930099251]
+lod_bias = 0.001
+
+[node name="Cylinder_286" parent="Rohre-Erdgas/mbar-Erdgas" index="2" unique_id=720350426]
+lod_bias = 0.001
+
+[node name="Cylinder_287" parent="Rohre-Erdgas/mbar-Erdgas" index="3" unique_id=1705773540]
+lod_bias = 0.001
+
+[node name="Cylinder_288" parent="Rohre-Erdgas/mbar-Erdgas" index="4" unique_id=1766058175]
+lod_bias = 0.001
+
+[node name="Cylinder_289" parent="Rohre-Erdgas/mbar-Erdgas" index="5" unique_id=1544319098]
+lod_bias = 0.001
+
+[node name="Zeiger_013" parent="Rohre-Erdgas/mbar-Erdgas" index="6" unique_id=66136096]
+lod_bias = 0.001
+
+[node name="mbar-Erdgas-2" parent="Rohre-Erdgas" index="82" unique_id=1225355788]
+lod_bias = 0.001
+
+[node name="Cylinder_201" parent="Rohre-Erdgas/mbar-Erdgas-2" index="0" unique_id=1069086194]
+lod_bias = 0.001
+
+[node name="Cylinder_202" parent="Rohre-Erdgas/mbar-Erdgas-2" index="1" unique_id=1515475001]
+lod_bias = 0.001
+
+[node name="Cylinder_203" parent="Rohre-Erdgas/mbar-Erdgas-2" index="2" unique_id=1605646125]
+lod_bias = 0.001
+
+[node name="Cylinder_204" parent="Rohre-Erdgas/mbar-Erdgas-2" index="3" unique_id=1819139815]
+lod_bias = 0.001
+
+[node name="Cylinder_205" parent="Rohre-Erdgas/mbar-Erdgas-2" index="4" unique_id=1629959997]
+lod_bias = 0.001
+
+[node name="Cylinder_206" parent="Rohre-Erdgas/mbar-Erdgas-2" index="5" unique_id=169142887]
+lod_bias = 0.001
+
+[node name="Zeiger_020" parent="Rohre-Erdgas/mbar-Erdgas-2" index="6" unique_id=1056364003]
+lod_bias = 0.001
+
+[node name="Abluft" parent="." index="14" unique_id=1102479029]
+lod_bias = 0.001
+
+[node name="Cylinder_304" parent="Abluft" index="0" unique_id=694970935]
+lod_bias = 0.001
+
+[node name="Cylinder_305" parent="Abluft" index="1" unique_id=945772872]
+lod_bias = 0.001
+
+[node name="Cylinder_306" parent="Abluft" index="2" unique_id=1664887659]
+lod_bias = 0.001
+
+[node name="Cylinder_307" parent="Abluft" index="3" unique_id=196503839]
+lod_bias = 0.001
+
+[node name="Cylinder_308" parent="Abluft" index="4" unique_id=464763807]
+lod_bias = 0.001
+
+[node name="Cylinder_309" parent="Abluft" index="5" unique_id=511652148]
+lod_bias = 0.001
+
+[node name="Cylinder_310" parent="Abluft" index="6" unique_id=1050331912]
+lod_bias = 0.001
+
+[node name="Cylinder_311" parent="Abluft" index="7" unique_id=1007545936]
+lod_bias = 0.001
+
+[node name="Plane_052" parent="Abluft" index="8" unique_id=2070645467]
+lod_bias = 0.001
+
+[node name="Plane_053" parent="Abluft" index="9" unique_id=441921917]
+lod_bias = 0.001
+
+[node name="Plane_054" parent="Abluft" index="10" unique_id=1115337153]
+lod_bias = 0.001
+
+[node name="Plane_055" parent="Abluft" index="11" unique_id=1191865624]
+lod_bias = 0.001
+
+[node name="Rohre-Klärgas" parent="." index="15" unique_id=682601186]
+lod_bias = 0.001
+
+[node name="Cube_093" parent="Rohre-Klärgas" index="0" unique_id=798413591]
+lod_bias = 0.001
+
+[node name="Cube_094" parent="Rohre-Klärgas" index="1" unique_id=513597698]
+lod_bias = 0.001
+
+[node name="Cube_095" parent="Rohre-Klärgas" index="2" unique_id=714041325]
+lod_bias = 0.001
+
+[node name="Cube_096" parent="Rohre-Klärgas" index="3" unique_id=1154323619]
+lod_bias = 0.001
+
+[node name="Cube_097" parent="Rohre-Klärgas" index="4" unique_id=200479943]
+lod_bias = 0.001
+
+[node name="Cube_098" parent="Rohre-Klärgas" index="5" unique_id=377112169]
+lod_bias = 0.001
+
+[node name="Cube_099" parent="Rohre-Klärgas" index="6" unique_id=264886941]
+lod_bias = 0.001
+
+[node name="Cube_100" parent="Rohre-Klärgas" index="7" unique_id=311616197]
+lod_bias = 0.001
+
+[node name="Cube_101" parent="Rohre-Klärgas" index="8" unique_id=1187213248]
+lod_bias = 0.001
+
+[node name="Cube_102" parent="Rohre-Klärgas" index="9" unique_id=1932358009]
+lod_bias = 0.001
+
+[node name="Cube_103" parent="Rohre-Klärgas" index="10" unique_id=461587883]
+lod_bias = 0.001
+
+[node name="Cube_104" parent="Rohre-Klärgas" index="11" unique_id=1293389606]
+lod_bias = 0.001
+
+[node name="Cube_117" parent="Rohre-Klärgas" index="12" unique_id=1559960054]
+lod_bias = 0.001
+
+[node name="Cube_118" parent="Rohre-Klärgas" index="13" unique_id=1775653535]
+lod_bias = 0.001
+
+[node name="Cube_119" parent="Rohre-Klärgas" index="14" unique_id=811030951]
+lod_bias = 0.001
+
+[node name="Cube_120" parent="Rohre-Klärgas" index="15" unique_id=1999728846]
+lod_bias = 0.001
+
+[node name="Cube_121" parent="Rohre-Klärgas" index="16" unique_id=1828921238]
+lod_bias = 0.001
+
+[node name="Cube_122" parent="Rohre-Klärgas" index="17" unique_id=644844262]
+lod_bias = 0.001
+
+[node name="Cube_123" parent="Rohre-Klärgas" index="18" unique_id=752906306]
+lod_bias = 0.001
+
+[node name="Cube_124" parent="Rohre-Klärgas" index="19" unique_id=829932998]
+lod_bias = 0.001
+
+[node name="Cube_125" parent="Rohre-Klärgas" index="20" unique_id=493856186]
+lod_bias = 0.001
+
+[node name="Cube_126" parent="Rohre-Klärgas" index="21" unique_id=1653276040]
+lod_bias = 0.001
+
+[node name="Cylinder_172" parent="Rohre-Klärgas" index="22" unique_id=1982051131]
+lod_bias = 0.001
+
+[node name="Cylinder_254" parent="Rohre-Klärgas" index="23" unique_id=345526680]
+lod_bias = 0.001
+
+[node name="Cylinder_255" parent="Rohre-Klärgas" index="24" unique_id=917673146]
+lod_bias = 0.001
+
+[node name="Cylinder_256" parent="Rohre-Klärgas" index="25" unique_id=844676495]
+lod_bias = 0.001
+
+[node name="Cylinder_264" parent="Rohre-Klärgas" index="26" unique_id=1881900765]
+lod_bias = 0.001
+
+[node name="Cylinder_266" parent="Rohre-Klärgas" index="27" unique_id=1287522207]
+lod_bias = 0.001
+
+[node name="Cylinder_267" parent="Rohre-Klärgas" index="28" unique_id=1278121479]
+lod_bias = 0.001
+
+[node name="Cylinder_268" parent="Rohre-Klärgas" index="29" unique_id=1519997396]
+lod_bias = 0.001
+
+[node name="Cylinder_269" parent="Rohre-Klärgas" index="30" unique_id=1351260288]
+lod_bias = 0.001
+
+[node name="Cylinder_270" parent="Rohre-Klärgas" index="31" unique_id=760662893]
+lod_bias = 0.001
+
+[node name="Cylinder_271" parent="Rohre-Klärgas" index="32" unique_id=116018654]
+lod_bias = 0.001
+
+[node name="Cylinder_272" parent="Rohre-Klärgas" index="33" unique_id=1502407540]
+lod_bias = 0.001
+
+[node name="Cylinder_273" parent="Rohre-Klärgas" index="34" unique_id=1568622575]
+lod_bias = 0.001
+
+[node name="Cylinder_274" parent="Rohre-Klärgas" index="35" unique_id=1374537995]
+lod_bias = 0.001
+
+[node name="Cylinder_275" parent="Rohre-Klärgas" index="36" unique_id=807796679]
+lod_bias = 0.001
+
+[node name="Cylinder_276" parent="Rohre-Klärgas" index="37" unique_id=172539080]
+lod_bias = 0.001
+
+[node name="Cylinder_277" parent="Rohre-Klärgas" index="38" unique_id=692961523]
+lod_bias = 0.001
+
+[node name="Cylinder_278" parent="Rohre-Klärgas" index="39" unique_id=11429727]
+lod_bias = 0.001
+
+[node name="Cylinder_279" parent="Rohre-Klärgas" index="40" unique_id=752684636]
+lod_bias = 0.001
+
+[node name="Cylinder_280" parent="Rohre-Klärgas" index="41" unique_id=1058416534]
+lod_bias = 0.001
+
+[node name="Cylinder_359" parent="Rohre-Klärgas" index="42" unique_id=461775847]
+lod_bias = 0.001
+
+[node name="Cylinder_360" parent="Rohre-Klärgas" index="43" unique_id=886850374]
+lod_bias = 0.001
+
+[node name="Cylinder_361" parent="Rohre-Klärgas" index="44" unique_id=1722972473]
+lod_bias = 0.001
+
+[node name="Cylinder_362" parent="Rohre-Klärgas" index="45" unique_id=810950067]
+lod_bias = 0.001
+
+[node name="Cylinder_363" parent="Rohre-Klärgas" index="46" unique_id=2132907179]
+lod_bias = 0.001
+
+[node name="Cylinder_364" parent="Rohre-Klärgas" index="47" unique_id=71703368]
+lod_bias = 0.001
+
+[node name="Cylinder_365" parent="Rohre-Klärgas" index="48" unique_id=1241753388]
+lod_bias = 0.001
+
+[node name="Cylinder_366" parent="Rohre-Klärgas" index="49" unique_id=183472760]
+lod_bias = 0.001
+
+[node name="Cylinder_367" parent="Rohre-Klärgas" index="50" unique_id=1748902441]
+lod_bias = 0.001
+
+[node name="Cylinder_368" parent="Rohre-Klärgas" index="51" unique_id=885564316]
+lod_bias = 0.001
+
+[node name="Cylinder_369" parent="Rohre-Klärgas" index="52" unique_id=847353568]
+lod_bias = 0.001
+
+[node name="Cylinder_370" parent="Rohre-Klärgas" index="53" unique_id=346207126]
+lod_bias = 0.001
+
+[node name="Cylinder_385" parent="Rohre-Klärgas" index="54" unique_id=1590672096]
+lod_bias = 0.001
+
+[node name="Cylinder_386" parent="Rohre-Klärgas" index="55" unique_id=288736569]
+lod_bias = 0.001
+
+[node name="Cylinder_387" parent="Rohre-Klärgas" index="56" unique_id=1274372063]
+lod_bias = 0.001
+
+[node name="Cylinder_388" parent="Rohre-Klärgas" index="57" unique_id=1349128376]
+lod_bias = 0.001
+
+[node name="Cylinder_389" parent="Rohre-Klärgas" index="58" unique_id=1244975280]
+lod_bias = 0.001
+
+[node name="Cylinder_390" parent="Rohre-Klärgas" index="59" unique_id=1032684689]
+lod_bias = 0.001
+
+[node name="Cylinder_391" parent="Rohre-Klärgas" index="60" unique_id=1546455449]
+lod_bias = 0.001
+
+[node name="Cylinder_392" parent="Rohre-Klärgas" index="61" unique_id=36380254]
+lod_bias = 0.001
+
+[node name="Cylinder_393" parent="Rohre-Klärgas" index="62" unique_id=176027248]
+lod_bias = 0.001
+
+[node name="Cylinder_394" parent="Rohre-Klärgas" index="63" unique_id=1865654289]
+lod_bias = 0.001
+
+[node name="Cylinder_395" parent="Rohre-Klärgas" index="64" unique_id=1122959491]
+lod_bias = 0.001
+
+[node name="Cylinder_396" parent="Rohre-Klärgas" index="65" unique_id=648455519]
+lod_bias = 0.001
+
+[node name="mbar-Klärgas" parent="Rohre-Klärgas" index="66" unique_id=901963080]
+lod_bias = 0.001
+
+[node name="Cylinder_371" parent="Rohre-Klärgas/mbar-Klärgas" index="0" unique_id=346565976]
+lod_bias = 0.001
+
+[node name="Cylinder_372" parent="Rohre-Klärgas/mbar-Klärgas" index="1" unique_id=473027332]
+lod_bias = 0.001
+
+[node name="Cylinder_373" parent="Rohre-Klärgas/mbar-Klärgas" index="2" unique_id=1684238360]
+lod_bias = 0.001
+
+[node name="Cylinder_374" parent="Rohre-Klärgas/mbar-Klärgas" index="3" unique_id=630905016]
+lod_bias = 0.001
+
+[node name="Cylinder_375" parent="Rohre-Klärgas/mbar-Klärgas" index="4" unique_id=308539125]
+lod_bias = 0.001
+
+[node name="Cylinder_376" parent="Rohre-Klärgas/mbar-Klärgas" index="5" unique_id=210473207]
+lod_bias = 0.001
+
+[node name="Zeiger_014" parent="Rohre-Klärgas/mbar-Klärgas" index="6" unique_id=1096438537]
+lod_bias = 0.001
+
+[node name="mbar-Klärgas-2" parent="Rohre-Klärgas" index="67" unique_id=1360128327]
+lod_bias = 0.001
+
+[node name="Cylinder_379" parent="Rohre-Klärgas/mbar-Klärgas-2" index="0" unique_id=1910168514]
+lod_bias = 0.001
+
+[node name="Cylinder_380" parent="Rohre-Klärgas/mbar-Klärgas-2" index="1" unique_id=1902033447]
+lod_bias = 0.001
+
+[node name="Cylinder_381" parent="Rohre-Klärgas/mbar-Klärgas-2" index="2" unique_id=691415389]
+lod_bias = 0.001
+
+[node name="Cylinder_382" parent="Rohre-Klärgas/mbar-Klärgas-2" index="3" unique_id=878626772]
+lod_bias = 0.001
+
+[node name="Cylinder_383" parent="Rohre-Klärgas/mbar-Klärgas-2" index="4" unique_id=1212991846]
+lod_bias = 0.001
+
+[node name="Cylinder_384" parent="Rohre-Klärgas/mbar-Klärgas-2" index="5" unique_id=1245787430]
+lod_bias = 0.001
+
+[node name="Zeiger_015" parent="Rohre-Klärgas/mbar-Klärgas-2" index="6" unique_id=229085572]
+lod_bias = 0.001
+
+[node name="mbar-Klärgas-2_001" parent="Rohre-Klärgas" index="68" unique_id=1097222505]
+lod_bias = 0.001
+
+[node name="Cylinder_258" parent="Rohre-Klärgas/mbar-Klärgas-2_001" index="0" unique_id=537199504]
+lod_bias = 0.001
+
+[node name="Cylinder_259" parent="Rohre-Klärgas/mbar-Klärgas-2_001" index="1" unique_id=1897136246]
+lod_bias = 0.001
+
+[node name="Cylinder_260" parent="Rohre-Klärgas/mbar-Klärgas-2_001" index="2" unique_id=261988755]
+lod_bias = 0.001
+
+[node name="Cylinder_261" parent="Rohre-Klärgas/mbar-Klärgas-2_001" index="3" unique_id=156293088]
+lod_bias = 0.001
+
+[node name="Cylinder_262" parent="Rohre-Klärgas/mbar-Klärgas-2_001" index="4" unique_id=353832979]
+lod_bias = 0.001
+
+[node name="Cylinder_263" parent="Rohre-Klärgas/mbar-Klärgas-2_001" index="5" unique_id=1905283978]
+lod_bias = 0.001
+
+[node name="Zeiger_021" parent="Rohre-Klärgas/mbar-Klärgas-2_001" index="6" unique_id=1366744432]
+lod_bias = 0.001
+
+[node name="Plattenwärmetauscher" parent="." index="16" unique_id=1368482191]
+lod_bias = 0.001
+
+[node name="bar-1" parent="Plattenwärmetauscher" index="0" unique_id=848739414]
+lod_bias = 0.001
+
+[node name="Cylinder_437" parent="Plattenwärmetauscher/bar-1" index="0" unique_id=1238731507]
+lod_bias = 0.001
+
+[node name="Cylinder_438" parent="Plattenwärmetauscher/bar-1" index="1" unique_id=2146637696]
+lod_bias = 0.001
+
+[node name="Cylinder_439" parent="Plattenwärmetauscher/bar-1" index="2" unique_id=1724787181]
+lod_bias = 0.001
+
+[node name="Cylinder_441" parent="Plattenwärmetauscher/bar-1" index="3" unique_id=307892365]
+lod_bias = 0.001
+
+[node name="Cylinder_442" parent="Plattenwärmetauscher/bar-1" index="4" unique_id=665310996]
+lod_bias = 0.001
+
+[node name="Plane_072" parent="Plattenwärmetauscher/bar-1" index="5" unique_id=5475543]
+lod_bias = 0.001
+
+[node name="Plane_073" parent="Plattenwärmetauscher/bar-1" index="6" unique_id=852915359]
+lod_bias = 0.001
+
+[node name="Zeiger_019" parent="Plattenwärmetauscher/bar-1" index="7" unique_id=828516002]
+lod_bias = 0.001
+
+[node name="bar-2" parent="Plattenwärmetauscher" index="1" unique_id=52159549]
+lod_bias = 0.001
+
+[node name="Cylinder_431" parent="Plattenwärmetauscher/bar-2" index="0" unique_id=1426384583]
+lod_bias = 0.001
+
+[node name="Cylinder_432" parent="Plattenwärmetauscher/bar-2" index="1" unique_id=392050097]
+lod_bias = 0.001
+
+[node name="Cylinder_434" parent="Plattenwärmetauscher/bar-2" index="2" unique_id=1622546610]
+lod_bias = 0.001
+
+[node name="Cylinder_435" parent="Plattenwärmetauscher/bar-2" index="3" unique_id=84953979]
+lod_bias = 0.001
+
+[node name="Cylinder_436" parent="Plattenwärmetauscher/bar-2" index="4" unique_id=1156832854]
+lod_bias = 0.001
+
+[node name="Plane_068" parent="Plattenwärmetauscher/bar-2" index="5" unique_id=934219635]
+lod_bias = 0.001
+
+[node name="Plane_069" parent="Plattenwärmetauscher/bar-2" index="6" unique_id=1226753836]
+lod_bias = 0.001
+
+[node name="Zeiger_016" parent="Plattenwärmetauscher/bar-2" index="7" unique_id=1505010049]
+lod_bias = 0.001
+
+[node name="Cube_128" parent="Plattenwärmetauscher" index="2" unique_id=746359338]
+lod_bias = 0.001
+
+[node name="Cube_7481" parent="Plattenwärmetauscher" index="3" unique_id=1539578460]
+lod_bias = 0.001
+
+[node name="Cube_7482" parent="Plattenwärmetauscher" index="4" unique_id=1579274170]
+lod_bias = 0.001
+
+[node name="Cube_7483" parent="Plattenwärmetauscher" index="5" unique_id=200092994]
+lod_bias = 0.001
+
+[node name="Cube_7584" parent="Plattenwärmetauscher" index="6" unique_id=439221834]
+lod_bias = 0.001
+
+[node name="Cylinder_13855" parent="Plattenwärmetauscher" index="7" unique_id=123669896]
+lod_bias = 0.001
+
+[node name="Cylinder_14054" parent="Plattenwärmetauscher" index="8" unique_id=1612802369]
+lod_bias = 0.001
+
+[node name="Cylinder_400" parent="Plattenwärmetauscher" index="9" unique_id=317952013]
+lod_bias = 0.001
+
+[node name="Cylinder_401" parent="Plattenwärmetauscher" index="10" unique_id=1264055943]
+lod_bias = 0.001
+
+[node name="Cylinder_402" parent="Plattenwärmetauscher" index="11" unique_id=1043993743]
+lod_bias = 0.001
+
+[node name="Cylinder_403" parent="Plattenwärmetauscher" index="12" unique_id=983313824]
+lod_bias = 0.001
+
+[node name="Cylinder_404" parent="Plattenwärmetauscher" index="13" unique_id=120579272]
+lod_bias = 0.001
+
+[node name="Cylinder_405" parent="Plattenwärmetauscher" index="14" unique_id=1041873127]
+lod_bias = 0.001
+
+[node name="Cylinder_406" parent="Plattenwärmetauscher" index="15" unique_id=693483052]
+lod_bias = 0.001
+
+[node name="Cylinder_407" parent="Plattenwärmetauscher" index="16" unique_id=1357606315]
+lod_bias = 0.001
+
+[node name="Cylinder_408" parent="Plattenwärmetauscher" index="17" unique_id=1184050027]
+lod_bias = 0.001
+
+[node name="Cylinder_409" parent="Plattenwärmetauscher" index="18" unique_id=572643605]
+lod_bias = 0.001
+
+[node name="Cylinder_410" parent="Plattenwärmetauscher" index="19" unique_id=827559115]
+lod_bias = 0.001
+
+[node name="Cylinder_411" parent="Plattenwärmetauscher" index="20" unique_id=2109655514]
+lod_bias = 0.001
+
+[node name="Cylinder_412" parent="Plattenwärmetauscher" index="21" unique_id=876997770]
+lod_bias = 0.001
+
+[node name="Cylinder_413" parent="Plattenwärmetauscher" index="22" unique_id=93824070]
+lod_bias = 0.001
 visibility_range_end = 10.0
+
+[node name="Cylinder_414" parent="Plattenwärmetauscher" index="23" unique_id=533686986]
+lod_bias = 0.001
+
+[node name="Cylinder_415" parent="Plattenwärmetauscher" index="24" unique_id=1249665521]
+lod_bias = 0.001
+
+[node name="Cylinder_416" parent="Plattenwärmetauscher" index="25" unique_id=196188447]
+lod_bias = 0.001
+
+[node name="Cylinder_447" parent="Plattenwärmetauscher" index="26" unique_id=824111609]
+lod_bias = 0.001
+
+[node name="Cylinder_448" parent="Plattenwärmetauscher" index="27" unique_id=242099437]
+lod_bias = 0.001
+
+[node name="Cylinder_449" parent="Plattenwärmetauscher" index="28" unique_id=488791974]
+lod_bias = 0.001
+
+[node name="Cylinder_450" parent="Plattenwärmetauscher" index="29" unique_id=670158855]
+lod_bias = 0.001
+
+[node name="Cylinder_451" parent="Plattenwärmetauscher" index="30" unique_id=1175445690]
+lod_bias = 0.001
+
+[node name="Cylinder_452" parent="Plattenwärmetauscher" index="31" unique_id=1557095853]
+lod_bias = 0.001
+
+[node name="Cylinder_453" parent="Plattenwärmetauscher" index="32" unique_id=780803395]
+lod_bias = 0.001
+
+[node name="Cylinder_454" parent="Plattenwärmetauscher" index="33" unique_id=1431131243]
+lod_bias = 0.001
+
+[node name="Cylinder_455" parent="Plattenwärmetauscher" index="34" unique_id=227961276]
+lod_bias = 0.001
+
+[node name="Plane_482" parent="Plattenwärmetauscher" index="35" unique_id=1926323647]
+lod_bias = 0.001
