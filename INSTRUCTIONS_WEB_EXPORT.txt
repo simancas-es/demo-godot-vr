@@ -1,0 +1,33 @@
+For the web export we must compile first a new web export template with:
+module_raycast_enabled=yes
+This is because otherwise occlusion objects will not work in the browser.
+https://docs.godotengine.org/en/stable/classes/class_occluderinstance3d.html
+
+1)Installing SCons somewhere.
+python -m venv godot-build-env
+.\godot-build-env\Scripts\activate
+pip install scons
+
+2)Installing emscripten
+git clone https://github.com/emscripten-core/emsdk.git
+cd emsdk
+.\emsdk install latest
+.\emsdk activate latest
+.\emsdk_env.bat
+
+
+3)Download Godot Source.
+git clone https://github.com/godotengine/godot.git
+cd godot
+git checkout 4.6.2-stable (Or the current version)
+
+
+4)While inside the virtual environment, we compile with emscripten
+.\godot-build-env\Scripts\activate
+cd D:\VENV\emsdk
+.\emsdk_env.bat
+cd D:\VENV\emsdk\godot
+scons platform=web target=template_release module_raycast_enabled=yes
+scons platform=web target=template_debug module_raycast_enabled=yes
+
+5) Put the generated -zip files into a folder, add a version.txt with "4.6.2-stable" (or whatever version), rename the files to web_dlink_debug.zip and web_dlink_release.zip. Make the folder into a zip, rename to .tzp, then import into Godot through Editor -> Template manager.
