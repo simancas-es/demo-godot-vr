@@ -23,11 +23,11 @@
 [ext_resource type="Script" uid="uid://dy2m1pvy8p77b" path="res://clases/fpv/inventory_logic.gd" id="21_6mu4w"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8q5hm"]
-radius = 0.374904
+radius = 0.25
 height = 1.7
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2ykp4"]
-radius = 0.374904
+radius = 0.24951172
 height = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8q5hm"]
