@@ -42,8 +42,6 @@
 [ext_resource type="Script" uid="uid://drjdsvo6t4b31" path="res://XR/zones_xr/zone_xr_hillersleben/eis_lanze/eislanze_tip.gd" id="35_8vbyn"]
 [ext_resource type="Script" uid="uid://da5ajj1xsgk0e" path="res://XR/zones_xr/zone_xr_hillersleben/sampler/area_3d_beaker.gd" id="35_hbpbv"]
 [ext_resource type="Script" uid="uid://c0rh1lgxdkj8x" path="res://XR/zones_xr/zone_xr_hillersleben/wire/wire_snap_task.gd" id="35_pq2yi"]
-[ext_resource type="Script" uid="uid://da2e25r2dsswh" path="res://XR/zones_xr/zone_xr_hillersleben/xr_q_nh_4.gd" id="37_a2s05"]
-[ext_resource type="PackedScene" uid="uid://1uanemwpfr1s" path="res://zones/hillersleben/scripts/button/button.tscn" id="38_xbb2l"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4n540"]
 size = Vector3(0.91015625, 6.8653564, 0.05)
@@ -745,48 +743,6 @@ transform = Transform3D(0.235, 0, 0, 0, 0.235, 0, 0, 0, 0.235, 0, 0, -0.15553284
 [node name="Label3D" type="Label3D" parent="snap_interaction_wire/MeshInstance3D" unique_id=1594907893]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.77300376, 0.1890142)
 text = "Fix the damaged wire!"
-
-[node name="XR_Q_NH4" type="Node3D" parent="." unique_id=1837247464]
-script = ExtResource("37_a2s05")
-
-[node name="Buttons" type="Node3D" parent="XR_Q_NH4" unique_id=1170439550]
-visible = false
-
-[node name="ButtonS" parent="XR_Q_NH4/Buttons" unique_id=402882587 instance=ExtResource("38_xbb2l")]
-transform = Transform3D(0.19792652, 0, 0.1070051, 0, 0.225, 0, -0.1070051, 0, 0.19792652, -87.233734, 52.835434, 29.274427)
-disable_hand_pose = true
-
-[node name="ButtonC" parent="XR_Q_NH4/Buttons" unique_id=972358232 instance=ExtResource("38_xbb2l")]
-transform = Transform3D(0.19792652, 0, 0.1070051, 0, 0.225, 0, -0.1070051, 0, 0.19792652, -87.2096, 52.835434, 29.261383)
-disable_hand_pose = true
-
-[node name="ButtonM" parent="XR_Q_NH4/Buttons" unique_id=2103705697 instance=ExtResource("38_xbb2l")]
-transform = Transform3D(0.19792652, 0, 0.1070051, 0, 0.225, 0, -0.1070051, 0, 0.19792652, -87.18726, 52.835434, 29.249308)
-disable_hand_pose = true
-
-[node name="ButtonESC" parent="XR_Q_NH4/Buttons" unique_id=963462653 instance=ExtResource("38_xbb2l")]
-transform = Transform3D(0.19792652, 0, 0.1070051, 0, 0.225, 0, -0.1070051, 0, 0.19792652, -87.19618, 52.803185, 29.254131)
-disable_hand_pose = true
-
-[node name="ButtonOK" parent="XR_Q_NH4/Buttons" unique_id=2101802857 instance=ExtResource("38_xbb2l")]
-transform = Transform3D(0.19792652, 0, 0.1070051, 0, 0.225, 0, -0.1070051, 0, 0.19792652, -87.22986, 52.802586, 29.272339)
-disable_hand_pose = true
-
-[node name="ButtonUP" parent="XR_Q_NH4/Buttons" unique_id=583537037 instance=ExtResource("38_xbb2l")]
-transform = Transform3D(0.19792652, 0, 0.1070051, 0, 0.225, 0, -0.1070051, 0, 0.19792652, -87.22986, 52.817894, 29.272339)
-disable_hand_pose = true
-
-[node name="ButtonDOWN" parent="XR_Q_NH4/Buttons" unique_id=99518315 instance=ExtResource("38_xbb2l")]
-transform = Transform3D(0.19792652, 0, 0.1070051, 0, 0.225, 0, -0.1070051, 0, 0.19792652, -87.22986, 52.787605, 29.272339)
-disable_hand_pose = true
-
-[node name="ButtonLEFT" parent="XR_Q_NH4/Buttons" unique_id=1136520208 instance=ExtResource("38_xbb2l")]
-transform = Transform3D(0.19792652, 0, 0.1070051, 0, 0.225, 0, -0.1070051, 0, 0.19792652, -87.21699, 52.802734, 29.265377)
-disable_hand_pose = true
-
-[node name="ButtonRIGHT" parent="XR_Q_NH4/Buttons" unique_id=1132806325 instance=ExtResource("38_xbb2l")]
-transform = Transform3D(0.19792652, 0, 0.1070051, 0, 0.225, 0, -0.1070051, 0, 0.19792652, -87.2424, 52.802734, 29.279118)
-disable_hand_pose = true
 
 [node name="XR_SAMPLES" type="Node3D" parent="." unique_id=1792167276]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.03787, 50.99439, 21.16009)

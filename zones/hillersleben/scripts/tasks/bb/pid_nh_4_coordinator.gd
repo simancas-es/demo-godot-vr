@@ -13,6 +13,7 @@ extends Node3D
 const PID_SCREEN := preload("uid://nyrobrw4gmu1")
 
 @onready var pid_screen : PID_SCREEN = $"SubViewport/PID-NH4"
+@onready var nh4_label : Label3D = $nh4_dynamic
 
 @onready var pairs : Dictionary [Interaction, PID_SCREEN.BUTTONS] = {
 	button_s : PID_SCREEN.BUTTONS.S,
@@ -46,3 +47,24 @@ func set_target_nh4(value : float) -> void:
 func get_target_nh4() -> float:
 	return pid_screen.settings_target_current_values[pid_screen.POS_NH4]
 	
+
+var timer := 0.0
+func _process(delta: float) -> void:
+	timer += delta
+	if timer >= 2.0:
+		timer = 0.0
+		#HACK
+		var current_value_nh4 = self.get_target_nh4()
+		var random := randf_range(-0.4, +0.4)
+		current_value_nh4 += random
+		pid_screen.set_nh4_value ("%.1f" % current_value_nh4)
+		
+		match current_value_nh4:
+			var x when x < 2.0:
+				pid_screen.set_nh4_info_color(Color.hex(0x191c40ff))
+				pass # keep the blue color
+			var x when x < 10.0:
+				pid_screen.set_nh4_info_color(0xf7a717ff)
+			var x:
+				pid_screen.set_nh4_info_color(Color.RED)
+		

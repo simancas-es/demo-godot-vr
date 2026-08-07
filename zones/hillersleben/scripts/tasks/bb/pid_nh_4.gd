@@ -38,12 +38,14 @@ var settings_state = SETTINGS_STATE.SELECTING
 func show_settings(on : bool) -> void:
 	if on:
 		settings.visible = true
+		info.visible = false
 		current_menu = settings
 		settings_state = SETTINGS_STATE.SELECTING
 		settings_target_current_selected = -1
 		update_selected()
 	if not on:
 		settings.visible = false
+		info.visible = true
 		current_menu = info
 		
 func change_index(value : int) -> void:
@@ -134,4 +136,9 @@ func pass_controls(button : BUTTONS) -> void:
 		pass
 	pass
 	
+func set_nh4_value(value : String) -> void:
+	$Info/VBoxContainer/HBoxContainer2/nh4_realtime.text = value
 	
+func set_nh4_info_color(color : Color) -> void:
+	$Info/VBoxContainer/HBoxContainer2/nh4_realtime.modulate = color
+	pass

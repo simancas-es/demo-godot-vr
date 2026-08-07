@@ -65,10 +65,6 @@
 [ext_resource type="Script" uid="uid://fbjo68twdj4d" path="res://zones/hillersleben/scripts/clock-timer/clock_timer.gd" id="33_74kmu"]
 [ext_resource type="PackedScene" uid="uid://cpxsvtfvegtfx" path="res://assets/world_objects/hillersleben/clock/clock.gltf" id="33_lm2sk"]
 [ext_resource type="Script" uid="uid://dlr2ysaf72y02" path="res://zones/hillersleben/scripts/tasks/bb/bb_consumer.gd" id="35_mqa8n"]
-[ext_resource type="FontFile" uid="uid://v0hjg7a27smq" path="res://assets/fonts/FrutigerLTPro/FrutigerLTPro/FrutigerLTPro-Roman.otf" id="36_tb4lx"]
-[ext_resource type="Script" uid="uid://dbb00gqpvldte" path="res://zones/hillersleben/scripts/tasks/bb/pid_nh_4_coordinator.gd" id="37_qbqkw"]
-[ext_resource type="PackedScene" uid="uid://p4lu7gvj1nf5" path="res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn" id="37_tb4lx"]
-[ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="38_qbqkw"]
 [ext_resource type="Script" uid="uid://dfvukihleeewm" path="res://zones/hillersleben/scripts/ff/ff_controls.gd" id="41_h3ac7"]
 [ext_resource type="PackedScene" uid="uid://7ack1wecsniw" path="res://zones/hillersleben/scripts/valve_interaction/valve_interaction_xr_extended_bhkw.tscn" id="44_noa04"]
 [ext_resource type="PackedScene" uid="uid://crxgwph4b8oyu" path="res://zones/hillersleben/scripts/nkb/nkb_unit.tscn" id="47_rmdoo"]
@@ -78,6 +74,7 @@
 [ext_resource type="PackedScene" uid="uid://bmi6kmxotoqyh" path="res://content/inv_objects/beaker_sampler/beaker_sampler.tscn" id="51_2s6xu"]
 [ext_resource type="Script" uid="uid://kxc3xnclvbil" path="res://zones/hillersleben/scripts/nkb/nkb_consumer.gd" id="52_5sfkf"]
 [ext_resource type="Script" uid="uid://ccxo2fgfjxe6t" path="res://zones/hillersleben/scripts/samples/interact_take_sample.gd" id="52_52e7h"]
+[ext_resource type="PackedScene" uid="uid://rp3fltpoqy66" path="res://zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn" id="52_ngwpx"]
 [ext_resource type="PackedScene" uid="uid://bfrdngbmjhhms" path="res://assets/zones/hillersleben/models/raum_geblaese/2026-07-20-Gebläsestation.gltf" id="56_pwg26"]
 [ext_resource type="Script" uid="uid://0x6ihdxffl75" path="res://zones/hillersleben/scripts/hl_flow_model/init_setup.gd" id="57_5sfkf"]
 [ext_resource type="PackedScene" uid="uid://cvpmdoxt0gsjs" path="res://models/not_available_block.tscn" id="58_h3ac7"]
@@ -400,44 +397,6 @@ albedo_color = Color(0.8809239, 0, 0.25079548, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_5gq0c"]
 size = Vector2(1, 2)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_qbqkw"]
-size = Vector3(0.5076904, 0.25073242, 0.39990234)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_qaewh"]
-size = Vector3(0.5076904, 0.25073242, 0.39990234)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ijh67"]
-size = Vector3(0.5076904, 0.25073242, 0.39990234)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_fvi1l"]
-size = Vector3(0.5076904, 0.25073242, 0.39990234)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_vijfd"]
-size = Vector3(0.27825928, 0.25073242, 0.39990234)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_iibwe"]
-size = Vector3(0.27825928, 0.25073242, 0.39990234)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_k02vd"]
-size = Vector3(0.5076904, 0.25073242, 0.39990234)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_h3ac7"]
-size = Vector3(0.5076904, 0.25073242, 0.39990234)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_cp6hp"]
-size = Vector3(0.5076904, 0.25073242, 0.39990234)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_tb4lx"]
-size = Vector2(0.085, 0.07)
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_tb4lx"]
-viewport_path = NodePath("Reference_point_floor/Q_BB/PID_NH4/SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbqkw"]
-resource_local_to_scene = true
-transparency = 1
-albedo_texture = SubResource("ViewportTexture_tb4lx")
 
 [sub_resource type="Curve3D" id="Curve3D_cp6hp"]
 _data = {
@@ -2568,184 +2527,16 @@ script = ExtResource("35_mqa8n")
 [node name="TaskSequencer" parent="Reference_point_floor/Q_BB/bb_consumer" unique_id=2094104197 instance=ExtResource("5_cqg2i")]
 task_sequence = Array[int]([31])
 
-[node name="nh4_dynamic" type="Label3D" parent="Reference_point_floor/Q_BB" unique_id=355448995]
-transform = Transform3D(-0.038971145, 0, -0.022500003, 0, 0.045, 0, 0.022500003, 0, -0.038971145, -11.591716, 2.142334, 5.668806)
-modulate = Color(0.09803922, 0.10980392, 0.2509804, 1)
-text = "27.0"
-font = ExtResource("36_tb4lx")
-font_size = 42
-outline_size = 0
-horizontal_alignment = 2
-
 [node name="2mhoch" type="MeshInstance3D" parent="Reference_point_floor/Q_BB" unique_id=616368413]
 transform = Transform3D(-0.8660254, 1.2735279e-21, -0.50000006, 1.1764346e-21, 1, 5.094112e-22, 0.50000006, -1.4705433e-22, -0.8660254, -11.966194, 0.8787688, 5.020197)
 mesh = SubResource("QuadMesh_5gq0c")
-skeleton = NodePath("../PID_NH4")
+skeleton = NodePath("../PID_NH4_bb1")
 
-[node name="PID_NH4" type="Node3D" parent="Reference_point_floor/Q_BB" unique_id=1240056637]
-transform = Transform3D(-0.038971145, 4.5846996e-23, -0.022500003, 5.293956e-23, 0.044999998, -1.2621775e-29, 0.022500003, -2.6469792e-23, -0.038971145, -11.595725, 2.142334, 5.6618648)
-script = ExtResource("37_qbqkw")
+[node name="PID_NH4_bb1" parent="Reference_point_floor/Q_BB" unique_id=1515747559 instance=ExtResource("52_ngwpx")]
+transform = Transform3D(-0.5, 1.0188222e-21, 0.8660254, -3.2816614e-28, 1, -1.1764348e-21, -0.8660254, -5.8821755e-22, -0.5, -10.989242, -0.059574157, 5.5355163)
 
-[node name="inter_s" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=988453575]
-transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.7069092, -1.3388672, 0)
-script = ExtResource("38_qbqkw")
-time_rest_s = 0.3
-momentary_button = true
-string_on = "--"
-string_off = "Press[E]"
-string_not_initialized = "--"
-metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_s" unique_id=881456011]
-transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
-shape = SubResource("BoxShape3D_qbqkw")
-debug_color = Color(18.892002, 18.892002, 18.892002, 1)
-
-[node name="inter_up" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=543721322]
-transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.58288574, -1.6932373, 0)
-script = ExtResource("38_qbqkw")
-time_rest_s = 0.3
-momentary_button = true
-string_on = "--"
-string_off = "Press[E]"
-string_not_initialized = "--"
-metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_up" unique_id=1713869468]
-transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
-shape = SubResource("BoxShape3D_qaewh")
-debug_color = Color(18.892002, 18.892002, 18.892002, 1)
-
-[node name="inter_down" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=1022526634]
-transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.58288574, -2.3757324, 0)
-script = ExtResource("38_qbqkw")
-time_rest_s = 0.3
-momentary_button = true
-string_on = "--"
-string_off = "Press[E]"
-string_not_initialized = "--"
-metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_down" unique_id=554879529]
-transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
-shape = SubResource("BoxShape3D_ijh67")
-debug_color = Color(18.892002, 18.892002, 18.892002, 1)
-
-[node name="inter_right" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=1036927200]
-transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 1.0405273, -2.0257568, 0)
-script = ExtResource("38_qbqkw")
-time_rest_s = 0.3
-momentary_button = true
-string_on = "--"
-string_off = "Press[E]"
-string_not_initialized = "--"
-metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_right" unique_id=1167297486]
-transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
-shape = SubResource("BoxShape3D_fvi1l")
-debug_color = Color(18.892002, 18.892002, 18.892002, 1)
-
-[node name="inter_left" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=939411288]
-transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.16381836, -2.0280762, 6.1035156e-05)
-script = ExtResource("38_qbqkw")
-time_rest_s = 0.3
-momentary_button = true
-string_on = "--"
-string_off = "Press[E]"
-string_not_initialized = "--"
-metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_left" unique_id=1789503089]
-transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -6.149459e-19, 0, 0, 1, 0.083862305, 0.03918457, -0.06854248)
-shape = SubResource("BoxShape3D_vijfd")
-debug_color = Color(18.892002, 18.892002, 18.892002, 1)
-
-[node name="inter_ok" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=775763548]
-transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.504919, -2.0176494, 8.92682e-05)
-script = ExtResource("38_qbqkw")
-time_rest_s = 0.3
-momentary_button = true
-string_on = "--"
-string_off = "Press[E]"
-string_not_initialized = "--"
-metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_ok" unique_id=18288762]
-transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -6.149459e-19, 0, 0, 1, 0.083862305, 0.03918457, -0.06854248)
-shape = SubResource("BoxShape3D_iibwe")
-debug_color = Color(18.892002, 18.892002, 18.892002, 1)
-
-[node name="inter_esc" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=46596541]
-transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, -0.27563477, -2.0177002, 0)
-script = ExtResource("38_qbqkw")
-time_rest_s = 0.3
-momentary_button = true
-string_on = "--"
-string_off = "Press[E]"
-string_not_initialized = "--"
-metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_esc" unique_id=1900702438]
-transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
-shape = SubResource("BoxShape3D_k02vd")
-debug_color = Color(18.892002, 18.892002, 18.892002, 1)
-
-[node name="inter_c" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=8492643]
-transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, 0.13110352, -1.3388672, 0)
-script = ExtResource("38_qbqkw")
-time_rest_s = 0.3
-momentary_button = true
-string_on = "--"
-string_off = "Press[E]"
-string_not_initialized = "--"
-metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_c" unique_id=722924456]
-transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
-shape = SubResource("BoxShape3D_h3ac7")
-debug_color = Color(18.892002, 18.892002, 18.892002, 1)
-
-[node name="inter_m" type="Area3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=1487898082]
-transform = Transform3D(1, 0, -2.9802322e-08, -1.6940659e-21, 0.99999994, 1.6940659e-21, 0, 1.6940659e-21, 1, -0.46228027, -1.3388672, 0)
-script = ExtResource("38_qbqkw")
-time_rest_s = 0.3
-momentary_button = true
-string_on = "--"
-string_off = "Press[E]"
-string_not_initialized = "--"
-metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_BB/PID_NH4/inter_m" unique_id=827908298]
-transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
-shape = SubResource("BoxShape3D_cp6hp")
-debug_color = Color(18.892002, 18.892002, 18.892002, 1)
-
-[node name="SubViewport" type="SubViewport" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=357907367]
-disable_3d = true
-transparent_bg = true
-size = Vector2i(400, 400)
-render_target_update_mode = 4
-
-[node name="PID-NH4" parent="Reference_point_floor/Q_BB/PID_NH4/SubViewport" unique_id=507059483 instance=ExtResource("37_tb4lx")]
-offset_right = 0.0
-offset_bottom = 0.0
-settings_target_current_values = Array[float]([1.5])
-
-[node name="pid_menu" type="MeshInstance3D" parent="Reference_point_floor/Q_BB/PID_NH4" unique_id=516171818]
-transform = Transform3D(22.22222, -2.861023e-06, -3.5983703e-07, -4.9670524e-07, 4.967053e-06, -22.22222, 2.861023e-06, 22.222218, 5.145343e-06, 0.1586914, -0.13793945, 0.06933594)
-mesh = SubResource("PlaneMesh_tb4lx")
-skeleton = NodePath("../../nh4_dynamic")
-surface_material_override/0 = SubResource("StandardMaterial3D_qbqkw")
+[node name="PID_NH4_bb2" parent="Reference_point_floor/Q_BB" unique_id=1242797025 instance=ExtResource("52_ngwpx")]
+transform = Transform3D(0.14796469, 1.0188222e-21, -0.9889927, 4.30993e-22, 1, 1.0946429e-21, 0.9889927, -5.8821755e-22, 0.14796469, -15.680625, -0.02758792, 2.7042956)
 
 [node name="Q_FF" type="Node3D" parent="Reference_point_floor" unique_id=25270059]
 transform = Transform3D(0.922255, 0, 0.38658217, -2.5410988e-21, 0.99999976, 5.0821977e-21, -0.3865821, -5.0821977e-21, 0.92225474, -23.619364, 3.2452354, 32.617138)
@@ -4513,7 +4304,7 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0
 text = "DECANTERROOMABCDE"
 font = ExtResource("63_noa04")
 
-[node name="Referenz" parent="Visuals" unique_id=604252713 instance=ExtResource("15_h3jyd")]
+[node name="Referenz" parent="Visuals" unique_id=1862447665 instance=ExtResource("15_h3jyd")]
 
 [node name="Vorklärbecken" parent="Visuals" unique_id=1713468101 instance=ExtResource("79_pwg26")]
 transform = Transform3D(0.63771975, 0, 0.7702685, 0, 1, 0, -0.7702685, 0, 0.63771975, -60.024357, 50.357533, 14.85221)

@@ -1,0 +1,268 @@
+[gd_scene format=3 uid="uid://rp3fltpoqy66"]
+
+[ext_resource type="Script" uid="uid://dbb00gqpvldte" path="res://zones/hillersleben/scripts/tasks/bb/pid_nh_4_coordinator.gd" id="1_gvr88"]
+[ext_resource type="Script" uid="uid://dpyg0jwqi2bo5" path="res://clases/interaction/machinetoggleable.gd" id="2_m2cq8"]
+[ext_resource type="PackedScene" uid="uid://p4lu7gvj1nf5" path="res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn" id="3_4aonp"]
+[ext_resource type="PackedScene" uid="uid://0igee542f2ix" path="res://assets/zones/hillersleben/models/pid_steuerung_bb/pid_steuerung_bb.gltf" id="3_m2cq8"]
+[ext_resource type="PackedScene" uid="uid://dlywa8uy4gvx3" path="res://XR/zones_xr/zone_xr_hillersleben/pid_nh4_bb_xr/xr_q_nh_4.tscn" id="5_4aonp"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tb4lx"]
+resource_local_to_scene = true
+size = Vector2(0.085, 0.07)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_tb4lx"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qbqkw"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_tb4lx")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qbqkw"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qaewh"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijh67"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fvi1l"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vijfd"]
+size = Vector3(0.27825928, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iibwe"]
+size = Vector3(0.27825928, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k02vd"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h3ac7"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cp6hp"]
+size = Vector3(0.5076904, 0.25073242, 0.39990234)
+
+[node name="PID_NH4" type="Node3D" unique_id=1515747559]
+script = ExtResource("1_gvr88")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1384334562]
+disable_3d = true
+transparent_bg = true
+size = Vector2i(400, 400)
+render_target_update_mode = 4
+
+[node name="PID-NH4" parent="SubViewport" unique_id=507059483 instance=ExtResource("3_4aonp")]
+offset_right = 0.0
+offset_bottom = 0.0
+settings_target_current_values = Array[float]([1.5])
+
+[node name="pid_steuerung_bb" parent="." unique_id=13787626 instance=ExtResource("3_m2cq8")]
+
+[node name="pid_menu" type="MeshInstance3D" parent="." unique_id=1987614406]
+transform = Transform3D(7.54979e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, 7.54979e-08, -3.300118e-15, 0.21340974, 1.6495981, -0.10357025)
+mesh = SubResource("PlaneMesh_tb4lx")
+skeleton = NodePath("../../nh4_dynamic")
+surface_material_override/0 = SubResource("StandardMaterial3D_qbqkw")
+
+[node name="inter_s" type="Area3D" parent="." unique_id=304999682]
+transform = Transform3D(-2.1855695e-09, 8.470329e-23, 0.05, -8.470329e-23, 0.05, -8.4703296e-23, -0.05, -8.4703296e-23, -2.1855695e-09, 0.20994294, 1.596341, -0.13098115)
+script = ExtResource("2_m2cq8")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="inter_s" unique_id=1250168722]
+transform = Transform3D(0.05, -8.4703296e-23, 0, 8.4703296e-23, 0.05, 0, 0, 0, 0.05, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_qbqkw")
+debug_color = Color(18.892002, 18.892002, 18.892002, 1)
+
+[node name="Label3D" type="Label3D" parent="inter_s" unique_id=2064282929]
+transform = Transform3D(0.38, -5.04871e-29, 0, -2.019484e-28, 0.38, 2.8138986e-29, 0, 1.2911319e-28, 0.38, -0.13655996, 0, 0.08064461)
+text = "Settings"
+outline_size = 0
+
+[node name="inter_up" type="Area3D" parent="." unique_id=1213550058]
+transform = Transform3D(-2.1855695e-09, 8.470329e-23, 0.05, -8.470329e-23, 0.05, -8.4703296e-23, -0.05, -8.4703296e-23, -2.1855695e-09, 0.20994294, 1.5786226, -0.124779984)
+script = ExtResource("2_m2cq8")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="inter_up" unique_id=1365690066]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_qaewh")
+debug_color = Color(18.892002, 18.892002, 18.892002, 1)
+
+[node name="Label3D2" type="Label3D" parent="inter_up" unique_id=1318208823]
+transform = Transform3D(0.38, -1.5146129e-28, 0, -3.0292259e-28, 0.38, 2.8138986e-29, 0, 1.7960029e-28, 0.38, -0.045978546, 0.013994217, 0.08064461)
+text = "^
+"
+outline_size = 0
+
+[node name="inter_down" type="Area3D" parent="." unique_id=891305664]
+transform = Transform3D(-2.1855695e-09, 8.470329e-23, 0.05, -8.470329e-23, 0.05, -8.4703296e-23, -0.05, -8.4703296e-23, -2.1855695e-09, 0.20994294, 1.5444978, -0.124779984)
+script = ExtResource("2_m2cq8")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="inter_down" unique_id=1463330197]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_ijh67")
+debug_color = Color(18.892002, 18.892002, 18.892002, 1)
+
+[node name="Label3D3" type="Label3D" parent="inter_down" unique_id=654039540]
+transform = Transform3D(0.38, -3.0292259e-28, 0, -5.04871e-28, 0.38, 2.8138986e-29, 0, 3.8154865e-28, 0.38, -0.061320305, 0.10263634, 0.08064461)
+text = "v
+"
+outline_size = 0
+
+[node name="inter_right" type="Area3D" parent="." unique_id=1421969403]
+transform = Transform3D(-2.1855695e-09, 8.470329e-23, 0.05, -8.470329e-23, 0.05, -8.4703296e-23, -0.05, -8.4703296e-23, -2.1855695e-09, 0.20994294, 1.5619966, -0.14766206)
+script = ExtResource("2_m2cq8")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="inter_right" unique_id=610864719]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_fvi1l")
+debug_color = Color(18.892002, 18.892002, 18.892002, 1)
+
+[node name="Label3D4" type="Label3D" parent="inter_right" unique_id=1667360539]
+transform = Transform3D(0.38, -3.0292259e-28, 0, -5.04871e-28, 0.38, 2.8138986e-29, 0, 3.8154865e-28, 0.38, -0.17707872, 0.038677216, 0.08064461)
+text = ">
+"
+outline_size = 0
+
+[node name="inter_left" type="Area3D" parent="." unique_id=2083645816]
+transform = Transform3D(-2.1855695e-09, 8.470329e-23, 0.05, -8.470329e-23, 0.05, -8.4703296e-23, -0.05, -8.4703296e-23, -2.1855695e-09, 0.20994599, 1.5618806, -0.10382661)
+script = ExtResource("2_m2cq8")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="inter_left" unique_id=95937853]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -6.149459e-19, 0, 0, 1, 0.083862305, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_vijfd")
+debug_color = Color(18.892002, 18.892002, 18.892002, 1)
+
+[node name="Label3D5" type="Label3D" parent="inter_left" unique_id=1915250998]
+transform = Transform3D(0.38, -3.0292259e-28, 0, -5.04871e-28, 0.38, 2.8138986e-29, 0, 3.8154865e-28, 0.38, 0.023829937, 0.016300201, 0.08058357)
+text = "<
+"
+outline_size = 0
+
+[node name="inter_ok" type="Area3D" parent="." unique_id=1827013202]
+transform = Transform3D(-2.1855695e-09, 8.470329e-23, 0.05, -8.470329e-23, 0.05, -8.4703296e-23, -0.05, -8.4703296e-23, -2.1855695e-09, 0.2099474, 1.562402, -0.12088165)
+script = ExtResource("2_m2cq8")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="inter_ok" unique_id=735905145]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -6.149459e-19, 0, 0, 1, 0.083862305, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_iibwe")
+debug_color = Color(18.892002, 18.892002, 18.892002, 1)
+
+[node name="Label3D6" type="Label3D" parent="inter_ok" unique_id=693901169]
+transform = Transform3D(0.38, -4.543839e-28, 0, -7.0681937e-28, 0.38, 2.8138986e-29, 0, 4.8252287e-28, 0.38, 0.02847457, 0.02048111, 0.080555916)
+text = "Ok"
+outline_size = 0
+
+[node name="inter_esc" type="Area3D" parent="." unique_id=766287498]
+transform = Transform3D(-2.1855695e-09, 8.470329e-23, 0.05, -8.470329e-23, 0.05, -8.4703296e-23, -0.05, -8.4703296e-23, -2.1855695e-09, 0.20994294, 1.5623994, -0.081853956)
+script = ExtResource("2_m2cq8")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="inter_esc" unique_id=1263914040]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_k02vd")
+debug_color = Color(18.892002, 18.892002, 18.892002, 1)
+
+[node name="Label3D7" type="Label3D" parent="inter_esc" unique_id=1897460908]
+transform = Transform3D(0.38, -5.553581e-28, 0, -9.087678e-28, 0.38, 2.8138986e-29, 0, 6.339841e-28, 0.38, 0.0663563, 0.060720444, 0.08064461)
+text = "ESC"
+outline_size = 0
+
+[node name="inter_c" type="Area3D" parent="." unique_id=767589082]
+transform = Transform3D(-2.1855695e-09, 8.470329e-23, 0.05, -8.470329e-23, 0.05, -8.4703296e-23, -0.05, -8.4703296e-23, -2.1855695e-09, 0.20994294, 1.596341, -0.10219087)
+script = ExtResource("2_m2cq8")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="inter_c" unique_id=1044990223]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_h3ac7")
+debug_color = Color(18.892002, 18.892002, 18.892002, 1)
+
+[node name="Label3D8" type="Label3D" parent="inter_c" unique_id=1726918343]
+transform = Transform3D(0.38, -5.04871e-28, 0, -8.077936e-28, 0.38, 2.8138986e-29, 0, 5.8349707e-28, 0.38, -0.03717017, 1.9073486e-06, 0.08064461)
+text = "C"
+outline_size = 0
+
+[node name="inter_m" type="Area3D" parent="." unique_id=1293944138]
+transform = Transform3D(-2.1855695e-09, 8.470329e-23, 0.05, -8.470329e-23, 0.05, -8.4703296e-23, -0.05, -8.4703296e-23, -2.1855695e-09, 0.20994294, 1.596341, -0.07252167)
+script = ExtResource("2_m2cq8")
+time_rest_s = 0.3
+momentary_button = true
+string_on = "--"
+string_off = "Press[E]"
+string_not_initialized = "--"
+metadata/_custom_type_script = "uid://dpyg0jwqi2bo5"
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="inter_m" unique_id=1355740378]
+transform = Transform3D(1, 0, 2.0861626e-07, 1.6940659e-21, 1, -5.0483164e-19, 0, 0, 1, -0.030883789, 0.03918457, -0.06854248)
+shape = SubResource("BoxShape3D_cp6hp")
+debug_color = Color(18.892002, 18.892002, 18.892002, 1)
+
+[node name="Label3D9" type="Label3D" parent="inter_m" unique_id=1558391122]
+transform = Transform3D(0.38, -5.553581e-28, 0, -9.087678e-28, 0.38, 2.8138986e-29, 0, 6.339841e-28, 0.38, -0.011711121, 1.9073486e-06, 0.08064461)
+text = "M"
+outline_size = 0
+
+[node name="XR_Q_NH4" parent="." unique_id=1226921830 node_paths=PackedStringArray("q_controller") instance=ExtResource("5_4aonp")]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0.21620244, 1.5637941, -0.12260201)
+visible = false
+q_controller = NodePath("..")
+
+[editable path="XR_Q_NH4"]

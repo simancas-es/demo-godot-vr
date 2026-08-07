@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dlywa8uy4gvx3"]
+
+[ext_resource type="Script" uid="uid://da2e25r2dsswh" path="res://XR/zones_xr/zone_xr_hillersleben/xr_q_nh_4.gd" id="1_uhs2u"]
+[ext_resource type="PackedScene" uid="uid://1uanemwpfr1s" path="res://zones/hillersleben/scripts/button/button.tscn" id="2_jali4"]
+
+[node name="XR_Q_NH4" type="Node3D" unique_id=1226921830]
+script = ExtResource("1_uhs2u")
+
+[node name="Buttons" type="Node3D" parent="." unique_id=1706549455]
+
+[node name="ButtonS" parent="Buttons" unique_id=402882587 instance=ExtResource("2_jali4")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -0.019592285, 0.14598083, -2.2888184e-05)
+disable_hand_pose = true
+
+[node name="ButtonC" parent="Buttons" unique_id=774933359 instance=ExtResource("2_jali4")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0.10232544, 0.14598083, -1.5258789e-05)
+disable_hand_pose = true
+
+[node name="ButtonM" parent="Buttons" unique_id=48321555 instance=ExtResource("2_jali4")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0.21517944, 0.14598083, -1.5258789e-05)
+disable_hand_pose = true
+
+[node name="ButtonESC" parent="Buttons" unique_id=732721994 instance=ExtResource("2_jali4")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0.1701355, 0.0026550293, 0)
+disable_hand_pose = true
+
+[node name="ButtonOK" parent="Buttons" unique_id=1854696284 instance=ExtResource("2_jali4")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0, 0, 0)
+disable_hand_pose = true
+
+[node name="ButtonUP" parent="Buttons" unique_id=2049242536 instance=ExtResource("2_jali4")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0, 0.06802368, 0)
+disable_hand_pose = true
+
+[node name="ButtonDOWN" parent="Buttons" unique_id=427783570 instance=ExtResource("2_jali4")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0, -0.066589355, 0)
+disable_hand_pose = true
+
+[node name="ButtonLEFT" parent="Buttons" unique_id=1522571422 instance=ExtResource("2_jali4")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0.06500244, 0.00065612793, -7.6293945e-06)
+disable_hand_pose = true
+
+[node name="ButtonRIGHT" parent="Buttons" unique_id=1110372219 instance=ExtResource("2_jali4")]
+transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, -0.06338501, 0.00065612793, -1.5258789e-05)
+disable_hand_pose = true

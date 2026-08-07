@@ -1,7 +1,8 @@
 extends Node3D
 
 const CONTROLLER := preload("uid://dbb00gqpvldte")
-var q_controller : CONTROLLER
+#var q_controller : CONTROLLER
+@export var q_controller : CONTROLLER = null
 const XRBUTTON := preload("uid://bskfg6cqrrb1w")
 
 @onready var button_s : XRBUTTON = $Buttons/ButtonS
@@ -27,11 +28,11 @@ const XRBUTTON := preload("uid://bskfg6cqrrb1w")
 }
 
 func _ready() -> void:
-	find_q()
+	#find_q()
 	for key : XRBUTTON in pairs.keys():
 		key.on.connect(q_controller.on_click.bind(pairs[key]))
 	pass
 	
 	
-func find_q() -> void:
-	q_controller = get_tree().current_scene.find_child("PID_NH4", true, false)
+#func find_q() -> void:
+	#q_controller = get_tree().current_scene.find_child("PID_NH4", true, false)

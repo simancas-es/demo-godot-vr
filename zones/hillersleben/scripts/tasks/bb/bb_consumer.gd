@@ -29,9 +29,9 @@ func _on_next_task(task_id : int) -> void:
 ## LOGIC FOR TASKS
 #@export var blender_nh4_label_np : NodePath # $"Visuals/Referenz/B1-Steuerung-1/Text_012"
 #@onready var blender_nh4_label : MeshInstance3D = get_node(blender_nh4_label_np)
-@onready var nh4_label : Label3D = $"../nh4_dynamic"
+
 const COORDINATOR := preload("uid://dbb00gqpvldte")
-@onready var nh4_controller : COORDINATOR = $"../PID_NH4"
+@onready var nh4_controller : COORDINATOR = $"../PID_NH4_bb1"
 
 	
 func init_task_logic() -> void:
@@ -43,21 +43,6 @@ func _process(delta: float) -> void:
 	timer += delta
 	if timer >= 2.0:
 		timer = 0.0
-		#HACK
-		var current_value_nh4 = nh4_controller.get_target_nh4()
-		var random := randf_range(-0.4, +0.4)
-		current_value_nh4 += random
-		nh4_label.text = "%.1f" % current_value_nh4
-		
-		match current_value_nh4:
-			var x when x < 2.0:
-				nh4_label.modulate = Color.hex(0x191c40ff)
-				pass # keep the blue color
-			var x when x < 10.0:
-				nh4_label.modulate = Color.hex(0xf7a717ff)
-			var x:
-				nh4_label.modulate = Color.RED
-		
 		if task_nh4_active == true and nh4_controller.get_target_nh4() < 2.1:
 			task_nh4_active = false
 			target_concentration_fixed.emit()
