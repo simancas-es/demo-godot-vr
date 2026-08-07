@@ -793,14 +793,15 @@ visible = false
 billboard = 1
 text = "W_rot: xxx, V_rot: xxx"
 
-[node name="xr_dek_polymer_hose_intake" parent="." unique_id=934432335 instance=ExtResource("31_48yfo")]
+[node name="xr_dek_polymer_hose_intake" parent="." unique_id=934432335 groups=["EXCLUDED_BELTSNAP"] instance=ExtResource("31_48yfo")]
 transform = Transform3D(0.8869221, 0, 0.46191895, 0, 1, 0, -0.46191895, 0, 0.8869221, -1.9336076, 49.779465, 14.122163)
+enabled = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="xr_dek_polymer_hose_intake" unique_id=1771845357]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010193825, 0.2419548, -0.005490303)
 shape = SubResource("BoxShape3D_pwsyg")
 
-[node name="xr_dek_ibcleer" parent="." unique_id=535465585 instance=ExtResource("31_48yfo")]
+[node name="xr_dek_ibcleer" parent="." unique_id=535465585 groups=["EXCLUDED_BELTSNAP"] instance=ExtResource("31_48yfo")]
 transform = Transform3D(0.89987785, 0, 0.43614227, 0, 1, 0, -0.43614227, 0, 0.89987785, -2.0765126, 49.246456, 14.12667)
 ranged_grab_method = 0
 second_hand_grab = 2
@@ -813,8 +814,9 @@ debug_color = Color(17.3556, 0, 17.486006, 1)
 [node name="LogikGrabObjectSub" parent="xr_dek_ibcleer" unique_id=1807612470 node_paths=PackedStringArray("baseroot") instance=ExtResource("32_a2s05")]
 baseroot = NodePath("../../Zonehillersleben")
 unique_name_physics = "SysPhysControlIBCLeer"
+use_offset_origin = null
 
-[node name="xr_dek_ibc3" parent="." unique_id=501172678 instance=ExtResource("31_48yfo")]
+[node name="xr_dek_ibc3" parent="." unique_id=501172678 groups=["EXCLUDED_BELTSNAP"] instance=ExtResource("31_48yfo")]
 transform = Transform3D(0.93789506, 0, 0.34691927, 0, 1, 0, -0.34691927, 0, 0.93789506, -5.9748545, 49.249233, 15.624351)
 ranged_grab_method = 0
 second_hand_grab = 2
@@ -827,8 +829,9 @@ debug_color = Color(17.3556, 0, 17.486006, 1)
 [node name="LogikGrabObjectSub" parent="xr_dek_ibc3" unique_id=1798707948 node_paths=PackedStringArray("baseroot") instance=ExtResource("32_a2s05")]
 baseroot = NodePath("../../Zonehillersleben")
 unique_name_physics = "SysPhysControlIBC3"
+use_offset_origin = null
 
-[node name="xr_dek_ibc" parent="." unique_id=834394606 instance=ExtResource("31_48yfo")]
+[node name="xr_dek_ibc" parent="." unique_id=834394606 groups=["EXCLUDED_BELTSNAP"] instance=ExtResource("31_48yfo")]
 transform = Transform3D(0.11259627, 0, 0.9936409, 0, 1, 0, -0.9936409, 0, 0.11259627, -7.3785987, 49.278145, 11.718471)
 ranged_grab_method = 0
 second_hand_grab = 2
@@ -840,9 +843,10 @@ debug_color = Color(17.3556, 0, 17.486006, 1)
 
 [node name="LogikGrabObjectSub" parent="xr_dek_ibc" unique_id=1067512873 node_paths=PackedStringArray("baseroot") instance=ExtResource("32_a2s05")]
 baseroot = NodePath("../../Zonehillersleben")
-unique_name_physics = "SysPhysControlIBC3"
+unique_name_physics = "SysPhysControlIBC"
+use_offset_origin = null
 
-[node name="xr_dek_ibc2" parent="." unique_id=182742506 instance=ExtResource("31_48yfo")]
+[node name="xr_dek_ibc2" parent="." unique_id=182742506 groups=["EXCLUDED_BELTSNAP"] instance=ExtResource("31_48yfo")]
 transform = Transform3D(0.93789506, 0, 0.34691927, 0, 1, 0, -0.34691927, 0, 0.93789506, -4.9622116, 49.2786, 17.986311)
 ranged_grab_method = 0
 second_hand_grab = 2
@@ -855,8 +859,9 @@ debug_color = Color(17.3556, 0, 17.486006, 1)
 [node name="LogikGrabObjectSub" parent="xr_dek_ibc2" unique_id=1495190750 node_paths=PackedStringArray("baseroot") instance=ExtResource("32_a2s05")]
 baseroot = NodePath("../../Zonehillersleben")
 unique_name_physics = "SysPhysControlIBC2"
+use_offset_origin = null
 
-[node name="xr_dek_ibcVoll" parent="." unique_id=1435717573 instance=ExtResource("31_48yfo")]
+[node name="xr_dek_ibcVoll" parent="." unique_id=1435717573 groups=["EXCLUDED_BELTSNAP"] instance=ExtResource("31_48yfo")]
 transform = Transform3D(-0.37908468, 0, 0.92536205, 0, 1, 0, -0.92536205, 0, -0.37908468, 2.3184943, 50.09712, 20.989456)
 ranged_grab_method = 0
 second_hand_grab = 2
@@ -869,6 +874,7 @@ debug_color = Color(17.3556, 0, 17.486006, 1)
 [node name="LogikGrabObjectSub" parent="xr_dek_ibcVoll" unique_id=377506705 node_paths=PackedStringArray("baseroot") instance=ExtResource("32_a2s05")]
 baseroot = NodePath("../../Zonehillersleben")
 unique_name_physics = "SysPhysControlIBCVoll"
+use_offset_origin = null
 
 [node name="XR_WIRE" parent="." unique_id=1519224303 instance=ExtResource("31_48yfo")]
 transform = Transform3D(0.29759142, -0.9062844, 0.30014616, 0.9546933, 0.28250176, -0.09355981, 0, 0.31439015, 0.94929385, -28.079533, 50.308094, -8.528649)
