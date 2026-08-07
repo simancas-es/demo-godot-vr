@@ -2494,7 +2494,7 @@ text = "Hose-intake"
 metadata/_edit_lock_ = true
 
 [node name="spill" type="MeshInstance3D" parent="Reference_point_floor/Q_MG/Dekanter" unique_id=1821309272]
-transform = Transform3D(0.8945056, 0, -0.44705668, 0, 1, -1.6940659e-21, 0.44705668, 0, 0.8945056, -0.032203346, -0.045856476, 1.2994525)
+transform = Transform3D(0.8945056, 0, -0.44705668, 0, 1, -1.6940659e-21, 0.44705668, 0, 0.8945056, -0.032203346, -0.23402408, 1.2994525)
 mesh = SubResource("PlaneMesh_qfb7l")
 surface_material_override/0 = SubResource("ShaderMaterial_l5fi6")
 metadata/_edit_lock_ = true
