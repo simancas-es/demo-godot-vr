@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://btxmr3eks7gnm"]
+
+[ext_resource type="Script" uid="uid://6yf4je4071a8" path="res://systems/system-physics-control/system_physical_control_object.gd" id="1_5frwc"]
+[ext_resource type="PackedScene" uid="uid://jre6xhrgd8n1" path="res://assets/zones/hillersleben/models/büro_sitz/sitz_büro.gltf" id="2_qg676"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fg6cg"]
+size = Vector3(0.5361328, 0.097595215, 0.5449219)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ogvk6"]
+size = Vector3(0.024414063, 0.64525604, 0.02748108)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ixyvi"]
+size = Vector3(0.060302734, 0.1797781, 0.58118534)
+
+[node name="Sitz" type="RigidBody3D" unique_id=451235976]
+mass = 5.0
+script = ExtResource("1_5frwc")
+type = 0
+metadata/_custom_type_script = "uid://6yf4je4071a8"
+
+[node name="sitz_büro" parent="." unique_id=1658365482 instance=ExtResource("2_qg676")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1550611160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.62979126, 0)
+shape = SubResource("BoxShape3D_fg6cg")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=556800981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26464844, 0.30936813, 0.27854156)
+shape = SubResource("BoxShape3D_ogvk6")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1410969375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26464844, 0.30936813, -0.2807743)
+shape = SubResource("BoxShape3D_ogvk6")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=2006066710]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2563603, 0.30936813, -0.2807743)
+shape = SubResource("BoxShape3D_ogvk6")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="." unique_id=958909094]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2563603, 0.30936813, 0.28035736)
+shape = SubResource("BoxShape3D_ogvk6")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="." unique_id=23685863]
+transform = Transform3D(0.9733392, -0.22937028, 0, 0.22937028, 0.9733392, 0, 0, 0, 1, -0.29090837, 1.0043303, -0.0014238358)
+shape = SubResource("BoxShape3D_ixyvi")

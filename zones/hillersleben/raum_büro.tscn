@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://huq5kjq3c02r"]
+
+[ext_resource type="PackedScene" uid="uid://d3i2sfql4giwi" path="res://assets/zones/hillersleben/models/büro_raum/büro_raum.gltf" id="1_4haxy"]
+[ext_resource type="PackedScene" uid="uid://btxmr3eks7gnm" path="res://models/möbel/sitz.tscn" id="2_053mn"]
+
+[sub_resource type="QuadOccluder3D" id="QuadOccluder3D_4haxy"]
+size = Vector2(9.92849, 14.264032)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4haxy"]
+size = Vector3(9.89917, 0.1315918, 14.350708)
+
+[node name="raum_büro" type="Node3D" unique_id=1390667165]
+
+[node name="büro_raum" parent="." unique_id=666273594 instance=ExtResource("1_4haxy")]
+
+[node name="Sitz" parent="." unique_id=451235976 instance=ExtResource("2_053mn")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -3.2385821, 0, 1.2217402)
+
+[node name="Sitz2" parent="." unique_id=1331442459 instance=ExtResource("2_053mn")]
+transform = Transform3D(0.9360043, 0, -0.35198867, 0, 1, 0, 0.35198867, 0, 0.9360043, -4.3827515, 0, 2.2786431)
+
+[node name="Sitz3" parent="." unique_id=1950535003 instance=ExtResource("2_053mn")]
+transform = Transform3D(0.9254017, 0, 0.37898782, 0, 1, 0, -0.37898782, 0, 0.9254017, -4.450626, 0, 4.0142903)
+
+[node name="Sitz4" parent="." unique_id=813633141 instance=ExtResource("2_053mn")]
+transform = Transform3D(0.016684532, 0, 0.9998608, 0, 1, 0, -0.9998608, 0, 0.016684532, -3.1028328, 0, 4.886962)
+
+[node name="Sitz5" parent="." unique_id=321725823 instance=ExtResource("2_053mn")]
+transform = Transform3D(-0.98876685, 0, 0.1494663, 0, 1, 0, -0.1494663, 0, -0.98876685, -2.0847158, 0, 3.6555254)
+
+[node name="Sitz6" parent="." unique_id=1026484490 instance=ExtResource("2_053mn")]
+transform = Transform3D(-0.98993987, 0, -0.14148872, 0, 1, 0, 0.14148872, 0, -0.98993987, -2.075019, 0, 2.3271248)
+
+[node name="Sitz7" parent="." unique_id=1038970107 instance=ExtResource("2_053mn")]
+transform = Transform3D(0.99999917, 0, 0.0012915432, 0, 1, 0, -0.0012915432, 0, 0.99999917, 3.4034214, 0, 2.9767807)
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="." unique_id=1679518432]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+occluder = SubResource("QuadOccluder3D_4haxy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=703288824]
+collision_layer = 49152
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1979907970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0059814453, -0.05065918, 0.034240723)
+shape = SubResource("BoxShape3D_4haxy")
