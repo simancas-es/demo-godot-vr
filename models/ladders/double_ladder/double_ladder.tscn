@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://5k8qm2xj0t1w"]
 
 [ext_resource type="PackedScene" uid="uid://rhfkspdhddrv" path="res://models/ladders/simple_ladder/simple_ladder.tscn" id="1_inggv"]
+[ext_resource type="PackedScene" uid="uid://bbqcxpx4gkj2v" path="res://assets/zones/hillersleben/models/leiter_becken/becken_leiter.gltf" id="2_nth20"]
+[ext_resource type="Script" uid="uid://bqb3cy0ekk685" path="res://addons/godot-xr-tools/objects/climbable.gd" id="3_mit8o"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="4_ndyhi"]
+[ext_resource type="Animation" uid="uid://dqa0h82y3qn1t" path="res://addons/godot-xr-tools/hands/animations/left/Grip 1.res" id="5_cfova"]
+[ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="6_g55ub"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="7_yik16"]
+[ext_resource type="Animation" uid="uid://daqddcrbpam0c" path="res://addons/godot-xr-tools/hands/animations/right/Grip 1.res" id="8_1x4gh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_inggv"]
 size = Vector3(0.6, 1.455, 0.05)
@@ -14,10 +21,27 @@ size = Vector3(0.865, 6.84, 0.06)
 [sub_resource type="BoxShape3D" id="BoxShape3D_sktl7"]
 size = Vector3(0.84311295, 6.90497, 0.06530762)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_4n540"]
+size = Vector3(0.91015625, 6.8653564, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_blbn6"]
+size = Vector3(0.9067383, 2.6364136, 0.05)
+
+[sub_resource type="Resource" id="Resource_j1r2j"]
+script = ExtResource("6_g55ub")
+open_pose = ExtResource("5_cfova")
+closed_pose = ExtResource("5_cfova")
+
+[sub_resource type="Resource" id="Resource_emqla"]
+script = ExtResource("6_g55ub")
+open_pose = ExtResource("8_1x4gh")
+closed_pose = ExtResource("8_1x4gh")
+
 [node name="DoubleLadder" type="Node3D" unique_id=1130847096]
 
 [node name="Node3D" type="Node3D" parent="." unique_id=808187441]
-transform = Transform3D(-0.9999997, 0, -8.742275e-08, 0, 0.99999994, 0, 8.742275e-08, 0, -0.99999964, 0, 0, 0)
+transform = Transform3D(1.3113413e-07, 0, -0.99999964, 0, 0.99999994, 0, 0.9999997, 0, 1.3113413e-07, 0.75178367, 0.17145233, 0.3999998)
+metadata/_edit_lock_ = true
 
 [node name="LadderBB1_out" parent="Node3D" unique_id=1426133906 instance=ExtResource("1_inggv")]
 transform = Transform3D(-0.9999999, 0, -8.742277e-08, 0, 0.9999998, 0, 8.742277e-08, 0, -0.9999999, -0.032751955, 0.5378166, 0.66386557)
@@ -44,6 +68,254 @@ mesh = SubResource("BoxMesh_nth20")
 transform = Transform3D(0.9999989, 0, 0, 0, 0.99997264, 0, 0, 0, 1.0000007, 0, 0, 0)
 shape = SubResource("BoxShape3D_sktl7")
 debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="becken_leiter" parent="." unique_id=1878091838 instance=ExtResource("2_nth20")]
+metadata/_edit_lock_ = true
+
+[node name="XRLeiterBecken" type="StaticBody3D" parent="becken_leiter" unique_id=743817656]
+transform = Transform3D(-0.01951164, 0, -0.99980986, 0, 1, 0, 0.99980986, 0, -0.01951164, 0, 0, 0)
+collision_layer = 262145
+collision_mask = 0
+script = ExtResource("3_mit8o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="becken_leiter/XRLeiterBecken" unique_id=212873794]
+transform = Transform3D(-0.99868196, 0, 0.051324934, 0, 1, 0, -0.051324934, 0, -0.99868196, 0.40883797, -0.8197183, -0.92601085)
+shape = SubResource("BoxShape3D_4n540")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="becken_leiter/XRLeiterBecken" unique_id=184630273]
+transform = Transform3D(0.9996272, 0, 0.027311169, 0, 1, 0, -0.027311169, 0, 0.9996272, 0.37487772, 1.3054953, -0.06319816)
+shape = SubResource("BoxShape3D_blbn6")
+
+[node name="GrabPointHandLeft1" parent="becken_leiter/XRLeiterBecken" unique_id=1899623634 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.07064719, -0.979378, 0.18928416, -0.7071068, -0.18301296, -0.68301284, 0.7035684, -0.08559125, -0.7054538, 0.53624725, -3.9442358, -0.8542739)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight1" parent="becken_leiter/XRLeiterBecken" unique_id=2050092549 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.07064714, 0.9428077, -0.32576415, 0.7071067, -0.18301304, -0.6830131, -0.7035683, -0.27860308, -0.65373677, 0.26011696, -3.946662, -0.83754045)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft19" parent="becken_leiter/XRLeiterBecken" unique_id=1603821139 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.07064719, -0.979378, 0.18928416, -0.7071068, -0.18301296, -0.68301284, 0.7035684, -0.08559125, -0.7054538, 0.53624725, -4.4396086, -0.8542739)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight19" parent="becken_leiter/XRLeiterBecken" unique_id=1089076257 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.07064719, 0.9428081, -0.32576427, 0.7071069, -0.18301296, -0.683013, -0.70356864, -0.2786033, -0.6537368, 0.26012427, -4.4420347, -0.83754295)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft2" parent="becken_leiter/XRLeiterBecken" unique_id=1406464803 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.07251637, -0.97887355, 0.19117767, -0.6730171, -0.189489, -0.7149423, 0.7360636, -0.07682079, -0.67253983, 0.5362812, -3.4085073, -0.8539341)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight2" parent="becken_leiter/XRLeiterBecken" unique_id=142173723 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.07251624, 0.94331795, -0.32387227, 0.67301726, -0.19336936, -0.7139027, -0.7360635, -0.2697415, -0.62084645, 0.26015437, -3.4108877, -0.83709216)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft3" parent="becken_leiter/XRLeiterBecken" unique_id=84357698 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.04093803, -0.97490156, 0.21884191, -0.7071068, -0.18301296, -0.68301284, 0.7059202, -0.12678349, -0.6968513, 0.536567, -2.886531, -0.84487194)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight3" parent="becken_leiter/XRLeiterBecken" unique_id=572235005 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.040938027, 0.9537105, -0.2979282, 0.7071069, -0.18301296, -0.683013, -0.7059204, -0.23862842, -0.66688293, 0.2599843, -2.8889573, -0.839791)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft4" parent="becken_leiter/XRLeiterBecken" unique_id=1595455594 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.021420382, -0.9712139, 0.23724727, -0.6730172, -0.18948907, -0.7149424, 0.73931676, -0.14435707, -0.6577024, 0.53645957, -2.3539212, -0.8460977)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight4" parent="becken_leiter/XRLeiterBecken" unique_id=1936154497 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.021420337, 0.9597188, -0.28014502, 0.673017, -0.19336936, -0.71390283, -0.7393165, -0.2038347, -0.64176524, 0.25982898, -2.3563015, -0.848399)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft5" parent="becken_leiter/XRLeiterBecken" unique_id=2018064221 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.012809671, -0.9690831, 0.2464035, -0.7071068, -0.18301296, -0.68301284, 0.7069904, -0.16548455, -0.6875893, 0.5363708, -1.8374689, -0.84898555)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight5" parent="becken_leiter/XRLeiterBecken" unique_id=1189883313 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.012809608, 0.96245193, -0.27114993, 0.70710695, -0.18301295, -0.68301284, -0.7069904, -0.20048115, -0.67821246, 0.2598128, -1.839895, -0.8549186)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft6" parent="becken_leiter/XRLeiterBecken" unique_id=1363018433 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.02246552, -0.9714165, 0.2363171, -0.67301714, -0.18948899, -0.71494234, 0.73928547, -0.14298382, -0.65803677, 0.53627086, -1.2802345, -0.8560286)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight6" parent="becken_leiter/XRLeiterBecken" unique_id=528080512 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.022465426, 0.9594297, -0.281052, 0.6730171, -0.19336933, -0.71390265, -0.73928547, -0.20519124, -0.6413683, 0.25963756, -1.2826148, -0.8579386)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft7" parent="becken_leiter/XRLeiterBecken" unique_id=1118371072 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.061271947, -0.9781516, 0.19866158, -0.70710695, -0.18301304, -0.6830131, 0.704447, -0.098625526, -0.70287085, 0.5363637, -0.7695344, -0.85258996)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight7" parent="becken_leiter/XRLeiterBecken" unique_id=1842330765 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.061271865, 0.94643426, -0.31702986, 0.7071069, -0.18301298, -0.6830129, -0.70444673, -0.26602358, -0.658017, 0.2600574, -0.77196056, -0.83954316)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft8" parent="becken_leiter/XRLeiterBecken" unique_id=568765173 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(-0.03934622, -0.956084, 0.29044047, -0.6730173, -0.18948908, -0.71494263, 0.73857945, -0.22360158, -0.6360052, 0.5398701, -0.23790914, -0.85207754)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight8" parent="becken_leiter/XRLeiterBecken" unique_id=1314708095 instance=ExtResource("7_yik16")]
+transform = Transform3D(0.03934627, 0.973213, -0.22651365, 0.67301714, -0.19336934, -0.7139027, -0.73857933, -0.12435846, -0.66259724, 0.26079065, -0.24582082, -0.83924854)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft9" parent="becken_leiter/XRLeiterBecken" unique_id=240161878 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.042338468, -0.97491026, 0.21853553, -0.67301714, -0.18948899, -0.71494234, 0.7384138, -0.11680849, -0.6641538, 0.5366554, 0.25243217, -0.83879584)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight9" parent="becken_leiter/XRLeiterBecken" unique_id=1127053629 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.04233838, 0.9535647, -0.2981982, 0.6730171, -0.19336933, -0.71390265, -0.73841393, -0.23091829, -0.6335783, 0.26007077, 0.2500518, -0.8332657)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft10" parent="becken_leiter/XRLeiterBecken" unique_id=12335819 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(-0.036292195, -0.9552599, 0.29353362, -0.70710707, -0.183013, -0.68301296, 0.7061746, -0.23234783, -0.6688286, 0.61335176, 0.81458503, -0.8458924)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight10" parent="becken_leiter/XRLeiterBecken" unique_id=1341260849 instance=ExtResource("7_yik16")]
+transform = Transform3D(0.036292262, 0.9740458, -0.22342247, 0.7071069, -0.18301296, -0.6830129, -0.70617443, -0.13319567, -0.6953967, 0.20819862, 0.8167289, -0.84377486)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft11" parent="becken_leiter/XRLeiterBecken" unique_id=765528995 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(-0.7393895, -0.17618236, -0.6498174, -0.030128377, 0.9728463, -0.22948247, 0.67260355, -0.15009905, -0.7246201, 0.8670827, 1.4313726, -0.864452)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight11" parent="becken_leiter/XRLeiterBecken" unique_id=367398248 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.60070634, 0.21270142, 0.7706564, -0.030128317, 0.9572513, -0.2876859, -0.7989017, -0.1960336, -0.5686184, -0.05798645, 1.4289923, -0.86224186)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft12" parent="becken_leiter/XRLeiterBecken" unique_id=1266169583 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(-0.7393895, -0.1761824, -0.6498175, -0.030128404, 0.97284627, -0.22948243, 0.6726035, -0.15009901, -0.72462016, 0.8670902, 1.8448514, -0.86445355)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight12" parent="becken_leiter/XRLeiterBecken" unique_id=1587590460 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.6007062, 0.2127015, 0.77065665, -0.030128319, 0.95725113, -0.2876858, -0.7989016, -0.19603363, -0.5686184, -0.06803705, 1.8424711, -0.8631919)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft13" parent="becken_leiter/XRLeiterBecken" unique_id=570067868 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(-0.73938954, -0.17618242, -0.6498176, -0.030128356, 0.9728464, -0.22948249, 0.6726035, -0.15009908, -0.7246201, 0.8670905, 2.2874708, -0.86445546)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight13" parent="becken_leiter/XRLeiterBecken" unique_id=1394033911 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.6007062, 0.2127015, 0.77065665, -0.030128319, 0.95725113, -0.2876858, -0.7989016, -0.19603363, -0.5686184, -0.045806907, 2.2850904, -0.86109644)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft14" parent="becken_leiter/XRLeiterBecken" unique_id=901030796 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(-0.73938954, -0.17618237, -0.6498176, -0.030128377, 0.9728464, -0.22948246, 0.6726035, -0.15009905, -0.7246201, 0.86709046, 2.5375319, -0.86445737)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight14" parent="becken_leiter/XRLeiterBecken" unique_id=1446354395 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.60070634, 0.21270145, 0.7706565, -0.030128272, 0.9572513, -0.28768593, -0.79890144, -0.19603355, -0.5686184, -0.045806915, 2.5351515, -0.86109835)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft20" parent="becken_leiter/XRLeiterBecken" unique_id=1174381535 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(-0.74811625, -0.15658732, -0.64482754, -0.6241014, 0.49617228, 0.60358125, 0.22543235, 0.85398686, -0.4689206, 0.8713683, 2.5300398, -0.6452563)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight20" parent="becken_leiter/XRLeiterBecken" unique_id=1386512371 instance=ExtResource("7_yik16")]
+transform = Transform3D(-0.5911807, 0.23248953, 0.7723053, 0.74425375, 0.5262344, 0.411295, -0.310791, 0.81794065, -0.48413062, -0.041392762, 2.5426435, -0.6349095)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft21" parent="becken_leiter/XRLeiterBecken" unique_id=1799299141 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.74811643, 0.15658727, 0.6448275, -0.6241014, 0.49617228, 0.60358125, -0.22543238, -0.85398686, 0.4689205, -0.034383394, 2.5300398, -0.27573743)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight21" parent="becken_leiter/XRLeiterBecken" unique_id=1038447206 instance=ExtResource("7_yik16")]
+transform = Transform3D(0.5911806, -0.23248951, -0.772305, 0.74425375, 0.5262344, 0.41129503, 0.31079102, -0.81794065, 0.48413065, 0.8783776, 2.5426435, -0.2860843)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft15" parent="becken_leiter/XRLeiterBecken" unique_id=2020981738 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.7393894, 0.17618254, 0.64981765, -0.030128378, 0.9728463, -0.22948253, -0.67260367, 0.15009913, 0.7246199, -0.041715927, 1.3203573, -0.04672398)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight15" parent="becken_leiter/XRLeiterBecken" unique_id=630032886 instance=ExtResource("7_yik16")]
+transform = Transform3D(0.6007064, -0.21270151, -0.77065665, -0.030128298, 0.95725113, -0.28768584, 0.79890126, 0.1960336, 0.5686185, 0.8833536, 1.317977, -0.048939805)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft16" parent="becken_leiter/XRLeiterBecken" unique_id=643988279 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.7393893, 0.1761825, 0.64981735, -0.030128365, 0.9728463, -0.22948249, -0.67260355, 0.15009904, 0.7246197, -0.04171609, 1.7338362, -0.04672016)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight16" parent="becken_leiter/XRLeiterBecken" unique_id=467088786 instance=ExtResource("7_yik16")]
+transform = Transform3D(0.60070646, -0.21270153, -0.77065676, -0.03012833, 0.9572512, -0.28768587, 0.79890126, 0.19603366, 0.5686185, 0.89341897, 1.7314558, -0.0479872)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft17" parent="becken_leiter/XRLeiterBecken" unique_id=1672779556 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.7393897, 0.17618243, 0.64981776, -0.030128341, 0.97284627, -0.22948247, -0.6726037, 0.15009908, 0.72462004, -0.04171609, 2.1764555, -0.04672016)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight17" parent="becken_leiter/XRLeiterBecken" unique_id=705506930 instance=ExtResource("7_yik16")]
+transform = Transform3D(0.60070646, -0.21270153, -0.77065676, -0.03012833, 0.9572512, -0.28768587, 0.79890126, 0.19603366, 0.5686185, 0.8711891, 2.1740751, -0.050082646)
+visible = true
+hand_pose = SubResource("Resource_emqla")
+
+[node name="GrabPointHandLeft18" parent="becken_leiter/XRLeiterBecken" unique_id=1034855427 instance=ExtResource("4_ndyhi")]
+transform = Transform3D(0.7393894, 0.17618245, 0.6498176, -0.0301283, 0.9728463, -0.22948247, -0.6726036, 0.15009904, 0.7246196, -0.041716315, 2.4265165, -0.046716336)
+visible = true
+hand_pose = SubResource("Resource_j1r2j")
+editor_preview_mode = 1
+
+[node name="GrabPointHandRight18" parent="becken_leiter/XRLeiterBecken" unique_id=1859258649 instance=ExtResource("7_yik16")]
+transform = Transform3D(0.6007065, -0.21270154, -0.77065665, -0.030128282, 0.95725137, -0.28768587, 0.79890144, 0.19603364, 0.5686186, 0.8711891, 2.4241362, -0.050082646)
+visible = true
+hand_pose = SubResource("Resource_emqla")
 
 [editable path="Node3D/LadderBB1_out"]
 [editable path="Node3D/LadderBB1_in"]
