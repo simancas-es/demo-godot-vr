@@ -81,6 +81,7 @@
 [ext_resource type="PackedScene" uid="uid://huq5kjq3c02r" path="res://zones/hillersleben/raum_büro.tscn" id="78_ngwpx"]
 [ext_resource type="PackedScene" uid="uid://cfnbgsvxa0eoy" path="res://zones/hillersleben/vorklärbecken.tscn" id="79_pwg26"]
 [ext_resource type="PackedScene" uid="uid://cl6wkskshbauj" path="res://zones/hillersleben/2026_06_16_pumpenraum.tscn" id="84_ngwpx"]
+[ext_resource type="PackedScene" uid="uid://d1y654pua3gih" path="res://zones/hillersleben/gasraum.tscn" id="86_pqgw2"]
 [ext_resource type="PackedScene" uid="uid://k4sbprycrebs" path="res://zones/hillersleben/gltf_scenes/2026_05_26_sand_fettfang.tscn" id="87_4kkd4"]
 [ext_resource type="PackedScene" uid="uid://dv3l8gl87wkac" path="res://zones/hillersleben/gltf_scenes/2026_06_04_bhkw_raum.tscn" id="88_4kkd4"]
 [ext_resource type="PackedScene" uid="uid://bdmarwvxel1o7" path="res://zones/hillersleben/gltf_scenes/foerderband.tscn" id="90_0vxpt"]
@@ -4304,6 +4305,9 @@ transform = Transform3D(0.934329, 0, 0.35641187, 0, 1, 0, -0.35641187, 0, 0.9343
 
 [node name="container3" parent="." unique_id=222526731 instance=ExtResource("91_5gq0c")]
 transform = Transform3D(0.8188516, 0, 0.57400525, 0, 1, 0, -0.57400525, 0, 0.8188516, 4.984166, 46.55175, 33.781246)
+
+[node name="Gasraum" parent="." unique_id=331696894 instance=ExtResource("86_pqgw2")]
+transform = Transform3D(0.9068382, 0, 0.42147902, 0, 1, 0, -0.42147902, 0, 0.9068382, 10.439921, 48.50083, 16.306437)
 
 [editable path="Reference_point_floor/Q_FENCE_CHECK/WIRE_PICKUP/Area3D"]
 [editable path="Reference_point_floor/Q_FENCE_CHECK/WIRE_USE/Area3D"]

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://d1y654pua3gih"]
+
+[ext_resource type="PackedScene" uid="uid://b718s46l4q3pe" path="res://assets/zones/hillersleben/models/raum_gas/raum_gas.gltf" id="1_sq7vn"]
+
+[node name="Gasraum" type="Node3D" unique_id=331696894]
+
+[node name="raum_gas" parent="." unique_id=1086809054 instance=ExtResource("1_sq7vn")]
