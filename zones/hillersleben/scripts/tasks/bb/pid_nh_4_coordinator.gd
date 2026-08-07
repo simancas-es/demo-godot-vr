@@ -13,7 +13,6 @@ extends Node3D
 const PID_SCREEN := preload("uid://nyrobrw4gmu1")
 
 @onready var pid_screen : PID_SCREEN = $"SubViewport/PID-NH4"
-@onready var nh4_label : Label3D = $nh4_dynamic
 
 @onready var pairs : Dictionary [Interaction, PID_SCREEN.BUTTONS] = {
 	button_s : PID_SCREEN.BUTTONS.S,
