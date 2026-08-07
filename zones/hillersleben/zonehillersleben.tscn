@@ -33,15 +33,10 @@
 [ext_resource type="PackedScene" uid="uid://b6k1fx74eaju1" path="res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_empty.tscn" id="7_sktl7"]
 [ext_resource type="AudioStream" uid="uid://8tf18ov05gy2" path="res://assets/audio/cutout/03-dekanter.mp3" id="8_0vxpt"]
 [ext_resource type="PackedScene" uid="uid://c7yhfipghxiyv" path="res://models/doors/basedoor2m.tscn" id="8_1khpx"]
-[ext_resource type="Script" uid="uid://jgo7k1ecvdjx" path="res://zones/hillersleben/scripts/logik_doors_container.gd" id="8_6uclu"]
 [ext_resource type="Script" uid="uid://sefhuc62i04i" path="res://zones/hillersleben/scripts/water_visuals/logik_wasserrad.gd" id="8_du4yn"]
-[ext_resource type="PackedScene" uid="uid://b10l7m4qjudur" path="res://models/interaction/simple_button.tscn" id="8_duhpb"]
-[ext_resource type="Script" uid="uid://3cibq28us4hi" path="res://zones/hillersleben/scripts/bg-containers/bg_garage_controller.gd" id="9_0nlau"]
 [ext_resource type="Script" uid="uid://kyd2m2onq8wi" path="res://clases/interaction/inventory_object_pickupable.gd" id="9_cqg2i"]
 [ext_resource type="PackedScene" uid="uid://5k8qm2xj0t1w" path="res://models/ladders/double_ladder/double_ladder.tscn" id="9_r5bnc"]
-[ext_resource type="Script" uid="uid://d2x1a26haj0vt" path="res://zones/hillersleben/scripts/bg-containers/bg_garage_state.gd" id="10_5rld8"]
 [ext_resource type="PackedScene" uid="uid://dn7gboqa4u7d5" path="res://models/ladders/double_ladder/double_ladder_ed.tscn" id="10_7sq4a"]
-[ext_resource type="Script" uid="uid://dfx637qtcm1wm" path="res://zones/hillersleben/scripts/logik_container_movement.gd" id="10_duhpb"]
 [ext_resource type="PackedScene" uid="uid://cuwst8kcvigrx" path="res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn" id="10_ybcmd"]
 [ext_resource type="PackedScene" uid="uid://bnf5qtwuyhbwg" path="res://models/inventory_objects/wire/wire.tscn" id="13_qaewh"]
 [ext_resource type="PackedScene" uid="uid://dl3g3hke6ex3m" path="res://assets/zones/hillersleben/models/Referenz/Referenz.gltf" id="15_h3jyd"]
@@ -80,6 +75,7 @@
 [ext_resource type="PackedScene" uid="uid://cvpmdoxt0gsjs" path="res://models/not_available_block.tscn" id="58_h3ac7"]
 [ext_resource type="PackedScene" uid="uid://c16en4t1sh6fs" path="res://models/labels/plakate-blau.tscn" id="62_dhrc2"]
 [ext_resource type="FontFile" uid="uid://djt44qe81e1vs" path="res://assets/fonts/FrutigerLTPro/FrutigerLTPro/FrutigerLTPro-Black.otf" id="63_noa04"]
+[ext_resource type="PackedScene" uid="uid://bvx2c30hfovj1" path="res://zones/hillersleben/containerraum.tscn" id="71_wh342"]
 [ext_resource type="PackedScene" uid="uid://br11yq2t7281c" path="res://assets/zones/hillersleben/models/raum_rechen/2026-07-07-Rechenraum.gltf" id="73_ag5cm"]
 [ext_resource type="PackedScene" uid="uid://n2m1luifev1l" path="res://assets/zones/hillersleben/models/raum_zulauf/2026-07-15-Zulauf.gltf" id="73_ct0f7"]
 [ext_resource type="PackedScene" uid="uid://huq5kjq3c02r" path="res://zones/hillersleben/raum_büro.tscn" id="78_ngwpx"]
@@ -541,35 +537,14 @@ metallic_specular = 0.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_5rld8"]
 size = Vector3(0.299866, 14.887908, 0.72558594)
 
-[sub_resource type="Resource" id="Resource_8upog"]
-script = ExtResource("10_5rld8")
-container_states = Array[int]([0, 0])
-metadata/_custom_type_script = "uid://d2x1a26haj0vt"
+[sub_resource type="PlaneMesh" id="PlaneMesh_ag5cm"]
+size = Vector2(2, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1khpx"]
 size = Vector2(2, 1.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6uclu"]
 cull_mode = 2
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_duhpb"]
-size = Vector3(0.39, 2.35, 4.98)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_0nlau"]
-size = Vector2(2.525, 4.97)
-
-[sub_resource type="Curve3D" id="Curve3D_6uclu"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.1876564, 7.6293945e-06, 0.1374836, 0, 0, 0, 0, 0, 0, 4.6912365, 7.6293945e-06, 0.28601646, 0, 0, 0, 0, 0, 0, 7.651472, 7.6293945e-06, 0.3738079),
-"tilts": PackedFloat32Array(0, 0, 0, 0)
-}
-point_count = 4
-
-[sub_resource type="BoxMesh" id="BoxMesh_duhpb"]
-size = Vector3(5.29, 2.1, 1.8)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_ag5cm"]
-size = Vector2(2, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xsptl"]
 size = Vector3(0.113098145, 2.9337997, 1.4452057)
@@ -3269,197 +3244,10 @@ transform = Transform3D(0.024292529, 0, 0.99970436, 0, 1, 0, -0.99970436, 0, 0.0
 shape = SubResource("BoxShape3D_5rld8")
 
 [node name="Betriebsgebäude" type="Node3D" parent="." unique_id=1433687809]
-
-[node name="GarageController" type="Node" parent="Betriebsgebäude" unique_id=1529548299 node_paths=PackedStringArray("door_controller", "container_controllers", "container_out_buttons", "container_in_buttons", "halt_buttons", "door_button")]
-script = ExtResource("9_0nlau")
-state = SubResource("Resource_8upog")
-door_controller = NodePath("LogikDoorsContainer")
-container_controllers = [NodePath("LogikContainerMovementGarbage"), NodePath("LogikContainerMovementSand")]
-container_out_buttons = [NodePath("../GarbageContainer/ContainerGarbageMOVEFW"), NodePath("../SandContainer/ContainerSandMOVEFW")]
-container_in_buttons = [NodePath("../GarbageContainer/ContainerGarbageMOVEBACK"), NodePath("../SandContainer/ContainerSandMOVEBACK")]
-halt_buttons = [NodePath("../GarbageContainer/ContainerGarbageHALT"), NodePath("../SandContainer/ContainerSandHALT")]
-door_button = NodePath("../BGebaeude-garagedoor-button")
-
-[node name="LogikDoorsContainer" type="Node" parent="Betriebsgebäude/GarageController" unique_id=965107143 node_paths=PackedStringArray("garage_door_body")]
-script = ExtResource("8_6uclu")
-garage_door_body = NodePath("../../BGebaeude-garagedoor-body")
-
-[node name="LogikContainerMovementGarbage" type="Node" parent="Betriebsgebäude/GarageController" unique_id=1376205864 node_paths=PackedStringArray("path", "target_node")]
-script = ExtResource("10_duhpb")
-path = NodePath("../../RailsContainerGarbage")
-target_node = NodePath("../../RailsContainerGarbage/PathFollow3D/ContainerGarbage")
-
-[node name="LogikContainerMovementSand" type="Node" parent="Betriebsgebäude/GarageController" unique_id=498797452 node_paths=PackedStringArray("path", "target_node")]
-script = ExtResource("10_duhpb")
-path = NodePath("../../RailsContainerSand")
-target_node = NodePath("../../RailsContainerSand/PathFollow3D/ContainerSand")
-container_index = 1
-
-[node name="Sandwasch-door" parent="Betriebsgebäude" unique_id=1100935766 instance=ExtResource("8_1khpx")]
-transform = Transform3D(-0.90377647, 0, -0.42800474, 0, 1, 0, 0.42800474, 0, -0.90377647, -30.477528, 48.64245, 12.921708)
-collision_layer = 25214977
-collision_mask = 25214977
-y_degrees_opened = 100.0
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Betriebsgebäude/Sandwasch-door" unique_id=1139375256]
-transform = Transform3D(-1.0061396e-16, -0.999982, 0.006003868, 0.99999994, 3.7057576e-11, -2.9802433e-08, -6.1722645e-09, 0.0060039107, 0.9999821, -0.091296956, 1, -0.5267464)
-visible = false
-mesh = SubResource("PlaneMesh_1khpx")
-surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
-
-[node name="steal_meshinstance" parent="Betriebsgebäude/Sandwasch-door" unique_id=2040917089 instance=ExtResource("10_ybcmd")]
-nodepath = NodePath("../../../Visuals/Referenz/bg_garage_tür")
-
-[node name="BGebaeude-doorside" parent="Betriebsgebäude" unique_id=1107619991 instance=ExtResource("8_1khpx")]
-transform = Transform3D(0.41443917, 0, -0.91007704, 0, 1, 0, 0.91007704, 0, 0.41443917, -29.314674, 48.675896, 22.77682)
-collision_layer = 25214977
-collision_mask = 25214977
-DEBUG_PRINT = true
-y_degrees_opened = -135.0
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/BGebaeude-doorside" unique_id=1794070900]
-transform = Transform3D(-4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0, 1, -1.9349636e-07, 1.0176926, -0.58513916)
-visible = false
-mesh = SubResource("PlaneMesh_1khpx")
-skeleton = NodePath("../../Sandwasch-door")
-surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
-
-[node name="steal_meshinstance" parent="Betriebsgebäude/BGebaeude-doorside" unique_id=1108791347 instance=ExtResource("10_ybcmd")]
-nodepath = NodePath("../../../Visuals/Referenz/betriebsgebäude/bg_elektro_tür")
-
-[node name="BGebaeude-doorfront" parent="Betriebsgebäude" unique_id=222459271 instance=ExtResource("8_1khpx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.504585, 48.67551, 10.713326)
-collision_layer = 25214977
-collision_mask = 25214977
-y_degrees_opened = 100.0
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/BGebaeude-doorfront" unique_id=1952487224]
-transform = Transform3D(2.6417584e-09, 0.90377647, -0.42800477, 0.99999994, -6.5035355e-17, -2.9802322e-08, 5.5783476e-09, -0.42800474, -0.9037766, -0.18053244, 1.0176163, -0.53575706)
-mesh = SubResource("PlaneMesh_1khpx")
-skeleton = NodePath("../../Sandwasch-door")
-surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
-
-[node name="BGebaeude-doordop-link" parent="Betriebsgebäude" unique_id=1241419565 instance=ExtResource("8_1khpx")]
-transform = Transform3D(0.9085374, 0, 0.41780365, 0, 1, 0, -0.41780365, 0, 0.9085374, -35.31984, 48.612488, 2.212137)
-collision_layer = 25214977
-collision_mask = 25214977
-y_degrees_opened = -100.0
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/BGebaeude-doordop-link" unique_id=1224125567]
-transform = Transform3D(2.262257e-11, 0.9999933, -0.0036652386, 0.99999994, -6.5035355e-17, -2.9802322e-08, 6.172223e-09, -0.0036652386, -0.99999344, -0.002, 0.99, -0.558)
-visible = false
-mesh = SubResource("PlaneMesh_1khpx")
-skeleton = NodePath("../../Sandwasch-door")
-surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
-
-[node name="steal_meshinstance" parent="Betriebsgebäude/BGebaeude-doordop-link" unique_id=303850832 instance=ExtResource("10_ybcmd")]
-nodepath = NodePath("../../../Visuals/Referenz/bg_personel_tür1")
-
-[node name="Bgebaeude-doordop-recht" parent="Betriebsgebäude" unique_id=790583969 instance=ExtResource("8_1khpx")]
-transform = Transform3D(-0.9085957, 0, -0.4176768, 0, 1, 0, 0.4176768, 0, -0.9085957, -36.181366, 48.625847, 0.32040823)
-collision_layer = 25214977
-collision_mask = 25214977
-y_degrees_opened = 100.0
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Betriebsgebäude/Bgebaeude-doordop-recht" unique_id=595429763]
-transform = Transform3D(-7.034373e-11, -0.99993503, 0.011396766, 0.99999994, -6.5035355e-17, -2.9802322e-08, -6.171864e-09, 0.0113967955, 0.9999352, -0.007, 0.99, -0.573)
-visible = false
-mesh = SubResource("PlaneMesh_1khpx")
-skeleton = NodePath("../../Sandwasch-door")
-surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
-
-[node name="steal_meshinstance" parent="Betriebsgebäude/Bgebaeude-doordop-recht" unique_id=1646756599 instance=ExtResource("10_ybcmd")]
-nodepath = NodePath("../../../Visuals/Referenz/bg_personel_tür2")
-
-[node name="BGebaeude-garagedoor-body" type="Node3D" parent="Betriebsgebäude" unique_id=1139191692]
-transform = Transform3D(0.90693384, 0, 0.42127326, 0, 1, 0, -0.42127326, 0, 0.90693384, -27.884378, 48.64245, 18.665627)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Betriebsgebäude/BGebaeude-garagedoor-body" unique_id=561580762]
-collision_layer = 8404993
-collision_mask = 8404993
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Betriebsgebäude/BGebaeude-garagedoor-body/StaticBody3D" unique_id=1937711167]
-transform = Transform3D(1, 0, -4.0532423e-06, 0, 1, 0, 4.0532423e-06, 0, 1, -0.03137207, 1.1970215, -2.5954456)
-shape = SubResource("BoxShape3D_duhpb")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Betriebsgebäude/BGebaeude-garagedoor-body" unique_id=1439173561]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -1.4295805e-06, 1.3422966, -2.5281115)
-visible = false
-mesh = SubResource("PlaneMesh_0nlau")
-surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
-metadata/_edit_lock_ = true
-
-[node name="steal_meshinstance" parent="Betriebsgebäude/BGebaeude-garagedoor-body" unique_id=715090220 instance=ExtResource("10_ybcmd")]
-nodepath = NodePath("../../../Visuals/Referenz/bg_garage_tor")
-
-[node name="BGebaeude-garagedoor-button" parent="Betriebsgebäude" unique_id=1858723037 instance=ExtResource("8_duhpb")]
-transform = Transform3D(-0.36271465, 0, 0.93190026, 0, 1, 0, -0.93190026, 0, -0.36271465, -28.934345, 49.92099, 18.841993)
-string_on = "Press [E] to turn close the door."
-string_off = "Press [E] to open the door."
-
-[node name="GarbageContainer" type="Node3D" parent="Betriebsgebäude" unique_id=2098650392]
-transform = Transform3D(-0.92587054, 0, -0.3778409, 0, 1, 0, 0.3778409, 0, -0.92587054, -29.312416, 49.92099, 19.023296)
-
-[node name="ContainerGarbageHALT" parent="Betriebsgebäude/GarbageContainer" unique_id=1953550971 instance=ExtResource("8_duhpb")]
-momentary_button = true
-string_off = "Press [E] to stop the garbage container."
-
-[node name="ContainerGarbageMOVEFW" parent="Betriebsgebäude/GarbageContainer" unique_id=1534832071 instance=ExtResource("8_duhpb")]
-transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 0.34945297, 0, -0.04181099)
-momentary_button = true
-string_off = "Press [E] to take the garbage container out."
-
-[node name="ContainerGarbageMOVEBACK" parent="Betriebsgebäude/GarbageContainer" unique_id=1710939427 instance=ExtResource("8_duhpb")]
-transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 1.5978279, 0, -0.11316204)
-momentary_button = true
-
-[node name="SandContainer" type="Node3D" parent="Betriebsgebäude" unique_id=947485085]
-transform = Transform3D(-0.92587054, 0, -0.3778409, 0, 1, 0, 0.3778409, 0, -0.92587054, -29.312416, 50.250576, 19.023296)
-
-[node name="ContainerSandHALT" parent="Betriebsgebäude/SandContainer" unique_id=480945116 instance=ExtResource("8_duhpb")]
-momentary_button = true
-string_off = "Press [E] to stop the sand container."
-
-[node name="ContainerSandMOVEFW" parent="Betriebsgebäude/SandContainer" unique_id=1916060645 instance=ExtResource("8_duhpb")]
-transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 0.34945297, 0, -0.04181099)
-momentary_button = true
-string_off = "Press [E] to take the sand container out."
-
-[node name="ContainerSandMOVEBACK" parent="Betriebsgebäude/SandContainer" unique_id=165711960 instance=ExtResource("8_duhpb")]
-transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 1.5978279, 0, -0.11316204)
-momentary_button = true
-
-[node name="RailsContainerGarbage" type="Path3D" parent="Betriebsgebäude" unique_id=2057897511]
-transform = Transform3D(0.90693355, 0, 0.42127314, 0, 1, 0, -0.42127314, 0, 0.90693355, -30.00641, 48.64245, 17.858938)
-curve = SubResource("Curve3D_6uclu")
-
-[node name="PathFollow3D" type="PathFollow3D" parent="Betriebsgebäude/RailsContainerGarbage" unique_id=581250750]
-transform = Transform3D(-0.06272129, -3.473754e-06, -0.9980303, -1.1368675e-13, 1, -3.4806044e-06, 0.9980302, -2.1830826e-07, -0.0627213, 0, 0, 0)
-
-[node name="ContainerGarbage" type="Node3D" parent="Betriebsgebäude/RailsContainerGarbage/PathFollow3D" unique_id=1527139033]
-transform = Transform3D(-0.06272143, 0, 0.9980323, -3.4737554e-06, 1, -2.1830829e-07, -0.9980322, -3.4806098e-06, -0.06272143, 0, 0, 0)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Betriebsgebäude/RailsContainerGarbage/PathFollow3D/ContainerGarbage" unique_id=1128268137]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0200298, 1.1576691, 0)
-mesh = SubResource("BoxMesh_duhpb")
-
-[node name="RailsContainerSand" type="Path3D" parent="Betriebsgebäude" unique_id=1034424387]
-transform = Transform3D(0.9069334, 0, 0.42127302, 0, 1, 0, -0.42127302, 0, 0.9069334, -31.111452, 48.64245, 15.479965)
-curve = SubResource("Curve3D_6uclu")
-
-[node name="PathFollow3D" type="PathFollow3D" parent="Betriebsgebäude/RailsContainerSand" unique_id=716580271]
-transform = Transform3D(-0.06272135, -3.473754e-06, -0.9980311, -1.1368685e-13, 1, -3.4806071e-06, 0.9980311, -2.1830826e-07, -0.06272135, 0, 0, 0)
-
-[node name="ContainerSand" type="Node3D" parent="Betriebsgebäude/RailsContainerSand/PathFollow3D" unique_id=390040110]
-transform = Transform3D(-0.0627214, -1.1368693e-13, 0.99803156, -3.473756e-06, 1, -2.1830851e-07, -0.99803156, -3.4806073e-06, -0.0627214, 0.11501026, 0, -0.0072288513)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Betriebsgebäude/RailsContainerSand/PathFollow3D/ContainerSand" unique_id=1276411951]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0200298, 1.1576691, 0)
-mesh = SubResource("BoxMesh_duhpb")
+transform = Transform3D(0.8989241, 0, 0.43810448, 0, 1, 0, -0.43810448, 0, 0.8989241, -28.340496, 48.75511, 16.687517)
 
 [node name="rechenraum-door-link" parent="Betriebsgebäude" unique_id=538667425 instance=ExtResource("8_1khpx")]
-transform = Transform3D(-0.9180939, 0, -0.39636296, 0, 1, 0, 0.39636296, 0, -0.9180939, -41.2856, 51.59764, 17.556171)
+transform = Transform3D(-0.998945, 0, 0.04592082, 0, 1, 0, -0.04592082, 0, -0.998945, -12.017223, 2.8425293, -4.8904533)
 y_degrees_opened = -135.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Betriebsgebäude/rechenraum-door-link" unique_id=809915460]
@@ -3470,8 +3258,37 @@ mesh = SubResource("PlaneMesh_ag5cm")
 [node name="steal_meshinstance" parent="Betriebsgebäude/rechenraum-door-link" unique_id=298663912 instance=ExtResource("10_ybcmd")]
 nodepath = NodePath("../../../Visuals/Referenz/bg_tür-02")
 
+[node name="BGebaeude-doorside" parent="Betriebsgebäude" unique_id=1107619991 instance=ExtResource("8_1khpx")]
+transform = Transform3D(-0.026159406, 0, -0.99965763, 0, 1, 0, 0.99965763, 0, -0.026159406, -3.5434608, -0.079216, 5.0470266)
+collision_layer = 25214977
+collision_mask = 25214977
+DEBUG_PRINT = true
+y_degrees_opened = -135.0
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/BGebaeude-doorside" unique_id=1794070900]
+transform = Transform3D(-4.3711385e-08, -0.99999994, 0, 0.99999994, -4.3711385e-08, 0, 0, 0, 1, -1.9349636e-07, 1.0176926, -0.58513916)
+visible = false
+mesh = SubResource("PlaneMesh_1khpx")
+skeleton = NodePath("../../Containerraum/Sandwasch-door")
+surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
+
+[node name="steal_meshinstance" parent="Betriebsgebäude/BGebaeude-doorside" unique_id=1108791347 instance=ExtResource("10_ybcmd")]
+nodepath = NodePath("../../../Visuals/Referenz/betriebsgebäude/bg_elektro_tür")
+
+[node name="BGebaeude-doorfront" parent="Betriebsgebäude" unique_id=222459271 instance=ExtResource("8_1khpx")]
+transform = Transform3D(0.898924, 0, -0.43810442, 0, 1, 0, 0.43810442, 0, 0.898924, -0.22695541, -0.07960129, -6.756546)
+collision_layer = 25214977
+collision_mask = 25214977
+y_degrees_opened = 100.0
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/BGebaeude-doorfront" unique_id=1952487224]
+transform = Transform3D(2.6417584e-09, 0.90377647, -0.42800477, 0.99999994, -6.5035355e-17, -2.9802322e-08, 5.5783476e-09, -0.42800474, -0.9037766, -0.18053244, 1.0176163, -0.53575706)
+mesh = SubResource("PlaneMesh_1khpx")
+skeleton = NodePath("../../Containerraum/Sandwasch-door")
+surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
+
 [node name="rechenraum-door-recht" parent="Betriebsgebäude" unique_id=1079551377 instance=ExtResource("8_1khpx")]
-transform = Transform3D(0.91809386, 0, 0.39636305, 0, 1, 0, -0.39636305, 0, 0.91809386, -40.325073, 51.59764, 19.642185)
+transform = Transform3D(0.998945, 0, -0.0459207, 0, 1, 0, 0.0459207, 0, 0.998945, -12.067677, 2.8425293, -2.5944748)
 y_degrees_opened = 110.0
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/rechenraum-door-recht" unique_id=766192189]
@@ -3482,6 +3299,41 @@ skeleton = NodePath("../../rechenraum-door-link")
 
 [node name="steal_meshinstance" parent="Betriebsgebäude/rechenraum-door-recht" unique_id=1960107834 instance=ExtResource("10_ybcmd")]
 nodepath = NodePath("../../../Visuals/Referenz/bg_tür-02_001")
+
+[node name="BGebaeude-doordop-link" parent="Betriebsgebäude" unique_id=1241419565 instance=ExtResource("8_1khpx")]
+transform = Transform3D(0.9997477, 0, -0.02246052, 0, 1, 0, 0.02246052, 0, 0.9997477, 0.06782913, -0.1426239, -16.069946)
+collision_layer = 25214977
+collision_mask = 25214977
+y_degrees_opened = -100.0
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/BGebaeude-doordop-link" unique_id=1224125567]
+transform = Transform3D(2.262257e-11, 0.9999933, -0.0036652386, 0.99999994, -6.5035355e-17, -2.9802322e-08, 6.172223e-09, -0.0036652386, -0.99999344, -0.002, 0.99, -0.558)
+visible = false
+mesh = SubResource("PlaneMesh_1khpx")
+skeleton = NodePath("../../Containerraum/Sandwasch-door")
+surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
+
+[node name="steal_meshinstance" parent="Betriebsgebäude/BGebaeude-doordop-link" unique_id=303850832 instance=ExtResource("10_ybcmd")]
+nodepath = NodePath("../../../Visuals/Referenz/bg_personel_tür1")
+
+[node name="Bgebaeude-doordop-recht" parent="Betriebsgebäude" unique_id=790583969 instance=ExtResource("8_1khpx")]
+transform = Transform3D(-0.99974453, 0, 0.022600085, 0, 1, 0, -0.022600085, 0, -0.99974453, 0.122154236, -0.12926483, -18.147903)
+collision_layer = 25214977
+collision_mask = 25214977
+y_degrees_opened = 100.0
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Betriebsgebäude/Bgebaeude-doordop-recht" unique_id=595429763]
+transform = Transform3D(-7.034373e-11, -0.99993503, 0.011396766, 0.99999994, -6.5035355e-17, -2.9802322e-08, -6.171864e-09, 0.0113967955, 0.9999352, -0.007, 0.99, -0.573)
+visible = false
+mesh = SubResource("PlaneMesh_1khpx")
+skeleton = NodePath("../../Containerraum/Sandwasch-door")
+surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
+
+[node name="steal_meshinstance" parent="Betriebsgebäude/Bgebaeude-doordop-recht" unique_id=1646756599 instance=ExtResource("10_ybcmd")]
+nodepath = NodePath("../../../Visuals/Referenz/bg_personel_tür2")
+
+[node name="Containerraum" parent="Betriebsgebäude" unique_id=1520203344 instance=ExtResource("71_wh342")]
+transform = Transform3D(0.99995524, 0, -0.009459544, 0, 1, 0, 0.009459544, 0, 0.99995524, -0.023687609, -0.11887741, 0.21644753)
 
 [node name="Maschinengebäude" type="Node3D" parent="." unique_id=1562108663]
 
@@ -4194,7 +4046,7 @@ transform = Transform3D(-5.9604645e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, 
 occluder = SubResource("PolygonOccluder3D_w3kho")
 
 [node name="2026-07-07-Rechenraum" parent="Visuals" unique_id=1547531169 instance=ExtResource("73_ag5cm")]
-transform = Transform3D(0.4100185, 0, -0.91207725, 0, 1, 0, 0.91207725, 0, 0.4100185, -34.69765, 51.542294, 18.960941)
+transform = Transform3D(0.4100185, 0, -0.91207725, 0, 1, 0, 0.91207725, 0, 0.4100185, -34.69765, 51.604694, 18.960941)
 
 [node name="geometrie_rechenraum" type="StaticBody3D" parent="Visuals/2026-07-07-Rechenraum" unique_id=80510177]
 collision_layer = 49152

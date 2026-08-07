@@ -1,0 +1,354 @@
+[gd_scene format=3 uid="uid://bvx2c30hfovj1"]
+
+[ext_resource type="Script" uid="uid://3cibq28us4hi" path="res://zones/hillersleben/scripts/bg-containers/bg_garage_controller.gd" id="1_jr4vk"]
+[ext_resource type="Script" uid="uid://d2x1a26haj0vt" path="res://zones/hillersleben/scripts/bg-containers/bg_garage_state.gd" id="2_8wug0"]
+[ext_resource type="Script" uid="uid://jgo7k1ecvdjx" path="res://zones/hillersleben/scripts/logik_doors_container.gd" id="3_fiwi0"]
+[ext_resource type="Script" uid="uid://dfx637qtcm1wm" path="res://zones/hillersleben/scripts/logik_container_movement.gd" id="4_legfx"]
+[ext_resource type="PackedScene" uid="uid://c7yhfipghxiyv" path="res://models/doors/basedoor2m.tscn" id="5_47t4m"]
+[ext_resource type="PackedScene" uid="uid://cuwst8kcvigrx" path="res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn" id="6_sumhx"]
+[ext_resource type="PackedScene" uid="uid://b10l7m4qjudur" path="res://models/interaction/simple_button.tscn" id="7_ja2gv"]
+[ext_resource type="PackedScene" uid="uid://dcxeh30y5ts3d" path="res://assets/zones/hillersleben/models/raum_container/raum_container.gltf" id="8_8wug0"]
+[ext_resource type="PackedScene" uid="uid://bl7fg4bcucoxc" path="res://assets/zones/hillersleben/models/raum_container/raum_container_rollwagen.gltf" id="9_fiwi0"]
+[ext_resource type="PackedScene" uid="uid://briea1psage61" path="res://assets/zones/hillersleben/models/raum_container/raum_container_container.gltf" id="10_legfx"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_legfx"]
+size = Vector2(10.1, 3.775)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_47t4m"]
+size = Vector2(7.335, 3.775)
+
+[sub_resource type="QuadOccluder3D" id="QuadOccluder3D_legfx"]
+size = Vector2(10.051625, 3.6924343)
+
+[sub_resource type="QuadOccluder3D" id="QuadOccluder3D_47t4m"]
+size = Vector2(7.2676454, 2.8425877)
+
+[sub_resource type="QuadOccluder3D" id="QuadOccluder3D_sumhx"]
+size = Vector2(7.2676454, 2.8425877)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ja2gv"]
+size = Vector3(10.102295, 3.0835571, 0.18312073)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wjrqe"]
+size = Vector3(7.3791504, 3.0835571, 0.18312073)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6mwa4"]
+size = Vector3(2.7554321, 3.0835571, 0.18312073)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fhaft"]
+size = Vector3(3.6904297, 3.0835571, 0.18312073)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_legfx"]
+size = Vector3(2.2722473, 3.0835571, 0.18312073)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_66qm4"]
+size = Vector3(0.45214844, 3.1467285, 1.6613464)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lvui5"]
+size = Vector3(1.6712036, 1.960083, 1.5103073)
+
+[sub_resource type="Resource" id="Resource_8upog"]
+script = ExtResource("2_8wug0")
+container_states = Array[int]([0, 0])
+metadata/_custom_type_script = "uid://d2x1a26haj0vt"
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1khpx"]
+size = Vector2(2, 1.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6uclu"]
+cull_mode = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_duhpb"]
+size = Vector3(0.39, 2.35, 4.98)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0nlau"]
+size = Vector2(2.525, 4.97)
+
+[sub_resource type="Curve3D" id="Curve3D_6uclu"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.1592503, 0.007376671, 0.03483343, 0, 0, 0, 0, 0, 0, 4.7089233, -0.009655237, -0.08377743, 0, 0, 0, 0, 0, 0, 7.7320757, -0.000184536, -0.18142658),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_47t4m"]
+size = Vector3(2.4659424, 0.09338379, 1.7478027)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sumhx"]
+size = Vector3(3.0867004, 0.09338379, 1.4935303)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hc5k5"]
+size = Vector3(0.058052063, 1.7684937, 1.4935303)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ss2a4"]
+size = Vector3(0.7117653, 0.091049194, 1.4935303)
+
+[sub_resource type="BoxMesh" id="BoxMesh_duhpb"]
+size = Vector3(5.29, 2.1, 1.8)
+
+[node name="Containerraum" type="Node3D" unique_id=1520203344]
+
+[node name="raum_container" parent="." unique_id=1266427110 instance=ExtResource("8_8wug0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.528951, 0.011386752, -3.0035744)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="raum_container" unique_id=407900357]
+transform = Transform3D(1, 7.642742e-15, 1.7484555e-07, -7.642742e-15, -1, 8.742278e-08, 1.7484555e-07, -8.742278e-08, -1, 0.011972427, 2.9998407, 0.014317274)
+mesh = SubResource("PlaneMesh_legfx")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="raum_container" unique_id=43890371]
+transform = Transform3D(1, 7.642742e-15, 1.7484555e-07, -7.642742e-15, -1, 8.742278e-08, 1.7484555e-07, -8.742278e-08, -1, -1.4075508, 2.9432435, -2.2971215)
+mesh = SubResource("PlaneMesh_47t4m")
+
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="raum_container" unique_id=1341157466]
+transform = Transform3D(1, -8.742278e-08, 8.742278e-08, 8.742278e-08, -4.371139e-08, -1, 8.742278e-08, 1, -4.371138e-08, 0, 2.9578652, 0)
+occluder = SubResource("QuadOccluder3D_legfx")
+
+[node name="OccluderInstance3D4" type="OccluderInstance3D" parent="raum_container" unique_id=1611973929]
+transform = Transform3D(1, 5.373145e-16, 1.7484555e-07, -7.1054274e-15, -1, 8.742278e-08, 1.7484555e-07, -8.742278e-08, -1, 0.10244131, 1.5107335, 1.8989539)
+occluder = SubResource("QuadOccluder3D_legfx")
+
+[node name="OccluderInstance3D2" type="OccluderInstance3D" parent="raum_container" unique_id=722205650]
+transform = Transform3D(1, -8.742278e-08, 8.742278e-08, 8.742278e-08, -4.371139e-08, -1, 8.742278e-08, 1, -4.371138e-08, -1.3626823, 2.9578652, -2.7253675)
+occluder = SubResource("QuadOccluder3D_47t4m")
+
+[node name="OccluderInstance3D3" type="OccluderInstance3D" parent="raum_container" unique_id=213223208]
+transform = Transform3D(1, -7.1054274e-15, -7.1054274e-15, -7.1054274e-15, 1, 0, -7.1054274e-15, -6.211762e-22, 1, -1.3626823, 1.3318888, -4.215011)
+occluder = SubResource("QuadOccluder3D_sumhx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="raum_container" unique_id=1227627927]
+collision_layer = 49152
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="raum_container/StaticBody3D" unique_id=750559581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00012254715, 1.4876404, 1.8913956)
+shape = SubResource("BoxShape3D_ja2gv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="raum_container/StaticBody3D" unique_id=1584238430]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3614492, 1.4876404, -4.1882544)
+shape = SubResource("BoxShape3D_wjrqe")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="raum_container/StaticBody3D" unique_id=1653852895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.648038, 1.4876404, -1.9511777)
+shape = SubResource("BoxShape3D_6mwa4")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="raum_container/StaticBody3D" unique_id=1439055284]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 5.0578623, 1.4876404, 0.052871227)
+shape = SubResource("BoxShape3D_fhaft")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="raum_container/StaticBody3D" unique_id=287319068]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.3521852, 1.4876404, -3.010908)
+shape = SubResource("BoxShape3D_legfx")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="raum_container/StaticBody3D" unique_id=1436931954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17386866, 1.2819707, -3.1771457)
+shape = SubResource("BoxShape3D_66qm4")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="raum_container/StaticBody3D" unique_id=895886888]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1336622, 0.688648, 0.0625751)
+shape = SubResource("BoxShape3D_lvui5")
+
+[node name="GarageController" type="Node" parent="." unique_id=48510894 node_paths=PackedStringArray("door_controller", "container_controllers", "container_out_buttons", "container_in_buttons", "halt_buttons", "door_button")]
+script = ExtResource("1_jr4vk")
+state = SubResource("Resource_8upog")
+door_controller = NodePath("LogikDoorsContainer")
+container_controllers = [NodePath("LogikContainerMovementGarbage"), NodePath("LogikContainerMovementSand")]
+container_out_buttons = [NodePath("../GarbageContainer/ContainerGarbageMOVEFW"), NodePath("../SandContainer/ContainerSandMOVEFW")]
+container_in_buttons = [NodePath("../GarbageContainer/ContainerGarbageMOVEBACK"), NodePath("../SandContainer/ContainerSandMOVEBACK")]
+halt_buttons = [NodePath("../GarbageContainer/ContainerGarbageHALT"), NodePath("../SandContainer/ContainerSandHALT")]
+door_button = NodePath("../BGebaeude-garagedoor-button")
+
+[node name="LogikDoorsContainer" type="Node" parent="GarageController" unique_id=819459890 node_paths=PackedStringArray("garage_door_body")]
+script = ExtResource("3_fiwi0")
+garage_door_body = NodePath("../../BGebaeude-garagedoor-body")
+
+[node name="LogikContainerMovementGarbage" type="Node" parent="GarageController" unique_id=1103873018 node_paths=PackedStringArray("path", "target_node")]
+script = ExtResource("4_legfx")
+path = NodePath("../../RailsContainerGarbage")
+target_node = NodePath("../../RailsContainerGarbage/PathFollow3D/ContainerGarbage")
+
+[node name="LogikContainerMovementSand" type="Node" parent="GarageController" unique_id=905188934 node_paths=PackedStringArray("path", "target_node")]
+script = ExtResource("4_legfx")
+path = NodePath("../../RailsContainerSand")
+target_node = NodePath("../../RailsContainerSand/PathFollow3D/ContainerSand")
+container_index = 1
+
+[node name="Sandwasch-door" parent="." unique_id=1574825816 instance=ExtResource("5_47t4m")]
+transform = Transform3D(-0.99993706, 0, 0.011204779, 0, 1, 0, -0.011204779, 0, -0.99993706, -0.27120972, -0.11266327, -4.321419)
+collision_layer = 25214977
+collision_mask = 25214977
+y_degrees_opened = 100.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sandwasch-door" unique_id=603793245]
+transform = Transform3D(-1.0061396e-16, -0.999982, 0.006003868, 0.99999994, 3.7057576e-11, -2.9802433e-08, -6.1722645e-09, 0.0060039107, 0.9999821, -0.091296956, 1, -0.5267464)
+visible = false
+mesh = SubResource("PlaneMesh_1khpx")
+surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
+
+[node name="steal_meshinstance" parent="Sandwasch-door" unique_id=2070504065 instance=ExtResource("6_sumhx")]
+nodepath = NodePath("../../../../Visuals/Referenz/bg_garage_tür")
+
+[node name="BGebaeude-garagedoor-body" type="Node3D" parent="." unique_id=2036862533]
+transform = Transform3D(0.9998262, 0, -0.018639058, 0, 1, 0, 0.018639058, 0, 0.9998262, -0.456604, -0.11266327, 1.9779978)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="BGebaeude-garagedoor-body" unique_id=531350479]
+collision_layer = 8404993
+collision_mask = 8404993
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BGebaeude-garagedoor-body/StaticBody3D" unique_id=458599915]
+transform = Transform3D(1, 0, -4.0532423e-06, 0, 1, 0, 4.0532423e-06, 0, 1, -0.03137207, 1.1970215, -2.5954456)
+shape = SubResource("BoxShape3D_duhpb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BGebaeude-garagedoor-body" unique_id=1699960747]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -1.4295805e-06, 1.3422966, -2.5281115)
+visible = false
+mesh = SubResource("PlaneMesh_0nlau")
+surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
+metadata/_edit_lock_ = true
+
+[node name="steal_meshinstance" parent="BGebaeude-garagedoor-body" unique_id=727337228 instance=ExtResource("6_sumhx")]
+nodepath = NodePath("../../../../Visuals/Referenz/bg_garage_tor")
+
+[node name="BGebaeude-garagedoor-button" parent="." unique_id=1279253216 instance=ExtResource("7_ja2gv")]
+transform = Transform3D(0.08221668, 0, 0.99661434, 0, 1, 0, -0.99661434, 0, 0.08221668, -1.4777107, 1.1658783, 1.0801275)
+string_on = "Press [E] to turn close the door."
+string_off = "Press [E] to open the door."
+
+[node name="GarbageContainer" type="Node3D" parent="." unique_id=1006786778]
+transform = Transform3D(-0.997821, 0, 0.06597772, 0, 1, 0, -0.06597772, 0, -0.997821, -1.8969955, 1.1658783, 1.0774734)
+
+[node name="ContainerGarbageHALT" parent="GarbageContainer" unique_id=1551452441 instance=ExtResource("7_ja2gv")]
+momentary_button = true
+string_off = "Press [E] to stop the garbage container."
+
+[node name="ContainerGarbageMOVEFW" parent="GarbageContainer" unique_id=659543256 instance=ExtResource("7_ja2gv")]
+transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 0.34945297, 0, -0.04181099)
+momentary_button = true
+string_off = "Press [E] to take the garbage container out."
+
+[node name="ContainerGarbageMOVEBACK" parent="GarbageContainer" unique_id=1547353973 instance=ExtResource("7_ja2gv")]
+transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 1.5978279, 0, -0.11316204)
+momentary_button = true
+string_off = "Press [E] to turn move the sand container back"
+
+[node name="SandContainer" type="Node3D" parent="." unique_id=1123116080]
+transform = Transform3D(-0.997821, 0, 0.06597772, 0, 1, 0, -0.06597772, 0, -0.997821, -1.8969955, 1.4954643, 1.0774734)
+
+[node name="ContainerSandHALT" parent="SandContainer" unique_id=940676840 instance=ExtResource("7_ja2gv")]
+momentary_button = true
+string_off = "Press [E] to stop the sand container."
+
+[node name="ContainerSandMOVEFW" parent="SandContainer" unique_id=420487400 instance=ExtResource("7_ja2gv")]
+transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 0.34945297, 0, -0.04181099)
+momentary_button = true
+string_off = "Press [E] to take the sand container out."
+
+[node name="ContainerSandMOVEBACK" parent="SandContainer" unique_id=1276048718 instance=ExtResource("7_ja2gv")]
+transform = Transform3D(0.07423025, 0, 0.9972411, 0, 1, 0, -0.9972411, 0, 0.07423025, 1.5978279, 0, -0.11316204)
+momentary_button = true
+string_off = "Press [E] to move the sand container back"
+
+[node name="RailsContainerGarbage" type="Path3D" parent="." unique_id=2118606364]
+transform = Transform3D(0.9998259, 0, -0.018639058, 0, 1, 0, 0.018639058, 0, 0.9998259, -3.0690866, -0.11266279, -0.59235835)
+curve = SubResource("Curve3D_6uclu")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="RailsContainerGarbage" unique_id=1223037296]
+transform = Transform3D(-0.016130118, -0.0034154025, -0.9998622, 0, 0.9999941, -0.003415841, 0.9998679, -5.509812e-05, -0.016130025, 0, 0, 0)
+
+[node name="ContainerGarbage" type="Node3D" parent="RailsContainerGarbage/PathFollow3D" unique_id=1882114315]
+transform = Transform3D(-0.06272143, 0, 0.9980323, -3.4737554e-06, 1, -2.1830829e-07, -0.9980322, -3.4806098e-06, -0.06272143, 0, 0, 0)
+
+[node name="raum_container_rollwagen" parent="RailsContainerGarbage/PathFollow3D/ContainerGarbage" unique_id=504437458 instance=ExtResource("9_fiwi0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1183057e-11, 0.3134861, 9.094947e-13)
+
+[node name="raum_container_container" parent="RailsContainerGarbage/PathFollow3D/ContainerGarbage/raum_container_rollwagen" unique_id=255763783 instance=ExtResource("10_legfx")]
+
+[node name="AnimatableBody3D2" type="AnimatableBody3D" parent="RailsContainerGarbage/PathFollow3D/ContainerGarbage/raum_container_rollwagen/raum_container_container" unique_id=301963819]
+transform = Transform3D(0.9994754, 2.3374014e-10, -0.0323877, -1.4250645e-10, 1, 2.3283064e-10, 0.032387692, -1.8189894e-10, 0.9994754, 0, 0, 0)
+collision_layer = 16793600
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RailsContainerGarbage/PathFollow3D/ContainerGarbage/raum_container_rollwagen/raum_container_container/AnimatableBody3D2" unique_id=8490468]
+transform = Transform3D(1, 8.3218254e-08, -1.6624108e-07, -8.305085e-08, 1, 1.382432e-09, 1.6624108e-07, 1.5352271e-09, 1, -0.120792866, 0.08563222, -0.016967773)
+shape = SubResource("BoxShape3D_47t4m")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RailsContainerGarbage/PathFollow3D/ContainerGarbage/raum_container_rollwagen/raum_container_container/AnimatableBody3D2" unique_id=71817323]
+transform = Transform3D(0.999969, 0.000991777, -0.0078123347, -0.0078123496, 1.1584707e-05, -0.9999695, -0.0009916124, 0.9999995, 1.9334155e-05, -0.25227785, 0.7429815, 0.88996434)
+shape = SubResource("BoxShape3D_sumhx")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="RailsContainerGarbage/PathFollow3D/ContainerGarbage/raum_container_rollwagen/raum_container_container/AnimatableBody3D2" unique_id=976171263]
+transform = Transform3D(0.999969, 0.000991777, -0.0078123347, -0.0078123496, 1.1584707e-05, -0.9999695, -0.000991612, 0.9999995, 1.9334148e-05, -0.26008487, 0.74319196, -0.88365245)
+shape = SubResource("BoxShape3D_sumhx")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="RailsContainerGarbage/PathFollow3D/ContainerGarbage/raum_container_rollwagen/raum_container_container/AnimatableBody3D2" unique_id=100330329]
+transform = Transform3D(0.7915959, 0.0016383904, 0.6110431, 0.61104524, -0.0021207656, -0.79159313, -9.094365e-07, 0.9999967, -0.0026799198, -1.2155254, 0.47646606, -0.044379473)
+shape = SubResource("BoxShape3D_hc5k5")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="RailsContainerGarbage/PathFollow3D/ContainerGarbage/raum_container_rollwagen/raum_container_container/AnimatableBody3D2" unique_id=1269386827]
+transform = Transform3D(-0.79507995, 0.0070506223, 0.6064647, 0.60646504, -0.0022694797, 0.7951075, 0.0069825063, 0.999973, -0.0024715378, 1.2917562, 0.43296432, -0.055420876)
+shape = SubResource("BoxShape3D_hc5k5")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="RailsContainerGarbage/PathFollow3D/ContainerGarbage/raum_container_rollwagen/raum_container_container/AnimatableBody3D2" unique_id=871263321]
+transform = Transform3D(-0.79507965, 0.00705076, 0.6064641, 0.60646486, -0.0022695607, 0.79510707, 0.0069825165, 0.99997264, -0.0024715564, 1.025964, 0.6330953, -0.8918376)
+shape = SubResource("BoxShape3D_ss2a4")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="RailsContainerGarbage/PathFollow3D/ContainerGarbage/raum_container_rollwagen/raum_container_container/AnimatableBody3D2" unique_id=368056268]
+transform = Transform3D(-0.7950797, 0.00705076, 0.60646397, 0.60646474, -0.0022695602, 0.7951071, 0.0069825165, 0.99997264, -0.002471556, 1.0338256, 0.6328835, 0.89437413)
+shape = SubResource("BoxShape3D_ss2a4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RailsContainerGarbage/PathFollow3D/ContainerGarbage" unique_id=1932389141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0200298, 1.1576691, 0)
+visible = false
+mesh = SubResource("BoxMesh_duhpb")
+
+[node name="RailsContainerSand" type="Path3D" parent="." unique_id=1156142207]
+transform = Transform3D(0.99982584, 0, -0.018639117, 0, 1, 0, 0.018639117, 0, 0.99982584, -3.2072036, -0.11266327, -3.0519567)
+curve = SubResource("Curve3D_6uclu")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="RailsContainerSand" unique_id=960818316]
+transform = Transform3D(-0.016130133, -0.0034154025, -0.99986297, 0, 0.9999941, -0.0034158435, 0.9998688, -5.509812e-05, -0.016130038, 0, 0, 0)
+
+[node name="ContainerSand" type="Node3D" parent="RailsContainerSand/PathFollow3D" unique_id=1652912098]
+transform = Transform3D(-0.0627214, -1.1368693e-13, 0.99803156, -3.473756e-06, 1, -2.1830851e-07, -0.99803156, -3.4806073e-06, -0.0627214, 0.11501026, 0, -0.0072288513)
+
+[node name="raum_container_rollwagen" parent="RailsContainerSand/PathFollow3D/ContainerSand" unique_id=1684094741 instance=ExtResource("9_fiwi0")]
+transform = Transform3D(0.99947536, 0, -0.032387644, 0, 1, 0, 0.032387644, 0, 0.99947536, -1.4291089e-10, 0.31253856, -0.057284623)
+
+[node name="raum_container_container" parent="RailsContainerSand/PathFollow3D/ContainerSand/raum_container_rollwagen" unique_id=1469032348 instance=ExtResource("10_legfx")]
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="RailsContainerSand/PathFollow3D/ContainerSand/raum_container_rollwagen/raum_container_container" unique_id=934317241]
+collision_layer = 16793600
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RailsContainerSand/PathFollow3D/ContainerSand/raum_container_rollwagen/raum_container_container/AnimatableBody3D" unique_id=865422160]
+transform = Transform3D(1, 8.3218254e-08, -1.6624108e-07, -8.305085e-08, 1, 1.382432e-09, 1.6624108e-07, 1.5352271e-09, 1, -0.120792866, 0.08563222, -0.016967773)
+shape = SubResource("BoxShape3D_47t4m")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="RailsContainerSand/PathFollow3D/ContainerSand/raum_container_rollwagen/raum_container_container/AnimatableBody3D" unique_id=1395948138]
+transform = Transform3D(0.999969, 0.000991777, -0.0078123347, -0.0078123496, 1.1584707e-05, -0.9999695, -0.0009916124, 0.9999995, 1.9334155e-05, -0.25227785, 0.7429815, 0.88996434)
+shape = SubResource("BoxShape3D_sumhx")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="RailsContainerSand/PathFollow3D/ContainerSand/raum_container_rollwagen/raum_container_container/AnimatableBody3D" unique_id=1167090283]
+transform = Transform3D(0.999969, 0.000991777, -0.0078123347, -0.0078123496, 1.1584707e-05, -0.9999695, -0.000991612, 0.9999995, 1.9334148e-05, -0.26008487, 0.74319196, -0.88365245)
+shape = SubResource("BoxShape3D_sumhx")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="RailsContainerSand/PathFollow3D/ContainerSand/raum_container_rollwagen/raum_container_container/AnimatableBody3D" unique_id=1622253463]
+transform = Transform3D(0.7915959, 0.0016383904, 0.6110431, 0.61104524, -0.0021207656, -0.79159313, -9.094365e-07, 0.9999967, -0.0026799198, -1.2155254, 0.47646606, -0.044379473)
+shape = SubResource("BoxShape3D_hc5k5")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="RailsContainerSand/PathFollow3D/ContainerSand/raum_container_rollwagen/raum_container_container/AnimatableBody3D" unique_id=1427172988]
+transform = Transform3D(-0.79507995, 0.0070506223, 0.6064647, 0.60646504, -0.0022694797, 0.7951075, 0.0069825063, 0.999973, -0.0024715378, 1.2917562, 0.43296432, -0.055420876)
+shape = SubResource("BoxShape3D_hc5k5")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="RailsContainerSand/PathFollow3D/ContainerSand/raum_container_rollwagen/raum_container_container/AnimatableBody3D" unique_id=1834379801]
+transform = Transform3D(-0.79507965, 0.00705076, 0.6064641, 0.60646486, -0.0022695607, 0.79510707, 0.0069825165, 0.99997264, -0.0024715564, 1.025964, 0.6330953, -0.8918376)
+shape = SubResource("BoxShape3D_ss2a4")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="RailsContainerSand/PathFollow3D/ContainerSand/raum_container_rollwagen/raum_container_container/AnimatableBody3D" unique_id=1484394222]
+transform = Transform3D(-0.7950797, 0.00705076, 0.60646397, 0.60646474, -0.0022695602, 0.7951071, 0.0069825165, 0.99997264, -0.002471556, 1.0338256, 0.6328835, 0.89437413)
+shape = SubResource("BoxShape3D_ss2a4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RailsContainerSand/PathFollow3D/ContainerSand" unique_id=1836043163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0200298, 1.1576691, 0)
+visible = false
+mesh = SubResource("BoxMesh_duhpb")
