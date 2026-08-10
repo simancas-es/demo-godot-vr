@@ -2,6 +2,28 @@
 
 [ext_resource type="PackedScene" uid="uid://b718s46l4q3pe" path="res://assets/zones/hillersleben/models/raum_gas/raum_gas.gltf" id="1_sq7vn"]
 
+[sub_resource type="QuadOccluder3D" id="QuadOccluder3D_sq7vn"]
+size = Vector2(4.5580344, 2.570734)
+
+[sub_resource type="QuadOccluder3D" id="QuadOccluder3D_nxme1"]
+size = Vector2(2.6657119, 2.4916399)
+
 [node name="Gasraum" type="Node3D" unique_id=331696894]
 
-[node name="raum_gas" parent="." unique_id=1086809054 instance=ExtResource("1_sq7vn")]
+[node name="raum_gas" parent="." unique_id=561138824 instance=ExtResource("1_sq7vn")]
+
+[node name="OccluderInstance3D3_mg_interroom1" type="OccluderInstance3D" parent="raum_gas" unique_id=1233301538]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.2253394, 1.3652837, -0.010428667)
+occluder = SubResource("QuadOccluder3D_sq7vn")
+
+[node name="OccluderInstance3D3_mg_interroom2" type="OccluderInstance3D" parent="raum_gas" unique_id=1389220705]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.2530006, 1.3194206, -0.010428667)
+occluder = SubResource("QuadOccluder3D_sq7vn")
+
+[node name="OccluderInstance3D3_mg_interroom3" type="OccluderInstance3D" parent="raum_gas" unique_id=818919090]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.008191586, 1.3531395, -2.1083243)
+occluder = SubResource("QuadOccluder3D_nxme1")
+
+[node name="OccluderInstance3D3_mg_interroom4" type="OccluderInstance3D" parent="raum_gas" unique_id=1248882877]
+transform = Transform3D(-1, 0, -8.742278e-08, -8.742278e-08, -4.371139e-08, 1, -3.821371e-15, 1, 4.371139e-08, -0.008191586, 2.7253795, 0.031080246)
+occluder = SubResource("QuadOccluder3D_nxme1")
