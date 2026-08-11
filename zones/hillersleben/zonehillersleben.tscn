@@ -4040,15 +4040,15 @@ mesh = SubResource("QuadMesh_ngwpx")
 transform = Transform3D(-4.371139e-08, 1, -8.940697e-08, 0, -8.940697e-08, -1, -1, -4.3711392e-08, -1.7763568e-15, -0.29103994, 4.822336, 5.789659e-07)
 mesh = SubResource("QuadMesh_ngwpx")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="Visuals/raum_büro" unique_id=1033113069]
+[node name="StaticBody3D3" type="StaticBody3D" parent="Visuals/raum_büro" unique_id=1033113069]
 collision_layer = 49152
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Visuals/raum_büro/StaticBody3D2" unique_id=369570601]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Visuals/raum_büro/StaticBody3D3" unique_id=369570601]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3419266, 1.215332, 0.019450188)
 shape = SubResource("BoxShape3D_vuf03")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Visuals/raum_büro/StaticBody3D2" unique_id=1394376734]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Visuals/raum_büro/StaticBody3D3" unique_id=1394376734]
 transform = Transform3D(2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, 2.9802322e-08, -0.112674706, 1.215332, -2.3270555)
 shape = SubResource("BoxShape3D_vuf03")
 
