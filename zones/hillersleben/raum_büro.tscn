@@ -7,7 +7,11 @@
 size = Vector2(9.92849, 14.264032)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4haxy"]
-size = Vector3(9.89917, 0.1315918, 14.350708)
+size = Vector3(9.944611, 0.1315918, 14.350708)
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_4haxy"]
+map_depth = 4
+map_data = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
 
 [node name="raum_büro" type="Node3D" unique_id=1390667165]
 
@@ -43,5 +47,9 @@ collision_layer = 49152
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1979907970]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0059814453, -0.05065918, 0.034240723)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.028701782, -0.05065918, 0.034240723)
 shape = SubResource("BoxShape3D_4haxy")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1785131608]
+transform = Transform3D(0.9886071, 0.15051892, 0, -0.15051892, 0.9886071, 0, 0, 0, 1, 4.8708367, -0.052189592, -5.678234)
+shape = SubResource("HeightMapShape3D_4haxy")

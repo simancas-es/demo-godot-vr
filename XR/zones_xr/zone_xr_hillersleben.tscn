@@ -42,6 +42,7 @@
 [ext_resource type="Script" uid="uid://drjdsvo6t4b31" path="res://XR/zones_xr/zone_xr_hillersleben/eis_lanze/eislanze_tip.gd" id="35_8vbyn"]
 [ext_resource type="Script" uid="uid://da5ajj1xsgk0e" path="res://XR/zones_xr/zone_xr_hillersleben/sampler/area_3d_beaker.gd" id="35_hbpbv"]
 [ext_resource type="Script" uid="uid://c0rh1lgxdkj8x" path="res://XR/zones_xr/zone_xr_hillersleben/wire/wire_snap_task.gd" id="35_pq2yi"]
+[ext_resource type="PackedScene" uid="uid://btxmr3eks7gnm" path="res://models/möbel/sitz.tscn" id="43_bf5gv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4n540"]
 size = Vector3(0.91015625, 6.8653564, 0.05)
@@ -105,6 +106,7 @@ script = ExtResource("1_g30re")
 metadata/_custom_type_script = "uid://177gygw2xqqu"
 
 [node name="Zonehillersleben" parent="." unique_id=1567970775 instance=ExtResource("4_ylnmi")]
+metadata/_edit_lock_ = true
 
 [node name="XR_ADAPTER" type="Node" parent="." unique_id=1209909459 node_paths=PackedStringArray("basezone")]
 script = ExtResource("2_qeqsy")
@@ -113,13 +115,12 @@ delete_vans = true
 delete_inventorypickups = true
 
 [node name="XRPlayer" parent="." unique_id=922481156 instance=ExtResource("3_3tkdv")]
-transform = Transform3D(-0.9768592, 0, -0.21388295, 0, 1, 0, 0.21388295, 0, -0.9768592, -69.213715, 49.313667, -47.83035)
+transform = Transform3D(-0.9768592, 0, -0.21388295, 0, 1, 0, 0.21388295, 0, -0.9768592, -69.213715, 49.592274, -47.83035)
 
 [node name="XrVan" parent="." unique_id=1359098335 instance=ExtResource("5_g30re")]
-transform = Transform3D(0.114607684, 0, 0.9934108, 0, 1, 0, -0.9934108, 0, 0.114607684, -76.34318, 48.444527, -45.056103)
+transform = Transform3D(0.114607684, 0, 0.9934108, 0, 1, 0, -0.9934108, 0, 0.114607684, -76.34318, 48.032436, -45.056103)
 target_scene = "uid://cakq3l4d46c36"
 labeltext_text = "To the Hochschule"
-metadata/_edit_lock_ = true
 
 [node name="XrVan2" parent="." unique_id=1962759830 instance=ExtResource("5_g30re")]
 transform = Transform3D(0.114607684, 0, 0.9934108, 0, 1, 0, -0.9934108, 0, 0.114607684, -8.759325, 46.580467, 72.57292)
@@ -155,7 +156,7 @@ transform = Transform3D(0.0045726225, -0.41257057, 0.9109142, -0.9999386, -0.011
 [node name="ButtonDoor" parent="BGebaeude" unique_id=462829160 instance=ExtResource("6_qeqsy")]
 transform = Transform3D(0.0045726225, -0.41257057, 0.9109142, -0.9999386, -0.011082585, -6.1318794e-09, 0.010095288, -0.91085833, -0.4125958, -28.92321, 49.91947, 18.851036)
 
-[node name="XRLogikContainer_u_Door" type="Node" parent="BGebaeude" unique_id=1087492140 node_paths=PackedStringArray("basemap", "xrbuttondoor", "xrbuttonsandout", "xrbuttonsandin", "xrbuttonsandhalt", "xrbuttongarbageout", "xrbuttongarbagein", "xrbuttongarbagehalt", "buttondoor", "buttonsandout", "buttonsandin", "buttonsandhalt", "buttongarbageout", "buttongarbagein", "buttongarbagehalt")]
+[node name="XRLogikContainer_u_Door" type="Node" parent="BGebaeude" unique_id=1087492140 node_paths=PackedStringArray("basemap", "xrbuttondoor", "xrbuttonsandout", "xrbuttonsandin", "xrbuttonsandhalt", "xrbuttongarbageout", "xrbuttongarbagein", "xrbuttongarbagehalt")]
 script = ExtResource("7_3tkdv")
 basemap = NodePath("../../Zonehillersleben")
 xrbuttondoor = NodePath("../ButtonDoor")
@@ -165,13 +166,6 @@ xrbuttonsandhalt = NodePath("../ButtonSandHALT")
 xrbuttongarbageout = NodePath("../ButtonGarbageFW")
 xrbuttongarbagein = NodePath("../ButtonGarbageBK")
 xrbuttongarbagehalt = NodePath("../ButtonGarbageHALT")
-buttondoor = NodePath("../../Zonehillersleben/Betriebsgebäude/BGebaeude-garagedoor-button")
-buttonsandout = NodePath("../../Zonehillersleben/Betriebsgebäude/SandContainer/ContainerSandMOVEFW")
-buttonsandin = NodePath("../../Zonehillersleben/Betriebsgebäude/SandContainer/ContainerSandMOVEBACK")
-buttonsandhalt = NodePath("../../Zonehillersleben/Betriebsgebäude/SandContainer/ContainerSandHALT")
-buttongarbageout = NodePath("../../Zonehillersleben/Betriebsgebäude/GarbageContainer/ContainerGarbageMOVEFW")
-buttongarbagein = NodePath("../../Zonehillersleben/Betriebsgebäude/GarbageContainer/ContainerGarbageMOVEBACK")
-buttongarbagehalt = NodePath("../../Zonehillersleben/Betriebsgebäude/GarbageContainer/ContainerGarbageHALT")
 
 [node name="GasSpeicher" type="Node3D" parent="." unique_id=2061814908]
 transform = Transform3D(-0.062093742, 0, 0.9980703, 0, 1, 0, -0.9980703, 0, -0.062093742, 28.589895, 47.31136, 67.76201)
@@ -646,7 +640,7 @@ debug_color = Color(17.3556, 0, 17.486006, 1)
 baseroot = NodePath("../../Zonehillersleben")
 unique_name_physics = "SysPhysControlIBCVoll"
 
-[node name="XR_WIRE" parent="." unique_id=1519224303 instance=ExtResource("31_48yfo")]
+[node name="XR_WIRE" parent="." unique_id=1519224303 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("31_48yfo")]
 transform = Transform3D(0.29759142, -0.9062844, 0.30014616, 0.9546933, 0.28250176, -0.09355981, 0, 0.31439015, 0.94929385, -28.079533, 50.308094, -8.528649)
 sleeping = true
 item_id = 3
@@ -657,7 +651,7 @@ shape = SubResource("BoxShape3D_kaumj")
 
 [node name="MeshInstance3D" parent="XR_WIRE" unique_id=98773624 instance=ExtResource("33_0uh4r")]
 
-[node name="Probenahmestange" parent="." unique_id=1634594194 instance=ExtResource("31_48yfo")]
+[node name="Probenahmestange" parent="." unique_id=1634594194 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("31_48yfo")]
 transform = Transform3D(-0.90123, -0.2882631, 0.32355678, -0.27130803, 0.95755124, 0.09740417, -0.33790022, 0, -0.94118196, -51.335526, 51.894936, 18.740929)
 script = ExtResource("34_bf5gv")
 item_id = 6
@@ -691,7 +685,7 @@ script = ExtResource("35_hbpbv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00425833, -5.820766e-11)
 shape = SubResource("SphereShape3D_ffxoy")
 
-[node name="ItemPickable" parent="." unique_id=266334929 instance=ExtResource("31_48yfo")]
+[node name="ItemPickable" parent="." unique_id=266334929 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("31_48yfo")]
 transform = Transform3D(0.24157733, -0.03015983, -0.9699128, -0.25549987, 0.9622714, -0.09355983, 0.93614113, 0.2704146, 0.22475708, -99.43071, 51.818943, 36.522457)
 item_id = 5
 picked_up_layer = 1
@@ -805,6 +799,9 @@ monitoring = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6878662, 0)
 shape = SubResource("CylinderShape3D_fx8ep")
 debug_color = Color(0.9907562, 0, 0.2684075, 1)
+
+[node name="Sitz" parent="." unique_id=451235976 instance=ExtResource("43_bf5gv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.717606, 49.96283, -38.85549)
 
 [editable path="LEITER/LadderShort"]
 [editable path="LEITER/LadderShort2"]

@@ -72,6 +72,7 @@ IBC=""
 water_bb=""
 FPVRAYCAST=""
 EXCLUDED_BELTSNAP=""
+INCLUDED_BELTSNAP=""
 
 [input]
 

@@ -477,27 +477,37 @@ push_rigid_bodies = false
 
 [node name="BeltSnapZone01" parent="PlayerBody" unique_id=277655760 groups=["beltsnap"] instance=ExtResource("13_5bwuw")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -0.177, 1, -0.177)
+snap_require = "INCLUDED_BELTSNAP"
 snap_exclude = "EXCLUDED_BELTSNAP"
+grab_require = "INCLUDED_BELTSNAP"
 grab_exclude = "EXCLUDED_BELTSNAP"
 
 [node name="BeltSnapZone02" parent="PlayerBody" unique_id=128798984 groups=["beltsnap"] instance=ExtResource("13_5bwuw")]
 transform = Transform3D(0.92388, 0, 0.382683, 0, 1, 0, -0.382683, 0, 0.92388, -0.096, 1, -0.231)
+snap_require = "INCLUDED_BELTSNAP"
 snap_exclude = "EXCLUDED_BELTSNAP"
+grab_require = "INCLUDED_BELTSNAP"
 grab_exclude = "EXCLUDED_BELTSNAP"
 
 [node name="BeltSnapZone03" parent="PlayerBody" unique_id=426515222 groups=["beltsnap"] instance=ExtResource("13_5bwuw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.25)
+snap_require = "INCLUDED_BELTSNAP"
 snap_exclude = "EXCLUDED_BELTSNAP"
+grab_require = "INCLUDED_BELTSNAP"
 grab_exclude = "EXCLUDED_BELTSNAP"
 
 [node name="BeltSnapZone04" parent="PlayerBody" unique_id=1885076654 groups=["beltsnap"] instance=ExtResource("13_5bwuw")]
 transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 0.096, 1, -0.231)
+snap_require = "INCLUDED_BELTSNAP"
 snap_exclude = "EXCLUDED_BELTSNAP"
+grab_require = "INCLUDED_BELTSNAP"
 grab_exclude = "EXCLUDED_BELTSNAP"
 
 [node name="BeltSnapZone05" parent="PlayerBody" unique_id=1212786853 groups=["beltsnap"] instance=ExtResource("13_5bwuw")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0.177, 1, -0.177)
+snap_require = "INCLUDED_BELTSNAP"
 snap_exclude = "EXCLUDED_BELTSNAP"
+grab_require = "INCLUDED_BELTSNAP"
 grab_exclude = "EXCLUDED_BELTSNAP"
 
 [node name="Locator_id_who" type="Node" parent="PlayerBody" unique_id=1372135470]

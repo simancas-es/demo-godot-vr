@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ce5kbnvmy06di"]
+[gd_scene format=3 uid="uid://ce5kbnvmy06di"]
 
 [ext_resource type="PackedScene" uid="uid://b4frcfrsd14ec" path="res://XR/scenes/places/basic_map.tscn" id="1_4bowe"]
 [ext_resource type="PackedScene" uid="uid://l4rg3fp3hpo1" path="res://XR/scenes/places/demo/objects/table.tscn" id="2_nq45k"]
@@ -32,202 +32,201 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_e2eke"]
 size = Vector3(0.03757324, 0.029028319, 0.1)
 
-[node name="XRLevel" type="Node3D"]
+[node name="XRLevel" type="Node3D" unique_id=13834386]
 
-[node name="BasicMap" parent="." instance=ExtResource("1_4bowe")]
+[node name="BasicMap" parent="." unique_id=627006754 instance=ExtResource("1_4bowe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003317237, 0, 0.007683456)
 
-[node name="VRGrabbing" type="Node3D" parent="."]
+[node name="VRGrabbing" type="Node3D" parent="." unique_id=303662392]
 transform = Transform3D(0.28214058, 0, -0.9593731, 0, 1, 0, 0.9593731, 0, 0.28214058, 6.1742606, 2.369003, 0.04170084)
 
-[node name="Table2" parent="VRGrabbing" instance=ExtResource("2_nq45k")]
+[node name="Table2" parent="VRGrabbing" unique_id=1952428735 instance=ExtResource("2_nq45k")]
 transform = Transform3D(0.64664346, 0, 0.76279247, 0, 1, 0, -0.76279247, 0, 0.64664346, -4.4057355, -2.369003, 2.1745625)
 
-[node name="SnapToys" type="Node3D" parent="VRGrabbing/Table2"]
+[node name="SnapToys" type="Node3D" parent="VRGrabbing/Table2" unique_id=106707579]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, -1.8907604, 0, 2.8401477)
 
-[node name="SnapTray1" parent="VRGrabbing/Table2/SnapToys" instance=ExtResource("3_jxwgh")]
+[node name="SnapTray1" parent="VRGrabbing/Table2/SnapToys" unique_id=905303874 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("3_jxwgh")]
 transform = Transform3D(0.70710707, 0, -0.70710707, 0, 1, 0, 0.70710707, 0, 0.70710707, 3.4538293, 1.02968, -1.9284858)
 
-[node name="SnapTray2" parent="VRGrabbing/Table2/SnapToys" instance=ExtResource("3_jxwgh")]
+[node name="SnapTray2" parent="VRGrabbing/Table2/SnapToys" unique_id=2065198951 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("3_jxwgh")]
 transform = Transform3D(0.9961951, 0, -0.08715582, 0, 1, 0, 0.08715582, 0, 0.9961951, 3.011363, 1.02968, -1.9812421)
 tray_active = false
 
-[node name="SnapToyRed" parent="VRGrabbing/Table2/SnapToys" instance=ExtResource("4_ek5h7")]
+[node name="SnapToyRed" parent="VRGrabbing/Table2/SnapToys" unique_id=1515105401 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("4_ek5h7")]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 2.47912, 0.929682, -1.8102452)
 
-[node name="SnapToyYellow" parent="VRGrabbing/Table2/SnapToys" instance=ExtResource("5_pskmj")]
+[node name="SnapToyYellow" parent="VRGrabbing/Table2/SnapToys" unique_id=214599411 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("5_pskmj")]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 2.67912, 0.929682, -1.8102454)
 
-[node name="GrabCubes" type="Node3D" parent="VRGrabbing/Table2"]
+[node name="GrabCubes" type="Node3D" parent="VRGrabbing/Table2" unique_id=1165295424]
 transform = Transform3D(0.9142468, 0, 0.40515757, 0, 1, 0, -0.40515757, 0, 0.9142468, -1.154014, 0, 4.4179187)
 
-[node name="Cube1" parent="VRGrabbing/Table2/GrabCubes" instance=ExtResource("6_yixlw")]
+[node name="Cube1" parent="VRGrabbing/Table2/GrabCubes" unique_id=2015908911 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("6_yixlw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6149023, 0.875, -2.7034044)
 
-[node name="Cube2" parent="VRGrabbing/Table2/GrabCubes" instance=ExtResource("6_yixlw")]
+[node name="Cube2" parent="VRGrabbing/Table2/GrabCubes" unique_id=1776205402 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("6_yixlw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8149023, 0.875, -2.7034044)
 
-[node name="Cube3" parent="VRGrabbing/Table2/GrabCubes" instance=ExtResource("6_yixlw")]
+[node name="Cube3" parent="VRGrabbing/Table2/GrabCubes" unique_id=583998065 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("6_yixlw")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 2.7149024, 0.975, -2.7034044)
 
-[node name="Hammers" type="Node3D" parent="VRGrabbing"]
+[node name="Hammers" type="Node3D" parent="VRGrabbing" unique_id=50866644]
 transform = Transform3D(0.28214055, 0, 0.959373, 0, 1, 0, -0.959373, 0, 0.28214055, -1.7820159, -2.369003, 5.9116535)
 
-[node name="Hammer" parent="VRGrabbing/Hammers" instance=ExtResource("7_aryv6")]
+[node name="Hammer" parent="VRGrabbing/Hammers" unique_id=167017495 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("7_aryv6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.991849, 0.15, -2.96188)
 
-[node name="Hammer4" parent="VRGrabbing/Hammers" instance=ExtResource("7_aryv6")]
+[node name="Hammer4" parent="VRGrabbing/Hammers" unique_id=1924657512 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("7_aryv6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.991849, 0.15, -2.56188)
 
-[node name="Hammer2" parent="VRGrabbing/Hammers" instance=ExtResource("7_aryv6")]
+[node name="Hammer2" parent="VRGrabbing/Hammers" unique_id=867670195 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("7_aryv6")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0.791849, 0.15, -2.86188)
 
-[node name="Hammer3" parent="VRGrabbing/Hammers" instance=ExtResource("7_aryv6")]
+[node name="Hammer3" parent="VRGrabbing/Hammers" unique_id=808525856 groups=["INCLUDED_BELTSNAP"] instance=ExtResource("7_aryv6")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 2.7151325, 0.996387, -2.9245524)
 
-[node name="RemoteGrabBalls" type="Node3D" parent="VRGrabbing"]
+[node name="RemoteGrabBalls" type="Node3D" parent="VRGrabbing" unique_id=1155193867]
 transform = Transform3D(0.28214055, 0, 0.959373, 0, 1, 0, -0.959373, 0, 0.28214055, -1.7820159, -2.369003, 5.9116535)
 
-[node name="Ball1" parent="VRGrabbing/RemoteGrabBalls" instance=ExtResource("8_fwkw1")]
+[node name="Ball1" parent="VRGrabbing/RemoteGrabBalls" unique_id=1834210975 instance=ExtResource("8_fwkw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.2, -2.6)
 
-[node name="Ball2" parent="VRGrabbing/RemoteGrabBalls" instance=ExtResource("8_fwkw1")]
+[node name="Ball2" parent="VRGrabbing/RemoteGrabBalls" unique_id=1890450210 instance=ExtResource("8_fwkw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.2, -3.2)
 
-[node name="Ball3" parent="VRGrabbing/RemoteGrabBalls" instance=ExtResource("8_fwkw1")]
+[node name="Ball3" parent="VRGrabbing/RemoteGrabBalls" unique_id=234450838 instance=ExtResource("8_fwkw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.2, -2.9)
 
-[node name="Table" parent="VRGrabbing" instance=ExtResource("2_nq45k")]
+[node name="Table" parent="VRGrabbing" unique_id=1690443367 instance=ExtResource("2_nq45k")]
 transform = Transform3D(-0.13730606, 0, 0.99052846, 0, 1, 0, -0.99052846, 0, -0.13730606, -5.7886972, -1.9690031, 8.902723)
 
-[node name="SniperRifle" parent="VRGrabbing/Table" instance=ExtResource("9_jdle6")]
+[node name="SniperRifle" parent="VRGrabbing/Table" unique_id=893546183 instance=ExtResource("9_jdle6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.80236536, 0.8615058, 0.5074248)
 
-[node name="Saucer" parent="VRGrabbing/Table" instance=ExtResource("10_ewdhk")]
+[node name="Saucer" parent="VRGrabbing/Table" unique_id=671856670 instance=ExtResource("10_ewdhk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.584, 0.829, 0.973725)
 
-[node name="TeacupStand" parent="VRGrabbing/Table" instance=ExtResource("11_vnoq0")]
+[node name="TeacupStand" parent="VRGrabbing/Table" unique_id=344690173 instance=ExtResource("11_vnoq0")]
 transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 1.8563632, 0.8000001, 0.9320507)
 
-[node name="SnapZone" parent="VRGrabbing/Table/TeacupStand" groups=["TeacupStand"] instance=ExtResource("12_grpd4")]
+[node name="SnapZone" parent="VRGrabbing/Table/TeacupStand" unique_id=1803485496 groups=["TeacupStand"] instance=ExtResource("12_grpd4")]
 transform = Transform3D(0.8660253, 0, 0.49999997, 0, 1, 0, -0.49999997, 0, 0.8660253, -0.04392171, 0.2823404, 0.07789612)
 grab_distance = 0.05
 snap_require = "Teacup"
 
-[node name="SnapZone4" parent="VRGrabbing/Table/TeacupStand" groups=["TeacupStand"] instance=ExtResource("12_grpd4")]
+[node name="SnapZone4" parent="VRGrabbing/Table/TeacupStand" unique_id=2127302311 groups=["TeacupStand"] instance=ExtResource("12_grpd4")]
 transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, 0.09113157, 0.2823404, 0.0002708435)
 grab_distance = 0.05
 snap_require = "Teacup"
 initial_object = NodePath("../../Teacup2")
 
-[node name="SnapZone5" parent="VRGrabbing/Table/TeacupStand" groups=["TeacupStand"] instance=ExtResource("12_grpd4")]
+[node name="SnapZone5" parent="VRGrabbing/Table/TeacupStand" unique_id=1512442270 groups=["TeacupStand"] instance=ExtResource("12_grpd4")]
 transform = Transform3D(-0.8660253, 0, -0.5, 0, 1, 0, 0.5, 0, -0.8660253, -0.04630983, 0.2823404, -0.08463526)
 grab_distance = 0.05
 snap_require = "Teacup"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="VRGrabbing/Table/TeacupStand"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="VRGrabbing/Table/TeacupStand" unique_id=400396513]
 transform = Transform3D(0.87489027, 0, -0.484321, 0, 1, 0, 0.484321, 0, 0.87489027, -0.025624275, 0.277889, 0.041525602)
 shape = SubResource("BoxShape3D_e2eke")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="VRGrabbing/Table/TeacupStand"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="VRGrabbing/Table/TeacupStand" unique_id=2123113151]
 transform = Transform3D(-0.011100203, 0, 0.99993825, 0, 1, 0, -0.99993825, 0, -0.011100203, 0.053026915, 0.277889, -2.7656555e-05)
 shape = SubResource("BoxShape3D_e2eke")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="VRGrabbing/Table/TeacupStand"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="VRGrabbing/Table/TeacupStand" unique_id=1961707679]
 transform = Transform3D(-0.8829638, 0, -0.46944082, 0, 1, 0, 0.46944082, 0, -0.8829638, -0.022988796, 0.277889, -0.044626713)
 shape = SubResource("BoxShape3D_e2eke")
 
-[node name="Teacup" parent="VRGrabbing/Table" instance=ExtResource("13_aw7kd")]
+[node name="Teacup" parent="VRGrabbing/Table" unique_id=2083089011 instance=ExtResource("13_aw7kd")]
 transform = Transform3D(1.9106853e-15, 4.3711385e-08, 0.9999997, 0.9999999, -4.3711385e-08, 0, 4.3711385e-08, 0.9999999, -4.3711374e-08, 1.9420325, 1.013736, 0.89303255)
 
-[node name="XRToolsReturnToSnapZone" type="Node" parent="VRGrabbing/Table/Teacup"]
+[node name="XRToolsReturnToSnapZone" type="Node" parent="VRGrabbing/Table/Teacup" unique_id=804235409]
 script = ExtResource("14_dqtng")
 snap_zone_path = NodePath("../../TeacupStand/SnapZone4")
 
-[node name="Teacup2" parent="VRGrabbing/Table" instance=ExtResource("13_aw7kd")]
+[node name="Teacup2" parent="VRGrabbing/Table" unique_id=243033883 instance=ExtResource("13_aw7kd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.235, 0.825, 0.973725)
 collision_layer = 58720256
 
-[node name="Table1#Knife1" parent="VRGrabbing/Table" instance=ExtResource("15_s7g0n")]
+[node name="Table1#Knife1" parent="VRGrabbing/Table" unique_id=904178129 instance=ExtResource("15_s7g0n")]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0.306, 0.834, 0.707725)
 
-[node name="Table1#Knife2" parent="VRGrabbing/Table" instance=ExtResource("15_s7g0n")]
+[node name="Table1#Knife2" parent="VRGrabbing/Table" unique_id=1836704322 instance=ExtResource("15_s7g0n")]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0.406, 0.834, 0.707725)
 
-[node name="Table1#Knife3" parent="VRGrabbing/Table" instance=ExtResource("15_s7g0n")]
+[node name="Table1#Knife3" parent="VRGrabbing/Table" unique_id=2024333786 instance=ExtResource("15_s7g0n")]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0.506, 0.834, 0.707725)
 
-[node name="Table1#PicatinnyScope" parent="VRGrabbing/Table" instance=ExtResource("16_ljuju")]
+[node name="Table1#PicatinnyScope" parent="VRGrabbing/Table" unique_id=1913451290 instance=ExtResource("16_ljuju")]
 transform = Transform3D(1.31134e-07, 5.9604645e-08, -1, 1, 2.98023e-08, 1.31134e-07, 2.9802303e-08, -1, -5.9604645e-08, 1.1389545, 0.85173714, 0.7056403)
 collision_mask = 58916864
 
-[node name="Instructions" parent="VRGrabbing" instance=ExtResource("17_ndwpw")]
+[node name="Instructions" parent="VRGrabbing" unique_id=3077621 instance=ExtResource("17_ndwpw")]
 transform = Transform3D(0.28214055, 0, 0.959373, 0, 1, 0, -0.959373, 0, 0.28214055, -6.578881, 0.63099694, 4.500951)
 
-[node name="Climbing" type="Node3D" parent="."]
+[node name="Climbing" type="Node3D" parent="." unique_id=1948879034]
 transform = Transform3D(0.28214058, 0, -0.9593731, 0, 1, 0, 0.9593731, 0, 0.28214058, 6.1742606, 2.369003, 0.04170084)
 
-[node name="Tower" parent="Climbing" instance=ExtResource("18_dqh1c")]
+[node name="Tower" parent="Climbing" unique_id=997048290 instance=ExtResource("18_dqh1c")]
 transform = Transform3D(0.28214055, 0, 0.959373, 0, 1, 0, -0.959373, 0, 0.28214055, -7.5496354, -2.369003, 10.769125)
 
-[node name="Tower2" parent="Climbing" instance=ExtResource("18_dqh1c")]
+[node name="Tower2" parent="Climbing" unique_id=318667827 instance=ExtResource("18_dqh1c")]
 transform = Transform3D(0.6901375, 0, 0.7236781, 0, 1, 0, -0.7236781, 0, 0.6901375, 0.00058603287, -2.369003, 12.989558)
 
-[node name="Pointers" type="Node3D" parent="."]
+[node name="Pointers" type="Node3D" parent="." unique_id=1578632633]
 transform = Transform3D(0.28214058, 0, -0.9593731, 0, 1, 0, 0.9593731, 0, 0.28214058, 6.1742606, 2.369003, 0.04170084)
 
-[node name="VirtualKeyboard" parent="Pointers" instance=ExtResource("19_7d4h2")]
+[node name="VirtualKeyboard" parent="Pointers" unique_id=1572209254 instance=ExtResource("19_7d4h2")]
 transform = Transform3D(0.97330856, 0.22945456, 0.0045713633, -0.14094208, 0.5818959, 0.8009572, 0.18112323, -0.78022283, 0.59870404, 0.28940666, -1.1448485, 0.48207235)
-scene_properties_keys = PackedStringArray("virtual_keyboard_2d.gd")
 
-[node name="Display" parent="Pointers" instance=ExtResource("20_6isou")]
+[node name="Display" parent="Pointers" unique_id=1048199497 instance=ExtResource("20_6isou")]
 transform = Transform3D(1, 0, -2.9802322e-08, 0, 1, 0, 2.9802322e-08, 0, 1, 0, 0, 0)
 scene_properties_keys = PackedStringArray("keyboard_test_screen.gd")
 
-[node name="ColorChangeCube" parent="Pointers" instance=ExtResource("21_pdh1k")]
+[node name="ColorChangeCube" parent="Pointers" unique_id=993354445 instance=ExtResource("21_pdh1k")]
 transform = Transform3D(0.28214055, 0, 0.959373, 0, 1, 0, -0.959373, 0, 0.28214055, -0.44069743, -2.119003, 1.0814061)
 
-[node name="ColorChangeCube2" parent="Pointers" instance=ExtResource("21_pdh1k")]
+[node name="ColorChangeCube2" parent="Pointers" unique_id=1749929811 instance=ExtResource("21_pdh1k")]
 transform = Transform3D(0.28214055, 0, 0.959373, 0, 1, 0, -0.959373, 0, 0.28214055, 0.9391922, -2.1190035, 0.9255667)
 
-[node name="Instructions" parent="Pointers" instance=ExtResource("22_e248c")]
+[node name="Instructions" parent="Pointers" unique_id=573292570 instance=ExtResource("22_e248c")]
 transform = Transform3D(-0.9485005, 0, 0.3167751, 0, 1, 0, -0.3167751, 0, -0.9485005, -0.5695678, -0.98246825, 8.272698)
 
-[node name="Levers" type="Node3D" parent="."]
+[node name="Levers" type="Node3D" parent="." unique_id=1321202036]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.52453715, 0.45630455, -2.5984638)
 
-[node name="WheelGeneral" parent="Levers" instance=ExtResource("23_c7oxy")]
+[node name="WheelGeneral" parent="Levers" unique_id=577721502 instance=ExtResource("23_c7oxy")]
 transform = Transform3D(1, 0, -5.9604645e-08, 0, 1, 0, 5.9604645e-08, 0, 1, 0.5561548, 1.2197065, -0.07632518)
 
-[node name="PushButton" parent="Levers" instance=ExtResource("24_5nud7")]
+[node name="PushButton" parent="Levers" unique_id=284740222 instance=ExtResource("24_5nud7")]
 transform = Transform3D(0.18782708, 0.9822024, 0, -0.9822021, 0.187827, 0, 0, 0, 1.0000004, -0.9226853, 1.0170728, 3.2424264)
 
-[node name="PushButton_silent" parent="Levers" instance=ExtResource("24_5nud7")]
+[node name="PushButton_silent" parent="Levers" unique_id=713560724 instance=ExtResource("24_5nud7")]
 transform = Transform3D(0.1878271, 0.9822024, 0, -0.9822021, 0.187827, 0, 0, 0, 1.0000004, -0.92268556, 1.0170728, 3.5461357)
 rumbles = false
 
-[node name="PushButton_invisible" parent="Levers" instance=ExtResource("24_5nud7")]
+[node name="PushButton_invisible" parent="Levers" unique_id=1435529223 instance=ExtResource("24_5nud7")]
 transform = Transform3D(0.1878271, 0.9822024, 0, -0.9822021, 0.187827, 0, 0, 0, 1.0000004, -0.9226853, 1.0170728, 3.381374)
 visible = false
 
-[node name="JoystickGeneralSmooth" parent="Levers" instance=ExtResource("25_w8b44")]
+[node name="JoystickGeneralSmooth" parent="Levers" unique_id=1490904582 instance=ExtResource("25_w8b44")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9916153, 1.2338092, 2.6401422)
 
-[node name="JoystickGeneralSnap" parent="Levers" instance=ExtResource("25_w8b44")]
+[node name="JoystickGeneralSnap" parent="Levers" unique_id=548371797 instance=ExtResource("25_w8b44")]
 transform = Transform3D(0.9720717, 0, 0.23468405, 0, 1, 0, -0.23468405, 0, 0.9720717, -0.6320287, 1.2338091, 2.3598845)
 joystick_x_steps = 25.0
 joystick_y_steps = 25.0
 
-[node name="JoystickGeneralZero" parent="Levers" instance=ExtResource("25_w8b44")]
+[node name="JoystickGeneralZero" parent="Levers" unique_id=19162546 instance=ExtResource("25_w8b44")]
 transform = Transform3D(0.7617645, 0, 0.64785403, 0, 1, 0, -0.64785403, 0, 0.7617645, -0.28180516, 1.2338091, 2.0183377)
 default_on_release = true
 
-[node name="SliderGeneral" parent="Levers" instance=ExtResource("26_g7k5h")]
+[node name="SliderGeneral" parent="Levers" unique_id=163467289 instance=ExtResource("26_g7k5h")]
 transform = Transform3D(0.06409687, 0, 0.99794364, 0, 1, 0, -0.99794364, 0, 0.06409687, -0.3897876, 1.1902084, 1.7082093)
 
-[node name="LeverGeneral" parent="Levers" instance=ExtResource("27_rm14r")]
+[node name="LeverGeneral" parent="Levers" unique_id=1176636576 instance=ExtResource("27_rm14r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7084308, 1.2055981, 1.47564)
 default_on_release = true
 
-[node name="TestCollision" parent="." instance=ExtResource("28_0l6da")]
+[node name="TestCollision" parent="." unique_id=1046436559 instance=ExtResource("28_0l6da")]

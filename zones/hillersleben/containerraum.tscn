@@ -61,6 +61,9 @@ cull_mode = 2
 [sub_resource type="BoxShape3D" id="BoxShape3D_duhpb"]
 size = Vector3(0.39, 2.35, 4.98)
 
+[sub_resource type="QuadOccluder3D" id="QuadOccluder3D_ja2gv"]
+size = Vector2(4.4980707, 2.3394055)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_0nlau"]
 size = Vector2(2.525, 4.97)
 
@@ -199,6 +202,10 @@ metadata/_edit_lock_ = true
 transform = Transform3D(1, 0, -4.0532423e-06, 0, 1, 0, 4.0532423e-06, 0, 1, -0.03137207, 1.1970215, -2.5954456)
 shape = SubResource("BoxShape3D_duhpb")
 
+[node name="OccluderInstance3D" type="OccluderInstance3D" parent="BGebaeude-garagedoor-body/StaticBody3D/CollisionShape3D" unique_id=981213436]
+transform = Transform3D(-4.284084e-08, 0, 1, 0, 1, 0, -1, 0, -4.284084e-08, -0.0054623187, 0, -0.29294348)
+occluder = SubResource("QuadOccluder3D_ja2gv")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="BGebaeude-garagedoor-body" unique_id=1699960747]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, -1.4295805e-06, 1.3422966, -2.5281115)
 visible = false
@@ -253,7 +260,7 @@ transform = Transform3D(0.9998259, 0, -0.018639058, 0, 1, 0, 0.018639058, 0, 0.9
 curve = SubResource("Curve3D_6uclu")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="RailsContainerGarbage" unique_id=1223037296]
-transform = Transform3D(-0.016130118, -0.0034154025, -0.9998622, 0, 0.9999941, -0.003415841, 0.9998679, -5.509812e-05, -0.016130025, 0, 0, 0)
+transform = Transform3D(-0.016130116, -0.0034154025, -0.9998621, 0, 0.9999941, -0.0034158404, 0.9998678, -5.509812e-05, -0.016130023, 0, 0, 0)
 
 [node name="ContainerGarbage" type="Node3D" parent="RailsContainerGarbage/PathFollow3D" unique_id=1882114315]
 transform = Transform3D(-0.06272143, 0, 0.9980323, -3.4737554e-06, 1, -2.1830829e-07, -0.9980322, -3.4806098e-06, -0.06272143, 0, 0, 0)
@@ -306,7 +313,7 @@ transform = Transform3D(0.99982584, 0, -0.018639117, 0, 1, 0, 0.018639117, 0, 0.
 curve = SubResource("Curve3D_6uclu")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="RailsContainerSand" unique_id=960818316]
-transform = Transform3D(-0.016130133, -0.0034154025, -0.99986297, 0, 0.9999941, -0.0034158435, 0.9998688, -5.509812e-05, -0.016130038, 0, 0, 0)
+transform = Transform3D(-0.01613013, -0.0034154025, -0.99986285, 0, 0.9999941, -0.0034158432, 0.9998687, -5.509812e-05, -0.016130036, 0, 0, 0)
 
 [node name="ContainerSand" type="Node3D" parent="RailsContainerSand/PathFollow3D" unique_id=1652912098]
 transform = Transform3D(-0.0627214, -1.1368693e-13, 0.99803156, -3.473756e-06, 1, -2.1830851e-07, -0.99803156, -3.4806073e-06, -0.0627214, 0.11501026, 0, -0.0072288513)

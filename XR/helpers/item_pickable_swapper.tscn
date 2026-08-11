@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bsv4587aespp"]
+
+[ext_resource type="Script" uid="uid://dxt6f020pp46c" path="res://XR/helpers/item_pickable_swapper.gd" id="1_2h8rs"]
+
+[node name="ItemPickableSwapper" type="Node" unique_id=684139390]
+script = ExtResource("1_2h8rs")

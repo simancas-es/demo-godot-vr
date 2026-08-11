@@ -49,6 +49,7 @@ allowed_from_behind = false
 
 [node name="MeshInstance3D" parent="Node3D/LadderBB1_out" index="0" unique_id=282152593]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+visible = false
 mesh = SubResource("BoxMesh_inggv")
 
 [node name="CollisionShape3D" parent="Node3D/LadderBB1_out" index="1" unique_id=49423198]
@@ -62,6 +63,7 @@ allowed_from_behind = false
 
 [node name="MeshInstance3D" parent="Node3D/LadderBB1_in" index="0" unique_id=282152593]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+visible = false
 mesh = SubResource("BoxMesh_nth20")
 
 [node name="CollisionShape3D" parent="Node3D/LadderBB1_in" index="1" unique_id=49423198]
