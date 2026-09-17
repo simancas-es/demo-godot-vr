@@ -1,6 +1,5 @@
 # LANGUAGE translation for VirtualTour for the following files:
 #
-# 
 # res://assets/inventory_objects/demo_aerator/aerator_head.json
 # res://assets/inventory_objects/ice_breaker/eispickel.tscn
 # res://assets/world_objects/hillersleben/doors/bg_elektro_tür.tscn
@@ -225,6 +224,9 @@
 # res://models/demo_pipes/test_basic_pipe_valve.tscn
 # res://models/doors/door_functions/door_functions.gd
 # res://models/doors/basedoor2m.tscn
+# res://models/doors/basedoor_2m_xrcompatible.gd
+# res://models/doors/basedoor_2m_xrcompatible_gasraum.tscn
+# res://models/doors/basedoor_2m_xrcompatible_labor.tscn
 # res://models/drone_falcon/drone_falcon.gd
 # res://models/interaction/simple_button.tscn
 # res://models/inventory_objects/wire/wire.tscn
@@ -241,12 +243,12 @@
 # res://models/ladders/double_ladder/double_ladder_ed.tscn
 # res://models/ladders/simple_ladder/ladder.gd
 # res://models/ladders/simple_ladder/simple_ladder.tscn
+# res://models/möbel/sitz.tscn
 # res://models/platform_rusty/platform_rusty.tscn
 # res://models/pulsating_box/pulsating_box.tscn
 # res://models/van/van.gd
 # res://models/van/van.tscn
 # res://models/not_available_block.tscn
-# 
 # res://systems/system-differential-diffusion/system_differential_diffusion_controller.gd
 # res://systems/system-differential-diffusion/system_differential_diffusion_settings.gd
 # res://systems/system-differential-diffusion/system_differential_diffusion_volume.gd
@@ -342,6 +344,8 @@
 # res://systems/system-tasks/system_tasks_unit.gd
 # res://test_utils/frame_time_tester.gd
 # res://test_utils/frame_time_tester.tscn
+# res://XR/helpers/item_pickable_swapper.gd
+# res://XR/helpers/item_pickable_swapper.tscn
 # res://XR/scenes/doors/parts/door_handle_grab.tscn
 # res://XR/scenes/doors/test_scene/xrdoorsdemo.tscn
 # res://XR/scenes/doors/test_scene/xrstart.gd
@@ -461,6 +465,7 @@
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/eis_lanze/eislanze_tip.gd
 # res://XR/zones_xr/zone_xr_hillersleben/leiter/xr_leiter_becken.tscn
+# res://XR/zones_xr/zone_xr_hillersleben/pid_nh4_bb_xr/xr_q_nh_4.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/sampler/area_3d_beaker.gd
 # res://XR/zones_xr/zone_xr_hillersleben/sampler/xr_beaker_sampler.gd
 # res://XR/zones_xr/zone_xr_hillersleben/wire/wire_snap_task.gd
@@ -486,12 +491,17 @@
 # res://zones/demo_vista/zoneobservatorio.gd
 # res://zones/demo_vista/zoneobservatorio.tscn
 # res://zones/gerwisch/zonegerwisch.tscn
+# res://zones/hillersleben/gltf_scenes/2026_05_26_sand_fettfang.tscn
+# res://zones/hillersleben/gltf_scenes/2026_06_04_bhkw_raum.tscn
+# res://zones/hillersleben/gltf_scenes/container.tscn
+# res://zones/hillersleben/gltf_scenes/foerderband.tscn
 # res://zones/hillersleben/scripts/audio/dialog_activate.tscn
 # res://zones/hillersleben/scripts/audio/dialog_cutout.tscn
 # res://zones/hillersleben/scripts/audio/dialog_text_blase.gd
 # res://zones/hillersleben/scripts/audio/dialog_text_blase.tscn
 # res://zones/hillersleben/scripts/audio/dialog_triggered.gd
 # res://zones/hillersleben/scripts/audio/interaction_blase.gd
+# res://zones/hillersleben/scripts/audio/xr_adapter.gd
 # res://zones/hillersleben/scripts/bg-containers/bg_garage_controller.gd
 # res://zones/hillersleben/scripts/bg-containers/bg_garage_state.gd
 # res://zones/hillersleben/scripts/bg-containers/bg_garage_system.gd
@@ -546,6 +556,7 @@
 # res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge_bhkw.tscn
 # res://zones/hillersleben/scripts/tasks/bb/bb_consumer.gd
 # res://zones/hillersleben/scripts/tasks/bb/pid_nh4_rowpanel.gd
+# res://zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 # res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.gd
 # res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
 # res://zones/hillersleben/scripts/tasks/bb/pid_nh_4_coordinator.gd
@@ -587,9 +598,13 @@
 # res://zones/hillersleben/scripts/logik_doors_container.gd
 # res://zones/hillersleben/scripts/mg_klappbare_tür.gd
 # res://zones/hillersleben/2026_06_04_bhkw_raum.tscn
+# res://zones/hillersleben/2026_06_16_pumpenraum.tscn
+# res://zones/hillersleben/containerraum.tscn
 # res://zones/hillersleben/dialog_activate.gd
+# res://zones/hillersleben/gasraum.tscn
 # res://zones/hillersleben/global_task_controller.gd
 # res://zones/hillersleben/info_light.tscn
+# res://zones/hillersleben/raum_büro.tscn
 # res://zones/hillersleben/vorklärbecken.tscn
 # res://zones/hillersleben/zonehillersleben.tscn
 # res://zones/hochschule/zonehochschule.gd
@@ -773,6 +788,29 @@ msgstr ""
 msgid "You drowned! Don't just jump into a basin..."
 msgstr ""
 
+#: models/doors/basedoor_2m_xrcompatible_gasraum.tscn
+#: models/doors/basedoor_2m_xrcompatible_labor.tscn
+#: XR/scenes/doors/hinged_door.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_link.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_recht.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_1.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_inne.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
+msgid ""
+"Current angle: xx.x\n"
+"Target angle: xx.x"
+msgstr ""
+
 #: models/inventory_objects/wire/wire.tscn
 msgid "WIRE"
 msgstr ""
@@ -884,27 +922,6 @@ msgstr ""
 msgid "No Latch"
 msgstr ""
 
-#: XR/scenes/doors/hinged_door.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür2.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_link.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_recht.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_1.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_2.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_inne.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
-msgid ""
-"Current angle: xx.x\n"
-"Target angle: xx.x"
-msgstr ""
-
 #: XR/scenes/helpers/axis/axis.tscn
 msgid "Z"
 msgstr ""
@@ -942,6 +959,7 @@ msgid "Scale:"
 msgstr ""
 
 #: XR/scenes/interactables/control_pad/control_pad_display.tscn
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 msgid "Settings"
 msgstr ""
 
@@ -1138,8 +1156,36 @@ msgstr ""
 msgid "38.0°C"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "Target Settings"
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "^\n"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "v\n"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid ">\n"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "<\n"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "Ok"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "ESC"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "C"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "M"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
@@ -1152,6 +1198,10 @@ msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
 msgid "mg/l"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "Target Settings"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
@@ -1225,11 +1275,91 @@ msgid "TEXT_CUTOUT_WILKOMMEN"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_INSPEKTIONSRUNDE"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_RAUMSCHNECKE"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_DEKANTER"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_ZULAUF_INTRO"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_RECHENGUTPRESSE_INTRO"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_BHKW_INTRO"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_FAULBEHÄLTER_INTRO"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_VKB_INTRO"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_SANDFANG_INTRO"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_BB_INTRO"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_NKB_INTRO"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_VKB_HYDRA"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_WASSERRAD"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_ZULAUF_SANDFANG"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_LABOR_1"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_RECHENRAUM_1"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_PAUSE_RAUM"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_GASSPEICHER"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_AUSLASS_1"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_FOERDERBAND"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_TEMPERATUR_1"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_PHOTOVOLTAIK_1"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
@@ -1394,10 +1524,6 @@ msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Hose-intake"
-msgstr ""
-
-#: zones/hillersleben/zonehillersleben.tscn
-msgid "27.0"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn

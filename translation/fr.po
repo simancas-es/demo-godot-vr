@@ -335,6 +335,31 @@ msgstr "L'aérateur est cassé !"
 msgid "You drowned! Don't just jump into a basin..."
 msgstr "Vous vous êtes noyé ! Ne sautez pas dans un bassin..."
 
+#: models/doors/basedoor_2m_xrcompatible_gasraum.tscn
+#: models/doors/basedoor_2m_xrcompatible_labor.tscn
+#: XR/scenes/doors/hinged_door.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_link.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_recht.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_1.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_inne.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
+#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
+msgid ""
+"Current angle: xx.x\n"
+"Target angle: xx.x"
+msgstr ""
+"Angle actuel : xx.x\n"
+"Angle cible : xx.x\n"
+
 #: models/inventory_objects/wire/wire.tscn
 msgid "WIRE"
 msgstr "FIL"
@@ -446,29 +471,6 @@ msgstr ""
 msgid "No Latch"
 msgstr ""
 
-#: XR/scenes/doors/hinged_door.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür1.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_personel_tür2.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_link.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_rechen_tür_recht.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_fmds_tür.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_klapp.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_bhkw_main.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_1.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_gebläse_2.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_inne.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_1_klein.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_mg_tür_maschinen_2.tscn
-#: XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_trafo_tür.tscn
-msgid ""
-"Current angle: xx.x\n"
-"Target angle: xx.x"
-msgstr ""
-"Angle actuel : xx.x\n"
-"Angle cible : xx.x\n"
-
 #: XR/scenes/helpers/axis/axis.tscn
 msgid "Z"
 msgstr ""
@@ -507,6 +509,7 @@ msgid "Scale:"
 msgstr ""
 
 #: XR/scenes/interactables/control_pad/control_pad_display.tscn
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 msgid "Settings"
 msgstr ""
 
@@ -703,8 +706,36 @@ msgstr ""
 msgid "38.0°C"
 msgstr ""
 
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "Target Settings"
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "^\n"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "v\n"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid ">\n"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "<\n"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "Ok"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "ESC"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "C"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
+msgid "M"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
@@ -717,6 +748,10 @@ msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
 msgid "mg/l"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "Target Settings"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
@@ -787,24 +822,114 @@ msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_WILKOMMEN"
-msgstr "Bienvenue à la station d’épuration de Hillersleben !\n"
-"Ravi de te voir ici. Un collègue est absent aujourd’hui, et une montagne de travail nous attend.\n"
-"Ici, les eaux usées sont traitées chaque jour, les machines tournent 24 h/24, et l’équipe doit rester soudée.\n"
-"Alors attrape tes affaires et lance-toi—aujourd’hui, rien ne tourne sans toi !"
+msgstr ""
+"Bienvenue à la station d’épuration de Hillersleben !\n"
+"Ravi de te voir ici. Un collègue est absent aujourd’hui, et une montagne de "
+"travail nous attend.\n"
+"Ici, les eaux usées sont traitées chaque jour, les machines tournent 24 h/"
+"24, et l’équipe doit rester soudée.\n"
+"Alors attrape tes affaires et lance-toi—aujourd’hui, rien ne tourne sans "
+"toi !"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_INSPEKTIONSRUNDE"
+msgstr "Avant de commencer tes tâches, faisons un tour de la station d’épuration. Je vais te montrer les stations les plus importantes et t’expliquer brièvement ce qui s’y passe. Allez, on commence !\nSuis les cubes lumineux !"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_RAUMSCHNECKE"
-msgstr "Oh noooon !!!\n"
-"La vis racleuse du bassin de décantation secondaire s’est arrêtée pendant la nuit.\n"
+msgstr ""
+"Oh noooon !!!\n"
+"La vis racleuse du bassin de décantation secondaire s’est arrêtée pendant la "
+"nuit.\n"
 "Résultat : une couche de glace s’est formée à la surface de l’eau.\n"
-"Tu peux donner un coup de main ? La glace bloque la vis, il faut donc la casser avec des outils et redémarrer le pont racleur.\n"
+"Tu peux donner un coup de main ? La glace bloque la vis, il faut donc la "
+"casser avec des outils et redémarrer le pont racleur.\n"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_DEKANTER"
-msgstr "Quelle pagaille…\n"
-"Normalement, une boue bien déshydratée tombe ici sur le tapis roulant. Mais maintenant, c’est presque uniquement de l’eau boueuse qui s’écoule et inonde la dalle en béton.\n"
+msgstr ""
+"Quelle pagaille…\n"
+"Normalement, une boue bien déshydratée tombe ici sur le tapis roulant. Mais "
+"maintenant, c’est presque uniquement de l’eau boueuse qui s’écoule et inonde "
+"la dalle en béton.\n"
 "On dirait que le problème vient du décanteur.\n"
 "Tu peux aller voir ce qui cloche ?"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_ZULAUF_INTRO"
+msgstr "ci à gauche arrive l’eau de Haldensleben, et à droite celle de Vahldorf. Les débits sont mesurés à l’aide d’un débitmètre électromagnétique (MID).\nNous mesurons le volume afin de savoir à quel point l’installation est chargée à ce moment-là et de pouvoir surveiller le processus de traitement en conséquence."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_RECHENGUTPRESSE_INTRO"
+msgstr "C’est ici que les refus de dégrillage comme les lingettes et autres matières grossières retenues par la grille sont lavés puis compactés. Cela les rend plus secs et plus faciles à éliminer."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_BHKW_INTRO"
+msgstr "C’est ici que le biogaz est utilisé. L’unité de cogénération le transforme en électricité et en chaleur. Les deux sont nécessaires au fonctionnement de la station d’épuration."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_FAULBEHÄLTER_INTRO"
+msgstr "Dans les digesteurs, les boues sont dégradées en absence d’oxygène. Ce processus produit du biogaz, qui peut ensuite être utilisé pour produire de l’électricité et de la chaleur."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_VKB_INTRO"
+msgstr "Ici à droite se trouve notre décanteur primaire. Les eaux usées sont d’abord séparées des boues par gravité. L’anneau intérieur ralentit l’eau entrante afin de permettre une bonne décantation des solides.\nDans l’anneau extérieur, la zone anaérobie, des conditions idéales sont créées pour que des micro-organismes spécialisés puissent ensuite absorber le phosphate des eaux usées."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_SANDFANG_INTRO"
+msgstr "Dans notre premier bassin, le dessableur-dégraisseur, les eaux usées sont ralenties. Cela permet aux matières lourdes, comme le sable et le gravier, de se déposer au fond, où elles peuvent être éliminées. Les substances plus légères, comme les graisses et les huiles, flottent à la surface et sont également retirées."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_BB_INTRO"
+msgstr "Dans nos bassins d’aération, les micro-organismes effectuent la majeure partie du travail. Ils ont besoin de beaucoup d’oxygène, c’est pourquoi nous injectons de fines bulles d’air dans l’eau. Cela permet aux micro-organismes de dégrader l’azote et d’autres substances organiques. À la fin, nous ajoutons également un agent de précipitation, ce qui entraîne la formation de flocs de boue."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_NKB_INTRO"
+msgstr "Dans le clarificateur secondaire, les boues activées, c’est-à-dire les micro-organismes avec les matières organiques, se déposent au fond. L’eau claire et traitée reste en surface et s’écoule vers le rejet."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_VKB_HYDRA"
+msgstr "Cette vanne contrôle l’équilibre hydraulique de l’ensemble de l’installation. L’eau circule sans pompes grâce aux différences de hauteur."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_WASSERRAD"
+msgstr "Ici, le processus de traitement est terminé. L’eau propre s’écoule vers la rivière Ohre. Ce faisant, elle entraîne une roue hydraulique et peut ainsi produire de l’énergie.\nCela permet d’alimenter en électricité les capteurs et les systèmes de sécurité pendant la nuit."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_ZULAUF_SANDFANG"
+msgstr "Voici le souffleur du dessableur. L’air permet de séparer le sable des graisses afin de pouvoir les éliminer plus facilement par la suite."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_LABOR_1"
+msgstr "Dans le bassin d’aération, l’ammonium est transformé en nitrate. Ensuite, le nitrate est de nouveau réduit en azote gazeux. Ce processus s’appelle la nitrification et la dénitrification. En grande quantité, l’azote peut être nocif pour les poissons et les autres organismes aquatiques, c’est pourquoi il doit être éliminé des eaux usées.\nOh. Les valeurs de nitrate ont soudainement fortement augmenté. La question est maintenant : la sonde est-elle défectueuse ou y a-t-il un problème dans le processus de traitement ?\nPour la nitrification, les micro-organismes ont besoin de suffisamment d’oxygène. Est-ce que suffisamment d’air arrive dans le bassin d’aération ? Vérifie les soufflantes et le système d’aération."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_RECHENRAUM_1"
+msgstr "Salut ! Bienvenue dans le bâtiment de dégrillage. Ici, les eaux usées passent à travers une grille qui élimine les solides et les déchets avant d’entrer dans le processus de traitement.\nLe dégrilleur retient les matières grossières telles que les lingettes, les plastiques et les produits d’hygiène. Ces éléments n’ont pas leur place dans le réseau d’assainissement, car ils peuvent provoquer des obstructions et endommager l’installation.\nCes matières sont appelées refus de dégrillage et sont compactées et conditionnées dans la salle en dessous.\nEt ce conteneur noir là-bas ? C’est un filtre de traitement de l’air qui capte et traite les gaz odorants et nocifs provenant des eaux usées."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_PAUSE_RAUM"
+msgstr "Voici notre salle de pause. Tu peux t’asseoir si tu veux."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_GASSPEICHER"
+msgstr "Dans notre réservoir de gaz, le biogaz est stocké comme dans un grand ballon à l’intérieur de la structure métallique : il se remplit de gaz et le restitue lorsque nous en avons besoin.\nAutrefois, nous n’avions qu’un réservoir plus petit, mais il n’était pas suffisant. Et attention : l’échelle n’est pas entièrement représentée ici, alors tenez-vous bien !"
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_AUSLASS_1"
+msgstr "C’est ici que la station d’épuration rejette l’eau dans la rivière. Malheureusement, il n’y a pas de rivière pour le moment… et pas d’eau non plus."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_FOERDERBAND"
+msgstr "Les boules de boue issues du décanteur sont acheminées à l’aide de cette installation dans un conteneur roulant afin de pouvoir être évacuées plus tard. Oups, elle est actuellement à l’arrêt."
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_TEMPERATUR_1"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_PHOTOVOLTAIK_1"
+msgstr "Oh non ! Quelqu’un a volé notre installation photovoltaïque… elle devrait normalement être ici.\nL’installation photovoltaïque nous permet d’exploiter la station d’épuration de manière autonome."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"
@@ -969,10 +1094,6 @@ msgstr "Convoyeur à bande >>>>"
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Hose-intake"
 msgstr "Entrée-Tuyau"
-
-#: zones/hillersleben/zonehillersleben.tscn
-msgid "27.0"
-msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "DROP SAMPLES HERE"
