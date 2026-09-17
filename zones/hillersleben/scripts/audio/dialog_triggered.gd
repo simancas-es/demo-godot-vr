@@ -23,8 +23,9 @@ const CUTOUT_DIALOG := preload("uid://go8lcfvxa3df")
 @onready var anim_player = $AnimationPlayer
 
 const DIALOGUI := preload("uid://cf711ixjimsdh")
+const AREABLASE := preload("uid://o1i31andmimk")
 @onready var blase_mesh : MeshInstance3D = $pivot/Sprite3D_Blase/MeshInstance3D
-@onready var area_blase : Area3D = $pivot/Sprite3D_Blase/MeshInstance3D/AreaClicks
+@onready var area_blase : AREABLASE = $pivot/Sprite3D_Blase/MeshInstance3D/AreaClicks
 @onready var svp : SubViewport = $pivot/Sprite3D_Blase/SubViewport	
 @onready var control : DIALOGUI = $pivot/Sprite3D_Blase/SubViewport/Control
 signal triggered
