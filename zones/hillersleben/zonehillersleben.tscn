@@ -1443,6 +1443,11 @@ transform = Transform3D(0.99999994, -2.6319492e-08, -5.5879354e-08, -7.327472e-1
 description_text = "TEXT_CUTOUT_WILKOMMEN"
 audiostream = ExtResource("4_4kkd4")
 
+[node name="dialog_cutout_inspectionsrunde" parent="CUTOUT_DIALOGS" unique_id=1954573688 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.99999994, -2.6319492e-08, -5.5879354e-08, -7.327472e-15, 1, -3.0092554e-08, 1.15484e-07, -7.1054274e-15, 0.99999994, -3.862837, -0.2387956, -12.264948)
+description_text = "TEXT_INSPEKTIONSRUNDE"
+audiostream = ExtResource("4_4kkd4")
+
 [node name="dialog_cutout_raumschnecke" parent="CUTOUT_DIALOGS" unique_id=520443602 instance=ExtResource("3_24q48")]
 transform = Transform3D(0.99999994, -2.6319492e-08, -5.5879354e-08, -7.327472e-15, 1, -3.0092554e-08, 1.15484e-07, -7.1054274e-15, 0.99999994, 25.473972, 2.1984665, -79.237686)
 cutout_texture = ExtResource("4_wh342")
@@ -1453,6 +1458,88 @@ audiostream = ExtResource("6_ngwpx")
 transform = Transform3D(0.8889931, -2.6319489e-08, 0.4579204, -2.9216523e-09, 1, -1.8040323e-08, -0.4579203, -7.074825e-15, 0.88899314, -69.562195, 0.0038627828, -58.065556)
 cutout_texture = ExtResource("5_pqgw2")
 description_text = "TEXT_CUTOUT_DEKANTER"
+audiostream = ExtResource("8_0vxpt")
+
+[node name="dialog_cutout_zulauf_intro" parent="CUTOUT_DIALOGS" unique_id=223934179 instance=ExtResource("3_24q48")]
+transform = Transform3D(-0.8916949, 7.955033e-08, 0.45263717, 7.795258e-08, 1, -1.8415633e-09, -0.45263675, 7.254603e-08, -0.891695, -41.831917, 0.22373213, -65.11116)
+description_text = "TEXT_ZULAUF_INTRO"
+
+[node name="dialog_cutout_rechengut_intro" parent="CUTOUT_DIALOGS" unique_id=1282186766 instance=ExtResource("3_24q48")]
+transform = Transform3D(-0.4904173, 7.955032e-08, 0.87148815, 7.6416796e-08, 1, -6.427234e-08, -0.8714877, 7.254606e-08, -0.49041718, -37.03282, 0.15032169, -61.335403)
+description_text = "TEXT_RECHENGUTPRESSE_INTRO"
+
+[node name="dialog_cutout_bhkw_intro" parent="CUTOUT_DIALOGS" unique_id=730856188 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.46977982, 7.955033e-08, -0.8827839, -1.2723262e-07, 1, 5.622046e-09, 0.8827835, 7.254602e-08, 0.4697797, -76.435165, 0.073998526, -56.333755)
+description_text = "TEXT_BHKW_INTRO"
+
+[node name="dialog_cutout_faulbehälter" parent="CUTOUT_DIALOGS" unique_id=1311297168 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.9527992, 7.955033e-08, 0.3036008, -7.958949e-08, 1, -1.2379641e-07, -0.30360103, 7.254602e-08, 0.95279956, -66.9494, 4.6088643, -57.42691)
+description_text = "TEXT_FAULBEHÄLTER_INTRO"
+
+[node name="dialog_cutout_vkb_intro" parent="CUTOUT_DIALOGS" unique_id=102715861 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.585665, 7.955034e-08, 0.81055313, -1.3606474e-08, 1, -1.3749055e-07, -0.8105531, 7.254604e-08, 0.58566546, -21.128458, 3.2235603, -54.132202)
+description_text = "TEXT_VKB_INTRO"
+
+[node name="dialog_cutout_sandfang_intro" parent="CUTOUT_DIALOGS" unique_id=1506170812 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.90240467, 7.955034e-08, 0.43088913, -6.634633e-08, 1, -1.3026634e-07, -0.43088928, 7.254604e-08, 0.90240514, -25.82422, 3.1690223, -63.252037)
+description_text = "TEXT_SANDFANG_INTRO"
+
+[node name="dialog_cutout_bb_intro" parent="CUTOUT_DIALOGS" unique_id=2044331694 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.9734151, 7.955034e-08, 0.22904742, -8.663804e-08, 1, -1.1936129e-07, -0.22904766, 7.254604e-08, 0.9734155, -9.246928, 2.2801452, -82.45487)
+description_text = "TEXT_BB_INTRO"
+
+[node name="dialog_cutout_nkb_intro" parent="CUTOUT_DIALOGS" unique_id=654934454 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.42707396, 7.955035e-08, -0.90421706, -1.2539024e-07, 1, 1.04252065e-08, 0.9042165, 7.254603e-08, 0.4270738, 39.82505, 1.7943873, -82.68901)
+description_text = "TEXT_NKB_INTRO"
+
+[node name="dialog_cutout_vkb_hydra" parent="CUTOUT_DIALOGS" unique_id=1193609794 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.99256724, 7.955033e-08, 0.121696025, -9.594951e-08, 1, -1.1221087e-07, -0.12169638, 7.254603e-08, 0.99256766, -0.637124, 2.323215, -58.10168)
+description_text = "TEXT_VKB_HYDRA"
+
+[node name="dialog_cutout_wasserrad" parent="CUTOUT_DIALOGS" unique_id=1068283281 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.99256724, 7.955033e-08, 0.121696025, -9.594951e-08, 1, -1.1221087e-07, -0.12169638, 7.254603e-08, 0.99256766, 13.910467, 2.3232174, -108.38428)
+description_text = "TEXT_WASSERRAD"
+
+[node name="dialog_cutout_zulauf_sandfang" parent="CUTOUT_DIALOGS" unique_id=305728817 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.45948693, 5.6957244e-08, -0.88818496, -7.214102e-08, 1, 9.640777e-09, 0.88818437, 2.2687722e-08, 0.45948687, -35.296772, 0.22374725, -68.028366)
+description_text = "TEXT_ZULAUF_SANDFANG"
+
+[node name="dialog_cutout_labor" parent="CUTOUT_DIALOGS" unique_id=272431169 instance=ExtResource("3_24q48")]
+transform = Transform3D(-0.42312455, 7.955035e-08, 0.90607184, 7.357252e-08, 1, -7.190539e-08, -0.9060714, 7.254604e-08, -0.42312443, -30.47277, 3.215561, -56.04281)
+description_text = "TEXT_LABOR_1"
+
+[node name="dialog_cutout_rechen" parent="CUTOUT_DIALOGS" unique_id=910228034 instance=ExtResource("3_24q48")]
+transform = Transform3D(-0.42312455, 7.955035e-08, 0.90607184, 7.357252e-08, 1, -7.190539e-08, -0.9060714, 7.254604e-08, -0.42312443, -33.452564, 3.1347394, -60.74797)
+description_text = "TEXT_RECHENRAUM_1"
+
+[node name="dialog_cutout_essen" parent="CUTOUT_DIALOGS" unique_id=1471949695 instance=ExtResource("3_24q48")]
+transform = Transform3D(-0.9985964, 7.955035e-08, -0.052963376, 4.9777313e-08, 1, 4.613442e-08, 0.052963644, 7.254604e-08, -0.99859667, -33.87557, 3.1829374, -52.585857)
+description_text = "TEXT_PAUSE_RAUM"
+
+[node name="dialog_cutout_gasspeicher" parent="CUTOUT_DIALOGS" unique_id=1768714100 instance=ExtResource("3_24q48")]
+transform = Transform3D(-0.6171047, 7.955035e-08, 0.7868813, 8.035691e-08, 1, -4.8351254e-08, -0.78688097, 7.254604e-08, -0.61710465, -90.82428, -1.7103901, -105.62821)
+description_text = "TEXT_GASSPEICHER"
+
+[node name="dialog_cutout_auslass_1" parent="CUTOUT_DIALOGS" unique_id=430063751 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.78068113, 7.955035e-08, 0.6249294, -4.258637e-08, 1, -1.3687176e-07, -0.6249294, 7.254604e-08, 0.7806815, -67.743225, -2.9442313, -180.7848)
+description_text = "TEXT_AUSLASS_1"
+
+[node name="dialog_cutout_foerderband" parent="CUTOUT_DIALOGS" unique_id=1490423359 instance=ExtResource("3_24q48")]
+transform = Transform3D(-0.9988509, -2.6319489e-08, 0.047925953, -5.260873e-08, 1, -2.8831188e-08, -0.047925975, -7.1054274e-15, -0.9988509, -65.520645, -1.7201843, -74.96067)
+cutout_texture = ExtResource("5_pqgw2")
+description_text = "TEXT_FOERDERBAND"
+audiostream = ExtResource("8_0vxpt")
+
+[node name="dialog_cutout_temperatur_1" parent="CUTOUT_DIALOGS" unique_id=1100972301 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.9344781, -2.6319485e-08, 0.35602036, -1.7244984e-09, 1, -2.0722284e-08, -0.35602033, -7.1050174e-15, 0.9344781, -83.76598, 0.010554643, -54.58263)
+cutout_texture = ExtResource("5_pqgw2")
+description_text = "TEXT_TEMPERATUR_1"
+audiostream = ExtResource("8_0vxpt")
+
+[node name="dialog_cutout_photovoltaik" parent="CUTOUT_DIALOGS" unique_id=2062979942 instance=ExtResource("3_24q48")]
+transform = Transform3D(0.17103514, -2.6319489e-08, 0.98526496, -2.1817936e-08, 1, -4.1608956e-09, -0.9852649, -6.2270627e-15, 0.17103513, 10.948353, -2.6788476, -135.69135)
+cutout_texture = ExtResource("5_pqgw2")
+description_text = "TEXT_PHOTOVOLTAIK_1"
 audiostream = ExtResource("8_0vxpt")
 
 [node name="DemoTaskBlackboard" parent="." unique_id=1111715364 instance=ExtResource("5_0p6js")]
@@ -1839,6 +1926,7 @@ visible = false
 mesh = SubResource("CylinderMesh_sktl7")
 
 [node name="PUMP-TOGGLES" type="Node3D" parent="Reference_point_floor" unique_id=933199667]
+visible = false
 
 [node name="zulauf_ff" parent="Reference_point_floor/PUMP-TOGGLES" unique_id=403730820 node_paths=PackedStringArray("flow_model") instance=ExtResource("5_w4u61")]
 transform = Transform3D(-0.924559, 2.4613908e-14, -0.38103828, 3.900167e-14, 0.9999997, -3.0037503e-14, 0.38103828, -4.263257e-14, -0.924559, -12.938143, 3.800476, 23.368412)
@@ -3260,6 +3348,7 @@ transform = Transform3D(0.3421939, 0, 0.939629, 0, 1, 0, -0.939629, 0, 0.3421939
 
 [node name="MeshInstance3D" parent="LadderGasspeicher1" index="0" unique_id=282152593]
 transform = Transform3D(-0.9938593, 0, 0.110654, 0, 7.684139, 0, -0.110654, 0, -0.9938593, 0, 7.512089, 0)
+visible = false
 
 [node name="CollisionShape3D" parent="LadderGasspeicher1" index="1" unique_id=49423198]
 transform = Transform3D(0.024292529, 0, 0.99970436, 0, 1, 0, -0.99970436, 0, 0.024292529, 0.020637512, 7.599842, -0.14416504)
