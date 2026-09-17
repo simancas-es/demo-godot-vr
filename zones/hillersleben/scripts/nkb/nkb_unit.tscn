@@ -47,7 +47,10 @@ radius = 1.7963867
 height = 2.2278137
 radius = 1.1025391
 
-[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_vijfd"]
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_ovdkk"]
+map_width = 18
+map_depth = 18
+map_data = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
 [sub_resource type="BoxOccluder3D" id="BoxOccluder3D_ovdkk"]
 size = Vector3(18.577055, 1, 22.124004)
@@ -64,1967 +67,1967 @@ schraube2 = NodePath("nkb_bruecke/Brücke/Cylinder_13851/nkb-1-schraube2")
 
 [node name="nkb_bruecke" parent="." unique_id=984126065 instance=ExtResource("1_8yi7g")]
 
-[node name="Brücke" parent="nkb_bruecke" index="0" unique_id=2025658023]
+[node name="Brücke" parent="nkb_bruecke" index="0" unique_id=1163362733]
 transform = Transform3D(0.9977409, 0, 0.06717945, 0, 1, 0, -0.06717945, 0, 0.9977409, 0, 0, 0)
 visibility_range_end = 30.0
 
-[node name="BézierCurve_116" parent="nkb_bruecke/Brücke" index="0" unique_id=58596595]
+[node name="BézierCurve_116" parent="nkb_bruecke/Brücke" index="0" unique_id=1292050060]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_117" parent="nkb_bruecke/Brücke" index="1" unique_id=1051018243]
+[node name="BézierCurve_117" parent="nkb_bruecke/Brücke" index="1" unique_id=61444096]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_118" parent="nkb_bruecke/Brücke" index="2" unique_id=297430887]
+[node name="BézierCurve_118" parent="nkb_bruecke/Brücke" index="2" unique_id=771443272]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_119" parent="nkb_bruecke/Brücke" index="3" unique_id=997114648]
+[node name="BézierCurve_119" parent="nkb_bruecke/Brücke" index="3" unique_id=125119431]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_120" parent="nkb_bruecke/Brücke" index="4" unique_id=1010317205]
+[node name="BézierCurve_120" parent="nkb_bruecke/Brücke" index="4" unique_id=120137344]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_121" parent="nkb_bruecke/Brücke" index="5" unique_id=1396453941]
+[node name="BézierCurve_121" parent="nkb_bruecke/Brücke" index="5" unique_id=963972144]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_122" parent="nkb_bruecke/Brücke" index="6" unique_id=603024727]
+[node name="BézierCurve_122" parent="nkb_bruecke/Brücke" index="6" unique_id=976979386]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_123" parent="nkb_bruecke/Brücke" index="7" unique_id=1790494567]
+[node name="BézierCurve_123" parent="nkb_bruecke/Brücke" index="7" unique_id=159226456]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_124" parent="nkb_bruecke/Brücke" index="8" unique_id=343674033]
+[node name="BézierCurve_124" parent="nkb_bruecke/Brücke" index="8" unique_id=1448598471]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_125" parent="nkb_bruecke/Brücke" index="9" unique_id=1668097344]
+[node name="BézierCurve_125" parent="nkb_bruecke/Brücke" index="9" unique_id=35559683]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_126" parent="nkb_bruecke/Brücke" index="10" unique_id=336920185]
+[node name="BézierCurve_126" parent="nkb_bruecke/Brücke" index="10" unique_id=1681410452]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_127" parent="nkb_bruecke/Brücke" index="11" unique_id=747653584]
+[node name="BézierCurve_127" parent="nkb_bruecke/Brücke" index="11" unique_id=1882037659]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_128" parent="nkb_bruecke/Brücke" index="12" unique_id=870955943]
+[node name="BézierCurve_128" parent="nkb_bruecke/Brücke" index="12" unique_id=551422436]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_129" parent="nkb_bruecke/Brücke" index="13" unique_id=639051155]
+[node name="BézierCurve_129" parent="nkb_bruecke/Brücke" index="13" unique_id=2041121603]
 visibility_range_end = 30.0
 
-[node name="BézierCurve_130" parent="nkb_bruecke/Brücke" index="14" unique_id=1403934010]
+[node name="BézierCurve_130" parent="nkb_bruecke/Brücke" index="14" unique_id=1585497881]
 visibility_range_end = 30.0
 
-[node name="Cube_1227" parent="nkb_bruecke/Brücke" index="15" unique_id=1201009020]
+[node name="Cube_1227" parent="nkb_bruecke/Brücke" index="15" unique_id=1803481264]
 visibility_range_end = 30.0
 
-[node name="Cube_1228" parent="nkb_bruecke/Brücke" index="16" unique_id=1591655829]
+[node name="Cube_1228" parent="nkb_bruecke/Brücke" index="16" unique_id=1983502152]
 visibility_range_end = 30.0
 
-[node name="Cube_1229" parent="nkb_bruecke/Brücke" index="17" unique_id=12165761]
+[node name="Cube_1229" parent="nkb_bruecke/Brücke" index="17" unique_id=910831801]
 visibility_range_end = 30.0
 
-[node name="Cube_1230" parent="nkb_bruecke/Brücke" index="18" unique_id=530430889]
+[node name="Cube_1230" parent="nkb_bruecke/Brücke" index="18" unique_id=75654113]
 visibility_range_end = 30.0
 
-[node name="Cube_1231" parent="nkb_bruecke/Brücke" index="19" unique_id=2074200566]
+[node name="Cube_1231" parent="nkb_bruecke/Brücke" index="19" unique_id=1385461637]
 visibility_range_end = 30.0
 
-[node name="Cube_1232" parent="nkb_bruecke/Brücke" index="20" unique_id=798506369]
+[node name="Cube_1232" parent="nkb_bruecke/Brücke" index="20" unique_id=1135420625]
 visibility_range_end = 30.0
 
-[node name="Cube_1233" parent="nkb_bruecke/Brücke" index="21" unique_id=670363184]
+[node name="Cube_1233" parent="nkb_bruecke/Brücke" index="21" unique_id=1538312683]
 visibility_range_end = 30.0
 
-[node name="Cube_1234" parent="nkb_bruecke/Brücke" index="22" unique_id=1664264378]
+[node name="Cube_1234" parent="nkb_bruecke/Brücke" index="22" unique_id=1045293052]
 visibility_range_end = 30.0
 
-[node name="Cube_1235" parent="nkb_bruecke/Brücke" index="23" unique_id=1678291329]
+[node name="Cube_1235" parent="nkb_bruecke/Brücke" index="23" unique_id=2023379871]
 visibility_range_end = 25.0
 
-[node name="Cube_1236" parent="nkb_bruecke/Brücke" index="24" unique_id=337434690]
+[node name="Cube_1236" parent="nkb_bruecke/Brücke" index="24" unique_id=1955891899]
 visibility_range_end = 25.0
 
-[node name="Cube_1237" parent="nkb_bruecke/Brücke" index="25" unique_id=240611877]
+[node name="Cube_1237" parent="nkb_bruecke/Brücke" index="25" unique_id=59503028]
 visibility_range_end = 30.0
 
-[node name="Cube_1238" parent="nkb_bruecke/Brücke" index="26" unique_id=1577470655]
+[node name="Cube_1238" parent="nkb_bruecke/Brücke" index="26" unique_id=997755169]
 visibility_range_end = 25.0
 
-[node name="Cube_1239" parent="nkb_bruecke/Brücke" index="27" unique_id=1222917585]
+[node name="Cube_1239" parent="nkb_bruecke/Brücke" index="27" unique_id=1900559553]
 visibility_range_end = 25.0
 
-[node name="Cube_1240" parent="nkb_bruecke/Brücke" index="28" unique_id=466691940]
+[node name="Cube_1240" parent="nkb_bruecke/Brücke" index="28" unique_id=1157941625]
 visibility_range_end = 30.0
 
-[node name="Cube_1241" parent="nkb_bruecke/Brücke" index="29" unique_id=1162022345]
+[node name="Cube_1241" parent="nkb_bruecke/Brücke" index="29" unique_id=29699862]
 visibility_range_end = 25.0
 
-[node name="Cube_1242" parent="nkb_bruecke/Brücke" index="30" unique_id=1238038189]
+[node name="Cube_1242" parent="nkb_bruecke/Brücke" index="30" unique_id=1052179933]
 visibility_range_end = 25.0
 
-[node name="Cube_1243" parent="nkb_bruecke/Brücke" index="31" unique_id=369534831]
+[node name="Cube_1243" parent="nkb_bruecke/Brücke" index="31" unique_id=1197644732]
 visibility_range_end = 30.0
 
-[node name="Cube_1244" parent="nkb_bruecke/Brücke" index="32" unique_id=743106187]
+[node name="Cube_1244" parent="nkb_bruecke/Brücke" index="32" unique_id=136144939]
 visibility_range_end = 25.0
 
-[node name="Cube_1245" parent="nkb_bruecke/Brücke" index="33" unique_id=1471763038]
+[node name="Cube_1245" parent="nkb_bruecke/Brücke" index="33" unique_id=685645831]
 visibility_range_end = 25.0
 
-[node name="Cube_1246" parent="nkb_bruecke/Brücke" index="34" unique_id=621435696]
+[node name="Cube_1246" parent="nkb_bruecke/Brücke" index="34" unique_id=1530967060]
 visibility_range_end = 30.0
 
-[node name="Cube_1247" parent="nkb_bruecke/Brücke" index="35" unique_id=1518591519]
+[node name="Cube_1247" parent="nkb_bruecke/Brücke" index="35" unique_id=12837910]
 visibility_range_end = 25.0
 
-[node name="Cube_1248" parent="nkb_bruecke/Brücke" index="36" unique_id=1249462791]
+[node name="Cube_1248" parent="nkb_bruecke/Brücke" index="36" unique_id=135994892]
 visibility_range_end = 25.0
 
-[node name="Cube_1249" parent="nkb_bruecke/Brücke" index="37" unique_id=1796460190]
+[node name="Cube_1249" parent="nkb_bruecke/Brücke" index="37" unique_id=341195274]
 visibility_range_end = 30.0
 
-[node name="Cube_1250" parent="nkb_bruecke/Brücke" index="38" unique_id=2095918567]
+[node name="Cube_1250" parent="nkb_bruecke/Brücke" index="38" unique_id=1143412083]
 visibility_range_end = 25.0
 
-[node name="Cube_1267" parent="nkb_bruecke/Brücke" index="41" unique_id=1930923145]
+[node name="Cube_1267" parent="nkb_bruecke/Brücke" index="41" unique_id=665335754]
 visibility_range_end = 30.0
 
-[node name="Cube_1268" parent="nkb_bruecke/Brücke" index="42" unique_id=592452896]
+[node name="Cube_1268" parent="nkb_bruecke/Brücke" index="42" unique_id=1732242174]
 visibility_range_end = 30.0
 
-[node name="Cube_1270" parent="nkb_bruecke/Brücke" index="44" unique_id=2079387980]
+[node name="Cube_1270" parent="nkb_bruecke/Brücke" index="44" unique_id=1731387148]
 visibility_range_end = 30.0
 
-[node name="Cube_1272" parent="nkb_bruecke/Brücke" index="46" unique_id=409914557]
+[node name="Cube_1272" parent="nkb_bruecke/Brücke" index="46" unique_id=1026458850]
 visibility_range_end = 30.0
 
-[node name="Cube_1273" parent="nkb_bruecke/Brücke" index="47" unique_id=2044247177]
+[node name="Cube_1273" parent="nkb_bruecke/Brücke" index="47" unique_id=2039009651]
 visibility_range_end = 30.0
 
-[node name="Cube_1274" parent="nkb_bruecke/Brücke" index="48" unique_id=2075328117]
+[node name="Cube_1274" parent="nkb_bruecke/Brücke" index="48" unique_id=969302615]
 visibility_range_end = 30.0
 
-[node name="Cube_1275" parent="nkb_bruecke/Brücke" index="49" unique_id=1673303353]
+[node name="Cube_1275" parent="nkb_bruecke/Brücke" index="49" unique_id=1352036864]
 visibility_range_end = 30.0
 
-[node name="Cube_1276" parent="nkb_bruecke/Brücke" index="50" unique_id=1643185827]
+[node name="Cube_1276" parent="nkb_bruecke/Brücke" index="50" unique_id=2079284968]
 visibility_range_end = 30.0
 
-[node name="Cube_1277" parent="nkb_bruecke/Brücke" index="51" unique_id=125858687]
+[node name="Cube_1277" parent="nkb_bruecke/Brücke" index="51" unique_id=1150050333]
 visibility_range_end = 30.0
 
-[node name="Cube_1278" parent="nkb_bruecke/Brücke" index="52" unique_id=1491617671]
+[node name="Cube_1278" parent="nkb_bruecke/Brücke" index="52" unique_id=1935170404]
 visibility_range_end = 30.0
 
-[node name="Cube_1279" parent="nkb_bruecke/Brücke" index="53" unique_id=1985678919]
+[node name="Cube_1279" parent="nkb_bruecke/Brücke" index="53" unique_id=124313030]
 visibility_range_end = 30.0
 
-[node name="Cube_1280" parent="nkb_bruecke/Brücke" index="54" unique_id=729584993]
+[node name="Cube_1280" parent="nkb_bruecke/Brücke" index="54" unique_id=1210471099]
 visibility_range_end = 30.0
 
-[node name="Cube_1281" parent="nkb_bruecke/Brücke" index="55" unique_id=1264794274]
+[node name="Cube_1281" parent="nkb_bruecke/Brücke" index="55" unique_id=703434649]
 visibility_range_end = 30.0
 
-[node name="Cube_1282" parent="nkb_bruecke/Brücke" index="56" unique_id=73022316]
+[node name="Cube_1282" parent="nkb_bruecke/Brücke" index="56" unique_id=1117501797]
 visibility_range_end = 30.0
 
-[node name="Cube_1283" parent="nkb_bruecke/Brücke" index="57" unique_id=496171436]
+[node name="Cube_1283" parent="nkb_bruecke/Brücke" index="57" unique_id=1116895563]
 visibility_range_end = 30.0
 
-[node name="Cube_1284" parent="nkb_bruecke/Brücke" index="58" unique_id=871661572]
+[node name="Cube_1284" parent="nkb_bruecke/Brücke" index="58" unique_id=313115633]
 visibility_range_end = 30.0
 
-[node name="Cube_1285" parent="nkb_bruecke/Brücke" index="59" unique_id=176288324]
+[node name="Cube_1285" parent="nkb_bruecke/Brücke" index="59" unique_id=1931833867]
 visibility_range_end = 30.0
 
-[node name="Cube_1286" parent="nkb_bruecke/Brücke" index="60" unique_id=1320576726]
+[node name="Cube_1286" parent="nkb_bruecke/Brücke" index="60" unique_id=581914458]
 visibility_range_end = 30.0
 
-[node name="Cube_1287" parent="nkb_bruecke/Brücke" index="61" unique_id=921214886]
+[node name="Cube_1287" parent="nkb_bruecke/Brücke" index="61" unique_id=669588553]
 visibility_range_end = 30.0
 
-[node name="Cube_1288" parent="nkb_bruecke/Brücke" index="62" unique_id=1854323903]
+[node name="Cube_1288" parent="nkb_bruecke/Brücke" index="62" unique_id=1878338573]
 visibility_range_end = 30.0
 
-[node name="Cube_1289" parent="nkb_bruecke/Brücke" index="63" unique_id=438353679]
+[node name="Cube_1289" parent="nkb_bruecke/Brücke" index="63" unique_id=1186976442]
 visibility_range_end = 30.0
 
-[node name="Cube_1290" parent="nkb_bruecke/Brücke" index="64" unique_id=240121973]
+[node name="Cube_1290" parent="nkb_bruecke/Brücke" index="64" unique_id=1550363343]
 visibility_range_end = 30.0
 
-[node name="Cube_1291" parent="nkb_bruecke/Brücke" index="65" unique_id=964879590]
+[node name="Cube_1291" parent="nkb_bruecke/Brücke" index="65" unique_id=174188058]
 visibility_range_end = 30.0
 
-[node name="Cube_1292" parent="nkb_bruecke/Brücke" index="66" unique_id=679652275]
+[node name="Cube_1292" parent="nkb_bruecke/Brücke" index="66" unique_id=2025913974]
 visibility_range_end = 30.0
 
-[node name="Cube_1293" parent="nkb_bruecke/Brücke" index="67" unique_id=1624300358]
+[node name="Cube_1293" parent="nkb_bruecke/Brücke" index="67" unique_id=410794741]
 visibility_range_end = 30.0
 
-[node name="Cube_1294" parent="nkb_bruecke/Brücke" index="68" unique_id=2059034113]
+[node name="Cube_1294" parent="nkb_bruecke/Brücke" index="68" unique_id=71074535]
 visibility_range_end = 30.0
 
-[node name="Cube_1295" parent="nkb_bruecke/Brücke" index="69" unique_id=1635368115]
+[node name="Cube_1295" parent="nkb_bruecke/Brücke" index="69" unique_id=1544484494]
 visibility_range_end = 30.0
 
-[node name="Cube_1296" parent="nkb_bruecke/Brücke" index="70" unique_id=610238810]
+[node name="Cube_1296" parent="nkb_bruecke/Brücke" index="70" unique_id=212097984]
 visibility_range_end = 30.0
 
-[node name="Cube_1297" parent="nkb_bruecke/Brücke" index="71" unique_id=752817450]
+[node name="Cube_1297" parent="nkb_bruecke/Brücke" index="71" unique_id=999451819]
 visibility_range_end = 30.0
 
-[node name="Cube_1298" parent="nkb_bruecke/Brücke" index="72" unique_id=671580190]
+[node name="Cube_1298" parent="nkb_bruecke/Brücke" index="72" unique_id=1754634243]
 visibility_range_end = 30.0
 
-[node name="Cube_1299" parent="nkb_bruecke/Brücke" index="73" unique_id=449046189]
+[node name="Cube_1299" parent="nkb_bruecke/Brücke" index="73" unique_id=569961684]
 visibility_range_end = 30.0
 
-[node name="Cube_1300" parent="nkb_bruecke/Brücke" index="74" unique_id=1600796036]
+[node name="Cube_1300" parent="nkb_bruecke/Brücke" index="74" unique_id=1901194480]
 visibility_range_end = 30.0
 
-[node name="Cube_1301" parent="nkb_bruecke/Brücke" index="75" unique_id=1188036738]
+[node name="Cube_1301" parent="nkb_bruecke/Brücke" index="75" unique_id=1692433278]
 visibility_range_end = 30.0
 
-[node name="Cube_1302" parent="nkb_bruecke/Brücke" index="76" unique_id=1647277414]
+[node name="Cube_1302" parent="nkb_bruecke/Brücke" index="76" unique_id=1608718527]
 visibility_range_end = 30.0
 
-[node name="Cube_1303" parent="nkb_bruecke/Brücke" index="77" unique_id=1579079625]
+[node name="Cube_1303" parent="nkb_bruecke/Brücke" index="77" unique_id=1874246625]
 visibility_range_end = 30.0
 
-[node name="Cube_1307" parent="nkb_bruecke/Brücke" index="78" unique_id=1365242239]
+[node name="Cube_1307" parent="nkb_bruecke/Brücke" index="78" unique_id=1262373913]
 visibility_range_end = 30.0
 
-[node name="Cube_1308" parent="nkb_bruecke/Brücke" index="79" unique_id=214088105]
+[node name="Cube_1308" parent="nkb_bruecke/Brücke" index="79" unique_id=2031660914]
 visibility_range_end = 30.0
 
-[node name="Cube_1314" parent="nkb_bruecke/Brücke" index="80" unique_id=628047340]
+[node name="Cube_1314" parent="nkb_bruecke/Brücke" index="80" unique_id=858163896]
 visibility_range_end = 30.0
 
-[node name="Cube_1317" parent="nkb_bruecke/Brücke" index="81" unique_id=2020826339]
+[node name="Cube_1317" parent="nkb_bruecke/Brücke" index="81" unique_id=1415590492]
 visibility_range_end = 30.0
 
-[node name="Cube_1318" parent="nkb_bruecke/Brücke" index="82" unique_id=1865229586]
+[node name="Cube_1318" parent="nkb_bruecke/Brücke" index="82" unique_id=1547424575]
 visibility_range_end = 30.0
 
-[node name="Cube_1319" parent="nkb_bruecke/Brücke" index="83" unique_id=292742771]
+[node name="Cube_1319" parent="nkb_bruecke/Brücke" index="83" unique_id=1490994276]
 visibility_range_end = 30.0
 
-[node name="Cube_1320" parent="nkb_bruecke/Brücke" index="84" unique_id=382251812]
+[node name="Cube_1320" parent="nkb_bruecke/Brücke" index="84" unique_id=1583426747]
 visibility_range_end = 30.0
 
-[node name="Cube_1321" parent="nkb_bruecke/Brücke" index="85" unique_id=83153465]
+[node name="Cube_1321" parent="nkb_bruecke/Brücke" index="85" unique_id=638771837]
 visibility_range_end = 30.0
 
-[node name="Cube_7393" parent="nkb_bruecke/Brücke" index="86" unique_id=302802751]
+[node name="Cube_7393" parent="nkb_bruecke/Brücke" index="86" unique_id=77439562]
 visibility_range_end = 30.0
 
-[node name="Cube_7394" parent="nkb_bruecke/Brücke" index="87" unique_id=294063206]
+[node name="Cube_7394" parent="nkb_bruecke/Brücke" index="87" unique_id=844715639]
 visibility_range_end = 30.0
 
-[node name="Cube_7395" parent="nkb_bruecke/Brücke" index="88" unique_id=865753694]
+[node name="Cube_7395" parent="nkb_bruecke/Brücke" index="88" unique_id=1572183875]
 visibility_range_end = 30.0
 
-[node name="Cube_7400" parent="nkb_bruecke/Brücke" index="89" unique_id=1063400723]
+[node name="Cube_7400" parent="nkb_bruecke/Brücke" index="89" unique_id=91689764]
 visibility_range_end = 30.0
 
-[node name="Cube_7401" parent="nkb_bruecke/Brücke" index="90" unique_id=1231447445]
+[node name="Cube_7401" parent="nkb_bruecke/Brücke" index="90" unique_id=775763073]
 visibility_range_end = 30.0
 
-[node name="Cube_7402" parent="nkb_bruecke/Brücke" index="91" unique_id=458469907]
+[node name="Cube_7402" parent="nkb_bruecke/Brücke" index="91" unique_id=1105933369]
 visibility_range_end = 30.0
 
-[node name="Cube_7403" parent="nkb_bruecke/Brücke" index="92" unique_id=954293101]
+[node name="Cube_7403" parent="nkb_bruecke/Brücke" index="92" unique_id=1071078985]
 visibility_range_end = 30.0
 
-[node name="Cube_7408" parent="nkb_bruecke/Brücke" index="93" unique_id=599857309]
+[node name="Cube_7408" parent="nkb_bruecke/Brücke" index="93" unique_id=299906655]
 visibility_range_end = 30.0
 
-[node name="Cube_7409" parent="nkb_bruecke/Brücke" index="94" unique_id=760101078]
+[node name="Cube_7409" parent="nkb_bruecke/Brücke" index="94" unique_id=1660345513]
 visibility_range_end = 30.0
 
-[node name="Cube_7410" parent="nkb_bruecke/Brücke" index="95" unique_id=854688176]
+[node name="Cube_7410" parent="nkb_bruecke/Brücke" index="95" unique_id=2073893673]
 visibility_range_end = 30.0
 
-[node name="Cube_7411" parent="nkb_bruecke/Brücke" index="96" unique_id=800101155]
+[node name="Cube_7411" parent="nkb_bruecke/Brücke" index="96" unique_id=995394332]
 visibility_range_end = 30.0
 
-[node name="Cube_7412" parent="nkb_bruecke/Brücke" index="97" unique_id=1523732480]
+[node name="Cube_7412" parent="nkb_bruecke/Brücke" index="97" unique_id=1205963410]
 visibility_range_end = 30.0
 
-[node name="Cube_7413" parent="nkb_bruecke/Brücke" index="98" unique_id=1367102982]
+[node name="Cube_7413" parent="nkb_bruecke/Brücke" index="98" unique_id=1209896332]
 visibility_range_end = 30.0
 
-[node name="Cube_7418" parent="nkb_bruecke/Brücke" index="99" unique_id=912012042]
+[node name="Cube_7418" parent="nkb_bruecke/Brücke" index="99" unique_id=669098310]
 visibility_range_end = 30.0
 
-[node name="Cube_7419" parent="nkb_bruecke/Brücke" index="100" unique_id=1707879304]
+[node name="Cube_7419" parent="nkb_bruecke/Brücke" index="100" unique_id=979166329]
 visibility_range_end = 30.0
 
-[node name="Cube_7423" parent="nkb_bruecke/Brücke" index="104" unique_id=5467105]
+[node name="Cube_7423" parent="nkb_bruecke/Brücke" index="104" unique_id=1357041024]
 visibility_range_end = 30.0
 
-[node name="Cube_7424" parent="nkb_bruecke/Brücke" index="105" unique_id=369162115]
+[node name="Cube_7424" parent="nkb_bruecke/Brücke" index="105" unique_id=685017026]
 visibility_range_end = 30.0
 
-[node name="Cube_7425" parent="nkb_bruecke/Brücke" index="106" unique_id=1527872736]
+[node name="Cube_7425" parent="nkb_bruecke/Brücke" index="106" unique_id=1032142710]
 visibility_range_end = 30.0
 
-[node name="Cube_7426" parent="nkb_bruecke/Brücke" index="107" unique_id=1985869859]
+[node name="Cube_7426" parent="nkb_bruecke/Brücke" index="107" unique_id=712146739]
 visibility_range_end = 30.0
 
-[node name="Cube_7427" parent="nkb_bruecke/Brücke" index="108" unique_id=43146969]
+[node name="Cube_7427" parent="nkb_bruecke/Brücke" index="108" unique_id=423860584]
 visibility_range_end = 30.0
 
-[node name="Cube_7428" parent="nkb_bruecke/Brücke" index="109" unique_id=167559332]
+[node name="Cube_7428" parent="nkb_bruecke/Brücke" index="109" unique_id=183570044]
 visibility_range_end = 30.0
 
-[node name="Cube_7429" parent="nkb_bruecke/Brücke" index="110" unique_id=1053873897]
+[node name="Cube_7429" parent="nkb_bruecke/Brücke" index="110" unique_id=2138471147]
 visibility_range_end = 30.0
 
-[node name="Cube_7430" parent="nkb_bruecke/Brücke" index="111" unique_id=877523166]
+[node name="Cube_7430" parent="nkb_bruecke/Brücke" index="111" unique_id=23841364]
 visibility_range_end = 30.0
 
-[node name="Cube_7431" parent="nkb_bruecke/Brücke" index="112" unique_id=1862496137]
+[node name="Cube_7431" parent="nkb_bruecke/Brücke" index="112" unique_id=12545863]
 visibility_range_end = 30.0
 
-[node name="Cube_7432" parent="nkb_bruecke/Brücke" index="113" unique_id=776372668]
+[node name="Cube_7432" parent="nkb_bruecke/Brücke" index="113" unique_id=1247382498]
 visibility_range_end = 30.0
 
-[node name="Cube_7433" parent="nkb_bruecke/Brücke" index="114" unique_id=104236963]
+[node name="Cube_7433" parent="nkb_bruecke/Brücke" index="114" unique_id=841538229]
 visibility_range_end = 30.0
 
-[node name="Cube_7434" parent="nkb_bruecke/Brücke" index="115" unique_id=296543711]
+[node name="Cube_7434" parent="nkb_bruecke/Brücke" index="115" unique_id=174104495]
 visibility_range_end = 30.0
 
-[node name="Cube_7438" parent="nkb_bruecke/Brücke" index="119" unique_id=214542719]
+[node name="Cube_7438" parent="nkb_bruecke/Brücke" index="119" unique_id=1718380949]
 visibility_range_end = 30.0
 
-[node name="Cube_7439" parent="nkb_bruecke/Brücke" index="120" unique_id=929828049]
+[node name="Cube_7439" parent="nkb_bruecke/Brücke" index="120" unique_id=1909737166]
 visibility_range_end = 30.0
 
-[node name="Cube_7440" parent="nkb_bruecke/Brücke" index="121" unique_id=657297048]
+[node name="Cube_7440" parent="nkb_bruecke/Brücke" index="121" unique_id=1425983198]
 visibility_range_end = 30.0
 
-[node name="Cube_7441" parent="nkb_bruecke/Brücke" index="122" unique_id=1053164006]
+[node name="Cube_7441" parent="nkb_bruecke/Brücke" index="122" unique_id=1160778160]
 visibility_range_end = 30.0
 
-[node name="Cube_7442" parent="nkb_bruecke/Brücke" index="123" unique_id=961731210]
+[node name="Cube_7442" parent="nkb_bruecke/Brücke" index="123" unique_id=1845385636]
 visibility_range_end = 30.0
 
-[node name="Cube_7443" parent="nkb_bruecke/Brücke" index="124" unique_id=1889027566]
+[node name="Cube_7443" parent="nkb_bruecke/Brücke" index="124" unique_id=422447874]
 visibility_range_end = 30.0
 
-[node name="Cube_7444" parent="nkb_bruecke/Brücke" index="125" unique_id=1952542470]
+[node name="Cube_7444" parent="nkb_bruecke/Brücke" index="125" unique_id=912389790]
 visibility_range_end = 30.0
 
-[node name="Cube_7445" parent="nkb_bruecke/Brücke" index="126" unique_id=2016315098]
+[node name="Cube_7445" parent="nkb_bruecke/Brücke" index="126" unique_id=1896091495]
 visibility_range_end = 30.0
 
-[node name="Cube_7446" parent="nkb_bruecke/Brücke" index="127" unique_id=1788087905]
+[node name="Cube_7446" parent="nkb_bruecke/Brücke" index="127" unique_id=445932872]
 visibility_range_end = 30.0
 
-[node name="Cube_7447" parent="nkb_bruecke/Brücke" index="128" unique_id=4530055]
+[node name="Cube_7447" parent="nkb_bruecke/Brücke" index="128" unique_id=2013124622]
 visibility_range_end = 30.0
 
-[node name="Cube_7448" parent="nkb_bruecke/Brücke" index="129" unique_id=747741319]
+[node name="Cube_7448" parent="nkb_bruecke/Brücke" index="129" unique_id=941375983]
 visibility_range_end = 30.0
 
-[node name="Cube_7449" parent="nkb_bruecke/Brücke" index="130" unique_id=270073210]
+[node name="Cube_7449" parent="nkb_bruecke/Brücke" index="130" unique_id=677215888]
 visibility_range_end = 30.0
 
-[node name="Cube_7450" parent="nkb_bruecke/Brücke" index="131" unique_id=135819718]
+[node name="Cube_7450" parent="nkb_bruecke/Brücke" index="131" unique_id=1921951143]
 visibility_range_end = 30.0
 
-[node name="Cube_7451" parent="nkb_bruecke/Brücke" index="132" unique_id=154057334]
+[node name="Cube_7451" parent="nkb_bruecke/Brücke" index="132" unique_id=1372770191]
 visibility_range_end = 30.0
 
-[node name="Cube_7452" parent="nkb_bruecke/Brücke" index="133" unique_id=1363860253]
+[node name="Cube_7452" parent="nkb_bruecke/Brücke" index="133" unique_id=4170301]
 visibility_range_end = 30.0
 
-[node name="Cube_7453" parent="nkb_bruecke/Brücke" index="134" unique_id=1148124008]
+[node name="Cube_7453" parent="nkb_bruecke/Brücke" index="134" unique_id=1728021389]
 visibility_range_end = 30.0
 
-[node name="Cube_7454" parent="nkb_bruecke/Brücke" index="135" unique_id=1372555640]
+[node name="Cube_7454" parent="nkb_bruecke/Brücke" index="135" unique_id=1485814906]
 visibility_range_end = 30.0
 
-[node name="Cube_7455" parent="nkb_bruecke/Brücke" index="136" unique_id=96629419]
+[node name="Cube_7455" parent="nkb_bruecke/Brücke" index="136" unique_id=642478885]
 visibility_range_end = 30.0
 
-[node name="Cube_7456" parent="nkb_bruecke/Brücke" index="137" unique_id=113451990]
+[node name="Cube_7456" parent="nkb_bruecke/Brücke" index="137" unique_id=244768389]
 visibility_range_end = 30.0
 
-[node name="Cube_7457" parent="nkb_bruecke/Brücke" index="138" unique_id=319198008]
+[node name="Cube_7457" parent="nkb_bruecke/Brücke" index="138" unique_id=1552933243]
 visibility_range_end = 30.0
 
-[node name="Cube_7458" parent="nkb_bruecke/Brücke" index="139" unique_id=1027304172]
+[node name="Cube_7458" parent="nkb_bruecke/Brücke" index="139" unique_id=1905824257]
 visibility_range_end = 30.0
 
-[node name="Cube_7459" parent="nkb_bruecke/Brücke" index="140" unique_id=647889182]
+[node name="Cube_7459" parent="nkb_bruecke/Brücke" index="140" unique_id=266829605]
 visibility_range_end = 30.0
 
-[node name="Cube_7460" parent="nkb_bruecke/Brücke" index="141" unique_id=746453887]
+[node name="Cube_7460" parent="nkb_bruecke/Brücke" index="141" unique_id=105747606]
 visibility_range_end = 30.0
 
-[node name="Cube_7461" parent="nkb_bruecke/Brücke" index="142" unique_id=1214952169]
+[node name="Cube_7461" parent="nkb_bruecke/Brücke" index="142" unique_id=485654633]
 visibility_range_end = 30.0
 
-[node name="Cube_7462" parent="nkb_bruecke/Brücke" index="143" unique_id=1491545920]
+[node name="Cube_7462" parent="nkb_bruecke/Brücke" index="143" unique_id=713782586]
 visibility_range_end = 30.0
 
-[node name="Cube_7463" parent="nkb_bruecke/Brücke" index="144" unique_id=1894868430]
+[node name="Cube_7463" parent="nkb_bruecke/Brücke" index="144" unique_id=1348505532]
 visibility_range_end = 30.0
 
-[node name="Cube_7464" parent="nkb_bruecke/Brücke" index="145" unique_id=99540269]
+[node name="Cube_7464" parent="nkb_bruecke/Brücke" index="145" unique_id=45657635]
 visibility_range_end = 30.0
 
-[node name="Cube_7465" parent="nkb_bruecke/Brücke" index="146" unique_id=491087290]
+[node name="Cube_7465" parent="nkb_bruecke/Brücke" index="146" unique_id=796251650]
 visibility_range_end = 30.0
 
-[node name="Cube_7466" parent="nkb_bruecke/Brücke" index="147" unique_id=421484766]
+[node name="Cube_7466" parent="nkb_bruecke/Brücke" index="147" unique_id=239660415]
 visibility_range_end = 30.0
 
-[node name="Cube_7467" parent="nkb_bruecke/Brücke" index="148" unique_id=1181489551]
+[node name="Cube_7467" parent="nkb_bruecke/Brücke" index="148" unique_id=2075160166]
 visibility_range_end = 30.0
 
-[node name="Cube_7468" parent="nkb_bruecke/Brücke" index="149" unique_id=135582369]
+[node name="Cube_7468" parent="nkb_bruecke/Brücke" index="149" unique_id=1749237088]
 visibility_range_end = 30.0
 
-[node name="Cube_7469" parent="nkb_bruecke/Brücke" index="150" unique_id=545515093]
+[node name="Cube_7469" parent="nkb_bruecke/Brücke" index="150" unique_id=1490993886]
 visibility_range_end = 30.0
 
-[node name="Cube_7470" parent="nkb_bruecke/Brücke" index="151" unique_id=78841900]
+[node name="Cube_7470" parent="nkb_bruecke/Brücke" index="151" unique_id=622662825]
 visibility_range_end = 30.0
 
-[node name="Cube_7471" parent="nkb_bruecke/Brücke" index="152" unique_id=1243312842]
+[node name="Cube_7471" parent="nkb_bruecke/Brücke" index="152" unique_id=616689707]
 visibility_range_end = 30.0
 
-[node name="Cube_7472" parent="nkb_bruecke/Brücke" index="153" unique_id=530568393]
+[node name="Cube_7472" parent="nkb_bruecke/Brücke" index="153" unique_id=1465053002]
 visibility_range_end = 30.0
 
-[node name="Cube_7473" parent="nkb_bruecke/Brücke" index="154" unique_id=772602629]
+[node name="Cube_7473" parent="nkb_bruecke/Brücke" index="154" unique_id=556981909]
 visibility_range_end = 30.0
 
-[node name="Cube_7474" parent="nkb_bruecke/Brücke" index="155" unique_id=481392206]
+[node name="Cube_7474" parent="nkb_bruecke/Brücke" index="155" unique_id=1829071124]
 visibility_range_end = 30.0
 
-[node name="Cube_7475" parent="nkb_bruecke/Brücke" index="156" unique_id=1179584151]
+[node name="Cube_7475" parent="nkb_bruecke/Brücke" index="156" unique_id=1167183160]
 visibility_range_end = 30.0
 
-[node name="Cube_7476" parent="nkb_bruecke/Brücke" index="157" unique_id=681580464]
+[node name="Cube_7476" parent="nkb_bruecke/Brücke" index="157" unique_id=2083362251]
 visibility_range_end = 30.0
 
-[node name="Cube_7477" parent="nkb_bruecke/Brücke" index="158" unique_id=827579861]
+[node name="Cube_7477" parent="nkb_bruecke/Brücke" index="158" unique_id=337759132]
 visibility_range_end = 30.0
 
-[node name="Cube_7478" parent="nkb_bruecke/Brücke" index="159" unique_id=3194414]
+[node name="Cube_7478" parent="nkb_bruecke/Brücke" index="159" unique_id=1063978708]
 visibility_range_end = 30.0
 
-[node name="Cube_7479" parent="nkb_bruecke/Brücke" index="160" unique_id=878344121]
+[node name="Cube_7479" parent="nkb_bruecke/Brücke" index="160" unique_id=535233984]
 visibility_range_end = 30.0
 
-[node name="Cube_7480" parent="nkb_bruecke/Brücke" index="161" unique_id=1179226641]
+[node name="Cube_7480" parent="nkb_bruecke/Brücke" index="161" unique_id=1246758022]
 visibility_range_end = 30.0
 
-[node name="Cube_7481" parent="nkb_bruecke/Brücke" index="162" unique_id=705311076]
+[node name="Cube_7481" parent="nkb_bruecke/Brücke" index="162" unique_id=996010100]
 visibility_range_end = 30.0
 
-[node name="Cube_7482" parent="nkb_bruecke/Brücke" index="163" unique_id=171905821]
+[node name="Cube_7482" parent="nkb_bruecke/Brücke" index="163" unique_id=776281650]
 visibility_range_end = 30.0
 
-[node name="Cube_7483" parent="nkb_bruecke/Brücke" index="164" unique_id=289430660]
+[node name="Cube_7483" parent="nkb_bruecke/Brücke" index="164" unique_id=1750263184]
 visibility_range_end = 30.0
 
-[node name="Cube_7484" parent="nkb_bruecke/Brücke" index="165" unique_id=693861170]
+[node name="Cube_7484" parent="nkb_bruecke/Brücke" index="165" unique_id=1789508782]
 visibility_range_end = 25.0
 
-[node name="Cube_7485" parent="nkb_bruecke/Brücke" index="166" unique_id=1921623881]
+[node name="Cube_7485" parent="nkb_bruecke/Brücke" index="166" unique_id=1564148324]
 visibility_range_end = 25.0
 
-[node name="Cube_7486" parent="nkb_bruecke/Brücke" index="167" unique_id=2119006449]
+[node name="Cube_7486" parent="nkb_bruecke/Brücke" index="167" unique_id=647258532]
 visibility_range_end = 25.0
 
-[node name="Cube_7487" parent="nkb_bruecke/Brücke" index="168" unique_id=149598864]
+[node name="Cube_7487" parent="nkb_bruecke/Brücke" index="168" unique_id=666475038]
 visibility_range_end = 25.0
 
-[node name="Cube_7488" parent="nkb_bruecke/Brücke" index="169" unique_id=1294620910]
+[node name="Cube_7488" parent="nkb_bruecke/Brücke" index="169" unique_id=244715936]
 visibility_range_end = 25.0
 
-[node name="Cube_7489" parent="nkb_bruecke/Brücke" index="170" unique_id=1464670227]
+[node name="Cube_7489" parent="nkb_bruecke/Brücke" index="170" unique_id=1306289573]
 visibility_range_end = 30.0
 
-[node name="Cube_7490" parent="nkb_bruecke/Brücke" index="171" unique_id=1009830078]
+[node name="Cube_7490" parent="nkb_bruecke/Brücke" index="171" unique_id=288034131]
 visibility_range_end = 25.0
 
-[node name="Cube_7491" parent="nkb_bruecke/Brücke" index="172" unique_id=574594516]
+[node name="Cube_7491" parent="nkb_bruecke/Brücke" index="172" unique_id=2050860244]
 visibility_range_end = 25.0
 
-[node name="Cube_7492" parent="nkb_bruecke/Brücke" index="173" unique_id=1766168866]
+[node name="Cube_7492" parent="nkb_bruecke/Brücke" index="173" unique_id=1822445669]
 visibility_range_end = 25.0
 
-[node name="Cube_7493" parent="nkb_bruecke/Brücke" index="174" unique_id=47298015]
+[node name="Cube_7493" parent="nkb_bruecke/Brücke" index="174" unique_id=49099478]
 visibility_range_end = 25.0
 
-[node name="Cube_7494" parent="nkb_bruecke/Brücke" index="175" unique_id=548780216]
+[node name="Cube_7494" parent="nkb_bruecke/Brücke" index="175" unique_id=1410323212]
 visibility_range_end = 25.0
 
-[node name="Cube_7495" parent="nkb_bruecke/Brücke" index="176" unique_id=1792321348]
+[node name="Cube_7495" parent="nkb_bruecke/Brücke" index="176" unique_id=93193700]
 visibility_range_end = 25.0
 
-[node name="Cube_7496" parent="nkb_bruecke/Brücke" index="177" unique_id=1819645102]
+[node name="Cube_7496" parent="nkb_bruecke/Brücke" index="177" unique_id=417696886]
 visibility_range_end = 25.0
 
-[node name="Cube_7497" parent="nkb_bruecke/Brücke" index="178" unique_id=1776879044]
+[node name="Cube_7497" parent="nkb_bruecke/Brücke" index="178" unique_id=532050126]
 visibility_range_end = 25.0
 
-[node name="Cube_7498" parent="nkb_bruecke/Brücke" index="179" unique_id=569479441]
+[node name="Cube_7498" parent="nkb_bruecke/Brücke" index="179" unique_id=1093648070]
 visibility_range_end = 25.0
 
-[node name="Cube_7499" parent="nkb_bruecke/Brücke" index="180" unique_id=449665883]
+[node name="Cube_7499" parent="nkb_bruecke/Brücke" index="180" unique_id=186884058]
 visibility_range_end = 25.0
 
-[node name="Cube_7500" parent="nkb_bruecke/Brücke" index="181" unique_id=142116338]
+[node name="Cube_7500" parent="nkb_bruecke/Brücke" index="181" unique_id=1477323002]
 visibility_range_end = 25.0
 
-[node name="Cube_7501" parent="nkb_bruecke/Brücke" index="182" unique_id=127947154]
+[node name="Cube_7501" parent="nkb_bruecke/Brücke" index="182" unique_id=459945805]
 visibility_range_end = 25.0
 
-[node name="Cube_7502" parent="nkb_bruecke/Brücke" index="183" unique_id=1889339993]
+[node name="Cube_7502" parent="nkb_bruecke/Brücke" index="183" unique_id=420957072]
 visibility_range_end = 25.0
 
-[node name="Cube_7503" parent="nkb_bruecke/Brücke" index="184" unique_id=536707877]
+[node name="Cube_7503" parent="nkb_bruecke/Brücke" index="184" unique_id=448671895]
 visibility_range_end = 25.0
 
-[node name="Cube_7504" parent="nkb_bruecke/Brücke" index="185" unique_id=382850019]
+[node name="Cube_7504" parent="nkb_bruecke/Brücke" index="185" unique_id=86593031]
 visibility_range_end = 25.0
 
-[node name="Cube_7505" parent="nkb_bruecke/Brücke" index="186" unique_id=352928072]
+[node name="Cube_7505" parent="nkb_bruecke/Brücke" index="186" unique_id=947936599]
 visibility_range_end = 25.0
 
-[node name="Cube_7506" parent="nkb_bruecke/Brücke" index="187" unique_id=1273189939]
+[node name="Cube_7506" parent="nkb_bruecke/Brücke" index="187" unique_id=35119982]
 visibility_range_end = 25.0
 
-[node name="Cube_7507" parent="nkb_bruecke/Brücke" index="188" unique_id=621623439]
+[node name="Cube_7507" parent="nkb_bruecke/Brücke" index="188" unique_id=312030923]
 visibility_range_end = 30.0
 
-[node name="Cube_7508" parent="nkb_bruecke/Brücke" index="189" unique_id=15926386]
+[node name="Cube_7508" parent="nkb_bruecke/Brücke" index="189" unique_id=1635920315]
 visibility_range_end = 25.0
 
-[node name="Cube_7509" parent="nkb_bruecke/Brücke" index="190" unique_id=822523650]
+[node name="Cube_7509" parent="nkb_bruecke/Brücke" index="190" unique_id=2065471397]
 visibility_range_end = 30.0
 
-[node name="Cube_7510" parent="nkb_bruecke/Brücke" index="191" unique_id=1942636210]
+[node name="Cube_7510" parent="nkb_bruecke/Brücke" index="191" unique_id=1915624067]
 visibility_range_end = 30.0
 
-[node name="Cube_7511" parent="nkb_bruecke/Brücke" index="192" unique_id=761389686]
+[node name="Cube_7511" parent="nkb_bruecke/Brücke" index="192" unique_id=89583421]
 visibility_range_end = 30.0
 
-[node name="Cube_7512" parent="nkb_bruecke/Brücke" index="193" unique_id=1818510608]
+[node name="Cube_7512" parent="nkb_bruecke/Brücke" index="193" unique_id=72964344]
 visibility_range_end = 30.0
 
-[node name="Cube_7513" parent="nkb_bruecke/Brücke" index="194" unique_id=1826945874]
+[node name="Cube_7513" parent="nkb_bruecke/Brücke" index="194" unique_id=1026791115]
 visibility_range_end = 30.0
 
-[node name="Cube_7514" parent="nkb_bruecke/Brücke" index="195" unique_id=273822348]
+[node name="Cube_7514" parent="nkb_bruecke/Brücke" index="195" unique_id=1597275839]
 visibility_range_end = 30.0
 
-[node name="Cube_7515" parent="nkb_bruecke/Brücke" index="196" unique_id=168033234]
+[node name="Cube_7515" parent="nkb_bruecke/Brücke" index="196" unique_id=1070469924]
 visibility_range_end = 30.0
 
-[node name="Cube_7516" parent="nkb_bruecke/Brücke" index="197" unique_id=942979291]
+[node name="Cube_7516" parent="nkb_bruecke/Brücke" index="197" unique_id=588057622]
 visibility_range_end = 30.0
 
-[node name="Cube_7517" parent="nkb_bruecke/Brücke" index="198" unique_id=1756403609]
+[node name="Cube_7517" parent="nkb_bruecke/Brücke" index="198" unique_id=134421956]
 visibility_range_end = 30.0
 
-[node name="Cube_7518" parent="nkb_bruecke/Brücke" index="199" unique_id=1047133546]
+[node name="Cube_7518" parent="nkb_bruecke/Brücke" index="199" unique_id=1790921781]
 visibility_range_end = 30.0
 
-[node name="Cube_7519" parent="nkb_bruecke/Brücke" index="200" unique_id=1501629021]
+[node name="Cube_7519" parent="nkb_bruecke/Brücke" index="200" unique_id=1016887179]
 visibility_range_end = 30.0
 
-[node name="Cube_7520" parent="nkb_bruecke/Brücke" index="201" unique_id=712459799]
+[node name="Cube_7520" parent="nkb_bruecke/Brücke" index="201" unique_id=940766943]
 visibility_range_end = 30.0
 
-[node name="Cube_7521" parent="nkb_bruecke/Brücke" index="202" unique_id=47920337]
+[node name="Cube_7521" parent="nkb_bruecke/Brücke" index="202" unique_id=1457219545]
 visibility_range_end = 30.0
 
-[node name="Cube_7523" parent="nkb_bruecke/Brücke" index="204" unique_id=1821925169]
+[node name="Cube_7523" parent="nkb_bruecke/Brücke" index="204" unique_id=1952261290]
 visibility_range_end = 30.0
 
-[node name="Cube_7524" parent="nkb_bruecke/Brücke" index="205" unique_id=531496385]
+[node name="Cube_7524" parent="nkb_bruecke/Brücke" index="205" unique_id=964087785]
 visibility_range_end = 30.0
 
-[node name="Cube_7525" parent="nkb_bruecke/Brücke" index="206" unique_id=1748730823]
+[node name="Cube_7525" parent="nkb_bruecke/Brücke" index="206" unique_id=452621424]
 visibility_range_end = 30.0
 
-[node name="Cube_7531" parent="nkb_bruecke/Brücke" index="212" unique_id=848777222]
+[node name="Cube_7531" parent="nkb_bruecke/Brücke" index="212" unique_id=577621849]
 visibility_range_end = 30.0
 
-[node name="Cube_7532" parent="nkb_bruecke/Brücke" index="213" unique_id=1513442467]
+[node name="Cube_7532" parent="nkb_bruecke/Brücke" index="213" unique_id=573008384]
 visibility_range_end = 30.0
 
-[node name="Cube_7535" parent="nkb_bruecke/Brücke" index="216" unique_id=1419555648]
+[node name="Cube_7535" parent="nkb_bruecke/Brücke" index="216" unique_id=82685718]
 visibility_range_end = 30.0
 
-[node name="Cube_7536" parent="nkb_bruecke/Brücke" index="217" unique_id=784927886]
+[node name="Cube_7536" parent="nkb_bruecke/Brücke" index="217" unique_id=242067392]
 visibility_range_end = 30.0
 
-[node name="Cube_7537" parent="nkb_bruecke/Brücke" index="218" unique_id=292081254]
+[node name="Cube_7537" parent="nkb_bruecke/Brücke" index="218" unique_id=731342168]
 visibility_range_end = 30.0
 
-[node name="Cube_7538" parent="nkb_bruecke/Brücke" index="219" unique_id=2119038372]
+[node name="Cube_7538" parent="nkb_bruecke/Brücke" index="219" unique_id=361586782]
 visibility_range_end = 30.0
 
-[node name="Cube_7539" parent="nkb_bruecke/Brücke" index="220" unique_id=2003690185]
+[node name="Cube_7539" parent="nkb_bruecke/Brücke" index="220" unique_id=1463155159]
 visibility_range_end = 30.0
 
-[node name="Cube_7540" parent="nkb_bruecke/Brücke" index="221" unique_id=1677246582]
+[node name="Cube_7540" parent="nkb_bruecke/Brücke" index="221" unique_id=1175877745]
 visibility_range_end = 30.0
 
-[node name="Cube_7544" parent="nkb_bruecke/Brücke" index="225" unique_id=1713733287]
+[node name="Cube_7544" parent="nkb_bruecke/Brücke" index="225" unique_id=532719355]
 visibility_range_end = 30.0
 
-[node name="Cube_7545" parent="nkb_bruecke/Brücke" index="226" unique_id=523475771]
+[node name="Cube_7545" parent="nkb_bruecke/Brücke" index="226" unique_id=710148037]
 visibility_range_end = 30.0
 
-[node name="Cube_7547" parent="nkb_bruecke/Brücke" index="228" unique_id=2039858046]
+[node name="Cube_7547" parent="nkb_bruecke/Brücke" index="228" unique_id=1040971434]
 visibility_range_end = 30.0
 
-[node name="Cube_7548" parent="nkb_bruecke/Brücke" index="229" unique_id=2083106130]
+[node name="Cube_7548" parent="nkb_bruecke/Brücke" index="229" unique_id=1592187401]
 visibility_range_end = 30.0
 
-[node name="Cube_7549" parent="nkb_bruecke/Brücke" index="230" unique_id=568670079]
+[node name="Cube_7549" parent="nkb_bruecke/Brücke" index="230" unique_id=1428212991]
 visibility_range_end = 30.0
 
-[node name="Cube_7552" parent="nkb_bruecke/Brücke" index="233" unique_id=462206515]
+[node name="Cube_7552" parent="nkb_bruecke/Brücke" index="233" unique_id=514753753]
 visibility_range_end = 30.0
 
-[node name="Cube_7553" parent="nkb_bruecke/Brücke" index="234" unique_id=17155415]
+[node name="Cube_7553" parent="nkb_bruecke/Brücke" index="234" unique_id=1405508037]
 visibility_range_end = 30.0
 
-[node name="Cube_7554" parent="nkb_bruecke/Brücke" index="235" unique_id=593042986]
+[node name="Cube_7554" parent="nkb_bruecke/Brücke" index="235" unique_id=1017415929]
 visibility_range_end = 30.0
 
-[node name="Cube_7556" parent="nkb_bruecke/Brücke" index="237" unique_id=1782500779]
+[node name="Cube_7556" parent="nkb_bruecke/Brücke" index="237" unique_id=1750206327]
 visibility_range_end = 30.0
 
-[node name="Cube_7557" parent="nkb_bruecke/Brücke" index="238" unique_id=565442848]
+[node name="Cube_7557" parent="nkb_bruecke/Brücke" index="238" unique_id=1963313622]
 visibility_range_end = 30.0
 
-[node name="Cube_7558" parent="nkb_bruecke/Brücke" index="239" unique_id=444263255]
+[node name="Cube_7558" parent="nkb_bruecke/Brücke" index="239" unique_id=173313845]
 visibility_range_end = 30.0
 
-[node name="Cube_7559" parent="nkb_bruecke/Brücke" index="240" unique_id=741774370]
+[node name="Cube_7559" parent="nkb_bruecke/Brücke" index="240" unique_id=1306599120]
 visibility_range_end = 30.0
 
-[node name="Cube_7560" parent="nkb_bruecke/Brücke" index="241" unique_id=655424400]
+[node name="Cube_7560" parent="nkb_bruecke/Brücke" index="241" unique_id=485752490]
 visibility_range_end = 30.0
 
-[node name="Cube_7561" parent="nkb_bruecke/Brücke" index="242" unique_id=1523938628]
+[node name="Cube_7561" parent="nkb_bruecke/Brücke" index="242" unique_id=263503816]
 visibility_range_end = 30.0
 
-[node name="Cube_7562" parent="nkb_bruecke/Brücke" index="243" unique_id=1617325697]
+[node name="Cube_7562" parent="nkb_bruecke/Brücke" index="243" unique_id=1602505147]
 visibility_range_end = 30.0
 
-[node name="Cube_7563" parent="nkb_bruecke/Brücke" index="244" unique_id=387044054]
+[node name="Cube_7563" parent="nkb_bruecke/Brücke" index="244" unique_id=1403346506]
 visibility_range_end = 30.0
 
-[node name="Cube_7564" parent="nkb_bruecke/Brücke" index="245" unique_id=832647276]
+[node name="Cube_7564" parent="nkb_bruecke/Brücke" index="245" unique_id=760786649]
 visibility_range_end = 30.0
 
-[node name="Cube_7567" parent="nkb_bruecke/Brücke" index="248" unique_id=411384508]
+[node name="Cube_7567" parent="nkb_bruecke/Brücke" index="248" unique_id=465609521]
 visibility_range_end = 30.0
 
-[node name="Cube_7568" parent="nkb_bruecke/Brücke" index="249" unique_id=1685681861]
+[node name="Cube_7568" parent="nkb_bruecke/Brücke" index="249" unique_id=1070864164]
 visibility_range_end = 30.0
 
-[node name="Cube_7569" parent="nkb_bruecke/Brücke" index="250" unique_id=218678579]
+[node name="Cube_7569" parent="nkb_bruecke/Brücke" index="250" unique_id=912507732]
 visibility_range_end = 30.0
 
-[node name="Cube_7570" parent="nkb_bruecke/Brücke" index="251" unique_id=2086386011]
+[node name="Cube_7570" parent="nkb_bruecke/Brücke" index="251" unique_id=1724243668]
 visibility_range_end = 30.0
 
-[node name="Cube_7571" parent="nkb_bruecke/Brücke" index="252" unique_id=455135965]
+[node name="Cube_7571" parent="nkb_bruecke/Brücke" index="252" unique_id=2028079312]
 visibility_range_end = 30.0
 
-[node name="Cube_7574" parent="nkb_bruecke/Brücke" index="255" unique_id=2059319798]
+[node name="Cube_7574" parent="nkb_bruecke/Brücke" index="255" unique_id=1712764094]
 visibility_range_end = 30.0
 
-[node name="Cube_7575" parent="nkb_bruecke/Brücke" index="256" unique_id=1092240031]
+[node name="Cube_7575" parent="nkb_bruecke/Brücke" index="256" unique_id=1337869000]
 visibility_range_end = 30.0
 
-[node name="Cube_7576" parent="nkb_bruecke/Brücke" index="257" unique_id=2145991244]
+[node name="Cube_7576" parent="nkb_bruecke/Brücke" index="257" unique_id=1662891497]
 visibility_range_end = 30.0
 
-[node name="Cube_7577" parent="nkb_bruecke/Brücke" index="258" unique_id=1312302881]
+[node name="Cube_7577" parent="nkb_bruecke/Brücke" index="258" unique_id=1890230578]
 visibility_range_end = 30.0
 
-[node name="Cube_7578" parent="nkb_bruecke/Brücke" index="259" unique_id=1532039473]
+[node name="Cube_7578" parent="nkb_bruecke/Brücke" index="259" unique_id=632986292]
 visibility_range_end = 30.0
 
-[node name="Cube_7579" parent="nkb_bruecke/Brücke" index="260" unique_id=464051648]
+[node name="Cube_7579" parent="nkb_bruecke/Brücke" index="260" unique_id=25442907]
 visibility_range_end = 30.0
 
-[node name="Cube_7580" parent="nkb_bruecke/Brücke" index="261" unique_id=1147164514]
+[node name="Cube_7580" parent="nkb_bruecke/Brücke" index="261" unique_id=1286835105]
 visibility_range_end = 30.0
 
-[node name="Cube_7581" parent="nkb_bruecke/Brücke" index="262" unique_id=260121496]
+[node name="Cube_7581" parent="nkb_bruecke/Brücke" index="262" unique_id=1847846814]
 visibility_range_end = 30.0
 
-[node name="Cube_7582" parent="nkb_bruecke/Brücke" index="263" unique_id=2025959744]
+[node name="Cube_7582" parent="nkb_bruecke/Brücke" index="263" unique_id=1914692003]
 visibility_range_end = 30.0
 
-[node name="Cube_7583" parent="nkb_bruecke/Brücke" index="264" unique_id=618054778]
+[node name="Cube_7583" parent="nkb_bruecke/Brücke" index="264" unique_id=112525624]
 visibility_range_end = 30.0
 
-[node name="Cube_7584" parent="nkb_bruecke/Brücke" index="265" unique_id=2014892081]
+[node name="Cube_7584" parent="nkb_bruecke/Brücke" index="265" unique_id=1966198317]
 visibility_range_end = 30.0
 
-[node name="Cube_7585" parent="nkb_bruecke/Brücke" index="266" unique_id=1291742032]
+[node name="Cube_7585" parent="nkb_bruecke/Brücke" index="266" unique_id=300412021]
 visibility_range_end = 30.0
 
-[node name="Cube_7586" parent="nkb_bruecke/Brücke" index="267" unique_id=1517184644]
+[node name="Cube_7586" parent="nkb_bruecke/Brücke" index="267" unique_id=1595954078]
 visibility_range_end = 30.0
 
-[node name="Cube_7587" parent="nkb_bruecke/Brücke" index="268" unique_id=823134418]
+[node name="Cube_7587" parent="nkb_bruecke/Brücke" index="268" unique_id=231595192]
 visibility_range_end = 30.0
 
-[node name="Cube_7588" parent="nkb_bruecke/Brücke" index="269" unique_id=523268153]
+[node name="Cube_7588" parent="nkb_bruecke/Brücke" index="269" unique_id=732457148]
 visibility_range_end = 30.0
 
-[node name="Cube_7589" parent="nkb_bruecke/Brücke" index="270" unique_id=1601839150]
+[node name="Cube_7589" parent="nkb_bruecke/Brücke" index="270" unique_id=1580535926]
 visibility_range_end = 30.0
 
-[node name="Cube_7590" parent="nkb_bruecke/Brücke" index="271" unique_id=1357986546]
+[node name="Cube_7590" parent="nkb_bruecke/Brücke" index="271" unique_id=824701763]
 visibility_range_end = 30.0
 
-[node name="Cube_7591" parent="nkb_bruecke/Brücke" index="272" unique_id=2050649398]
+[node name="Cube_7591" parent="nkb_bruecke/Brücke" index="272" unique_id=997419126]
 visibility_range_end = 30.0
 
-[node name="Cube_7592" parent="nkb_bruecke/Brücke" index="273" unique_id=1244365324]
+[node name="Cube_7592" parent="nkb_bruecke/Brücke" index="273" unique_id=1089822890]
 visibility_range_end = 30.0
 
-[node name="Cylinder_030" parent="nkb_bruecke/Brücke" index="274" unique_id=1773138147]
+[node name="Cylinder_030" parent="nkb_bruecke/Brücke" index="274" unique_id=1494953266]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13706" parent="nkb_bruecke/Brücke" index="275" unique_id=352154653]
+[node name="Cylinder_13706" parent="nkb_bruecke/Brücke" index="275" unique_id=643405547]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13707" parent="nkb_bruecke/Brücke" index="276" unique_id=2103342855]
+[node name="Cylinder_13707" parent="nkb_bruecke/Brücke" index="276" unique_id=2031584711]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13708" parent="nkb_bruecke/Brücke" index="277" unique_id=1742756061]
+[node name="Cylinder_13708" parent="nkb_bruecke/Brücke" index="277" unique_id=999710167]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13709" parent="nkb_bruecke/Brücke" index="278" unique_id=821465388]
+[node name="Cylinder_13709" parent="nkb_bruecke/Brücke" index="278" unique_id=167547419]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13710" parent="nkb_bruecke/Brücke" index="279" unique_id=435676517]
+[node name="Cylinder_13710" parent="nkb_bruecke/Brücke" index="279" unique_id=1991494215]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13711" parent="nkb_bruecke/Brücke" index="280" unique_id=653641386]
+[node name="Cylinder_13711" parent="nkb_bruecke/Brücke" index="280" unique_id=1613830534]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13712" parent="nkb_bruecke/Brücke" index="281" unique_id=1325403293]
+[node name="Cylinder_13712" parent="nkb_bruecke/Brücke" index="281" unique_id=1286687675]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13713" parent="nkb_bruecke/Brücke" index="282" unique_id=1170946648]
+[node name="Cylinder_13713" parent="nkb_bruecke/Brücke" index="282" unique_id=626704379]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13714" parent="nkb_bruecke/Brücke" index="283" unique_id=12865853]
+[node name="Cylinder_13714" parent="nkb_bruecke/Brücke" index="283" unique_id=1807927947]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13715" parent="nkb_bruecke/Brücke" index="284" unique_id=294582766]
+[node name="Cylinder_13715" parent="nkb_bruecke/Brücke" index="284" unique_id=803112764]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13716" parent="nkb_bruecke/Brücke" index="285" unique_id=117755134]
+[node name="Cylinder_13716" parent="nkb_bruecke/Brücke" index="285" unique_id=1936251530]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13717" parent="nkb_bruecke/Brücke" index="286" unique_id=2139763113]
+[node name="Cylinder_13717" parent="nkb_bruecke/Brücke" index="286" unique_id=1543369462]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13718" parent="nkb_bruecke/Brücke" index="287" unique_id=133756507]
+[node name="Cylinder_13718" parent="nkb_bruecke/Brücke" index="287" unique_id=70134609]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13719" parent="nkb_bruecke/Brücke" index="288" unique_id=1129835991]
+[node name="Cylinder_13719" parent="nkb_bruecke/Brücke" index="288" unique_id=2028879609]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13720" parent="nkb_bruecke/Brücke" index="289" unique_id=267059988]
+[node name="Cylinder_13720" parent="nkb_bruecke/Brücke" index="289" unique_id=503991777]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13722" parent="nkb_bruecke/Brücke" index="290" unique_id=1270182793]
+[node name="Cylinder_13722" parent="nkb_bruecke/Brücke" index="290" unique_id=1629093144]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13723" parent="nkb_bruecke/Brücke" index="291" unique_id=1675281775]
+[node name="Cylinder_13723" parent="nkb_bruecke/Brücke" index="291" unique_id=931933396]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13724" parent="nkb_bruecke/Brücke" index="292" unique_id=499096653]
+[node name="Cylinder_13724" parent="nkb_bruecke/Brücke" index="292" unique_id=2996048]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13725" parent="nkb_bruecke/Brücke" index="293" unique_id=1867313894]
+[node name="Cylinder_13725" parent="nkb_bruecke/Brücke" index="293" unique_id=2112365487]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13726" parent="nkb_bruecke/Brücke" index="294" unique_id=785900761]
+[node name="Cylinder_13726" parent="nkb_bruecke/Brücke" index="294" unique_id=1295304907]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13727" parent="nkb_bruecke/Brücke" index="295" unique_id=1142718155]
+[node name="Cylinder_13727" parent="nkb_bruecke/Brücke" index="295" unique_id=1113138430]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13728" parent="nkb_bruecke/Brücke" index="296" unique_id=110615385]
+[node name="Cylinder_13728" parent="nkb_bruecke/Brücke" index="296" unique_id=1268016923]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13729" parent="nkb_bruecke/Brücke" index="297" unique_id=1833643516]
+[node name="Cylinder_13729" parent="nkb_bruecke/Brücke" index="297" unique_id=770457297]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13730" parent="nkb_bruecke/Brücke" index="298" unique_id=1838439535]
+[node name="Cylinder_13730" parent="nkb_bruecke/Brücke" index="298" unique_id=1429558788]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13731" parent="nkb_bruecke/Brücke" index="299" unique_id=917852667]
+[node name="Cylinder_13731" parent="nkb_bruecke/Brücke" index="299" unique_id=268081439]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13732" parent="nkb_bruecke/Brücke" index="300" unique_id=1591041351]
+[node name="Cylinder_13732" parent="nkb_bruecke/Brücke" index="300" unique_id=652313799]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13733" parent="nkb_bruecke/Brücke" index="301" unique_id=433407379]
+[node name="Cylinder_13733" parent="nkb_bruecke/Brücke" index="301" unique_id=159179015]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13734" parent="nkb_bruecke/Brücke" index="302" unique_id=446678887]
+[node name="Cylinder_13734" parent="nkb_bruecke/Brücke" index="302" unique_id=1643252318]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13735" parent="nkb_bruecke/Brücke" index="303" unique_id=593075863]
+[node name="Cylinder_13735" parent="nkb_bruecke/Brücke" index="303" unique_id=1830417182]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13736" parent="nkb_bruecke/Brücke" index="304" unique_id=1109492997]
+[node name="Cylinder_13736" parent="nkb_bruecke/Brücke" index="304" unique_id=1768234705]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13737" parent="nkb_bruecke/Brücke" index="305" unique_id=900995539]
+[node name="Cylinder_13737" parent="nkb_bruecke/Brücke" index="305" unique_id=1109910404]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13738" parent="nkb_bruecke/Brücke" index="306" unique_id=602221559]
+[node name="Cylinder_13738" parent="nkb_bruecke/Brücke" index="306" unique_id=538593762]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13739" parent="nkb_bruecke/Brücke" index="307" unique_id=2036853457]
+[node name="Cylinder_13739" parent="nkb_bruecke/Brücke" index="307" unique_id=586998878]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13740" parent="nkb_bruecke/Brücke" index="308" unique_id=1299081739]
+[node name="Cylinder_13740" parent="nkb_bruecke/Brücke" index="308" unique_id=2010931092]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13741" parent="nkb_bruecke/Brücke" index="309" unique_id=289965681]
+[node name="Cylinder_13741" parent="nkb_bruecke/Brücke" index="309" unique_id=1270434159]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13742" parent="nkb_bruecke/Brücke" index="310" unique_id=1863477759]
+[node name="Cylinder_13742" parent="nkb_bruecke/Brücke" index="310" unique_id=868704426]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13743" parent="nkb_bruecke/Brücke" index="311" unique_id=1365379453]
+[node name="Cylinder_13743" parent="nkb_bruecke/Brücke" index="311" unique_id=2078017312]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13744" parent="nkb_bruecke/Brücke" index="312" unique_id=848480200]
+[node name="Cylinder_13744" parent="nkb_bruecke/Brücke" index="312" unique_id=265327688]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13745" parent="nkb_bruecke/Brücke" index="313" unique_id=970615288]
+[node name="Cylinder_13745" parent="nkb_bruecke/Brücke" index="313" unique_id=835939346]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13746" parent="nkb_bruecke/Brücke" index="314" unique_id=973994381]
+[node name="Cylinder_13746" parent="nkb_bruecke/Brücke" index="314" unique_id=1252947812]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13747" parent="nkb_bruecke/Brücke" index="315" unique_id=1732681306]
+[node name="Cylinder_13747" parent="nkb_bruecke/Brücke" index="315" unique_id=584604407]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13748" parent="nkb_bruecke/Brücke" index="316" unique_id=1828221982]
+[node name="Cylinder_13748" parent="nkb_bruecke/Brücke" index="316" unique_id=32365262]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13749" parent="nkb_bruecke/Brücke" index="317" unique_id=1466873226]
+[node name="Cylinder_13749" parent="nkb_bruecke/Brücke" index="317" unique_id=821791210]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13750" parent="nkb_bruecke/Brücke" index="318" unique_id=934043654]
+[node name="Cylinder_13750" parent="nkb_bruecke/Brücke" index="318" unique_id=506771113]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13751" parent="nkb_bruecke/Brücke" index="319" unique_id=1006123741]
+[node name="Cylinder_13751" parent="nkb_bruecke/Brücke" index="319" unique_id=1476874723]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13752" parent="nkb_bruecke/Brücke" index="320" unique_id=500571770]
+[node name="Cylinder_13752" parent="nkb_bruecke/Brücke" index="320" unique_id=2087517089]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13753" parent="nkb_bruecke/Brücke" index="321" unique_id=2074729401]
+[node name="Cylinder_13753" parent="nkb_bruecke/Brücke" index="321" unique_id=1889707385]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13754" parent="nkb_bruecke/Brücke" index="322" unique_id=1192183739]
+[node name="Cylinder_13754" parent="nkb_bruecke/Brücke" index="322" unique_id=1496879450]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13755" parent="nkb_bruecke/Brücke" index="323" unique_id=711699086]
+[node name="Cylinder_13755" parent="nkb_bruecke/Brücke" index="323" unique_id=1587131566]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13756" parent="nkb_bruecke/Brücke" index="324" unique_id=1138739832]
+[node name="Cylinder_13756" parent="nkb_bruecke/Brücke" index="324" unique_id=1654966189]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13757" parent="nkb_bruecke/Brücke" index="325" unique_id=1059573087]
+[node name="Cylinder_13757" parent="nkb_bruecke/Brücke" index="325" unique_id=834431529]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13758" parent="nkb_bruecke/Brücke" index="326" unique_id=1373286362]
+[node name="Cylinder_13758" parent="nkb_bruecke/Brücke" index="326" unique_id=905054340]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13759" parent="nkb_bruecke/Brücke" index="327" unique_id=487853760]
+[node name="Cylinder_13759" parent="nkb_bruecke/Brücke" index="327" unique_id=187202270]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13760" parent="nkb_bruecke/Brücke" index="328" unique_id=2028895845]
+[node name="Cylinder_13760" parent="nkb_bruecke/Brücke" index="328" unique_id=1021533879]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13761" parent="nkb_bruecke/Brücke" index="329" unique_id=1092830263]
+[node name="Cylinder_13761" parent="nkb_bruecke/Brücke" index="329" unique_id=2108649012]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13762" parent="nkb_bruecke/Brücke" index="330" unique_id=1835676091]
+[node name="Cylinder_13762" parent="nkb_bruecke/Brücke" index="330" unique_id=1162038824]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13763" parent="nkb_bruecke/Brücke" index="331" unique_id=1130523249]
+[node name="Cylinder_13763" parent="nkb_bruecke/Brücke" index="331" unique_id=2012526679]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13764" parent="nkb_bruecke/Brücke" index="332" unique_id=1749318429]
+[node name="Cylinder_13764" parent="nkb_bruecke/Brücke" index="332" unique_id=960286552]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13765" parent="nkb_bruecke/Brücke" index="333" unique_id=1256543058]
+[node name="Cylinder_13765" parent="nkb_bruecke/Brücke" index="333" unique_id=68970382]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13766" parent="nkb_bruecke/Brücke" index="334" unique_id=1309633447]
+[node name="Cylinder_13766" parent="nkb_bruecke/Brücke" index="334" unique_id=722737222]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13767" parent="nkb_bruecke/Brücke" index="335" unique_id=1626466924]
+[node name="Cylinder_13767" parent="nkb_bruecke/Brücke" index="335" unique_id=1981358530]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13768" parent="nkb_bruecke/Brücke" index="336" unique_id=658839668]
+[node name="Cylinder_13768" parent="nkb_bruecke/Brücke" index="336" unique_id=530032118]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13769" parent="nkb_bruecke/Brücke" index="337" unique_id=893372520]
+[node name="Cylinder_13769" parent="nkb_bruecke/Brücke" index="337" unique_id=1808339326]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13770" parent="nkb_bruecke/Brücke" index="338" unique_id=1305026104]
+[node name="Cylinder_13770" parent="nkb_bruecke/Brücke" index="338" unique_id=1703405612]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13771" parent="nkb_bruecke/Brücke" index="339" unique_id=1031196966]
+[node name="Cylinder_13771" parent="nkb_bruecke/Brücke" index="339" unique_id=1837069975]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13772" parent="nkb_bruecke/Brücke" index="340" unique_id=1099843506]
+[node name="Cylinder_13772" parent="nkb_bruecke/Brücke" index="340" unique_id=1871074528]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13773" parent="nkb_bruecke/Brücke" index="341" unique_id=1080270890]
+[node name="Cylinder_13773" parent="nkb_bruecke/Brücke" index="341" unique_id=756442017]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13774" parent="nkb_bruecke/Brücke" index="342" unique_id=1102621329]
+[node name="Cylinder_13774" parent="nkb_bruecke/Brücke" index="342" unique_id=2105535465]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13775" parent="nkb_bruecke/Brücke" index="343" unique_id=1484658392]
+[node name="Cylinder_13775" parent="nkb_bruecke/Brücke" index="343" unique_id=2107153076]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13776" parent="nkb_bruecke/Brücke" index="344" unique_id=808566523]
+[node name="Cylinder_13776" parent="nkb_bruecke/Brücke" index="344" unique_id=1065827456]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13777" parent="nkb_bruecke/Brücke" index="345" unique_id=1276540501]
+[node name="Cylinder_13777" parent="nkb_bruecke/Brücke" index="345" unique_id=1469677893]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13778" parent="nkb_bruecke/Brücke" index="346" unique_id=699599162]
+[node name="Cylinder_13778" parent="nkb_bruecke/Brücke" index="346" unique_id=1407562426]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13779" parent="nkb_bruecke/Brücke" index="347" unique_id=740045953]
+[node name="Cylinder_13779" parent="nkb_bruecke/Brücke" index="347" unique_id=604397062]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13780" parent="nkb_bruecke/Brücke" index="348" unique_id=1590869847]
+[node name="Cylinder_13780" parent="nkb_bruecke/Brücke" index="348" unique_id=965677004]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13781" parent="nkb_bruecke/Brücke" index="349" unique_id=46960143]
+[node name="Cylinder_13781" parent="nkb_bruecke/Brücke" index="349" unique_id=953704790]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13782" parent="nkb_bruecke/Brücke" index="350" unique_id=1900763759]
+[node name="Cylinder_13782" parent="nkb_bruecke/Brücke" index="350" unique_id=1371367939]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13783" parent="nkb_bruecke/Brücke" index="351" unique_id=503346067]
+[node name="Cylinder_13783" parent="nkb_bruecke/Brücke" index="351" unique_id=300611931]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13784" parent="nkb_bruecke/Brücke" index="352" unique_id=1743020171]
+[node name="Cylinder_13784" parent="nkb_bruecke/Brücke" index="352" unique_id=2070952689]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13785" parent="nkb_bruecke/Brücke" index="353" unique_id=1755238235]
+[node name="Cylinder_13785" parent="nkb_bruecke/Brücke" index="353" unique_id=2008954868]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13786" parent="nkb_bruecke/Brücke" index="354" unique_id=1264404064]
+[node name="Cylinder_13786" parent="nkb_bruecke/Brücke" index="354" unique_id=1444385981]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13787" parent="nkb_bruecke/Brücke" index="355" unique_id=486939620]
+[node name="Cylinder_13787" parent="nkb_bruecke/Brücke" index="355" unique_id=1832876886]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13788" parent="nkb_bruecke/Brücke" index="356" unique_id=1040507009]
+[node name="Cylinder_13788" parent="nkb_bruecke/Brücke" index="356" unique_id=771622950]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13789" parent="nkb_bruecke/Brücke" index="357" unique_id=477004065]
+[node name="Cylinder_13789" parent="nkb_bruecke/Brücke" index="357" unique_id=72478136]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13790" parent="nkb_bruecke/Brücke" index="358" unique_id=94675907]
+[node name="Cylinder_13790" parent="nkb_bruecke/Brücke" index="358" unique_id=798926855]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13791" parent="nkb_bruecke/Brücke" index="359" unique_id=1932259381]
+[node name="Cylinder_13791" parent="nkb_bruecke/Brücke" index="359" unique_id=423745311]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13792" parent="nkb_bruecke/Brücke" index="360" unique_id=1839647274]
+[node name="Cylinder_13792" parent="nkb_bruecke/Brücke" index="360" unique_id=1946002624]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13793" parent="nkb_bruecke/Brücke" index="361" unique_id=1767584434]
+[node name="Cylinder_13793" parent="nkb_bruecke/Brücke" index="361" unique_id=1502648070]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13794" parent="nkb_bruecke/Brücke" index="362" unique_id=32471688]
+[node name="Cylinder_13794" parent="nkb_bruecke/Brücke" index="362" unique_id=1661931281]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13795" parent="nkb_bruecke/Brücke" index="363" unique_id=423994311]
+[node name="Cylinder_13795" parent="nkb_bruecke/Brücke" index="363" unique_id=870382784]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13796" parent="nkb_bruecke/Brücke" index="364" unique_id=749270643]
+[node name="Cylinder_13796" parent="nkb_bruecke/Brücke" index="364" unique_id=1290131811]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13797" parent="nkb_bruecke/Brücke" index="365" unique_id=693146045]
+[node name="Cylinder_13797" parent="nkb_bruecke/Brücke" index="365" unique_id=1138267134]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13798" parent="nkb_bruecke/Brücke" index="366" unique_id=603969496]
+[node name="Cylinder_13798" parent="nkb_bruecke/Brücke" index="366" unique_id=623556900]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13799" parent="nkb_bruecke/Brücke" index="367" unique_id=2106449909]
+[node name="Cylinder_13799" parent="nkb_bruecke/Brücke" index="367" unique_id=851281218]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13800" parent="nkb_bruecke/Brücke" index="368" unique_id=1945971636]
+[node name="Cylinder_13800" parent="nkb_bruecke/Brücke" index="368" unique_id=652838825]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13801" parent="nkb_bruecke/Brücke" index="369" unique_id=1295418691]
+[node name="Cylinder_13801" parent="nkb_bruecke/Brücke" index="369" unique_id=1588662754]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13802" parent="nkb_bruecke/Brücke" index="370" unique_id=1491696919]
+[node name="Cylinder_13802" parent="nkb_bruecke/Brücke" index="370" unique_id=953175681]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13803" parent="nkb_bruecke/Brücke" index="371" unique_id=1598526791]
+[node name="Cylinder_13803" parent="nkb_bruecke/Brücke" index="371" unique_id=1029536501]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13804" parent="nkb_bruecke/Brücke" index="372" unique_id=1491820930]
+[node name="Cylinder_13804" parent="nkb_bruecke/Brücke" index="372" unique_id=255561242]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13805" parent="nkb_bruecke/Brücke" index="373" unique_id=24438290]
+[node name="Cylinder_13805" parent="nkb_bruecke/Brücke" index="373" unique_id=446488213]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13806" parent="nkb_bruecke/Brücke" index="374" unique_id=114211699]
+[node name="Cylinder_13806" parent="nkb_bruecke/Brücke" index="374" unique_id=2099573558]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13807" parent="nkb_bruecke/Brücke" index="375" unique_id=146477876]
+[node name="Cylinder_13807" parent="nkb_bruecke/Brücke" index="375" unique_id=1953040961]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13808" parent="nkb_bruecke/Brücke" index="376" unique_id=80536230]
+[node name="Cylinder_13808" parent="nkb_bruecke/Brücke" index="376" unique_id=670559480]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13809" parent="nkb_bruecke/Brücke" index="377" unique_id=2014465414]
+[node name="Cylinder_13809" parent="nkb_bruecke/Brücke" index="377" unique_id=1795737374]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13810" parent="nkb_bruecke/Brücke" index="378" unique_id=1088254919]
+[node name="Cylinder_13810" parent="nkb_bruecke/Brücke" index="378" unique_id=1514519310]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13811" parent="nkb_bruecke/Brücke" index="379" unique_id=1983688810]
+[node name="Cylinder_13811" parent="nkb_bruecke/Brücke" index="379" unique_id=104195418]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13812" parent="nkb_bruecke/Brücke" index="380" unique_id=507814920]
+[node name="Cylinder_13812" parent="nkb_bruecke/Brücke" index="380" unique_id=1791994590]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13813" parent="nkb_bruecke/Brücke" index="381" unique_id=952889338]
+[node name="Cylinder_13813" parent="nkb_bruecke/Brücke" index="381" unique_id=1851264280]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13814" parent="nkb_bruecke/Brücke" index="382" unique_id=167636207]
+[node name="Cylinder_13814" parent="nkb_bruecke/Brücke" index="382" unique_id=954319926]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13815" parent="nkb_bruecke/Brücke" index="383" unique_id=769816640]
+[node name="Cylinder_13815" parent="nkb_bruecke/Brücke" index="383" unique_id=950211467]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13816" parent="nkb_bruecke/Brücke" index="384" unique_id=40102148]
+[node name="Cylinder_13816" parent="nkb_bruecke/Brücke" index="384" unique_id=375170536]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13817" parent="nkb_bruecke/Brücke" index="385" unique_id=86738497]
+[node name="Cylinder_13817" parent="nkb_bruecke/Brücke" index="385" unique_id=1383366923]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13818" parent="nkb_bruecke/Brücke" index="386" unique_id=729382788]
+[node name="Cylinder_13818" parent="nkb_bruecke/Brücke" index="386" unique_id=1323510134]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13819" parent="nkb_bruecke/Brücke" index="387" unique_id=19951584]
+[node name="Cylinder_13819" parent="nkb_bruecke/Brücke" index="387" unique_id=1518489416]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13820" parent="nkb_bruecke/Brücke" index="388" unique_id=1849252514]
+[node name="Cylinder_13820" parent="nkb_bruecke/Brücke" index="388" unique_id=2062894487]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13821" parent="nkb_bruecke/Brücke" index="389" unique_id=811262887]
+[node name="Cylinder_13821" parent="nkb_bruecke/Brücke" index="389" unique_id=454218426]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13822" parent="nkb_bruecke/Brücke" index="390" unique_id=1450956453]
+[node name="Cylinder_13822" parent="nkb_bruecke/Brücke" index="390" unique_id=500858829]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13823" parent="nkb_bruecke/Brücke" index="391" unique_id=1205617638]
+[node name="Cylinder_13823" parent="nkb_bruecke/Brücke" index="391" unique_id=170755637]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13824" parent="nkb_bruecke/Brücke" index="392" unique_id=2026987269]
+[node name="Cylinder_13824" parent="nkb_bruecke/Brücke" index="392" unique_id=277321321]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13825" parent="nkb_bruecke/Brücke" index="393" unique_id=1904859851]
+[node name="Cylinder_13825" parent="nkb_bruecke/Brücke" index="393" unique_id=277289732]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13826" parent="nkb_bruecke/Brücke" index="394" unique_id=709439146]
+[node name="Cylinder_13826" parent="nkb_bruecke/Brücke" index="394" unique_id=2022322408]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13827" parent="nkb_bruecke/Brücke" index="395" unique_id=1066017457]
+[node name="Cylinder_13827" parent="nkb_bruecke/Brücke" index="395" unique_id=84025178]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13828" parent="nkb_bruecke/Brücke" index="396" unique_id=1433412808]
+[node name="Cylinder_13828" parent="nkb_bruecke/Brücke" index="396" unique_id=964155763]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13829" parent="nkb_bruecke/Brücke" index="397" unique_id=1499451080]
+[node name="Cylinder_13829" parent="nkb_bruecke/Brücke" index="397" unique_id=1644748091]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13830" parent="nkb_bruecke/Brücke" index="398" unique_id=817483705]
+[node name="Cylinder_13830" parent="nkb_bruecke/Brücke" index="398" unique_id=875214256]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13831" parent="nkb_bruecke/Brücke" index="399" unique_id=214678533]
+[node name="Cylinder_13831" parent="nkb_bruecke/Brücke" index="399" unique_id=127466787]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13832" parent="nkb_bruecke/Brücke" index="400" unique_id=471303399]
+[node name="Cylinder_13832" parent="nkb_bruecke/Brücke" index="400" unique_id=4752985]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13833" parent="nkb_bruecke/Brücke" index="401" unique_id=1759012868]
+[node name="Cylinder_13833" parent="nkb_bruecke/Brücke" index="401" unique_id=210115260]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13834" parent="nkb_bruecke/Brücke" index="402" unique_id=1943149315]
+[node name="Cylinder_13834" parent="nkb_bruecke/Brücke" index="402" unique_id=435577787]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13835" parent="nkb_bruecke/Brücke" index="403" unique_id=459761174]
+[node name="Cylinder_13835" parent="nkb_bruecke/Brücke" index="403" unique_id=1641578587]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13836" parent="nkb_bruecke/Brücke" index="404" unique_id=789960183]
+[node name="Cylinder_13836" parent="nkb_bruecke/Brücke" index="404" unique_id=371192235]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13837" parent="nkb_bruecke/Brücke" index="405" unique_id=1365544562]
+[node name="Cylinder_13837" parent="nkb_bruecke/Brücke" index="405" unique_id=232588110]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13838" parent="nkb_bruecke/Brücke" index="406" unique_id=1552404282]
+[node name="Cylinder_13838" parent="nkb_bruecke/Brücke" index="406" unique_id=481575556]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13839" parent="nkb_bruecke/Brücke" index="407" unique_id=595786677]
+[node name="Cylinder_13839" parent="nkb_bruecke/Brücke" index="407" unique_id=783067489]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13840" parent="nkb_bruecke/Brücke" index="408" unique_id=698733575]
+[node name="Cylinder_13840" parent="nkb_bruecke/Brücke" index="408" unique_id=1392419481]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13841" parent="nkb_bruecke/Brücke" index="409" unique_id=2024031487]
+[node name="Cylinder_13841" parent="nkb_bruecke/Brücke" index="409" unique_id=1636760086]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13842" parent="nkb_bruecke/Brücke" index="410" unique_id=502858823]
+[node name="Cylinder_13842" parent="nkb_bruecke/Brücke" index="410" unique_id=413458125]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13843" parent="nkb_bruecke/Brücke" index="411" unique_id=324581289]
+[node name="Cylinder_13843" parent="nkb_bruecke/Brücke" index="411" unique_id=625248958]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13844" parent="nkb_bruecke/Brücke" index="412" unique_id=954075393]
+[node name="Cylinder_13844" parent="nkb_bruecke/Brücke" index="412" unique_id=1725711023]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13845" parent="nkb_bruecke/Brücke" index="413" unique_id=1909490635]
+[node name="Cylinder_13845" parent="nkb_bruecke/Brücke" index="413" unique_id=708518228]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13846" parent="nkb_bruecke/Brücke" index="414" unique_id=256550021]
+[node name="Cylinder_13846" parent="nkb_bruecke/Brücke" index="414" unique_id=1202405808]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13847" parent="nkb_bruecke/Brücke" index="415" unique_id=715600367]
+[node name="Cylinder_13847" parent="nkb_bruecke/Brücke" index="415" unique_id=1071785694]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13848" parent="nkb_bruecke/Brücke" index="416" unique_id=1428435453]
+[node name="Cylinder_13848" parent="nkb_bruecke/Brücke" index="416" unique_id=1735107146]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13850" parent="nkb_bruecke/Brücke" index="417" unique_id=1006808540]
+[node name="Cylinder_13850" parent="nkb_bruecke/Brücke" index="417" unique_id=1692925277]
 visibility_range_end = 30.0
 
-[node name="nkb-1-schraube1" parent="nkb_bruecke/Brücke/Cylinder_13850" index="0" unique_id=1737813924]
+[node name="nkb-1-schraube1" parent="nkb_bruecke/Brücke/Cylinder_13850" index="0" unique_id=11479734]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13851" parent="nkb_bruecke/Brücke" index="418" unique_id=1857665710]
+[node name="Cylinder_13851" parent="nkb_bruecke/Brücke" index="418" unique_id=962283408]
 visibility_range_end = 30.0
 
-[node name="nkb-1-schraube2" parent="nkb_bruecke/Brücke/Cylinder_13851" index="0" unique_id=1663723491]
+[node name="nkb-1-schraube2" parent="nkb_bruecke/Brücke/Cylinder_13851" index="0" unique_id=1786832397]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13853" parent="nkb_bruecke/Brücke" index="419" unique_id=1888115295]
+[node name="Cylinder_13853" parent="nkb_bruecke/Brücke" index="419" unique_id=1525685971]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13854" parent="nkb_bruecke/Brücke" index="420" unique_id=1792341581]
+[node name="Cylinder_13854" parent="nkb_bruecke/Brücke" index="420" unique_id=1056883847]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13856" parent="nkb_bruecke/Brücke" index="422" unique_id=306018820]
+[node name="Cylinder_13856" parent="nkb_bruecke/Brücke" index="422" unique_id=737718395]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13857" parent="nkb_bruecke/Brücke" index="423" unique_id=5629521]
+[node name="Cylinder_13857" parent="nkb_bruecke/Brücke" index="423" unique_id=1116189243]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13858" parent="nkb_bruecke/Brücke" index="424" unique_id=885008669]
+[node name="Cylinder_13858" parent="nkb_bruecke/Brücke" index="424" unique_id=356707169]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13859" parent="nkb_bruecke/Brücke" index="425" unique_id=702443008]
+[node name="Cylinder_13859" parent="nkb_bruecke/Brücke" index="425" unique_id=1239773487]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13860" parent="nkb_bruecke/Brücke" index="426" unique_id=1819395955]
+[node name="Cylinder_13860" parent="nkb_bruecke/Brücke" index="426" unique_id=1360247602]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13861" parent="nkb_bruecke/Brücke" index="427" unique_id=1563224729]
+[node name="Cylinder_13861" parent="nkb_bruecke/Brücke" index="427" unique_id=103514883]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13862" parent="nkb_bruecke/Brücke" index="428" unique_id=1709639360]
+[node name="Cylinder_13862" parent="nkb_bruecke/Brücke" index="428" unique_id=476933905]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13863" parent="nkb_bruecke/Brücke" index="429" unique_id=1320989188]
+[node name="Cylinder_13863" parent="nkb_bruecke/Brücke" index="429" unique_id=314970966]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13864" parent="nkb_bruecke/Brücke" index="430" unique_id=1311461377]
+[node name="Cylinder_13864" parent="nkb_bruecke/Brücke" index="430" unique_id=1232527001]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13865" parent="nkb_bruecke/Brücke" index="431" unique_id=456262993]
+[node name="Cylinder_13865" parent="nkb_bruecke/Brücke" index="431" unique_id=1920033006]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13866" parent="nkb_bruecke/Brücke" index="432" unique_id=1517897126]
+[node name="Cylinder_13866" parent="nkb_bruecke/Brücke" index="432" unique_id=830180377]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13867" parent="nkb_bruecke/Brücke" index="433" unique_id=1972746731]
+[node name="Cylinder_13867" parent="nkb_bruecke/Brücke" index="433" unique_id=1272481370]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13868" parent="nkb_bruecke/Brücke" index="434" unique_id=1199801721]
+[node name="Cylinder_13868" parent="nkb_bruecke/Brücke" index="434" unique_id=796694595]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13869" parent="nkb_bruecke/Brücke" index="435" unique_id=1946034310]
+[node name="Cylinder_13869" parent="nkb_bruecke/Brücke" index="435" unique_id=562174334]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13870" parent="nkb_bruecke/Brücke" index="436" unique_id=2140363301]
+[node name="Cylinder_13870" parent="nkb_bruecke/Brücke" index="436" unique_id=769164381]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13871" parent="nkb_bruecke/Brücke" index="437" unique_id=1799831030]
+[node name="Cylinder_13871" parent="nkb_bruecke/Brücke" index="437" unique_id=1129277549]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13872" parent="nkb_bruecke/Brücke" index="438" unique_id=465185681]
+[node name="Cylinder_13872" parent="nkb_bruecke/Brücke" index="438" unique_id=1393603932]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13873" parent="nkb_bruecke/Brücke" index="439" unique_id=2100749629]
+[node name="Cylinder_13873" parent="nkb_bruecke/Brücke" index="439" unique_id=1497335807]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13874" parent="nkb_bruecke/Brücke" index="440" unique_id=1427028165]
+[node name="Cylinder_13874" parent="nkb_bruecke/Brücke" index="440" unique_id=1333845186]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13875" parent="nkb_bruecke/Brücke" index="441" unique_id=1839251169]
+[node name="Cylinder_13875" parent="nkb_bruecke/Brücke" index="441" unique_id=1016164928]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13876" parent="nkb_bruecke/Brücke" index="442" unique_id=366379216]
+[node name="Cylinder_13876" parent="nkb_bruecke/Brücke" index="442" unique_id=1559866885]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13877" parent="nkb_bruecke/Brücke" index="443" unique_id=1339300995]
+[node name="Cylinder_13877" parent="nkb_bruecke/Brücke" index="443" unique_id=2075064514]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13878" parent="nkb_bruecke/Brücke" index="444" unique_id=139467051]
+[node name="Cylinder_13878" parent="nkb_bruecke/Brücke" index="444" unique_id=520597948]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13879" parent="nkb_bruecke/Brücke" index="445" unique_id=473270768]
+[node name="Cylinder_13879" parent="nkb_bruecke/Brücke" index="445" unique_id=635142060]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13880" parent="nkb_bruecke/Brücke" index="446" unique_id=313028078]
+[node name="Cylinder_13880" parent="nkb_bruecke/Brücke" index="446" unique_id=1644142782]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13881" parent="nkb_bruecke/Brücke" index="447" unique_id=1972506543]
+[node name="Cylinder_13881" parent="nkb_bruecke/Brücke" index="447" unique_id=150390843]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13882" parent="nkb_bruecke/Brücke" index="448" unique_id=512660209]
+[node name="Cylinder_13882" parent="nkb_bruecke/Brücke" index="448" unique_id=1630786038]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13883" parent="nkb_bruecke/Brücke" index="449" unique_id=1186198799]
+[node name="Cylinder_13883" parent="nkb_bruecke/Brücke" index="449" unique_id=1057237865]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13884" parent="nkb_bruecke/Brücke" index="450" unique_id=1835950321]
+[node name="Cylinder_13884" parent="nkb_bruecke/Brücke" index="450" unique_id=1770442265]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13885" parent="nkb_bruecke/Brücke" index="451" unique_id=1876781649]
+[node name="Cylinder_13885" parent="nkb_bruecke/Brücke" index="451" unique_id=1105030072]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13886" parent="nkb_bruecke/Brücke" index="452" unique_id=1897653616]
+[node name="Cylinder_13886" parent="nkb_bruecke/Brücke" index="452" unique_id=901388943]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13887" parent="nkb_bruecke/Brücke" index="453" unique_id=1319810105]
+[node name="Cylinder_13887" parent="nkb_bruecke/Brücke" index="453" unique_id=1823861354]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13888" parent="nkb_bruecke/Brücke" index="454" unique_id=1554753475]
+[node name="Cylinder_13888" parent="nkb_bruecke/Brücke" index="454" unique_id=1783528966]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13889" parent="nkb_bruecke/Brücke" index="455" unique_id=112274094]
+[node name="Cylinder_13889" parent="nkb_bruecke/Brücke" index="455" unique_id=1493924285]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13890" parent="nkb_bruecke/Brücke" index="456" unique_id=880600577]
+[node name="Cylinder_13890" parent="nkb_bruecke/Brücke" index="456" unique_id=24512747]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13891" parent="nkb_bruecke/Brücke" index="457" unique_id=1591190009]
+[node name="Cylinder_13891" parent="nkb_bruecke/Brücke" index="457" unique_id=1110995245]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13892" parent="nkb_bruecke/Brücke" index="458" unique_id=797099933]
+[node name="Cylinder_13892" parent="nkb_bruecke/Brücke" index="458" unique_id=1286135270]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13893" parent="nkb_bruecke/Brücke" index="459" unique_id=1649318492]
+[node name="Cylinder_13893" parent="nkb_bruecke/Brücke" index="459" unique_id=19525429]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13894" parent="nkb_bruecke/Brücke" index="460" unique_id=1066372541]
+[node name="Cylinder_13894" parent="nkb_bruecke/Brücke" index="460" unique_id=1321420446]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13895" parent="nkb_bruecke/Brücke" index="461" unique_id=1219719886]
+[node name="Cylinder_13895" parent="nkb_bruecke/Brücke" index="461" unique_id=167144570]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13896" parent="nkb_bruecke/Brücke" index="462" unique_id=2057165011]
+[node name="Cylinder_13896" parent="nkb_bruecke/Brücke" index="462" unique_id=1354412112]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13897" parent="nkb_bruecke/Brücke" index="463" unique_id=1433551956]
+[node name="Cylinder_13897" parent="nkb_bruecke/Brücke" index="463" unique_id=1828150675]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13898" parent="nkb_bruecke/Brücke" index="464" unique_id=1626306618]
+[node name="Cylinder_13898" parent="nkb_bruecke/Brücke" index="464" unique_id=477259733]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13899" parent="nkb_bruecke/Brücke" index="465" unique_id=764325782]
+[node name="Cylinder_13899" parent="nkb_bruecke/Brücke" index="465" unique_id=193106885]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13900" parent="nkb_bruecke/Brücke" index="466" unique_id=1996454272]
+[node name="Cylinder_13900" parent="nkb_bruecke/Brücke" index="466" unique_id=898831314]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13901" parent="nkb_bruecke/Brücke" index="467" unique_id=1752589848]
+[node name="Cylinder_13901" parent="nkb_bruecke/Brücke" index="467" unique_id=1531243452]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13902" parent="nkb_bruecke/Brücke" index="468" unique_id=785066447]
+[node name="Cylinder_13902" parent="nkb_bruecke/Brücke" index="468" unique_id=622630364]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13903" parent="nkb_bruecke/Brücke" index="469" unique_id=807214342]
+[node name="Cylinder_13903" parent="nkb_bruecke/Brücke" index="469" unique_id=1266635468]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13904" parent="nkb_bruecke/Brücke" index="470" unique_id=421448754]
+[node name="Cylinder_13904" parent="nkb_bruecke/Brücke" index="470" unique_id=276569723]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13905" parent="nkb_bruecke/Brücke" index="471" unique_id=1227314449]
+[node name="Cylinder_13905" parent="nkb_bruecke/Brücke" index="471" unique_id=1171556798]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13906" parent="nkb_bruecke/Brücke" index="472" unique_id=1726639005]
+[node name="Cylinder_13906" parent="nkb_bruecke/Brücke" index="472" unique_id=396514637]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13907" parent="nkb_bruecke/Brücke" index="473" unique_id=584954099]
+[node name="Cylinder_13907" parent="nkb_bruecke/Brücke" index="473" unique_id=326998016]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13908" parent="nkb_bruecke/Brücke" index="474" unique_id=768041085]
+[node name="Cylinder_13908" parent="nkb_bruecke/Brücke" index="474" unique_id=811383381]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13909" parent="nkb_bruecke/Brücke" index="475" unique_id=2091311563]
+[node name="Cylinder_13909" parent="nkb_bruecke/Brücke" index="475" unique_id=267865842]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13910" parent="nkb_bruecke/Brücke" index="476" unique_id=1293673385]
+[node name="Cylinder_13910" parent="nkb_bruecke/Brücke" index="476" unique_id=1867434619]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13911" parent="nkb_bruecke/Brücke" index="477" unique_id=1008913971]
+[node name="Cylinder_13911" parent="nkb_bruecke/Brücke" index="477" unique_id=1101971703]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13912" parent="nkb_bruecke/Brücke" index="478" unique_id=944167333]
+[node name="Cylinder_13912" parent="nkb_bruecke/Brücke" index="478" unique_id=1756727438]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13913" parent="nkb_bruecke/Brücke" index="479" unique_id=218333797]
+[node name="Cylinder_13913" parent="nkb_bruecke/Brücke" index="479" unique_id=1614579655]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13914" parent="nkb_bruecke/Brücke" index="480" unique_id=510286761]
+[node name="Cylinder_13914" parent="nkb_bruecke/Brücke" index="480" unique_id=159053038]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13915" parent="nkb_bruecke/Brücke" index="481" unique_id=489418838]
+[node name="Cylinder_13915" parent="nkb_bruecke/Brücke" index="481" unique_id=542768175]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13916" parent="nkb_bruecke/Brücke" index="482" unique_id=1317411529]
+[node name="Cylinder_13916" parent="nkb_bruecke/Brücke" index="482" unique_id=95948425]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13917" parent="nkb_bruecke/Brücke" index="483" unique_id=2114971028]
+[node name="Cylinder_13917" parent="nkb_bruecke/Brücke" index="483" unique_id=727687848]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13918" parent="nkb_bruecke/Brücke" index="484" unique_id=367632695]
+[node name="Cylinder_13918" parent="nkb_bruecke/Brücke" index="484" unique_id=855202800]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13919" parent="nkb_bruecke/Brücke" index="485" unique_id=686634679]
+[node name="Cylinder_13919" parent="nkb_bruecke/Brücke" index="485" unique_id=1284634626]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13920" parent="nkb_bruecke/Brücke" index="486" unique_id=147303003]
+[node name="Cylinder_13920" parent="nkb_bruecke/Brücke" index="486" unique_id=1068134778]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13921" parent="nkb_bruecke/Brücke" index="487" unique_id=296752006]
+[node name="Cylinder_13921" parent="nkb_bruecke/Brücke" index="487" unique_id=1588218244]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13922" parent="nkb_bruecke/Brücke" index="488" unique_id=1605923946]
+[node name="Cylinder_13922" parent="nkb_bruecke/Brücke" index="488" unique_id=1417053673]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13923" parent="nkb_bruecke/Brücke" index="489" unique_id=1831415401]
+[node name="Cylinder_13923" parent="nkb_bruecke/Brücke" index="489" unique_id=1324220829]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13924" parent="nkb_bruecke/Brücke" index="490" unique_id=81659510]
+[node name="Cylinder_13924" parent="nkb_bruecke/Brücke" index="490" unique_id=585149822]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13925" parent="nkb_bruecke/Brücke" index="491" unique_id=354515685]
+[node name="Cylinder_13925" parent="nkb_bruecke/Brücke" index="491" unique_id=614795493]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13926" parent="nkb_bruecke/Brücke" index="492" unique_id=1349447779]
+[node name="Cylinder_13926" parent="nkb_bruecke/Brücke" index="492" unique_id=303199989]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13927" parent="nkb_bruecke/Brücke" index="493" unique_id=601369923]
+[node name="Cylinder_13927" parent="nkb_bruecke/Brücke" index="493" unique_id=1354031033]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13928" parent="nkb_bruecke/Brücke" index="494" unique_id=880014192]
+[node name="Cylinder_13928" parent="nkb_bruecke/Brücke" index="494" unique_id=1229401632]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13929" parent="nkb_bruecke/Brücke" index="495" unique_id=927206098]
+[node name="Cylinder_13929" parent="nkb_bruecke/Brücke" index="495" unique_id=1510396238]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13930" parent="nkb_bruecke/Brücke" index="496" unique_id=2044733733]
+[node name="Cylinder_13930" parent="nkb_bruecke/Brücke" index="496" unique_id=1145594799]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13931" parent="nkb_bruecke/Brücke" index="497" unique_id=1877854810]
+[node name="Cylinder_13931" parent="nkb_bruecke/Brücke" index="497" unique_id=540776719]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13932" parent="nkb_bruecke/Brücke" index="498" unique_id=101506842]
+[node name="Cylinder_13932" parent="nkb_bruecke/Brücke" index="498" unique_id=1134158342]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13933" parent="nkb_bruecke/Brücke" index="499" unique_id=121194005]
+[node name="Cylinder_13933" parent="nkb_bruecke/Brücke" index="499" unique_id=1016454968]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13934" parent="nkb_bruecke/Brücke" index="500" unique_id=474129533]
+[node name="Cylinder_13934" parent="nkb_bruecke/Brücke" index="500" unique_id=911026399]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13935" parent="nkb_bruecke/Brücke" index="501" unique_id=1851353110]
+[node name="Cylinder_13935" parent="nkb_bruecke/Brücke" index="501" unique_id=2028231894]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13936" parent="nkb_bruecke/Brücke" index="502" unique_id=143882480]
+[node name="Cylinder_13936" parent="nkb_bruecke/Brücke" index="502" unique_id=1191172250]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13937" parent="nkb_bruecke/Brücke" index="503" unique_id=529147502]
+[node name="Cylinder_13937" parent="nkb_bruecke/Brücke" index="503" unique_id=1327265526]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13938" parent="nkb_bruecke/Brücke" index="504" unique_id=2120526624]
+[node name="Cylinder_13938" parent="nkb_bruecke/Brücke" index="504" unique_id=1878585162]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13939" parent="nkb_bruecke/Brücke" index="505" unique_id=532431801]
+[node name="Cylinder_13939" parent="nkb_bruecke/Brücke" index="505" unique_id=233691711]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13940" parent="nkb_bruecke/Brücke" index="506" unique_id=844900507]
+[node name="Cylinder_13940" parent="nkb_bruecke/Brücke" index="506" unique_id=524105675]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13941" parent="nkb_bruecke/Brücke" index="507" unique_id=193481666]
+[node name="Cylinder_13941" parent="nkb_bruecke/Brücke" index="507" unique_id=1005641052]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13942" parent="nkb_bruecke/Brücke" index="508" unique_id=1820892061]
+[node name="Cylinder_13942" parent="nkb_bruecke/Brücke" index="508" unique_id=918319259]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13943" parent="nkb_bruecke/Brücke" index="509" unique_id=198622501]
+[node name="Cylinder_13943" parent="nkb_bruecke/Brücke" index="509" unique_id=1831732866]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13944" parent="nkb_bruecke/Brücke" index="510" unique_id=1823508091]
+[node name="Cylinder_13944" parent="nkb_bruecke/Brücke" index="510" unique_id=551871999]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13945" parent="nkb_bruecke/Brücke" index="511" unique_id=645890153]
+[node name="Cylinder_13945" parent="nkb_bruecke/Brücke" index="511" unique_id=254411253]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13946" parent="nkb_bruecke/Brücke" index="512" unique_id=929136915]
+[node name="Cylinder_13946" parent="nkb_bruecke/Brücke" index="512" unique_id=1583439120]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13947" parent="nkb_bruecke/Brücke" index="513" unique_id=1671293440]
+[node name="Cylinder_13947" parent="nkb_bruecke/Brücke" index="513" unique_id=602720579]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13948" parent="nkb_bruecke/Brücke" index="514" unique_id=1316475525]
+[node name="Cylinder_13948" parent="nkb_bruecke/Brücke" index="514" unique_id=674845441]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13949" parent="nkb_bruecke/Brücke" index="515" unique_id=496409507]
+[node name="Cylinder_13949" parent="nkb_bruecke/Brücke" index="515" unique_id=1904094479]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13950" parent="nkb_bruecke/Brücke" index="516" unique_id=989603994]
+[node name="Cylinder_13950" parent="nkb_bruecke/Brücke" index="516" unique_id=2081365943]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13951" parent="nkb_bruecke/Brücke" index="517" unique_id=692521958]
+[node name="Cylinder_13951" parent="nkb_bruecke/Brücke" index="517" unique_id=840195172]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13952" parent="nkb_bruecke/Brücke" index="518" unique_id=1848925742]
+[node name="Cylinder_13952" parent="nkb_bruecke/Brücke" index="518" unique_id=1757672682]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13953" parent="nkb_bruecke/Brücke" index="519" unique_id=229077112]
+[node name="Cylinder_13953" parent="nkb_bruecke/Brücke" index="519" unique_id=1914143334]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13954" parent="nkb_bruecke/Brücke" index="520" unique_id=991712342]
+[node name="Cylinder_13954" parent="nkb_bruecke/Brücke" index="520" unique_id=836569604]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13955" parent="nkb_bruecke/Brücke" index="521" unique_id=1884807201]
+[node name="Cylinder_13955" parent="nkb_bruecke/Brücke" index="521" unique_id=1025526316]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13956" parent="nkb_bruecke/Brücke" index="522" unique_id=314283208]
+[node name="Cylinder_13956" parent="nkb_bruecke/Brücke" index="522" unique_id=1396749408]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13957" parent="nkb_bruecke/Brücke" index="523" unique_id=661576315]
+[node name="Cylinder_13957" parent="nkb_bruecke/Brücke" index="523" unique_id=226918769]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13958" parent="nkb_bruecke/Brücke" index="524" unique_id=1633833120]
+[node name="Cylinder_13958" parent="nkb_bruecke/Brücke" index="524" unique_id=1440040947]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13959" parent="nkb_bruecke/Brücke" index="525" unique_id=521238326]
+[node name="Cylinder_13959" parent="nkb_bruecke/Brücke" index="525" unique_id=1244190661]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13960" parent="nkb_bruecke/Brücke" index="526" unique_id=1679746673]
+[node name="Cylinder_13960" parent="nkb_bruecke/Brücke" index="526" unique_id=732880192]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13961" parent="nkb_bruecke/Brücke" index="527" unique_id=1250369683]
+[node name="Cylinder_13961" parent="nkb_bruecke/Brücke" index="527" unique_id=694025907]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13962" parent="nkb_bruecke/Brücke" index="528" unique_id=1917735808]
+[node name="Cylinder_13962" parent="nkb_bruecke/Brücke" index="528" unique_id=612598153]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13963" parent="nkb_bruecke/Brücke" index="529" unique_id=668814607]
+[node name="Cylinder_13963" parent="nkb_bruecke/Brücke" index="529" unique_id=841446742]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13964" parent="nkb_bruecke/Brücke" index="530" unique_id=35905414]
+[node name="Cylinder_13964" parent="nkb_bruecke/Brücke" index="530" unique_id=1140021899]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13965" parent="nkb_bruecke/Brücke" index="531" unique_id=662056983]
+[node name="Cylinder_13965" parent="nkb_bruecke/Brücke" index="531" unique_id=1871765019]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13966" parent="nkb_bruecke/Brücke" index="532" unique_id=376223787]
+[node name="Cylinder_13966" parent="nkb_bruecke/Brücke" index="532" unique_id=100362313]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13967" parent="nkb_bruecke/Brücke" index="533" unique_id=1162993233]
+[node name="Cylinder_13967" parent="nkb_bruecke/Brücke" index="533" unique_id=972728200]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13968" parent="nkb_bruecke/Brücke" index="534" unique_id=1178862618]
+[node name="Cylinder_13968" parent="nkb_bruecke/Brücke" index="534" unique_id=339867424]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13969" parent="nkb_bruecke/Brücke" index="535" unique_id=2132243790]
+[node name="Cylinder_13969" parent="nkb_bruecke/Brücke" index="535" unique_id=598116162]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13970" parent="nkb_bruecke/Brücke" index="536" unique_id=1956307017]
+[node name="Cylinder_13970" parent="nkb_bruecke/Brücke" index="536" unique_id=2052706924]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13972" parent="nkb_bruecke/Brücke" index="537" unique_id=533207367]
+[node name="Cylinder_13972" parent="nkb_bruecke/Brücke" index="537" unique_id=1021493678]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13973" parent="nkb_bruecke/Brücke" index="538" unique_id=1691336584]
+[node name="Cylinder_13973" parent="nkb_bruecke/Brücke" index="538" unique_id=1300966316]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13974" parent="nkb_bruecke/Brücke" index="539" unique_id=740637882]
+[node name="Cylinder_13974" parent="nkb_bruecke/Brücke" index="539" unique_id=938979292]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13975" parent="nkb_bruecke/Brücke" index="540" unique_id=1376821572]
+[node name="Cylinder_13975" parent="nkb_bruecke/Brücke" index="540" unique_id=86904503]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13976" parent="nkb_bruecke/Brücke" index="541" unique_id=1217608010]
+[node name="Cylinder_13976" parent="nkb_bruecke/Brücke" index="541" unique_id=1862396655]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13977" parent="nkb_bruecke/Brücke" index="542" unique_id=1170294735]
+[node name="Cylinder_13977" parent="nkb_bruecke/Brücke" index="542" unique_id=1230716065]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13978" parent="nkb_bruecke/Brücke" index="543" unique_id=1689966353]
+[node name="Cylinder_13978" parent="nkb_bruecke/Brücke" index="543" unique_id=1398732627]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13979" parent="nkb_bruecke/Brücke" index="544" unique_id=1886584982]
+[node name="Cylinder_13979" parent="nkb_bruecke/Brücke" index="544" unique_id=638255304]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13980" parent="nkb_bruecke/Brücke" index="545" unique_id=2069674228]
+[node name="Cylinder_13980" parent="nkb_bruecke/Brücke" index="545" unique_id=418557746]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13981" parent="nkb_bruecke/Brücke" index="546" unique_id=261875558]
+[node name="Cylinder_13981" parent="nkb_bruecke/Brücke" index="546" unique_id=749081707]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13982" parent="nkb_bruecke/Brücke" index="547" unique_id=1915921715]
+[node name="Cylinder_13982" parent="nkb_bruecke/Brücke" index="547" unique_id=1902560693]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13983" parent="nkb_bruecke/Brücke" index="548" unique_id=548242061]
+[node name="Cylinder_13983" parent="nkb_bruecke/Brücke" index="548" unique_id=1388211440]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13984" parent="nkb_bruecke/Brücke" index="549" unique_id=1272987752]
+[node name="Cylinder_13984" parent="nkb_bruecke/Brücke" index="549" unique_id=452098252]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13985" parent="nkb_bruecke/Brücke" index="550" unique_id=1420383209]
+[node name="Cylinder_13985" parent="nkb_bruecke/Brücke" index="550" unique_id=1344900064]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13986" parent="nkb_bruecke/Brücke" index="551" unique_id=1199020091]
+[node name="Cylinder_13986" parent="nkb_bruecke/Brücke" index="551" unique_id=1010483153]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13987" parent="nkb_bruecke/Brücke" index="552" unique_id=1877532919]
+[node name="Cylinder_13987" parent="nkb_bruecke/Brücke" index="552" unique_id=689317360]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13988" parent="nkb_bruecke/Brücke" index="553" unique_id=1903713829]
+[node name="Cylinder_13988" parent="nkb_bruecke/Brücke" index="553" unique_id=1287430115]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13989" parent="nkb_bruecke/Brücke" index="554" unique_id=1471856904]
+[node name="Cylinder_13989" parent="nkb_bruecke/Brücke" index="554" unique_id=713410703]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13990" parent="nkb_bruecke/Brücke" index="555" unique_id=1044165831]
+[node name="Cylinder_13990" parent="nkb_bruecke/Brücke" index="555" unique_id=1632667586]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13991" parent="nkb_bruecke/Brücke" index="556" unique_id=687016965]
+[node name="Cylinder_13991" parent="nkb_bruecke/Brücke" index="556" unique_id=1213918785]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13992" parent="nkb_bruecke/Brücke" index="557" unique_id=603976706]
+[node name="Cylinder_13992" parent="nkb_bruecke/Brücke" index="557" unique_id=2085275980]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13993" parent="nkb_bruecke/Brücke" index="558" unique_id=1363492707]
+[node name="Cylinder_13993" parent="nkb_bruecke/Brücke" index="558" unique_id=809575864]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13994" parent="nkb_bruecke/Brücke" index="559" unique_id=1456717825]
+[node name="Cylinder_13994" parent="nkb_bruecke/Brücke" index="559" unique_id=645902491]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13995" parent="nkb_bruecke/Brücke" index="560" unique_id=583704944]
+[node name="Cylinder_13995" parent="nkb_bruecke/Brücke" index="560" unique_id=1079322241]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13996" parent="nkb_bruecke/Brücke" index="561" unique_id=1780102686]
+[node name="Cylinder_13996" parent="nkb_bruecke/Brücke" index="561" unique_id=1142383614]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13997" parent="nkb_bruecke/Brücke" index="562" unique_id=1112745959]
+[node name="Cylinder_13997" parent="nkb_bruecke/Brücke" index="562" unique_id=1245452163]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13998" parent="nkb_bruecke/Brücke" index="563" unique_id=947186229]
+[node name="Cylinder_13998" parent="nkb_bruecke/Brücke" index="563" unique_id=1207737710]
 visibility_range_end = 30.0
 
-[node name="Cylinder_13999" parent="nkb_bruecke/Brücke" index="564" unique_id=375524285]
+[node name="Cylinder_13999" parent="nkb_bruecke/Brücke" index="564" unique_id=1081557206]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14000" parent="nkb_bruecke/Brücke" index="565" unique_id=250950654]
+[node name="Cylinder_14000" parent="nkb_bruecke/Brücke" index="565" unique_id=2040795892]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14003" parent="nkb_bruecke/Brücke" index="568" unique_id=796616605]
+[node name="Cylinder_14003" parent="nkb_bruecke/Brücke" index="568" unique_id=647717106]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14004" parent="nkb_bruecke/Brücke" index="569" unique_id=649573047]
+[node name="Cylinder_14004" parent="nkb_bruecke/Brücke" index="569" unique_id=673596736]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14005" parent="nkb_bruecke/Brücke" index="570" unique_id=1431237040]
+[node name="Cylinder_14005" parent="nkb_bruecke/Brücke" index="570" unique_id=39934148]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14006" parent="nkb_bruecke/Brücke" index="571" unique_id=1168226563]
+[node name="Cylinder_14006" parent="nkb_bruecke/Brücke" index="571" unique_id=1648403672]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14007" parent="nkb_bruecke/Brücke" index="572" unique_id=1810203305]
+[node name="Cylinder_14007" parent="nkb_bruecke/Brücke" index="572" unique_id=1653680818]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14008" parent="nkb_bruecke/Brücke" index="573" unique_id=345161040]
+[node name="Cylinder_14008" parent="nkb_bruecke/Brücke" index="573" unique_id=1197879146]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14009" parent="nkb_bruecke/Brücke" index="574" unique_id=512722728]
+[node name="Cylinder_14009" parent="nkb_bruecke/Brücke" index="574" unique_id=539767196]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14010" parent="nkb_bruecke/Brücke" index="575" unique_id=311802066]
+[node name="Cylinder_14010" parent="nkb_bruecke/Brücke" index="575" unique_id=1694102839]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14011" parent="nkb_bruecke/Brücke" index="576" unique_id=87013841]
+[node name="Cylinder_14011" parent="nkb_bruecke/Brücke" index="576" unique_id=1523771016]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14012" parent="nkb_bruecke/Brücke" index="577" unique_id=1535660034]
+[node name="Cylinder_14012" parent="nkb_bruecke/Brücke" index="577" unique_id=1233362250]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14013" parent="nkb_bruecke/Brücke" index="578" unique_id=1662354503]
+[node name="Cylinder_14013" parent="nkb_bruecke/Brücke" index="578" unique_id=171360756]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14014" parent="nkb_bruecke/Brücke" index="579" unique_id=1294109604]
+[node name="Cylinder_14014" parent="nkb_bruecke/Brücke" index="579" unique_id=1293590346]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14015" parent="nkb_bruecke/Brücke" index="580" unique_id=1641906017]
+[node name="Cylinder_14015" parent="nkb_bruecke/Brücke" index="580" unique_id=1971153085]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14016" parent="nkb_bruecke/Brücke" index="581" unique_id=185435581]
+[node name="Cylinder_14016" parent="nkb_bruecke/Brücke" index="581" unique_id=1424786163]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14017" parent="nkb_bruecke/Brücke" index="582" unique_id=1520659102]
+[node name="Cylinder_14017" parent="nkb_bruecke/Brücke" index="582" unique_id=643008806]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14018" parent="nkb_bruecke/Brücke" index="583" unique_id=1059041269]
+[node name="Cylinder_14018" parent="nkb_bruecke/Brücke" index="583" unique_id=276737621]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14019" parent="nkb_bruecke/Brücke" index="584" unique_id=1396915067]
+[node name="Cylinder_14019" parent="nkb_bruecke/Brücke" index="584" unique_id=155435620]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14020" parent="nkb_bruecke/Brücke" index="585" unique_id=1327210680]
+[node name="Cylinder_14020" parent="nkb_bruecke/Brücke" index="585" unique_id=1395609855]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14021" parent="nkb_bruecke/Brücke" index="586" unique_id=830541218]
+[node name="Cylinder_14021" parent="nkb_bruecke/Brücke" index="586" unique_id=1982372244]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14022" parent="nkb_bruecke/Brücke" index="587" unique_id=254040292]
+[node name="Cylinder_14022" parent="nkb_bruecke/Brücke" index="587" unique_id=1529329252]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14023" parent="nkb_bruecke/Brücke" index="588" unique_id=1460051420]
+[node name="Cylinder_14023" parent="nkb_bruecke/Brücke" index="588" unique_id=162844989]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14024" parent="nkb_bruecke/Brücke" index="589" unique_id=1278545283]
+[node name="Cylinder_14024" parent="nkb_bruecke/Brücke" index="589" unique_id=937215315]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14025" parent="nkb_bruecke/Brücke" index="590" unique_id=1513066956]
+[node name="Cylinder_14025" parent="nkb_bruecke/Brücke" index="590" unique_id=1333361849]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14026" parent="nkb_bruecke/Brücke" index="591" unique_id=469652093]
+[node name="Cylinder_14026" parent="nkb_bruecke/Brücke" index="591" unique_id=1672638226]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14028" parent="nkb_bruecke/Brücke" index="593" unique_id=2072437174]
+[node name="Cylinder_14028" parent="nkb_bruecke/Brücke" index="593" unique_id=1766945734]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14029" parent="nkb_bruecke/Brücke" index="594" unique_id=900191037]
+[node name="Cylinder_14029" parent="nkb_bruecke/Brücke" index="594" unique_id=2024060757]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14030" parent="nkb_bruecke/Brücke" index="595" unique_id=305406514]
+[node name="Cylinder_14030" parent="nkb_bruecke/Brücke" index="595" unique_id=1240559952]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14031" parent="nkb_bruecke/Brücke" index="596" unique_id=1998825892]
+[node name="Cylinder_14031" parent="nkb_bruecke/Brücke" index="596" unique_id=1474728432]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14032" parent="nkb_bruecke/Brücke" index="597" unique_id=288254266]
+[node name="Cylinder_14032" parent="nkb_bruecke/Brücke" index="597" unique_id=2009866902]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14033" parent="nkb_bruecke/Brücke" index="598" unique_id=1235730413]
+[node name="Cylinder_14033" parent="nkb_bruecke/Brücke" index="598" unique_id=45121511]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14034" parent="nkb_bruecke/Brücke" index="599" unique_id=2073161391]
+[node name="Cylinder_14034" parent="nkb_bruecke/Brücke" index="599" unique_id=1775828304]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14035" parent="nkb_bruecke/Brücke" index="600" unique_id=15657111]
+[node name="Cylinder_14035" parent="nkb_bruecke/Brücke" index="600" unique_id=2045721730]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14036" parent="nkb_bruecke/Brücke" index="601" unique_id=309123125]
+[node name="Cylinder_14036" parent="nkb_bruecke/Brücke" index="601" unique_id=1575709238]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14037" parent="nkb_bruecke/Brücke" index="602" unique_id=833748815]
+[node name="Cylinder_14037" parent="nkb_bruecke/Brücke" index="602" unique_id=138211435]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14038" parent="nkb_bruecke/Brücke" index="603" unique_id=1048522408]
+[node name="Cylinder_14038" parent="nkb_bruecke/Brücke" index="603" unique_id=1251355233]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14039" parent="nkb_bruecke/Brücke" index="604" unique_id=1217753477]
+[node name="Cylinder_14039" parent="nkb_bruecke/Brücke" index="604" unique_id=1987579088]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14040" parent="nkb_bruecke/Brücke" index="605" unique_id=744940943]
+[node name="Cylinder_14040" parent="nkb_bruecke/Brücke" index="605" unique_id=1704089229]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14041" parent="nkb_bruecke/Brücke" index="606" unique_id=133797298]
+[node name="Cylinder_14041" parent="nkb_bruecke/Brücke" index="606" unique_id=1280894665]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14042" parent="nkb_bruecke/Brücke" index="607" unique_id=1337171804]
+[node name="Cylinder_14042" parent="nkb_bruecke/Brücke" index="607" unique_id=1282973551]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14043" parent="nkb_bruecke/Brücke" index="608" unique_id=1881655515]
+[node name="Cylinder_14043" parent="nkb_bruecke/Brücke" index="608" unique_id=165697499]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14044" parent="nkb_bruecke/Brücke" index="609" unique_id=399460123]
+[node name="Cylinder_14044" parent="nkb_bruecke/Brücke" index="609" unique_id=1959416500]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14045" parent="nkb_bruecke/Brücke" index="610" unique_id=1497032687]
+[node name="Cylinder_14045" parent="nkb_bruecke/Brücke" index="610" unique_id=200977935]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14046" parent="nkb_bruecke/Brücke" index="611" unique_id=1596303459]
+[node name="Cylinder_14046" parent="nkb_bruecke/Brücke" index="611" unique_id=2133898572]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14047" parent="nkb_bruecke/Brücke" index="612" unique_id=1590951551]
+[node name="Cylinder_14047" parent="nkb_bruecke/Brücke" index="612" unique_id=1515844494]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14048" parent="nkb_bruecke/Brücke" index="613" unique_id=197167830]
+[node name="Cylinder_14048" parent="nkb_bruecke/Brücke" index="613" unique_id=1852835766]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14049" parent="nkb_bruecke/Brücke" index="614" unique_id=1615183278]
+[node name="Cylinder_14049" parent="nkb_bruecke/Brücke" index="614" unique_id=135080746]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14050" parent="nkb_bruecke/Brücke" index="615" unique_id=381177104]
+[node name="Cylinder_14050" parent="nkb_bruecke/Brücke" index="615" unique_id=1395531185]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14051" parent="nkb_bruecke/Brücke" index="616" unique_id=1206409723]
+[node name="Cylinder_14051" parent="nkb_bruecke/Brücke" index="616" unique_id=631026721]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14052" parent="nkb_bruecke/Brücke" index="617" unique_id=1154239460]
+[node name="Cylinder_14052" parent="nkb_bruecke/Brücke" index="617" unique_id=1992735367]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14053" parent="nkb_bruecke/Brücke" index="618" unique_id=1722338820]
+[node name="Cylinder_14053" parent="nkb_bruecke/Brücke" index="618" unique_id=368933466]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14054" parent="nkb_bruecke/Brücke" index="619" unique_id=2125897669]
+[node name="Cylinder_14054" parent="nkb_bruecke/Brücke" index="619" unique_id=731806388]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14055" parent="nkb_bruecke/Brücke" index="620" unique_id=1828303435]
+[node name="Cylinder_14055" parent="nkb_bruecke/Brücke" index="620" unique_id=2084374565]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14056" parent="nkb_bruecke/Brücke" index="621" unique_id=341429268]
+[node name="Cylinder_14056" parent="nkb_bruecke/Brücke" index="621" unique_id=954588115]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14057" parent="nkb_bruecke/Brücke" index="622" unique_id=910990991]
+[node name="Cylinder_14057" parent="nkb_bruecke/Brücke" index="622" unique_id=1844626116]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14058" parent="nkb_bruecke/Brücke" index="623" unique_id=106864120]
+[node name="Cylinder_14058" parent="nkb_bruecke/Brücke" index="623" unique_id=479552304]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14059" parent="nkb_bruecke/Brücke" index="624" unique_id=353393930]
+[node name="Cylinder_14059" parent="nkb_bruecke/Brücke" index="624" unique_id=835727007]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14060" parent="nkb_bruecke/Brücke" index="625" unique_id=694651315]
+[node name="Cylinder_14060" parent="nkb_bruecke/Brücke" index="625" unique_id=1744150774]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14061" parent="nkb_bruecke/Brücke" index="626" unique_id=771006549]
+[node name="Cylinder_14061" parent="nkb_bruecke/Brücke" index="626" unique_id=616036585]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14062" parent="nkb_bruecke/Brücke" index="627" unique_id=560977182]
+[node name="Cylinder_14062" parent="nkb_bruecke/Brücke" index="627" unique_id=257427882]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14063" parent="nkb_bruecke/Brücke" index="628" unique_id=701086585]
+[node name="Cylinder_14063" parent="nkb_bruecke/Brücke" index="628" unique_id=1934420597]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14064" parent="nkb_bruecke/Brücke" index="629" unique_id=573020467]
+[node name="Cylinder_14064" parent="nkb_bruecke/Brücke" index="629" unique_id=1454481333]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14065" parent="nkb_bruecke/Brücke" index="630" unique_id=1334988171]
+[node name="Cylinder_14065" parent="nkb_bruecke/Brücke" index="630" unique_id=1901001606]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14066" parent="nkb_bruecke/Brücke" index="631" unique_id=1237904914]
+[node name="Cylinder_14066" parent="nkb_bruecke/Brücke" index="631" unique_id=276465244]
 visibility_range_end = 30.0
 
-[node name="Cylinder_14067" parent="nkb_bruecke/Brücke" index="632" unique_id=1316094873]
+[node name="Cylinder_14067" parent="nkb_bruecke/Brücke" index="632" unique_id=990297409]
 visibility_range_end = 30.0
 
-[node name="Elektrik" parent="nkb_bruecke/Brücke" index="633" unique_id=194251720]
+[node name="Elektrik" parent="nkb_bruecke/Brücke" index="633" unique_id=1416220801]
 visibility_range_end = 30.0
 
-[node name="Haare" parent="nkb_bruecke/Brücke" index="634" unique_id=2112207517]
+[node name="Haare" parent="nkb_bruecke/Brücke" index="634" unique_id=322931909]
 visibility_range_end = 30.0
 
-[node name="nkb-1-pivot" parent="nkb_bruecke/Brücke" index="635" unique_id=821520203]
+[node name="nkb-1-pivot" parent="nkb_bruecke/Brücke" index="635" unique_id=1735398003]
 visibility_range_end = 30.0
 
-[node name="Nut" parent="nkb_bruecke/Brücke" index="636" unique_id=156647800]
+[node name="Nut" parent="nkb_bruecke/Brücke" index="636" unique_id=32822783]
 visibility_range_end = 30.0
 
-[node name="Nut_001" parent="nkb_bruecke/Brücke" index="637" unique_id=1191801787]
+[node name="Nut_001" parent="nkb_bruecke/Brücke" index="637" unique_id=1996538557]
 visibility_range_end = 30.0
 
-[node name="Nut_002" parent="nkb_bruecke/Brücke" index="638" unique_id=1617454736]
+[node name="Nut_002" parent="nkb_bruecke/Brücke" index="638" unique_id=1621198877]
 visibility_range_end = 30.0
 
-[node name="Plane_443" parent="nkb_bruecke/Brücke" index="639" unique_id=760729011]
+[node name="Plane_443" parent="nkb_bruecke/Brücke" index="639" unique_id=1280249021]
 visibility_range_end = 30.0
 
-[node name="Plane_444" parent="nkb_bruecke/Brücke" index="640" unique_id=305878751]
+[node name="Plane_444" parent="nkb_bruecke/Brücke" index="640" unique_id=1139986688]
 visibility_range_end = 30.0
 
-[node name="Plane_445" parent="nkb_bruecke/Brücke" index="641" unique_id=1049916547]
+[node name="Plane_445" parent="nkb_bruecke/Brücke" index="641" unique_id=1788352950]
 visibility_range_end = 30.0
 
-[node name="Plane_446" parent="nkb_bruecke/Brücke" index="642" unique_id=777782133]
+[node name="Plane_446" parent="nkb_bruecke/Brücke" index="642" unique_id=321756125]
 visibility_range_end = 30.0
 
-[node name="Plane_447" parent="nkb_bruecke/Brücke" index="643" unique_id=553173516]
+[node name="Plane_447" parent="nkb_bruecke/Brücke" index="643" unique_id=890849393]
 visibility_range_end = 30.0
 
-[node name="Plane_448" parent="nkb_bruecke/Brücke" index="644" unique_id=1033851645]
+[node name="Plane_448" parent="nkb_bruecke/Brücke" index="644" unique_id=2069248148]
 visibility_range_end = 30.0
 
-[node name="Plane_449" parent="nkb_bruecke/Brücke" index="645" unique_id=1824120993]
+[node name="Plane_449" parent="nkb_bruecke/Brücke" index="645" unique_id=2001798865]
 visibility_range_end = 30.0
 
-[node name="Plane_450" parent="nkb_bruecke/Brücke" index="646" unique_id=1262825275]
+[node name="Plane_450" parent="nkb_bruecke/Brücke" index="646" unique_id=1662280946]
 visibility_range_end = 30.0
 
-[node name="Plane_451" parent="nkb_bruecke/Brücke" index="647" unique_id=2091490736]
+[node name="Plane_451" parent="nkb_bruecke/Brücke" index="647" unique_id=353841141]
 visibility_range_end = 30.0
 
-[node name="Plane_452" parent="nkb_bruecke/Brücke" index="648" unique_id=1902063062]
+[node name="Plane_452" parent="nkb_bruecke/Brücke" index="648" unique_id=893710523]
 visibility_range_end = 30.0
 
-[node name="Plane_453" parent="nkb_bruecke/Brücke" index="649" unique_id=86208289]
+[node name="Plane_453" parent="nkb_bruecke/Brücke" index="649" unique_id=1172508372]
 visibility_range_end = 30.0
 
-[node name="Plane_454" parent="nkb_bruecke/Brücke" index="650" unique_id=1037724370]
+[node name="Plane_454" parent="nkb_bruecke/Brücke" index="650" unique_id=2039124538]
 visibility_range_end = 30.0
 
-[node name="Plane_455" parent="nkb_bruecke/Brücke" index="651" unique_id=709825538]
+[node name="Plane_455" parent="nkb_bruecke/Brücke" index="651" unique_id=207031828]
 visibility_range_end = 30.0
 
-[node name="Plane_456" parent="nkb_bruecke/Brücke" index="652" unique_id=907106917]
+[node name="Plane_456" parent="nkb_bruecke/Brücke" index="652" unique_id=672131196]
 visibility_range_end = 30.0
 
-[node name="Plane_457" parent="nkb_bruecke/Brücke" index="653" unique_id=1752933958]
+[node name="Plane_457" parent="nkb_bruecke/Brücke" index="653" unique_id=1890960311]
 visibility_range_end = 30.0
 
-[node name="Plane_458" parent="nkb_bruecke/Brücke" index="654" unique_id=1264704789]
+[node name="Plane_458" parent="nkb_bruecke/Brücke" index="654" unique_id=1467347603]
 visibility_range_end = 30.0
 
-[node name="Plane_459" parent="nkb_bruecke/Brücke" index="655" unique_id=1501091808]
+[node name="Plane_459" parent="nkb_bruecke/Brücke" index="655" unique_id=1698285015]
 visibility_range_end = 30.0
 
-[node name="Plane_460" parent="nkb_bruecke/Brücke" index="656" unique_id=913370615]
+[node name="Plane_460" parent="nkb_bruecke/Brücke" index="656" unique_id=643666917]
 visibility_range_end = 30.0
 
-[node name="Plane_461" parent="nkb_bruecke/Brücke" index="657" unique_id=1579322824]
+[node name="Plane_461" parent="nkb_bruecke/Brücke" index="657" unique_id=683742957]
 visibility_range_end = 30.0
 
-[node name="Plane_462" parent="nkb_bruecke/Brücke" index="658" unique_id=1785506951]
+[node name="Plane_462" parent="nkb_bruecke/Brücke" index="658" unique_id=84014710]
 visibility_range_end = 30.0
 
-[node name="Plane_463" parent="nkb_bruecke/Brücke" index="659" unique_id=132975502]
+[node name="Plane_463" parent="nkb_bruecke/Brücke" index="659" unique_id=1575779195]
 visibility_range_end = 30.0
 
-[node name="Plane_464" parent="nkb_bruecke/Brücke" index="660" unique_id=1187098459]
+[node name="Plane_464" parent="nkb_bruecke/Brücke" index="660" unique_id=1084467290]
 visibility_range_end = 30.0
 
-[node name="Plane_465" parent="nkb_bruecke/Brücke" index="661" unique_id=1279228114]
+[node name="Plane_465" parent="nkb_bruecke/Brücke" index="661" unique_id=1468630430]
 visibility_range_end = 30.0
 
-[node name="Plane_466" parent="nkb_bruecke/Brücke" index="662" unique_id=509102643]
+[node name="Plane_466" parent="nkb_bruecke/Brücke" index="662" unique_id=1836437486]
 visibility_range_end = 30.0
 
-[node name="Plane_467" parent="nkb_bruecke/Brücke" index="663" unique_id=693158649]
+[node name="Plane_467" parent="nkb_bruecke/Brücke" index="663" unique_id=527898977]
 visibility_range_end = 30.0
 
-[node name="Plane_470" parent="nkb_bruecke/Brücke" index="664" unique_id=1792499226]
+[node name="Plane_470" parent="nkb_bruecke/Brücke" index="664" unique_id=2001026719]
 visibility_range_end = 30.0
 
-[node name="Plane_471" parent="nkb_bruecke/Brücke" index="665" unique_id=515827556]
+[node name="Plane_471" parent="nkb_bruecke/Brücke" index="665" unique_id=981636534]
 visibility_range_end = 30.0
 
-[node name="Plane_472" parent="nkb_bruecke/Brücke" index="666" unique_id=780621087]
+[node name="Plane_472" parent="nkb_bruecke/Brücke" index="666" unique_id=1168821897]
 visibility_range_end = 30.0
 
-[node name="Plane_473" parent="nkb_bruecke/Brücke" index="667" unique_id=1821321225]
+[node name="Plane_473" parent="nkb_bruecke/Brücke" index="667" unique_id=1045698811]
 visibility_range_end = 30.0
 
-[node name="Plane_474" parent="nkb_bruecke/Brücke" index="668" unique_id=1441317656]
+[node name="Plane_474" parent="nkb_bruecke/Brücke" index="668" unique_id=1550769598]
 visibility_range_end = 30.0
 
-[node name="Plane_475" parent="nkb_bruecke/Brücke" index="669" unique_id=118130281]
+[node name="Plane_475" parent="nkb_bruecke/Brücke" index="669" unique_id=297639524]
 visibility_range_end = 30.0
 
-[node name="Plane_476" parent="nkb_bruecke/Brücke" index="670" unique_id=1911328948]
+[node name="Plane_476" parent="nkb_bruecke/Brücke" index="670" unique_id=383654423]
 visibility_range_end = 30.0
 
-[node name="Plane_477" parent="nkb_bruecke/Brücke" index="671" unique_id=1997921838]
+[node name="Plane_477" parent="nkb_bruecke/Brücke" index="671" unique_id=1551297226]
 visibility_range_end = 30.0
 
-[node name="Plane_478" parent="nkb_bruecke/Brücke" index="672" unique_id=387938384]
+[node name="Plane_478" parent="nkb_bruecke/Brücke" index="672" unique_id=1319248965]
 visibility_range_end = 30.0
 
-[node name="Plane_479" parent="nkb_bruecke/Brücke" index="673" unique_id=1714003246]
+[node name="Plane_479" parent="nkb_bruecke/Brücke" index="673" unique_id=2047155672]
 visibility_range_end = 30.0
 
-[node name="Plane_480" parent="nkb_bruecke/Brücke" index="674" unique_id=758670260]
+[node name="Plane_480" parent="nkb_bruecke/Brücke" index="674" unique_id=279693711]
 visibility_range_end = 30.0
 
-[node name="Plane_481" parent="nkb_bruecke/Brücke" index="675" unique_id=535175384]
+[node name="Plane_481" parent="nkb_bruecke/Brücke" index="675" unique_id=1550066120]
 visibility_range_end = 30.0
 
-[node name="Plane_482" parent="nkb_bruecke/Brücke" index="676" unique_id=1288822205]
+[node name="Plane_482" parent="nkb_bruecke/Brücke" index="676" unique_id=862366832]
 visibility_range_end = 30.0
 
-[node name="Plane_483" parent="nkb_bruecke/Brücke" index="677" unique_id=858903815]
+[node name="Plane_483" parent="nkb_bruecke/Brücke" index="677" unique_id=1120714479]
 visibility_range_end = 30.0
 
-[node name="Text_043" parent="nkb_bruecke/Brücke" index="678" unique_id=261234939]
+[node name="Text_043" parent="nkb_bruecke/Brücke" index="678" unique_id=1725128444]
 visibility_range_end = 30.0
 
-[node name="Text_044" parent="nkb_bruecke/Brücke" index="679" unique_id=1938853877]
+[node name="Text_044" parent="nkb_bruecke/Brücke" index="679" unique_id=1108805381]
 visibility_range_end = 30.0
 
-[node name="Text_045" parent="nkb_bruecke/Brücke" index="680" unique_id=1379026577]
+[node name="Text_045" parent="nkb_bruecke/Brücke" index="680" unique_id=2404315]
 visibility_range_end = 30.0
 
-[node name="Text_046" parent="nkb_bruecke/Brücke" index="681" unique_id=1351165885]
+[node name="Text_046" parent="nkb_bruecke/Brücke" index="681" unique_id=174899765]
 visibility_range_end = 30.0
 
-[node name="Text_047" parent="nkb_bruecke/Brücke" index="682" unique_id=12356114]
+[node name="Text_047" parent="nkb_bruecke/Brücke" index="682" unique_id=751993666]
 visibility_range_end = 30.0
 
-[node name="Torus_002" parent="nkb_bruecke/Brücke" index="683" unique_id=1336753217]
+[node name="Torus_002" parent="nkb_bruecke/Brücke" index="683" unique_id=1635881357]
 visibility_range_end = 30.0
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="nkb_bruecke/Brücke" index="684" unique_id=1574572700]
@@ -2033,23 +2036,23 @@ remote_path = NodePath("../../../AnimatableBody3D")
 update_position = false
 update_scale = false
 
-[node name="Nachklaerbecken-Schiene" parent="nkb_bruecke/nachklaerung-becken-1" parent_id_path=PackedInt32Array(984126065, 504864280) index="1" unique_id=1499771061]
+[node name="Nachklaerbecken-Schiene" parent="nkb_bruecke/nachklaerung-becken-1" parent_id_path=PackedInt32Array(984126065, 1056266053) index="1" unique_id=118999163]
 visibility_range_end = 30.0
 
-[node name="nachklaerung-klarwasser" parent="nkb_bruecke/nachklaerung-becken-1" parent_id_path=PackedInt32Array(984126065, 504864280) index="2" unique_id=1288195528]
+[node name="nachklaerung-klarwasser" parent="nkb_bruecke/nachklaerung-becken-1" parent_id_path=PackedInt32Array(984126065, 1056266053) index="2" unique_id=1447563930]
 visibility_range_end = 30.0
 
-[node name="nachklaerung-metallverkleidung" parent="nkb_bruecke/nachklaerung-becken-1" parent_id_path=PackedInt32Array(984126065, 504864280) index="3" unique_id=1293687787]
+[node name="nachklaerung-metallverkleidung" parent="nkb_bruecke/nachklaerung-becken-1" parent_id_path=PackedInt32Array(984126065, 1056266053) index="3" unique_id=1629135016]
 visibility_range_end = 30.0
 
-[node name="nachklärung_Rohr-Abfluss" parent="nkb_bruecke/nachklaerung-becken-1" parent_id_path=PackedInt32Array(984126065, 504864280) index="4" unique_id=1693722350]
+[node name="nachklärung_Rohr-Abfluss" parent="nkb_bruecke/nachklaerung-becken-1" parent_id_path=PackedInt32Array(984126065, 1056266053) index="4" unique_id=620746313]
 visibility_range_end = 30.0
 
-[node name="nachklärung_Rohr-Zufluss" parent="nkb_bruecke/nachklaerung-becken-1" parent_id_path=PackedInt32Array(984126065, 504864280) index="5" unique_id=111471053]
+[node name="nachklärung_Rohr-Zufluss" parent="nkb_bruecke/nachklaerung-becken-1" parent_id_path=PackedInt32Array(984126065, 1056266053) index="5" unique_id=807212447]
 visibility_range_end = 30.0
 
 [node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=1582474527]
-transform = Transform3D(0.99999994, -1.0074573e-28, 0, 0, 0.9999964, 0, 0, 0, 0.9999964, 0, 0, 0)
+transform = Transform3D(0.99999994, -1.0074572e-28, 0, 0, 0.9999963, 0, 0, 0, 0.9999963, 0, 0, 0)
 collision_layer = 32768
 collision_mask = 0
 
@@ -2479,7 +2482,6 @@ shape = SubResource("CylinderShape3D_25xj1")
 
 [node name="nb2-wall-collision" type="CSGTorus3D" parent="." unique_id=459222415]
 transform = Transform3D(0.9214838, 0, 0.3753566, 0, 2.425, 0, -0.3753566, 0, 0.9214838, 0.0071475506, -0.5481533, 0.015972987)
-visible = false
 use_collision = true
 collision_layer = 49152
 collision_mask = 0
@@ -2489,13 +2491,13 @@ sides = 32
 smooth_faces = false
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="nb2-wall-collision" unique_id=131398317]
-transform = Transform3D(1, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 1.681366, 1.9073486e-06, -0.49332237)
+transform = Transform3D(1, 1.6155871e-27, 5.9604645e-08, 2.019484e-28, 1.0000001, -2.019484e-27, 0, -1.2924697e-26, 1, -0.0011032621, -2.3058956, -0.017737899)
 collision_layer = 40960
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="nb2-wall-collision/StaticBody3D2" unique_id=517065331]
-transform = Transform3D(1.455, 0, 0, 0, 1.4550003, 0, 0, 0, 1.455, -1.6773206, -1.2764534, 0.6135352)
-shape = SubResource("WorldBoundaryShape3D_vijfd")
+transform = Transform3D(1.4550003, 0, 0, -4.038968e-28, 1.4550003, -1.6155871e-27, 0, -6.4623485e-27, 1.455, 0, 0.8708595, 0)
+shape = SubResource("HeightMapShape3D_ovdkk")
 debug_color = Color(0.85882354, 0, 0.8784314, 1)
 
 [node name="ice_surface" type="Node3D" parent="." unique_id=480952194]
