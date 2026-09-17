@@ -430,8 +430,8 @@ size = Vector3(0.08862305, 1.3091431, 14.948242)
 size = Vector3(0.3544922, 0.95506287, 0.30566406)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_2s6xu"]
-height = 5.5855
-radius = 8.559082
+height = 5.9410524
+radius = 8.874
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_52e7h"]
 height = 5.365504
@@ -1740,7 +1740,7 @@ flow_model = NodePath("../../../FlowSimulation")
 container_id = 11
 
 [node name="PSB-WaterLevelFollower" parent="Reference_point_floor/WATERLEVELS" unique_id=1214307687 node_paths=PackedStringArray("meshplane", "flow_model") instance=ExtResource("4_gfnr6")]
-transform = Transform3D(1, 0, 0, 0, 0.9999997, 8.4703295e-21, 0, -8.4703295e-21, 0.9999997, -29.348269, 0.061252594, 16.995203)
+transform = Transform3D(1, 0, 0, 0, 0.99999964, 1.0164395e-20, 0, -1.0164395e-20, 0.99999964, -29.348269, -0.62296295, 16.995201)
 curve = SubResource("Curve3D_7sq4a")
 meshplane = NodePath("../PSB-WSpiegel")
 flow_model = NodePath("../../../FlowSimulation")
@@ -1810,7 +1810,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.366383, 2.0263977, -14.271
 mesh = SubResource("CylinderMesh_gfnr6")
 
 [node name="PSB-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS" unique_id=1959521135]
-transform = Transform3D(1, 0, 0, 0, 0.9999998, 3.3881318e-21, 0, -3.3881318e-21, 0.9999998, -29.303099, 2.7712326, 17.136976)
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 5.0821977e-21, 0, -5.0821977e-21, 0.99999976, -29.303099, 2.087017, 17.136974)
 mesh = SubResource("CylinderMesh_du4yn")
 
 [node name="MSB-WSpiegel" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS" unique_id=234907485]
@@ -2081,7 +2081,7 @@ shape = SubResource("BoxShape3D_0nlau")
 transform = Transform3D(0.12533323, 6.778382e-21, -0.9921144, 1.6940659e-21, 0.99999964, 6.7762636e-21, 0.99211466, -1.6940659e-21, 0.12533318, -50.145203, 1.9496193, 29.731155)
 
 [node name="vkb" parent="Reference_point_floor/LADDERS" unique_id=1438576624 instance=ExtResource("9_r5bnc")]
-transform = Transform3D(0.4335962, 6.778382e-21, -0.901107, -5.496311e-22, 0.99999964, 6.6815987e-21, 0.90110725, -1.6940659e-21, 0.43359601, -32.343853, 2.6701927, 7.9673386)
+transform = Transform3D(0.4335962, 6.778382e-21, -0.901107, 1.6940659e-21, 0.9999996, 7.6232965e-21, 0.9011072, -3.3881318e-21, 0.433596, -32.34385, 1.9859772, 7.9673386)
 
 [node name="bb1_2" parent="Reference_point_floor/LADDERS" unique_id=1201318217 instance=ExtResource("9_r5bnc")]
 transform = Transform3D(0.9705988, 3.0129416e-21, -0.24070233, -3.8101074e-21, 0.99999964, -4.4421877e-21, 0.24070233, 5.0821977e-21, 0.97059876, -64.376396, 1.9788818, 40.83098)
@@ -2645,7 +2645,7 @@ shape = SubResource("BoxShape3D_3gbeg")
 debug_color = Color(0, 8.588706, 9.88248, 1)
 
 [node name="Q_VKB" type="Node3D" parent="Reference_point_floor" unique_id=319145845]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, 1.6940659e-21, 0, -1.6940659e-21, 0.9999999, -79.23079, 0.476017, 33.564743)
+transform = Transform3D(1, 0, 0, 0, 0.9999998, 3.3881318e-21, 0, -3.3881318e-21, 0.9999998, -79.23079, -0.21596146, 33.56474)
 
 [node name="Climbable2" parent="Reference_point_floor/Q_VKB" unique_id=1336528850 instance=ExtResource("48_apw4m")]
 transform = Transform3D(-0.6302558, 0, -0.77638745, 2.2066269e-14, 1.0000001, -1.7912971e-14, 0.7763874, -2.8421723e-14, -0.630256, 57.2296, 2.3547707, -9.976492)
@@ -2722,7 +2722,7 @@ transform = Transform3D(0.9990237, 0, 0.044177383, 0, 1, 0, -0.044177383, 0, 0.9
 shape = SubResource("BoxShape3D_d06k5")
 
 [node name="Beaker_sampler" type="Area3D" parent="Reference_point_floor/Q_VKB" unique_id=1078723861]
-transform = Transform3D(-0.9051246, -0.36144546, 0.22384478, -0.3508747, 0.93239266, 0.08677421, -0.24007553, -5.409067e-14, -0.9707537, 58.903652, 2.6001244, -13.019396)
+transform = Transform3D(-0.9051246, -0.36144546, 0.22384478, -0.3508747, 0.93239266, 0.08677421, -0.24007553, -5.409067e-14, -0.9707537, 58.903652, 3.2429123, -13.019398)
 collision_mask = 0
 script = ExtResource("9_cqg2i")
 item_id = 6
@@ -2752,7 +2752,7 @@ special_hint_text = Dictionary[int, String]({
 metadata/_custom_type_script = "uid://c6qt6kqkt2eng"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_VKB/InteractTakeSampleVKB" unique_id=349542501]
-transform = Transform3D(1, 0, 0, 0, 1, 1.6940659e-21, 0, -1.6940659e-21, 1, 0.16957474, 0.15159988, -0.109838486)
+transform = Transform3D(1, 0, 0, 0, 0.9999971, 8.4703295e-20, 0, -8.4703295e-20, 0.9999971, 0.16957474, 0.32937622, -0.109838486)
 shape = SubResource("CylinderShape3D_2s6xu")
 debug_color = Color(11.3821335, 10.871647, 0.00019714356, 1)
 
@@ -4288,7 +4288,7 @@ mesh = SubResource("PlaneMesh_4kkd4")
 [node name="Referenz" parent="Visuals" unique_id=1885115038 instance=ExtResource("15_h3jyd")]
 
 [node name="Vorklärbecken" parent="Visuals" unique_id=1713468101 instance=ExtResource("79_pwg26")]
-transform = Transform3D(0.63771975, 0, 0.7702685, 0, 1, 0, -0.7702685, 0, 0.63771975, -60.024357, 50.85007, 14.85221)
+transform = Transform3D(0.63771975, 0, 0.7702685, 0, 1, 0, -0.7702685, 0, 0.63771975, -60.024357, 50.165855, 14.85221)
 
 [node name="2026-05-26-Sand-Fettfang" parent="Visuals" unique_id=1795047574 instance=ExtResource("87_4kkd4")]
 transform = Transform3D(0.91907346, 0, 0.39408627, 0, 1, 0, -0.39408627, 0, 0.91907346, -45.88066, 50.15973, 26.563364)
