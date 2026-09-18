@@ -410,6 +410,26 @@ rings = 1
 cap_top = false
 cap_bottom = false
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gv3sx"]
+transparency = 1
+albedo_color = Color(0.07576606, 0.10844784, 0.22049966, 0.53333336)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c31e1"]
+material = SubResource("StandardMaterial3D_gv3sx")
+size = Vector2(6.885, 15.925)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_r7pgf"]
+material = SubResource("StandardMaterial3D_gv3sx")
+size = Vector2(25.46, 190.285)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qs3ph"]
+material = SubResource("StandardMaterial3D_gv3sx")
+size = Vector2(30.605, 141.87)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jlc37"]
+material = SubResource("StandardMaterial3D_gv3sx")
+size = Vector2(30.605, 89.135)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_0nlau"]
 size = Vector3(0.299866, 10.133537, 0.72558594)
 
@@ -588,6 +608,21 @@ size = Vector3(4.7499084, 2.5913086, 0.08648682)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6xuim"]
 size = Vector3(7.317459, 2.3137207, 0.08648682)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_75l2c"]
+size = Vector3(1, 0.23876953, 7.0669556)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ncn4v"]
+size = Vector3(4.4802246, 3.6959229, 3.9353333)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qf370"]
+size = Vector3(1.2268066, 4.351776, 4.653694)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m4rsk"]
+size = Vector3(1.2009888, 2.9878464, 1.4651814)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_scv37"]
+size = Vector3(0.9853058, 1.7527122, 6.126305)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ir53q"]
 sky_top_color = Color(0.62057745, 0.7824617, 0.970028, 1)
@@ -2137,6 +2172,22 @@ transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -49.17684, 
 visible = false
 mesh = SubResource("CylinderMesh_sktl7")
 
+[node name="water_wrad" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS" unique_id=470459444]
+transform = Transform3D(0.60733426, 0, 0.7944464, 0, 1, 0, -0.7944464, 0, 0.60733426, -55.789967, -3.3816376, 81.00191)
+mesh = SubResource("PlaneMesh_c31e1")
+
+[node name="water_river" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS" unique_id=1072504103]
+transform = Transform3D(-0.54544395, -0.002808654, 0.83814275, 0, 0.99999434, 0.0033510262, -0.83814734, 0.0018277962, -0.5454408, 30.089083, -3.455322, 151.74384)
+mesh = SubResource("PlaneMesh_r7pgf")
+
+[node name="water_riversmall2" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS" unique_id=2127782224]
+transform = Transform3D(-0.0019373298, 0, 0.99999815, 0, 1, 0, -0.99999815, 0, -0.0019373298, 30.946802, -2.419506, -42.38111)
+mesh = SubResource("PlaneMesh_qs3ph")
+
+[node name="water_riversmall1" type="MeshInstance3D" parent="Reference_point_floor/WATERLEVELS" unique_id=553029899]
+transform = Transform3D(-0.0019373298, 0, 0.99999815, 0, 1, 0, -0.99999815, 0, -0.0019373298, -83.5144, -2.419506, -27.728529)
+mesh = SubResource("PlaneMesh_jlc37")
+
 [node name="PUMP-TOGGLES" type="Node3D" parent="Reference_point_floor" unique_id=933199667]
 visible = false
 
@@ -3383,6 +3434,36 @@ transform = Transform3D(0.90006036, 0.4357653, 0, 1.9047894e-08, -3.934286e-08, 
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -2.4286129e-17, 0.0059418245, -0.028221134)
 text = "INTAKE ROOM"
 
+[node name="Q_WASSERRAD" type="Node3D" parent="Reference_point_floor" unique_id=696096541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.736244, 1.7447777, 66.93425)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Reference_point_floor/Q_WASSERRAD" unique_id=1971977245]
+transform = Transform3D(0.973972, 0, 0.22666831, 0, 1, 0, -0.22666831, 0, 0.973972, 1.237114, 1.7441867e-13, 6.1368103)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Reference_point_floor/Q_WASSERRAD/StaticBody3D" unique_id=930270832]
+transform = Transform3D(1, 0, 0, 4.4892746e-20, 1, -1.7957098e-19, 0, 0, 1, 0, -0.607914, 0.006134033)
+shape = SubResource("BoxShape3D_75l2c")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Reference_point_floor/Q_WASSERRAD/StaticBody3D" unique_id=15502173]
+transform = Transform3D(1, 0, 0, 1.0969077e-19, 1, -4.3876307e-19, 0, 0, 1, -4.5776367e-05, -4.285099, -1.5596886)
+shape = SubResource("BoxShape3D_ncn4v")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Reference_point_floor/Q_WASSERRAD/StaticBody3D" unique_id=1954708477]
+transform = Transform3D(1, 0, 0, 1.6855956e-19, 1, -6.7423823e-19, 0, 0, 1, -6.1035156e-05, -3.2519264, 2.843605)
+shape = SubResource("BoxShape3D_qf370")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Reference_point_floor/Q_WASSERRAD/StaticBody3D" unique_id=1005247166]
+transform = Transform3D(1, 0, 0, 2.0879362e-19, 1, -8.351745e-19, 0, 0, 1, -2.2490005, -3.933937, 2.8164558)
+shape = SubResource("BoxShape3D_m4rsk")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Reference_point_floor/Q_WASSERRAD/StaticBody3D" unique_id=40412460]
+transform = Transform3D(1, 0, 0, 2.5495692e-19, 1, -1.0198277e-18, 0, 0, 1, -2.141182, -4.5515404, 2.3709984)
+shape = SubResource("BoxShape3D_scv37")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Reference_point_floor/Q_WASSERRAD/StaticBody3D" unique_id=2135514]
+transform = Transform3D(1, 0, 0, 2.5495692e-19, 1, -1.0198277e-18, 0, 0, 1, 2.20262, -4.5515404, 2.3709984)
+shape = SubResource("BoxShape3D_scv37")
+
 [node name="Config" type="Node3D" parent="." unique_id=701552541]
 
 [node name="North" type="Node3D" parent="Config" unique_id=14118345]
@@ -3406,8 +3487,9 @@ environment = SubResource("Environment_5rwjt")
 [node name="FlowSimulation" parent="." unique_id=1869696998 groups=["FLOWSIMULATION"] instance=ExtResource("2_0nlau")]
 overview_scene = ExtResource("3_ybcmd")
 
-[node name="Logik-Wasserrad" type="Node" parent="FlowSimulation" unique_id=651757122]
+[node name="Logik-Wasserrad" type="Node" parent="FlowSimulation" unique_id=651757122 node_paths=PackedStringArray("wasserrad_drehen")]
 script = ExtResource("8_du4yn")
+wasserrad_drehen = NodePath("../../Visuals/Referenz/wasserrad")
 
 [node name="init_setup" type="Node" parent="FlowSimulation" unique_id=856366288]
 script = ExtResource("57_5sfkf")
