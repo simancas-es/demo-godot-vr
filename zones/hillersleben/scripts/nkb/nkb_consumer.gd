@@ -26,3 +26,7 @@ func check_ice() -> void:
 	if ice_count == 0:
 		ice_removed.emit()
 	pass
+
+func _on_next_task(task_id : int) -> void:
+	#do nothing
+	return
