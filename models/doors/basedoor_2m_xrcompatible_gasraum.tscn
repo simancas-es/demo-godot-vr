@@ -147,6 +147,7 @@ mesh = SubResource("BoxMesh_ogaye")
 
 [node name="Label3D" type="Label3D" parent="HingedDoor/HingedDoorBody" unique_id=2031998449]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02832377, 1.1575801, 5.9604645e-08)
+visible = false
 no_depth_test = true
 text = "Current angle: xx.x
 Target angle: xx.x"

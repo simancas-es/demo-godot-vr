@@ -64,7 +64,7 @@ settings_target_current_values = Array[float]([1.5])
 [node name="pid_menu" type="MeshInstance3D" parent="." unique_id=1987614406]
 transform = Transform3D(7.54979e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, 7.54979e-08, -3.300118e-15, 0.21340974, 1.6495981, -0.10357025)
 mesh = SubResource("PlaneMesh_tb4lx")
-skeleton = NodePath("../../nh4_dynamic")
+skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_qbqkw")
 
 [node name="inter_s" type="Area3D" parent="." unique_id=304999682]
