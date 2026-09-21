@@ -157,22 +157,22 @@ msgstr ""
 #: clases/fpv/test/test_fpv_hint_context.gd:129
 #: clases/interaction/door_base.gd:144
 msgid "Unlock [{key}]"
-msgstr "Interact [{key}]"
+msgstr "Unlock [{key}]"
 
 #: clases/fpv/test/test_fpv_hint_context.gd:96
 #: clases/interaction/door_base.gd:150
 msgid "Open [{key}]"
-msgstr "Read [{key}]"
+msgstr "Open [{key}]"
 
 #: clases/fpv/test/test_fpv_hint_context.gd:97
 #: clases/interaction/door_base.gd:148
 msgid "Lock [{key}]"
-msgstr "Remove [{key}]"
+msgstr "Lock [{key}]"
 
 #: clases/fpv/test/test_fpv_hint_context.gd:101
 #: clases/interaction/door_base.gd:154
 msgid "Close [{key}]"
-msgstr "Remove [{key}]"
+msgstr "Close [{key}]"
 
 #: clases/helpers/task_text/menu/debug_task_list.gd:22
 msgid "Uninitiated"
@@ -271,7 +271,7 @@ msgstr "Eletrotechnics"
 #: menus/environmentselector/environmentselector.tscn
 #, fuzzy
 msgid "LOAD\n"
-msgstr "LOAD"
+msgstr "LOAD\n"
 
 #: menus/fsm/menustates/stateintroscreen.gd:39
 msgid ""

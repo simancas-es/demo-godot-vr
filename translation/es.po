@@ -670,7 +670,7 @@ msgstr ""
 
 #: zones/hillersleben/scripts/audio/dialog_text_blase.tscn
 msgid "Repeat\n"
-msgstr ""
+msgstr "Repetir\n"
 
 #: zones/hillersleben/scripts/hl_flow_model/overview.tscn
 msgid "Overview"

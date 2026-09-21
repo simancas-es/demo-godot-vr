@@ -670,7 +670,7 @@ msgstr ""
 
 #: zones/hillersleben/scripts/audio/dialog_text_blase.tscn
 msgid "Repeat\n"
-msgstr ""
+msgstr "Wiederholen\n"
 
 #: zones/hillersleben/scripts/hl_flow_model/overview.tscn
 msgid "Overview"
@@ -830,7 +830,7 @@ msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_INSPEKTIONSRUNDE"
-msgstr "Bevor wir mit deinen Aufgaben beginnen, drehen wir gemeinsam eine Runde durch die Kläranlage. Ich zeige dir die wichtigsten Stationen und erkläre dir kurz, was dort passiert. Komm, wir legen los!\nFolge die blinkenden Würfel!"
+msgstr "Bevor wir mit deinen Aufgaben beginnen, drehen wir gemeinsam eine Runde durch die Kläranlage. Ich zeige dir die wichtigsten Stationen und erkläre dir kurz, was dort passiert. Komm, wir legen los!\nFolge den blinkenden Würfeln!"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_RAUMSCHNECKE"
