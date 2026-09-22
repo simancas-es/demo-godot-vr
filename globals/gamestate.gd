@@ -40,6 +40,9 @@ func _ready() -> void:
 	players.append(PlayerData.new(controller, player_inventory))
 	
 	init_task_manager()
+	
+	var preferred_language = OS.get_locale_language()
+	TranslationServer.set_locale(preferred_language)
 
 func init_task_manager() -> void:
 	Engine.register_singleton(SYSTEMTASKSSETTINGS.AUTOLOAD_TASKMANAGER, world_task_manager)
