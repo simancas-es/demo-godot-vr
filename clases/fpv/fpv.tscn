@@ -118,6 +118,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 [node name="Camera3D" type="Camera3D" parent="CameraBasePosition" unique_id=205004129]
 unique_name_in_owner = true
 transform = Transform3D(1, 8.04664e-07, -4.32135e-07, -8.04665e-07, 1, 1.2666e-07, 4.32135e-07, -1.26659e-07, 1, -1.52737e-07, 0, 1.2815e-06)
+cull_mask = 1
 current = true
 far = 200.0
 script = ExtResource("3_07gqe")
