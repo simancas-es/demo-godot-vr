@@ -972,101 +972,124 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.530191, 49.148808, 5.4431
 [node name="OccluderInstance3D_bhkw" type="OccluderInstance3D" parent="Occluders" unique_id=537941532]
 transform = Transform3D(0.41213462, 0, -0.911123, 0, 1, 0, 0.911123, 0, 0.41213462, 37.70083, 1.5162811, 6.9135017)
 occluder = SubResource("PolygonOccluder3D_4kkd4")
+bake_mask = 1
 
 [node name="OccluderInstance3D_bhkw2" type="OccluderInstance3D" parent="Occluders" unique_id=1213502381]
 transform = Transform3D(0.911123, 0, 0.41213465, 0, 1, 0, -0.41213465, 0, 0.911123, 36.882362, 1.5162811, 7.283724)
 occluder = SubResource("PolygonOccluder3D_f2ntm")
+bake_mask = 1
 
 [node name="OccluderInstance3D_bhkw3" type="OccluderInstance3D" parent="Occluders" unique_id=2145906780]
 transform = Transform3D(-0.41213468, 0, 0.911123, 0, 1, 0, -0.911123, 0, -0.41213468, 28.786085, 1.5162811, 10.945971)
 occluder = SubResource("PolygonOccluder3D_53515")
+bake_mask = 1
 
 [node name="OccluderInstance3D_bhkw4" type="OccluderInstance3D" parent="Occluders" unique_id=1054127542]
 transform = Transform3D(0.911123, 0, 0.41213465, 0, 1, 0, -0.41213465, 0, 0.911123, 20.380396, 1.5162811, 18.939867)
 occluder = SubResource("PolygonOccluder3D_3gbeg")
+bake_mask = 1
 
 [node name="OccluderInstance3D6_mg_left" type="OccluderInstance3D" parent="Occluders" unique_id=1542341107]
 transform = Transform3D(0.911123, 0, 0.41213465, 0, 1, 0, -0.41213465, 0, 0.911123, 29.848854, 1.5162811, 4.241499)
 occluder = SubResource("PolygonOccluder3D_ngwpx")
+bake_mask = 1
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Occluders/OccluderInstance3D6_mg_left" unique_id=30650345]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.99999994, 0, 0.7453229)
 occluder = SubResource("QuadOccluder3D_0tf3j")
+bake_mask = 1
 bake_simplification_distance = 1.0
 
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Occluders/OccluderInstance3D6_mg_left" unique_id=1656939154]
 transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 5.9984183, 0, 2.0465012)
 occluder = SubResource("QuadOccluder3D_a6n7q")
+bake_mask = 1
 bake_simplification_distance = 1.0
 
 [node name="OccluderInstance3D6_mg_back" type="OccluderInstance3D" parent="Occluders" unique_id=1913580132]
 transform = Transform3D(0.911123, 0, 0.41213465, 0, 1, 0, -0.41213465, 0, 0.911123, 34.588318, 1.5162811, 14.719224)
 occluder = SubResource("PolygonOccluder3D_xiloe")
+bake_mask = 1
 
 [node name="OccluderInstance3D_mg_gebl" type="OccluderInstance3D" parent="Occluders" unique_id=1556754694]
 transform = Transform3D(-0.41213468, 0, 0.911123, 0, 1, 0, -0.911123, 0, -0.41213468, 11.844397, 1.5162811, 16.834137)
 occluder = SubResource("PolygonOccluder3D_5gq0c")
+bake_mask = 1
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Occluders/OccluderInstance3D_mg_gebl" unique_id=1427965864]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.70065737, -2.4741821, 0)
 occluder = SubResource("QuadOccluder3D_abbao")
+bake_mask = 1
 
 [node name="OccluderInstance3D_mg_vent" type="OccluderInstance3D" parent="Occluders" unique_id=1844670077]
 transform = Transform3D(-0.91112304, 0, -0.41213456, 0, 1, 0, 0.41213456, 0, -0.91112304, 11.573518, 0.8443985, 12.451099)
 occluder = SubResource("QuadOccluder3D_v133v")
+bake_mask = 1
 
 [node name="OccluderInstance3D_mg_right2" type="OccluderInstance3D" parent="Occluders" unique_id=571792395]
 transform = Transform3D(0.911123, 0, 0.41213465, 0, 1, 0, -0.41213465, 0, 0.911123, 19.46719, 1.5162811, 8.887669)
 occluder = SubResource("QuadOccluder3D_3gbeg")
+bake_mask = 1
 
 [node name="OccluderInstance3D_mg_right3" type="OccluderInstance3D" parent="Occluders" unique_id=1981812624]
 transform = Transform3D(0.911123, 0.41213465, 0, 0, -4.371139e-08, -1, -0.41213465, 0.911123, -2.9802322e-08, 25.073269, 3.8856392, 12.624785)
 occluder = SubResource("QuadOccluder3D_20qj3")
+bake_mask = 1
 
 [node name="OccluderInstance3D3_mg_right1" type="OccluderInstance3D" parent="Occluders" unique_id=306079029]
 transform = Transform3D(0.911123, 0, 0.41213465, 0, 1, 0, -0.41213465, 0, 0.911123, 14.4706545, 1.5162811, 11.147787)
 occluder = SubResource("QuadOccluder3D_w3kho")
+bake_mask = 1
 
 [node name="OccluderInstance3D3_mg_right2" type="OccluderInstance3D" parent="Occluders" unique_id=1651224087]
 transform = Transform3D(0.911123, 0, 0.41213465, 0, 1, 0, -0.41213465, 0, 0.911123, 12.190053, 2.8862839, 12.179388)
 occluder = SubResource("QuadOccluder3D_qpgnd")
+bake_mask = 1
 
 [node name="OccluderInstance3D3_mg_right3" type="OccluderInstance3D" parent="Occluders" unique_id=2106390030]
 transform = Transform3D(0.911123, 0, 0.41213465, 0, 1, 0, -0.41213465, 0, 0.911123, 12.190053, -1.0023804, 12.179388)
 occluder = SubResource("QuadOccluder3D_qpgnd")
+bake_mask = 1
 
 [node name="OccluderInstance3D3_mg_right4" type="OccluderInstance3D" parent="Occluders" unique_id=1982737880]
 transform = Transform3D(0.911123, 0, 0.41213465, 0, 1, 0, -0.41213465, 0, 0.911123, 10.428415, 1.3806839, 12.976242)
 occluder = SubResource("QuadOccluder3D_djllb")
+bake_mask = 1
 
 [node name="OccluderInstance3D2_mg_reak_left" type="OccluderInstance3D" parent="Occluders" unique_id=1985375963]
 transform = Transform3D(0.911123, 0, 0.41213465, 0, 1, 0, -0.41213465, 0, 0.911123, 32.642128, 9.3099785, 9.201738)
 occluder = SubResource("BoxOccluder3D_v133v")
+bake_mask = 1
 
 [node name="OccluderInstance3D3_mg_reak_right" type="OccluderInstance3D" parent="Occluders" unique_id=1792409976]
 transform = Transform3D(0.911123, 0, 0.41213465, 0, 1, 0, -0.41213465, 0, 0.911123, 17.62051, 9.16555, 15.996572)
 occluder = SubResource("BoxOccluder3D_v133v")
+bake_mask = 1
 
 [node name="OccluderInstance3D_bg_front" type="OccluderInstance3D" parent="Occluders" unique_id=529610397]
 transform = Transform3D(0.41213444, 0, -0.911123, 0, 1, 0, 0.911123, 0, 0.41213444, -3.9203753, 2.9893112, 4.9154663)
 occluder = SubResource("PolygonOccluder3D_v133v")
+bake_mask = 1
 
 [node name="OccluderInstance3D_bg_front2" type="OccluderInstance3D" parent="Occluders" unique_id=386913154]
 transform = Transform3D(0.911123, 0, 0.41213447, 0, 1, 0, -0.41213447, 0, 0.911123, -9.140272, 2.9893112, -6.206301)
 occluder = SubResource("PolygonOccluder3D_d06k5")
+bake_mask = 1
 
 [node name="OccluderInstance3D_bg_front3" type="OccluderInstance3D" parent="Occluders" unique_id=1519382753]
 transform = Transform3D(0.41213444, 0, -0.911123, 0, 1, 0, 0.911123, 0, 0.41213444, -19.913017, 2.9893112, -1.2274542)
 occluder = SubResource("PolygonOccluder3D_hdc1q")
+bake_mask = 1
 
 [node name="OccluderInstance3D5_garage" type="OccluderInstance3D" parent="Occluders" unique_id=1629907547]
 transform = Transform3D(0.8822666, 0, 0.47075015, 0, 1, 0, -0.47075015, 0, 0.8822666, 2.5808163, 0.91454315, -13.023497)
 occluder = SubResource("BoxOccluder3D_hdc1q")
+bake_mask = 1
 
 [node name="OccluderInstance3D-boden" type="OccluderInstance3D" parent="Occluders" unique_id=2022185182]
 transform = Transform3D(1, 0, 0, 0, -4.7683716e-07, 0.99999994, 0, -0.99999994, -4.7683716e-07, -15.787783, -2.054184, 60.807835)
 occluder = ExtResource("2_ngwpx")
-bake_mask = 4293918720
+bake_mask = 1
 
 [node name="Referenz" type="Node3D" parent="Occluders" unique_id=847226724]
 transform = Transform3D(0.8822666, 0, 0.47075015, 0, 1, 0, -0.47075015, 0, 0.8822666, 0.7246628, 0.91454697, -4.819868)
@@ -1077,50 +1100,62 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9769683, 0, 4.5895076)
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=852720112]
 transform = Transform3D(0.38176414, 0, -0.9242598, 0, 1, 0, 0.9242598, 0, 0.38176414, 4.7853594, -0.90535355, -2.0887709)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=1866498145]
 transform = Transform3D(-0.052684546, 0, -0.9986112, 0, 1, 0, 0.9986112, 0, -0.052684546, 5.2798367, -0.90535355, 0.31670475)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=1182508698]
 transform = Transform3D(-0.55278087, 0, -0.83332676, 0, 1, 0, 0.83332676, 0, -0.55278087, 4.4961386, -0.90535355, 2.6564107)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D4" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=879131326]
 transform = Transform3D(-0.85517454, 0, -0.5183407, 0, 1, 0, 0.5183407, 0, -0.85517454, 2.708953, -0.90535355, 4.4600563)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D5" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=1919594059]
 transform = Transform3D(-0.99873525, 0, 0.05027923, 0, 1, 0, -0.05027923, 0, -0.99873525, 0.02657795, -0.90535355, 5.1609077)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D6" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=1684565893]
 transform = Transform3D(-0.83174115, 0, 0.5551639, 0, 1, 0, -0.5551639, 0, -0.83174115, -2.87432, -0.90535355, 4.3184333)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D7" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=419640982]
 transform = Transform3D(-0.4305268, 0, 0.9025779, 0, 1, 0, -0.9025779, 0, -0.4305268, -4.568673, -0.90535355, 2.3563523)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D8" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=1616584612]
 transform = Transform3D(0.082651734, 0, 0.9965786, 0, 1, 0, -0.9965786, 0, 0.082651734, -5.137244, -0.90535355, -0.30353546)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D9" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=380193496]
 transform = Transform3D(0.5745769, 0, 0.8184507, 0, 1, 0, -0.8184507, 0, 0.5745769, -4.1741705, -0.90535355, -2.9797812)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D10" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=2069017102]
 transform = Transform3D(0.90855205, 0, 0.4177719, 0, 1, 0, -0.4177719, 0, 0.90855205, -2.1105928, -0.90535355, -4.6840954)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D11" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=80020455]
 transform = Transform3D(0.9950748, 0, -0.0991289, 0, 1, 0, 0.0991289, 0, 0.9950748, 0.527647, -0.90535355, -5.152005)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D12" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker" unique_id=1045937747]
 transform = Transform3D(0.83993244, 0, -0.54269093, 0, 1, 0, 0.54269093, 0, 0.83993244, 2.616582, -0.90535355, -4.4702435)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="eindicker2" type="Node3D" parent="Occluders/Referenz" unique_id=277841254]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.821705, 0, 5.6092725)
@@ -1128,50 +1163,62 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.821705, 0, 5.6092725)
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=2069254492]
 transform = Transform3D(0.38176414, 0, -0.9242598, 0, 1, 0, 0.9242598, 0, 0.38176414, 4.7853594, -0.90535355, -2.0887709)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=514576871]
 transform = Transform3D(-0.052684546, 0, -0.9986112, 0, 1, 0, 0.9986112, 0, -0.052684546, 5.2798367, -0.90535355, 0.31670475)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=1700778091]
 transform = Transform3D(-0.55278087, 0, -0.83332676, 0, 1, 0, 0.83332676, 0, -0.55278087, 4.4961386, -0.90535355, 2.6564107)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D4" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=1183906016]
 transform = Transform3D(-0.85517454, 0, -0.5183407, 0, 1, 0, 0.5183407, 0, -0.85517454, 2.708953, -0.90535355, 4.4600563)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D5" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=1528942196]
 transform = Transform3D(-0.99873525, 0, 0.05027923, 0, 1, 0, -0.05027923, 0, -0.99873525, 0.02657795, -0.90535355, 5.1609077)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D6" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=197417223]
 transform = Transform3D(-0.83174115, 0, 0.5551639, 0, 1, 0, -0.5551639, 0, -0.83174115, -2.87432, -0.90535355, 4.3184333)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D7" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=92550765]
 transform = Transform3D(-0.4305268, 0, 0.9025779, 0, 1, 0, -0.9025779, 0, -0.4305268, -4.568673, -0.90535355, 2.3563523)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D8" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=1484818778]
 transform = Transform3D(0.082651734, 0, 0.9965786, 0, 1, 0, -0.9965786, 0, 0.082651734, -5.137244, -0.90535355, -0.30353546)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D9" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=774050749]
 transform = Transform3D(0.5745769, 0, 0.8184507, 0, 1, 0, -0.8184507, 0, 0.5745769, -4.1741705, -0.90535355, -2.9797812)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D10" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=1973150188]
 transform = Transform3D(0.90855205, 0, 0.4177719, 0, 1, 0, -0.4177719, 0, 0.90855205, -2.1105928, -0.90535355, -4.6840954)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D11" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=1783767274]
 transform = Transform3D(0.9950748, 0, -0.0991289, 0, 1, 0, 0.0991289, 0, 0.9950748, 0.527647, -0.90535355, -5.152005)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D12" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker2" unique_id=1304166046]
 transform = Transform3D(0.83993244, 0, -0.54269093, 0, 1, 0, 0.54269093, 0, 0.83993244, 2.616582, -0.90535355, -4.4702435)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="eindicker3" type="Node3D" parent="Occluders/Referenz" unique_id=934801910]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.885616, 0, -4.728006)
@@ -1179,50 +1226,62 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.885616, 0, -4.728006)
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=1844798937]
 transform = Transform3D(0.38176414, 0, -0.9242598, 0, 1, 0, 0.9242598, 0, 0.38176414, 4.7853594, -0.90535355, -2.0887709)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=286106958]
 transform = Transform3D(-0.052684546, 0, -0.9986112, 0, 1, 0, 0.9986112, 0, -0.052684546, 5.2798367, -0.90535355, 0.31670475)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=411372210]
 transform = Transform3D(-0.55278087, 0, -0.83332676, 0, 1, 0, 0.83332676, 0, -0.55278087, 4.4961386, -0.90535355, 2.6564107)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D4" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=1235490568]
 transform = Transform3D(-0.85517454, 0, -0.5183407, 0, 1, 0, 0.5183407, 0, -0.85517454, 2.708953, -0.90535355, 4.4600563)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D5" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=209984867]
 transform = Transform3D(-0.99873525, 0, 0.05027923, 0, 1, 0, -0.05027923, 0, -0.99873525, 0.02657795, -0.90535355, 5.1609077)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D6" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=1963555813]
 transform = Transform3D(-0.83174115, 0, 0.5551639, 0, 1, 0, -0.5551639, 0, -0.83174115, -2.87432, -0.90535355, 4.3184333)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D7" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=988594104]
 transform = Transform3D(-0.4305268, 0, 0.9025779, 0, 1, 0, -0.9025779, 0, -0.4305268, -4.568673, -0.90535355, 2.3563523)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D8" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=468087851]
 transform = Transform3D(0.082651734, 0, 0.9965786, 0, 1, 0, -0.9965786, 0, 0.082651734, -5.137244, -0.90535355, -0.30353546)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D9" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=883076900]
 transform = Transform3D(0.5745769, 0, 0.8184507, 0, 1, 0, -0.8184507, 0, 0.5745769, -4.1741705, -0.90535355, -2.9797812)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D10" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=130960528]
 transform = Transform3D(0.90855205, 0, 0.4177719, 0, 1, 0, -0.4177719, 0, 0.90855205, -2.1105928, -0.90535355, -4.6840954)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D11" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=1871467786]
 transform = Transform3D(0.9950748, 0, -0.0991289, 0, 1, 0, 0.0991289, 0, 0.9950748, 0.527647, -0.90535355, -5.152005)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D12" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker3" unique_id=913816992]
 transform = Transform3D(0.83993244, 0, -0.54269093, 0, 1, 0, 0.54269093, 0, 0.83993244, 2.616582, -0.90535355, -4.4702435)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="eindicker4" type="Node3D" parent="Occluders/Referenz" unique_id=1553891515]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.203059, 0, -5.2828736)
@@ -1230,50 +1289,62 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.203059, 0, -5.2828736)
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=1460338058]
 transform = Transform3D(0.38176414, 0, -0.9242598, 0, 1, 0, 0.9242598, 0, 0.38176414, 4.7853594, -0.90535355, -2.0887709)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=7129273]
 transform = Transform3D(-0.052684546, 0, -0.9986112, 0, 1, 0, 0.9986112, 0, -0.052684546, 5.2798367, -0.90535355, 0.31670475)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=1390540105]
 transform = Transform3D(-0.55278087, 0, -0.83332676, 0, 1, 0, 0.83332676, 0, -0.55278087, 4.4961386, -0.90535355, 2.6564107)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D4" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=1067551842]
 transform = Transform3D(-0.85517454, 0, -0.5183407, 0, 1, 0, 0.5183407, 0, -0.85517454, 2.708953, -0.90535355, 4.4600563)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D5" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=749427335]
 transform = Transform3D(-0.99873525, 0, 0.05027923, 0, 1, 0, -0.05027923, 0, -0.99873525, 0.02657795, -0.90535355, 5.1609077)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D6" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=437923378]
 transform = Transform3D(-0.83174115, 0, 0.5551639, 0, 1, 0, -0.5551639, 0, -0.83174115, -2.87432, -0.90535355, 4.3184333)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D7" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=928552775]
 transform = Transform3D(-0.4305268, 0, 0.9025779, 0, 1, 0, -0.9025779, 0, -0.4305268, -4.568673, -0.90535355, 2.3563523)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D8" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=33500592]
 transform = Transform3D(0.082651734, 0, 0.9965786, 0, 1, 0, -0.9965786, 0, 0.082651734, -5.137244, -0.90535355, -0.30353546)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D9" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=176238756]
 transform = Transform3D(0.5745769, 0, 0.8184507, 0, 1, 0, -0.8184507, 0, 0.5745769, -4.1741705, -0.90535355, -2.9797812)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D10" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=1823684437]
 transform = Transform3D(0.90855205, 0, 0.4177719, 0, 1, 0, -0.4177719, 0, 0.90855205, -2.1105928, -0.90535355, -4.6840954)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D11" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=2140378309]
 transform = Transform3D(0.9950748, 0, -0.0991289, 0, 1, 0, 0.0991289, 0, 0.9950748, 0.527647, -0.90535355, -5.152005)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="OccluderInstance3D12" type="OccluderInstance3D" parent="Occluders/Referenz/eindicker4" unique_id=185682405]
 transform = Transform3D(0.83993244, 0, -0.54269093, 0, 1, 0, 0.54269093, 0, 0.83993244, 2.616582, -0.90535355, -4.4702435)
 occluder = SubResource("QuadOccluder3D_gv3sx")
+bake_mask = 1
 
 [node name="bb" type="Node3D" parent="Occluders/Referenz" unique_id=130632090]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.69969, 0, 12.609225)
@@ -1281,66 +1352,82 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.69969, 0, 12.609225)
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=1001064909]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14017794, -2.4781494, -15.125941)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=461529912]
 transform = Transform3D(0.9243064, 0, -0.38165122, 0, 1, 0, 0.38165122, 0, 0.9243064, 5.7392535, -2.4781494, -13.539638)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=1811416941]
 transform = Transform3D(0.6508007, 0, -0.7592486, 0, 1, 0, 0.7592486, 0, 0.6508007, 10.879141, -2.4781494, -10.192476)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D4" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=365114745]
 transform = Transform3D(0.34229895, 0, -0.9395911, 0, 1, 0, 0.9395911, 0, 0.34229895, 13.986976, -2.4781494, -4.4707394)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D5" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=1320666407]
 transform = Transform3D(-0.16869581, 0, -0.9856681, 0, 1, 0, 0.9856681, 0, -0.16869581, 14.529944, -2.4781494, 1.7162385)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D6" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=838820348]
 transform = Transform3D(-0.46405375, 0, -0.88580704, 0, 1, 0, 0.88580704, 0, -0.46405375, 13.181179, -2.4781494, 7.0685763)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D7" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=1911425437]
 transform = Transform3D(-0.7754627, 0, -0.6313934, 0, 1, 0, 0.6313934, 0, -0.7754627, 9.663013, -2.4781494, 11.328917)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D8" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=2024284135]
 transform = Transform3D(-0.9576819, 0, -0.28782853, 0, 1, 0, 0.28782853, 0, -0.9576819, 5.0161448, -2.4781494, 13.938615)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D9" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=292139328]
 transform = Transform3D(-0.99871397, 0, 0.050697535, 0, 1, 0, -0.050697535, 0, -0.99871397, -1.6787095, -2.4781494, 14.778472)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D10" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=1891358306]
 transform = Transform3D(-0.8723765, 0, 0.48883438, 0, 1, 0, -0.48883438, 0, -0.8723765, -8.1463585, -2.4781494, 12.900138)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D11" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=1098936338]
 transform = Transform3D(-0.53463256, 0, 0.84508455, 0, 1, 0, -0.84508455, 0, -0.53463256, -12.565238, -2.4781494, 8.532921)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D12" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=342192893]
 transform = Transform3D(-0.19567227, 0, 0.98066926, 0, 1, 0, -0.98066926, 0, -0.19567227, -15.121408, -2.4781494, 2.5167403)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D13" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=1667697423]
 transform = Transform3D(0.20246255, 0, 0.9792899, 0, 1, 0, -0.9792899, 0, 0.20246255, -15.02853, -2.4781494, -3.265447)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D14" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=2036110261]
 transform = Transform3D(0.5986741, 0, 0.8009925, 0, 1, 0, -0.8009925, 0, 0.5986741, -12.399914, -2.4781494, -9.09251)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D15" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=1489686717]
 transform = Transform3D(0.8796651, 0, 0.47559336, 0, 1, 0, -0.47559336, 0, 0.8796651, -7.9851794, -2.4781494, -13.027361)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D16" type="OccluderInstance3D" parent="Occluders/Referenz/bb" unique_id=1223867586]
 transform = Transform3D(0.9882202, 0, 0.15303746, 0, 1, 0, -0.15303746, 0, 0.9882202, -2.9213283, -2.4781494, -14.781157)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="bb3" type="Node3D" parent="Occluders/Referenz" unique_id=432720984]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.623646, 0, 37.07113)
@@ -1348,66 +1435,82 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.623646, 0, 37.07113)
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=934210174]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14017794, -2.4781494, -13.823456)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=1505702103]
 transform = Transform3D(0.9243064, 0, -0.38165122, 0, 1, 0, 0.38165122, 0, 0.9243064, 5.2421584, -2.4781494, -12.335742)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=58758709]
 transform = Transform3D(0.6508007, 0, -0.7592486, 0, 1, 0, 0.7592486, 0, 0.6508007, 9.89023, -2.4781494, -9.344818)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D4" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=1529585185]
 transform = Transform3D(0.34229895, 0, -0.9395911, 0, 1, 0, 0.9395911, 0, 0.34229895, 12.763172, -2.4781494, -4.0249)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D5" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=8414085]
 transform = Transform3D(-0.16869581, 0, -0.9856681, 0, 1, 0, 0.9856681, 0, -0.16869581, 13.246126, -2.4781494, 1.4965146)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D6" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=513102059]
 transform = Transform3D(-0.46405375, 0, -0.88580704, 0, 1, 0, 0.88580704, 0, -0.46405375, 12.027428, -2.4781494, 6.464153)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D7" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=1710588494]
 transform = Transform3D(-0.7754627, 0, -0.6313934, 0, 1, 0, 0.6313934, 0, -0.7754627, 9.067417, -2.4781494, 10.59742)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D8" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=750662599]
 transform = Transform3D(-0.9576819, 0, -0.28782853, 0, 1, 0, 0.28782853, 0, -0.9576819, 4.641252, -2.4781494, 12.691248)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D9" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=1957359256]
 transform = Transform3D(-0.99871397, 0, 0.050697535, 0, 1, 0, -0.050697535, 0, -0.99871397, -1.6126767, -2.4781494, 13.477661)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D10" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=1776534114]
 transform = Transform3D(-0.8723765, 0, 0.48883438, 0, 1, 0, -0.48883438, 0, -0.8723765, -7.509659, -2.4781494, 11.76388)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D11" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=918124873]
 transform = Transform3D(-0.53463256, 0, 0.84508455, 0, 1, 0, -0.84508455, 0, -0.53463256, -11.464527, -2.4781494, 7.83657)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D12" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=77357286]
 transform = Transform3D(-0.19567227, 0, 0.98066926, 0, 1, 0, -0.98066926, 0, -0.19567227, -13.844101, -2.4781494, 2.26188)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D13" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=72916360]
 transform = Transform3D(0.20246255, 0, 0.9792899, 0, 1, 0, -0.9792899, 0, 0.20246255, -13.753019, -2.4781494, -3.0017424)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D14" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=378725059]
 transform = Transform3D(0.6089414, 0, 0.793215, 0, 1, 0, -0.793215, 0, 0.6089414, -11.356632, -2.4781494, -8.312746)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D15" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=1298992903]
 transform = Transform3D(0.8796651, 0, 0.47559336, 0, 1, 0, -0.47559336, 0, 0.8796651, -7.365726, -2.4781494, -11.88161)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D16" type="OccluderInstance3D" parent="Occluders/Referenz/bb3" unique_id=1065989161]
 transform = Transform3D(0.9882202, 0, 0.15303746, 0, 1, 0, -0.15303746, 0, 0.9882202, -2.7219992, -2.4781494, -13.494014)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="bb2" type="Node3D" parent="Occluders/Referenz" unique_id=1644400500]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.79041, 0, -22.345032)
@@ -1415,98 +1518,122 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.79041, 0, -22.345032)
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=1613919225]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14017794, -2.4781494, -15.125941)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=1755238092]
 transform = Transform3D(0.9243064, 0, -0.38165122, 0, 1, 0, 0.38165122, 0, 0.9243064, 5.7392535, -2.4781494, -13.539638)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=1801352503]
 transform = Transform3D(0.6508007, 0, -0.7592486, 0, 1, 0, 0.7592486, 0, 0.6508007, 10.879141, -2.4781494, -10.192476)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D4" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=1343091427]
 transform = Transform3D(0.34229895, 0, -0.9395911, 0, 1, 0, 0.9395911, 0, 0.34229895, 13.986976, -2.4781494, -4.4707394)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D5" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=423954589]
 transform = Transform3D(-0.16869581, 0, -0.9856681, 0, 1, 0, 0.9856681, 0, -0.16869581, 14.529944, -2.4781494, 1.7162385)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D6" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=1792984983]
 transform = Transform3D(-0.46405375, 0, -0.88580704, 0, 1, 0, 0.88580704, 0, -0.46405375, 13.181179, -2.4781494, 7.0685763)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D7" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=1070078065]
 transform = Transform3D(-0.7754627, 0, -0.6313934, 0, 1, 0, 0.6313934, 0, -0.7754627, 9.663013, -2.4781494, 11.328917)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D8" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=2118870262]
 transform = Transform3D(-0.9576819, 0, -0.28782853, 0, 1, 0, 0.28782853, 0, -0.9576819, 5.0161448, -2.4781494, 13.938615)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D9" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=570152843]
 transform = Transform3D(-0.99871397, 0, 0.050697535, 0, 1, 0, -0.050697535, 0, -0.99871397, -1.6787095, -2.4781494, 14.778472)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D10" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=1386343124]
 transform = Transform3D(-0.8723765, 0, 0.48883438, 0, 1, 0, -0.48883438, 0, -0.8723765, -8.1463585, -2.4781494, 12.900138)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D11" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=1173391559]
 transform = Transform3D(-0.53463256, 0, 0.84508455, 0, 1, 0, -0.84508455, 0, -0.53463256, -12.565238, -2.4781494, 8.532921)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D12" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=509275751]
 transform = Transform3D(-0.19567227, 0, 0.98066926, 0, 1, 0, -0.98066926, 0, -0.19567227, -15.121408, -2.4781494, 2.5167403)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D13" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=1822716748]
 transform = Transform3D(0.20246255, 0, 0.9792899, 0, 1, 0, -0.9792899, 0, 0.20246255, -15.02853, -2.4781494, -3.265447)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D14" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=548035014]
 transform = Transform3D(0.5986741, 0, 0.8009925, 0, 1, 0, -0.8009925, 0, 0.5986741, -12.399914, -2.4781494, -9.09251)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D15" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=1528784627]
 transform = Transform3D(0.8796651, 0, 0.47559336, 0, 1, 0, -0.47559336, 0, 0.8796651, -7.9851794, -2.4781494, -13.027361)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D16" type="OccluderInstance3D" parent="Occluders/Referenz/bb2" unique_id=1820164514]
 transform = Transform3D(0.9882202, 0, 0.15303746, 0, 1, 0, -0.15303746, 0, 0.9882202, -2.9213283, -2.4781494, -14.781157)
 occluder = SubResource("QuadOccluder3D_c31e1")
+bake_mask = 1
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Occluders/Referenz" unique_id=1527146723]
 transform = Transform3D(0.8903082, 0, -0.45535845, 0, 1, 0, 0.45535845, 0, 0.8903082, -81.88061, 1.7120628, 0.8290865)
 occluder = SubResource("BoxOccluder3D_5gq0c")
+bake_mask = 1
 
 [node name="OccluderInstance3D2_tree" type="OccluderInstance3D" parent="Occluders/Referenz" unique_id=698168666]
 transform = Transform3D(1, 0, 0, 0, 0.994228, 0.10728793, 0, -0.10728793, 0.994228, -23.064213, 6.4630647, -20.64884)
 occluder = SubResource("QuadOccluder3D_qs3ph")
+bake_mask = 1
 
 [node name="OccluderInstance3D2_tree4" type="OccluderInstance3D" parent="Occluders/Referenz" unique_id=1309641569]
 transform = Transform3D(-0.0911539, 0.27744573, -0.9564072, 0, 0.9604056, 0.2786056, 0.99583673, 0.025395988, -0.0875447, -19.898108, 5.9077406, -18.432053)
 occluder = SubResource("QuadOccluder3D_qs3ph")
+bake_mask = 1
 
 [node name="OccluderInstance3D2_tree2" type="OccluderInstance3D" parent="Occluders/Referenz" unique_id=1529009526]
 transform = Transform3D(0.44499472, 0.1443514, -0.8838227, 0, 0.98692334, 0.16119045, 0.89553314, -0.07172889, 0.43917567, -26.25562, 6.2641754, -24.174845)
 occluder = SubResource("QuadOccluder3D_qs3ph")
+bake_mask = 1
 
 [node name="OccluderInstance3D2_tree3" type="OccluderInstance3D" parent="Occluders/Referenz" unique_id=105599508]
 transform = Transform3D(0.9943083, -0.030047262, 0.102216974, -1.8626451e-09, 0.95940757, 0.28202334, -0.10654177, -0.28041813, 0.9539469, -28.805794, 6.0091743, -24.672985)
 occluder = SubResource("QuadOccluder3D_qs3ph")
+bake_mask = 1
 
 [node name="OccluderInstance3D2_tree5" type="OccluderInstance3D" parent="Occluders/Referenz" unique_id=513191968]
 transform = Transform3D(0.9463677, -0.15504245, -0.28346092, 1.4901161e-08, 0.8773389, -0.47987142, 0.3230917, 0.45413476, 0.83028525, -29.599571, 6.537529, -20.959112)
 occluder = SubResource("QuadOccluder3D_qs3ph")
+bake_mask = 1
 
 [node name="OccluderInstance3D2_tree6" type="OccluderInstance3D" parent="Occluders/Referenz" unique_id=273159477]
 transform = Transform3D(0.9463677, 0.007459739, -0.3230056, 1.4901161e-08, 0.99973345, 0.023088664, 0.3230917, -0.021850348, 0.9461155, -28.623932, 3.3353698, -23.333542)
 occluder = SubResource("BoxOccluder3D_jlc37")
+bake_mask = 1
 
 [node name="OccluderInstance3D2_tree7" type="OccluderInstance3D" parent="Occluders/Referenz" unique_id=378256192]
 transform = Transform3D(0.9463677, 0.007459739, -0.3230056, 1.4901161e-08, 0.99973345, 0.023088664, 0.3230917, -0.021850348, 0.9461155, -23.160372, 3.6423926, -18.752111)
 occluder = SubResource("BoxOccluder3D_jlc37")
+bake_mask = 1
 
 [node name="Boden" type="StaticBody3D" parent="." unique_id=991086622]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
@@ -1517,6 +1644,10 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Boden" unique_id=1518566223]
 transform = Transform3D(1, 0, 0, 0, -4.7683716e-07, 0.99999994, 0, -0.99999994, -4.7683716e-07, -43.317974, 47.094624, 66.25102)
 shape = SubResource("ConcavePolygonShape3D_4kkd4")
+
+[node name="Camera3D" type="Camera3D" parent="Boden" unique_id=209017609]
+transform = Transform3D(-0.025985364, 0, -0.99966234, 0, 1, 0, 0.99966234, 0, -0.025985366, -14.208035, 49.739246, 27.532425)
+cull_mask = 1
 
 [node name="Boden-Pflastersteine" type="StaticBody3D" parent="." unique_id=719770728]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
@@ -3784,6 +3915,7 @@ shape = SubResource("BoxShape3D_xsptl")
 [node name="OccluderInstance3D" parent="Maschinengebäude/door_gebläse_1" index="2" unique_id=2091745435]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.3946925e-08, 1.2285473, -0.7361234)
 occluder = SubResource("QuadOccluder3D_53515")
+bake_mask = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Maschinengebäude/door_gebläse_1" unique_id=552152844]
 transform = Transform3D(-1.0061396e-16, -0.999982, 0.006003868, 0.99999994, 3.7057576e-11, -2.9802433e-08, -6.1722645e-09, 0.0060039107, 0.9999821, -0.091296956, 1, -0.5267464)
@@ -3797,6 +3929,7 @@ nodepath = NodePath("../../../Visuals/Referenz/mg_tür_gebläse1")
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Maschinengebäude/door_gebläse_1" unique_id=38331129]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.3443498e-06, 1.2172623, -0.73473394)
 occluder = SubResource("QuadOccluder3D_d06k5")
+bake_mask = 1
 
 [node name="door_gebläse_2" parent="Maschinengebäude" unique_id=464817963 instance=ExtResource("8_1khpx")]
 transform = Transform3D(0.9037764, 0, 0.42800483, 0, 1, 0, -0.42800483, 0, 0.9037764, -14.624094, 48.510223, 24.626139)
@@ -3815,6 +3948,7 @@ shape = SubResource("BoxShape3D_j43j0")
 [node name="OccluderInstance3D" parent="Maschinengebäude/door_gebläse_2" index="2" unique_id=2091745435]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.2369365e-07, 1.249635, -0.7549712)
 occluder = SubResource("QuadOccluder3D_f2ntm")
+bake_mask = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Maschinengebäude/door_gebläse_2" unique_id=1572596038]
 transform = Transform3D(-1.0061396e-16, -0.999982, 0.006003868, 0.99999994, 3.7057576e-11, -2.9802433e-08, -6.1722645e-09, 0.0060039107, 0.9999821, -0.091296956, 1, -0.5267464)
@@ -3828,6 +3962,7 @@ nodepath = NodePath("../../../Visuals/Referenz/mg_tür_gebläse2")
 [node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Maschinengebäude/door_gebläse_2" unique_id=203219209]
 transform = Transform3D(1.1920929e-07, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, 1.1920929e-07, -0.01995107, 1.2172623, -0.68414235)
 occluder = SubResource("QuadOccluder3D_d06k5")
+bake_mask = 1
 
 [node name="door_unknown" parent="Maschinengebäude" unique_id=1216632650 instance=ExtResource("8_1khpx")]
 transform = Transform3D(0.4280048, 0, -0.9037764, 0, 1, 0, 0.9037764, 0, 0.4280048, -10.851977, 48.510223, 15.659732)
@@ -3884,10 +4019,12 @@ nodepath = NodePath("../../../../Visuals/Referenz/mg_tür_maschinen1-klapp")
 [node name="OccluderInstance3D4" type="OccluderInstance3D" parent="Maschinengebäude/door_maschinen_1/KlappbareTür" unique_id=1420901382]
 transform = Transform3D(5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, 5.9604645e-08, -0.07742109, 1.2079735, -0.54681516)
 occluder = SubResource("QuadOccluder3D_hdc1q")
+bake_mask = 1
 
 [node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Maschinengebäude/door_maschinen_1" unique_id=2054254154]
 transform = Transform3D(5.9604645e-08, 0, 1, 0, 1, 0, -1, 0, 5.9604645e-08, -0.077421375, 1.2079735, -0.53892136)
 occluder = SubResource("QuadOccluder3D_xiloe")
+bake_mask = 1
 
 [node name="door_maschinen_2" parent="Maschinengebäude" unique_id=1358399106 instance=ExtResource("8_1khpx")]
 transform = Transform3D(0.42800477, 0, -0.9037764, 0, 1, 0, 0.9037764, 0, 0.42800477, -6.279776, 48.469173, 13.626512)
@@ -3907,6 +4044,7 @@ nodepath = NodePath("../../../Visuals/Referenz/mg_tür_maschinen2")
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Maschinengebäude/door_maschinen_2" unique_id=1097838103]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.557275e-07, 1.2490234, -0.53976417)
 occluder = SubResource("QuadOccluder3D_xiloe")
+bake_mask = 1
 
 [node name="door_trafo" parent="." unique_id=1713881727 instance=ExtResource("8_1khpx")]
 transform = Transform3D(0.39252988, 0, -0.9197392, 0, 1, 0, 0.9197392, 0, 0.39252988, -20.070118, 46.90711, 44.176033)
@@ -4480,24 +4618,29 @@ shape = SubResource("BoxShape3D_vuf03")
 [node name="OccluderInstance3D_fmds" type="OccluderInstance3D" parent="Visuals" unique_id=1754995483]
 transform = Transform3D(-0.916656, 0, -0.3996773, 0, 1, 0, 0.3996773, 0, -0.916656, -67.10144, 53.048336, 24.358768)
 occluder = SubResource("BoxOccluder3D_4kkd4")
+bake_mask = 1
 metadata/_edit_lock_ = true
 
 [node name="OccluderInstance3D_fmds2" type="OccluderInstance3D" parent="Visuals" unique_id=851260190]
 transform = Transform3D(-0.5298897, 0, -0.8480667, 0, 1, 0, 0.8480667, 0, -0.5298897, -71.116394, 52.0876, 21.542164)
 occluder = SubResource("QuadOccluder3D_0vxpt")
+bake_mask = 1
 metadata/_edit_lock_ = true
 
 [node name="OccluderInstance3D_fmds3" type="OccluderInstance3D" parent="Visuals/OccluderInstance3D_fmds2" unique_id=1090836717]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.4997978)
 occluder = SubResource("QuadOccluder3D_0vxpt")
+bake_mask = 1
 
 [node name="OccluderInstance3D_fmds4" type="OccluderInstance3D" parent="Visuals/OccluderInstance3D_fmds2" unique_id=939428786]
 transform = Transform3D(-5.9604645e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -5.9604645e-08, -1.456398, 0, -1.3286133)
 occluder = SubResource("QuadOccluder3D_5gq0c")
+bake_mask = 1
 
 [node name="OccluderInstance3D_fmds5" type="OccluderInstance3D" parent="Visuals/OccluderInstance3D_fmds2" unique_id=1124275116]
 transform = Transform3D(-5.9604645e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -5.9604645e-08, 1.6190796, 0, -1.3286133)
 occluder = SubResource("PolygonOccluder3D_w3kho")
+bake_mask = 1
 
 [node name="2026-07-07-Rechenraum" parent="Visuals" unique_id=1547531169 instance=ExtResource("73_ag5cm")]
 transform = Transform3D(0.4100185, 0, -0.91207725, 0, 1, 0, 0.91207725, 0, 0.4100185, -34.69765, 51.604694, 18.960941)
@@ -4565,26 +4708,32 @@ shape = SubResource("BoxShape3D_jv0uf")
 [node name="OccluderInstance3D_rechen" type="OccluderInstance3D" parent="Visuals/2026-07-07-Rechenraum" unique_id=463423413]
 transform = Transform3D(0.99999994, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 0.99999994, -0.074593775, 1.3907013, -5.4260535)
 occluder = SubResource("QuadOccluder3D_4kkd4")
+bake_mask = 1
 
 [node name="OccluderInstance3D_rechen4" type="OccluderInstance3D" parent="Visuals/2026-07-07-Rechenraum" unique_id=1787646155]
 transform = Transform3D(0.99999994, 2.548349e-08, 1.5452198e-08, -1.7763568e-15, 0.5184897, -0.8550839, -2.9802322e-08, 0.85508394, 0.51848966, -0.07459356, 4.418251, -2.712841)
 occluder = SubResource("QuadOccluder3D_r7pgf")
+bake_mask = 1
 
 [node name="OccluderInstance3D_rechen5" type="OccluderInstance3D" parent="Visuals/2026-07-07-Rechenraum" unique_id=193088200]
 transform = Transform3D(0.99999994, -2.5396247e-08, 1.5595177e-08, 0, 0.52328706, 0.8521565, -2.9802322e-08, -0.8521565, 0.52328706, -0.07459405, 4.454872, 2.783216)
 occluder = SubResource("QuadOccluder3D_r7pgf")
+bake_mask = 1
 
 [node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Visuals/2026-07-07-Rechenraum" unique_id=1275107365]
 transform = Transform3D(0.007819146, -0.99996936, 4.371005e-08, 0, -4.371139e-08, -1, 0.99996936, 0.007819146, -3.4178527e-10, -0.044540472, 0.076683044, -0.05989483)
 occluder = SubResource("QuadOccluder3D_cmq2l")
+bake_mask = 1
 
 [node name="OccluderInstance3D_rechen2" type="OccluderInstance3D" parent="Visuals/2026-07-07-Rechenraum" unique_id=1179389709]
 transform = Transform3D(-7.3513704e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -7.3513704e-08, 4.372537, 1.3907013, 0.0688684)
 occluder = SubResource("QuadOccluder3D_ngwpx")
+bake_mask = 1
 
 [node name="OccluderInstance3D_rechen3" type="OccluderInstance3D" parent="Visuals/2026-07-07-Rechenraum" unique_id=205272227]
 transform = Transform3D(-7.3513704e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -7.3513704e-08, -4.394774, 1.3907013, 0.06886896)
 occluder = SubResource("QuadOccluder3D_ngwpx")
+bake_mask = 1
 
 [node name="2026-07-15-Zulauf" parent="Visuals" unique_id=1606775226 instance=ExtResource("73_ct0f7")]
 transform = Transform3D(-0.9088434, 0, -0.41713762, 0, 1, 0, 0.41713762, 0, -0.9088434, -31.622772, 48.704323, 22.500729)
@@ -4593,18 +4742,22 @@ metadata/_edit_lock_ = true
 [node name="OccluderInstance3D_fettfang" type="OccluderInstance3D" parent="Visuals/2026-07-15-Zulauf" unique_id=706617262]
 transform = Transform3D(0.9998171, 0, -0.019127643, 0, 1, 0, 0.019127643, 0, 0.9998171, 15.559032, 3.224102, 2.2108295)
 occluder = SubResource("BoxOccluder3D_ngwpx")
+bake_mask = 1
 
 [node name="OccluderInstance3D" type="OccluderInstance3D" parent="Visuals/2026-07-15-Zulauf" unique_id=1719585682]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4083799, 1.6368828, 1.4229757)
 occluder = SubResource("QuadOccluder3D_v177g")
+bake_mask = 1
 
 [node name="OccluderInstance3D3" type="OccluderInstance3D" parent="Visuals/2026-07-15-Zulauf" unique_id=652744997]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6323833, 1.2724724, 3.6030025)
 occluder = SubResource("QuadOccluder3D_6xuim")
+bake_mask = 1
 
 [node name="OccluderInstance3D2" type="OccluderInstance3D" parent="Visuals/2026-07-15-Zulauf" unique_id=758337926]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -1.4083798, 2.6234283, -0.15297244)
 occluder = SubResource("QuadOccluder3D_v177g")
+bake_mask = 1
 
 [node name="2026-07-20-Gebläsestation" parent="Visuals" unique_id=1787908771 instance=ExtResource("56_pwg26")]
 transform = Transform3D(0.42029157, 0, -0.90738916, -2.5789541e-14, 0.99999976, -1.19454e-14, 0.9073889, 2.8421701e-14, 0.42029145, -12.203123, 48.32401, 21.472654)
@@ -4675,6 +4828,12 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2.63
 mesh = SubResource("PlaneMesh_4kkd4")
 
 [node name="Referenz" parent="Visuals" unique_id=1885115038 instance=ExtResource("15_h3jyd")]
+
+[node name="Pflastersteine-geometrie" parent="Visuals/Referenz" index="24" unique_id=298191590]
+visible = false
+
+[node name="mg_gebäude" parent="Visuals/Referenz" index="118" unique_id=1502492012]
+visible = false
 
 [node name="Vorklärbecken" parent="Visuals" unique_id=1713468101 instance=ExtResource("79_pwg26")]
 transform = Transform3D(0.63771975, 0, 0.7702685, 0, 1, 0, -0.7702685, 0, 0.63771975, -60.024357, 50.165855, 14.85221)
@@ -4778,3 +4937,4 @@ metadata/_edit_lock_ = true
 [editable path="LadderGasspeicher1"]
 [editable path="Maschinengebäude/door_gebläse_1"]
 [editable path="Maschinengebäude/door_gebläse_2"]
+[editable path="Visuals/Referenz"]
