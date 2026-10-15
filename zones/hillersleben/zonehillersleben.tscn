@@ -855,7 +855,7 @@ size = Vector2(2.2042735, 2.6566768)
 polygon = PackedVector2Array(-1.2591934, 1.2694778, 1.1294823, 1.284996, 1.1606483, -1.4461823, 0.09970474, -1.4269562, 0.056201935, 1.1673889, -1.0355263, 1.1708221, -1.0515175, -1.4273262, -1.3097496, -1.4149742)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2cmmx"]
-size = Vector3(8.464233, 0.001, 10.797546)
+size = Vector3(8.464233, 0.001, 11.1215515)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rlwg2"]
 size = Vector3(1.054039, 0.001, 2.3169928)
@@ -1644,10 +1644,7 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Boden" unique_id=1518566223]
 transform = Transform3D(1, 0, 0, 0, -4.7683716e-07, 0.99999994, 0, -0.99999994, -4.7683716e-07, -43.317974, 47.094624, 66.25102)
 shape = SubResource("ConcavePolygonShape3D_4kkd4")
-
-[node name="Camera3D" type="Camera3D" parent="Boden" unique_id=209017609]
-transform = Transform3D(-0.025985364, 0, -0.99966234, 0, 1, 0, 0.99966234, 0, -0.025985366, -14.208035, 49.739246, 27.532425)
-cull_mask = 1
+debug_color = Color(0, 11.708403, 13.469126, 1)
 
 [node name="Boden-Pflastersteine" type="StaticBody3D" parent="." unique_id=719770728]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
@@ -3789,7 +3786,7 @@ shape = SubResource("BoxShape3D_5rld8")
 transform = Transform3D(0.8989241, 0, 0.43810448, 0, 1, 0, -0.43810448, 0, 0.8989241, -28.340496, 48.75511, 16.687517)
 
 [node name="rechenraum-door-link" parent="Betriebsgebäude" unique_id=538667425 instance=ExtResource("8_1khpx")]
-transform = Transform3D(-0.998945, 0, 0.04592082, 0, 1, 0, -0.04592082, 0, -0.998945, -12.017223, 2.8425293, -4.8904533)
+transform = Transform3D(-0.998945, 0, 0.04592082, 0, 1, 0, -0.04592082, 0, -0.998945, -12.014477, 2.8425293, -4.950197)
 y_degrees_opened = -135.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Betriebsgebäude/rechenraum-door-link" unique_id=809915460]
@@ -3799,6 +3796,19 @@ mesh = SubResource("PlaneMesh_ag5cm")
 
 [node name="steal_meshinstance" parent="Betriebsgebäude/rechenraum-door-link" unique_id=298663912 instance=ExtResource("10_ybcmd")]
 nodepath = NodePath("../../../Visuals/Referenz/bg_tür-02")
+
+[node name="rechenraum-door-recht" parent="Betriebsgebäude" unique_id=1079551377 instance=ExtResource("8_1khpx")]
+transform = Transform3D(0.99894494, 0, -0.0459207, 0, 1, 0, 0.0459207, 0, 0.99894494, -12.06896, 2.8425293, -2.5665483)
+y_degrees_opened = 110.0
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/rechenraum-door-recht" unique_id=766192189]
+transform = Transform3D(4.371139e-08, -1, 1.1920929e-07, -1, -4.371139e-08, 0, 3.5527137e-15, -1.1920929e-07, -1, 0, 0.9922943, -0.53996086)
+visible = false
+mesh = SubResource("PlaneMesh_ag5cm")
+skeleton = NodePath("../../rechenraum-door-link")
+
+[node name="steal_meshinstance" parent="Betriebsgebäude/rechenraum-door-recht" unique_id=1960107834 instance=ExtResource("10_ybcmd")]
+nodepath = NodePath("../../../Visuals/Referenz/bg_tür-02_001")
 
 [node name="BGebaeude-doorside" parent="Betriebsgebäude" unique_id=1107619991 instance=ExtResource("8_1khpx")]
 transform = Transform3D(-0.026159406, 0, -0.99965763, 0, 1, 0, 0.99965763, 0, -0.026159406, -3.5434608, -0.079216, 5.0470266)
@@ -3828,19 +3838,6 @@ transform = Transform3D(2.6417584e-09, 0.90377647, -0.42800477, 0.99999994, -6.5
 mesh = SubResource("PlaneMesh_1khpx")
 skeleton = NodePath("../../Containerraum/Sandwasch-door")
 surface_material_override/0 = SubResource("StandardMaterial3D_6uclu")
-
-[node name="rechenraum-door-recht" parent="Betriebsgebäude" unique_id=1079551377 instance=ExtResource("8_1khpx")]
-transform = Transform3D(0.998945, 0, -0.0459207, 0, 1, 0, 0.0459207, 0, 0.998945, -12.067677, 2.8425293, -2.5944748)
-y_degrees_opened = 110.0
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Betriebsgebäude/rechenraum-door-recht" unique_id=766192189]
-transform = Transform3D(4.371139e-08, -1, 1.1920929e-07, -1, -4.371139e-08, 0, 3.5527137e-15, -1.1920929e-07, -1, 0, 0.9922943, -0.53996086)
-visible = false
-mesh = SubResource("PlaneMesh_ag5cm")
-skeleton = NodePath("../../rechenraum-door-link")
-
-[node name="steal_meshinstance" parent="Betriebsgebäude/rechenraum-door-recht" unique_id=1960107834 instance=ExtResource("10_ybcmd")]
-nodepath = NodePath("../../../Visuals/Referenz/bg_tür-02_001")
 
 [node name="BGebaeude-doordop-link" parent="Betriebsgebäude" unique_id=1241419565 instance=ExtResource("8_1khpx")]
 transform = Transform3D(0.9997477, 0, -0.02246052, 0, 1, 0, 0.02246052, 0, 0.9997477, 0.06782913, -0.1426239, -16.069946)
@@ -3885,8 +3882,8 @@ transform = Transform3D(0.030678036, -0.0073094224, 0.99950254, 0, 0.99997324, 0
 collision_layer = 32768
 collision_mask = 0
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Betriebsgebäude/StaticBody3D2" unique_id=2041916893]
-transform = Transform3D(1, 0, 0, 0, 0.99844176, 0.055804078, 0, -0.055804078, 0.99844176, -1.5017577e-08, 0.12079384, 0.6431013)
+[node name="CollisionShape3D-entrance-bg" type="CollisionShape3D" parent="Betriebsgebäude/StaticBody3D2" unique_id=2041916893]
+transform = Transform3D(1, 0, 0, 0, 0.99844176, 0.055804078, 0, -0.055804078, 0.99844176, -1.5017577e-08, 0.102245554, 0.644138)
 shape = SubResource("HeightMapShape3D_4kkd4")
 debug_color = Color(18.892157, 11.708403, 13.469126, 1)
 
@@ -4651,8 +4648,9 @@ collision_layer = 49152
 collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Visuals/2026-07-07-Rechenraum/geometrie_rechenraum" unique_id=396279867]
-transform = Transform3D(0.9999996, 0, 1.4901161e-07, 0, 1, 0, -1.4901161e-07, 0, 0.9999996, -0.004224777, 0.054851532, 0.057979584)
+transform = Transform3D(0.9999996, 0, 1.4901161e-07, 0, 1, 0, -1.4901161e-07, 0, 0.9999996, -0.004224777, 0.021629333, 0.21997452)
 shape = SubResource("BoxShape3D_2cmmx")
+debug_color = Color(18.892157, 11.708403, 13.469126, 0.41960785)
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Visuals/2026-07-07-Rechenraum/geometrie_rechenraum" unique_id=176607233]
 transform = Transform3D(0.9999996, 1.3411045e-07, 1.7881393e-07, 8.881784e-16, 0.81790876, -0.57534766, -1.4901161e-07, 0.5753475, 0.81790817, 0.892828, 0.6619148, 1.8073692)
@@ -4829,11 +4827,7 @@ mesh = SubResource("PlaneMesh_4kkd4")
 
 [node name="Referenz" parent="Visuals" unique_id=1885115038 instance=ExtResource("15_h3jyd")]
 
-[node name="Pflastersteine-geometrie" parent="Visuals/Referenz" index="24" unique_id=298191590]
-visible = false
-
-[node name="mg_gebäude" parent="Visuals/Referenz" index="118" unique_id=1502492012]
-visible = false
+[node name="Referenzpunktlandschaft" type="Node3D" parent="Visuals" unique_id=619351326]
 
 [node name="Vorklärbecken" parent="Visuals" unique_id=1713468101 instance=ExtResource("79_pwg26")]
 transform = Transform3D(0.63771975, 0, 0.7702685, 0, 1, 0, -0.7702685, 0, 0.63771975, -60.024357, 50.165855, 14.85221)
@@ -4937,4 +4931,3 @@ metadata/_edit_lock_ = true
 [editable path="LadderGasspeicher1"]
 [editable path="Maschinengebäude/door_gebläse_1"]
 [editable path="Maschinengebäude/door_gebläse_2"]
-[editable path="Visuals/Referenz"]

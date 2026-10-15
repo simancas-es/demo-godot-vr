@@ -225,7 +225,7 @@ door_locked = true
 transform = Transform3D(0.41653466, 0, -0.9091199, 0, 1, 0, 0.9091199, 0, 0.41653466, 9.132837, 48.5761, 10.2134)
 
 [node name="bg_rechen_tür_recht" parent="Türen" unique_id=426147015 instance=ExtResource("21_xmg2b")]
-transform = Transform3D(-0.425574, 0, 0.9049236, 0, 1, 0, -0.9049236, 0, -0.425574, -40.37392, 51.652336, 19.616776)
+transform = Transform3D(-0.425574, 0, 0.9049236, 0, 1, 0, -0.9049236, 0, -0.425574, -40.362434, 51.652336, 19.612438)
 
 [node name="bg_rechen_tür_link" parent="Türen" unique_id=423100149 instance=ExtResource("22_fx8ep")]
 transform = Transform3D(0.4104801, 0, -0.9118695, 0, 1, 0, 0.9118695, 0, 0.4104801, -41.330498, 51.645153, 17.565792)
