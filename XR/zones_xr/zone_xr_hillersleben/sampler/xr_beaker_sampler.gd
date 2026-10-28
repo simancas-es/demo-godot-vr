@@ -1,3 +1,4 @@
+@tool
 extends "res://XR/scenes/interactables/objects/item_pickable.gd"
 
 const SAMPLER_AREA := preload("uid://da5ajj1xsgk0e")
@@ -7,6 +8,9 @@ var current_sample : String = ""
 @onready var liquid : MeshInstance3D = $BeakerSampler/Liquid
 
 func _ready():
+	super()
+	if Engine.is_editor_hint():
+		return
 	area_beaker.touched_water.connect(_on_water_enter)
 	area_beaker.area_entered.connect(_on_area_entered) #Area of tip of beaker
 	clear()

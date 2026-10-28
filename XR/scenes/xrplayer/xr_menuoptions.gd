@@ -27,6 +27,8 @@ func _input(_event: InputEvent) -> void:
 func _ready() -> void:
 	set_process_input(false)
 	repopulate_menus()
+	if Engine.is_editor_hint():
+		return
 	
 	#PRESELECT
 	ready_preselect()

@@ -38,6 +38,8 @@ func _ready() -> void:
 	_apply_texture()
 	_apply_text()
 	_apply_audio()
+	if Engine.is_editor_hint():
+		return
 	self.add_to_group("CUTOUT_DIALOG")
 	var cutouts = get_tree().get_nodes_in_group("CUTOUT_DIALOG")
 	for c in cutouts: #HACK self update so that only one is active at a time
