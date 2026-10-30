@@ -1,0 +1,182 @@
+TRANSLATION TEXT EXTRACTION GUIDE
+Updated: 2026-10-30
+
+PURPOSE
+
+Use update_translations.ps1 to collect the project's source
+text and update its existing language files. It combines Godot's template
+extraction with extra text extracted from the task database and scene fields.
+
+The workflow is:
+
+    Run the script
+      -> Generate a fresh template in Godot when the script pauses
+      -> Type Y to let the script append the extra text and update the PO files
+      -> Review and translate the updated PO files
+
+Template generation in Godot and translation review are still manual steps.
+The script does not translate text into other languages.
+
+
+1. PROJECT LAYOUT AND PATHS
+
+Keep the script beside update_po.cmd in the project's translation folder:
+
+    project\
+        project.godot
+        content\tasks\task_database_demo.json
+        translation\
+            translation_guide.txt
+            update_translations.ps1
+            update_po.cmd
+            en.po
+            es.po
+            de.po
+            fr.po
+            base_template.pot
+            base_template_unique.pot
+            .tmp\
+
+Here, project means the Godot project root: the folder containing
+project.godot. Its actual folder name can be different.
+
+When the script is inside translation, it uses that folder's parent as the
+project root. You do not need to edit hardcoded paths when moving the project.
+All input and output paths are calculated from this root.
+
+The .tmp folder and the template files are generated during the workflow.
+The language files must already exist: update_po.cmd updates en.po, es.po,
+de.po and fr.po; it does not create new language catalogs.
+
+
+2. REQUIREMENTS
+
+- The Godot editor used for this project.
+- Windows PowerShell 5.1 or PowerShell 7.
+- GNU gettext tools, with msguniq and msgmerge available on PATH.
+- The project layout above, including the task database and update_po.cmd.
+
+Check the gettext commands in PowerShell:
+
+    Get-Command msguniq, msgmerge
+
+If either command is missing, install GNU gettext or add its executable folder
+to PATH, then open a new PowerShell window. See the Godot documentation linked
+at the end for Windows installation guidance.
+
+
+3. RUN THE EXTRACTION
+
+Step 1: Save your work and close this project in Godot.
+
+The script edits project.godot directly. Reopening the project at the template
+step ensures that Godot uses the updated source-file list.
+
+Step 2: Open PowerShell in the project's translation folder and run:
+
+    .\update_translations.ps1
+
+Alternatively, run a copy stored elsewhere with an explicit project root:
+
+    & "D:\Pathto\update_translations.ps1" -RootFolder "C:\Pathto\project"
+
+Replace "C:\Pathto\project" with your actual project directory.
+-RootFolder must point to the folder containing project.godot, not to translation.
+
+Before pausing, the script:
+
+- Extracts fields named text or ending in _text from
+  content\tasks\task_database_demo.json, including nested objects and arrays.
+- Extracts simple quoted _text assignments from .tscn files, such as
+  description_text = "Open the door".
+- Collects .gd, .json and .tscn paths and updates the existing
+  locale/translations_pot_files line in project.godot.
+- Writes intermediate results into translation\.tmp.
+
+The recursive file scans skip folders named addons, android, .godot, .git
+and .tmp. The custom JSON extraction reads only the task database named above;
+it does not automatically extract text from every JSON file in the project.
+
+Step 3: Generate a fresh template in Godot.
+
+Leave PowerShell waiting at the prompt. Open the project in Godot and go to:
+
+    Project > Project Settings > Localization > Template Generation
+
+Check that the source-file list is populated, click Generate, and save to:
+
+    res://translation/base_template.pot
+
+In Godot, res:// means the project root. This path is therefore the same file
+as project\translation\base_template.pot on disk.
+
+Replace the previous base_template.pot if it exists. Generate a fresh template
+on every run, before continuing the script.
+
+Step 4: Return to PowerShell, type Y, and press Enter. (it prompts you)
+
+Only continue after Godot has finished saving the template. The script then:
+
+- Appends the task-database and scene-field fragments to base_template.pot.
+- Runs update_po.cmd automatically.
+- Uses msguniq to combine duplicate entries into base_template_unique.pot.
+- Uses msgmerge to update en.po, es.po, de.po and fr.po from that template.
+
+Existing matching translations are retained. New or changed messages need
+review. Do not manually append the fragments or run update_po.cmd again as
+part of this normal workflow.
+
+Do not regenerate base_template.pot in Godot after this step: that would replace
+the combined template and discard the appended custom entries. If you need to
+repeat extraction, rerun the complete workflow.
+
+Step 5: Review and translate the language files.
+
+Open the .po files in a translation editor or a text editor. msgid is the source
+text; msgstr is its translation. Fill empty translations and review entries
+marked fuzzy. Remove a fuzzy marker only after checking the translation.
+Godot ignores fuzzy translations.
+
+Confirm that the language files are registered under:
+
+    Project > Project Settings > Localization > Translations
+
+Then test the relevant text in the game with the intended language selected.
+
+
+4. WHICH FILES ARE GENERATED?
+
+translation\base_template.pot
+    Godot's fresh template plus the extra entries appended by the script.
+
+translation\base_template_unique.pot
+    The deduplicated template created by update_po.cmd and used for merging.
+    It stays here because update_po.cmd expects this location.
+
+translation\en.po, es.po, de.po, fr.po
+    The language catalogs updated by the merge. These are the files in which
+    translators edit translations. Do not put translations in the POT files.
+
+translation\.tmp\
+    Intermediate extraction results, recreated during the workflow:
+
+    translation-temporary-tasks_text.txt
+        Text extracted from the task database.
+    translation-tasks_text.pot
+        That text converted into a POT fragment.
+    translation-embedded_scene_text.txt
+        A POT-formatted fragment for scene fields, despite its .txt extension.
+    translation-temporary-scene_list.txt
+        The collected resource paths.
+    translation-godot-project_scene_list.txt
+        The generated setting line used to update project.godot.
+
+The .tmp files are not translation catalogs. You can remove this folder after
+a completed run; keep it while the script is waiting for template generation.
+Gettext may also leave .po~ backup files beside the language files.
+
+
+REFERENCE
+
+Godot 4.6: Localization using gettext (PO files)
+https://docs.godotengine.org/en/4.6/tutorials/i18n/localization_using_gettext.html
