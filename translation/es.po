@@ -237,14 +237,15 @@ msgstr ""
 "Sostener [{key}]"
 
 #: globals/root.tscn
+#, fuzzy
 msgid ""
-"WASD - Bewegung/Movement\n"
-"Leertaste / Space - Springen/Jump\n"
-"Umschalt / Shift - Rennen/Run\n"
-"E - Interaction, LMB\n"
-"RT - Inventarzyklen, I - Inventar\n"
-"Mausrad/Mousewheel - Zoom\n"
-"Esc - Menu, H - Reset Position\n"
+"WASD - Bewegung/Movement\r\n"
+"Leertaste / Space - Springen/Jump\r\n"
+"Umschalt / Shift - Rennen/Run\r\n"
+"E - Interaction, LMB\r\n"
+"RT - Inventarzyklen, I - Inventar\r\n"
+"Mausrad/Mousewheel - Zoom\r\n"
+"Esc - Menu, H - Reset Position\r\n"
 "V - Aufgaben / Tasks on/off"
 msgstr ""
 "WASD - Movimiento\n"
@@ -284,6 +285,19 @@ msgstr ""
 msgid "END NOTE END NOTE\n"
 msgstr ""
 
+#: menus/menuoptions.gd:9
+msgid "Fullscreen"
+msgstr "Pantalla completa"
+
+#: menus/menuoptions.gd:9
+msgctxt "Window mode as an option"
+msgid "Window"
+msgstr "Ventana"
+
+#: menus/menuoptions.gd:9
+msgid "Borderless Window"
+msgstr "Ventana sin bordes"
+
 #: menus/msgtop/msgtop.tscn
 msgid "DEFAULT_MSGTOP_TEXT"
 msgstr ""
@@ -308,18 +322,10 @@ msgstr "Tema"
 msgid "Back"
 msgstr "Atrás"
 
-#: menus/menuoptions.gd:9
-msgid "Fullscreen"
-msgstr "Pantalla completa"
-
-#: menus/menuoptions.gd:9
-msgctxt "Window mode as an option"
-msgid "Window"
-msgstr "Ventana"
-
-#: menus/menuoptions.gd:9
-msgid "Borderless Window"
-msgstr "Ventana sin bordes"
+#: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
+#: models/demo_basin/basin_death.gd:33
+msgid "You drowned! Don't just jump into a basin..."
+msgstr "Te ahogaste! No saltes a un tanque lleno..."
 
 #: models/demo_basin/control_system/blower_controller.gd:24
 msgid "Not enough water to activate the blower!"
@@ -328,11 +334,6 @@ msgstr "¡No hay suficiente agua para activar el soplador!"
 #: models/demo_basin/control_system/blower_controller.gd:29
 msgid "Aerator is broken!"
 msgstr "¡El difusor está roto!"
-
-#: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
-#: models/demo_basin/basin_death.gd:33
-msgid "You drowned! Don't just jump into a basin..."
-msgstr "Te ahogaste! No saltes a un tanque lleno..."
 
 #: models/doors/basedoor_2m_xrcompatible_gasraum.tscn
 #: models/doors/basedoor_2m_xrcompatible_labor.tscn
@@ -400,6 +401,10 @@ msgstr "Volumen actual: 0000 m3"
 msgid "Current Fill Level (%): xxx%"
 msgstr "Nivel de llenado actual (%): xxx%"
 
+#: models/not_available_block.tscn
+msgid "Not available yet!"
+msgstr "No disponible aún!"
+
 #: models/van/van.gd:15
 msgid "Press [{key}] to travel!"
 msgstr "Pulsa [{key}] para viajar!"
@@ -407,10 +412,6 @@ msgstr "Pulsa [{key}] para viajar!"
 #: models/van/van.gd:48
 msgid "You clicked on the van"
 msgstr "Has pulsado en la furgoneta"
-
-#: models/not_available_block.tscn
-msgid "Not available yet!"
-msgstr "No disponible aún!"
 
 #: systems/system-differential-diffusion/test_grid_update_color.gd:9
 msgid " -1.0"
@@ -585,6 +586,10 @@ msgid ""
 " - Snap-holders that can be enabled/disabled by pointer"
 msgstr ""
 
+#: XR/scenes/xr_van.tscn
+msgid "DESTINATIONDESTINATIONDEST"
+msgstr ""
+
 #: XR/scenes/xrplayer/debug_collision_layer.tscn
 msgid ""
 "Name: ...\n"
@@ -610,10 +615,6 @@ msgstr ""
 
 #: XR/scenes/xrplayer/xr_settings.tscn
 msgid "RESET POS."
-msgstr ""
-
-#: XR/scenes/xr_van.tscn
-msgid "DESTINATIONDESTINATIONDEST"
 msgstr ""
 
 #: XR/zones_xr/zone_xr_door_demos.tscn XR/zones_xr/zone_xr_hillersleben.tscn
@@ -704,6 +705,30 @@ msgstr ""
 msgid "38.0°C"
 msgstr ""
 
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "0.0"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "NH4"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "mg/l"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "Target Settings"
+msgstr "Fijar Setpoint"
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "^"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "v"
+msgstr ""
+
 #: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 msgid "^\n"
 msgstr ""
@@ -734,30 +759,6 @@ msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 msgid "M"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "0.0"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "NH4"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "mg/l"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "Target Settings"
-msgstr "Fijar Setpoint"
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "^"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "v"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:39
@@ -830,10 +831,6 @@ msgstr ""
 "¡Te necesitamos para que la planta funcione!"
 
 #: zones/hillersleben/zonehillersleben.tscn
-msgid "TEXT_INSPEKTIONSRUNDE"
-msgstr "Antes de comenzar con tus tareas, vamos a dar una vuelta por la planta de tratamiento de aguas residuales. Te mostraré las estaciones más importantes y te explicaré brevemente qué ocurre en cada una. ¡Vamos, empecemos!\n¡Sigue los cubos brillantes!"
-
-#: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_RAUMSCHNECKE"
 msgstr ""
 "¡¡¡Oh noooo!!!\n"
@@ -852,56 +849,130 @@ msgstr ""
 "¿Puedes revisar qué es lo que va mal?"
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_INSPEKTIONSRUNDE"
+msgstr ""
+"Antes de comenzar con tus tareas, vamos a dar una vuelta por la planta de "
+"tratamiento de aguas residuales. Te mostraré las estaciones más importantes "
+"y te explicaré brevemente qué ocurre en cada una. ¡Vamos, empecemos!\n"
+"¡Sigue los cubos brillantes!"
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_ZULAUF_INTRO"
-msgstr "Aquí a la izquierda llega el agua de Haldensleben y a la derecha el agua de Vahldorf. Los caudales se miden con un medidor de flujo magnético-inductivo (MID).\nMedimos el volumen para saber qué tan cargada está la planta en ese momento y poder supervisar el proceso de tratamiento en consecuencia."
+msgstr ""
+"Aquí a la izquierda llega el agua de Haldensleben y a la derecha el agua de "
+"Vahldorf. Los caudales se miden con un medidor de flujo magnético-inductivo "
+"(MID).\n"
+"Medimos el volumen para saber qué tan cargada está la planta en ese momento "
+"y poder supervisar el proceso de tratamiento en consecuencia."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_RECHENGUTPRESSE_INTRO"
-msgstr "Aquí es donde los residuos de desbaste como toallitas húmedas y otros materiales gruesos retenidos por la rejilla se lavan y luego se compactan. Esto los hace más secos y facilita su eliminación."
+msgstr ""
+"Aquí es donde los residuos de desbaste como toallitas húmedas y otros "
+"materiales gruesos retenidos por la rejilla se lavan y luego se compactan. "
+"Esto los hace más secos y facilita su eliminación."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_BHKW_INTRO"
-msgstr "Aquí se utiliza el biogás. La planta de cogeneración lo convierte en electricidad y calor. Ambos son necesarios para el funcionamiento de la planta de tratamiento de aguas residuales."
+msgstr ""
+"Aquí se utiliza el biogás. La planta de cogeneración lo convierte en "
+"electricidad y calor. Ambos son necesarios para el funcionamiento de la "
+"planta de tratamiento de aguas residuales."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_FAULBEHÄLTER_INTRO"
-msgstr "En los digestores, el lodo se descompone en ausencia de oxígeno. En este proceso se genera biogás, que posteriormente puede utilizarse para producir electricidad y calor."
+msgstr ""
+"En los digestores, el lodo se descompone en ausencia de oxígeno. En este "
+"proceso se genera biogás, que posteriormente puede utilizarse para producir "
+"electricidad y calor."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_VKB_INTRO"
-msgstr "Aquí a la derecha está nuestro decantador primario. El agua residual se separa primero del lodo mediante la gravedad. El anillo interior hace que el agua entrante se ralentice, permitiendo que los sólidos se sedimenten correctamente.\nEn el anillo exterior, la zona anaerobia, se crean condiciones ideales para que microorganismos especializados puedan posteriormente absorber fosfato del agua residual."
+msgstr ""
+"Aquí a la derecha está nuestro decantador primario. El agua residual se "
+"separa primero del lodo mediante la gravedad. El anillo interior hace que el "
+"agua entrante se ralentice, permitiendo que los sólidos se sedimenten "
+"correctamente.\n"
+"En el anillo exterior, la zona anaerobia, se crean condiciones ideales para "
+"que microorganismos especializados puedan posteriormente absorber fosfato "
+"del agua residual."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_SANDFANG_INTRO"
-msgstr "En nuestro primer tanque, la trampa de grasas y arenas, el agua residual se ralentiza. Esto permite que los materiales pesados, como la arena y la grava, se depositen en el fondo, donde pueden ser eliminados. Las sustancias más ligeras, como las grasas y los aceites, flotan en la superficie y también se eliminan."
+msgstr ""
+"En nuestro primer tanque, la trampa de grasas y arenas, el agua residual se "
+"ralentiza. Esto permite que los materiales pesados, como la arena y la "
+"grava, se depositen en el fondo, donde pueden ser eliminados. Las sustancias "
+"más ligeras, como las grasas y los aceites, flotan en la superficie y "
+"también se eliminan."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_BB_INTRO"
-msgstr "En nuestros tanques de aireación, los microorganismos realizan la mayor parte del trabajo. Necesitan mucho oxígeno, por lo que introducimos finas burbujas de aire en el agua. Esto permite que los microorganismos descompongan el nitrógeno y otras sustancias orgánicas. Al final, también añadimos un agente precipitante, lo que hace que se formen flóculos de lodo."
+msgstr ""
+"En nuestros tanques de aireación, los microorganismos realizan la mayor "
+"parte del trabajo. Necesitan mucho oxígeno, por lo que introducimos finas "
+"burbujas de aire en el agua. Esto permite que los microorganismos "
+"descompongan el nitrógeno y otras sustancias orgánicas. Al final, también "
+"añadimos un agente precipitante, lo que hace que se formen flóculos de lodo."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_NKB_INTRO"
-msgstr "En el decantador secundario, el lodo activado, es decir, los microorganismos junto con la materia orgánica, se deposita en el fondo. El agua clara y tratada permanece en la parte superior y continúa hacia la salida."
+msgstr ""
+"En el decantador secundario, el lodo activado, es decir, los microorganismos "
+"junto con la materia orgánica, se deposita en el fondo. El agua clara y "
+"tratada permanece en la parte superior y continúa hacia la salida."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_VKB_HYDRA"
-msgstr "Esta compuerta controla el equilibrio hidráulico de toda la instalación. El agua fluye sin necesidad de bombas gracias a la diferencia de altura."
+msgstr ""
+"Esta compuerta controla el equilibrio hidráulico de toda la instalación. El "
+"agua fluye sin necesidad de bombas gracias a la diferencia de altura."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_WASSERRAD"
-msgstr "Aquí finaliza el proceso de tratamiento. El agua limpia fluye hacia el río Ohre. En el proceso, el agua impulsa una rueda hidráulica y puede generar energía.\nEsto permite suministrar electricidad por la noche para los sensores y los sistemas de seguridad."
+msgstr ""
+"Aquí finaliza el proceso de tratamiento. El agua limpia fluye hacia el río "
+"Ohre. En el proceso, el agua impulsa una rueda hidráulica y puede generar "
+"energía.\n"
+"Esto permite suministrar electricidad por la noche para los sensores y los "
+"sistemas de seguridad."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_ZULAUF_SANDFANG"
-msgstr "Aquí está la bomba de aire de la trampa de grasas. Con aire se consigue separar la arena de las grasas para que ambas puedan eliminarse más fácilmente después."
+msgstr ""
+"Aquí está la bomba de aire de la trampa de grasas. Con aire se consigue "
+"separar la arena de las grasas para que ambas puedan eliminarse más "
+"fácilmente después."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_LABOR_1"
-msgstr "En el tanque de aireación, el amonio se convierte en nitrato. Después, el nitrato se descompone nuevamente en nitrógeno gaseoso. Este proceso se llama nitrificación y desnitrificación. En grandes cantidades, el nitrógeno puede ser perjudicial para los peces y otros organismos acuáticos, por lo que debe eliminarse del agua residual.\nOh. Los niveles de nitrato han aumentado repentinamente. Ahora la pregunta es: ¿está defectuoso el sensor o algo está fallando en el proceso de tratamiento?\nPara la nitrificación, los microorganismos necesitan suficiente oxígeno. ¿Llega suficiente aire al tanque de aireación? Revisa los sopladores y el sistema de aireación."
+msgstr ""
+"En el tanque de aireación, el amonio se convierte en nitrato. Después, el "
+"nitrato se descompone nuevamente en nitrógeno gaseoso. Este proceso se llama "
+"nitrificación y desnitrificación. En grandes cantidades, el nitrógeno puede "
+"ser perjudicial para los peces y otros organismos acuáticos, por lo que debe "
+"eliminarse del agua residual.\n"
+"Oh. Los niveles de nitrato han aumentado repentinamente. Ahora la pregunta "
+"es: ¿está defectuoso el sensor o algo está fallando en el proceso de "
+"tratamiento?\n"
+"Para la nitrificación, los microorganismos necesitan suficiente oxígeno. "
+"¿Llega suficiente aire al tanque de aireación? Revisa los sopladores y el "
+"sistema de aireación."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_RECHENRAUM_1"
-msgstr "¡Hola! Bienvenido al edificio de desbaste. Aquí, el agua residual pasa por una rejilla que elimina sólidos y residuos antes de entrar en el proceso de tratamiento.\nEl tamiz escalonado retiene sólidos gruesos como toallitas húmedas, plásticos y productos de higiene. Estos materiales no deben entrar en el sistema de alcantarillado, ya que pueden provocar obstrucciones y dañar la planta.\nEste material se denomina residuos de desbaste y se compacta y empaqueta en la sala inferior.\n¿Y ese contenedor negro de allí? Es un filtro de tratamiento de aire que captura y trata los gases olorosos y nocivos del agua residual."
+msgstr ""
+"¡Hola! Bienvenido al edificio de desbaste. Aquí, el agua residual pasa por "
+"una rejilla que elimina sólidos y residuos antes de entrar en el proceso de "
+"tratamiento.\n"
+"El tamiz escalonado retiene sólidos gruesos como toallitas húmedas, "
+"plásticos y productos de higiene. Estos materiales no deben entrar en el "
+"sistema de alcantarillado, ya que pueden provocar obstrucciones y dañar la "
+"planta.\n"
+"Este material se denomina residuos de desbaste y se compacta y empaqueta en "
+"la sala inferior.\n"
+"¿Y ese contenedor negro de allí? Es un filtro de tratamiento de aire que "
+"captura y trata los gases olorosos y nocivos del agua residual."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_PAUSE_RAUM"
@@ -909,15 +980,26 @@ msgstr "Aquí está nuestra sala de descanso. Puedes sentarte si quieres."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_GASSPEICHER"
-msgstr "En nuestro depósito de gas, el biogás se almacena como en un gran globo dentro de la estructura metálica: se llena de gas y lo libera cuando lo necesitamos.\nAntes solo teníamos un depósito más pequeño, pero no era suficiente. Y atención: la escalera no está completamente representada aquí, ¡así que sujétate bien!"
+msgstr ""
+"En nuestro depósito de gas, el biogás se almacena como en un gran globo "
+"dentro de la estructura metálica: se llena de gas y lo libera cuando lo "
+"necesitamos.\n"
+"Antes solo teníamos un depósito más pequeño, pero no era suficiente. Y "
+"atención: la escalera no está completamente representada aquí, ¡así que "
+"sujétate bien!"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_AUSLASS_1"
-msgstr "Aquí es donde la planta vierte el agua al río. Lamentablemente, en este momento no tenemos programado ni el río ni el agua."
+msgstr ""
+"Aquí es donde la planta vierte el agua al río. Lamentablemente, en este "
+"momento no tenemos programado ni el río ni el agua."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_FOERDERBAND"
-msgstr "Las bolitas de lodo del decantador se transportan mediante este sistema de cinta transportadora a un contenedor con ruedas para que puedan ser retiradas posteriormente. Ups, en este momento está apagado."
+msgstr ""
+"Las bolitas de lodo del decantador se transportan mediante este sistema de "
+"cinta transportadora a un contenedor con ruedas para que puedan ser "
+"retiradas posteriormente. Ups, en este momento está apagado."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_TEMPERATUR_1"
@@ -925,7 +1007,10 @@ msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_PHOTOVOLTAIK_1"
-msgstr "¡Oh no! Alguien ha robado nuestras placas solares… en realidad debería estar aquí.\nLas placas solares nos permiten operar la planta de forma autónoma."
+msgstr ""
+"¡Oh no! Alguien ha robado nuestras placas solares… en realidad debería estar "
+"aquí.\n"
+"Las placas solares nos permiten operar la planta de forma autónoma."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"

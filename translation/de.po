@@ -237,14 +237,15 @@ msgstr ""
 "Halten [{key}]"
 
 #: globals/root.tscn
+#, fuzzy
 msgid ""
-"WASD - Bewegung/Movement\n"
-"Leertaste / Space - Springen/Jump\n"
-"Umschalt / Shift - Rennen/Run\n"
-"E - Interaction, LMB\n"
-"RT - Inventarzyklen, I - Inventar\n"
-"Mausrad/Mousewheel - Zoom\n"
-"Esc - Menu, H - Reset Position\n"
+"WASD - Bewegung/Movement\r\n"
+"Leertaste / Space - Springen/Jump\r\n"
+"Umschalt / Shift - Rennen/Run\r\n"
+"E - Interaction, LMB\r\n"
+"RT - Inventarzyklen, I - Inventar\r\n"
+"Mausrad/Mousewheel - Zoom\r\n"
+"Esc - Menu, H - Reset Position\r\n"
 "V - Aufgaben / Tasks on/off"
 msgstr ""
 "WASD - Bewegung\n"
@@ -284,6 +285,19 @@ msgstr ""
 msgid "END NOTE END NOTE\n"
 msgstr ""
 
+#: menus/menuoptions.gd:9
+msgid "Fullscreen"
+msgstr "Vollbild"
+
+#: menus/menuoptions.gd:9
+msgctxt "Window mode as an option"
+msgid "Window"
+msgstr "Fenster"
+
+#: menus/menuoptions.gd:9
+msgid "Borderless Window"
+msgstr "Fenster ohne Rahmen"
+
 #: menus/msgtop/msgtop.tscn
 msgid "DEFAULT_MSGTOP_TEXT"
 msgstr ""
@@ -308,18 +322,10 @@ msgstr "Thema"
 msgid "Back"
 msgstr "Zurück"
 
-#: menus/menuoptions.gd:9
-msgid "Fullscreen"
-msgstr "Vollbild"
-
-#: menus/menuoptions.gd:9
-msgctxt "Window mode as an option"
-msgid "Window"
-msgstr "Fenster"
-
-#: menus/menuoptions.gd:9
-msgid "Borderless Window"
-msgstr "Fenster ohne Rahmen"
+#: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
+#: models/demo_basin/basin_death.gd:33
+msgid "You drowned! Don't just jump into a basin..."
+msgstr "Du bist ertrunken! Spring nicht einfach in ein Becken..."
 
 #: models/demo_basin/control_system/blower_controller.gd:24
 msgid "Not enough water to activate the blower!"
@@ -328,11 +334,6 @@ msgstr "Nicht genug Wasser, um das Gebläse zu aktivieren!"
 #: models/demo_basin/control_system/blower_controller.gd:29
 msgid "Aerator is broken!"
 msgstr "Der Belüfter ist kaputt!"
-
-#: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
-#: models/demo_basin/basin_death.gd:33
-msgid "You drowned! Don't just jump into a basin..."
-msgstr "Du bist ertrunken! Spring nicht einfach in ein Becken..."
 
 #: models/doors/basedoor_2m_xrcompatible_gasraum.tscn
 #: models/doors/basedoor_2m_xrcompatible_labor.tscn
@@ -400,6 +401,10 @@ msgstr "Aktuelles Volumen: 0000 m3"
 msgid "Current Fill Level (%): xxx%"
 msgstr "Aktueller Füllstand (%): xxx%"
 
+#: models/not_available_block.tscn
+msgid "Not available yet!"
+msgstr "Noch nicht verfügbar!"
+
 #: models/van/van.gd:15
 msgid "Press [{key}] to travel!"
 msgstr "Klick [{key}] um zu fahren!"
@@ -407,10 +412,6 @@ msgstr "Klick [{key}] um zu fahren!"
 #: models/van/van.gd:48
 msgid "You clicked on the van"
 msgstr "Du hast den Van angeklickt"
-
-#: models/not_available_block.tscn
-msgid "Not available yet!"
-msgstr "Noch nicht verfügbar!"
 
 #: systems/system-differential-diffusion/test_grid_update_color.gd:9
 msgid " -1.0"
@@ -585,6 +586,10 @@ msgid ""
 " - Snap-holders that can be enabled/disabled by pointer"
 msgstr ""
 
+#: XR/scenes/xr_van.tscn
+msgid "DESTINATIONDESTINATIONDEST"
+msgstr ""
+
 #: XR/scenes/xrplayer/debug_collision_layer.tscn
 msgid ""
 "Name: ...\n"
@@ -610,10 +615,6 @@ msgstr ""
 
 #: XR/scenes/xrplayer/xr_settings.tscn
 msgid "RESET POS."
-msgstr ""
-
-#: XR/scenes/xr_van.tscn
-msgid "DESTINATIONDESTINATIONDEST"
 msgstr ""
 
 #: XR/zones_xr/zone_xr_door_demos.tscn XR/zones_xr/zone_xr_hillersleben.tscn
@@ -704,6 +705,30 @@ msgstr ""
 msgid "38.0°C"
 msgstr ""
 
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "0.0"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "NH4"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "mg/l"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "Target Settings"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "^"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "v"
+msgstr ""
+
 #: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 msgid "^\n"
 msgstr ""
@@ -734,30 +759,6 @@ msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 msgid "M"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "0.0"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "NH4"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "mg/l"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "Target Settings"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "^"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "v"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:39
@@ -829,10 +830,6 @@ msgstr ""
 "Also schnapp dir deine Sachen und leg los. Ohne dich läuft hier heute nichts!"
 
 #: zones/hillersleben/zonehillersleben.tscn
-msgid "TEXT_INSPEKTIONSRUNDE"
-msgstr "Bevor wir mit deinen Aufgaben beginnen, drehen wir gemeinsam eine Runde durch die Kläranlage. Ich zeige dir die wichtigsten Stationen und erkläre dir kurz, was dort passiert. Komm, wir legen los!\nFolge den blinkenden Würfeln!"
-
-#: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_RAUMSCHNECKE"
 msgstr ""
 "Oh neeeein!!!\n"
@@ -853,80 +850,169 @@ msgstr ""
 "Kannst du mal schauen, was da schiefgelaufen ist?"
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_INSPEKTIONSRUNDE"
+msgstr ""
+"Bevor wir mit deinen Aufgaben beginnen, drehen wir gemeinsam eine Runde "
+"durch die Kläranlage. Ich zeige dir die wichtigsten Stationen und erkläre "
+"dir kurz, was dort passiert. Komm, wir legen los!\n"
+"Folge den blinkenden Würfeln!"
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_ZULAUF_INTRO"
-msgstr "Hier links fließt das Wasser aus Haldensleben, und hier rechts das Wasser aus Vahldorf. Die Durchflüsse werden mit einem magnetisch-induktiven Durchflussmesser (MID) gemessen.\nWir messen die Menge, damit wir wissen, wie stark die Anlage gerade belastet ist und die Reinigung entsprechend überwachen können.\n"
+msgstr ""
+"Hier links fließt das Wasser aus Haldensleben, und hier rechts das Wasser "
+"aus Vahldorf. Die Durchflüsse werden mit einem magnetisch-induktiven "
+"Durchflussmesser (MID) gemessen.\n"
+"Wir messen die Menge, damit wir wissen, wie stark die Anlage gerade belastet "
+"ist und die Reinigung entsprechend überwachen können.\n"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_RECHENGUTPRESSE_INTRO"
-msgstr "Hier wird das Rechengut, also die Feuchttücher und groben Stoffe aus dem Rechen, gewaschen und danach ausgepresst. Dadurch wird es trockener und kann leichter entsorgt werden."
+msgstr ""
+"Hier wird das Rechengut, also die Feuchttücher und groben Stoffe aus dem "
+"Rechen, gewaschen und danach ausgepresst. Dadurch wird es trockener und kann "
+"leichter entsorgt werden."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_BHKW_INTRO"
-msgstr "Hier wird das Biogas genutzt. Das Blockheizkraftwerk macht daraus Strom und Wärme. Beides brauchen wir für den Betrieb der Kläranlage."
+msgstr ""
+"Hier wird das Biogas genutzt. Das Blockheizkraftwerk macht daraus Strom und "
+"Wärme. Beides brauchen wir für den Betrieb der Kläranlage."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_FAULBEHÄLTER_INTRO"
-msgstr "In den Faulbehältern wird der Schlamm ohne Sauerstoff abgebaut. Dabei entsteht Biogas. Dieses Gas können wir später nutzen, um Strom und Wärme zu erzeugen."
+msgstr ""
+"In den Faulbehältern wird der Schlamm ohne Sauerstoff abgebaut. Dabei "
+"entsteht Biogas. Dieses Gas können wir später nutzen, um Strom und Wärme zu "
+"erzeugen."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_VKB_INTRO"
-msgstr "Das hier rechts ist unser Vorklärbecken. Das Abwasser wird zunächst durch Schwerkraft vom Schlamm getrennt. Der innere Ring sorgt dafür, dass das einströmende Wasser verlangsamt wird, sodass sich die Feststoffe gut absetzen können.\nIm Außenring, dem Anaerobbecken werden ideale Bedingungen geschaffen, damit spezielle Mikroorganismen später Phosphat aus dem Abwasser aufnehmen können."
+msgstr ""
+"Das hier rechts ist unser Vorklärbecken. Das Abwasser wird zunächst durch "
+"Schwerkraft vom Schlamm getrennt. Der innere Ring sorgt dafür, dass das "
+"einströmende Wasser verlangsamt wird, sodass sich die Feststoffe gut "
+"absetzen können.\n"
+"Im Außenring, dem Anaerobbecken werden ideale Bedingungen geschaffen, damit "
+"spezielle Mikroorganismen später Phosphat aus dem Abwasser aufnehmen können."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_SANDFANG_INTRO"
-msgstr "In unserem ersten Becken, dem Sand- und Fettfang, wird das Abwasser verlangsamt. Dadurch sinken schwere Stoffe wie Sand und Kies auf den Boden und können entfernt werden. Leichte Stoffe wie Fette und Öle schwimmen auf der Wasseroberfläche und werden ebenfalls entfernt."
+msgstr ""
+"In unserem ersten Becken, dem Sand- und Fettfang, wird das Abwasser "
+"verlangsamt. Dadurch sinken schwere Stoffe wie Sand und Kies auf den Boden "
+"und können entfernt werden. Leichte Stoffe wie Fette und Öle schwimmen auf "
+"der Wasseroberfläche und werden ebenfalls entfernt."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_BB_INTRO"
-msgstr "In unseren Belebungsbecken übernehmen Mikroorganismen die Hauptarbeit. Sie brauchen viel Sauerstoff. Daher pumpen wir feine Luftblasen in das Wasser. Dadurch können die Mikroorganismen Stickstoff und andere organische Stoffe abbauen. Außerdem geben wir zum Schluss noch ein Fällmittel dazu. Dadurch bilden sich Schlammflocken."
+msgstr ""
+"In unseren Belebungsbecken übernehmen Mikroorganismen die Hauptarbeit. Sie "
+"brauchen viel Sauerstoff. Daher pumpen wir feine Luftblasen in das Wasser. "
+"Dadurch können die Mikroorganismen Stickstoff und andere organische Stoffe "
+"abbauen. Außerdem geben wir zum Schluss noch ein Fällmittel dazu. Dadurch "
+"bilden sich Schlammflocken."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_NKB_INTRO"
-msgstr "Im Nachklärbecken setzt sich der Belebtschlamm, also die Mikroorganismen mit den organischen Stoffen, ab. Das klare, gereinigte Wasser bleibt oben und fließt weiter zum Ablauf."
+msgstr ""
+"Im Nachklärbecken setzt sich der Belebtschlamm, also die Mikroorganismen mit "
+"den organischen Stoffen, ab. Das klare, gereinigte Wasser bleibt oben und "
+"fließt weiter zum Ablauf."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_VKB_HYDRA"
-msgstr "Dieser Schieber kontrolliert das hydraulische Verhältnis der gesamten Anlage. Das Wasser fließt aufgrund von Höhenunterschieden ohne den Einsatz von Pumpen."
+msgstr ""
+"Dieser Schieber kontrolliert das hydraulische Verhältnis der gesamten "
+"Anlage. Das Wasser fließt aufgrund von Höhenunterschieden ohne den Einsatz "
+"von Pumpen."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_WASSERRAD"
-msgstr "Hier ist die Reinigung abgeschlossen. Das saubere Wasser fließt in die Ohre. Dabei treibt das Wasser ein Wasserrad an und kann so Energie erzeugen. Das erlaubt, Strom in der Nacht für die Sensoren und Sicherheitselementen zu sorgen."
+msgstr ""
+"Hier ist die Reinigung abgeschlossen. Das saubere Wasser fließt in die Ohre. "
+"Dabei treibt das Wasser ein Wasserrad an und kann so Energie erzeugen. Das "
+"erlaubt, Strom in der Nacht für die Sensoren und Sicherheitselementen zu "
+"sorgen."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_ZULAUF_SANDFANG"
-msgstr "Hier ist das Sandfanggebläse. Mit Luft wird dafür gesorgt, dass sich Sand und Fett voneinander trennen, damit beides später einfacher entfernt werden kann."
+msgstr ""
+"Hier ist das Sandfanggebläse. Mit Luft wird dafür gesorgt, dass sich Sand "
+"und Fett voneinander trennen, damit beides später einfacher entfernt werden "
+"kann."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_LABOR_1"
-msgstr "Im Belebungsbecken wird Ammonium zu Nitrat umgewandelt. Anschließend wird das Nitrat wieder zu Stickstoff abgebaut. Das nennt man Nitrifikation und Denitrifikation. In größeren Mengen kann Stickstoff für Fische und andere Wasserlebewesen schädlich sein. Deshalb müssen wir ihn aus dem Abwasser entfernen.\nOh. Die Nitratwerte sind plötzlich ziemlich hoch. Jetzt ist die Frage: Ist die Sonde kaputt, oder läuft bei der Reinigung etwas schief?\nFür die Nitrifikation brauchen die Mikroorganismen genug Sauerstoff. Kommt genug Luft im Belebungsbecken an? Prüfe die Gebläse und die Belüftung."
+msgstr ""
+"Im Belebungsbecken wird Ammonium zu Nitrat umgewandelt. Anschließend wird "
+"das Nitrat wieder zu Stickstoff abgebaut. Das nennt man Nitrifikation und "
+"Denitrifikation. In größeren Mengen kann Stickstoff für Fische und andere "
+"Wasserlebewesen schädlich sein. Deshalb müssen wir ihn aus dem Abwasser "
+"entfernen.\n"
+"Oh. Die Nitratwerte sind plötzlich ziemlich hoch. Jetzt ist die Frage: Ist "
+"die Sonde kaputt, oder läuft bei der Reinigung etwas schief?\n"
+"Für die Nitrifikation brauchen die Mikroorganismen genug Sauerstoff. Kommt "
+"genug Luft im Belebungsbecken an? Prüfe die Gebläse und die Belüftung."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_RECHENRAUM_1"
-msgstr "Hey! Willkommen im Rechenraum. Hier fließt das Abwasser durch ein Gitter, das Müll und andere Abfälle rausfiltert, bevor sie in den Prozess kommen.\nDer Filterstufenrechen hält Feststoffe wie Feuchttücher, Plastik und Hygieneartikel zurück. Solche Dinge gehören nicht in den Abfluss. Sie können die Anlage verstopfen und beschädigen.\nDas Ganze nennt man Rechengut und das wird unten im Raum gepresst und verpackt.\nUnd der schwarze Behälter da? Das ist ein Filter, der die giftigen Gase aus dem Abwasser auffängt und reinigt."
+msgstr ""
+"Hey! Willkommen im Rechenraum. Hier fließt das Abwasser durch ein Gitter, "
+"das Müll und andere Abfälle rausfiltert, bevor sie in den Prozess kommen.\n"
+"Der Filterstufenrechen hält Feststoffe wie Feuchttücher, Plastik und "
+"Hygieneartikel zurück. Solche Dinge gehören nicht in den Abfluss. Sie können "
+"die Anlage verstopfen und beschädigen.\n"
+"Das Ganze nennt man Rechengut und das wird unten im Raum gepresst und "
+"verpackt.\n"
+"Und der schwarze Behälter da? Das ist ein Filter, der die giftigen Gase aus "
+"dem Abwasser auffängt und reinigt."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_PAUSE_RAUM"
-msgstr "Hier ist unser Pausenraum. Du kannst gerne Platz nehmen, wenn du möchtest."
+msgstr ""
+"Hier ist unser Pausenraum. Du kannst gerne Platz nehmen, wenn du möchtest."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_GASSPEICHER"
-msgstr "In unserem Gasspeicher wird das Biogas gesammelt, wie in einem großen Luftballon innerhalb des Metallturms: Er wird mit Gas gefüllt und gibt es wieder ab, wenn wir es brauchen. Früher hatten wir nur den kleineren Speicher, aber der hat nicht gereicht. Und Achtung: Die Leiter ist hier nicht komplett dargestellt! also bitte gut festhalten!"
+msgstr ""
+"In unserem Gasspeicher wird das Biogas gesammelt, wie in einem großen "
+"Luftballon innerhalb des Metallturms: Er wird mit Gas gefüllt und gibt es "
+"wieder ab, wenn wir es brauchen. Früher hatten wir nur den kleineren "
+"Speicher, aber der hat nicht gereicht. Und Achtung: Die Leiter ist hier "
+"nicht komplett dargestellt! also bitte gut festhalten!"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_AUSLASS_1"
-msgstr "Hier leitet die Kläranlage das Wasser in den Fluss. Es gibt in Moment leider keinen Fluss! Und kein Wasser."
+msgstr ""
+"Hier leitet die Kläranlage das Wasser in den Fluss. Es gibt in Moment leider "
+"keinen Fluss! Und kein Wasser."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_FOERDERBAND"
-msgstr "Die Schlammkugeln aus dem Dekanter werden mithilfe dieser Anlage in einen Rollcontainer gefördert, sodass sie später abtransportiert werden können. Ups, im Moment ist sie ausgeschaltet."
+msgstr ""
+"Die Schlammkugeln aus dem Dekanter werden mithilfe dieser Anlage in einen "
+"Rollcontainer gefördert, sodass sie später abtransportiert werden können. "
+"Ups, im Moment ist sie ausgeschaltet."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_TEMPERATUR_1"
-msgstr "Unsere Faultürme arbeiten mit mesophiler Faulung. Die Bakterien bauen den Schlamm ohne Sauerstoff ab und bilden dabei Biogas. Am besten arbeiten sie bei etwa 38 bis 40 °C. Unser Faulturm hat aber nur 37 °C. Da stimmt etwas nicht. Lass uns die Heizung überprüfen.\nAls Erstes: Ist das Heizwasser überhaupt warm? Prüfe die Temperatur.\nDas Wasser ist warm. Dann schau dir die Handschieber an. Sind Vorlauf und Rücklauf beide geöffnet? Beobachte die Temperatur: sobald wir wieder zwischen 38 und 40 °C liegen, passt die Faulung."
+msgstr ""
+"Unsere Faultürme arbeiten mit mesophiler Faulung. Die Bakterien bauen den "
+"Schlamm ohne Sauerstoff ab und bilden dabei Biogas. Am besten arbeiten sie "
+"bei etwa 38 bis 40 °C. Unser Faulturm hat aber nur 37 °C. Da stimmt etwas "
+"nicht. Lass uns die Heizung überprüfen.\n"
+"Als Erstes: Ist das Heizwasser überhaupt warm? Prüfe die Temperatur.\n"
+"Das Wasser ist warm. Dann schau dir die Handschieber an. Sind Vorlauf und "
+"Rücklauf beide geöffnet? Beobachte die Temperatur: sobald wir wieder "
+"zwischen 38 und 40 °C liegen, passt die Faulung."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_PHOTOVOLTAIK_1"
-msgstr "Oh nein! Jemand hat unsere Photovoltaikanlage gestohlen... sie sollte eigentlich hier sein.\nDie Photovoltaikanlage ermöglicht es uns, die Kläranlage autark zu betreiben."
+msgstr ""
+"Oh nein! Jemand hat unsere Photovoltaikanlage gestohlen... sie sollte "
+"eigentlich hier sein.\n"
+"Die Photovoltaikanlage ermöglicht es uns, die Kläranlage autark zu betreiben."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"

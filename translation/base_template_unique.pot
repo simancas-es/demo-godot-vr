@@ -1,5 +1,4 @@
 # LANGUAGE translation for VirtualTour for the following files:
-#
 # res://assets/inventory_objects/demo_aerator/aerator_head.json
 # res://assets/inventory_objects/ice_breaker/eispickel.tscn
 # res://assets/world_objects/hillersleben/doors/bg_elektro_tür.tscn
@@ -19,6 +18,7 @@
 # res://assets/world_objects/hillersleben/ibc_aquaplan_eurofloc.tscn
 # res://assets/zones/demo_gerwisch/desc_gerwisch.json
 # res://assets/zones/demo_hochschule/desc_hochschule.json
+# res://assets/zones/demo_vista/desc_vista.json
 # res://assets/zones/demo_vista/rooms/vista_outside/gebäude.json
 # res://assets/zones/demo_vista/rooms/vista_outside/schutzplanke.json
 # res://assets/zones/demo_vista/rooms/vista_outside/schutzplanke2.json
@@ -27,8 +27,15 @@
 # res://assets/zones/demo_vista/rooms/vista_vlt3/controlroom.json
 # res://assets/zones/demo_vista/rooms/vista_vlt3/palletjack.json
 # res://assets/zones/demo_vista/rooms/vista_vlt3/telescopestructure.json
-# res://assets/zones/demo_vista/desc_vista.json
 # res://assets/zones/hillersleben/desc_hillersleben.json
+# res://clases/controlledobject.gd
+# res://clases/falconview.gd
+# res://clases/fpv/area_check.gd
+# res://clases/fpv/fpv.gd
+# res://clases/fpv/fpv.tscn
+# res://clases/fpv/fpv_camera.gd
+# res://clases/fpv/fpv_raycast.gd
+# res://clases/fpv/fpv_view_mode_controller.gd
 # res://clases/fpv/fsm/environment.gd
 # res://clases/fpv/fsm/falcon.gd
 # res://clases/fpv/fsm/fixed.gd
@@ -38,34 +45,28 @@
 # res://clases/fpv/fsm/physics.gd
 # res://clases/fpv/fsm/room.gd
 # res://clases/fpv/fsm/still.gd
-# res://clases/fpv/test/test_fpv_hint_context.gd
-# res://clases/fpv/test/test_fpv_hint_context.tscn
-# res://clases/fpv/test/test_fpv_ladder.gd
-# res://clases/fpv/test/test_fpv_ladder.tscn
-# res://clases/fpv/area_check.gd
-# res://clases/fpv/fpv.gd
-# res://clases/fpv/fpv.tscn
-# res://clases/fpv/fpv_camera.gd
-# res://clases/fpv/fpv_raycast.gd
-# res://clases/fpv/fpv_view_mode_controller.gd
 # res://clases/fpv/interaction_hint.gd
 # res://clases/fpv/interaction_hint_context.gd
 # res://clases/fpv/interaction_hint_resolver.gd
 # res://clases/fpv/interaction_logic.gd
 # res://clases/fpv/inventory_logic.gd
 # res://clases/fpv/system_physical_control_grabber.gd
-# res://clases/helpers/task_text/menu/debug_task_list.gd
-# res://clases/helpers/task_text/menu/debug_task_list.tscn
-# res://clases/helpers/task_text/test/debug_task_list_test.gd
-# res://clases/helpers/task_text/test/debug_task_list_test.tscn
-# res://clases/helpers/task_text/test/task_text_test.gd
-# res://clases/helpers/task_text/test/task_text_test.tscn
-# res://clases/helpers/task_text/task_text_manager.gd
+# res://clases/fpv/test/test_fpv_hint_context.gd
+# res://clases/fpv/test/test_fpv_hint_context.tscn
+# res://clases/fpv/test/test_fpv_ladder.gd
+# res://clases/fpv/test/test_fpv_ladder.tscn
 # res://clases/helpers/helpers.gd
 # res://clases/helpers/inventory_object_pickupable_persistence.gd
 # res://clases/helpers/inventory_persistence.gd
 # res://clases/helpers/systemtasks_result_ui_print.gd
 # res://clases/helpers/systemtasks_tasksmanager_persistence.gd
+# res://clases/helpers/task_text/menu/debug_task_list.gd
+# res://clases/helpers/task_text/menu/debug_task_list.tscn
+# res://clases/helpers/task_text/task_text_manager.gd
+# res://clases/helpers/task_text/test/debug_task_list_test.gd
+# res://clases/helpers/task_text/test/debug_task_list_test.tscn
+# res://clases/helpers/task_text/test/task_text_test.gd
+# res://clases/helpers/task_text/test/task_text_test.tscn
 # res://clases/interaction/door_base.gd
 # res://clases/interaction/interaction.gd
 # res://clases/interaction/interaction_context.gd
@@ -81,23 +82,21 @@
 # res://clases/panorama/panoramainformationdoor.gd
 # res://clases/panorama/panoramainformationpolygon.gd
 # res://clases/panorama/ui_text3d.gd
+# res://clases/player_data.gd
 # res://clases/room360/datapolygonlocation.gd
 # res://clases/room360/room360.gd
 # res://clases/room360/roomloader.gd
 # res://clases/room360/roomloader.tscn
+# res://clases/zones/basezone.gd
 # res://clases/zones/test/test_zone_minimap_overlay_flow.gd
 # res://clases/zones/test/test_zone_minimap_overlay_flow.tscn
 # res://clases/zones/test/test_zone_minimap_projection.gd
 # res://clases/zones/test/test_zone_minimap_projection.tscn
-# res://clases/zones/basezone.gd
-# res://clases/zones/zoneinformation.gd
-# res://clases/zones/zoneinformationtemplate.json
 # res://clases/zones/zone_fpv_runtime.gd
 # res://clases/zones/zone_minimap.gd
 # res://clases/zones/zone_minimap.tscn
-# res://clases/controlledobject.gd
-# res://clases/falconview.gd
-# res://clases/player_data.gd
+# res://clases/zones/zoneinformation.gd
+# res://clases/zones/zoneinformationtemplate.json
 # res://content/inv_objects/beaker_filled/beaker_filled.json
 # res://content/inv_objects/beaker_filled/sample_bb.tscn
 # res://content/inv_objects/beaker_filled/sample_msb.tscn
@@ -105,27 +104,27 @@
 # res://content/inv_objects/beaker_filled/sample_vkb.tscn
 # res://content/inv_objects/beaker_sampler/beaker_sampler.json
 # res://content/inv_objects/beaker_sampler/beaker_sampler.tscn
+# res://content/inv_objects/default_model.tscn
 # res://content/inv_objects/ice_breaker/ice_breaker.json
 # res://content/inv_objects/sample_bb/sample_bb.json
 # res://content/inv_objects/sample_msb/sample_msb.json
 # res://content/inv_objects/sample_nkb/sample_nkb.json
 # res://content/inv_objects/sample_vkb/sample_vkb.json
 # res://content/inv_objects/wire/wire.json
-# res://content/inv_objects/default_model.tscn
 # res://content/tasks/task_database_demo.json
 # res://content/tasks/task_text.json
 # res://fsm/fsm_uid_classref.gd
 # res://fsm/state.gd
+# res://fsm/state_base.gd
 # res://fsm/statemachine.gd
 # res://fsm/statemachine.tscn
 # res://fsm/statemachine_base.gd
-# res://fsm/state_base.gd
-# res://globals/controllers/controller_base.gd
-# res://globals/controllers/controller_kbm1.gd
-# res://globals/controllers/controller_manager.gd
 # res://globals/audiomanager.gd
 # res://globals/cache.gd
 # res://globals/configmanager.gd
+# res://globals/controllers/controller_base.gd
+# res://globals/controllers/controller_kbm1.gd
+# res://globals/controllers/controller_manager.gd
 # res://globals/entity_catalog.gd
 # res://globals/enums.gd
 # res://globals/environments.gd
@@ -140,6 +139,7 @@
 # res://globals/signalmanager.tscn
 # res://globals/topics.gd
 # res://globals/utils.gd
+# res://menus/animatemenutransition.gd
 # res://menus/choicebutton/buttonchoice.gd
 # res://menus/choicebutton/buttonchoice.tscn
 # res://menus/components/toppanel.gd
@@ -158,6 +158,8 @@
 # res://menus/environmentselector/mapconstraint.gd
 # res://menus/environmentselector/mappanel.gd
 # res://menus/environmentselector/scrollenv.gd
+# res://menus/fsm/menustates/state_menu_inventory.gd
+# res://menus/fsm/menustates/state_menu_settings.gd
 # res://menus/fsm/menustates/statecredits.gd
 # res://menus/fsm/menustates/stateinroom.gd
 # res://menus/fsm/menustates/stateinscene.gd
@@ -167,8 +169,6 @@
 # res://menus/fsm/menustates/statenullmenu.gd
 # res://menus/fsm/menustates/stateselectenv.gd
 # res://menus/fsm/menustates/statesettings.gd
-# res://menus/fsm/menustates/state_menu_inventory.gd
-# res://menus/fsm/menustates/state_menu_settings.gd
 # res://menus/fsm/statemachinemenus.gd
 # res://menus/fsm/statemenus.gd
 # res://menus/icons/scenes/ui_icon_door.tscn
@@ -180,6 +180,8 @@
 # res://menus/infopopup/infopopup.tscn
 # res://menus/infopopup/midtext.gd
 # res://menus/map/mappanel.tscn
+# res://menus/menumaintitle.gd
+# res://menus/menuoptions.gd
 # res://menus/minimap/minimap_control.gd
 # res://menus/minimap/minimap_control.tscn
 # res://menus/minimap/minimap_menu.gd
@@ -188,45 +190,42 @@
 # res://menus/msgtop/msgtop.tscn
 # res://menus/settings/menusettings.tscn
 # res://menus/tasks/toggle_menu.gd
-# res://menus/animatemenutransition.gd
-# res://menus/menumaintitle.gd
-# res://menus/menuoptions.gd
 # res://menus/testing.gd
 # res://menus/testing.tscn
 # res://menus/ui_canvaslayer.gd
-# res://models/demo_basin/concrete_basin/aerator_spine/aerator_spine.tscn
+# res://models/demo_basin/basin_death.gd
 # res://models/demo_basin/concrete_basin/aeration_node.gd
+# res://models/demo_basin/concrete_basin/aerator_spine/aerator_spine.tscn
 # res://models/demo_basin/concrete_basin/concrete_basin.tscn
 # res://models/demo_basin/concrete_basin/fillable_tank.gd
 # res://models/demo_basin/concrete_basin/test_fillable_tank.gd
 # res://models/demo_basin/concrete_basin/test_fillable_tank.tscn
-# res://models/demo_basin/control_system/test/test_basin.gd
-# res://models/demo_basin/control_system/test/test_basin.tscn
 # res://models/demo_basin/control_system/basin_controller.gd
 # res://models/demo_basin/control_system/basin_state.gd
 # res://models/demo_basin/control_system/basin_system.gd
 # res://models/demo_basin/control_system/blower_controller.gd
 # res://models/demo_basin/control_system/demo_basin_catalog.gd
 # res://models/demo_basin/control_system/tank_controller.gd
+# res://models/demo_basin/control_system/test/test_basin.gd
+# res://models/demo_basin/control_system/test/test_basin.tscn
 # res://models/demo_basin/control_system/valve_controller_stateful.gd
 # res://models/demo_basin/control_system/valve_controller_stateless.gd
+# res://models/demo_basin/demo_basin_controller.gd
 # res://models/demo_basin/demo_blower/blower.gd
 # res://models/demo_basin/demo_blower/blower.tscn
+# res://models/demo_basin/demo_concrete_basin.tscn
 # res://models/demo_basin/task/aerator_quest_controller.gd
 # res://models/demo_basin/task_blackboard/demo_task_blackboard.tscn
-# res://models/demo_basin/basin_death.gd
-# res://models/demo_basin/demo_basin_controller.gd
-# res://models/demo_basin/demo_concrete_basin.tscn
 # res://models/demo_manhole/manholecover.tscn
 # res://models/demo_pipes/basic_pipe_valve.gd
 # res://models/demo_pipes/basic_pipe_valve.tscn
 # res://models/demo_pipes/test_basic_pipe_valve.gd
 # res://models/demo_pipes/test_basic_pipe_valve.tscn
-# res://models/doors/door_functions/door_functions.gd
-# res://models/doors/basedoor2m.tscn
 # res://models/doors/basedoor_2m_xrcompatible.gd
 # res://models/doors/basedoor_2m_xrcompatible_gasraum.tscn
 # res://models/doors/basedoor_2m_xrcompatible_labor.tscn
+# res://models/doors/basedoor2m.tscn
+# res://models/doors/door_functions/door_functions.gd
 # res://models/drone_falcon/drone_falcon.gd
 # res://models/interaction/simple_button.tscn
 # res://models/inventory_objects/wire/wire.tscn
@@ -244,11 +243,11 @@
 # res://models/ladders/simple_ladder/ladder.gd
 # res://models/ladders/simple_ladder/simple_ladder.tscn
 # res://models/möbel/sitz.tscn
+# res://models/not_available_block.tscn
 # res://models/platform_rusty/platform_rusty.tscn
 # res://models/pulsating_box/pulsating_box.tscn
 # res://models/van/van.gd
 # res://models/van/van.tscn
-# res://models/not_available_block.tscn
 # res://systems/system-differential-diffusion/system_differential_diffusion_controller.gd
 # res://systems/system-differential-diffusion/system_differential_diffusion_settings.gd
 # res://systems/system-differential-diffusion/system_differential_diffusion_volume.gd
@@ -256,6 +255,9 @@
 # res://systems/system-differential-diffusion/test_differential_diffusion.tscn
 # res://systems/system-differential-diffusion/test_grid_update_color.gd
 # res://systems/system-differential-diffusion/test_grid_volume.gd
+# res://systems/system-inventory/inventory_settings.gd
+# res://systems/system-inventory/inventory_ui_settings.gd
+# res://systems/system-inventory/inventory_uid_classref.gd
 # res://systems/system-inventory/inventory-backend/inspect_translations_template.json
 # res://systems/system-inventory/inventory-backend/inventory.gd
 # res://systems/system-inventory/inventory-backend/inventory_object.gd
@@ -266,17 +268,17 @@
 # res://systems/system-inventory/inventory-ui/fsm/inspect.gd
 # res://systems/system-inventory/inventory-ui/fsm/invisible.gd
 # res://systems/system-inventory/inventory-ui/fsm/only_bar.gd
-# res://systems/system-inventory/inventory-ui/fsm/statemachine_base.gd
 # res://systems/system-inventory/inventory-ui/fsm/state_base.gd
+# res://systems/system-inventory/inventory-ui/fsm/statemachine_base.gd
+# res://systems/system-inventory/inventory-ui/inventory_bottombar.gd
 # res://systems/system-inventory/inventory-ui/inventory_grid/inventorygrid.gd
 # res://systems/system-inventory/inventory-ui/inventory_grid/inventorygrid.tscn
+# res://systems/system-inventory/inventory-ui/inventory_ui.gd
+# res://systems/system-inventory/inventory-ui/inventory_ui.tscn
 # res://systems/system-inventory/inventory-ui/item_inspect/inspecttext.gd
 # res://systems/system-inventory/inventory-ui/item_inspect/inventory_panelinspect.gd
 # res://systems/system-inventory/inventory-ui/item_inspect/item_inspect.gd
 # res://systems/system-inventory/inventory-ui/item_inspect/item_inspect.tscn
-# res://systems/system-inventory/inventory-ui/inventory_bottombar.gd
-# res://systems/system-inventory/inventory-ui/inventory_ui.gd
-# res://systems/system-inventory/inventory-ui/inventory_ui.tscn
 # res://systems/system-inventory/inventory-ui/item_slot.gd
 # res://systems/system-inventory/inventory-ui/item_slot.tscn
 # res://systems/system-inventory/inventory-ui/test_inventory_signalmanager.gd
@@ -287,14 +289,11 @@
 # res://systems/system-inventory/test/test_inventory_backend.tscn
 # res://systems/system-inventory/test/test_inventory_ui.gd
 # res://systems/system-inventory/test/test_inventory_ui.tscn
-# res://systems/system-inventory/inventory_settings.gd
-# res://systems/system-inventory/inventory_uid_classref.gd
-# res://systems/system-inventory/inventory_ui_settings.gd
-# res://systems/system-minimap/test/test_minimap_controller.gd
-# res://systems/system-minimap/test/test_minimap_controller.tscn
 # res://systems/system-minimap/minimap_controller.gd
 # res://systems/system-minimap/minimap_marker_state.gd
 # res://systems/system-minimap/minimap_tracker.gd
+# res://systems/system-minimap/test/test_minimap_controller.gd
+# res://systems/system-minimap/test/test_minimap_controller.tscn
 # res://systems/system-physics-control/default_markers/test_grab_icon_activated.tscn
 # res://systems/system-physics-control/default_markers/test_grab_icon_available.tscn
 # res://systems/system-physics-control/system_physical_control_grabber.gd
@@ -309,9 +308,9 @@
 # res://systems/system-spatial-concentration/system_spatial_concentration_source.gd
 # res://systems/system-spatial-concentration/test_spatial_concentration.gd
 # res://systems/system-spatial-concentration/test_spatial_concentration.tscn
+# res://systems/system-stateful-persistence/examples.gd
 # res://systems/system-stateful-persistence/interfaces/system_world_state_registry_interface_position.gd
 # res://systems/system-stateful-persistence/interfaces/system_world_state_registry_interface_simpleattributes.gd
-# res://systems/system-stateful-persistence/examples.gd
 # res://systems/system-stateful-persistence/system_world_state_manager.gd
 # res://systems/system-stateful-persistence/system_world_state_registry.gd
 # res://systems/system-stateful-persistence/system_world_state_registry_interface.gd
@@ -328,12 +327,6 @@
 # res://systems/system-tasks/base_conditions/cond_signal.gd
 # res://systems/system-tasks/base_results/result_giveitem.gd
 # res://systems/system-tasks/base_results/result_print.gd
-# res://systems/system-tasks/test/cilinder_get_quest.gd
-# res://systems/system-tasks/test/task_database.json
-# res://systems/system-tasks/test/test_camera.gd
-# res://systems/system-tasks/test/test_signal.gd
-# res://systems/system-tasks/test/test_tasks.gd
-# res://systems/system-tasks/test/test_tasks.tscn
 # res://systems/system-tasks/system_tasks_condition.gd
 # res://systems/system-tasks/system_tasks_locator.gd
 # res://systems/system-tasks/system_tasks_manager.gd
@@ -342,13 +335,19 @@
 # res://systems/system-tasks/system_tasks_starter.gd
 # res://systems/system-tasks/system_tasks_uid_classref.gd
 # res://systems/system-tasks/system_tasks_unit.gd
+# res://systems/system-tasks/test/cilinder_get_quest.gd
+# res://systems/system-tasks/test/task_database.json
+# res://systems/system-tasks/test/test_camera.gd
+# res://systems/system-tasks/test/test_signal.gd
+# res://systems/system-tasks/test/test_tasks.gd
+# res://systems/system-tasks/test/test_tasks.tscn
+# res://test_cube.tscn
 # res://test_utils/frame_time_tester.gd
 # res://test_utils/frame_time_tester.tscn
+# res://XR/demo_staging.gd
+# res://XR/demo_staging.tscn
 # res://XR/helpers/item_pickable_swapper.gd
 # res://XR/helpers/item_pickable_swapper.tscn
-# res://XR/scenes/doors/parts/door_handle_grab.tscn
-# res://XR/scenes/doors/test_scene/xrdoorsdemo.tscn
-# res://XR/scenes/doors/test_scene/xrstart.gd
 # res://XR/scenes/doors/debug_label.gd
 # res://XR/scenes/doors/door_api.gd
 # res://XR/scenes/doors/door_body.gd
@@ -362,9 +361,12 @@
 # res://XR/scenes/doors/hinged_door.tscn
 # res://XR/scenes/doors/hinged_door_api.gd
 # res://XR/scenes/doors/hinged_door_body.gd
+# res://XR/scenes/doors/parts/door_handle_grab.tscn
 # res://XR/scenes/doors/sliding_door.tscn
 # res://XR/scenes/doors/sliding_door_api.gd
 # res://XR/scenes/doors/sliding_door_body.gd
+# res://XR/scenes/doors/test_scene/xrdoorsdemo.tscn
+# res://XR/scenes/doors/test_scene/xrstart.gd
 # res://XR/scenes/doors/xrdoors_uid_classref.gd
 # res://XR/scenes/helpers/axis/axis.gd
 # res://XR/scenes/helpers/axis/axis.tscn
@@ -378,6 +380,8 @@
 # res://XR/scenes/interactables/control_pad/control_pad_location.gd
 # res://XR/scenes/interactables/control_pad/control_pad_location_left.tscn
 # res://XR/scenes/interactables/control_pad/control_pad_location_right.tscn
+# res://XR/scenes/interactables/instructions.tscn
+# res://XR/scenes/interactables/instructions_2d.tscn
 # res://XR/scenes/interactables/objects/interactable_handle_pickup.gd
 # res://XR/scenes/interactables/objects/item_pickable.gd
 # res://XR/scenes/interactables/objects/item_pickable.tscn
@@ -391,8 +395,6 @@
 # res://XR/scenes/interactables/objects/slider_general.tscn
 # res://XR/scenes/interactables/objects/wheel_general.gd
 # res://XR/scenes/interactables/objects/wheel_general.tscn
-# res://XR/scenes/interactables/instructions.tscn
-# res://XR/scenes/interactables/instructions_2d.tscn
 # res://XR/scenes/interactables/snap_interaction.gd
 # res://XR/scenes/interactables/snap_interaction.tscn
 # res://XR/scenes/laser/color_change_cube.gd
@@ -400,17 +402,12 @@
 # res://XR/scenes/laser/display.tscn
 # res://XR/scenes/laser/keyboard_test_screen.gd
 # res://XR/scenes/laser/keyboard_test_screen.tscn
+# res://XR/scenes/places/basic_map.tscn
+# res://XR/scenes/places/demo/demo.gd
+# res://XR/scenes/places/demo/demo.tscn
+# res://XR/scenes/places/demo/demo_xr_level.tscn
 # res://XR/scenes/places/demo/environment/climb_ladder.tscn
 # res://XR/scenes/places/demo/environment/tower.tscn
-# res://XR/scenes/places/demo/objects/sniper/firearm_bolt.gd
-# res://XR/scenes/places/demo/objects/sniper/firearm_slide.gd
-# res://XR/scenes/places/demo/objects/sniper/firearm_trigger.gd
-# res://XR/scenes/places/demo/objects/sniper/picatinny_rail.tscn
-# res://XR/scenes/places/demo/objects/sniper/picatinny_scope.tscn
-# res://XR/scenes/places/demo/objects/sniper/scope_display.gd
-# res://XR/scenes/places/demo/objects/sniper/scope_display.tscn
-# res://XR/scenes/places/demo/objects/sniper/sniper_rifle.gd
-# res://XR/scenes/places/demo/objects/sniper/sniper_rifle.tscn
 # res://XR/scenes/places/demo/objects/belt_snap_zone.tscn
 # res://XR/scenes/places/demo/objects/grab_ball.tscn
 # res://XR/scenes/places/demo/objects/grab_cube.gd
@@ -425,28 +422,39 @@
 # res://XR/scenes/places/demo/objects/snap_toy_yellow.tscn
 # res://XR/scenes/places/demo/objects/snap_tray.gd
 # res://XR/scenes/places/demo/objects/snap_tray.tscn
+# res://XR/scenes/places/demo/objects/sniper/firearm_bolt.gd
+# res://XR/scenes/places/demo/objects/sniper/firearm_slide.gd
+# res://XR/scenes/places/demo/objects/sniper/firearm_trigger.gd
+# res://XR/scenes/places/demo/objects/sniper/picatinny_rail.tscn
+# res://XR/scenes/places/demo/objects/sniper/picatinny_scope.tscn
+# res://XR/scenes/places/demo/objects/sniper/scope_display.gd
+# res://XR/scenes/places/demo/objects/sniper/scope_display.tscn
+# res://XR/scenes/places/demo/objects/sniper/sniper_rifle.gd
+# res://XR/scenes/places/demo/objects/sniper/sniper_rifle.tscn
 # res://XR/scenes/places/demo/objects/table.tscn
 # res://XR/scenes/places/demo/objects/teacup.tscn
 # res://XR/scenes/places/demo/objects/teacup_stand.tscn
-# res://XR/scenes/places/demo/demo.gd
-# res://XR/scenes/places/demo/demo.tscn
-# res://XR/scenes/places/demo/demo_xr_level.tscn
-# res://XR/scenes/places/basic_map.tscn
 # res://XR/scenes/places/demo_scene_base.gd
 # res://XR/scenes/portal/portal.gd
 # res://XR/scenes/portal/portal.tscn
+# res://XR/scenes/xr_van.gd
+# res://XR/scenes/xr_van.tscn
 # res://XR/scenes/xrplayer/bone_poke.gd
 # res://XR/scenes/xrplayer/bone_poke.tscn
 # res://XR/scenes/xrplayer/debug_collision_layer.gd
 # res://XR/scenes/xrplayer/debug_collision_layer.tscn
 # res://XR/scenes/xrplayer/function_pickup_disables_collision.gd
 # res://XR/scenes/xrplayer/function_pickup_disables_collision.tscn
-# res://XR/scenes/xrplayer/xrplayer.gd
-# res://XR/scenes/xrplayer/xrplayer.tscn
 # res://XR/scenes/xrplayer/xr_menuoptions.gd
 # res://XR/scenes/xrplayer/xr_settings.tscn
-# res://XR/scenes/xr_van.gd
-# res://XR/scenes/xr_van.tscn
+# res://XR/scenes/xrplayer/xrplayer.gd
+# res://XR/scenes/xrplayer/xrplayer.tscn
+# res://XR/XR_UIDREF.gd
+# res://XR/zones_xr/logik_grab_object_sub.gd
+# res://XR/zones_xr/xr_adapter.gd
+# res://XR/zones_xr/xr_adapter.tscn
+# res://XR/zones_xr/zone_xr_door_demos.tscn
+# res://XR/zones_xr/zone_xr_hillersleben.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/bhkw/logik_valve_control.gd
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_elektro_tür.tscn
 # res://XR/zones_xr/zone_xr_hillersleben/doors_hillersleben/xr_bg_garage_tür.tscn
@@ -471,30 +479,30 @@
 # res://XR/zones_xr/zone_xr_hillersleben/wire/wire_snap_task.gd
 # res://XR/zones_xr/zone_xr_hillersleben/xr_logik_bgebaeude_container_u_gdoor.gd
 # res://XR/zones_xr/zone_xr_hillersleben/xr_q_nh_4.gd
+# res://XR/zones_xr/zone_xr_hochschule.tscn
+# res://XR/zones_xr/zone_xr_sample_basin.tscn
 # res://XR/zones_xr/zone_xr_sample_basin/logic_xr_blowers.gd
 # res://XR/zones_xr/zone_xr_sample_basin/logic_xr_diffuser_interaction.gd
 # res://XR/zones_xr/zone_xr_sample_basin/logic_xr_door.gd
 # res://XR/zones_xr/zone_xr_sample_basin/logic_xr_wheel.gd
-# res://XR/zones_xr/logik_grab_object_sub.gd
-# res://XR/zones_xr/xr_adapter.gd
-# res://XR/zones_xr/xr_adapter.tscn
-# res://XR/zones_xr/zone_xr_door_demos.tscn
-# res://XR/zones_xr/zone_xr_hillersleben.tscn
-# res://XR/zones_xr/zone_xr_hochschule.tscn
-# res://XR/zones_xr/zone_xr_sample_basin.tscn
 # res://XR/zones_xr/zone_xr_tech_demos.tscn
-# res://XR/demo_staging.gd
-# res://XR/demo_staging.tscn
-# res://XR/XR_UIDREF.gd
 # res://zones/demo_vista/rooms/vista_outside.tscn
 # res://zones/demo_vista/rooms/vista_vlt3-inside.tscn
 # res://zones/demo_vista/zoneobservatorio.gd
 # res://zones/demo_vista/zoneobservatorio.tscn
 # res://zones/gerwisch/zonegerwisch.tscn
+# res://zones/hillersleben/2026_06_04_bhkw_raum.tscn
+# res://zones/hillersleben/2026_06_16_pumpenraum.tscn
+# res://zones/hillersleben/containerraum.tscn
+# res://zones/hillersleben/dialog_activate.gd
+# res://zones/hillersleben/gasraum.tscn
+# res://zones/hillersleben/global_task_controller.gd
 # res://zones/hillersleben/gltf_scenes/2026_05_26_sand_fettfang.tscn
 # res://zones/hillersleben/gltf_scenes/2026_06_04_bhkw_raum.tscn
 # res://zones/hillersleben/gltf_scenes/container.tscn
 # res://zones/hillersleben/gltf_scenes/foerderband.tscn
+# res://zones/hillersleben/info_light.tscn
+# res://zones/hillersleben/raum_büro.tscn
 # res://zones/hillersleben/scripts/audio/dialog_activate.tscn
 # res://zones/hillersleben/scripts/audio/dialog_cutout.tscn
 # res://zones/hillersleben/scripts/audio/dialog_text_blase.gd
@@ -514,25 +522,25 @@
 # res://zones/hillersleben/scripts/hl_flow_model/band_control/bandcontrol.gd
 # res://zones/hillersleben/scripts/hl_flow_model/band_control/test.gd
 # res://zones/hillersleben/scripts/hl_flow_model/band_control/test.tscn
-# res://zones/hillersleben/scripts/hl_flow_model/pid/binding.gd
-# res://zones/hillersleben/scripts/hl_flow_model/pid/pid.gd
-# res://zones/hillersleben/scripts/hl_flow_model/pid/test.gd
-# res://zones/hillersleben/scripts/hl_flow_model/pid/test.tscn
-# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/derived/source_edge.gd
-# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/container.gd
-# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/controller.gd
-# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/edge.gd
-# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/uidref.gd
-# res://zones/hillersleben/scripts/hl_flow_model/simulation/tests/test.gd
-# res://zones/hillersleben/scripts/hl_flow_model/simulation/tests/test.tscn
-# res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_containers.gd
-# res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_edges.gd
-# res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_simulation.gd
 # res://zones/hillersleben/scripts/hl_flow_model/init_setup.gd
 # res://zones/hillersleben/scripts/hl_flow_model/main.gd
 # res://zones/hillersleben/scripts/hl_flow_model/main.tscn
 # res://zones/hillersleben/scripts/hl_flow_model/overview.gd
 # res://zones/hillersleben/scripts/hl_flow_model/overview.tscn
+# res://zones/hillersleben/scripts/hl_flow_model/pid/binding.gd
+# res://zones/hillersleben/scripts/hl_flow_model/pid/pid.gd
+# res://zones/hillersleben/scripts/hl_flow_model/pid/test.gd
+# res://zones/hillersleben/scripts/hl_flow_model/pid/test.tscn
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/container.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/controller.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/derived/source_edge.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/edge.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/classes/uidref.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_containers.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_edges.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/hl_simulation.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/tests/test.gd
+# res://zones/hillersleben/scripts/hl_flow_model/simulation/tests/test.tscn
 # res://zones/hillersleben/scripts/hl_flow_model_controls/logik_pump_control_flowmodel.gd
 # res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_fake_empty.gd
 # res://zones/hillersleben/scripts/hl_flow_model_controls/pump_control_fake_flow.gd
@@ -542,6 +550,9 @@
 # res://zones/hillersleben/scripts/hl_flow_model_controls/pump_fake_inflow.tscn
 # res://zones/hillersleben/scripts/hl_flow_model_controls/xr_pump_control_button.gd
 # res://zones/hillersleben/scripts/ibc/sys_phys_control_ibc.tscn
+# res://zones/hillersleben/scripts/logik_container_movement.gd
+# res://zones/hillersleben/scripts/logik_doors_container.gd
+# res://zones/hillersleben/scripts/mg_klappbare_tür.gd
 # res://zones/hillersleben/scripts/nkb/ice_breaker.gd
 # res://zones/hillersleben/scripts/nkb/ice_schrauben.gd
 # res://zones/hillersleben/scripts/nkb/ice_wedge.gd
@@ -554,12 +565,15 @@
 # res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge.tscn
 # res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge_bhkw.gd
 # res://zones/hillersleben/scripts/sludge_temperature_gauge/sludge_temperature_gauge_bhkw.tscn
+# res://zones/hillersleben/scripts/task_locators/security_checks/area_3d_visual.gd
+# res://zones/hillersleben/scripts/task_locators/security_checks/Area3DVisual.tscn
+# res://zones/hillersleben/scripts/task_locators/task_sequencer.gd
 # res://zones/hillersleben/scripts/tasks/bb/bb_consumer.gd
-# res://zones/hillersleben/scripts/tasks/bb/pid_nh4_rowpanel.gd
-# res://zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 # res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.gd
 # res://zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
 # res://zones/hillersleben/scripts/tasks/bb/pid_nh_4_coordinator.gd
+# res://zones/hillersleben/scripts/tasks/bb/pid_nh4_rowpanel.gd
+# res://zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 # res://zones/hillersleben/scripts/tasks/bhkw/info_light.gd
 # res://zones/hillersleben/scripts/tasks/bhkw/info_light.tscn
 # res://zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd
@@ -570,14 +584,11 @@
 # res://zones/hillersleben/scripts/tasks/dekanter/sys_phys_control_ibc.gd
 # res://zones/hillersleben/scripts/tasks/fence/q_fence_check.gd
 # res://zones/hillersleben/scripts/tasks/security_check/sequencer_consumer_security.gd
-# res://zones/hillersleben/scripts/tasks/vorstellung/sequencer_consumer_vorstellung.gd
 # res://zones/hillersleben/scripts/tasks/sequence_consumer.gd
 # res://zones/hillersleben/scripts/tasks/task_enter_checkpoint.gd
 # res://zones/hillersleben/scripts/tasks/task_enter_checkpoint.tscn
 # res://zones/hillersleben/scripts/tasks/task_sequencer.tscn
-# res://zones/hillersleben/scripts/task_locators/security_checks/Area3DVisual.tscn
-# res://zones/hillersleben/scripts/task_locators/security_checks/area_3d_visual.gd
-# res://zones/hillersleben/scripts/task_locators/task_sequencer.gd
+# res://zones/hillersleben/scripts/tasks/vorstellung/sequencer_consumer_vorstellung.gd
 # res://zones/hillersleben/scripts/utils/steal_meshinstance.gd
 # res://zones/hillersleben/scripts/utils/steal_meshinstance.tscn
 # res://zones/hillersleben/scripts/valve_interaction/connector_valve_gauge.gd
@@ -594,22 +605,10 @@
 # res://zones/hillersleben/scripts/water_visuals/logik_wasserrad.gd
 # res://zones/hillersleben/scripts/water_visuals/logik_waterlevel_path.gd
 # res://zones/hillersleben/scripts/water_visuals/WaterLevelFollower.tscn
-# res://zones/hillersleben/scripts/logik_container_movement.gd
-# res://zones/hillersleben/scripts/logik_doors_container.gd
-# res://zones/hillersleben/scripts/mg_klappbare_tür.gd
-# res://zones/hillersleben/2026_06_04_bhkw_raum.tscn
-# res://zones/hillersleben/2026_06_16_pumpenraum.tscn
-# res://zones/hillersleben/containerraum.tscn
-# res://zones/hillersleben/dialog_activate.gd
-# res://zones/hillersleben/gasraum.tscn
-# res://zones/hillersleben/global_task_controller.gd
-# res://zones/hillersleben/info_light.tscn
-# res://zones/hillersleben/raum_büro.tscn
 # res://zones/hillersleben/vorklärbecken.tscn
 # res://zones/hillersleben/zonehillersleben.tscn
 # res://zones/hochschule/zonehochschule.gd
 # res://zones/hochschule/zonehochschule.tscn
-# res://test_cube.tscn
 #
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -702,13 +701,13 @@ msgstr ""
 
 #: globals/root.tscn
 msgid ""
-"WASD - Bewegung/Movement\n"
-"Leertaste / Space - Springen/Jump\n"
-"Umschalt / Shift - Rennen/Run\n"
-"E - Interaction, LMB\n"
-"RT - Inventarzyklen, I - Inventar\n"
-"Mausrad/Mousewheel - Zoom\n"
-"Esc - Menu, H - Reset Position\n"
+"WASD - Bewegung/Movement\r\n"
+"Leertaste / Space - Springen/Jump\r\n"
+"Umschalt / Shift - Rennen/Run\r\n"
+"E - Interaction, LMB\r\n"
+"RT - Inventarzyklen, I - Inventar\r\n"
+"Mausrad/Mousewheel - Zoom\r\n"
+"Esc - Menu, H - Reset Position\r\n"
 "V - Aufgaben / Tasks on/off"
 msgstr ""
 
@@ -738,6 +737,19 @@ msgstr ""
 msgid "END NOTE END NOTE\n"
 msgstr ""
 
+#: menus/menuoptions.gd:9
+msgid "Fullscreen"
+msgstr ""
+
+#: menus/menuoptions.gd:9
+msgctxt "Window mode as an option"
+msgid "Window"
+msgstr ""
+
+#: menus/menuoptions.gd:9
+msgid "Borderless Window"
+msgstr ""
+
 #: menus/msgtop/msgtop.tscn
 msgid "DEFAULT_MSGTOP_TEXT"
 msgstr ""
@@ -762,17 +774,9 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: menus/menuoptions.gd:9
-msgid "Fullscreen"
-msgstr ""
-
-#: menus/menuoptions.gd:9
-msgctxt "Window mode as an option"
-msgid "Window"
-msgstr ""
-
-#: menus/menuoptions.gd:9
-msgid "Borderless Window"
+#: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
+#: models/demo_basin/basin_death.gd:33
+msgid "You drowned! Don't just jump into a basin..."
 msgstr ""
 
 #: models/demo_basin/control_system/blower_controller.gd:24
@@ -781,11 +785,6 @@ msgstr ""
 
 #: models/demo_basin/control_system/blower_controller.gd:29
 msgid "Aerator is broken!"
-msgstr ""
-
-#: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
-#: models/demo_basin/basin_death.gd:33
-msgid "You drowned! Don't just jump into a basin..."
 msgstr ""
 
 #: models/doors/basedoor_2m_xrcompatible_gasraum.tscn
@@ -852,16 +851,16 @@ msgstr ""
 msgid "Current Fill Level (%): xxx%"
 msgstr ""
 
+#: models/not_available_block.tscn
+msgid "Not available yet!"
+msgstr ""
+
 #: models/van/van.gd:15
 msgid "Press [{key}] to travel!"
 msgstr ""
 
 #: models/van/van.gd:48
 msgid "You clicked on the van"
-msgstr ""
-
-#: models/not_available_block.tscn
-msgid "Not available yet!"
 msgstr ""
 
 #: systems/system-differential-diffusion/test_grid_update_color.gd:9
@@ -1037,6 +1036,10 @@ msgid ""
 " - Snap-holders that can be enabled/disabled by pointer"
 msgstr ""
 
+#: XR/scenes/xr_van.tscn
+msgid "DESTINATIONDESTINATIONDEST"
+msgstr ""
+
 #: XR/scenes/xrplayer/debug_collision_layer.tscn
 msgid ""
 "Name: ...\n"
@@ -1062,10 +1065,6 @@ msgstr ""
 
 #: XR/scenes/xrplayer/xr_settings.tscn
 msgid "RESET POS."
-msgstr ""
-
-#: XR/scenes/xr_van.tscn
-msgid "DESTINATIONDESTINATIONDEST"
 msgstr ""
 
 #: XR/zones_xr/zone_xr_door_demos.tscn XR/zones_xr/zone_xr_hillersleben.tscn
@@ -1156,6 +1155,30 @@ msgstr ""
 msgid "38.0°C"
 msgstr ""
 
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "0.0"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "NH4"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "mg/l"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "Target Settings"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "^"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "v"
+msgstr ""
+
 #: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 msgid "^\n"
 msgstr ""
@@ -1186,30 +1209,6 @@ msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 msgid "M"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "0.0"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "NH4"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "mg/l"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "Target Settings"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "^"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "v"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:39
@@ -1275,15 +1274,15 @@ msgid "TEXT_CUTOUT_WILKOMMEN"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
-msgid "TEXT_INSPEKTIONSRUNDE"
-msgstr ""
-
-#: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_RAUMSCHNECKE"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_DEKANTER"
+msgstr ""
+
+#: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_INSPEKTIONSRUNDE"
 msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn

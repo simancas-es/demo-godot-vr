@@ -237,14 +237,15 @@ msgstr ""
 "Hold [{key}]"
 
 #: globals/root.tscn
+#, fuzzy
 msgid ""
-"WASD - Bewegung/Movement\n"
-"Leertaste / Space - Springen/Jump\n"
-"Umschalt / Shift - Rennen/Run\n"
-"E - Interaction, LMB\n"
-"RT - Inventarzyklen, I - Inventar\n"
-"Mausrad/Mousewheel - Zoom\n"
-"Esc - Menu, H - Reset Position\n"
+"WASD - Bewegung/Movement\r\n"
+"Leertaste / Space - Springen/Jump\r\n"
+"Umschalt / Shift - Rennen/Run\r\n"
+"E - Interaction, LMB\r\n"
+"RT - Inventarzyklen, I - Inventar\r\n"
+"Mausrad/Mousewheel - Zoom\r\n"
+"Esc - Menu, H - Reset Position\r\n"
 "V - Aufgaben / Tasks on/off"
 msgstr ""
 "WASD - Movement\n"
@@ -285,6 +286,19 @@ msgstr ""
 msgid "END NOTE END NOTE\n"
 msgstr "END NOTE END NOTE\n"
 
+#: menus/menuoptions.gd:9
+msgid "Fullscreen"
+msgstr "Fullscreen"
+
+#: menus/menuoptions.gd:9
+msgctxt "Window mode as an option"
+msgid "Window"
+msgstr "Window"
+
+#: menus/menuoptions.gd:9
+msgid "Borderless Window"
+msgstr "Borderless Window"
+
 #: menus/msgtop/msgtop.tscn
 msgid "DEFAULT_MSGTOP_TEXT"
 msgstr "DEFAULT_MSGTOP_TEXT"
@@ -309,18 +323,10 @@ msgstr "Topic"
 msgid "Back"
 msgstr "Back"
 
-#: menus/menuoptions.gd:9
-msgid "Fullscreen"
-msgstr "Fullscreen"
-
-#: menus/menuoptions.gd:9
-msgctxt "Window mode as an option"
-msgid "Window"
-msgstr "Window"
-
-#: menus/menuoptions.gd:9
-msgid "Borderless Window"
-msgstr "Borderless Window"
+#: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
+#: models/demo_basin/basin_death.gd:33
+msgid "You drowned! Don't just jump into a basin..."
+msgstr ""
 
 #: models/demo_basin/control_system/blower_controller.gd:24
 msgid "Not enough water to activate the blower!"
@@ -329,11 +335,6 @@ msgstr ""
 #: models/demo_basin/control_system/blower_controller.gd:29
 msgid "Aerator is broken!"
 msgstr "Diffusor is broken!"
-
-#: models/demo_basin/basin_death.gd:19 models/demo_basin/basin_death.gd:26
-#: models/demo_basin/basin_death.gd:33
-msgid "You drowned! Don't just jump into a basin..."
-msgstr ""
 
 #: models/doors/basedoor_2m_xrcompatible_gasraum.tscn
 #: models/doors/basedoor_2m_xrcompatible_labor.tscn
@@ -399,16 +400,16 @@ msgstr ""
 msgid "Current Fill Level (%): xxx%"
 msgstr ""
 
+#: models/not_available_block.tscn
+msgid "Not available yet!"
+msgstr ""
+
 #: models/van/van.gd:15
 msgid "Press [{key}] to travel!"
 msgstr ""
 
 #: models/van/van.gd:48
 msgid "You clicked on the van"
-msgstr ""
-
-#: models/not_available_block.tscn
-msgid "Not available yet!"
 msgstr ""
 
 #: systems/system-differential-diffusion/test_grid_update_color.gd:9
@@ -584,6 +585,10 @@ msgid ""
 " - Snap-holders that can be enabled/disabled by pointer"
 msgstr ""
 
+#: XR/scenes/xr_van.tscn
+msgid "DESTINATIONDESTINATIONDEST"
+msgstr ""
+
 #: XR/scenes/xrplayer/debug_collision_layer.tscn
 msgid ""
 "Name: ...\n"
@@ -609,10 +614,6 @@ msgstr ""
 
 #: XR/scenes/xrplayer/xr_settings.tscn
 msgid "RESET POS."
-msgstr ""
-
-#: XR/scenes/xr_van.tscn
-msgid "DESTINATIONDESTINATIONDEST"
 msgstr ""
 
 #: XR/zones_xr/zone_xr_door_demos.tscn XR/zones_xr/zone_xr_hillersleben.tscn
@@ -703,6 +704,30 @@ msgstr ""
 msgid "38.0°C"
 msgstr ""
 
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "0.0"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "NH4"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "mg/l"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "Target Settings"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "^"
+msgstr ""
+
+#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
+msgid "v"
+msgstr ""
+
 #: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 msgid "^\n"
 msgstr ""
@@ -733,30 +758,6 @@ msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bb/pid_nh4_steuerung.tscn
 msgid "M"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "0.0"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "NH4"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "mg/l"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "Target Settings"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "^"
-msgstr ""
-
-#: zones/hillersleben/scripts/tasks/bb/pid_nh_4.tscn
-msgid "v"
 msgstr ""
 
 #: zones/hillersleben/scripts/tasks/bhkw/q_bhkw_temperatur.gd:39
@@ -828,10 +829,6 @@ msgstr ""
 "So grab your gear and jump in. Nothing’s getting done today without you!"
 
 #: zones/hillersleben/zonehillersleben.tscn
-msgid "TEXT_INSPEKTIONSRUNDE"
-msgstr "Before we start your tasks, let’s take a quick tour of the wastewater treatment plant. I’ll show you the most important stations and briefly explain what happens at each one. Come on, let’s get started!\nFollow the glowing cubes!"
-
-#: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_CUTOUT_RAUMSCHNECKE"
 msgstr ""
 "Oh noooo!!!\n"
@@ -851,56 +848,123 @@ msgstr ""
 "Can you take a look and figure out what went wrong?"
 
 #: zones/hillersleben/zonehillersleben.tscn
+msgid "TEXT_INSPEKTIONSRUNDE"
+msgstr ""
+"Before we start your tasks, let’s take a quick tour of the wastewater "
+"treatment plant. I’ll show you the most important stations and briefly "
+"explain what happens at each one. Come on, let’s get started!\n"
+"Follow the glowing cubes!"
+
+#: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_ZULAUF_INTRO"
-msgstr "Here on the left, water flows in from Haldensleben, and on the right, water from Vahldorf. The flow rates are measured using a magnetic-inductive flow meter (MID).\nWe measure the volume so we know how heavily the plant is currently loaded and can monitor the treatment process accordingly."
+msgstr ""
+"Here on the left, water flows in from Haldensleben, and on the right, water "
+"from Vahldorf. The flow rates are measured using a magnetic-inductive flow "
+"meter (MID).\n"
+"We measure the volume so we know how heavily the plant is currently loaded "
+"and can monitor the treatment process accordingly."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_RECHENGUTPRESSE_INTRO"
-msgstr "This is where the screenings such as wet wipes and other coarse materials from the screen are washed and then compacted. This makes them drier and easier to dispose of."
+msgstr ""
+"This is where the screenings such as wet wipes and other coarse materials "
+"from the screen are washed and then compacted. This makes them drier and "
+"easier to dispose of."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_BHKW_INTRO"
-msgstr "This is where the biogas is used. The combined heat and power plant converts it into electricity and heat. Both are needed to operate the wastewater treatment plant."
+msgstr ""
+"This is where the biogas is used. The combined heat and power plant converts "
+"it into electricity and heat. Both are needed to operate the wastewater "
+"treatment plant."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_FAULBEHÄLTER_INTRO"
-msgstr "In the digesters, the sludge is broken down in the absence of oxygen. This process produces biogas, which can later be used to generate electricity and heat."
+msgstr ""
+"In the digesters, the sludge is broken down in the absence of oxygen. This "
+"process produces biogas, which can later be used to generate electricity and "
+"heat."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_VKB_INTRO"
-msgstr "This here on the right is our primary clarifier. The wastewater is first separated from the sludge by gravity. The inner ring ensures that the incoming water is slowed down so that the solids can settle effectively.\nIn the outer ring, the anaerobic zone, ideal conditions are created so that specialized microorganisms can later take up phosphate from the wastewater."
+msgstr ""
+"This here on the right is our primary clarifier. The wastewater is first "
+"separated from the sludge by gravity. The inner ring ensures that the "
+"incoming water is slowed down so that the solids can settle effectively.\n"
+"In the outer ring, the anaerobic zone, ideal conditions are created so that "
+"specialized microorganisms can later take up phosphate from the wastewater."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_SANDFANG_INTRO"
-msgstr "In our first tank, the grit and grease chamber, the wastewater is slowed down. This allows heavy materials such as sand and gravel to settle at the bottom, where they can be removed. Lighter substances like fats and oils float to the surface and are also removed."
+msgstr ""
+"In our first tank, the grit and grease chamber, the wastewater is slowed "
+"down. This allows heavy materials such as sand and gravel to settle at the "
+"bottom, where they can be removed. Lighter substances like fats and oils "
+"float to the surface and are also removed."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_BB_INTRO"
-msgstr "In our aeration tanks, microorganisms do most of the work. They require a lot of oxygen, which is why we pump fine air bubbles into the water. This enables the microorganisms to break down nitrogen and other organic substances. At the end, we also add a precipitating agent, which causes sludge flocs to form."
+msgstr ""
+"In our aeration tanks, microorganisms do most of the work. They require a "
+"lot of oxygen, which is why we pump fine air bubbles into the water. This "
+"enables the microorganisms to break down nitrogen and other organic "
+"substances. At the end, we also add a precipitating agent, which causes "
+"sludge flocs to form."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_NKB_INTRO"
-msgstr "In the secondary clarifier, the activated sludge, meaning the microorganisms together with the organic matter, settles at the bottom. The clear, treated water remains at the top and flows on to the discharge."
+msgstr ""
+"In the secondary clarifier, the activated sludge, meaning the microorganisms "
+"together with the organic matter, settles at the bottom. The clear, treated "
+"water remains at the top and flows on to the discharge."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_VKB_HYDRA"
-msgstr "This gate controls the hydraulic balance of the entire system. The water flows without pumps due to differences in elevation."
+msgstr ""
+"This gate controls the hydraulic balance of the entire system. The water "
+"flows without pumps due to differences in elevation."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_WASSERRAD"
-msgstr "This is where the treatment process is complete. The clean water flows into the Ohre River. In the process, the water drives a water wheel and can generate energy.\nThis allows electricity to be provided at night for sensors and safety systems."
+msgstr ""
+"This is where the treatment process is complete. The clean water flows into "
+"the Ohre River. In the process, the water drives a water wheel and can "
+"generate energy.\n"
+"This allows electricity to be provided at night for sensors and safety "
+"systems."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_ZULAUF_SANDFANG"
-msgstr "Here is the grit chamber blower. Air is used to separate sand from grease so that both can be removed more easily later."
+msgstr ""
+"Here is the grit chamber blower. Air is used to separate sand from grease so "
+"that both can be removed more easily later."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_LABOR_1"
-msgstr "In the aeration tank, ammonium is converted into nitrate. Afterwards, the nitrate is broken down into nitrogen gas again. This process is called nitrification and denitrification. In large quantities, nitrogen can be harmful to fish and other aquatic life, which is why it must be removed from the wastewater.\nOh. The nitrate levels have suddenly become quite high. The question now is: is the sensor faulty, or is something going wrong in the treatment process?\nFor nitrification, the microorganisms need enough oxygen. Is sufficient air reaching the aeration tank? Check the blowers and the aeration system."
+msgstr ""
+"In the aeration tank, ammonium is converted into nitrate. Afterwards, the "
+"nitrate is broken down into nitrogen gas again. This process is called "
+"nitrification and denitrification. In large quantities, nitrogen can be "
+"harmful to fish and other aquatic life, which is why it must be removed from "
+"the wastewater.\n"
+"Oh. The nitrate levels have suddenly become quite high. The question now is: "
+"is the sensor faulty, or is something going wrong in the treatment process?\n"
+"For nitrification, the microorganisms need enough oxygen. Is sufficient air "
+"reaching the aeration tank? Check the blowers and the aeration system."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_RECHENRAUM_1"
-msgstr "Hey! Welcome to the screening building. Here, the wastewater flows through a screen that removes solids and debris before entering the treatment process.\nThe step screen retains coarse solids such as wet wipes, plastics, and hygiene products. These materials do not belong in the sewer system, they can cause blockages and damage the plant.\nThis material is called screenings, and it is compacted and packaged in the room below.\nAnd that black container over there? That’s an air treatment filter that captures and treats odorous and harmful gases from the wastewater."
+msgstr ""
+"Hey! Welcome to the screening building. Here, the wastewater flows through a "
+"screen that removes solids and debris before entering the treatment "
+"process.\n"
+"The step screen retains coarse solids such as wet wipes, plastics, and "
+"hygiene products. These materials do not belong in the sewer system, they "
+"can cause blockages and damage the plant.\n"
+"This material is called screenings, and it is compacted and packaged in the "
+"room below.\n"
+"And that black container over there? That’s an air treatment filter that "
+"captures and treats odorous and harmful gases from the wastewater."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_PAUSE_RAUM"
@@ -908,15 +972,25 @@ msgstr "Here is our break room. Feel free to take a seat if you like."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_GASSPEICHER"
-msgstr "In our gas storage tank, the biogas is collected, like in a large balloon inside the steel structure. It fills with gas and releases it again when needed.\nIn the past, we only had a smaller storage tank, but it was not sufficient. And be careful: the ladder is not fully represented here, so please hold on!"
+msgstr ""
+"In our gas storage tank, the biogas is collected, like in a large balloon "
+"inside the steel structure. It fills with gas and releases it again when "
+"needed.\n"
+"In the past, we only had a smaller storage tank, but it was not sufficient. "
+"And be careful: the ladder is not fully represented here, so please hold on!"
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_AUSLASS_1"
-msgstr "This is where the treatment plant discharges the water into the river. Unfortunately, there’s no river at the moment… and no water either."
+msgstr ""
+"This is where the treatment plant discharges the water into the river. "
+"Unfortunately, there’s no river at the moment… and no water either."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_FOERDERBAND"
-msgstr "The sludge pellets from the decanter are conveyed into a roll-off container using this system so they can be transported away later. Oops, it’s currently switched off."
+msgstr ""
+"The sludge pellets from the decanter are conveyed into a roll-off container "
+"using this system so they can be transported away later. Oops, it’s "
+"currently switched off."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_TEMPERATUR_1"
@@ -924,7 +998,11 @@ msgstr ""
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "TEXT_PHOTOVOLTAIK_1"
-msgstr "Oh no! Someone has stolen our photovoltaic system… it should actually be here.\nThe photovoltaic system allows us to operate the wastewater treatment plant autonomously."
+msgstr ""
+"Oh no! Someone has stolen our photovoltaic system… it should actually be "
+"here.\n"
+"The photovoltaic system allows us to operate the wastewater treatment plant "
+"autonomously."
 
 #: zones/hillersleben/zonehillersleben.tscn
 msgid "Intake Inflows"
