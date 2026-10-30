@@ -33,11 +33,10 @@ func is_panorama_exit_requested() -> bool:
 
 ##HACK for web. Since you can't just capture the mouse in the browser...
 func _input(event: InputEvent) -> void:
-	#if _conobj and _conobj.mouse_captured and (Input.mouse_mode != Input.MOUSE_MODE_CAPTURED) and event is InputEventMouseButton: 
-		#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	if is_mouse_captured and (Input.mouse_mode != Input.MOUSE_MODE_CAPTURED) and event is InputEventMouseButton:
 		capture_mouse()
 		
+		get_viewport().set_input_as_handled()		
 
 
 func _unhandled_input(event: InputEvent) -> void:
